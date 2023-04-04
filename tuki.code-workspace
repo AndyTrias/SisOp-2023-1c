@@ -1,0 +1,34 @@
+{
+	"settings": { 
+		"files.associations": { 
+			"*.h": "c", 
+		}, 
+		"C_Cpp.errorSquiggles": "disabled", 
+	},
+	"folders": [
+		{
+			"name": "consola",
+			"path": "consola"
+		},
+		{
+			"name": "cpu",
+			"path": "cpu"
+		},
+		{
+			"name": "file-system",
+			"path": "file-system"
+		},
+		{
+			"name": "kernel",
+			"path": "kernel"
+		},
+		{
+			"name": "memoria",
+			"path": "memoria"
+		},
+		{
+			"name": "utils",
+			"path": "utils"
+		}
+	]
+}
