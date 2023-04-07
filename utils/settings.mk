@@ -1,5 +1,5 @@
 # Libraries
-LIBS=commons
+LIBS=commons sys netdb
 
 # Custom libraries' paths
 SHARED_LIBPATHS=
