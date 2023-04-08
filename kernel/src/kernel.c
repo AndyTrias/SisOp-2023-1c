@@ -1,6 +1,4 @@
-#include <utils/logs.h>
-#include <utils/conexiones.h>
-#include <utils/aux.h>
+#include <kernel.h>
 
 int main(int argc, char *argv[]) {
 

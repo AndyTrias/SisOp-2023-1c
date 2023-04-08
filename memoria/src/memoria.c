@@ -1,6 +1,4 @@
-#include <utils/logs.h>
-#include <utils/conexiones.h>
-#include <utils/aux.h>
+#include <memoria.h>
 
 int main(int argc, char *argv[]) {
 

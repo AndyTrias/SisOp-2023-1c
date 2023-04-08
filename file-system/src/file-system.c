@@ -1,6 +1,4 @@
-#include <utils/logs.h>
-#include <utils/conexiones.h>
-#include <utils/aux.h>
+#include <file-system.h>
 
 int main(int argc, char *argv[]) {
 
@@ -18,9 +16,9 @@ int main(int argc, char *argv[]) {
     char *ip_memoria = config_get_string_value(config, "IP_MEMORIA");
     char *puerto_memoria = config_get_string_value(config, "PUERTO_MEMORIA");
 
-    inicializar_servidor(IP, puerto_escucha, logger);
-
     int conexion_memoria = inicializar_cliente(ip_memoria, puerto_memoria, logger);
+
+    inicializar_servidor(IP, puerto_escucha, logger);
 
     terminar_programa(conexion_memoria, logger, config);
 
