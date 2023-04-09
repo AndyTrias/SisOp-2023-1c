@@ -15,7 +15,7 @@ int main(int argc, char *argv[]) {
   inicializar_conexiones(&conexion_cpu, &conexion_memoria, &conexion_filesystem, config, logger);
 
 
-  terminar_conexiones(conexion_cpu, conexion_memoria, conexion_filesystem);
+  terminar_conexiones(3, conexion_cpu, conexion_memoria, conexion_filesystem);
   terminar_programa(logger, config);
 
   return 0;

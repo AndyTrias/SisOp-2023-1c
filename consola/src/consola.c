@@ -14,7 +14,7 @@ int main(int argc, char *argv[]) {
   int conexion_kernel;
   inicializar_conexiones(&conexion_kernel, config, logger);
 
-  terminar_conexiones(conexion_kernel);
+  terminar_conexiones(1, conexion_kernel);
   terminar_programa(logger, config);
 
   return 0;
