@@ -7,14 +7,13 @@ int main(int argc, char *argv[]) {
         exit(1);
     }
 
-    logger_y_config variables = inicializar_variables(argv[1], "./logs/memoria.log", "Memoria");
+    t_log* logger = iniciar_logger("./logs/memoria.log", "CONSOLA");
+    t_config* config = iniciar_config("./config/memoria.config");
     
-    t_log* logger = variables.logger;
-    t_config* config = variables.config;
-
     char *puerto_escucha = config_get_string_value(config, "PUERTO_ESCUCHA");
-
     inicializar_servidor(IP, puerto_escucha, logger);
+
+    terminar_programa(logger, config);
 
     return 0;
 }

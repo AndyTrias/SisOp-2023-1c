@@ -1,7 +1,5 @@
 #include <utils/conexiones.h>
-#include <utils/logs.h>
 
-t_log* logger;
 
 int crear_conexion(char *ip, char* puerto)
 {
@@ -28,7 +26,45 @@ int crear_conexion(char *ip, char* puerto)
 	return socket_cliente;
 }
 
-int iniciar_servidor(char *ip, char* puerto)
+
+void inicializar_servidor(char* ip, char* puerto, t_log* logger)
+{
+	int socket_servidor = crear_servidor(ip, puerto);
+
+	if (socket_servidor == -1) {
+		log_error(logger, "No se pudo iniciar el servidor");
+		exit(1);
+	}
+
+	log_info(logger, "Servidor iniciado en %s:%s", ip, puerto);
+
+	while (1) {
+		int socket_cliente = esperar_cliente(socket_servidor);
+
+		if (socket_cliente == -1) {
+			log_error(logger, "No se pudo aceptar el cliente");
+			exit(1);
+		}
+
+		log_info(logger, "Se conecto un cliente");
+	}
+}
+
+int inicializar_cliente(char* ip, char* puerto, t_log* logger)
+{
+	int socket_cliente = crear_conexion(ip, puerto);
+
+	if (socket_cliente == -1) {
+		log_error(logger, "No se pudo conectar al servidor %s:%s", ip, puerto);
+		return -1;
+	}
+
+	log_info(logger, "Se conecto al servidor %s:%s", ip, puerto);
+
+	return socket_cliente;
+}
+
+int crear_servidor(char *ip, char* puerto)
 {
 
 	int socket_servidor;
@@ -64,4 +100,16 @@ int esperar_cliente(int socket_servidor)
         return -1;
     }
     return socket_cliente;
+}
+
+void terminar_conexiones(int num_sockets, ...) {
+  va_list args;
+  va_start(args, num_sockets);
+
+  for (int i = 0; i < num_sockets; i++) {
+    int socket_fd = va_arg(args, int);
+    close(socket_fd);
+  }
+
+  va_end(args);
 }

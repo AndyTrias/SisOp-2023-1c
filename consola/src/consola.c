@@ -7,17 +7,15 @@ int main(int argc, char *argv[]) {
     exit(1);
   }
 
-  logger_y_config variables = inicializar_variables(argv[1], "./logs/consola.log", "Consola");
+  
+  t_log* logger = iniciar_logger("./logs/consola.log", "CONSOLA");
+  t_config* config = iniciar_config("./config/consola.config");
+  
+  int conexion_kernel;
+  inicializar_conexiones(&conexion_kernel, config, logger);
 
-  t_log* logger = variables.logger;
-  t_config* config = variables.config;
-
-  char* ip = config_get_string_value(config, "IP_KERNEL");
-  char* puerto = config_get_string_value(config, "PUERTO_KERNEL");
-
-  int conexion_kernel = inicializar_cliente(ip, puerto, logger);
-
-  terminar_programa(conexion_kernel, logger, config);
+  terminar_conexiones(conexion_kernel);
+  terminar_programa(logger, config);
 
   return 0;
 }
