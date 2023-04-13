@@ -20,6 +20,5 @@ void inicializar_conexiones(int *conexion_cpu, int *conexion_memoria, int *conex
     *conexion_filesystem = inicializar_cliente(ip_filesystem, puerto_filesystem, logger);
 
 
-    char *puerto_escucha = config_get_string_value(config, "PUERTO_ESCUCHA");
-    inicializar_servidor(IP, puerto_escucha, logger);
+    
 }

@@ -8,6 +8,7 @@
 #include <init.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <utils/mensajes.h>
 
 
 #endif

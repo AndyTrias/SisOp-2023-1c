@@ -5,5 +5,5 @@
     #include <stdlib.h>
     #include <stdio.h>
     
-    t_config* iniciar_config(char* path);
+    t_config* iniciar_config(char* );
 #endif

@@ -7,8 +7,9 @@
     #include <string.h>
     #include <unistd.h>
     #include <stdarg.h>
-
+    #include<commons/collections/list.h>
     #include <utils/logs.h>
+    #include <utils/mensajes.h>
     
     #define IP "127.0.0.1"
 

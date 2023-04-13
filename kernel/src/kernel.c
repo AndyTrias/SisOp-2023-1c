@@ -8,12 +8,18 @@ int main(int argc, char *argv[]) {
   }
 
 
-  t_log* logger = iniciar_logger("kernel.log", "KERNEL");
-  t_config* config = iniciar_config("config/kernel.config");
+  t_log* logger = iniciar_logger("./logs/kernel.log", "KERNEL");
+  t_config* config = iniciar_config(argv[1]);
 
   int conexion_cpu, conexion_memoria, conexion_filesystem;
   inicializar_conexiones(&conexion_cpu, &conexion_memoria, &conexion_filesystem, config, logger);
 
+  enviar_mensaje("Hola fileSystem, soy el kernel",conexion_filesystem);
+  enviar_mensaje("Hola CPU, soy el kernel",conexion_cpu);
+  enviar_mensaje("Hola Memoria, soy el kernel",conexion_memoria);
+
+  char *puerto_escucha = config_get_string_value(config, "PUERTO_ESCUCHA");
+  inicializar_servidor(IP, puerto_escucha, logger);
 
   terminar_conexiones(3, conexion_cpu, conexion_memoria, conexion_filesystem);
   terminar_programa(logger, config);

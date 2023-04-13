@@ -38,16 +38,42 @@ void inicializar_servidor(char* ip, char* puerto, t_log* logger)
 
 	log_info(logger, "Servidor iniciado en %s:%s", ip, puerto);
 
+	/*int socket_cliente = esperar_cliente(socket_servidor);
+
+	if (socket_cliente == -1) {
+		log_error(logger, "No se pudo aceptar el cliente");
+		exit(1);
+	}
+	*/
+	t_list* lista;
 	while (1) {
+		
 		int socket_cliente = esperar_cliente(socket_servidor);
 
 		if (socket_cliente == -1) {
-			log_error(logger, "No se pudo aceptar el cliente");
-			exit(1);
+				log_error(logger, "No se pudo aceptar el cliente");
+				exit(1);
 		}
-
-		log_info(logger, "Se conecto un cliente");
+		int cod_op = recibir_operacion(socket_cliente);
+		switch (cod_op) {
+		case MENSAJE:
+			recibir_mensaje(socket_cliente, logger);
+			break;
+		/*case PAQUETE:
+			lista = recibir_paquete(cliente_fd);
+			log_info(logger, "Me llegaron los siguientes valores:\n");
+			list_iterate(lista, (void*) iterator);
+			break;*/
+		case -1:
+			log_error(logger, "el cliente se desconecto. Terminando servidor");
+			return EXIT_FAILURE;
+		default:
+			log_warning(logger,"Operacion desconocida. No quieras meter la pata");
+			break;
+		}
 	}
+
+	log_info(logger, "Se conecto un cliente");
 }
 
 int inicializar_cliente(char* ip, char* puerto, t_log* logger)
@@ -95,8 +121,7 @@ int esperar_cliente(int socket_servidor)
     socklen_t addr_size = sizeof(cliente_addr);
 
     int socket_cliente = accept(socket_servidor, (struct sockaddr *)&cliente_addr, &addr_size);
-    if(socket_cliente == -1)
-    {
+    if(socket_cliente == -1) {
         return -1;
     }
     return socket_cliente;
