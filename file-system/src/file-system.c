@@ -14,6 +14,10 @@ int main(int argc, char *argv[]) {
     int conexion_memoria;
     inicializar_conexiones(&conexion_memoria, config, logger);
 
+    enviar_mensaje("Hola Memoria, soy el file-system", conexion_memoria);
+
+    char *puerto_escucha = config_get_string_value(config, "PUERTO_ESCUCHA");
+    inicializar_servidor(IP, puerto_escucha, logger);
 
     terminar_programa(logger, config);
     terminar_conexiones(1, conexion_memoria);

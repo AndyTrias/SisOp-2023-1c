@@ -38,22 +38,15 @@ void inicializar_servidor(char* ip, char* puerto, t_log* logger)
 
 	log_info(logger, "Servidor iniciado en %s:%s", ip, puerto);
 
-	/*int socket_cliente = esperar_cliente(socket_servidor);
-
-	if (socket_cliente == -1) {
-		log_error(logger, "No se pudo aceptar el cliente");
-		exit(1);
-	}
-	*/
 	t_list* lista;
 	while (1) {
-		
 		int socket_cliente = esperar_cliente(socket_servidor);
 
 		if (socket_cliente == -1) {
 				log_error(logger, "No se pudo aceptar el cliente");
 				exit(1);
 		}
+
 		int cod_op = recibir_operacion(socket_cliente);
 		switch (cod_op) {
 		case MENSAJE:

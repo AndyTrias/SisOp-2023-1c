@@ -7,7 +7,6 @@ void inicializar_conexiones(int *conexion_memoria, t_config* config, t_log* logg
 
     *conexion_memoria = inicializar_cliente(ip_memoria, puerto_memoria, logger);
     
-    char *puerto_escucha = config_get_string_value(config, "PUERTO_ESCUCHA");
-    inicializar_servidor(IP, puerto_escucha, logger);
+    
     
 }
