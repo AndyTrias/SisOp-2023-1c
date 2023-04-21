@@ -1,5 +1,5 @@
-#ifndef KERNEL_H
-#define KERNEL_H
+#ifndef KERNEL_H_
+#define KERNEL_H_
 
 #include <utils/logs.h>
 #include <utils/aux.h>
@@ -9,8 +9,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <utils/mensajes.h>
-#include <utils/planificacion/pcb.h>
+#include <procesos.h>
 
-t_pcb crear_pcb(int );
-void incrementar(int *,int );
 #endif
