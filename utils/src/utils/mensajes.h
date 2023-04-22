@@ -68,13 +68,13 @@ typedef struct
     t_buffer *buffer;
 } t_paquete;
 
-t_paquete *crear_paquete(void);
+t_paquete *crear_paquete(int);
 void crear_buffer(t_paquete *);
 void *serializar_paquete(t_paquete *, int);
 void enviar_mensaje(char *, int);
 int recibir_operacion(int);
 void recibir_mensaje(int);
-void agregar_a_paquete(t_paquete *, void *, int);
+//void agregar_a_paquete(t_paquete *, void *, int);
 void enviar_paquete(t_paquete *, int);
 t_list *recibir_paquete(int);
 

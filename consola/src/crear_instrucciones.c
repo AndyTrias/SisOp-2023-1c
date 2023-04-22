@@ -91,7 +91,7 @@ int obtener_cantidad_parametros(t_operacion op) {
 
 }
 
-t_instruccion* crear_estructura_instruccion(char buffer) {
+t_instruccion* crear_estructura_instruccion(char* buffer) {
     char** linea_de_instruccion = string_split(buffer, " ");
     t_instruccion *instruccion = malloc(sizeof(t_instruccion));
     instruccion->parametros = malloc(sizeof(char **));
@@ -128,8 +128,6 @@ int serializar_instruccion(t_instruccion *instruccion, char *buffer) {
         desplazamiento += size_to_send;
     }
 
-    /* log tamaño de la instruccion */
-    log_info(logger_consola, "Tamaño de la instruccion: %d", desplazamiento);
     return desplazamiento;
 }
 

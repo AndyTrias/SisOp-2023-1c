@@ -17,17 +17,15 @@ void nuevo_proceso(int* socket_consola) {
         int cod_op = recibir_operacion(*socket_consola);
         switch(cod_op) {
             case INSTRUCCION:
-                recibir_paquete(*socket_consola);
+                printf("Me llego una instruccion\n");
                 break;
             
             case MENSAJE:
-                recibir_mensaje(*socket_consola);
+                printf("Me llego un mensaje\n");
                 break;
             
             case PAQUETE:
-                t_list* lista = recibir_paquete(*socket_consola);
-                log_info(logger_kernel, "Me llegaron los siguientes valores:\n");
-                list_iterate(lista, (void*) iterator);
+                printf("Me llego un paquete\n");
                 break;
             
             case -1:
