@@ -53,8 +53,7 @@ void enviar_mensaje(char* mensaje, int socket_cliente){
 	eliminar_paquete(paquete);
 }
 
-void agregar_a_paquete(t_paquete* paquete, void* valor, int tamanio)
-{
+void agregar_a_paquete(t_paquete* paquete, void* valor, int tamanio) {
 	paquete->buffer->stream = realloc(paquete->buffer->stream, paquete->buffer->size + tamanio + sizeof(int));
 
 	memcpy(paquete->buffer->stream + paquete->buffer->size, &tamanio, sizeof(int));
@@ -64,8 +63,7 @@ void agregar_a_paquete(t_paquete* paquete, void* valor, int tamanio)
 }
 
 
-void enviar_paquete(t_paquete* paquete, int socket_cliente)
-{
+void enviar_paquete(t_paquete* paquete, int socket_cliente) {
 	int bytes = paquete->buffer->size + 2*sizeof(int);
 	void* a_enviar = serializar_paquete(paquete, bytes);
 
@@ -74,8 +72,7 @@ void enviar_paquete(t_paquete* paquete, int socket_cliente)
 	free(a_enviar);
 }
 
-int recibir_operacion(int socket_cliente)
-{
+int recibir_operacion(int socket_cliente) {
 	int cod_op;
 	if(recv(socket_cliente, &cod_op, sizeof(int), MSG_WAITALL) > 0)
 		return cod_op;
@@ -86,8 +83,7 @@ int recibir_operacion(int socket_cliente)
 	}
 }
 
-void* recibir_buffer(int* size, int socket_cliente)
-{
+void* recibir_buffer(int* size, int socket_cliente) {
 	void * buffer;
 
 	recv(socket_cliente, size, sizeof(int), MSG_WAITALL);
@@ -97,16 +93,14 @@ void* recibir_buffer(int* size, int socket_cliente)
 	return buffer;
 }
 
-void recibir_mensaje(int socket_cliente)
-{
+void recibir_mensaje(int socket_cliente) {
 	int size;
 	char* buffer = recibir_buffer(&size, socket_cliente);
 	printf("%s \n", buffer);
 	free(buffer);
 }
 
-t_list* recibir_paquete(int socket_cliente)
-{
+t_list* recibir_paquete(int socket_cliente) {
 	int size;
 	int desplazamiento = 0;
 	void * buffer;
@@ -125,4 +119,11 @@ t_list* recibir_paquete(int socket_cliente)
 	}
 	free(buffer);
 	return valores;
+}
+
+void obtener_identificador(char* identificador, int socket_cliente) {
+	int size;
+	char* buffer = recibir_buffer(&size, socket_cliente);
+	strcpy(identificador, buffer);
+	free(buffer);
 }

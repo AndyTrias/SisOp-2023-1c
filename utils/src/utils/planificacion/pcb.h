@@ -7,7 +7,7 @@
         NEW,
         READY,
         BLOCK,
-        EXIT
+        eXIT
     }estado;
    typedef struct
     {

@@ -16,7 +16,7 @@ void nuevo_proceso(int* socket_consola) {
     while(1) {
         int cod_op = recibir_operacion(*socket_consola);
         switch(cod_op) {
-            case INSTRUCCIONES_CONSOLA:
+            case INSTRUCCION:
                 recibir_paquete(*socket_consola);
                 break;
             
