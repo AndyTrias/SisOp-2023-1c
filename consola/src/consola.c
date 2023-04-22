@@ -3,6 +3,8 @@
 int main(int argc, char *argv[]) {
 
   t_log* logger = iniciar_logger("./logs/consola.log", "CONSOLA");
+  
+  // Verifico que se hayan ingresado los archivos de configuracion y de instrucciones
   if (argc < 3) {
     
     if (argc < 2)
@@ -19,6 +21,8 @@ int main(int argc, char *argv[]) {
   int conexion_kernel;
   inicializar_conexiones(&conexion_kernel, config, logger);
 
+  
+  // Esto iria en otro archivo + modularizado
   char buffer[100];
   FILE *f = fopen(argv[2], "r");
   if (f == NULL) {
@@ -26,11 +30,16 @@ int main(int argc, char *argv[]) {
     return EXIT_FAILURE;
   }
 
+  t_paquete *paquete = crear_paquete();
   while ((fgets(buffer, 100, f)) != NULL){
+    
+    agregar_a_paquete(paquete, buffer, strlen(buffer) + 1);
     log_info(logger, "Instruccion: %s", buffer);
   }
   
-  enviar_mensaje("Hola Kernel, soy la consola", conexion_kernel);
+  enviar_paquete(paquete, conexion_kernel);
+  
+  
 
   terminar_conexiones(1, conexion_kernel);
   terminar_programa(logger, config);
