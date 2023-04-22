@@ -12,7 +12,8 @@
       "program": "${workspaceFolder}/bin/${workspaceFolderBasename}.out",
       "args": [
         // TODO: Agregar los argumentos que se necesiten
-        "config/consola.config"
+        "config/consola.config",
+        "pseudocodigo/instrucciones.txt",
       ],
       "stopAtEntry": false,
       "cwd": "${workspaceFolder}",
