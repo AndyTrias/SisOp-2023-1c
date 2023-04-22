@@ -38,7 +38,7 @@ void inicializar_servidor(char* ip, char* puerto, t_log* logger)
 
 	log_info(logger, "Servidor iniciado en %s:%s", ip, puerto);
 
-	t_list* lista;
+	// t_list* lista;
 	while (1) {
 		int socket_cliente = esperar_cliente(socket_servidor);
 
