@@ -10,5 +10,8 @@
 #include <stdlib.h>
 #include <utils/mensajes.h>
 #include <procesos.h>
+#include <conectar_consola.h>
+
+t_log* logger_kernel;
 
 #endif

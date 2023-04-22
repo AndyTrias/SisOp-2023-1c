@@ -12,8 +12,7 @@
 // make necessary includes
     typedef enum
     {
-        MENSAJE,
-        PAQUETE
+        INSTRUCCIONES_CONSOLA, MENSAJE, PAQUETE
     }op_code;
 
     typedef struct
@@ -33,7 +32,7 @@
     void* serializar_paquete(t_paquete* , int );
     void enviar_mensaje(char* , int );
     int recibir_operacion(int );
-    void recibir_mensaje(int, t_log* );
+    void recibir_mensaje(int );
     
 #endif
 

@@ -15,6 +15,7 @@ int main(int argc, char *argv[]) {
   inicializar_conexiones(&conexion_kernel, config, logger);
 
   enviar_mensaje("Hola Kernel, soy la consola", conexion_kernel);
+  enviar_mensaje("Hola Kernel2, soy la consola2", conexion_kernel);
 
   terminar_conexiones(1, conexion_kernel);
   terminar_programa(logger, config);

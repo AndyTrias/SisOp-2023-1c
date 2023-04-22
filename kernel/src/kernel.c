@@ -1,5 +1,6 @@
 #include <kernel.h>
 
+
 int main(int argc, char *argv[]) {
 int PID_count = 0;
 
@@ -9,11 +10,11 @@ int PID_count = 0;
   }
 
 
-  t_log* logger = iniciar_logger("./logs/kernel.log", "KERNEL");
+  logger_kernel = iniciar_logger("./logs/kernel.log", "KERNEL");
   t_config* config = iniciar_config(argv[1]);
 
   int conexion_cpu, conexion_memoria, conexion_filesystem;
-  inicializar_conexiones(&conexion_cpu, &conexion_memoria, &conexion_filesystem, config, logger);
+  inicializar_conexiones(&conexion_cpu, &conexion_memoria, &conexion_filesystem, config, logger_kernel);
 
   t_pcb unPCB= crear_pcb(&PID_count);
   printf("Primer PCB con PID: %d\n",unPCB.PID);
@@ -26,10 +27,11 @@ int PID_count = 0;
   enviar_mensaje("Hola Memoria, soy el kernel",conexion_memoria);
 
   char *puerto_escucha = config_get_string_value(config, "PUERTO_ESCUCHA");
-  inicializar_servidor(IP, puerto_escucha, logger);
+  int socket_servidor = crear_servidor(IP, puerto_escucha);
+  conectar_consola(socket_servidor);
 
   terminar_conexiones(3, conexion_cpu, conexion_memoria, conexion_filesystem);
-  terminar_programa(logger, config);
+  terminar_programa(logger_kernel, config);
 
   return 0;
 }
