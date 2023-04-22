@@ -17,7 +17,7 @@ void nuevo_proceso(int* socket_consola) {
         int cod_op = recibir_operacion(*socket_consola);
         switch(cod_op) {
             case INSTRUCCIONES_CONSOLA:
-                recibir_mensaje(*socket_consola);
+                recibir_paquete(*socket_consola);
                 break;
             
             case MENSAJE:
@@ -25,7 +25,9 @@ void nuevo_proceso(int* socket_consola) {
                 break;
             
             case PAQUETE:
-                recibir_mensaje(*socket_consola);
+                t_list* lista = recibir_paquete(*socket_consola);
+                log_info(logger_kernel, "Me llegaron los siguientes valores:\n");
+                list_iterate(lista, (void*) iterator);
                 break;
             
             case -1:
@@ -37,4 +39,8 @@ void nuevo_proceso(int* socket_consola) {
                 return;
         }
     }
+}
+
+void iterator(char* value) {
+	log_info(logger_kernel,"%s", value);
 }

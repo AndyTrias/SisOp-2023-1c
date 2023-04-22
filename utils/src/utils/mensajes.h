@@ -8,6 +8,7 @@
     #include <netdb.h>
     #include <string.h>
     #include <commons/log.h>
+    #include <commons/collections/list.h>
 
 // make necessary includes
     typedef enum
@@ -35,7 +36,7 @@
     void recibir_mensaje(int );
     void agregar_a_paquete(t_paquete* , void* , int );
     void enviar_paquete(t_paquete* , int );
-
+    t_list* recibir_paquete(int );
 
     
 #endif

@@ -9,5 +9,6 @@ extern t_log* logger_kernel;
 
 void conectar_consola(int);
 void nuevo_proceso(int*);
+void iterator(char*);
 
 #endif

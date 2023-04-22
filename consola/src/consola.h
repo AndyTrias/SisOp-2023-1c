@@ -9,5 +9,8 @@
     #include <stdio.h>
     #include <stdlib.h>
     #include <utils/mensajes.h>
+    #include <verificar_argumentos.h>
+
+    t_log* logger_consola;
 
 #endif

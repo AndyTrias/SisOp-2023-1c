@@ -4,6 +4,8 @@
 #include <utils/conexiones.h>
 #include <utils/configs.h>
 
-void inicializar_conexiones(int *, t_config* , t_log* );
+extern t_log* logger_consola;
+
+void inicializar_conexiones(int *, t_config* );
 
 #endif
