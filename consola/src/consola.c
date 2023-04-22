@@ -34,10 +34,10 @@ int main(int argc, char *argv[]) {
   while ((fgets(buffer, 100, f)) != NULL){
     
     agregar_a_paquete(paquete, buffer, strlen(buffer) + 1);
-    log_info(logger, "Instruccion: %s", buffer);
   }
   
   enviar_paquete(paquete, conexion_kernel);
+  log_info(logger, "Paquete enviado");
   
   
 

@@ -27,6 +27,7 @@ int crear_conexion(char *ip, char* puerto)
 }
 
 
+// TODO: LO MEJOR VA A SER CREAR UNA POR PROCESO 
 void inicializar_servidor(char* ip, char* puerto, t_log* logger)
 {
 	int socket_servidor = crear_servidor(ip, puerto);
@@ -38,35 +39,18 @@ void inicializar_servidor(char* ip, char* puerto, t_log* logger)
 
 	log_info(logger, "Servidor iniciado en %s:%s", ip, puerto);
 
-	// t_list* lista;
 	while (1) {
+
 		int socket_cliente = esperar_cliente(socket_servidor);
-
 		if (socket_cliente == -1) {
-				log_error(logger, "No se pudo aceptar el cliente");
-				exit(1);
+			log_error(logger, "No se pudo aceptar el cliente");
+			exit(1);
 		}
+		
+		log_info(logger, "Se conecto un cliente");
 
-		int cod_op = recibir_operacion(socket_cliente);
-		switch (cod_op) {
-		case MENSAJE:
-			recibir_mensaje(socket_cliente, logger);
-			break;
-		/*case PAQUETE:
-			lista = recibir_paquete(cliente_fd);
-			log_info(logger, "Me llegaron los siguientes valores:\n");
-			list_iterate(lista, (void*) iterator);
-			break;*/
-		case -1:
-			log_error(logger, "el cliente se desconecto. Terminando servidor");
-			return EXIT_FAILURE;
-		default:
-			log_warning(logger,"Operacion desconocida. No quieras meter la pata");
-			break;
-		}
+		atender_cliente(socket_cliente);
 	}
-
-	log_info(logger, "Se conecto un cliente");
 }
 
 int inicializar_cliente(char* ip, char* puerto, t_log* logger)
@@ -130,4 +114,27 @@ void terminar_conexiones(int num_sockets, ...) {
   }
 
   va_end(args);
+}
+
+int atender_cliente(int socket_cliente)
+{
+	while (1) {
+		int cod_op = recibir_operacion(socket_cliente);
+		switch (cod_op) {
+		case MENSAJE:
+			recibir_mensaje(socket_cliente);
+			break;
+		/*case PAQUETE:
+			lista = recibir_paquete(cliente_fd);
+			log_info(logger, "Me llegaron los siguientes valores:\n");
+			list_iterate(lista, (void*) iterator);
+			break;*/
+		case -1:
+			printf("Se desconecto el cliente\n");
+			return EXIT_FAILURE;
+		default:
+			printf("Operacion desconocida\n");
+			break;
+		}
+	}
 }

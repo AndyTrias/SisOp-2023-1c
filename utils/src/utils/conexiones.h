@@ -10,6 +10,7 @@
     #include<commons/collections/list.h>
     #include <utils/logs.h>
     #include <utils/mensajes.h>
+    #include <pthread.h>
     
     #define IP "127.0.0.1"
 
@@ -19,7 +20,7 @@
     int crear_servidor(char *, char *);
     int esperar_cliente(int);
     void terminar_conexiones(int, ...);
-    
+    int atender_cliente(int);
 
     
 
