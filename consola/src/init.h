@@ -7,5 +7,6 @@
 extern t_log* logger_consola;
 
 void inicializar_conexiones(int *, t_config* );
+FILE* verificar_argumentos(int, char**);
 
 #endif
