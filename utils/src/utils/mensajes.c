@@ -127,3 +127,4 @@ void obtener_identificador(char* identificador, int socket_cliente) {
 	strcpy(identificador, buffer);
 	free(buffer);
 }
+

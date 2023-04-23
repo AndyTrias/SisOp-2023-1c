@@ -77,5 +77,7 @@ void recibir_mensaje(int);
 //void agregar_a_paquete(t_paquete *, void *, int);
 void enviar_paquete(t_paquete *, int);
 t_list *recibir_paquete(int);
+void* recibir_buffer(int* , int);
+
 
 #endif

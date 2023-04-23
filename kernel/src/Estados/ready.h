@@ -1,18 +1,21 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <commons/collections/list.h>
-#include <new.h>
+// #ifndef READY_H_
+// #define READY_H_
 
-t_list *init_ready();
+// #include <stdio.h>
+// #include <stdlib.h>
+// #include <commons/collections/list.h>
+// #include <Estados/new.h>
 
-bool hay_espacio_ready(t_list *estado);
+// t_list *init_ready();
 
-int grado_de_multiprogramacion(t_list *ready, int procesos_en_blocked);
+// bool hay_espacio_ready(t_list *estado);
 
-void admitir_proceso(t_list *ready, t_list *new);
+// int grado_de_multiprogramacion(t_list *ready, int procesos_en_blocked);
 
-pcb *ceder_proceso_a_cpu(t_list *ready);
+// void admitir_proceso(t_list *ready, t_list *new);
 
+// pcb *ceder_proceso_a_cpu(t_list *ready);
 
+// #endif
 
 

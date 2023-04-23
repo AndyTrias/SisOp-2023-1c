@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
   char buffer[100]; // No sabemos para que sirve
 
 
-  t_paquete *paquete = crear_paquete(INSTRUCCION);
+  t_paquete *paquete = crear_paquete(PAQUETE);
 
   while ((fgets(buffer, 100, f)) != NULL)
   {
@@ -27,10 +27,9 @@ int main(int argc, char *argv[])
     
     int tamanio_instruccion = serializar_instruccion(instruccion, buffer);
     
-    agregar_a_paquete(paquete, instruccion, tamanio_instruccion);
+    agregar_a_paquete(paquete, buffer, tamanio_instruccion);
 
   }
-  // Probablemente usemos el enviar_paquete del tp0
   enviar_paquete(paquete, conexion_kernel);
 
   log_info(logger_consola, "Paquete enviado");

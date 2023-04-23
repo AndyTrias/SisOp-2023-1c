@@ -93,6 +93,7 @@ int obtener_cantidad_parametros(t_operacion op) {
 
 t_instruccion* crear_estructura_instruccion(char* buffer) {
     char** linea_de_instruccion = string_split(buffer, " ");
+    
     t_instruccion *instruccion = malloc(sizeof(t_instruccion));
     instruccion->parametros = malloc(sizeof(char **));
     
@@ -133,8 +134,9 @@ int serializar_instruccion(t_instruccion *instruccion, char *buffer) {
 
 void agregar_a_paquete(t_paquete* paquete, void* valor, int tamanio)
 {
-	paquete->buffer->stream = realloc(paquete->buffer->stream, paquete->buffer->size + tamanio + sizeof(int));
+    paquete->buffer->stream = realloc(paquete->buffer->stream, paquete->buffer->size + tamanio + sizeof(int));
 
+	memcpy(paquete->buffer->stream + paquete->buffer->size, &tamanio, sizeof(int));
 	memcpy(paquete->buffer->stream + paquete->buffer->size + sizeof(int), valor, tamanio);
 
 	paquete->buffer->size += tamanio + sizeof(int);
