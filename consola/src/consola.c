@@ -23,12 +23,11 @@ int main(int argc, char *argv[])
 
   while ((fgets(buffer, 100, f)) != NULL)
   {
+    buffer[strcspn(buffer, "\n")] = 0;
     t_instruccion *instruccion = crear_estructura_instruccion(buffer);
     
-    int tamanio_instruccion = serializar_instruccion(instruccion, buffer);
+    serializar_instruccion(instruccion, paquete);
     
-    agregar_a_paquete(paquete, buffer, tamanio_instruccion);
-
   }
   enviar_paquete(paquete, conexion_kernel);
 

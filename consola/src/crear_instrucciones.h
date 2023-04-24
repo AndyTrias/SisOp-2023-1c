@@ -8,7 +8,7 @@
 
     t_operacion obtener_codigo_instruccion(char *);
     t_instruccion* crear_estructura_instruccion(char*);
-    int serializar_instruccion(t_instruccion*, char*); 
-    void agregar_a_paquete(t_paquete*, void*, int);
+    void serializar_instruccion(t_instruccion*, t_paquete*); 
+    void agregar_a_paquete_dato_serializado(t_paquete*, void*, int);
 
 #endif

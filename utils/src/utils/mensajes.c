@@ -53,14 +53,25 @@ void enviar_mensaje(char* mensaje, int socket_cliente){
 	eliminar_paquete(paquete);
 }
 
-/*void agregar_a_paquete(t_paquete* paquete, void* valor, int tamanio) {
-	paquete->buffer->stream = realloc(paquete->buffer->stream, paquete->buffer->size + tamanio + sizeof(int));
+void agregar_a_paquete_dato_serializado(t_paquete* paquete, void* valor, int tamanio)
+{
+    paquete->buffer->stream = realloc(paquete->buffer->stream, paquete->buffer->size + tamanio);
 
-	memcpy(paquete->buffer->stream + paquete->buffer->size, &tamanio, sizeof(int));
-	memcpy(paquete->buffer->stream + paquete->buffer->size + sizeof(int), valor, tamanio);
+    // Agrega el valor
+    memcpy(paquete->buffer->stream + paquete->buffer->size, valor, tamanio);
 
-	paquete->buffer->size += tamanio + sizeof(int);
-}*/
+	paquete->buffer->size += tamanio;
+}
+
+void agregar_a_paquete(t_paquete *paquete, void *valor, int bytes) {
+	t_buffer *buffer = paquete->buffer;
+	
+	buffer->stream = realloc(buffer->stream, buffer->size + bytes);
+	
+	memcpy(buffer->stream + buffer->size, valor, bytes);
+	
+	buffer->size += bytes;
+}
 
 
 void enviar_paquete(t_paquete* paquete, int socket_cliente) {
@@ -100,25 +111,12 @@ void recibir_mensaje(int socket_cliente) {
 	free(buffer);
 }
 
-t_list* recibir_paquete(int socket_cliente) {
+void* recibir_paquete(int socket_cliente) {
 	int size;
-	int desplazamiento = 0;
 	void * buffer;
-	t_list* valores = list_create();
-	int tamanio;
-
 	buffer = recibir_buffer(&size, socket_cliente);
-	while(desplazamiento < size)
-	{
-		memcpy(&tamanio, buffer + desplazamiento, sizeof(int));
-		desplazamiento+=sizeof(int);
-		char* valor = malloc(tamanio);
-		memcpy(valor, buffer+desplazamiento, tamanio);
-		desplazamiento+=tamanio;
-		list_add(valores, valor);
-	}
-	free(buffer);
-	return valores;
+
+	return buffer;
 }
 
 void obtener_identificador(char* identificador, int socket_cliente) {
