@@ -3,6 +3,6 @@
 
 #include <utils/planificacion/pcb.h>
 
-t_pcb crear_pcb(int* );
+t_pcb crear_pcb();
 
 #endif
