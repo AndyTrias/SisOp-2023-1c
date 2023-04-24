@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
   char buffer[100]; // No sabemos para que sirve
 
 
-  t_paquete *paquete = crear_paquete(PAQUETE);
+  t_paquete *paquete = crear_paquete(INSTRUCCIONES);
 
   while ((fgets(buffer, 100, f)) != NULL)
   {

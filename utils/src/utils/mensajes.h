@@ -13,9 +13,8 @@
 // make necessary includes
 typedef enum
 {
-    INSTRUCCION,
+    INSTRUCCIONES,
     MENSAJE,
-    PAQUETE
 } op_code;
 
 typedef enum

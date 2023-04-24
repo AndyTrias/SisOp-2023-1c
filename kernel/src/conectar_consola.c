@@ -15,14 +15,12 @@ void conectar_consola(int socket_servidor) {
 void nuevo_proceso(int* socket_consola) {
     while(1) {
         int cod_op = recibir_operacion(*socket_consola);
-        switch(cod_op) {
-        
-            
+        switch(cod_op) {     
             case MENSAJE:
                 printf("Me llego un mensaje\n");
                 break;
             
-            case PAQUETE:
+            case INSTRUCCIONES:
                 printf("Me llego un paquete\n");
                 t_list *lista = recibir_paquete_consola(*socket_consola);
 			    list_iterate(lista, (void*) iterator);
@@ -48,23 +46,36 @@ void iterator(t_instruccion *instruccion) {
 
 
 t_list *recibir_paquete_consola(int socket_cliente) {
+    // Esto es comun en todas las funciones que reciben paquetes
     int size;
     int desplazamiento = 0;
     void * buffer;
+    buffer = recibir_buffer(&size, socket_cliente);
     
-    t_list* instrucciones = list_create();
+    // Nuestra implementacion recibe el tamanio de la instruccion a leer
     int tamanio;
 
-    buffer = recibir_buffer(&size, socket_cliente);
+
+    t_list* instrucciones = list_create();
+
     
     while(desplazamiento < size)
     {
+        // Recibe el tamanio de la instruccion
         memcpy(&tamanio, buffer + desplazamiento, sizeof(int));
         desplazamiento+=sizeof(int);
         void* instruccion = malloc(tamanio);
+        
+        // Recibe la instruccion serializada leyendo por tamanio
         memcpy(instruccion, buffer+desplazamiento, tamanio);
         desplazamiento+=tamanio;
         
+        // La otra opcion que se me ocurre es tener una sola funcion agregar_a_paquete
+        // y pasar todo el buffer pero solo leer la instruccion que me interesa
+        // pasando el desplazamiento por referencia -> list_add(instrucciones, deserealizar_instruccion(buffer, &desplazamiento));
+        // Con esta opcion borrariamos todo el codigo de arriba ya que el desearlizar se encarga
+
+
         list_add(instrucciones, deserealizar_instruccion(instruccion));
     }
     free(buffer);

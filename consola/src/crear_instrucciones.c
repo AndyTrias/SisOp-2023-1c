@@ -1,6 +1,6 @@
 #include "crear_instrucciones.h"
 
-t_operacion obtener_instrucciones(char *identificador)
+t_operacion obtener_codigo_instruccion(char *identificador)
 {
     t_operacion op;
     if (!strcmp("F_READ", identificador))
@@ -54,43 +54,6 @@ t_operacion obtener_instrucciones(char *identificador)
     return op;
 }
 
-int obtener_cantidad_parametros(t_operacion op) {
-    switch (op) {
-        case F_READ:
-        case F_WRITE:
-            return 3;
-            break;
-
-        case SET:
-        case MOV_IN:
-        case MOV_OUT:
-        case F_TRUNCATE:
-        case F_SEEK:
-        case CREATE_SEGMENT:
-            return 2;
-            break;
-
-        case IO:
-        case WAIT:
-        case SIGNAL:
-        case F_OPEN:
-        case F_CLOSE:
-        case DELETE_SEGMENT:
-            return 1;
-            break;
-
-        case EXIT:
-        case YIELD:
-            return 0;
-            break;
-
-        default:
-            return -1;
-            break;
-    }
-
-}
-
 t_instruccion* crear_estructura_instruccion(char* buffer) {
     char** linea_de_instruccion = string_split(buffer, " ");
     
@@ -99,7 +62,7 @@ t_instruccion* crear_estructura_instruccion(char* buffer) {
     
     instruccion->cantidad_parametros = 0;
 
-    instruccion->operacion = obtener_instrucciones(linea_de_instruccion[0]);
+    instruccion->operacion = obtener_codigo_instruccion(linea_de_instruccion[0]);
     for (int i = 1; linea_de_instruccion[i] != NULL; i++)
     {
       instruccion->cantidad_parametros++;
@@ -136,8 +99,11 @@ void agregar_a_paquete(t_paquete* paquete, void* valor, int tamanio)
 {
     paquete->buffer->stream = realloc(paquete->buffer->stream, paquete->buffer->size + tamanio + sizeof(int));
 
-	memcpy(paquete->buffer->stream + paquete->buffer->size, &tamanio, sizeof(int));
-	memcpy(paquete->buffer->stream + paquete->buffer->size + sizeof(int), valor, tamanio);
+	// Agrega el tamanio
+    memcpy(paquete->buffer->stream + paquete->buffer->size, &tamanio, sizeof(int));
+	
+    // Agrega el valor
+    memcpy(paquete->buffer->stream + paquete->buffer->size + sizeof(int), valor, tamanio);
 
 	paquete->buffer->size += tamanio + sizeof(int);
 }
