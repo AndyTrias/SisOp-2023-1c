@@ -27,7 +27,7 @@ t_operacion obtener_codigo_instruccion(char *identificador)
     if (!strcmp("CREATE_SEGMENT", identificador))
         op = CREATE_SEGMENT;
 
-    if (!strcmp("IO", identificador))
+    if (!strcmp("I/O", identificador))
         op = IO;
 
     if (!strcmp("WAIT", identificador))
