@@ -13,13 +13,8 @@ bool hay_espacio_ready(t_list *estado){
 }
 
 void admitir_proceso(t_list *ready, t_list *new){ //se usa una vez que se sabe que hay espacio para un proceso mas
-    t_pcb *proceso = get_proceso_desde_blocked() //implementar
-    
-    if (proceso != NULL){ //le da prioridad a los que vienen de blocked
-        list_add(ready, proceso);
-    }else{
-        list_add(ready, (get_proceso_desde_new(new)));
-    }
+
+    list_add(ready, (get_proceso_desde_new(new)));
 
 }
 
