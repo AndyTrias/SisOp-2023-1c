@@ -1,5 +1,5 @@
-#include <ready.h>
-
+#include "ready.h"
+/*
 t_list *init_ready(){
     return list_create()
 }
@@ -32,3 +32,4 @@ t_pcb *ceder_proceso_a_cpu(t_list *ready){
         return HRRN(ready);
     }
 }
+*/

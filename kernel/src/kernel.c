@@ -16,10 +16,8 @@ int main(int argc, char *argv[]) {
   inicializar_conexiones(&conexion_cpu, &conexion_memoria, &conexion_filesystem, config, logger_kernel);
 
   t_pcb unPCB= crear_pcb();
-  printf("Primer PCB con PID: %d\n",unPCB.PID);
   
   unPCB= crear_pcb();
-  printf("Segundo PCB con PID: %d\n",unPCB.PID);
 
   enviar_mensaje("Hola fileSystem, soy el kernel",conexion_filesystem);
   enviar_mensaje("Hola CPU, soy el kernel",conexion_cpu);
