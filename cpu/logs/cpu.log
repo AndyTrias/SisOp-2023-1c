@@ -1,0 +1,22 @@
+[INFO] 00:55:04:535 Cpu/(34913:34913): Servidor iniciado en 127.0.0.1:8001
+[INFO] 00:58:48:248 Cpu/(34913:34913): Se conecto un cliente
+[INFO] 00:59:40:339 Cpu/(34913:34913): Se conecto un cliente
+[INFO] 01:03:08:457 Cpu/(36320:36320): Servidor iniciado en 127.0.0.1:8001
+[INFO] 01:03:22:761 Cpu/(36320:36320): Se conecto un cliente
+[INFO] 20:26:39:150 CONSOLA/(22874:22874): Se conecto al servidor 127.0.0.1:8002
+[INFO] 20:26:39:151 CONSOLA/(22874:22874): Servidor iniciado en 127.0.0.1:8001
+[INFO] 20:26:43:945 CONSOLA/(22874:22874): Me llego el mensaje:  Hola CPU, soy el kernel
+[INFO] 20:30:31:451 CONSOLA/(25085:25085): Se conecto al servidor 127.0.0.1:8002
+[INFO] 20:30:31:451 CONSOLA/(25085:25085): Servidor iniciado en 127.0.0.1:8001
+[INFO] 20:30:51:453 CONSOLA/(25271:25271): Se conecto al servidor 127.0.0.1:8002
+[INFO] 20:30:51:453 CONSOLA/(25271:25271): Servidor iniciado en 127.0.0.1:8001
+[INFO] 20:32:04:162 CONSOLA/(25877:25877): Se conecto al servidor 127.0.0.1:8002
+[INFO] 20:32:04:162 CONSOLA/(25877:25877): Servidor iniciado en 127.0.0.1:8001
+[INFO] 20:35:03:093 CONSOLA/(26915:26915): Se conecto al servidor 127.0.0.1:8002
+[INFO] 20:35:03:093 CONSOLA/(26915:26915): Servidor iniciado en 127.0.0.1:8001
+[INFO] 20:36:19:561 CONSOLA/(27756:27756): Se conecto al servidor 127.0.0.1:8002
+[INFO] 20:36:19:561 CONSOLA/(27756:27756): Servidor iniciado en 127.0.0.1:8001
+[INFO] 20:36:29:393 CONSOLA/(27951:27951): Se conecto al servidor 127.0.0.1:8002
+[INFO] 20:36:29:393 CONSOLA/(27951:27951): Servidor iniciado en 127.0.0.1:8001
+[INFO] 19:17:29:535 CONSOLA/(5089:5089): Se conecto al servidor 127.0.0.1:8002
+[INFO] 19:17:29:535 CONSOLA/(5089:5089): Servidor iniciado en 127.0.0.1:8001

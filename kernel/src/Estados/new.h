@@ -1,13 +1,12 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <commons/collections/list.h>
+#ifndef NEW_H_
+#define NEW_H_
+
 #include <utils/planificacion/pcb.h>
-
-// t_list *init_new();
-
-//void nuevo_proceso(t_list *estado, instrucciones *proceso);
-
-// t_pcb *get_proceso_desde_new(t_list *estado);
+#include "globales.h"
 
 
+    t_pcb crear_pcb(t_list* instrucciones);
+    void nuevo_proceso(t_list *);
+    t_pcb *get_proceso_desde_new();
 
+#endif

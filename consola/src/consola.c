@@ -18,12 +18,12 @@ int main(int argc, char *argv[])
 
   char buffer[100]; // No sabemos para que sirve
 
-
   t_paquete *paquete = crear_paquete(INSTRUCCIONES);
 
   while ((fgets(buffer, 100, f)) != NULL)
   {
     buffer[strcspn(buffer, "\n")] = 0;
+    
     t_instruccion *instruccion = crear_estructura_instruccion(buffer);
     
     serializar_instruccion(instruccion, paquete);

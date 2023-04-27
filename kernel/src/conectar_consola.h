@@ -4,12 +4,12 @@
 #include <commons/log.h>
 #include <utils/mensajes.h>
 #include <utils/conexiones.h>
+#include <Estados/new.h>
 
-
-extern t_log* logger_kernel;
+extern t_log* LOGGER_KERNEL;
 
 void conectar_consola(int);
-void nuevo_proceso(int*);
+void enviado_de_consola(int*);
 
 void iterator(t_instruccion*);
 

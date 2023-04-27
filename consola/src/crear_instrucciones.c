@@ -59,7 +59,6 @@ t_instruccion* crear_estructura_instruccion(char* buffer) {
     
     t_instruccion *instruccion = malloc(sizeof(t_instruccion));
     instruccion->parametros = malloc(sizeof(char **));
-    
     instruccion->cantidad_parametros = 0;
 
     instruccion->operacion = obtener_codigo_instruccion(linea_de_instruccion[0]);

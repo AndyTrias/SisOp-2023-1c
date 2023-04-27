@@ -1,0 +1,22 @@
+[INFO] 20:26:36:861 CONSOLA/(22798:22798): Se conecto al servidor 127.0.0.1:8002
+[INFO] 20:26:36:861 CONSOLA/(22798:22798): Servidor iniciado en 127.0.0.1:8003
+[INFO] 20:26:43:945 CONSOLA/(22798:22798): Me llego el mensaje:  Hola fileSystem, soy el kernel
+[ERROR] 20:28:30:766 CONSOLA/(23939:23939): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 20:28:30:766 CONSOLA/(23939:23939): Servidor iniciado en 127.0.0.1:8003
+[ERROR] 20:28:55:630 CONSOLA/(24514:24514): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 20:28:55:630 CONSOLA/(24514:24514): Servidor iniciado en 127.0.0.1:8003
+[INFO] 20:30:12:054 CONSOLA/(24832:24832): Se conecto al servidor 127.0.0.1:8002
+[INFO] 20:30:12:054 CONSOLA/(24832:24832): Servidor iniciado en 127.0.0.1:8003
+[INFO] 20:31:25:497 CONSOLA/(25460:25460): Se conecto al servidor 127.0.0.1:8002
+[INFO] 20:31:25:497 CONSOLA/(25460:25460): Servidor iniciado en 127.0.0.1:8003
+[INFO] 20:37:37:925 CONSOLA/(28329:28329): Se conecto al servidor 127.0.0.1:8002
+[INFO] 20:37:37:926 CONSOLA/(28329:28329): Servidor iniciado en 127.0.0.1:8003
+[ERROR] 19:16:30:262 CONSOLA/(4287:4287): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 19:16:30:263 CONSOLA/(4287:4287): Servidor iniciado en 127.0.0.1:8003
+[INFO] 19:17:01:419 CONSOLA/(4679:4679): Se conecto al servidor 127.0.0.1:8002
+[INFO] 19:17:01:419 CONSOLA/(4679:4679): Servidor iniciado en 127.0.0.1:8003
+[INFO] 19:17:15:538 CONSOLA/(4877:4877): Se conecto al servidor 127.0.0.1:8002
+[INFO] 19:17:15:539 CONSOLA/(4877:4877): Servidor iniciado en 127.0.0.1:8003
+[INFO] 19:18:56:469 CONSOLA/(5521:5521): Se conecto al servidor 127.0.0.1:8002
+[INFO] 19:18:56:469 CONSOLA/(5521:5521): Servidor iniciado en 127.0.0.1:8003
+[INFO] 19:22:52:911 CONSOLA/(5521:5521): Me llego el mensaje:  Hola fileSystem, soy el kernel

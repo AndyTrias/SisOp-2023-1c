@@ -16,7 +16,7 @@
         t_list* instrucciones; // inicializo el pcb con una lista de instrucciones vacia
         int program_counter;
         //t_registros cpu;
-        //tabla de segmento
+        //tabla de segmento;
         int estimado_prox_rafaga;
         t_temporal* tiempo_desde_ult_ready; //cuando pasa a ready usar temporal_stop
         int tiempo_para_ready;//cuando pasa a ready usar  = temporal_gettime(tiempo_desde_ult_ready)

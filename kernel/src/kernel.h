@@ -8,8 +8,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <utils/mensajes.h>
-#include <procesos.h>
 #include <conectar_consola.h>
-#include "globales.h"
 
 #endif

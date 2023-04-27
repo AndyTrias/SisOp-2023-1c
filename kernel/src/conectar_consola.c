@@ -2,19 +2,19 @@
 
 void conectar_consola(int socket_servidor)
 {
-    log_info(logger_kernel, "Esperando conexiones de consolas...");
+    log_info(LOGGER_KERNEL, "Esperando conexiones de consolas...");
     pthread_t hilo_consola;
 
     while (1)
     {
         int socket_consola = esperar_cliente(socket_servidor);
-        log_info(logger_kernel, "Se conecto una consola");
-        pthread_create(&hilo_consola, NULL, (void *)nuevo_proceso, &socket_consola);
+        log_info(LOGGER_KERNEL, "Se conecto una consola");
+        pthread_create(&hilo_consola, NULL, (void *) enviado_de_consola, &socket_consola);
         pthread_detach(hilo_consola);
     }
 }
 
-void nuevo_proceso(int *socket_consola)
+void enviado_de_consola(int *socket_consola)
 {
     while (1)
     {
@@ -27,16 +27,16 @@ void nuevo_proceso(int *socket_consola)
 
         case INSTRUCCIONES:
             printf("Me llego un paquete\n");
-            t_list *lista = recibir_paquete_consola(*socket_consola);
-            list_iterate(lista, (void *)iterator);
+            t_list *instrucciones = recibir_paquete_consola(*socket_consola);
+            nuevo_proceso(instrucciones);
             break;
 
         case -1:
-            log_info(logger_kernel, "Se desconecto una consola");
+            log_info(LOGGER_KERNEL, "Se desconecto una consola");
             return;
 
         default:
-            log_error(logger_kernel, "Operacion desconocida");
+            log_error(LOGGER_KERNEL, "Operacion desconocida");
             return;
         }
     }
@@ -44,10 +44,10 @@ void nuevo_proceso(int *socket_consola)
 
 void iterator(t_instruccion *instruccion)
 {
-    log_info(logger_kernel, "%d", instruccion->operacion);
+    log_info(LOGGER_KERNEL, "%d", instruccion->operacion);
     for (int i = 0; i < instruccion->cantidad_parametros; i++)
     {
-        log_info(logger_kernel, "%s", instruccion->parametros[i]);
+        log_info(LOGGER_KERNEL, "%s", instruccion->parametros[i]);
     }
 }
 
@@ -91,6 +91,6 @@ t_instruccion *deserealizar_instruccion(void *buffer, int *desplazamiento)
         memcpy(instruccion_deserializada->parametros[i], buffer + *desplazamiento, tamanio_parametro);
         *desplazamiento += tamanio_parametro;
     }
-
+    
     return instruccion_deserializada;
 }

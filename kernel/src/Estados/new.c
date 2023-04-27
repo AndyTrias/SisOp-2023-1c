@@ -1,15 +1,27 @@
 #include "new.h"
 
-t_list *init_new()
-{
-    return list_create();
-}
-/*
-void nuevo_proceso(t_list *estado, instrucciones *proceso){ //como recibe las instrucciones?
-    list_add(estado, proceso); //falta armar pcb cuando recibe de cpu
+t_pcb crear_pcb(t_list* instrucciones){
+  t_pcb nuevo;
+  
+  nuevo.PID = PID_COUNT;
+  nuevo.estado_proceso = NEW;
+  nuevo.instrucciones = instrucciones;
+  nuevo.tiempo_desde_ult_ready = temporal_create();
+  nuevo.archivos_abiertos = list_create();
+
+  log_info(LOGGER_KERNEL, "Se Crea el proceso <%d> en NEW", PID_COUNT);
+
+  PID_COUNT++;
+  
+  return nuevo;
 }
 
-t_pcb *get_proceso_desde_new(t_list *estado){ //FIFO
-    return list_remove(estado, 0); //lo llama ready
+void nuevo_proceso(t_list* instrucciones){ //como recibe las instrucciones?
+    t_pcb proceso = crear_pcb(instrucciones);
+    list_add(LISTA_NEW, &proceso); //falta armar pcb cuando recibe de cpu
 }
-*/
+
+t_pcb *get_proceso_desde_new(){ //FIFO
+    return list_remove(LISTA_NEW, 0); //lo llama ready
+}
+

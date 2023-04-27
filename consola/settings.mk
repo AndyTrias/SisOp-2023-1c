@@ -13,7 +13,7 @@ CRELEASE=-O3 -Wall -DNDEBUG
 ARGS=
 
 # Valgrind flags
-MEMCHECK_FLAGS=--track-origins=yes --log-file="memcheck.log"
+MEMCHECK_FLAGS=--track-origins=yes --leak-check=full --show-leak-kinds=all --log-file="memcheck.log"
 HELGRIND_FLAGS=--log-file="helgrind.log"
 
 # Source files (*.c) to be excluded from tests compilation
