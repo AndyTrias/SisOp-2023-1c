@@ -21,13 +21,13 @@ typedef enum
 {
     F_READ,
     F_WRITE, 
-    SET,
     MOV_IN,
     MOV_OUT,
     F_TRUNCATE,
     F_SEEK,
     CREATE_SEGMENT, 
     IO,
+    SET,
     WAIT,
     SIGNAL,
     F_OPEN,
@@ -73,9 +73,9 @@ void *serializar_paquete(t_paquete *, int);
 void enviar_mensaje(char *, int);
 int recibir_operacion(int);
 void recibir_mensaje(int);
-//void agregar_a_paquete(t_paquete *, void *, int);
+void agregar_a_paquete_dato_serializado(t_paquete *, void *, int);
 void enviar_paquete(t_paquete *, int);
-t_list *recibir_paquete(int);
+void *recibir_paquete(int);
 void* recibir_buffer(int* , int);
 
 

@@ -27,7 +27,7 @@ t_operacion obtener_codigo_instruccion(char *identificador)
     if (!strcmp("CREATE_SEGMENT", identificador))
         op = CREATE_SEGMENT;
 
-    if (!strcmp("IO", identificador))
+    if (!strcmp("I/O", identificador))
         op = IO;
 
     if (!strcmp("WAIT", identificador))
@@ -73,37 +73,26 @@ t_instruccion* crear_estructura_instruccion(char* buffer) {
     return instruccion;
 }
 
-int serializar_instruccion(t_instruccion *instruccion, char *buffer) {
-    int desplazamiento = 0;
-    int size_to_send;
+void serializar_instruccion(t_instruccion *instruccion, t_paquete *paquete) {
 
-    memcpy(buffer + desplazamiento, &(instruccion->operacion), sizeof(t_operacion));
-    desplazamiento += sizeof(t_operacion);
+    int tamanio_parametro;
+    
 
-    memcpy(buffer + desplazamiento, &(instruccion->cantidad_parametros), sizeof(int));
-    desplazamiento += sizeof(int);
+    agregar_a_paquete_dato_serializado(paquete, &(instruccion->operacion), sizeof(t_operacion));
+    
+    agregar_a_paquete_dato_serializado(paquete, &(instruccion->cantidad_parametros), sizeof(int));
+
 
     for (int i = 0; i < instruccion->cantidad_parametros; i++) {
-        size_to_send = strlen(instruccion->parametros[i]) + 1;
-        memcpy(buffer + desplazamiento, &(size_to_send), sizeof(int));
-        desplazamiento += sizeof(int);
-
-        memcpy(buffer + desplazamiento, instruccion->parametros[i], size_to_send);
-        desplazamiento += size_to_send;
+        
+        // Agrego el tamanio del parametro porque es un char*
+        tamanio_parametro = strlen(instruccion->parametros[i]) + 1;
+        agregar_a_paquete_dato_serializado(paquete, &tamanio_parametro, sizeof(int));
+        
+        // Agrego el parametro
+        agregar_a_paquete_dato_serializado(paquete, instruccion->parametros[i], tamanio_parametro);
+        
     }
 
-    return desplazamiento;
 }
 
-void agregar_a_paquete(t_paquete* paquete, void* valor, int tamanio)
-{
-    paquete->buffer->stream = realloc(paquete->buffer->stream, paquete->buffer->size + tamanio + sizeof(int));
-
-	// Agrega el tamanio
-    memcpy(paquete->buffer->stream + paquete->buffer->size, &tamanio, sizeof(int));
-	
-    // Agrega el valor
-    memcpy(paquete->buffer->stream + paquete->buffer->size + sizeof(int), valor, tamanio);
-
-	paquete->buffer->size += tamanio + sizeof(int);
-}
