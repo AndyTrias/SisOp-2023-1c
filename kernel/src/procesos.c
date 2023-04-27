@@ -1,8 +1,6 @@
 
 #include "procesos.h"
 
-int PID_count = 0;
-
 t_pcb crear_pcb(){ //debe recibir como parametro las instrucciones
   t_pcb nuevo;
   
@@ -12,7 +10,10 @@ t_pcb crear_pcb(){ //debe recibir como parametro las instrucciones
   nuevo.tiempo_desde_ult_ready= temporal_create();
   nuevo.archivos_abiertos = list_create();
 
+  log_info(logger_kernel, "Se Crea el porceso <%d> en NEW", PID_count);
+  
   PID_count++;
+  
 
   return nuevo;
 
