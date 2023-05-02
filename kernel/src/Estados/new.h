@@ -3,6 +3,7 @@
 
 #include <utils/planificacion/pcb.h>
 #include "globales.h"
+#include "ready.h"
 
 
     t_pcb crear_pcb(t_list* instrucciones);

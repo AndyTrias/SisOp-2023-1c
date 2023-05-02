@@ -18,10 +18,13 @@ t_pcb crear_pcb(t_list* instrucciones){
 
 void nuevo_proceso(t_list* instrucciones){ //como recibe las instrucciones?
     t_pcb proceso = crear_pcb(instrucciones);
-    list_add(LISTA_NEW, &proceso); //falta armar pcb cuando recibe de cpu
+    list_add(LISTA_NEW, &proceso);
+    agregar_a_ready_si_hay_espacio();
 }
 
-t_pcb *get_proceso_desde_new(){ //FIFO
-    return list_remove(LISTA_NEW, 0); //lo llama ready
+// Es llamada por ready cada vez que necesita agregar un proceso a Ready porque tiene espacio
+// FIFO
+t_pcb *get_proceso_desde_new(){ 
+    return list_remove(LISTA_NEW, 0); 
 }
 
