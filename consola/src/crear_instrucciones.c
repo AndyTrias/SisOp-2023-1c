@@ -72,26 +72,4 @@ t_instruccion* crear_estructura_instruccion(char* buffer) {
     return instruccion;
 }
 
-void serializar_instruccion(t_instruccion *instruccion, t_paquete *paquete) {
-
-    int tamanio_parametro;
-    
-
-    agregar_a_paquete_dato_serializado(paquete, &(instruccion->operacion), sizeof(t_operacion));
-    
-    agregar_a_paquete_dato_serializado(paquete, &(instruccion->cantidad_parametros), sizeof(int));
-
-
-    for (int i = 0; i < instruccion->cantidad_parametros; i++) {
-        
-        // Agrego el tamanio del parametro porque es un char*
-        tamanio_parametro = strlen(instruccion->parametros[i]) + 1;
-        agregar_a_paquete_dato_serializado(paquete, &tamanio_parametro, sizeof(int));
-        
-        // Agrego el parametro
-        agregar_a_paquete_dato_serializado(paquete, instruccion->parametros[i], tamanio_parametro);
-        
-    }
-
-}
 

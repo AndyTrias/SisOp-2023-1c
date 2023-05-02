@@ -5,6 +5,8 @@
     #include <stdlib.h>
     #include "ready.h"
 
+    void terminar_proceso(t_pcb *proceso);
+
 
 
 #endif

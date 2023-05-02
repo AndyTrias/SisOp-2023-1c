@@ -3,9 +3,10 @@
 t_pcb crear_pcb(t_list* instrucciones){
   t_pcb nuevo;
   
-  nuevo.PID = PID_COUNT;
-  nuevo.estado_proceso = NEW;
-  nuevo.instrucciones = instrucciones;
+  nuevo.contexto.PID = PID_COUNT;
+  nuevo.contexto.program_counter = 0;
+  nuevo.contexto.instrucciones = instrucciones;
+  
   nuevo.tiempo_desde_ult_ready = temporal_create();
   nuevo.archivos_abiertos = list_create();
 

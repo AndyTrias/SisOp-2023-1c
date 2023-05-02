@@ -1,6 +1,6 @@
 #include "exit.h"
 
-void exit(t_pcb *proceso){
+void terminar_proceso(t_pcb *proceso){
     //limpiar memoria
 
 }

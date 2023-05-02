@@ -2,19 +2,19 @@
 
 t_pcb *ejecutando;
 
-t_pcb reemplazar_proceso(t_pcb *nuevo_pcb){
+t_pcb* reemplazar_proceso(t_pcb *nuevo_pcb){
     t_pcb *aux = ejecutando;
     ejecutando = nuevo_pcb;
     return aux;
 }
 
 void reemplazar_ctx(t_ctx *nuevo_ctx){
-    ejecutando->ctx = nuevo_ctx;
+    ejecutando->contexto = nuevo_ctx;
 }
 
 void mandar_a_exit_o_blocked(t_pcb *proceso){
-    if(list_size(proceso->instrucciones)==0){ //transitorio
-        exitear_programa(proceso);
+    if(list_size(proceso->contexto.instrucciones)==0){ //transitorio
+        terminar_proceso(proceso);
     }else{
         mandar_a_blocked(proceso);
     }
@@ -25,19 +25,13 @@ void enviar_a_cpu(){
     // Suponemos que existe una variable SOCKET_CPU
     // No sabemos como a llegar -> Metemos un patron adapter
     t_paquete *paquete = crear_paquete(CONTEXTO);
-    serializar_contexto(ejecutando->ctx, paquete);
-
-
-    enviar_a_cpu()
     
-
-void serializar_contexto(t_ctx *ctx, t_paquete *paquete){
-    agregar_a_paquete_dato_serializado(paquete, &ctx->pid, sizeof(ctx->pid));
-    agregar_a_paquete_dato_serializado(paquete, &ctx->pc, sizeof(ctx->pc));
-    agregar_a_paquete_dato_serializado(paquete, &ctx->sp, sizeof(ctx->sp));
-    agregar_a_paquete_dato_serializado
-
+    serializar_contexto(ejecutando->contexto, paquete);
+    
+    enviar_paquete(paquete, SOCKET_CPU);
 }
+
+
 
 void empezar_ciclo_si_vacio(){
     if (ejecutando == NULL){ 

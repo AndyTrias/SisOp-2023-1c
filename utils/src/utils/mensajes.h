@@ -77,6 +77,9 @@ void agregar_a_paquete_dato_serializado(t_paquete *, void *, int);
 void enviar_paquete(t_paquete *, int);
 void *recibir_paquete(int);
 void* recibir_buffer(int* , int);
+void serializar_instruccion(t_instruccion *, t_paquete *);
+
+
 
 
 #endif
