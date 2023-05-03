@@ -515,3 +515,25 @@
 [INFO] 19:54:42:130 KERNEL/(32093:32118): Se Crea el proceso <0> en NEW
 [INFO] 19:54:42:130 KERNEL/(32093:32118): @
 [INFO] 19:54:42:131 KERNEL/(32093:32118): Se desconecto una consola
+[ERROR] 22:22:55:010 KERNEL/(3981:3981): No se pudo conectar al servidor 127.0.0.1:8001
+[ERROR] 22:22:55:012 KERNEL/(3981:3981): No se pudo conectar al servidor 127.0.0.1:8002
+[ERROR] 22:22:55:014 KERNEL/(3981:3981): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 22:22:55:015 KERNEL/(3981:3981): Esperando conexiones de consolas...
+[ERROR] 22:38:29:061 KERNEL/(5239:5239): No se pudo conectar al servidor 127.0.0.1:8001
+[ERROR] 22:38:29:063 KERNEL/(5239:5239): No se pudo conectar al servidor 127.0.0.1:8002
+[ERROR] 22:38:29:065 KERNEL/(5239:5239): No se pudo conectar al servidor 127.0.0.1:8003
+[ERROR] 22:40:52:249 KERNEL/(5408:5408): No se pudo conectar al servidor 127.0.0.1:8001
+[ERROR] 22:40:52:250 KERNEL/(5408:5408): No se pudo conectar al servidor 127.0.0.1:8002
+[ERROR] 22:40:52:251 KERNEL/(5408:5408): No se pudo conectar al servidor 127.0.0.1:8003
+[ERROR] 22:45:10:012 KERNEL/(5671:5671): No se pudo conectar al servidor 127.0.0.1:8001
+[ERROR] 22:45:10:017 KERNEL/(5671:5671): No se pudo conectar al servidor 127.0.0.1:8002
+[ERROR] 22:45:10:018 KERNEL/(5671:5671): No se pudo conectar al servidor 127.0.0.1:8003
+[ERROR] 22:45:41:544 KERNEL/(5808:5808): No se pudo conectar al servidor 127.0.0.1:8001
+[ERROR] 22:45:41:546 KERNEL/(5808:5808): No se pudo conectar al servidor 127.0.0.1:8002
+[ERROR] 22:45:41:546 KERNEL/(5808:5808): No se pudo conectar al servidor 127.0.0.1:8003
+[ERROR] 22:47:41:466 KERNEL/(6165:6165): No se pudo conectar al servidor 127.0.0.1:8001
+[ERROR] 22:47:41:469 KERNEL/(6165:6165): No se pudo conectar al servidor 127.0.0.1:8002
+[ERROR] 22:47:41:470 KERNEL/(6165:6165): No se pudo conectar al servidor 127.0.0.1:8003
+[ERROR] 22:51:22:793 KERNEL/(6596:6596): No se pudo conectar al servidor 127.0.0.1:8001
+[ERROR] 22:51:22:796 KERNEL/(6596:6596): No se pudo conectar al servidor 127.0.0.1:8002
+[ERROR] 22:51:22:797 KERNEL/(6596:6596): No se pudo conectar al servidor 127.0.0.1:8003

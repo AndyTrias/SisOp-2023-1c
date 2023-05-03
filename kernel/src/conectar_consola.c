@@ -2,7 +2,6 @@
 
 void conectar_consola(int socket_servidor)
 {
-    log_info(LOGGER_KERNEL, "Esperando conexiones de consolas...");
     pthread_t hilo_consola;
 
     while (1)

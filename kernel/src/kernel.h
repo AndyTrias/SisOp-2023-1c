@@ -9,5 +9,7 @@
 #include <stdlib.h>
 #include <utils/mensajes.h>
 #include <conectar_consola.h>
+#include <pthread.h>
+#include <HilosK/recibir_consolas.h>
 
 #endif

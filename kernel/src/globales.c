@@ -19,3 +19,7 @@ int GRADO_MAX_MULTIPROGRAMACION;
 char** RECURSOS;
 char** INSTANCIAS_RECURSOS;
 
+//Semaforos
+sem_t CONSOLA_CONECTADA;
+pthread_mutex_t MUTEX_LISTA_NEW;
+pthread_mutex_t MUTEX_LISTA_READY;
