@@ -13,8 +13,9 @@
 // make necessary includes
 typedef enum
 {
-    INSTRUCCIONES,
-    MENSAJE,
+    INSTRUCCIONES, // Se utiliza de consola a kernel
+    MENSAJE, // Se utiliza de kernel a consola
+    CONTEXTO // Se utiliza de kernel a cpu
 } op_code;
 
 typedef enum
@@ -67,6 +68,7 @@ typedef struct
     t_buffer *buffer;
 } t_paquete;
 
+// Funciones del tp0
 t_paquete *crear_paquete(int);
 void crear_buffer(t_paquete *);
 void *serializar_paquete(t_paquete *, int);
@@ -77,6 +79,9 @@ void agregar_a_paquete_dato_serializado(t_paquete *, void *, int);
 void enviar_paquete(t_paquete *, int);
 void *recibir_paquete(int);
 void* recibir_buffer(int* , int);
+
+
+// Serializaciones que usan las funciones de arriba
 void serializar_instruccion(t_instruccion *, t_paquete *);
 
 

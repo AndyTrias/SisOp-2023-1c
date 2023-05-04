@@ -41,11 +41,14 @@ void empezar_ciclo_si_vacio(){
     
 }
 
+//  TODO: Recibe el paquete con el contexto
 void recibir_de_cpu(){
 
     t_ctx *ctx;
     //recibe de cpu
     reemplazar_ctx(ctx);
+    
+    // Le pide  un proceso a ready segun su algoritmo
     t_pcb *proceso_entrante = ceder_proceso_a_exec();
     t_pcb *proceso_saliente = reemplazar_proceso(proceso_entrante);
     enviar_a_cpu();

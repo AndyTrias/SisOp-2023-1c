@@ -18,6 +18,7 @@ void serializar_instrucciones(t_paquete* paquete, t_list *instrucciones){
         serializar_instruccion(instruccion, paquete);
     }
 }
+
 void serializar_registros(t_paquete *paquete, t_ctx *ctx)
     {
         agregar_a_paquete_dato_serializado(paquete, &(ctx->registros.AX), sizeof(ctx->registros.AX));
