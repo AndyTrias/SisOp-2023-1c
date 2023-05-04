@@ -21,15 +21,16 @@ void agregar_a_ready_si_hay_espacio()
         admitir_proceso();
 
         // Controlar si hay algo ejecutandose en CPU y mandarle el nuevo proceso
-        empezar_ciclo_si_vacio();
+        //empezar_ciclo_si_vacio();
     }
 }
 
 
 void admitir_proceso()
 { // se usa una vez que se sabe que hay espacio para un proceso mas
-
+    pthread_mutex_lock(&MUTEX_LISTA_READY);
     list_add(LISTA_READY, (get_proceso_desde_new(LISTA_NEW)));
+    pthread_mutex_unlock(&MUTEX_LISTA_READY);
 }
 
 t_pcb *get_proceso_por_fifo()

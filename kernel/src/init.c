@@ -38,4 +38,9 @@ void inicializar_variables_globales(t_config* config) {
     GRADO_MAX_MULTIPROGRAMACION = config_get_int_value(config, "GRADO_MAX_MULTIPROGRAMACION");
     RECURSOS = config_get_array_value(config, "RECURSOS");
     INSTANCIAS_RECURSOS = config_get_array_value(config, "INSTANCIAS_RECURSOS");
+
+    //inicializacion de semaforos
+    pthread_mutex_init(&MUTEX_LISTA_NEW, NULL);
+    pthread_mutex_init(&MUTEX_LISTA_READY, NULL);
+    sem_init(&CONSOLA_CONECTADA, 0, 0);
 }

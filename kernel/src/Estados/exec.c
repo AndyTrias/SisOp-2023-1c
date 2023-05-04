@@ -1,5 +1,5 @@
 #include "exec.h"
-
+/*
 t_pcb *ejecutando;
 
 t_pcb* reemplazar_proceso(t_pcb *nuevo_pcb){
@@ -56,5 +56,5 @@ void recibir_de_cpu(){
 
 }
 
-
+*/
 
