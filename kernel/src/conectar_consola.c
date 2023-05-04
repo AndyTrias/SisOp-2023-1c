@@ -18,11 +18,11 @@ void enviado_de_consola(int *socket_consola)
         switch (cod_op)
         {
         case MENSAJE:
-            printf("Me llego un mensaje\n");
+            log_info(LOGGER_KERNEL, "Se recibio un mensaje de una consola");
             break;
 
         case INSTRUCCIONES:
-            printf("Me llego un paquete\n");
+            log_info(LOGGER_KERNEL, "Se recibieron instrucciones de una consola");
             t_list *instrucciones = recibir_paquete_consola(*socket_consola);
             nuevo_proceso(instrucciones);
             break;

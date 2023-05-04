@@ -11,7 +11,7 @@ int get_procesos_en_cpu(){
 
 bool hay_espacio_ready()
 {
-    return (GRADO_MAX_MULTIPROGRAMACION < get_grado_de_multiprogramacion(2)); // implementar procesos en blocked
+    return (GRADO_MAX_MULTIPROGRAMACION > get_grado_de_multiprogramacion(2)); // implementar procesos en blocked
 }
 
 void agregar_a_ready_si_hay_espacio()
@@ -21,7 +21,7 @@ void agregar_a_ready_si_hay_espacio()
         admitir_proceso();
 
         // Controlar si hay algo ejecutandose en CPU y mandarle el nuevo proceso
-        //empezar_ciclo_si_vacio();
+        empezar_ciclo_si_vacio();
     }
 }
 

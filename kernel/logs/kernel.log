@@ -537,3 +537,52 @@
 [ERROR] 22:51:22:793 KERNEL/(6596:6596): No se pudo conectar al servidor 127.0.0.1:8001
 [ERROR] 22:51:22:796 KERNEL/(6596:6596): No se pudo conectar al servidor 127.0.0.1:8002
 [ERROR] 22:51:22:797 KERNEL/(6596:6596): No se pudo conectar al servidor 127.0.0.1:8003
+[ERROR] 20:00:33:151 KERNEL/(8257:8257): No se pudo conectar al servidor 127.0.0.1:8001
+[ERROR] 20:00:33:151 KERNEL/(8257:8257): No se pudo conectar al servidor 127.0.0.1:8002
+[ERROR] 20:00:33:151 KERNEL/(8257:8257): No se pudo conectar al servidor 127.0.0.1:8003
+[ERROR] 20:01:05:919 KERNEL/(8572:8572): No se pudo conectar al servidor 127.0.0.1:8001
+[ERROR] 20:01:05:919 KERNEL/(8572:8572): No se pudo conectar al servidor 127.0.0.1:8002
+[ERROR] 20:01:05:919 KERNEL/(8572:8572): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 20:01:05:919 KERNEL/(8572:8577): Esperando conexiones de consolas...
+[INFO] 20:01:17:757 KERNEL/(8572:8577): Se conecto una consola
+[INFO] 20:01:27:822 KERNEL/(8572:8577): Se Crea el proceso <0> en NEW
+[INFO] 20:01:31:358 KERNEL/(8572:8577): Se desconecto una consola
+[ERROR] 20:02:10:321 KERNEL/(9094:9094): No se pudo conectar al servidor 127.0.0.1:8001
+[ERROR] 20:02:10:321 KERNEL/(9094:9094): No se pudo conectar al servidor 127.0.0.1:8002
+[ERROR] 20:02:10:321 KERNEL/(9094:9094): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 20:02:10:321 KERNEL/(9094:9098): Esperando conexiones de consolas...
+[INFO] 20:02:17:506 KERNEL/(9094:9098): Se conecto una consola
+[INFO] 20:02:17:506 KERNEL/(9094:9098): Se Crea el proceso <0> en NEW
+[INFO] 20:02:17:506 KERNEL/(9094:9098): Se desconecto una consola
+[ERROR] 20:03:33:531 KERNEL/(9584:9584): No se pudo conectar al servidor 127.0.0.1:8001
+[ERROR] 20:03:33:531 KERNEL/(9584:9584): No se pudo conectar al servidor 127.0.0.1:8002
+[ERROR] 20:03:33:531 KERNEL/(9584:9584): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 20:03:33:531 KERNEL/(9584:9588): Esperando conexiones de consolas...
+[INFO] 20:03:38:444 KERNEL/(9584:9588): Se conecto una consola
+[INFO] 20:03:38:444 KERNEL/(9584:9588): Se recibieron instrucciones de una consola
+[INFO] 20:03:42:623 KERNEL/(9584:9588): Se Crea el proceso <0> en NEW
+[INFO] 20:04:22:744 KERNEL/(9584:9588): Se desconecto una consola
+[INFO] 20:04:27:980 KERNEL/(9584:9588): Se conecto una consola
+[INFO] 20:04:27:980 KERNEL/(9584:9588): Se recibieron instrucciones de una consola
+[INFO] 20:04:31:526 KERNEL/(9584:9588): Se Crea el proceso <1> en NEW
+[ERROR] 20:06:17:374 KERNEL/(10595:10595): No se pudo conectar al servidor 127.0.0.1:8001
+[ERROR] 20:06:17:375 KERNEL/(10595:10595): No se pudo conectar al servidor 127.0.0.1:8002
+[ERROR] 20:06:17:375 KERNEL/(10595:10595): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 20:06:17:375 KERNEL/(10595:10599): Esperando conexiones de consolas...
+[INFO] 20:06:24:375 KERNEL/(10595:10599): Se conecto una consola
+[INFO] 20:06:24:375 KERNEL/(10595:10599): Se recibieron instrucciones de una consola
+[INFO] 20:06:26:370 KERNEL/(10595:10599): Se Crea el proceso <0> en NEW
+[ERROR] 20:11:41:172 KERNEL/(11887:11887): No se pudo conectar al servidor 127.0.0.1:8001
+[ERROR] 20:11:41:172 KERNEL/(11887:11887): No se pudo conectar al servidor 127.0.0.1:8002
+[ERROR] 20:11:41:172 KERNEL/(11887:11887): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 20:11:41:173 KERNEL/(11887:11891): Esperando conexiones de consolas...
+[INFO] 20:11:46:572 KERNEL/(11887:11891): Se conecto una consola
+[INFO] 20:11:46:572 KERNEL/(11887:11891): Se recibieron instrucciones de una consola
+[INFO] 20:11:48:678 KERNEL/(11887:11891): Se Crea el proceso <0> en NEW
+[ERROR] 20:12:13:841 KERNEL/(12272:12272): No se pudo conectar al servidor 127.0.0.1:8001
+[ERROR] 20:12:13:841 KERNEL/(12272:12272): No se pudo conectar al servidor 127.0.0.1:8002
+[ERROR] 20:12:13:841 KERNEL/(12272:12272): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 20:12:13:842 KERNEL/(12272:12277): Esperando conexiones de consolas...
+[INFO] 20:12:18:890 KERNEL/(12272:12277): Se conecto una consola
+[INFO] 20:12:18:890 KERNEL/(12272:12277): Se recibieron instrucciones de una consola
+[INFO] 20:12:20:037 KERNEL/(12272:12277): Se Crea el proceso <0> en NEW

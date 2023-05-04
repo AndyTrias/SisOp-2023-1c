@@ -321,3 +321,18 @@
 [INFO] 19:54:12:331 CONSOLA/(31912:31912): Paquete enviado
 [INFO] 19:54:42:130 CONSOLA/(32117:32117): Se conecto al servidor 127.0.0.1:8000
 [INFO] 19:54:42:130 CONSOLA/(32117:32117): Paquete enviado
+[INFO] 20:01:17:757 CONSOLA/(8756:8756): Se conecto al servidor 127.0.0.1:8000
+[INFO] 20:01:21:649 CONSOLA/(8756:8756): Paquete enviado
+[INFO] 20:02:17:506 CONSOLA/(9267:9267): Se conecto al servidor 127.0.0.1:8000
+[INFO] 20:02:17:506 CONSOLA/(9267:9267): Paquete enviado
+[INFO] 20:03:38:444 CONSOLA/(9732:9732): Se conecto al servidor 127.0.0.1:8000
+[INFO] 20:03:38:444 CONSOLA/(9732:9732): Paquete enviado
+[INFO] 20:04:27:980 CONSOLA/(10057:10057): Se conecto al servidor 127.0.0.1:8000
+[INFO] 20:04:27:980 CONSOLA/(10057:10057): Paquete enviado
+[ERROR] 20:06:04:222 CONSOLA/(10407:10407): No se pudo conectar al servidor 127.0.0.1:8000
+[INFO] 20:06:24:375 CONSOLA/(10744:10744): Se conecto al servidor 127.0.0.1:8000
+[INFO] 20:06:24:375 CONSOLA/(10744:10744): Paquete enviado
+[INFO] 20:11:46:572 CONSOLA/(12015:12015): Se conecto al servidor 127.0.0.1:8000
+[INFO] 20:11:46:572 CONSOLA/(12015:12015): Paquete enviado
+[INFO] 20:12:18:890 CONSOLA/(12402:12402): Se conecto al servidor 127.0.0.1:8000
+[INFO] 20:12:18:890 CONSOLA/(12402:12402): Paquete enviado

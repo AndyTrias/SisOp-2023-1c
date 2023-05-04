@@ -23,7 +23,7 @@ int main(int argc, char *argv[]) {
   
   //hilo para recibir consolas
   pthread_create(&hilo_recibir_consola, NULL, recibir_consolas, socket_servidor);
-  pthread_detach(&hilo_recibir_consola);
+  pthread_join(hilo_recibir_consola, NULL);
 
   terminar_conexiones(3, conexion_cpu, conexion_memoria, conexion_filesystem);
   terminar_programa(LOGGER_KERNEL, config);

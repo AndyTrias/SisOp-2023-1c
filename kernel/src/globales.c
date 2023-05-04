@@ -23,3 +23,5 @@ char** INSTANCIAS_RECURSOS;
 sem_t CONSOLA_CONECTADA;
 pthread_mutex_t MUTEX_LISTA_NEW;
 pthread_mutex_t MUTEX_LISTA_READY;
+
+int SOCKET_CPU;
