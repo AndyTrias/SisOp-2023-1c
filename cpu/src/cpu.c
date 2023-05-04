@@ -22,11 +22,9 @@ int main(int argc, char *argv[]) {
     inicializar_servidor(IP, puerto_escucha, logger);
     /*
     log_info(cpu_log,"Esperando la conexion de interrupcion...");
-    sem_wait(&mutex_interrupt);
     log_info(cpu_log,"Todo listo, inicializando...");
-    sem_post(&mutex_interrupt);
+    log_info(cpu_log,"No hay CTX, esperando...");
     while(true){
-        log_info(cpu_log,"No hay CTX, esperando...");
         recibir_paquete_kernel(int);
         log_info(cpu_log,"Llego el CTX");
         ctx = deserealizar_instruccion(void*, int* );

@@ -15,7 +15,7 @@ void ciclo_de_instruccion(t_ctx* ctx) {
 	t_instruccion instruccion_actual;
 	t_buffer* buffer = malloc(sizeof(t_buffer));
 
-	while (ctx) {
+	while (ctx != NULL) {
 		instruccion_actual = fetch(ctx);
         log_info(cpu_log, "PID: %d  -Ejecutando: %d - %d", ctx->PID, instruccion_actual->identificador, instruccion_actual->parametro[0]); //Primer Log obligatorio
 		log_info(cpu_log, "Instruccion nº%d: %d", ctx->program_counter, instruccion_actual.identificador);
@@ -33,6 +33,11 @@ void ciclo_de_instruccion(t_ctx* ctx) {
 			log_info(cpu_log, "Devolviendo PCB actualizado del PID %d...", ctx->PID);
 			/*
 			enviar_pcb(ctx, socket_dispatch, 0);									//
+			if (vover_a_ready){
+				volver_a_ready = false
+				enviar_socket("YIELD")	
+			}
+			envira_socket("EXIT")
 			liberar_pcb(ctx);														//
 			*/
 			ctx = NULL;
