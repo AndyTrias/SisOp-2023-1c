@@ -5,6 +5,7 @@ t_pcb crear_pcb(t_list* instrucciones){
   
   nuevo.contexto.PID = PID_COUNT;
   nuevo.contexto.program_counter = 0;
+  nuevo.contexto.cant_instrucciones = list_size(instrucciones);
   nuevo.contexto.instrucciones = instrucciones;
   
   nuevo.tiempo_desde_ult_ready = temporal_create();
@@ -19,9 +20,11 @@ t_pcb crear_pcb(t_list* instrucciones){
 
 void nuevo_proceso(t_list* instrucciones){ //como recibe las instrucciones?
     t_pcb proceso = crear_pcb(instrucciones);
+    
     pthread_mutex_lock(&MUTEX_LISTA_NEW);
     list_add(LISTA_NEW, &proceso);
     pthread_mutex_unlock(&MUTEX_LISTA_NEW);
+    
     agregar_a_ready_si_hay_espacio();
 }
 

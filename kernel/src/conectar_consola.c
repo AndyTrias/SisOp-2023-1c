@@ -52,7 +52,8 @@ t_list *recibir_paquete_consola(int socket_cliente)
     int size;
     void *buffer = recibir_buffer(&size, socket_cliente);
 
-    // Nuestra implementacion recibe el tamanio de la instruccion a leer
+    
+    // A partir de aca si funciona
     int desplazamiento = 0;
 
     t_list *instrucciones = list_create();
@@ -61,32 +62,10 @@ t_list *recibir_paquete_consola(int socket_cliente)
     {
         list_add(instrucciones, deserealizar_instruccion(buffer, &desplazamiento));
     }
-    free(buffer);
 
     return instrucciones;
+
+    free(buffer);
 }
 
-t_instruccion *deserealizar_instruccion(void *buffer, int *desplazamiento)
-{
-    t_instruccion *instruccion_deserializada = malloc(sizeof(t_instruccion));
-    int tamanio_parametro;
 
-    memcpy(&instruccion_deserializada->operacion, buffer + *desplazamiento, sizeof(t_operacion));
-    *desplazamiento += sizeof(t_operacion);
-
-    memcpy(&instruccion_deserializada->cantidad_parametros, buffer + *desplazamiento, sizeof(int));
-    *desplazamiento += sizeof(int);
-
-    instruccion_deserializada->parametros = malloc(sizeof(char *) * instruccion_deserializada->cantidad_parametros);
-    for (int i = 0; i < instruccion_deserializada->cantidad_parametros; i++)
-    {
-        memcpy(&tamanio_parametro, buffer + *desplazamiento, sizeof(int));
-        *desplazamiento += sizeof(int);
-
-        instruccion_deserializada->parametros[i] = malloc(tamanio_parametro);
-        memcpy(instruccion_deserializada->parametros[i], buffer + *desplazamiento, tamanio_parametro);
-        *desplazamiento += tamanio_parametro;
-    }
-    
-    return instruccion_deserializada;
-}

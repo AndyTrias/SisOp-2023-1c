@@ -26,7 +26,8 @@ typedef struct {
    typedef struct
     {
         int PID;
-        t_list* instrucciones; // inicializo el pcb con una lista de instrucciones vacia
+        int cant_instrucciones;
+        t_list* instrucciones; 
         int program_counter;
         t_registros registros; 
     } t_ctx;

@@ -17,7 +17,10 @@ typedef enum
 {
     INSTRUCCIONES, // Se utiliza de consola a kernel
     MENSAJE, // Se utiliza de kernel a consola
-    CONTEXTO // Se utiliza de kernel a cpu
+    CONTEXTO, // Se utiliza de kernel a cpu
+    DESALOJAR,
+    BLOQUEAR,
+    TERMINAR
 } op_code;
 
 typedef enum
@@ -79,15 +82,20 @@ int recibir_operacion(int);
 void recibir_mensaje(int);
 void agregar_a_paquete_dato_serializado(t_paquete *, void *, int);
 void enviar_paquete(t_paquete *, int);
-void *recibir_paquete(int);
+void *recibir_paquete(int, int*);
 void* recibir_buffer(int* , int);
 
 
-// Serializaciones que usan las funciones de arriba
+// Serializaciones + Deserealizaciones que usan las funciones de arriba
 void serializar_contexto(t_ctx*, t_paquete*);
 void serializar_instrucciones(t_list *, t_paquete* );
 void serializar_instruccion(t_instruccion *, t_paquete *);
 void serializar_registros(t_registros *, t_paquete *);
+t_ctx *deserializar_contexto(void *);
+t_registros deserealizar_registros(void *, int*);
+t_instruccion* deserealizar_instruccion(void*, int* );
+
+
 
 
 

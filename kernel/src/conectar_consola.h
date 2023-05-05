@@ -16,7 +16,6 @@ void iterator(t_instruccion*);
 // Se deberia modularizar para que reciba un paquete general  
 // se envie a la funcion de deserealizacion para ese paquete como parametro
 t_list * recibir_paquete_consola(int);
-t_instruccion* deserealizar_instruccion(void*, int* );
 
 
 #endif

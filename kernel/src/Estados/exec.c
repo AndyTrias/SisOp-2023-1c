@@ -40,16 +40,42 @@ void empezar_ciclo_si_vacio(){
 }
 
 //  TODO: Recibe el paquete con el contexto
-void recibir_de_cpu(){
-
-    t_ctx *ctx = malloc(sizeof(t_ctx));
-    //recibe de cpu
+void recibir_de_cpu(int conexion_cpu){
+        
+    int cod_op = recibir_operacion(conexion_cpu);
+    
+    int size;
+    void* buffer = recibir_buffer(&size, conexion_cpu);
+    
+    t_ctx * ctx = deserializar_contexto(buffer);
     reemplazar_ctx(ctx);
     
+    switch (cod_op)
+    {
+    case DESALOJAR:
+        log_info(LOGGER_KERNEL, "Se recibio un mensaje de desalojo");
+        break;
+    
+    case BLOQUEAR:
+        log_info(LOGGER_KERNEL, "Se recibio un mensaje de bloqueo");
+        break;
+
+    case TERMINAR:
+        log_info(LOGGER_KERNEL, "Se recibio un mensaje de finalizacion");
+        break;
+
+
+    default:
+        log_error(LOGGER_KERNEL, "Operacion desconocida");
+        return;
+    }
+
+    //recibe de cpu
+    
     // Le pide  un proceso a ready segun su algoritmo
-    t_pcb *proceso_entrante = ceder_proceso_a_exec();
-    t_pcb *proceso_saliente = reemplazar_proceso(proceso_entrante);
-    enviar_a_cpu();
-    mandar_a_exit_o_blocked(proceso_saliente);
+    // t_pcb *proceso_entrante = ceder_proceso_a_exec();
+    // t_pcb *proceso_saliente = reemplazar_proceso(proceso_entrante);
+    // enviar_a_cpu();
+    // mandar_a_exit_o_blocked(proceso_saliente);
 
 }

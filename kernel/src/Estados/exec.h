@@ -15,6 +15,8 @@
     void mandar_a_exit_o_blocked(t_pcb *);
     void reemplazar_ctx(t_ctx *);
     t_pcb* reemplazar_proceso(t_pcb *);
+    void recibir_de_cpu(int conexion_cpu);
+
 
 
 
