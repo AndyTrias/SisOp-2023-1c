@@ -21,12 +21,10 @@ void mandar_a_exit_o_blocked(t_pcb *proceso){
 }
 
 void enviar_a_cpu(){
-    //envia a cpu el procey desso en ejecutando
-    // Suponemos que existe una variable SOCKET_CPU
-    // No sabemos como a llegar -> Metemos un patron adapter
+  
     t_paquete *paquete = crear_paquete(CONTEXTO);
     
-    //serializar_contexto(ejecutando->contexto, paquete);
+    serializar_contexto(&ejecutando->contexto, paquete);
     
     enviar_paquete(paquete, SOCKET_CPU);
 }
@@ -44,7 +42,7 @@ void empezar_ciclo_si_vacio(){
 //  TODO: Recibe el paquete con el contexto
 void recibir_de_cpu(){
 
-    t_ctx *ctx;
+    t_ctx *ctx = malloc(sizeof(t_ctx));
     //recibe de cpu
     reemplazar_ctx(ctx);
     

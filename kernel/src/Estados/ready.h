@@ -15,6 +15,6 @@
     int get_procesos_en_cpu();
     t_pcb *get_proceso_por_fifo();
     t_pcb *get_proceso_por_hrrn();
-    t_pcb *ceder_proceso_a_cpu();
+    t_pcb *ceder_proceso_a_exec();
 
 #endif

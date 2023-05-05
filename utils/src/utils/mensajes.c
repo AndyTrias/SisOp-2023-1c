@@ -126,6 +126,27 @@ void obtener_identificador(char* identificador, int socket_cliente) {
 	free(buffer);
 }
 
+void serializar_contexto(t_ctx *ctx, t_paquete *paquete){
+    // Serialio PID y PC
+    agregar_a_paquete_dato_serializado(paquete, &ctx->PID, sizeof(ctx->PID));
+    agregar_a_paquete_dato_serializado(paquete, &ctx->program_counter, sizeof(ctx->program_counter));
+
+    // Serializo Instrucciones
+    serializar_instrucciones(ctx->instrucciones, paquete);
+
+    // Serializo Registros
+    serializar_registros(&ctx->registros, paquete);
+    
+}
+
+void serializar_instrucciones(t_list *instrucciones, t_paquete* paquete){
+    int cant_instrucciones = list_size(instrucciones);
+    for (int i =0; i<cant_instrucciones; i++){
+        t_instruccion *instruccion = list_get(instrucciones, i);
+        serializar_instruccion(instruccion, paquete);
+    }
+}
+
 void serializar_instruccion(t_instruccion *instruccion, t_paquete *paquete) {
 
     int tamanio_parametro;
@@ -148,3 +169,20 @@ void serializar_instruccion(t_instruccion *instruccion, t_paquete *paquete) {
     }
 
 }
+
+
+void serializar_registros(t_registros *registros, t_paquete *paquete)
+    {
+        agregar_a_paquete_dato_serializado(paquete, &(registros->AX), sizeof(registros->AX));
+        agregar_a_paquete_dato_serializado(paquete, &(registros->BX), sizeof(registros->BX));
+        agregar_a_paquete_dato_serializado(paquete, &(registros->CX), sizeof(registros->CX));
+        agregar_a_paquete_dato_serializado(paquete, &(registros->DX), sizeof(registros->DX));
+        agregar_a_paquete_dato_serializado(paquete, &(registros->EAX), sizeof(registros->EAX));
+        agregar_a_paquete_dato_serializado(paquete, &(registros->EBX), sizeof(registros->EBX));
+        agregar_a_paquete_dato_serializado(paquete, &(registros->ECX), sizeof(registros->ECX));
+        agregar_a_paquete_dato_serializado(paquete, &(registros->EDX), sizeof(registros->EDX));
+        agregar_a_paquete_dato_serializado(paquete, &(registros->RAX), sizeof(registros->RAX));
+        agregar_a_paquete_dato_serializado(paquete, &(registros->RBX), sizeof(registros->RBX));
+        agregar_a_paquete_dato_serializado(paquete, &(registros->RCX), sizeof(registros->RCX));
+        agregar_a_paquete_dato_serializado(paquete, &(registros->RDX), sizeof(registros->RDX));
+    }

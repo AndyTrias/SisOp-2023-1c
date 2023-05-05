@@ -9,6 +9,8 @@
 #include <string.h>
 #include <commons/log.h>
 #include <commons/collections/list.h>
+#include "planificacion/pcb.h"
+
 
 // make necessary includes
 typedef enum
@@ -82,7 +84,11 @@ void* recibir_buffer(int* , int);
 
 
 // Serializaciones que usan las funciones de arriba
+void serializar_contexto(t_ctx*, t_paquete*);
+void serializar_instrucciones(t_list *, t_paquete* );
 void serializar_instruccion(t_instruccion *, t_paquete *);
+void serializar_registros(t_registros *, t_paquete *);
+
 
 
 
