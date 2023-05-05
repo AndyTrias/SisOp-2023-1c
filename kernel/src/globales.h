@@ -31,5 +31,4 @@ extern pthread_mutex_t MUTEX_LISTA_NEW;
 extern pthread_mutex_t MUTEX_LISTA_READY;
 
 extern int SOCKET_CPU;
-
 #endif

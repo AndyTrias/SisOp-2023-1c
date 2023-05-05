@@ -52,8 +52,7 @@ t_list *recibir_paquete_consola(int socket_cliente)
     int size;
     void *buffer = recibir_buffer(&size, socket_cliente);
 
-    
-    // A partir de aca si funciona
+    // Nuestra implementacion recibe el tamanio de la instruccion a leer
     int desplazamiento = 0;
 
     t_list *instrucciones = list_create();
@@ -62,10 +61,7 @@ t_list *recibir_paquete_consola(int socket_cliente)
     {
         list_add(instrucciones, deserealizar_instruccion(buffer, &desplazamiento));
     }
+    free(buffer);
 
     return instrucciones;
-
-    free(buffer);
 }
-
-

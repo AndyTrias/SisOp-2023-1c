@@ -27,10 +27,10 @@ typedef enum
 {
     F_READ,
     F_WRITE, 
-    MOV_IN,
     MOV_OUT,
     F_TRUNCATE,
     F_SEEK,
+    MOV_IN,
     CREATE_SEGMENT, 
     IO,
     SET,

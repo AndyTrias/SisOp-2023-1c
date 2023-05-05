@@ -9,5 +9,7 @@
     #include <stdio.h>
     #include <stdlib.h>
     #include <instruccionescpu.h>
+    #include "conectar_kernel.h"
 
+    t_log* LOGGER_CPU;
 #endif

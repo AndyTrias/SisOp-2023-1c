@@ -14,16 +14,11 @@
     
     #define IP "127.0.0.1"
 
-    void inicializar_servidor(char*, char*, t_log* );
     int inicializar_cliente(char* , char* , t_log* );
     int crear_conexion(char *, char *);
     int crear_servidor(char *, char *);
     int esperar_cliente(int);
     void terminar_conexiones(int, ...);
-    int atender_cliente(int);
-
-    
-
     
 
 #endif

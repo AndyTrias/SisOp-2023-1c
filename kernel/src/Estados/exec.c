@@ -21,11 +21,11 @@ void mandar_a_exit_o_blocked(t_pcb *proceso){
 }
 
 void enviar_a_cpu(){
-  
+    
     t_paquete *paquete = crear_paquete(CONTEXTO);
     
     serializar_contexto(&ejecutando->contexto, paquete);
-    
+
     enviar_paquete(paquete, SOCKET_CPU);
 }
 

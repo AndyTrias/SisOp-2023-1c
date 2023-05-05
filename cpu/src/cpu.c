@@ -3,23 +3,22 @@
 int main(int argc, char *argv[]) {
   
     if (argc != 2) {
-    printf("Debe ingresar el archivo de configuracion\n");
-    exit(1);
+        printf("Debe ingresar el archivo de configuracion\n");
+        exit(1);
     }
 
     //t_ctx *ctx;
     //t_buffer* buffer = crear_buffer();
-    t_log* logger = iniciar_logger("./logs/cpu.log", "CONSOLA");
-    t_config* config = iniciar_config("./config/cpu.config");
+    LOGGER_CPU = iniciar_logger("./logs/cpu.log", "CPU");
+    t_config* config = iniciar_config(argv[1]);
     
     int conexion_memoria;
-    inicializar_conexiones(&conexion_memoria, config, logger);
-
-    enviar_mensaje("Hola Memoria, soy la cpu", conexion_memoria);
-    enviar_mensaje("Hola Memoria, soy la cpu2", conexion_memoria);
+    inicializar_conexiones(&conexion_memoria, config, LOGGER_CPU);
 
     char *puerto_escucha = config_get_string_value(config, "PUERTO_ESCUCHA");
-    inicializar_servidor(IP, puerto_escucha, logger);
+    int socket_servidor = crear_servidor(IP, puerto_escucha);
+
+    conectar_kernel(socket_servidor);
     /*
     log_info(cpu_log,"Esperando la conexion de interrupcion...");
     log_info(cpu_log,"Todo listo, inicializando...");
@@ -34,7 +33,7 @@ int main(int argc, char *argv[]) {
     free(buffer);
     */
 
-    terminar_programa(logger, config);
+    terminar_programa(LOGGER_CPU, config);
     terminar_conexiones(1, conexion_memoria);
 
     return 0;

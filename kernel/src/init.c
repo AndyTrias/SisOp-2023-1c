@@ -19,6 +19,8 @@ void inicializar_conexiones(int *conexion_cpu, int *conexion_memoria, int *conex
     *conexion_memoria = inicializar_cliente(ip_memoria, puerto_memoria, LOGGER_KERNEL);
     *conexion_filesystem = inicializar_cliente(ip_filesystem, puerto_filesystem, LOGGER_KERNEL);
 
+    SOCKET_CPU = *conexion_cpu;
+
 }
 
 void inicializar_variables_globales(t_config* config) {
