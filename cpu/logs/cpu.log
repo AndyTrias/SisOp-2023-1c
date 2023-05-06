@@ -36983,3 +36983,26 @@
 [INFO] 23:51:08:630 CPU/(49336:49336): Esperando kernel....
 [INFO] 23:51:31:762 CPU/(49336:49336): Se conecto el kernel
 [INFO] 23:51:36:683 CPU/(49336:49336): Se desconecto el kernel
+[ERROR] 01:43:32:834 CPU/(9670:9670): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 01:43:32:838 CPU/(9670:9670): Esperando kernel....
+[INFO] 01:43:40:182 CPU/(9670:9670): Se conecto el kernel
+[INFO] 01:43:46:823 CPU/(9670:9670): Se recibio un contexto del kernel
+[INFO] 01:43:46:823 CPU/(9670:9670): Proceso 0 TERMINADO
+[INFO] 01:50:53:334 CPU/(9670:9670): Se desconecto el kernel
+[ERROR] 02:23:53:745 CPU/(15340:15340): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 02:23:53:747 CPU/(15340:15340): Esperando kernel....
+[INFO] 02:24:11:977 CPU/(15340:15340): Se conecto el kernel
+[INFO] 02:24:21:783 CPU/(15340:15340): Se recibio un contexto del kernel
+[INFO] 02:24:21:783 CPU/(15340:15340): Proceso 0 TERMINADO
+[INFO] 02:24:21:783 CPU/(15340:15340): Comenzando ciclo con nuevo PCB...
+[INFO] 02:24:21:783 CPU/(15340:15340): Program Counter: 0 + 1
+[INFO] 02:24:21:783 CPU/(15340:15340): PID: 0  -Ejecutando: 8 - 0x5577b620bed0
+[ERROR] 02:26:57:329 CPU/(16228:16228): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 02:26:57:330 CPU/(16228:16228): Esperando kernel....
+[INFO] 02:27:03:074 CPU/(16228:16228): Se conecto el kernel
+[INFO] 02:27:12:276 CPU/(16228:16228): Se recibio un contexto del kernel
+[INFO] 02:27:12:276 CPU/(16228:16228): Proceso 0 TERMINADO
+[INFO] 02:27:12:276 CPU/(16228:16228): Comenzando ciclo con nuevo PCB...
+[INFO] 02:27:12:276 CPU/(16228:16228): Program Counter: 0 + 1
+[INFO] 02:27:12:276 CPU/(16228:16228): PID: 0  -Ejecutando: 8 - 0x559594618b40
+[INFO] 02:35:11:200 CPU/(16228:16228): Se desconecto el kernel

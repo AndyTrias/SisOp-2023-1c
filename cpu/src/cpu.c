@@ -18,7 +18,9 @@ int main(int argc, char *argv[]) {
     char *puerto_escucha = config_get_string_value(config, "PUERTO_ESCUCHA");
     int socket_servidor = crear_servidor(IP, puerto_escucha);
 
+    
     conectar_kernel(socket_servidor);
+    
     /*
     log_info(cpu_log,"Esperando la conexion de interrupcion...");
     log_info(cpu_log,"Todo listo, inicializando...");

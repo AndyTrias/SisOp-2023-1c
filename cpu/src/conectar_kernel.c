@@ -5,7 +5,7 @@ void conectar_kernel(int socket_servidor)
     log_info(LOGGER_CPU, "Esperando kernel....");
     while (1)
     {
-        int socket_kernel = esperar_cliente(socket_servidor);
+        int socket_kernel = esperar_cliente(socket_servidor); //En la librería faltaba utils/conexiones.h, ya no hace falta agreagarlo porque se encuentra en instruccionescpu.h
         log_info(LOGGER_CPU, "Se conecto el kernel");
         enviado_de_kernel(&socket_kernel);
     }
@@ -21,6 +21,8 @@ void enviado_de_kernel(int *socket_kernel)
         case CONTEXTO:
             log_info(LOGGER_CPU, "Se recibio un contexto del kernel");
             t_ctx* ctx = recibir_paquete_kernel(*socket_kernel);
+            log_info(LOGGER_CPU, "Proceso %d TERMINADO", ctx->PID);
+            ciclo_de_instruccion(ctx);
             break;
 
         case -1:

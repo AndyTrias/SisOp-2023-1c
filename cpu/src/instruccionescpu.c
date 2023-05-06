@@ -1,31 +1,42 @@
-// #include <instruccionescpu.h>
+#include <instruccionescpu.h>
 // /*
 // Instrucción Ejecutada: “PID: <PID> - Ejecutando: <INSTRUCCION> - <PARAMETROS>”   ***** Hecho *****
 // Acceso Memoria: “PID: <PID> - Acción: <LEER / ESCRIBIR> - Segmento: <NUMERO SEGMENTO> - Dirección Física: <DIRECCION FISICA> - Valor: <VALOR LEIDO / ESCRITO>”
 // Error Segmentation Fault: “PID: <PID> - Error SEG_FAULT- Segmento: <NUMERO SEGMENTO> - Offset: <OFFSET> - Tamaño: <TAMAÑO>”
 // */
 
-// bool proceso_terminado;
-// bool volver_a_ready;
+bool proceso_terminado;
+bool volver_a_ready;
     
 // //Cuando recibe un ctx
+t_instruccion fetch(t_ctx* ctx) {
+ 	t_instruccion instruccion_nueva;
+ 	instruccion_nueva = *((t_instruccion*) list_get(ctx->instrucciones, ctx->program_counter)); //Busca la instrucción y la guarda.
+ 	log_info(LOGGER_CPU, "Program Counter: %d + 1", ctx->program_counter);
+ 	ctx->program_counter++;
+ 	return instruccion_nueva;
+}
 
-// void ciclo_de_instruccion(t_ctx* ctx) {
-// 	log_info(cpu_log, "Comenzando ciclo con nuevo PCB...");
-// 	t_instruccion instruccion_actual;
-// 	t_buffer* buffer = malloc(sizeof(t_buffer));
+void decode(t_instruccion instruccion, int milisegundos) {
+	if (instruccion.operacion == SET){
+		log_info(LOGGER_CPU, "La noni");
+ 		usleep(milisegundos*1000);
+		log_info(LOGGER_CPU, "Ya durmió");
+	}
+}
 
-// 	while (ctx != NULL) {
-// 		instruccion_actual = fetch(ctx);
-//         log_info(cpu_log, "PID: %d  -Ejecutando: %d - %d", ctx->PID, instruccion_actual->identificador, instruccion_actual->parametro[0]); //Primer Log obligatorio
+void ciclo_de_instruccion(t_ctx* ctx) {
+    log_info(LOGGER_CPU, "Comenzando ciclo con nuevo PCB...");
+	t_instruccion instruccion_actual;
+    t_buffer* buffer = malloc(sizeof(t_buffer));
+
+ 	while (ctx != NULL) {
+ 		instruccion_actual = fetch(ctx);
+        log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s", ctx->PID, instruccion_actual.operacion, instruccion_actual.parametros[1]); //Primer Log obligatorio, tengo que ponerlo en la parte de ejecutar pero de momento sirve bien para saber el camino que está tomando.
 // 		log_info(cpu_log, "Instruccion nº%d: %d", ctx->program_counter, instruccion_actual.identificador);
-		
-//         int TIEMPO_RETARDO = config_get_string_value(config, "RETARDO_INSTRUCCION"); // lo más probable es que no funcione
-		
-//         if (decode(instruccion_actual)){
-// 			usleep(TIEMPO_RETARDO*1000);
-//         }
-		
+        int TIEMPO_RETARDO = config_get_string_value(config, "RETARDO_INSTRUCCION"); // lo más probable es que no funcione
+		decode(instruccion_actual, TIEMPO_RETARDO);
+	
 //         execute(instruccion_actual, ctx);
 // 		if (proceso_terminado) {
 // 			proceso_terminado = false;
@@ -40,28 +51,17 @@
 // 			envira_socket("EXIT")
 // 			liberar_pcb(ctx);														//
 // 			*/
-// 			ctx = NULL;
-// 			continue;
-// 		}
-// 	}
-// 	free(buffer);
+ 			ctx = NULL;
+//			continue;
+ 		}
+		free(buffer);
+ 	}
 
 // }
 
-// t_instruccion fetch(t_ctx* ctx) {
-// 	t_instruccion instruccion_nueva;
-// 	instruccion_nueva = *((t_instruccion*) list_get(ctx->instrucciones, ctx->program_counter)); //Busca la instrucción y la guarda.
-// 	log_info(cpu_log, "Program Counter: %d + 1", ctx->program_counter);
-// 	ctx->program_counter++;
-// 	return instruccion_nueva;
-// }
 
-// bool decode(t_instruccion instruccion) {
-// 	if (instruccion.operacion == SET)
-// 		return true;
-// 	else
-// 		return false;
-// }
+
+		
 
 // void execute(const t_instruccion instruccion, t_ctx ctx) {
 // 	switch (instruccion.operacion) {
