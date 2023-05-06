@@ -11,7 +11,7 @@ int main(int argc, char *argv[]) {
     //t_buffer* buffer = crear_buffer();
     LOGGER_CPU = iniciar_logger("./logs/cpu.log", "CPU");
     t_config* config = iniciar_config(argv[1]);
-    
+    inicializar_variables_globales(config);
     int conexion_memoria;
     inicializar_conexiones(&conexion_memoria, config, LOGGER_CPU);
 

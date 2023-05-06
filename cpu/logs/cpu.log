@@ -37006,3 +37006,24 @@
 [INFO] 02:27:12:276 CPU/(16228:16228): Program Counter: 0 + 1
 [INFO] 02:27:12:276 CPU/(16228:16228): PID: 0  -Ejecutando: 8 - 0x559594618b40
 [INFO] 02:35:11:200 CPU/(16228:16228): Se desconecto el kernel
+[ERROR] 03:34:57:788 CPU/(21541:21541): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 03:34:57:790 CPU/(21541:21541): Esperando kernel....
+[INFO] 03:35:06:795 CPU/(21541:21541): Se conecto el kernel
+[INFO] 03:35:14:884 CPU/(21541:21541): Se recibio un contexto del kernel
+[INFO] 03:35:14:884 CPU/(21541:21541): Comenzando ciclo con nuevo PCB...
+[INFO] 03:35:14:884 CPU/(21541:21541): Program Counter: 0 + 1
+[INFO] 03:35:14:884 CPU/(21541:21541): PID: 0  -Ejecutando: 8 - HOLA
+[INFO] 03:35:14:884 CPU/(21541:21541): La noni
+[INFO] 03:35:15:885 CPU/(21541:21541): Ya durmió
+[ERROR] 04:36:18:719 CPU/(24227:24227): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 04:36:18:722 CPU/(24227:24227): Esperando kernel....
+[INFO] 04:36:26:781 CPU/(24227:24227): Se conecto el kernel
+[INFO] 04:36:34:853 CPU/(24227:24227): Se recibio un contexto del kernel
+[INFO] 04:36:34:853 CPU/(24227:24227): Comenzando ciclo con nuevo PCB...
+[INFO] 04:36:34:853 CPU/(24227:24227): Program Counter: 0 + 1
+[INFO] 04:36:34:853 CPU/(24227:24227): Instruccion nº1: 8
+[INFO] 04:36:34:853 CPU/(24227:24227): La noni
+[INFO] 04:36:35:853 CPU/(24227:24227): Ya durmió 1000000
+[INFO] 04:36:35:853 CPU/(24227:24227): PID: 0  -Ejecutando: 8 - AX HOLA
+[INFO] 04:36:35:854 CPU/(24227:24227): SET vale: 0
+[INFO] 04:54:10:309 CPU/(24227:24227): Se desconecto el kernel

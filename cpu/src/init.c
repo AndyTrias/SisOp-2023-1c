@@ -6,7 +6,10 @@ void inicializar_conexiones(int *conexion_memoria, t_config* config, t_log* logg
 
 
     *conexion_memoria = inicializar_cliente(ip_memoria, puerto_memoria, logger);
-    
-    
-    
+}
+
+void inicializar_variables_globales(t_config* config) {
+
+    TIEMPO_RETARDO = atoi(config_get_string_value(config, "RETARDO_INSTRUCCION"));
+
 }

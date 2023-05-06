@@ -15,15 +15,72 @@ t_instruccion fetch(t_ctx* ctx) {
  	log_info(LOGGER_CPU, "Program Counter: %d + 1", ctx->program_counter);
  	ctx->program_counter++;
  	return instruccion_nueva;
-}
+};
 
-void decode(t_instruccion instruccion, int milisegundos) {
+void decode(t_instruccion instruccion, int retraso) {
 	if (instruccion.operacion == SET){
-		log_info(LOGGER_CPU, "La noni");
- 		usleep(milisegundos*1000);
-		log_info(LOGGER_CPU, "Ya durmió");
+		log_info(LOGGER_CPU, "Una siesta rápida");
+ 		usleep(retraso*1000);
+		log_info(LOGGER_CPU, "We don't have time for this");
 	}
-}
+};
+
+/*
+int comparar_letra(char * letra){
+	int i=0;
+	char * comparador = "ABCD";
+	while(i != 4){
+		if(comparador[i] == letra){
+			
+			break;
+		};
+		i++;
+	};
+	return i;
+};
+
+
+int devolver_num_registro(char * nombre_registro){
+ 	int aux;
+	if (strlen(nombre_registro) == 3){
+		int i = comparar_letra((nombre_registro[1]));
+
+		if(nombre_registro[0] == "R"){
+			aux = 9+i;
+		};
+
+		if(nombre_registro[0] == "E"){
+			aux = 5+i;
+		};
+	};
+	if (strlen(nombre_registro) == 2){
+		aux = comparar_letra(nombre_registro[0]);
+	};
+ 	return aux;
+};
+
+*/
+
+void execute(const t_instruccion instruccion_actual, t_ctx* ctx) {
+	switch (instruccion_actual.operacion) {
+	case SET:
+		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual.operacion, instruccion_actual.parametros[0], instruccion_actual.parametros[1]); 
+		// ctx->registros[devolver_num_registro(instruccion_actual.parametros[0])] = instruccion_actual.parametros[1];
+		// log_info(LOGGER_CPU, "Num %d", devolver_num_registro(instruccion_actual.parametros[0]));
+ 		break;
+ 	case YIELD:
+		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d", ctx->PID, instruccion_actual.operacion); 
+ 		proceso_terminado = true;
+		// vuelve a ready
+ 		// bool volver_a_ready = true;
+ 	case EXIT:
+		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d", ctx->PID, instruccion_actual.operacion); 
+ 		proceso_terminado = true;
+ 		break;
+ 	default:
+ 		break;
+ 	}
+};
 
 void ciclo_de_instruccion(t_ctx* ctx) {
     log_info(LOGGER_CPU, "Comenzando ciclo con nuevo PCB...");
@@ -32,12 +89,9 @@ void ciclo_de_instruccion(t_ctx* ctx) {
 
  	while (ctx != NULL) {
  		instruccion_actual = fetch(ctx);
-        log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s", ctx->PID, instruccion_actual.operacion, instruccion_actual.parametros[1]); //Primer Log obligatorio, tengo que ponerlo en la parte de ejecutar pero de momento sirve bien para saber el camino que está tomando.
-// 		log_info(cpu_log, "Instruccion nº%d: %d", ctx->program_counter, instruccion_actual.identificador);
-        int TIEMPO_RETARDO = config_get_string_value(config, "RETARDO_INSTRUCCION"); // lo más probable es que no funcione
+ 		log_info(LOGGER_CPU, "Instruccion nº%d: %d", ctx->program_counter, instruccion_actual.operacion);
 		decode(instruccion_actual, TIEMPO_RETARDO);
-	
-//         execute(instruccion_actual, ctx);
+    	execute(instruccion_actual, ctx);
 // 		if (proceso_terminado) {
 // 			proceso_terminado = false;
 // 			log_info(cpu_log, "Proceso %d TERMINADO", ctx->PID);
@@ -63,26 +117,4 @@ void ciclo_de_instruccion(t_ctx* ctx) {
 
 		
 
-// void execute(const t_instruccion instruccion, t_ctx ctx) {
-// 	switch (instruccion.operacion) {
-// 	case SET:
-// 		char * nombre_registro = Devolver_registro(ctx->registros ,instruccion.parametros[0])
-// 		registro_registro = instruccion.parametros[1];
-// 		break;
-// 	case YIELD:
-// 		proceso_terminado = true;
-// 		log_info(cpu_log, "Tiene que volver a la cola del ready"); // Tiene que volver a Ready
-// 		bool volver_a_ready = true; // Sería con un bool??
-// 	case EXIT:
-// 		proceso_terminado = true;
-// 		break;
-// 	default:
-// 		break;
-// 		}
-// 	return 0;
-// }
 
-// char * Devolver_registro(t_registros registro, char * nombre_registro){
-// 	registro.nombre_registro; 
-// 	return;
-// }
