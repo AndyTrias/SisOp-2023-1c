@@ -15,7 +15,7 @@ t_instruccion fetch(t_ctx* ctx) {
  	log_info(LOGGER_CPU, "Program Counter: %d + 1", ctx->program_counter);
  	ctx->program_counter++;
  	return instruccion_nueva;
-};
+}
 
 void decode(t_instruccion instruccion, int retraso) {
 	if (instruccion.operacion == SET){
@@ -23,52 +23,97 @@ void decode(t_instruccion instruccion, int retraso) {
  		usleep(retraso*1000);
 		log_info(LOGGER_CPU, "We don't have time for this");
 	}
-};
+}
 
-/*
+
 int comparar_letra(char * letra){
-	int i=0;
+	int i = 0;
+	int j = strlen(letra) - 2;
 	char * comparador = "ABCD";
 	while(i != 4){
-		if(comparador[i] == letra){
-			
+		if(comparador[i] == letra[j]){
 			break;
 		};
 		i++;
 	};
+	
 	return i;
-};
+}
 
 
-int devolver_num_registro(char * nombre_registro){
- 	int aux;
+int devolver_num_registro(char * original){
+ 	int k = 0;
+	char nombre_registro[strlen(original)-1];
+	strcpy(nombre_registro, original);
+	
 	if (strlen(nombre_registro) == 3){
-		int i = comparar_letra((nombre_registro[1]));
+		k = comparar_letra((nombre_registro));
 
-		if(nombre_registro[0] == "R"){
-			aux = 9+i;
+		if(string_starts_with(nombre_registro,"R")){
+			k = 8+k;
 		};
 
-		if(nombre_registro[0] == "E"){
-			aux = 5+i;
+		if(string_starts_with(nombre_registro,"E")){
+			k = 4+k;
 		};
 	};
+
 	if (strlen(nombre_registro) == 2){
-		aux = comparar_letra(nombre_registro[0]);
+		k = comparar_letra(nombre_registro);
 	};
- 	return aux;
-};
+	return k;
+}
 
-*/
 
 void execute(const t_instruccion instruccion_actual, t_ctx* ctx) {
 	switch (instruccion_actual.operacion) {
 	case SET:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual.operacion, instruccion_actual.parametros[0], instruccion_actual.parametros[1]); 
-		// ctx->registros[devolver_num_registro(instruccion_actual.parametros[0])] = instruccion_actual.parametros[1];
-		// log_info(LOGGER_CPU, "Num %d", devolver_num_registro(instruccion_actual.parametros[0]));
+		switch (devolver_num_registro(instruccion_actual.parametros[0])) {
+		case 0:
+			strcpy(ctx->registros.AX , instruccion_actual.parametros[1]);
+			log_info(LOGGER_CPU, "Num %s", ctx->registros.AX);
+			break;
+		case 1:
+			strcpy(ctx->registros.BX , instruccion_actual.parametros[1]);
+			break;
+		case 2:
+			strcpy(ctx->registros.CX , instruccion_actual.parametros[1]);
+			break;
+		case 3:
+			strcpy(ctx->registros.DX , instruccion_actual.parametros[1]);
+			break;
+		case 4:
+			strcpy(ctx->registros.EAX , instruccion_actual.parametros[1]);
+			break;
+		case 5:
+			strcpy(ctx->registros.EBX , instruccion_actual.parametros[1]);
+			break;
+		case 6:
+			strcpy(ctx->registros.ECX , instruccion_actual.parametros[1]);
+			break;
+		case 7:
+			strcpy(ctx->registros.EDX , instruccion_actual.parametros[1]);
+			break;
+		case 8:
+			strcpy(ctx->registros.RAX , instruccion_actual.parametros[1]);
+			break;
+		case 9:
+			strcpy(ctx->registros.RBX , instruccion_actual.parametros[1]);
+			break;
+		case 10:
+			strcpy(ctx->registros.RCX , instruccion_actual.parametros[1]);
+			break;
+		case 11:
+			strcpy(ctx->registros.RDX , instruccion_actual.parametros[1]);
+			break;
+		default:
+			break;
+		}
+		;
+		log_info(LOGGER_CPU, "Num %d", devolver_num_registro(instruccion_actual.parametros[0]));
  		break;
- 	case YIELD:
+	case YIELD:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d", ctx->PID, instruccion_actual.operacion); 
  		proceso_terminado = true;
 		// vuelve a ready
@@ -83,7 +128,7 @@ void execute(const t_instruccion instruccion_actual, t_ctx* ctx) {
 };
 
 void ciclo_de_instruccion(t_ctx* ctx) {
-    log_info(LOGGER_CPU, "Comenzando ciclo con nuevo PCB...");
+    log_info(LOGGER_CPU, "Comenzando ciclo con nuevo CTX...");
 	t_instruccion instruccion_actual;
     t_buffer* buffer = malloc(sizeof(t_buffer));
 
@@ -92,10 +137,10 @@ void ciclo_de_instruccion(t_ctx* ctx) {
  		log_info(LOGGER_CPU, "Instruccion nº%d: %d", ctx->program_counter, instruccion_actual.operacion);
 		decode(instruccion_actual, TIEMPO_RETARDO);
     	execute(instruccion_actual, ctx);
-// 		if (proceso_terminado) {
-// 			proceso_terminado = false;
-// 			log_info(cpu_log, "Proceso %d TERMINADO", ctx->PID);
-// 			log_info(cpu_log, "Devolviendo PCB actualizado del PID %d...", ctx->PID);
+ 		if (proceso_terminado) {
+ 			proceso_terminado = false;
+ 			log_info(LOGGER_CPU, "Proceso %d TERMINADO", ctx->PID);
+ 			log_info(LOGGER_CPU, "Devolviendo PCB actualizado del PID %d...", ctx->PID);
 // 			/*
 // 			enviar_pcb(ctx, socket_dispatch, 0);									//
 // 			if (vover_a_ready){
@@ -108,10 +153,10 @@ void ciclo_de_instruccion(t_ctx* ctx) {
  			ctx = NULL;
 //			continue;
  		}
-		free(buffer);
+		
  	}
-
-// }
+	free(buffer);
+}
 
 
 
