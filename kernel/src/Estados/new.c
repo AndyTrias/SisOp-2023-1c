@@ -31,6 +31,6 @@ void nuevo_proceso(t_list* instrucciones){ //como recibe las instrucciones?
 // Es llamada por ready cada vez que necesita agregar un proceso a Ready porque tiene espacio
 // FIFO
 t_pcb *get_proceso_desde_new(){ 
-    return list_remove(LISTA_NEW, 0); 
+    return sacar_de_lista_new(0); 
 }
 

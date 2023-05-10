@@ -3,6 +3,7 @@
 
 #include <utils/logs.h>
 #include <commons/collections/list.h>
+#include <utils/planificacion/pcb.h>
 #include <pthread.h>
 #include <semaphore.h>
 
@@ -31,4 +32,16 @@ extern pthread_mutex_t MUTEX_LISTA_NEW;
 extern pthread_mutex_t MUTEX_LISTA_READY;
 
 extern int SOCKET_CPU;
+
+//Declaro las funciones de los monitores
+void agregar_a_lista_new(t_pcb* );
+void agregar_a_lista_ready(t_pcb* );
+void agregar_a_lista_exec(t_pcb* );
+void agregar_a_lista_block(t_pcb* );
+
+t_pcb* sacar_de_lista_new(int);
+t_pcb* sacar_de_lista_ready(int);
+t_pcb* sacar_de_lista_exec(int);
+t_pcb* sacar_de_lista_block(int);
+
 #endif

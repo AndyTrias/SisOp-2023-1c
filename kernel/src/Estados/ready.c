@@ -28,19 +28,16 @@ void agregar_a_ready_si_hay_espacio()
 
 void admitir_proceso()
 { // se usa una vez que se sabe que hay espacio para un proceso mas
-    pthread_mutex_lock(&MUTEX_LISTA_READY);
-    list_add(LISTA_READY, (get_proceso_desde_new(LISTA_NEW)));
-    pthread_mutex_unlock(&MUTEX_LISTA_READY);
+    agregar_a_lista_ready(get_proceso_desde_new());
 }
 
-t_pcb *get_proceso_por_fifo()
-{
-    return list_remove(LISTA_READY, 0);
+t_pcb *get_proceso_por_fifo(){
+    return sacar_de_lista_ready(0);
 }
 
-t_pcb *get_proceso_por_hrrn()
-{
-    return list_remove(LISTA_READY, 0);
+t_pcb *get_proceso_por_hrrn(){
+    int ganador = 0 //proceso_con_menor_RR()
+    return sacar_de_lista_ready(ganador);
 }
 
 // t_pcb *HRRN()
@@ -73,11 +70,11 @@ t_pcb *ceder_proceso_a_exec()
 
     if (strcmp(ALGORITMO_PLANIFICACION, "FIFO") == 0)
     {
-        return get_proceso_por_fifo(LISTA_READY);
+        return get_proceso_por_fifo();
     }
     else if (strcmp(ALGORITMO_PLANIFICACION, "HRRN") == 0)
     {
-        return get_proceso_por_hrrn(LISTA_READY);
+        return get_proceso_por_hrrn();
     }
     else
     {
