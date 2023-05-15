@@ -36,7 +36,7 @@ t_pcb *get_proceso_por_fifo(){
 }
 
 t_pcb *get_proceso_por_hrrn(){
-    int ganador = 0 //proceso_con_menor_RR()
+    int ganador = 0; //proceso_con_menor_RR()
     return sacar_de_lista_ready(ganador);
 }
 

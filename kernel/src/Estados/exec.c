@@ -55,6 +55,10 @@ void recibir_de_cpu(int conexion_cpu){
     case DESALOJAR:
         log_info(LOGGER_KERNEL, "Se recibio un mensaje de desalojo");
         break;
+
+    case PETICION:
+        log_info(LOGGER_KERNEL, "Se recibio un mensaje de peticion");
+        break;
     
     case BLOQUEAR:
         log_info(LOGGER_KERNEL, "Se recibio un mensaje de bloqueo");

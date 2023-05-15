@@ -12,7 +12,7 @@ int main(int argc, char *argv[]) {
   inicializar_variables_globales(config);
 
   //Hilos que maneja el kernel
-  pthread_t hilo_recibir_consola,hilo2,hilo3;
+  pthread_t hilo_recibir_consola, hilo_planificacion, hilo3;
 
   int conexion_cpu, conexion_memoria, conexion_filesystem;
   inicializar_conexiones(&conexion_cpu, &conexion_memoria, &conexion_filesystem, config);
@@ -25,6 +25,11 @@ int main(int argc, char *argv[]) {
   pthread_create(&hilo_recibir_consola, NULL, (void *) recibir_consolas, socket_servidor);
   pthread_join(hilo_recibir_consola, NULL);
 
+
+  // pthread_create(&hilo_planificacion, NULL, (void *) planificador, socket_servidor);
+  // pthread_join(hilo_planificacion, NULL);
+
+  
   terminar_conexiones(3, conexion_cpu, conexion_memoria, conexion_filesystem);
   terminar_programa(LOGGER_KERNEL, config);
 

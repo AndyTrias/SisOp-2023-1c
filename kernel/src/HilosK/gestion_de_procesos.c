@@ -3,8 +3,7 @@
 void planificador(){
     sem_wait(&CONSOLA_CONECTADA);// espera a que se conecte una consola antes de que comience
     while (1){
-        //sem_wait(&ALGO_EN_NEW)
-        //admitir_proceso()
+        recibir_de_cpu(SOCKET_CPU);
     }
     
 }

@@ -38,12 +38,12 @@ void agregar_a_lista_new(t_pcb* nuevo){
     pthread_mutex_unlock(&MUTEX_LISTA_NEW);
 }
 
-void agregar_a_lista_ready(t_pcb* nuevo){
+void agregar_a_lista_ready(t_pcb *nuevo){
     pthread_mutex_lock(&MUTEX_LISTA_READY);
     list_add(LISTA_READY, nuevo);
     pthread_mutex_unlock(&MUTEX_LISTA_READY);
     
-    log_info(LOGGER_KERNEL, "PID <%d> a ready en base al algortmo de planificacion <%s>",pcb->contexto.PID, ALGORITMO_PLANIFICACION);
+    log_info(LOGGER_KERNEL, "PID <%d> a ready en base al algortmo de planificacion <%s>",nuevo->contexto.PID, ALGORITMO_PLANIFICACION);
 }
 
 void agregar_a_lista_exec(t_pcb* nuevo){
@@ -68,8 +68,10 @@ t_pcb* sacar_de_lista_new(int posicion){
 
 t_pcb* sacar_de_lista_ready(int posicion){
     pthread_mutex_lock(&MUTEX_LISTA_READY);
-    t_pcb* pcb = list_remove(LISTA_READY, posicion);
+    t_pcb * pcb = list_remove(LISTA_READY, posicion);
     pthread_mutex_unlock(&MUTEX_LISTA_READY);
+
+    return pcb;
 }
 
 t_pcb* sacar_de_lista_exec(int posicion){

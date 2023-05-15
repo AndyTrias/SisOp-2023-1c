@@ -1,7 +1,15 @@
 #ifndef GLOBALES_H_
 #define GLOBALES_H_
 
-// Variables de configuracion
-extern int TIEMPO_RETARDO;
+    #include <utils/logs.h>
+
+
+    // Variables de configuracion
+    extern t_log* LOGGER_CPU;
+    extern int SOCKET_KERNEL;
+
+
+    extern int TIEMPO_RETARDO;
+
 
 #endif

@@ -11,5 +11,6 @@
 #include <conectar_consola.h>
 #include <pthread.h>
 #include <HilosK/recibir_consolas.h>
+#include <HilosK/gestion_de_procesos.h>
 
 #endif

@@ -12,8 +12,8 @@ bool volver_a_ready;
 t_instruccion fetch(t_ctx* ctx) {
  	t_instruccion instruccion_nueva;
  	instruccion_nueva = *((t_instruccion*) list_get(ctx->instrucciones, ctx->program_counter)); //Busca la instrucción y la guarda.
- 	log_info(LOGGER_CPU, "Program Counter: %d + 1", ctx->program_counter);
  	ctx->program_counter++;
+ 	log_info(LOGGER_CPU, "Program Counter: %d", ctx->program_counter);
  	return instruccion_nueva;
 }
 
@@ -65,7 +65,7 @@ int devolver_num_registro(char * original){
 }
 
 
-void execute(const t_instruccion instruccion_actual, t_ctx* ctx) {
+op_code execute(const t_instruccion instruccion_actual, t_ctx* ctx) {
 	switch (instruccion_actual.operacion) {
 	case SET:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual.operacion, instruccion_actual.parametros[0], instruccion_actual.parametros[1]); 
@@ -110,52 +110,44 @@ void execute(const t_instruccion instruccion_actual, t_ctx* ctx) {
 		default:
 			break;
 		}
-		;
-		log_info(LOGGER_CPU, "Num %d", devolver_num_registro(instruccion_actual.parametros[0]));
- 		break;
+		
+		return 0;
+	
 	case YIELD:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d", ctx->PID, instruccion_actual.operacion); 
- 		proceso_terminado = true;
-		// vuelve a ready
- 		// bool volver_a_ready = true;
- 	case EXIT:
+ 		return DESALOJAR;
+ 	
+	case EXIT:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d", ctx->PID, instruccion_actual.operacion); 
- 		proceso_terminado = true;
- 		break;
+ 		return TERMINAR;
+
  	default:
- 		break;
+ 		return 0;
  	}
 };
 
 void ciclo_de_instruccion(t_ctx* ctx) {
     log_info(LOGGER_CPU, "Comenzando ciclo con nuevo CTX...");
 	t_instruccion instruccion_actual;
-    t_buffer* buffer = malloc(sizeof(t_buffer));
 
- 	while (ctx != NULL) {
+ 	while (ctx != NULL && ctx->program_counter < list_size(ctx->instrucciones)) {
  		instruccion_actual = fetch(ctx);
  		log_info(LOGGER_CPU, "Instruccion nº%d: %d", ctx->program_counter, instruccion_actual.operacion);
 		decode(instruccion_actual, TIEMPO_RETARDO);
-    	execute(instruccion_actual, ctx);
- 		if (proceso_terminado) {
- 			proceso_terminado = false;
- 			log_info(LOGGER_CPU, "Proceso %d TERMINADO", ctx->PID);
- 			log_info(LOGGER_CPU, "Devolviendo PCB actualizado del PID %d...", ctx->PID);
-// 			/*
-// 			enviar_pcb(ctx, socket_dispatch, 0);									//
-// 			if (vover_a_ready){
-// 				volver_a_ready = false
-// 				enviar_socket("YIELD")	
-// 			}
-// 			envira_socket("EXIT")
-// 			liberar_pcb(ctx);														//
-// 			*/
- 			ctx = NULL;
-//			continue;
- 		}
+    	int cod_op = execute(instruccion_actual, ctx);
+ 		
+		// Devuelve 0 si debe seguire ejecutando
+		// Devuelve un codigo_operacion si debe enviarlo al kernel
+		// el codigo de operacion son los enums de enviar_paquete y son siempre > 0
+
+		if (cod_op > 0) {
+			t_paquete* paquete = crear_paquete(cod_op);
+			serializar_contexto(ctx, paquete);
+			enviar_paquete(paquete, SOCKET_KERNEL);
+			ctx = NULL;
+		}
 		
  	}
-	free(buffer);
 }
 
 

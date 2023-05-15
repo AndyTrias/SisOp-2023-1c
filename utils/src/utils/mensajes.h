@@ -20,7 +20,8 @@ typedef enum
     CONTEXTO, // Se utiliza de kernel a cpu
     DESALOJAR,
     BLOQUEAR,
-    TERMINAR
+    TERMINAR,
+    PETICION
 } op_code;
 
 typedef enum
