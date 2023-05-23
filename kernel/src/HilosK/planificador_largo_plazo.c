@@ -4,7 +4,7 @@ void planificador_largo(){
     
     sem_wait(&CONSOLA_CONECTADA);// espera a que se conecte una consola antes de que comience
     while (1){
-        sem_wait(&GRADO_MULTIPROGRAMACION);
+        sem_wait(&GRADO_MULTIPROGRAMACION); //INICIALIZAR EL SEM EN N = GRADO DE MULTIPROGRAMACION
         t_pcb* aux;
         aux= sacar_de_lista_new(0);
 

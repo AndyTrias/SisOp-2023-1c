@@ -1,11 +1,13 @@
 #include "ready.h"
 
+/*
 int get_grado_de_multiprogramacion(int procesos_en_blocked)
 {
     return list_size(LISTA_READY) + procesos_en_blocked + get_procesos_en_cpu(); // el 1 es el que esta en el cpu. ver como se consiguen los procesos del blocked
 }
 
-int get_procesos_en_cpu(){
+int get_procesos_en_cpu()
+{
     return 1;
 }
 
@@ -13,7 +15,7 @@ bool hay_espacio_ready()
 {
     return (GRADO_MAX_MULTIPROGRAMACION > get_grado_de_multiprogramacion(2)); // implementar procesos en blocked
 }
-
+*/
 void agregar_a_ready_si_hay_espacio()
 {
     if (hay_espacio_ready())
@@ -25,18 +27,19 @@ void agregar_a_ready_si_hay_espacio()
     }
 }
 
-
 void admitir_proceso()
 { // se usa una vez que se sabe que hay espacio para un proceso mas
     agregar_a_lista_ready(get_proceso_desde_new());
 }
 
-t_pcb *get_proceso_por_fifo(){
+t_pcb *get_proceso_por_fifo()
+{
     return sacar_de_lista_ready(0);
 }
 
-t_pcb *get_proceso_por_hrrn(){
-    int ganador = 0; //proceso_con_menor_RR()
+t_pcb *get_proceso_por_hrrn()
+{
+    int ganador = 0; // proceso_con_menor_RR()
     return sacar_de_lista_ready(ganador);
 }
 
@@ -65,7 +68,8 @@ t_pcb *get_proceso_por_hrrn(){
 //     return list_remove(LISTA_READY, i);
 // }
 
-t_pcb *ceder_proceso_a_exec(){
+t_pcb *ceder_proceso_a_exec()
+{
 
     if (strcmp(ALGORITMO_PLANIFICACION, "FIFO") == 0)
     {

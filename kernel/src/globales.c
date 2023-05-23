@@ -1,5 +1,7 @@
 #include "globales.h"
 
+
+
 t_log* LOGGER_KERNEL;
 
 //Contador de procesos generados
@@ -28,6 +30,7 @@ pthread_mutex_t MUTEX_LISTA_READY;
 pthread_mutex_t MUTEX_LISTA_BLOCK;
 
 int SOCKET_CPU;
+
 
 //Declaracion de monitores para las variables globales
 
