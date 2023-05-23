@@ -1,15 +1,13 @@
 #include "exec.h"
 
-t_pcb *ejecutando;
-
 t_pcb* reemplazar_proceso(t_pcb *nuevo_pcb){
-    t_pcb *aux = ejecutando;
-    ejecutando = nuevo_pcb;
+    t_pcb *aux = EJECUTANDO;
+    EJECUTANDO = nuevo_pcb;
     return aux;
 }
 
 void reemplazar_ctx(t_ctx *nuevo_ctx){
-    ejecutando->contexto = *nuevo_ctx;
+    EJECUTANDO->contexto = *nuevo_ctx;
 }
 
 void mandar_a_exit_o_blocked(t_pcb *proceso){
@@ -24,7 +22,7 @@ void enviar_a_cpu(){
     
     t_paquete *paquete = crear_paquete(CONTEXTO);
     
-    serializar_contexto(&ejecutando->contexto, paquete);
+    serializar_contexto(&EJECUTANDO->contexto, paquete);
 
     enviar_paquete(paquete, SOCKET_CPU);
 }
@@ -32,11 +30,36 @@ void enviar_a_cpu(){
 
 
 void empezar_ciclo_si_vacio(){
-    if (ejecutando == NULL){ 
-        ejecutando = ceder_proceso_a_exec();
+    if (EJECUTANDO == NULL){ 
+        EJECUTANDO = ceder_proceso_a_exec();
         enviar_a_cpu();
     }
     
+}
+
+definir_accion(int cod_op, t_pcb *proceso){
+    switch (cod_op)
+    {
+    case DESALOJAR:
+        agregar_a_lista_ready(proceso);
+        log_info(LOGGER_KERNEL, "Se recibio un mensaje de desalojo");
+        break;
+
+    case PETICION:
+        log_info(LOGGER_KERNEL, "Se recibio un mensaje de peticion");
+        //I/O
+        break;
+    
+    case BLOQUEAR:
+        log_info(LOGGER_KERNEL, "Se recibio un mensaje de bloqueo");
+        break;
+
+    case TERMINAR:
+        terminar_proceso(proceso);
+        log_info(LOGGER_KERNEL, "Se recibio un mensaje de finalizacion");
+        break;
+
+    }
 }
 
 //  TODO: Recibe el paquete con el contexto
@@ -48,38 +71,14 @@ void recibir_de_cpu(int conexion_cpu){
     void* buffer = recibir_buffer(&size, conexion_cpu);
     
     t_ctx * ctx = deserializar_contexto(buffer);
+
     reemplazar_ctx(ctx);
-    
-    switch (cod_op)
-    {
-    case DESALOJAR:
-        log_info(LOGGER_KERNEL, "Se recibio un mensaje de desalojo");
-        break;
 
-    case PETICION:
-        log_info(LOGGER_KERNEL, "Se recibio un mensaje de peticion");
-        break;
-    
-    case BLOQUEAR:
-        log_info(LOGGER_KERNEL, "Se recibio un mensaje de bloqueo");
-        break;
+    definir_accion(cod_op, EJECUTANDO);
 
-    case TERMINAR:
-        log_info(LOGGER_KERNEL, "Se recibio un mensaje de finalizacion");
-        break;
+    t_pcb *proceso_entrante = ceder_proceso_a_exec(); //pide un proceso a ready segun el algoritmo
 
+    enviar_a_cpu();
 
-    default:
-        log_error(LOGGER_KERNEL, "Operacion desconocida");
-        return;
-    }
-
-    //recibe de cpu
-    
-    // Le pide  un proceso a ready segun su algoritmo
-    // t_pcb *proceso_entrante = ceder_proceso_a_exec();
-    // t_pcb *proceso_saliente = reemplazar_proceso(proceso_entrante);
-    // enviar_a_cpu();
-    // mandar_a_exit_o_blocked(proceso_saliente);
 
 }

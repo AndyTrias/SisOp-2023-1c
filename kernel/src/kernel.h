@@ -10,7 +10,7 @@
 #include <utils/mensajes.h>
 #include <conectar_consola.h>
 #include <pthread.h>
-#include <HilosK/recibir_consolas.h>
-#include <HilosK/gestion_de_procesos.h>
+#include <HilosK/planificador_largo_plazo.h>
+#include <HilosK/planificador_corto_plazo.h>
 
 #endif

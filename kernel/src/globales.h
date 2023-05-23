@@ -15,7 +15,7 @@ extern int PID_COUNT;
 //Listas para los estados
 extern t_list* LISTA_NEW;
 extern t_list* LISTA_READY;
-extern t_list* LISTA_EXEC;
+extern t_pcb* EJECUTANDO;
 extern t_list* LISTA_BLOCK;
 
 // Variables de configuracion
@@ -27,9 +27,12 @@ extern char** RECURSOS;
 extern char** INSTANCIAS_RECURSOS;
 
 //Semaforos
-extern sem_t CONSOLA_CONECTADA;
+extern sem_t PROCESO_EN_NEW;
+extern sem_t GRADO_MULTIPROGRAMACION;
+extern sem_t CORTO_PLAZO;
 extern pthread_mutex_t MUTEX_LISTA_NEW;
 extern pthread_mutex_t MUTEX_LISTA_READY;
+extern pthread_mutex_t MUTEX_LISTA_BLOCK;
 
 extern int SOCKET_CPU;
 

@@ -21,11 +21,8 @@ t_pcb crear_pcb(t_list* instrucciones){
 void nuevo_proceso(t_list* instrucciones){ //como recibe las instrucciones?
     t_pcb proceso = crear_pcb(instrucciones);
     
-    pthread_mutex_lock(&MUTEX_LISTA_NEW);
-    list_add(LISTA_NEW, &proceso);
-    pthread_mutex_unlock(&MUTEX_LISTA_NEW);
+    agregar_a_lista_new(&proceso);
     
-    agregar_a_ready_si_hay_espacio();
 }
 
 // Es llamada por ready cada vez que necesita agregar un proceso a Ready porque tiene espacio
