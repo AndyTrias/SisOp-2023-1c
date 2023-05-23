@@ -1,0 +1,8 @@
+[ERROR] 18:37:32:025 KERNEL/(2930:2930): No se pudo conectar al servidor 127.0.0.1:8001
+[ERROR] 18:37:32:026 KERNEL/(2930:2930): No se pudo conectar al servidor 127.0.0.1:8002
+[ERROR] 18:37:32:026 KERNEL/(2930:2930): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 18:37:32:026 KERNEL/(2930:2930): Servidor iniciado en 127.0.0.1:8000
+[ERROR] 18:38:07:173 KERNEL/(3164:3164): No se pudo conectar al servidor 127.0.0.1:8001
+[ERROR] 18:38:07:174 KERNEL/(3164:3164): No se pudo conectar al servidor 127.0.0.1:8002
+[ERROR] 18:38:07:174 KERNEL/(3164:3164): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 18:38:07:174 KERNEL/(3164:3164): Servidor iniciado en 127.0.0.1:8000
