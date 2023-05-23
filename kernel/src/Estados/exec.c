@@ -1,15 +1,13 @@
 #include "exec.h"
 
-t_pcb *ejecutando;
-
 t_pcb* reemplazar_proceso(t_pcb *nuevo_pcb){
-    t_pcb *aux = ejecutando;
-    ejecutando = nuevo_pcb;
+    t_pcb *aux = EJECUTANDO;
+    EJECUTANDO = nuevo_pcb;
     return aux;
 }
 
 void reemplazar_ctx(t_ctx *nuevo_ctx){
-    ejecutando->contexto = *nuevo_ctx;
+    EJECUTANDO->contexto = *nuevo_ctx;
 }
 
 void mandar_a_exit_o_blocked(t_pcb *proceso){
@@ -24,7 +22,7 @@ void enviar_a_cpu(){
     
     t_paquete *paquete = crear_paquete(CONTEXTO);
     
-    serializar_contexto(&ejecutando->contexto, paquete);
+    serializar_contexto(&EJECUTANDO->contexto, paquete);
 
     enviar_paquete(paquete, SOCKET_CPU);
 }
@@ -32,8 +30,8 @@ void enviar_a_cpu(){
 
 
 void empezar_ciclo_si_vacio(){
-    if (ejecutando == NULL){ 
-        ejecutando = ceder_proceso_a_exec();
+    if (EJECUTANDO == NULL){ 
+        EJECUTANDO = ceder_proceso_a_exec();
         enviar_a_cpu();
     }
     

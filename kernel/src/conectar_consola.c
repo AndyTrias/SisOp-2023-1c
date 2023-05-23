@@ -19,12 +19,14 @@ void enviado_de_consola(int *socket_consola)
         {
         case MENSAJE:
             log_info(LOGGER_KERNEL, "Se recibio un mensaje de una consola");
+            
             break;
 
         case INSTRUCCIONES:
             log_info(LOGGER_KERNEL, "Se recibieron instrucciones de una consola");
             t_list *instrucciones = recibir_paquete_consola(*socket_consola);
             nuevo_proceso(instrucciones);
+            
             break;
 
         case -1:
@@ -36,6 +38,7 @@ void enviado_de_consola(int *socket_consola)
             return;
         }
     }
+    
 }
 
 void iterator(t_instruccion *instruccion)

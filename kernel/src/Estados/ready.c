@@ -65,8 +65,7 @@ t_pcb *get_proceso_por_hrrn(){
 //     return list_remove(LISTA_READY, i);
 // }
 
-t_pcb *ceder_proceso_a_exec()
-{
+t_pcb *ceder_proceso_a_exec(){
 
     if (strcmp(ALGORITMO_PLANIFICACION, "FIFO") == 0)
     {

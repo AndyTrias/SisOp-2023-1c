@@ -31,7 +31,7 @@ void inicializar_variables_globales(t_config* config) {
 
     LISTA_NEW = list_create();
     LISTA_READY = list_create();
-    LISTA_EXEC = list_create();
+    EJECUTANDO = NULL;
     LISTA_BLOCK = list_create();
 
     ALGORITMO_PLANIFICACION = config_get_string_value(config, "ALGORITMO_PLANIFICACION");
@@ -44,5 +44,8 @@ void inicializar_variables_globales(t_config* config) {
     //inicializacion de semaforos
     pthread_mutex_init(&MUTEX_LISTA_NEW, NULL);
     pthread_mutex_init(&MUTEX_LISTA_READY, NULL);
-    sem_init(&CONSOLA_CONECTADA, 0, 0);
+    pthread_mutex_init(&MUTEX_LISTA_BLOCK, NULL);
+    sem_init(&CONSOLA_CONECTADA, 1, 0);
+    sem_init(&GRADO_MULTIPROGRAMACION, 1, GRADO_MAX_MULTIPROGRAMACION);
+    sem_init(&CORTO_PLAZO, 1, 0);
 }
