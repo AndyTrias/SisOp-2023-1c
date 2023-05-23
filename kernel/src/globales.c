@@ -20,7 +20,7 @@ char** RECURSOS;
 char** INSTANCIAS_RECURSOS;
 
 //Semaforos
-sem_t CONSOLA_CONECTADA;
+sem_t PROCESO_EN_NEW;
 sem_t GRADO_MULTIPROGRAMACION;
 sem_t CORTO_PLAZO;
 pthread_mutex_t MUTEX_LISTA_NEW;
@@ -37,6 +37,7 @@ void agregar_a_lista_new(t_pcb* nuevo){
     pthread_mutex_lock(&MUTEX_LISTA_NEW);
     list_add(LISTA_NEW, nuevo);
     pthread_mutex_unlock(&MUTEX_LISTA_NEW);
+    sem_post(&PROCESO_EN_NEW);
 }
 
 void agregar_a_lista_ready(t_pcb *nuevo){

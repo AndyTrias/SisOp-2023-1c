@@ -2,7 +2,7 @@
 #define PLANIFICADOR_LARGO_PLAZO_H
    
     #include <globales.h>
-    void planificador_largo();
+    void* planificador_largo();
     
 
 #endif
