@@ -6,7 +6,8 @@ void* planificador_corto(){
     log_info(LOGGER_KERNEL, "Empieza ciclo de instruccion");
     empezar_ciclo_si_vacio();
     while (1){
-        //recibir_de_cpu(SOCKET_CPU);
+        //sem_wait(&GRADO_PROCESAMIENTO);
+        recibir_de_cpu(SOCKET_CPU);
     }
     
 }

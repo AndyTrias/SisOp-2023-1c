@@ -57,3 +57,267 @@
 [INFO] 15:42:49:800 CPU/(74135:74135): Program Counter: 2
 [INFO] 15:42:50:390 CPU/(74135:74135): Instruccion nº2: 15
 [INFO] 15:42:52:019 CPU/(74135:74135): PID: 0  -Ejecutando: 15
+[ERROR] 16:15:53:738 CPU/(3386:3386): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 16:15:53:740 CPU/(3386:3386): Esperando kernel....
+[INFO] 16:16:05:905 CPU/(3386:3386): Se conecto el kernel
+[INFO] 16:16:47:117 CPU/(3386:3386): Se desconecto el kernel
+[INFO] 16:16:55:778 CPU/(3386:3386): Se conecto el kernel
+[INFO] 16:17:42:575 CPU/(3386:3386): Se recibio un contexto del kernel
+[ERROR] 16:19:12:755 CPU/(4700:4700): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 16:19:12:756 CPU/(4700:4700): Esperando kernel....
+[INFO] 16:19:37:824 CPU/(4700:4700): Se conecto el kernel
+[INFO] 16:21:04:351 CPU/(4700:4700): Se recibio un contexto del kernel
+[INFO] 16:21:15:899 CPU/(4700:4700): Comenzando ciclo con nuevo CTX...
+[ERROR] 16:21:49:214 CPU/(5729:5729): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 16:21:49:214 CPU/(5729:5729): Esperando kernel....
+[ERROR] 16:23:21:574 CPU/(6652:6652): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 16:23:21:575 CPU/(6652:6652): Esperando kernel....
+[INFO] 16:23:33:254 CPU/(6652:6652): Se conecto el kernel
+[INFO] 16:24:47:816 CPU/(6652:6652): Se recibio un contexto del kernel
+[ERROR] 16:25:53:132 CPU/(7397:7397): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 16:25:53:133 CPU/(7397:7397): Esperando kernel....
+[ERROR] 16:28:28:441 CPU/(8188:8188): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 16:28:28:441 CPU/(8188:8188): Esperando kernel....
+[INFO] 16:28:37:790 CPU/(8188:8188): Se conecto el kernel
+[ERROR] 16:30:31:786 CPU/(8935:8935): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 16:30:31:786 CPU/(8935:8935): Esperando kernel....
+[INFO] 16:30:41:641 CPU/(8935:8935): Se conecto el kernel
+[ERROR] 16:31:22:297 CPU/(9573:9573): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 16:31:22:297 CPU/(9573:9573): Esperando kernel....
+[INFO] 16:31:30:839 CPU/(9573:9573): Se conecto el kernel
+[ERROR] 16:33:17:390 CPU/(10255:10255): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 16:33:17:391 CPU/(10255:10255): Esperando kernel....
+[INFO] 16:33:25:958 CPU/(10255:10255): Se conecto el kernel
+[ERROR] 16:35:00:720 CPU/(10998:10998): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 16:35:00:720 CPU/(10998:10998): Esperando kernel....
+[INFO] 16:35:06:930 CPU/(10998:10998): Se conecto el kernel
+[ERROR] 20:21:39:885 CPU/(5122:5122): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 20:21:39:886 CPU/(5122:5122): Esperando kernel....
+[INFO] 20:21:47:544 CPU/(5122:5122): Se conecto el kernel
+[ERROR] 20:22:29:839 CPU/(5649:5649): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 20:22:29:839 CPU/(5649:5649): Esperando kernel....
+[ERROR] 20:23:08:058 CPU/(6203:6203): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 20:23:08:058 CPU/(6203:6203): Esperando kernel....
+[ERROR] 20:23:53:513 CPU/(7238:7238): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 20:23:53:513 CPU/(7238:7238): Esperando kernel....
+[INFO] 20:24:02:883 CPU/(7238:7238): Se conecto el kernel
+[INFO] 20:24:10:471 CPU/(7238:7238): Se recibio un contexto del kernel
+[INFO] 20:26:16:555 CPU/(7238:7238): Comenzando ciclo con nuevo CTX...
+[INFO] 20:26:20:997 CPU/(7238:7238): Program Counter: 1
+[INFO] 20:26:20:997 CPU/(7238:7238): Instruccion nº1: 8
+[INFO] 20:26:20:997 CPU/(7238:7238): Una siesta rápida
+[INFO] 20:26:21:025 CPU/(7238:7238): We don't have time for this
+[INFO] 20:26:21:025 CPU/(7238:7238): PID: 0  -Ejecutando: 8 - AX HOLA
+[INFO] 20:26:21:025 CPU/(7238:7238): Num HOLA
+[INFO] 20:26:21:025 CPU/(7238:7238): Program Counter: 2
+[INFO] 20:26:21:025 CPU/(7238:7238): Instruccion nº2: 15
+[INFO] 20:26:21:025 CPU/(7238:7238): PID: 0  -Ejecutando: 15
+[INFO] 20:26:31:457 CPU/(7238:7238): Se desconecto el kernel
+[ERROR] 20:26:43:340 CPU/(8216:8216): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 20:26:43:340 CPU/(8216:8216): Esperando kernel....
+[INFO] 20:26:49:996 CPU/(8216:8216): Se conecto el kernel
+[INFO] 20:27:00:310 CPU/(8216:8216): Se recibio un contexto del kernel
+[INFO] 20:31:12:146 CPU/(8216:8216): Comenzando ciclo con nuevo CTX...
+[INFO] 20:31:14:195 CPU/(8216:8216): Program Counter: 1
+[INFO] 20:31:16:958 CPU/(8216:8216): Instruccion nº1: 8
+[INFO] 20:31:19:660 CPU/(8216:8216): Una siesta rápida
+[INFO] 20:31:19:661 CPU/(8216:8216): We don't have time for this
+[INFO] 20:31:38:011 CPU/(8216:8216): PID: 0  -Ejecutando: 8 - AX HOLA
+[INFO] 20:31:57:477 CPU/(8216:8216): Num HOLA
+[INFO] 20:32:15:138 CPU/(8216:8216): Program Counter: 2
+[INFO] 20:32:15:674 CPU/(8216:8216): Instruccion nº2: 15
+[INFO] 20:32:21:312 CPU/(8216:8216): PID: 0  -Ejecutando: 15
+[ERROR] 20:33:25:011 CPU/(9246:9246): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 20:33:25:014 CPU/(9246:9246): Esperando kernel....
+[ERROR] 20:35:28:792 CPU/(10213:10213): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 20:35:28:792 CPU/(10213:10213): Esperando kernel....
+[INFO] 20:35:37:447 CPU/(10213:10213): Se conecto el kernel
+[INFO] 20:35:50:676 CPU/(10213:10213): Se recibio un contexto del kernel
+[INFO] 20:35:57:313 CPU/(10213:10213): Comenzando ciclo con nuevo CTX...
+[INFO] 20:35:57:314 CPU/(10213:10213): Program Counter: 1
+[INFO] 20:35:57:314 CPU/(10213:10213): Instruccion nº1: 8
+[INFO] 20:35:57:314 CPU/(10213:10213): Una siesta rápida
+[INFO] 20:35:57:316 CPU/(10213:10213): We don't have time for this
+[INFO] 20:35:57:317 CPU/(10213:10213): PID: 0  -Ejecutando: 8 - AX HOLA
+[INFO] 20:35:57:317 CPU/(10213:10213): Num HOLA
+[INFO] 20:36:02:475 CPU/(10213:10213): Program Counter: 2
+[INFO] 20:36:02:475 CPU/(10213:10213): Instruccion nº2: 15
+[INFO] 20:36:02:476 CPU/(10213:10213): PID: 0  -Ejecutando: 15
+[INFO] 20:44:41:052 CPU/(10213:10213): Se desconecto el kernel
+[INFO] 20:44:56:806 CPU/(10213:10213): Se conecto el kernel
+[INFO] 20:45:16:242 CPU/(10213:10213): Se desconecto el kernel
+[ERROR] 20:45:27:783 CPU/(12037:12037): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 20:45:27:783 CPU/(12037:12037): Esperando kernel....
+[INFO] 20:45:35:456 CPU/(12037:12037): Se conecto el kernel
+[ERROR] 20:46:03:114 CPU/(12563:12563): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 20:46:03:114 CPU/(12563:12563): Esperando kernel....
+[ERROR] 20:46:23:637 CPU/(12858:12858): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 20:46:23:637 CPU/(12858:12858): Esperando kernel....
+[ERROR] 20:47:19:429 CPU/(13776:13776): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 20:47:19:429 CPU/(13776:13776): Esperando kernel....
+[INFO] 20:47:27:746 CPU/(13776:13776): Se conecto el kernel
+[INFO] 20:47:35:268 CPU/(13776:13776): Se recibio un contexto del kernel
+[INFO] 20:47:35:268 CPU/(13776:13776): Comenzando ciclo con nuevo CTX...
+[INFO] 20:47:35:268 CPU/(13776:13776): Program Counter: 1
+[INFO] 20:47:35:268 CPU/(13776:13776): Instruccion nº1: 8
+[INFO] 20:47:35:268 CPU/(13776:13776): Una siesta rápida
+[INFO] 20:47:35:269 CPU/(13776:13776): We don't have time for this
+[INFO] 20:47:35:269 CPU/(13776:13776): PID: 0  -Ejecutando: 8 - AX HOLA
+[INFO] 20:47:35:269 CPU/(13776:13776): Num HOLA
+[INFO] 20:47:38:588 CPU/(13776:13776): Program Counter: 2
+[INFO] 20:47:38:588 CPU/(13776:13776): Instruccion nº2: 15
+[INFO] 20:47:38:588 CPU/(13776:13776): PID: 0  -Ejecutando: 15
+[INFO] 20:49:01:618 CPU/(13776:13776): Se desconecto el kernel
+[ERROR] 20:50:06:130 CPU/(14643:14643): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 20:50:06:130 CPU/(14643:14643): Esperando kernel....
+[INFO] 20:50:13:023 CPU/(14643:14643): Se conecto el kernel
+[INFO] 20:50:19:682 CPU/(14643:14643): Se recibio un contexto del kernel
+[INFO] 20:50:19:682 CPU/(14643:14643): Comenzando ciclo con nuevo CTX...
+[INFO] 20:50:19:682 CPU/(14643:14643): Program Counter: 1
+[INFO] 20:50:19:682 CPU/(14643:14643): Instruccion nº1: 8
+[INFO] 20:50:19:682 CPU/(14643:14643): Una siesta rápida
+[INFO] 20:50:19:684 CPU/(14643:14643): We don't have time for this
+[INFO] 20:50:19:684 CPU/(14643:14643): PID: 0  -Ejecutando: 8 - AX HOLA
+[INFO] 20:50:19:684 CPU/(14643:14643): Num HOLA
+[INFO] 20:50:19:684 CPU/(14643:14643): Program Counter: 2
+[INFO] 20:50:19:684 CPU/(14643:14643): Instruccion nº2: 15
+[INFO] 20:50:19:684 CPU/(14643:14643): PID: 0  -Ejecutando: 15
+[INFO] 20:53:54:786 CPU/(14643:14643): Se desconecto el kernel
+[ERROR] 20:54:20:193 CPU/(15887:15887): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 20:54:20:193 CPU/(15887:15887): Esperando kernel....
+[INFO] 20:54:29:132 CPU/(15887:15887): Se conecto el kernel
+[INFO] 20:54:36:922 CPU/(15887:15887): Se recibio un contexto del kernel
+[INFO] 20:54:36:922 CPU/(15887:15887): Comenzando ciclo con nuevo CTX...
+[INFO] 20:54:36:922 CPU/(15887:15887): Program Counter: 1
+[INFO] 20:54:36:922 CPU/(15887:15887): Instruccion nº1: 8
+[INFO] 20:54:36:922 CPU/(15887:15887): Una siesta rápida
+[INFO] 20:54:36:925 CPU/(15887:15887): We don't have time for this
+[INFO] 20:54:36:925 CPU/(15887:15887): PID: 0  -Ejecutando: 8 - AX HOLA
+[INFO] 20:54:36:925 CPU/(15887:15887): Num HOLA
+[INFO] 20:54:36:925 CPU/(15887:15887): Program Counter: 2
+[INFO] 20:54:36:925 CPU/(15887:15887): Instruccion nº2: 15
+[INFO] 20:54:36:925 CPU/(15887:15887): PID: 0  -Ejecutando: 15
+[INFO] 20:56:21:908 CPU/(15887:15887): Se recibio un contexto del kernel
+[INFO] 20:56:21:908 CPU/(15887:15887): Comenzando ciclo con nuevo CTX...
+[ERROR] 20:58:09:957 CPU/(16820:16820): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 20:58:09:957 CPU/(16820:16820): Esperando kernel....
+                                                                                                                                                   [ERROR] 21:00:57:658 CPU/(2393:2393): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 21:00:57:659 CPU/(2393:2393): Esperando kernel....
+[INFO] 21:01:06:349 CPU/(2393:2393): Se conecto el kernel
+[INFO] 21:01:13:417 CPU/(2393:2393): Se recibio un contexto del kernel
+[INFO] 21:01:13:418 CPU/(2393:2393): Comenzando ciclo con nuevo CTX...
+[INFO] 21:01:24:174 CPU/(2393:2393): Program Counter: 1
+[INFO] 21:01:24:174 CPU/(2393:2393): Instruccion nº1: 8
+[INFO] 21:01:24:174 CPU/(2393:2393): Una siesta rápida
+[INFO] 21:01:24:174 CPU/(2393:2393): We don't have time for this
+[INFO] 21:01:24:174 CPU/(2393:2393): PID: 0  -Ejecutando: 8 - AX HOLA
+[INFO] 21:01:24:174 CPU/(2393:2393): Num HOLA
+[INFO] 21:01:27:105 CPU/(2393:2393): Program Counter: 2
+[INFO] 21:01:27:105 CPU/(2393:2393): Instruccion nº2: 15
+[INFO] 21:01:27:105 CPU/(2393:2393): PID: 0  -Ejecutando: 15
+[INFO] 21:02:02:256 CPU/(2393:2393): Se recibio un contexto del kernel
+[INFO] 21:02:02:256 CPU/(2393:2393): Comenzando ciclo con nuevo CTX...
+[ERROR] 21:02:29:546 CPU/(3132:3132): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 21:02:29:546 CPU/(3132:3132): Esperando kernel....
+[ERROR] 21:04:57:680 CPU/(4041:4041): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 21:04:57:680 CPU/(4041:4041): Esperando kernel....
+[INFO] 21:05:08:405 CPU/(4041:4041): Se conecto el kernel
+[INFO] 21:05:25:003 CPU/(4041:4041): Se recibio un contexto del kernel
+[INFO] 21:05:26:255 CPU/(4041:4041): Comenzando ciclo con nuevo CTX...
+[INFO] 21:05:28:235 CPU/(4041:4041): Program Counter: 1
+[INFO] 21:05:28:841 CPU/(4041:4041): Instruccion nº1: 8
+[INFO] 21:05:29:657 CPU/(4041:4041): Una siesta rápida
+[INFO] 21:05:29:658 CPU/(4041:4041): We don't have time for this
+[INFO] 21:05:29:999 CPU/(4041:4041): PID: 0  -Ejecutando: 8 - AX HOLA
+[INFO] 21:05:30:000 CPU/(4041:4041): Num HOLA
+[INFO] 21:05:31:370 CPU/(4041:4041): Program Counter: 2
+[INFO] 21:05:32:006 CPU/(4041:4041): Instruccion nº2: 15
+[INFO] 21:05:32:849 CPU/(4041:4041): PID: 0  -Ejecutando: 15
+[INFO] 21:05:58:710 CPU/(4041:4041): Se recibio un contexto del kernel
+[INFO] 21:06:00:945 CPU/(4041:4041): Comenzando ciclo con nuevo CTX...
+[ERROR] 21:06:47:894 CPU/(4990:4990): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 21:06:47:895 CPU/(4990:4990): Esperando kernel....
+                                                                                                                                               [ERROR] 21:09:21:606 CPU/(2526:2526): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 21:09:21:607 CPU/(2526:2526): Esperando kernel....
+[INFO] 21:09:33:141 CPU/(2526:2526): Se conecto el kernel
+[INFO] 21:09:55:135 CPU/(2526:2526): Se recibio un contexto del kernel
+[INFO] 21:09:56:950 CPU/(2526:2526): Comenzando ciclo con nuevo CTX...
+[INFO] 21:09:57:593 CPU/(2526:2526): Program Counter: 1
+[INFO] 21:09:58:500 CPU/(2526:2526): Instruccion nº1: 8
+[INFO] 21:09:59:039 CPU/(2526:2526): Una siesta rápida
+[INFO] 21:09:59:610 CPU/(2526:2526): We don't have time for this
+[INFO] 21:10:01:654 CPU/(2526:2526): PID: 0  -Ejecutando: 8 - AX HOLA
+[INFO] 21:10:01:654 CPU/(2526:2526): Num HOLA
+[INFO] 21:10:04:733 CPU/(2526:2526): Program Counter: 2
+[INFO] 21:10:05:082 CPU/(2526:2526): Instruccion nº2: 15
+[INFO] 21:10:06:758 CPU/(2526:2526): PID: 0  -Ejecutando: 15
+[INFO] 21:10:24:906 CPU/(2526:2526): Se recibio un contexto del kernel
+[INFO] 21:10:32:175 CPU/(2526:2526): Comenzando ciclo con nuevo CTX...
+[ERROR] 21:12:34:392 CPU/(3489:3489): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 21:12:34:392 CPU/(3489:3489): Esperando kernel....
+[ERROR] 21:13:21:879 CPU/(4488:4488): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 21:13:21:880 CPU/(4488:4488): Esperando kernel....
+[INFO] 21:13:29:950 CPU/(4488:4488): Se conecto el kernel
+[INFO] 21:14:13:552 CPU/(4488:4488): Se recibio un contexto del kernel
+[INFO] 21:14:15:075 CPU/(4488:4488): Comenzando ciclo con nuevo CTX...
+[INFO] 21:14:15:075 CPU/(4488:4488): Program Counter: 1
+[INFO] 21:14:15:075 CPU/(4488:4488): Instruccion nº1: 8
+[INFO] 21:14:15:075 CPU/(4488:4488): Una siesta rápida
+[INFO] 21:14:15:557 CPU/(4488:4488): We don't have time for this
+[INFO] 21:14:15:557 CPU/(4488:4488): PID: 0  -Ejecutando: 8 - AX HOLA
+[INFO] 21:14:15:557 CPU/(4488:4488): Num HOLA
+[INFO] 21:14:15:557 CPU/(4488:4488): Program Counter: 2
+[INFO] 21:14:15:557 CPU/(4488:4488): Instruccion nº2: 15
+[INFO] 21:14:15:557 CPU/(4488:4488): PID: 0  -Ejecutando: 15
+[INFO] 21:14:25:437 CPU/(4488:4488): Se recibio un contexto del kernel
+[INFO] 21:14:30:606 CPU/(4488:4488): Comenzando ciclo con nuevo CTX...
+[ERROR] 21:15:20:592 CPU/(5291:5291): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 21:15:20:592 CPU/(5291:5291): Esperando kernel....
+[INFO] 21:15:30:116 CPU/(5291:5291): Se conecto el kernel
+[INFO] 21:15:44:882 CPU/(5291:5291): Se recibio un contexto del kernel
+[INFO] 21:15:45:767 CPU/(5291:5291): Comenzando ciclo con nuevo CTX...
+[INFO] 21:15:45:767 CPU/(5291:5291): Program Counter: 1
+[INFO] 21:15:45:767 CPU/(5291:5291): Instruccion nº1: 8
+[INFO] 21:15:45:767 CPU/(5291:5291): Una siesta rápida
+[INFO] 21:15:45:769 CPU/(5291:5291): We don't have time for this
+[INFO] 21:15:45:769 CPU/(5291:5291): PID: 0  -Ejecutando: 8 - AX HOLA
+[INFO] 21:15:45:769 CPU/(5291:5291): Num HOLA
+[INFO] 21:15:45:769 CPU/(5291:5291): Program Counter: 2
+[INFO] 21:15:45:769 CPU/(5291:5291): Instruccion nº2: 15
+[INFO] 21:15:45:769 CPU/(5291:5291): PID: 0  -Ejecutando: 15
+[INFO] 21:15:48:808 CPU/(5291:5291): Se recibio un contexto del kernel
+[INFO] 21:15:51:537 CPU/(5291:5291): Comenzando ciclo con nuevo CTX...
+[ERROR] 21:16:54:291 CPU/(6559:6559): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 21:16:54:292 CPU/(6559:6559): Esperando kernel....
+[ERROR] 21:18:44:410 CPU/(2438:2438): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 21:18:44:414 CPU/(2438:2438): Esperando kernel....
+[INFO] 21:19:05:104 CPU/(2438:2438): Se conecto el kernel
+[INFO] 21:19:28:135 CPU/(2438:2438): Se recibio un contexto del kernel
+[INFO] 21:19:29:116 CPU/(2438:2438): Comenzando ciclo con nuevo CTX...
+[INFO] 21:19:29:117 CPU/(2438:2438): Program Counter: 1
+[INFO] 21:19:29:117 CPU/(2438:2438): Instruccion nº1: 8
+[INFO] 21:19:29:117 CPU/(2438:2438): Una siesta rápida
+[INFO] 21:19:29:117 CPU/(2438:2438): We don't have time for this
+[INFO] 21:19:29:117 CPU/(2438:2438): PID: 0  -Ejecutando: 8 - AX HOLA
+[INFO] 21:19:29:117 CPU/(2438:2438): Num HOLA
+[INFO] 21:19:29:117 CPU/(2438:2438): Program Counter: 2
+[INFO] 21:19:29:117 CPU/(2438:2438): Instruccion nº2: 15
+[INFO] 21:19:29:117 CPU/(2438:2438): PID: 0  -Ejecutando: 15
+[INFO] 21:19:32:913 CPU/(2438:2438): Se recibio un contexto del kernel
+[INFO] 21:19:39:309 CPU/(2438:2438): Comenzando ciclo con nuevo CTX...
+[ERROR] 21:34:36:245 CPU/(5121:5121): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 21:34:36:245 CPU/(5121:5121): Esperando kernel....
+[INFO] 21:34:42:146 CPU/(5121:5121): Se conecto el kernel
+[INFO] 21:34:50:698 CPU/(5121:5121): Se recibio un contexto del kernel
+[INFO] 21:34:54:914 CPU/(5121:5121): Comenzando ciclo con nuevo CTX...
+[INFO] 21:34:54:914 CPU/(5121:5121): Program Counter: 1
+[INFO] 21:34:54:914 CPU/(5121:5121): Instruccion nº1: 8
+[INFO] 21:34:54:914 CPU/(5121:5121): Una siesta rápida
+[INFO] 21:34:54:921 CPU/(5121:5121): We don't have time for this
+[INFO] 21:34:54:922 CPU/(5121:5121): PID: 0  -Ejecutando: 8 - AX HOLA
+[INFO] 21:34:54:922 CPU/(5121:5121): Num HOLA
+[INFO] 21:34:54:922 CPU/(5121:5121): Program Counter: 2
+[INFO] 21:34:54:922 CPU/(5121:5121): Instruccion nº2: 15
+[INFO] 21:34:54:922 CPU/(5121:5121): PID: 0  -Ejecutando: 15
+[INFO] 21:34:58:018 CPU/(5121:5121): Se recibio un contexto del kernel
+[INFO] 21:35:01:367 CPU/(5121:5121): Comenzando ciclo con nuevo CTX...

@@ -33,6 +33,23 @@ int main(int argc, char *argv[])
 
   log_info(logger_consola, "Paquete enviado");
 
+  while (1){};
+    // int cod_op = recibir_operacion(conexion_kernel);
+    // switch (cod_op)
+    // {
+    // case MENSAJE:
+    //   log_info(logger_consola, "Se recibio un mensaje del kernel");
+    //   break;
+
+    // case -1:
+    //   log_info(logger_consola, "Se desconecto el kernel");
+    //   return EXIT_FAILURE;
+
+    // default:
+    //   log_error(logger_consola, "Operacion desconocida");
+    //   return EXIT_FAILURE;
+    // };
+
   terminar_conexiones(1, conexion_kernel);
   terminar_programa(logger_consola, config);
 

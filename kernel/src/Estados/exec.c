@@ -55,8 +55,8 @@ definir_accion(int cod_op, t_pcb *proceso){
         break;
 
     case TERMINAR:
-        terminar_proceso(proceso);
         log_info(LOGGER_KERNEL, "Se recibio un mensaje de finalizacion");
+        terminar_proceso(proceso);
         break;
 
     }

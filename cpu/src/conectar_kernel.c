@@ -3,12 +3,10 @@
 void conectar_kernel(int socket_servidor)
 {
     log_info(LOGGER_CPU, "Esperando kernel....");
-    while (1)
-    {
-        int socket_kernel = esperar_cliente(socket_servidor); //En la librería faltaba utils/conexiones.h, ya no hace falta agreagarlo porque se encuentra en instruccionescpu.h
-        log_info(LOGGER_CPU, "Se conecto el kernel");
-        enviado_de_kernel(&socket_kernel);
-    }
+    SOCKET_KERNEL = esperar_cliente(socket_servidor); //En la librería faltaba utils/conexiones.h, ya no hace falta agreagarlo porque se encuentra en instruccionescpu.h
+    log_info(LOGGER_CPU, "Se conecto el kernel");
+    enviado_de_kernel(&SOCKET_KERNEL);
+    
 }
 
 void enviado_de_kernel(int *socket_kernel)
