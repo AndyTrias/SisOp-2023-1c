@@ -12,8 +12,15 @@ bool volver_a_ready;
 t_instruccion* fetch(t_ctx *ctx)
 {
 	t_instruccion* instruccion_nueva = list_get(ctx->instrucciones, ctx->program_counter); // Busca la instrucción y la guarda.
-	ctx->program_counter++;
 	log_info(LOGGER_CPU, "Program Counter: %d", ctx->program_counter);
+	switch (instruccion_nueva->operacion)
+	{
+	case EXIT:
+		break;
+	default:
+		ctx->program_counter++;
+		break;
+	}
 	return instruccion_nueva;
 }
 
