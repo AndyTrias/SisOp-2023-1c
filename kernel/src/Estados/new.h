@@ -6,8 +6,8 @@
 #include "ready.h"
 
 
-    t_pcb crear_pcb(t_list* instrucciones);
-    void nuevo_proceso(t_list *);
+    t_pcb crear_pcb(t_list*, int );
+    void nuevo_proceso(t_list *, int);
     t_pcb *get_proceso_desde_new();
 
 #endif

@@ -11,12 +11,12 @@ int main(int argc, char *argv[])
     return EXIT_FAILURE;
   }
 
-  t_config *config = iniciar_config(argv[1]);
+  config = iniciar_config(argv[1]);
 
   int conexion_kernel;
   inicializar_conexiones(&conexion_kernel, config);
 
-  char buffer[100]; // No sabemos para que sirve
+  char buffer[100];
 
   t_paquete *paquete = crear_paquete(INSTRUCCIONES);
 
@@ -33,25 +33,20 @@ int main(int argc, char *argv[])
 
   log_info(logger_consola, "Paquete enviado");
 
-  while (1){};
-    // int cod_op = recibir_operacion(conexion_kernel);
-    // switch (cod_op)
-    // {
-    // case MENSAJE:
-    //   log_info(logger_consola, "Se recibio un mensaje del kernel");
-    //   break;
-
-    // case -1:
-    //   log_info(logger_consola, "Se desconecto el kernel");
-    //   return EXIT_FAILURE;
-
-    // default:
-    //   log_error(logger_consola, "Operacion desconocida");
-    //   return EXIT_FAILURE;
-    // };
-
-  terminar_conexiones(1, conexion_kernel);
-  terminar_programa(logger_consola, config);
+  finalizar_consola(conexion_kernel);
 
   return 0;
 }
+
+void finalizar_consola(int conexion_kernel){
+  int cod_op = recibir_operacion(conexion_kernel);
+  if (cod_op == TERMINAR)
+    log_info(logger_consola, "El kernel finalizo las instrucciones. Cerrando la consola");
+
+  else
+    log_error(logger_consola, "Operacion desconocida");
+
+  terminar_conexiones(1, conexion_kernel);
+  terminar_programa(logger_consola, config);
+}
+

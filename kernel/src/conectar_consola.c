@@ -25,7 +25,7 @@ void enviado_de_consola(int *socket_consola)
         case INSTRUCCIONES:
             log_info(LOGGER_KERNEL, "Se recibieron instrucciones de una consola");
             t_list *instrucciones = recibir_paquete_consola(*socket_consola);
-            nuevo_proceso(instrucciones);
+            nuevo_proceso(instrucciones, *socket_consola);
             break;
 
         case -1:

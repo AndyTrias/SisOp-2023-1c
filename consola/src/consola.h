@@ -13,5 +13,9 @@
     #include <crear_instrucciones.h>
 
     t_log* logger_consola;
+    t_config * config; 
+
+
+    void finalizar_consola(int);
 
 #endif

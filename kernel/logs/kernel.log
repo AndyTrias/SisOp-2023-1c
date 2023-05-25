@@ -1,0 +1,66 @@
+[INFO] 16:29:08:123 KERNEL/(2655:2655): Se conecto al servidor 127.0.0.1:8001
+[ERROR] 16:29:08:123 KERNEL/(2655:2655): No se pudo conectar al servidor 127.0.0.1:8002
+[ERROR] 16:29:08:123 KERNEL/(2655:2655): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 16:29:08:123 KERNEL/(2655:2655): Esperando conexiones de consolas...
+[INFO] 16:29:08:123 KERNEL/(2655:2657): Inicia el planificador de corto plazo
+[INFO] 16:29:08:123 KERNEL/(2655:2656): Inicia el planificador de largo plazo
+[INFO] 16:29:14:379 KERNEL/(2655:2655): Se conecto una consola
+[INFO] 16:29:14:383 KERNEL/(2655:2705): Se recibieron instrucciones de una consola
+[INFO] 16:29:14:393 KERNEL/(2655:2705): Se Crea el proceso <0> en NEW
+[INFO] 16:29:14:393 KERNEL/(2655:2656): PID <0> a ready en base al algortmo de planificacion <FIFO>
+[INFO] 16:29:14:393 KERNEL/(2655:2656): Se mando la señal al planificador de corto plazo
+[INFO] 16:29:14:393 KERNEL/(2655:2657): Empieza ciclo de instruccion
+[INFO] 16:29:14:395 KERNEL/(2655:2657): PID <0> a ready en base al algortmo de planificacion <FIFO>
+[INFO] 16:29:14:395 KERNEL/(2655:2657): Se recibio un mensaje de desalojo
+[INFO] 16:29:14:399 KERNEL/(2655:2657): Se recibio un mensaje de finalizacion
+[INFO] 16:29:29:367 KERNEL/(2655:2705): Se desconecto una consola
+[INFO] 16:39:32:930 KERNEL/(4569:4569): Se conecto al servidor 127.0.0.1:8001
+[ERROR] 16:39:32:931 KERNEL/(4569:4569): No se pudo conectar al servidor 127.0.0.1:8002
+[ERROR] 16:39:32:931 KERNEL/(4569:4569): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 16:39:32:931 KERNEL/(4569:4569): Esperando conexiones de consolas...
+[INFO] 16:39:32:931 KERNEL/(4569:4570): Inicia el planificador de largo plazo
+[INFO] 16:39:32:932 KERNEL/(4569:4571): Inicia el planificador de corto plazo
+[INFO] 16:39:47:103 KERNEL/(4569:4569): Se conecto una consola
+[INFO] 16:39:47:103 KERNEL/(4569:4793): Se recibieron instrucciones de una consola
+[INFO] 16:39:47:103 KERNEL/(4569:4793): Se Crea el proceso <0> en NEW
+[INFO] 16:39:47:103 KERNEL/(4569:4570): PID <0> a ready en base al algortmo de planificacion <FIFO>
+[INFO] 16:39:47:103 KERNEL/(4569:4570): Se mando la señal al planificador de corto plazo
+[INFO] 16:39:47:104 KERNEL/(4569:4571): Empieza ciclo de instruccion
+[INFO] 16:39:47:104 KERNEL/(4569:4571): PID <0> a ready en base al algortmo de planificacion <FIFO>
+[INFO] 16:39:47:104 KERNEL/(4569:4571): Se recibio un mensaje de desalojo
+[INFO] 16:39:47:104 KERNEL/(4569:4571): Se recibio un mensaje de finalizacion
+[INFO] 16:39:47:105 KERNEL/(4569:4793): Se desconecto una consola
+[INFO] 16:42:32:835 KERNEL/(5445:5445): Se conecto al servidor 127.0.0.1:8001
+[ERROR] 16:42:32:835 KERNEL/(5445:5445): No se pudo conectar al servidor 127.0.0.1:8002
+[ERROR] 16:42:32:835 KERNEL/(5445:5445): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 16:42:32:835 KERNEL/(5445:5445): Esperando conexiones de consolas...
+[INFO] 16:42:32:835 KERNEL/(5445:5447): Inicia el planificador de corto plazo
+[INFO] 16:42:32:835 KERNEL/(5445:5446): Inicia el planificador de largo plazo
+[INFO] 16:45:19:216 KERNEL/(5445:5445): Se conecto una consola
+[INFO] 16:45:19:216 KERNEL/(5445:6459): Se recibieron instrucciones de una consola
+[INFO] 16:45:19:216 KERNEL/(5445:6459): Se Crea el proceso <0> en NEW
+[INFO] 16:45:19:216 KERNEL/(5445:5446): PID <0> a ready en base al algortmo de planificacion <FIFO>
+[INFO] 16:45:19:216 KERNEL/(5445:5446): Se mando la señal al planificador de corto plazo
+[INFO] 16:45:19:216 KERNEL/(5445:5447): Empieza ciclo de instruccion
+[INFO] 16:45:19:219 KERNEL/(5445:5447): PID <0> a ready en base al algortmo de planificacion <FIFO>
+[INFO] 16:45:19:219 KERNEL/(5445:5447): Se recibio un mensaje de desalojo
+[INFO] 16:45:19:220 KERNEL/(5445:5447): Se recibio un mensaje de finalizacion
+[INFO] 16:45:19:223 KERNEL/(5445:6459): Se desconecto una consola
+[INFO] 16:50:51:305 KERNEL/(5445:5445): Se conecto una consola
+[INFO] 16:50:51:306 KERNEL/(5445:6858): Se recibieron instrucciones de una consola
+[INFO] 16:50:51:306 KERNEL/(5445:6858): Se Crea el proceso <1> en NEW
+[INFO] 16:50:51:306 KERNEL/(5445:5446): PID <1> a ready en base al algortmo de planificacion <FIFO>
+[INFO] 16:50:51:307 KERNEL/(5445:5446): Se mando la señal al planificador de corto plazo
+[INFO] 16:50:51:310 KERNEL/(5445:5447): PID <1> a ready en base al algortmo de planificacion <FIFO>
+[INFO] 16:50:51:310 KERNEL/(5445:5447): Se recibio un mensaje de desalojo
+[INFO] 16:50:51:312 KERNEL/(5445:5447): Se recibio un mensaje de finalizacion
+[INFO] 16:50:51:315 KERNEL/(5445:6858): Se desconecto una consola
+[INFO] 16:51:28:572 KERNEL/(5445:5445): Se conecto una consola
+[INFO] 16:51:28:573 KERNEL/(5445:7072): Se recibieron instrucciones de una consola
+[INFO] 16:51:28:573 KERNEL/(5445:7072): Se Crea el proceso <2> en NEW
+[INFO] 16:51:28:582 KERNEL/(5445:5446): PID <2> a ready en base al algortmo de planificacion <FIFO>
+[INFO] 16:51:28:582 KERNEL/(5445:5446): Se mando la señal al planificador de corto plazo
+[INFO] 16:51:28:584 KERNEL/(5445:5447): PID <2> a ready en base al algortmo de planificacion <FIFO>
+[INFO] 16:51:28:585 KERNEL/(5445:5447): Se recibio un mensaje de desalojo
+[INFO] 16:51:28:585 KERNEL/(5445:5447): Se recibio un mensaje de finalizacion
+[INFO] 16:51:28:586 KERNEL/(5445:7072): Se desconecto una consola
