@@ -10,7 +10,6 @@ int main(int argc, char *argv[]) {
 
   t_config* config = iniciar_config(argv[1]);
   inicializar_variables_globales(config);
-  int err;
 
   //Hilos que maneja el kernel
   pthread_t hilo_recibir_consola, hilo_planificacion_largo, hilo_planificacion_corto;
@@ -24,9 +23,9 @@ int main(int argc, char *argv[]) {
   
   //hilo para recibir consolas
   //err= pthread_create(&hilo_recibir_consola, NULL, (void *)recibir_consolas, &socket_servidor);
-  err= pthread_create(&hilo_planificacion_largo, NULL, (void *)planificador_largo,NULL);
+  pthread_create(&hilo_planificacion_largo, NULL, (void *)planificador_largo,NULL);
 
-  err= pthread_create(&hilo_planificacion_corto, NULL,(void *)planificador_corto,NULL);
+  pthread_create(&hilo_planificacion_corto, NULL,(void *)planificador_corto,NULL);
 
   //pthread_join(hilo_recibir_consola, NULL);
   conectar_consola(socket_servidor);

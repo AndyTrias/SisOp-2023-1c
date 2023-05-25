@@ -37,7 +37,7 @@ void empezar_ciclo_si_vacio(){
     
 }
 
-definir_accion(int cod_op, t_pcb *proceso){
+void definir_accion(int cod_op, t_pcb *proceso){
     switch (cod_op)
     {
     case DESALOJAR:
@@ -62,7 +62,6 @@ definir_accion(int cod_op, t_pcb *proceso){
     }
 }
 
-//  TODO: Recibe el paquete con el contexto
 void recibir_de_cpu(int conexion_cpu){
         
     int cod_op = recibir_operacion(conexion_cpu);
@@ -77,6 +76,8 @@ void recibir_de_cpu(int conexion_cpu){
     definir_accion(cod_op, EJECUTANDO);
 
     t_pcb *proceso_entrante = ceder_proceso_a_exec(); //pide un proceso a ready segun el algoritmo
+
+    reemplazar_proceso(proceso_entrante); // reemplaza la variable global ejecucion por el entrante
 
     enviar_a_cpu();
 

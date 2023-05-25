@@ -23,6 +23,7 @@ char** INSTANCIAS_RECURSOS;
 
 //Semaforos
 sem_t PROCESO_EN_NEW;
+sem_t PROCESO_EN_READY;
 sem_t GRADO_MULTIPROGRAMACION;
 sem_t CORTO_PLAZO;
 pthread_mutex_t MUTEX_LISTA_NEW;
@@ -47,6 +48,7 @@ void agregar_a_lista_ready(t_pcb *nuevo){
     pthread_mutex_lock(&MUTEX_LISTA_READY);
     list_add(LISTA_READY, nuevo);
     pthread_mutex_unlock(&MUTEX_LISTA_READY);
+    sem_post(&PROCESO_EN_READY);
     
     log_info(LOGGER_KERNEL, "PID <%d> a ready en base al algortmo de planificacion <%s>",nuevo->contexto.PID, ALGORITMO_PLANIFICACION);
 }
@@ -67,9 +69,11 @@ t_pcb* sacar_de_lista_new(int posicion){
 }
 
 t_pcb* sacar_de_lista_ready(int posicion){
+    sem_wait(&PROCESO_EN_READY);
     pthread_mutex_lock(&MUTEX_LISTA_READY);
     t_pcb * pcb = list_remove(LISTA_READY, posicion);
     pthread_mutex_unlock(&MUTEX_LISTA_READY);
+    
 
     return pcb;
 }
