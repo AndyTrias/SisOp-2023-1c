@@ -11,9 +11,7 @@ bool volver_a_ready;
 // //Cuando recibe un ctx
 t_instruccion* fetch(t_ctx *ctx)
 {
-	t_instruccion* instruccion_nueva;
-	instruccion_nueva = list_get(ctx->instrucciones, ctx->program_counter); // Busca la instrucción y la guarda.
-	if()
+	t_instruccion* instruccion_nueva = list_get(ctx->instrucciones, ctx->program_counter); // Busca la instrucción y la guarda.
 	ctx->program_counter++;
 	log_info(LOGGER_CPU, "Program Counter: %d", ctx->program_counter);
 	return instruccion_nueva;
@@ -23,9 +21,7 @@ void decode(t_instruccion* instruccion, int retraso)
 {
 	if (instruccion->operacion == SET)
 	{
-		log_info(LOGGER_CPU, "Una siesta rápida");
 		usleep(retraso * 1000);
-		log_info(LOGGER_CPU, "We don't have time for this");
 	}
 }
 
@@ -84,7 +80,7 @@ op_code execute(t_instruccion* instruccion_actual, t_ctx *ctx)
 		{
 		case 0:
 			strcpy(ctx->registros.AX, instruccion_actual->parametros[1]);
-			log_info(LOGGER_CPU, "Num %s", ctx->registros.AX);
+			log_info(LOGGER_CPU, "Num: %s", ctx->registros.AX);
 			break;
 		case 1:
 			strcpy(ctx->registros.BX, instruccion_actual->parametros[1]);
@@ -124,7 +120,6 @@ op_code execute(t_instruccion* instruccion_actual, t_ctx *ctx)
 		}
 
 		return 0;
-
 	case YIELD:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d", ctx->PID, instruccion_actual->operacion);
 		return DESALOJAR;
@@ -149,7 +144,7 @@ void ciclo_de_instruccion(t_ctx *ctx)
 		decode(instruccion_actual, TIEMPO_RETARDO);
 		int cod_op = execute(instruccion_actual, ctx);
 
-		// Devuelve 0 si debe seguire ejecutando
+		// Devuelve 0 si debe seguir ejecutando
 		// Devuelve un codigo_operacion si debe enviarlo al kernel
 		// el codigo de operacion son los enums de enviar_paquete y son siempre > 0
 

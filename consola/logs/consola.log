@@ -150,3 +150,28 @@
 [INFO] 21:19:13:495 CONSOLA/(2764:2764): Paquete enviado
 [INFO] 21:34:48:357 CONSOLA/(5491:5491): Se conecto al servidor 127.0.0.1:8000
 [INFO] 21:34:48:357 CONSOLA/(5491:5491): Paquete enviado
+[INFO] 21:54:42:386 CONSOLA/(3762:3762): Se conecto al servidor 127.0.0.1:8000
+[INFO] 21:54:42:387 CONSOLA/(3762:3762): Paquete enviado
+[INFO] 22:09:17:771 CONSOLA/(4989:4989): Se conecto al servidor 127.0.0.1:8000
+[INFO] 22:09:17:772 CONSOLA/(4989:4989): Paquete enviado
+[INFO] 22:42:39:440 CONSOLA/(6149:6149): Se conecto al servidor 127.0.0.1:8000
+[INFO] 22:42:39:441 CONSOLA/(6149:6149): Paquete enviado
+[ERROR] 22:44:05:267 CONSOLA/(6969:6969): No se pudo conectar al servidor 127.0.0.1:8000
+[ERROR] 22:44:23:673 CONSOLA/(7123:7123): No se pudo conectar al servidor 127.0.0.1:8000
+[ERROR] 22:44:37:141 CONSOLA/(7176:7176): No se pudo conectar al servidor 127.0.0.1:8000
+[INFO] 22:45:22:475 CONSOLA/(7742:7742): Se conecto al servidor 127.0.0.1:8000
+[INFO] 22:45:22:477 CONSOLA/(7742:7742): Paquete enviado
+[ERROR] 22:56:38:644 CONSOLA/(8721:8721): No se pudo conectar al servidor 127.0.0.1:8000
+[INFO] 22:57:47:646 CONSOLA/(9323:9323): Se conecto al servidor 127.0.0.1:8000
+[INFO] 22:57:47:648 CONSOLA/(9323:9323): Paquete enviado
+[INFO] 23:58:19:078 CONSOLA/(11312:11312): Se conecto al servidor 127.0.0.1:8000
+[INFO] 23:58:19:080 CONSOLA/(11312:11312): Paquete enviado
+[ERROR] 00:03:50:669 CONSOLA/(12479:12479): No se pudo conectar al servidor 127.0.0.1:8000
+[INFO] 00:04:58:486 CONSOLA/(13205:13205): Se conecto al servidor 127.0.0.1:8000
+[INFO] 00:04:58:488 CONSOLA/(13205:13205): Paquete enviado
+[INFO] 00:16:51:528 CONSOLA/(14623:14623): Se conecto al servidor 127.0.0.1:8000
+[INFO] 00:16:51:529 CONSOLA/(14623:14623): Paquete enviado
+[INFO] 00:20:52:352 CONSOLA/(15658:15658): Se conecto al servidor 127.0.0.1:8000
+[INFO] 00:20:52:353 CONSOLA/(15658:15658): Paquete enviado
+[INFO] 00:24:02:385 CONSOLA/(16849:16849): Se conecto al servidor 127.0.0.1:8000
+[INFO] 00:24:02:386 CONSOLA/(16849:16849): Paquete enviado
