@@ -29,6 +29,7 @@ extern char** INSTANCIAS_RECURSOS;
 //Semaforos
 extern sem_t PROCESO_EN_NEW;
 extern sem_t PROCESO_EN_READY;
+extern sem_t PROCESO_EN_BLOCK;
 extern sem_t GRADO_MULTIPROGRAMACION;
 extern sem_t CORTO_PLAZO;
 extern pthread_mutex_t MUTEX_LISTA_NEW;

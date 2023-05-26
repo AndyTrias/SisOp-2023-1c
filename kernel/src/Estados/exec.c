@@ -25,6 +25,8 @@ void enviar_a_cpu(){
     serializar_contexto(&EJECUTANDO->contexto, paquete);
 
     enviar_paquete(paquete, SOCKET_CPU);
+
+    log_info(LOGGER_KERNEL,"Se envia el PID <%d> al CPU",EJECUTANDO->contexto.PID);
 }
 
 

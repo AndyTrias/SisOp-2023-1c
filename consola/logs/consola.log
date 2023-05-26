@@ -65,3 +65,78 @@
 [INFO] 22:31:30:291 CONSOLA/(4502:4502): Se conecto al servidor 127.0.0.1:8000
 [INFO] 22:31:30:291 CONSOLA/(4502:4502): Paquete enviado
 [ERROR] 22:32:12:000 CONSOLA/(4502:4502): Operacion desconocida
+[INFO] 22:56:18:192 CONSOLA/(5906:5906): Se conecto al servidor 127.0.0.1:8000
+[INFO] 22:56:18:193 CONSOLA/(5906:5906): Paquete enviado
+[INFO] 22:56:32:778 CONSOLA/(6077:6077): Se conecto al servidor 127.0.0.1:8000
+[INFO] 22:56:32:780 CONSOLA/(6077:6077): Paquete enviado
+[ERROR] 22:56:33:045 CONSOLA/(6077:6077): Operacion desconocida
+[ERROR] 22:56:33:045 CONSOLA/(5906:5906): Operacion desconocida
+[ERROR] 22:57:18:483 CONSOLA/(6339:6339): No se pudo conectar al servidor 127.0.0.1:8000
+[ERROR] 22:57:25:491 CONSOLA/(6467:6467): No se pudo conectar al servidor 127.0.0.1:8000
+[ERROR] 22:57:30:310 CONSOLA/(6593:6593): No se pudo conectar al servidor 127.0.0.1:8000
+[ERROR] 22:57:35:682 CONSOLA/(6720:6720): No se pudo conectar al servidor 127.0.0.1:8000
+[INFO] 22:58:26:278 CONSOLA/(7540:7540): Se conecto al servidor 127.0.0.1:8000
+[INFO] 22:58:26:280 CONSOLA/(7540:7540): Paquete enviado
+[INFO] 22:58:37:933 CONSOLA/(7750:7750): Se conecto al servidor 127.0.0.1:8000
+[INFO] 22:58:37:934 CONSOLA/(7750:7750): Paquete enviado
+[ERROR] 23:00:13:640 CONSOLA/(7540:7540): Operacion desconocida
+[ERROR] 23:00:13:641 CONSOLA/(7750:7750): Operacion desconocida
+[ERROR] 23:00:26:480 CONSOLA/(8291:8291): No se pudo conectar al servidor 127.0.0.1:8000
+[ERROR] 23:00:47:247 CONSOLA/(8456:8456): No se pudo conectar al servidor 127.0.0.1:8000
+[INFO] 23:02:00:022 CONSOLA/(8832:8832): Se conecto al servidor 127.0.0.1:8000
+[INFO] 23:02:00:024 CONSOLA/(8832:8832): Paquete enviado
+[INFO] 23:02:13:711 CONSOLA/(9027:9027): Se conecto al servidor 127.0.0.1:8000
+[INFO] 23:02:13:713 CONSOLA/(9027:9027): Paquete enviado
+[ERROR] 23:02:13:975 CONSOLA/(8832:8832): Operacion desconocida
+[ERROR] 23:02:13:976 CONSOLA/(9027:9027): Operacion desconocida
+[ERROR] 23:03:04:029 CONSOLA/(9391:9391): No se pudo conectar al servidor 127.0.0.1:8000
+[ERROR] 23:03:13:783 CONSOLA/(9514:9514): No se pudo conectar al servidor 127.0.0.1:8000
+[INFO] 23:03:35:077 CONSOLA/(9783:9783): Se conecto al servidor 127.0.0.1:8000
+[INFO] 23:03:35:078 CONSOLA/(9783:9783): Paquete enviado
+[INFO] 23:03:45:502 CONSOLA/(9961:9961): Se conecto al servidor 127.0.0.1:8000
+[INFO] 23:03:45:503 CONSOLA/(9961:9961): Paquete enviado
+[ERROR] 23:03:45:752 CONSOLA/(9783:9783): Operacion desconocida
+[ERROR] 23:03:45:753 CONSOLA/(9961:9961): Operacion desconocida
+[ERROR] 23:04:54:048 CONSOLA/(11040:11040): No se pudo conectar al servidor 127.0.0.1:8000
+[ERROR] 23:04:59:686 CONSOLA/(11167:11167): No se pudo conectar al servidor 127.0.0.1:8000
+[ERROR] 23:05:04:800 CONSOLA/(11294:11294): No se pudo conectar al servidor 127.0.0.1:8000
+[INFO] 23:05:43:150 CONSOLA/(11791:11791): Se conecto al servidor 127.0.0.1:8000
+[INFO] 23:05:43:151 CONSOLA/(11791:11791): Paquete enviado
+[INFO] 23:05:54:716 CONSOLA/(11999:11999): Se conecto al servidor 127.0.0.1:8000
+[INFO] 23:05:54:718 CONSOLA/(11999:11999): Paquete enviado
+[ERROR] 23:06:44:961 CONSOLA/(11791:11791): Operacion desconocida
+[ERROR] 23:06:44:961 CONSOLA/(11999:11999): Operacion desconocida
+[ERROR] 23:07:53:409 CONSOLA/(12835:12835): No se pudo conectar al servidor 127.0.0.1:8000
+[INFO] 23:09:22:060 CONSOLA/(14083:14083): Se conecto al servidor 127.0.0.1:8000
+[INFO] 23:09:22:061 CONSOLA/(14083:14083): Paquete enviado
+[INFO] 23:09:58:175 CONSOLA/(14283:14283): Se conecto al servidor 127.0.0.1:8000
+[INFO] 23:09:58:176 CONSOLA/(14283:14283): Paquete enviado
+[ERROR] 23:10:53:888 CONSOLA/(14083:14083): Operacion desconocida
+[ERROR] 23:10:53:889 CONSOLA/(14283:14283): Operacion desconocida
+[ERROR] 23:12:03:687 CONSOLA/(14655:14655): No se pudo conectar al servidor 127.0.0.1:8000
+[INFO] 23:15:34:531 CONSOLA/(15460:15460): Se conecto al servidor 127.0.0.1:8000
+[INFO] 23:15:34:532 CONSOLA/(15460:15460): Paquete enviado
+[INFO] 23:16:09:278 CONSOLA/(15659:15659): Se conecto al servidor 127.0.0.1:8000
+[INFO] 23:16:09:280 CONSOLA/(15659:15659): Paquete enviado
+[ERROR] 23:16:09:577 CONSOLA/(15460:15460): Operacion desconocida
+[ERROR] 23:16:09:578 CONSOLA/(15659:15659): Operacion desconocida
+[INFO] 23:22:15:697 CONSOLA/(16305:16305): Se conecto al servidor 127.0.0.1:8000
+[INFO] 23:22:15:698 CONSOLA/(16305:16305): Paquete enviado
+[ERROR] 23:22:53:957 CONSOLA/(16305:16305): Operacion desconocida
+[ERROR] 23:23:04:472 CONSOLA/(16667:16667): No se pudo conectar al servidor 127.0.0.1:8000
+                                                                                                                                                                                                                                                                                 [INFO] 23:26:56:992 CONSOLA/(2312:2312): Se conecto al servidor 127.0.0.1:8000
+[INFO] 23:26:56:993 CONSOLA/(2312:2312): Paquete enviado
+[ERROR] 23:26:57:316 CONSOLA/(2312:2312): Operacion desconocida
+[ERROR] 23:27:47:062 CONSOLA/(2707:2707): No se pudo conectar al servidor 127.0.0.1:8000
+[INFO] 23:28:10:224 CONSOLA/(2992:2992): Se conecto al servidor 127.0.0.1:8000
+[INFO] 23:28:10:225 CONSOLA/(2992:2992): Paquete enviado
+[ERROR] 23:29:04:907 CONSOLA/(2992:2992): Operacion desconocida
+[INFO] 23:33:05:263 CONSOLA/(3565:3565): Se conecto al servidor 127.0.0.1:8000
+[INFO] 23:33:05:265 CONSOLA/(3565:3565): Paquete enviado
+[ERROR] 23:33:21:222 CONSOLA/(3565:3565): Operacion desconocida
+[INFO] 23:34:48:357 CONSOLA/(4107:4107): Se conecto al servidor 127.0.0.1:8000
+[INFO] 23:34:48:361 CONSOLA/(4107:4107): Paquete enviado
+[ERROR] 23:36:18:643 CONSOLA/(4107:4107): Operacion desconocida
+[INFO] 23:41:28:838 CONSOLA/(4729:4729): Se conecto al servidor 127.0.0.1:8000
+[INFO] 23:41:28:841 CONSOLA/(4729:4729): Paquete enviado
+[ERROR] 23:41:47:103 CONSOLA/(4729:4729): Operacion desconocida

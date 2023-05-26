@@ -51,6 +51,7 @@ void inicializar_semaforos() {
     pthread_mutex_init(&MUTEX_LISTA_BLOCK, NULL);
     sem_init(&PROCESO_EN_NEW, 0, 0);
     sem_init(&PROCESO_EN_READY, 0, 0);
+    sem_init(&PROCESO_EN_BLOCK, 0, 0);
     sem_init(&GRADO_MULTIPROGRAMACION, 0, GRADO_MAX_MULTIPROGRAMACION);
     sem_init(&CORTO_PLAZO, 0, 0);
 }

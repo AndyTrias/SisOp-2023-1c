@@ -37,7 +37,7 @@ typedef struct {
     {
         t_ctx contexto;
         //tabla de segmento;
-        int estimado_prox_rafaga;
+        float estimado_prox_rafaga;
         t_temporal* tiempo_desde_ult_ready; //cuando pasa a ready usar temporal_stop
         int64_t tiempo_llegada_ready;//cuando pasa a ready usar  = temporal_gettime(tiempo_desde_ult_ready)
         t_list* archivos_abiertos;
