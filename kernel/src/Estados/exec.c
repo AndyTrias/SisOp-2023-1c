@@ -42,24 +42,45 @@ void definir_accion(int cod_op, t_pcb *proceso){
     {
     case DESALOJAR:
         agregar_a_lista_ready(proceso);
+        reemplazar_exec_por_nuevo();
         log_info(LOGGER_KERNEL, "Se recibio un mensaje de desalojo");
         break;
 
     case PETICION:
+        reemplazar_exec_por_nuevo();
         log_info(LOGGER_KERNEL, "Se recibio un mensaje de peticion");
         //I/O
         break;
     
     case BLOQUEAR:
+        reemplazar_exec_por_nuevo();
         log_info(LOGGER_KERNEL, "Se recibio un mensaje de bloqueo");
         break;
 
     case TERMINAR:
+        reemplazar_exec_por_nuevo();
         log_info(LOGGER_KERNEL, "Se recibio un mensaje de finalizacion");
         terminar_proceso(proceso);
         break;
 
+    case WAIT:
+        if (/*no hay recursos disponibles*/){
+            reemplazar_exec_por_nuevo();
+            log_info(LOGGER_KERNEL, "Se recibio un mensaje de wait");
+        }
+        else{
+            //se le da el recurso;
+        };
+        break;
+
+
     }
+}
+
+reemplazar_exec_por_nuevo(){
+    t_pcb *proceso_entrante = ceder_proceso_a_exec(); //pide un proceso a ready segun el algoritmo
+
+    reemplazar_proceso(proceso_entrante);
 }
 
 void recibir_de_cpu(int conexion_cpu){
@@ -74,10 +95,6 @@ void recibir_de_cpu(int conexion_cpu){
     reemplazar_ctx(ctx);
 
     definir_accion(cod_op, EJECUTANDO);
-
-    t_pcb *proceso_entrante = ceder_proceso_a_exec(); //pide un proceso a ready segun el algoritmo
-
-    reemplazar_proceso(proceso_entrante); // reemplaza la variable global ejecucion por el entrante
 
     enviar_a_cpu();
 
