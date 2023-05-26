@@ -6,41 +6,32 @@ void admitir_proceso()
     agregar_a_lista_ready(get_proceso_desde_new());
 }
 
-t_pcb *get_proceso_por_fifo()
+t_pcb* get_proceso_por_fifo()
 {
     return sacar_de_lista_ready(0);
 }
 
-t_pcb *get_proceso_por_hrrn()
-{
-    int ganador = 0; // proceso_con_menor_RR()
-    return sacar_de_lista_ready(ganador);
-}
-
-// t_pcb *HRRN()
-// {
-//     t_pcb *proceso = list_get(LISTA_READY, 0);
-//     int tiempo_espera = temporal_get_age(proceso->tiempo_desde_ult_ready);
-//     float respuesta = (tiempo_espera + proceso->estimacion_anterior) / proceso->estimacion_anterior;
-//     int i = 0;
-//     int tiempo_espera_aux;
-//     float respuesta_aux;
-//     t_pcb *proceso_aux;
-//     while (i < list_size(LISTA_READY))
-//     {
-//         proceso_aux = list_get(LISTA_READY, i);
-//         tiempo_espera_aux = temporal_get_age(proceso_aux->tiempo_desde_ult_ready);
-//         respuesta_aux = (tiempo_espera_aux + proceso_aux->estimacion_anterior) / proceso_aux->estimacion_anterior;
-//         if (respuesta_aux > respuesta)
-//         {
-//             proceso = proceso_aux;
-//             tiempo_espera = tiempo_espera_aux;
-//             respuesta = respuesta_aux;
-//         }
-//         i++;
-//     }
-//     return list_remove(LISTA_READY, i);
-// }
+t_pcb* get_proceso_por_hrrn(){
+     t_pcb *proceso = get_de_lista_ready(0);
+     float tiempo_actual= temporal_gettime(TIEMPO_CORRIENDO);
+     float RR = 1 + ((tiempo_actual-proceso->tiempo_llegada_ready)/proceso->estimado_prox_rafaga);
+     //tiempo_actual-proceso->tiempo_llegada_ready me da el tiempo de espera en ready
+     //si pasa a ready en t=3 y replanifio en t=5 entonces tiempo espera es 5(tiempo_cuatal)- 3(tiempo_llegada_ready)
+     int i = 0;
+     float RR_aux;
+     t_pcb *proceso_aux;
+     
+     while (i < list_size(LISTA_READY)){
+         proceso_aux = get_de_lista_ready(i);
+         RR_aux = 1 + ((tiempo_actual-proceso_aux->tiempo_llegada_ready)/proceso_aux->estimado_prox_rafaga);
+         if (RR_aux > RR){
+             proceso = proceso_aux;
+         }
+         i++;
+     }
+    sacar_elemento_de_lista_ready(proceso);
+    return proceso;
+ }
 
 t_pcb *ceder_proceso_a_exec()
 {

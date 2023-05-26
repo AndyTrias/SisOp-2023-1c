@@ -7,6 +7,7 @@
     #include <commons/collections/list.h>
     #include "new.h"
     #include "exec.h"
+    #include <globales.h>
 
     int get_grado_de_multiprogramacion(int);
     bool hay_espacio_ready();
@@ -14,7 +15,7 @@
     void admitir_proceso();
     int get_procesos_en_cpu();
     t_pcb *get_proceso_por_fifo();
-    t_pcb *get_proceso_por_hrrn();
+    t_pcb* get_proceso_por_hrrn();
     t_pcb *ceder_proceso_a_exec();
 
 #endif
