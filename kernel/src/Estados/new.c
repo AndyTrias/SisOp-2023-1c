@@ -7,6 +7,8 @@ t_pcb crear_pcb(t_list* instrucciones, int socket_consola){
   nuevo.contexto.program_counter = 0;
   nuevo.contexto.cant_instrucciones = list_size(instrucciones);
   nuevo.contexto.instrucciones = instrucciones;
+  nuevo.contexto.recurso = malloc(1);
+  nuevo.contexto.recurso[0] = '\0';
   
   nuevo.tiempo_desde_ult_ready = temporal_create();
   nuevo.archivos_abiertos = list_create();

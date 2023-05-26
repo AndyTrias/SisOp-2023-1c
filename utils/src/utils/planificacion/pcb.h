@@ -29,7 +29,8 @@ typedef struct {
         int cant_instrucciones;
         t_list* instrucciones; 
         int program_counter;
-        t_registros registros; 
+        t_registros registros;
+        char* recurso;
     } t_ctx;
 
   typedef struct
@@ -42,8 +43,4 @@ typedef struct {
         t_list* archivos_abiertos;
         int socket_consola; 
     } t_pcb;
-
-   
-
-  
 #endif

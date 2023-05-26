@@ -64,7 +64,7 @@ void definir_accion(int cod_op, t_pcb *proceso){
         break;
 
     case WAIT:
-        if (/*no hay recursos disponibles*/){
+        if ( 1 /*no hay recursos disponibles*/){
             reemplazar_exec_por_nuevo();
             log_info(LOGGER_KERNEL, "Se recibio un mensaje de wait");
         }
@@ -77,7 +77,7 @@ void definir_accion(int cod_op, t_pcb *proceso){
     }
 }
 
-reemplazar_exec_por_nuevo(){
+void reemplazar_exec_por_nuevo(){
     t_pcb *proceso_entrante = ceder_proceso_a_exec(); //pide un proceso a ready segun el algoritmo
 
     reemplazar_proceso(proceso_entrante);

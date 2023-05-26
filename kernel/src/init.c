@@ -42,6 +42,10 @@ void inicializar_variables_globales(t_config* config) {
     INSTANCIAS_RECURSOS = config_get_array_value(config, "INSTANCIAS_RECURSOS");
 
     //inicializacion de semaforos
+    inicializar_semaforos();
+}
+
+void inicializar_semaforos() {
     pthread_mutex_init(&MUTEX_LISTA_NEW, NULL);
     pthread_mutex_init(&MUTEX_LISTA_READY, NULL);
     pthread_mutex_init(&MUTEX_LISTA_BLOCK, NULL);

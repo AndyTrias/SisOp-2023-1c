@@ -7,4 +7,5 @@
 
     void inicializar_conexiones(int *, int *, int *, t_config*);
     void inicializar_variables_globales(t_config*);
+    void inicializar_semaforos();
 #endif

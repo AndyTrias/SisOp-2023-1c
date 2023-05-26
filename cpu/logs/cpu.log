@@ -77,3 +77,64 @@
 [INFO] 16:51:28:585 CPU/(5263:5263): Program Counter: 2
 [INFO] 16:51:28:585 CPU/(5263:5263): Instruccion nº2: 14
 [INFO] 16:51:28:585 CPU/(5263:5263): PID: 2  -Ejecutando: 14
+[ERROR] 21:26:33:340 CPU/(8043:8043): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 21:26:33:342 CPU/(8043:8043): Esperando kernel....
+[INFO] 21:26:45:120 CPU/(8043:8043): Se conecto el kernel
+[INFO] 21:26:53:283 CPU/(8043:8043): Se desconecto el kernel
+[ERROR] 21:55:22:004 CPU/(12104:12104): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 21:55:22:004 CPU/(12104:12104): Esperando kernel....
+[INFO] 21:55:25:750 CPU/(12104:12104): Se conecto el kernel
+[ERROR] 21:56:02:527 CPU/(12796:12796): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 21:56:02:528 CPU/(12796:12796): Esperando kernel....
+[ERROR] 21:57:42:266 CPU/(2328:2328): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 21:57:42:270 CPU/(2328:2328): Esperando kernel....
+[INFO] 21:57:48:314 CPU/(2328:2328): Se conecto el kernel
+[INFO] 21:57:55:939 CPU/(2328:2328): Se desconecto el kernel
+[ERROR] 21:58:42:361 CPU/(2544:2544): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 21:58:42:361 CPU/(2544:2544): Esperando kernel....
+[INFO] 21:58:46:695 CPU/(2544:2544): Se conecto el kernel
+[INFO] 21:59:08:642 CPU/(2544:2544): Se desconecto el kernel
+[ERROR] 21:59:23:088 CPU/(3021:3021): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 21:59:23:088 CPU/(3021:3021): Esperando kernel....
+[INFO] 21:59:27:182 CPU/(3021:3021): Se conecto el kernel
+[INFO] 21:59:50:444 CPU/(3021:3021): Se desconecto el kernel
+[ERROR] 22:12:54:636 CPU/(3592:3592): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 22:12:54:637 CPU/(3592:3592): Esperando kernel....
+[ERROR] 22:13:12:989 CPU/(3750:3750): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 22:13:12:989 CPU/(3750:3750): Esperando kernel....
+[INFO] 22:13:22:292 CPU/(3750:3750): Se conecto el kernel
+[INFO] 22:17:10:703 CPU/(3750:3750): Se desconecto el kernel
+[ERROR] 22:17:25:482 CPU/(4586:4586): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 22:17:25:482 CPU/(4586:4586): Esperando kernel....
+[INFO] 22:17:31:494 CPU/(4586:4586): Se conecto el kernel
+[ERROR] 22:18:04:900 CPU/(5655:5655): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 22:18:04:901 CPU/(5655:5655): Esperando kernel....
+[INFO] 22:18:14:333 CPU/(5655:5655): Se conecto el kernel
+[INFO] 22:19:29:904 CPU/(5655:5655): Se desconecto el kernel
+[ERROR] 22:20:16:552 CPU/(6466:6466): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 22:20:16:553 CPU/(6466:6466): Esperando kernel....
+[INFO] 22:20:23:295 CPU/(6466:6466): Se conecto el kernel
+[INFO] 22:20:35:749 CPU/(6466:6466): Se desconecto el kernel
+[ERROR] 22:21:07:473 CPU/(7443:7443): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 22:21:07:474 CPU/(7443:7443): Esperando kernel....
+[INFO] 22:21:15:854 CPU/(7443:7443): Se conecto el kernel
+[INFO] 22:23:20:656 CPU/(7443:7443): Se desconecto el kernel
+[ERROR] 22:26:04:445 CPU/(8328:8328): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 22:26:04:446 CPU/(8328:8328): Esperando kernel....
+[INFO] 22:26:11:959 CPU/(8328:8328): Se conecto el kernel
+[INFO] 22:26:29:970 CPU/(8328:8328): Se desconecto el kernel
+[ERROR] 22:26:50:529 CPU/(8987:8987): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 22:26:50:529 CPU/(8987:8987): Esperando kernel....
+[INFO] 22:26:57:413 CPU/(8987:8987): Se conecto el kernel
+            [ERROR] 22:29:34:736 CPU/(2400:2400): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 22:29:34:737 CPU/(2400:2400): Esperando kernel....
+[INFO] 22:29:42:718 CPU/(2400:2400): Se conecto el kernel
+[INFO] 22:30:10:118 CPU/(2400:2400): Se desconecto el kernel
+[ERROR] 22:30:20:070 CPU/(3049:3049): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 22:30:20:071 CPU/(3049:3049): Esperando kernel....
+[INFO] 22:30:25:708 CPU/(3049:3049): Se conecto el kernel
+[INFO] 22:30:38:765 CPU/(3049:3049): Se desconecto el kernel
+[ERROR] 22:31:13:991 CPU/(4157:4157): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 22:31:13:992 CPU/(4157:4157): Esperando kernel....
+[INFO] 22:31:23:104 CPU/(4157:4157): Se conecto el kernel
+[INFO] 22:32:11:999 CPU/(4157:4157): Se desconecto el kernel

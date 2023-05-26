@@ -64,3 +64,202 @@
 [INFO] 16:51:28:585 KERNEL/(5445:5447): Se recibio un mensaje de desalojo
 [INFO] 16:51:28:585 KERNEL/(5445:5447): Se recibio un mensaje de finalizacion
 [INFO] 16:51:28:586 KERNEL/(5445:7072): Se desconecto una consola
+[INFO] 21:26:45:120 KERNEL/(8258:8258): Se conecto al servidor 127.0.0.1:8001
+[ERROR] 21:26:45:121 KERNEL/(8258:8258): No se pudo conectar al servidor 127.0.0.1:8002
+[ERROR] 21:26:45:122 KERNEL/(8258:8258): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 21:26:45:122 KERNEL/(8258:8258): Esperando conexiones de consolas...
+[INFO] 21:26:45:122 KERNEL/(8258:8259): Inicia el planificador de largo plazo
+[INFO] 21:26:45:122 KERNEL/(8258:8260): Inicia el planificador de corto plazo
+[INFO] 21:26:53:060 KERNEL/(8258:8258): Se conecto una consola
+[INFO] 21:26:53:063 KERNEL/(8258:8329): Se recibieron instrucciones de una consola
+[INFO] 21:26:53:063 KERNEL/(8258:8329): Se Crea el proceso <0> en NEW
+[ERROR] 21:28:39:158 KERNEL/(8402:8402): No se pudo conectar al servidor 127.0.0.1:8001
+[ERROR] 21:28:39:159 KERNEL/(8402:8402): No se pudo conectar al servidor 127.0.0.1:8002
+[ERROR] 21:28:39:159 KERNEL/(8402:8402): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 21:28:39:159 KERNEL/(8402:8402): Esperando conexiones de consolas...
+[INFO] 21:28:39:159 KERNEL/(8402:8404): Inicia el planificador de corto plazo
+[INFO] 21:28:39:159 KERNEL/(8402:8403): Inicia el planificador de largo plazo
+[INFO] 21:28:47:761 KERNEL/(8402:8402): Se conecto una consola
+[INFO] 21:28:47:765 KERNEL/(8402:8454): Se recibieron instrucciones de una consola
+[INFO] 21:28:47:768 KERNEL/(8402:8454): Se Crea el proceso <0> en NEW
+[ERROR] 21:30:06:509 KERNEL/(8616:8616): No se pudo conectar al servidor 127.0.0.1:8001
+[ERROR] 21:30:06:509 KERNEL/(8616:8616): No se pudo conectar al servidor 127.0.0.1:8002
+[ERROR] 21:30:06:510 KERNEL/(8616:8616): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 21:30:06:511 KERNEL/(8616:8627): Inicia el planificador de largo plazo
+[INFO] 21:30:06:511 KERNEL/(8616:8616): Esperando conexiones de consolas...
+[INFO] 21:30:06:512 KERNEL/(8616:8628): Inicia el planificador de corto plazo
+[INFO] 21:30:16:521 KERNEL/(8616:8616): Se conecto una consola
+[INFO] 21:30:16:522 KERNEL/(8616:8815): Se recibieron instrucciones de una consola
+[INFO] 21:30:26:055 KERNEL/(8616:8815): Se Crea el proceso <0> en NEW
+[INFO] 21:30:35:236 KERNEL/(8616:8627): PID <0> a ready en base al algortmo de planificacion <FIFO>
+[INFO] 21:30:35:237 KERNEL/(8616:8627): Se mando la señal al planificador de corto plazo
+[INFO] 21:30:35:237 KERNEL/(8616:8628): Empieza ciclo de instruccion
+[ERROR] 21:32:07:111 KERNEL/(9251:9251): No se pudo conectar al servidor 127.0.0.1:8001
+[ERROR] 21:32:07:111 KERNEL/(9251:9251): No se pudo conectar al servidor 127.0.0.1:8002
+[ERROR] 21:32:07:111 KERNEL/(9251:9251): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 21:32:07:112 KERNEL/(9251:9267): Inicia el planificador de largo plazo
+[INFO] 21:32:07:113 KERNEL/(9251:9268): Inicia el planificador de corto plazo
+[INFO] 21:32:07:115 KERNEL/(9251:9251): Esperando conexiones de consolas...
+[ERROR] 21:32:33:409 KERNEL/(9648:9648): No se pudo conectar al servidor 127.0.0.1:8001
+[ERROR] 21:32:33:410 KERNEL/(9648:9648): No se pudo conectar al servidor 127.0.0.1:8002
+[ERROR] 21:32:33:410 KERNEL/(9648:9648): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 21:32:33:411 KERNEL/(9648:9664): Inicia el planificador de largo plazo
+[INFO] 21:32:33:411 KERNEL/(9648:9648): Esperando conexiones de consolas...
+[INFO] 21:32:33:412 KERNEL/(9648:9665): Inicia el planificador de corto plazo
+[ERROR] 21:52:48:020 KERNEL/(10729:10729): No se pudo conectar al servidor 127.0.0.1:8001
+[ERROR] 21:52:48:021 KERNEL/(10729:10729): No se pudo conectar al servidor 127.0.0.1:8002
+[ERROR] 21:52:48:021 KERNEL/(10729:10729): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 21:52:48:021 KERNEL/(10729:10729): Esperando conexiones de consolas...
+[INFO] 21:52:48:022 KERNEL/(10729:10730): Inicia el planificador de largo plazo
+[INFO] 21:52:48:022 KERNEL/(10729:10731): Inicia el planificador de corto plazo
+[INFO] 21:52:56:766 KERNEL/(10729:10729): Se conecto una consola
+[INFO] 21:52:56:767 KERNEL/(10729:10797): Se recibieron instrucciones de una consola
+[INFO] 21:52:56:768 KERNEL/(10729:10797): Se Crea el proceso <0> en NEW
+[INFO] 21:52:56:768 KERNEL/(10729:10730): PID <0> a ready en base al algortmo de planificacion <FIFO>
+[INFO] 21:52:56:768 KERNEL/(10729:10730): Se mando la señal al planificador de corto plazo
+[INFO] 21:52:56:768 KERNEL/(10729:10731): Empieza ciclo de instruccion
+[ERROR] 21:53:14:028 KERNEL/(10853:10853): No se pudo conectar al servidor 127.0.0.1:8001
+[ERROR] 21:53:14:028 KERNEL/(10853:10853): No se pudo conectar al servidor 127.0.0.1:8002
+[ERROR] 21:53:14:035 KERNEL/(10853:10853): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 21:53:14:036 KERNEL/(10853:10853): Esperando conexiones de consolas...
+[INFO] 21:53:14:036 KERNEL/(10853:10855): Inicia el planificador de corto plazo
+[INFO] 21:53:14:036 KERNEL/(10853:10854): Inicia el planificador de largo plazo
+[ERROR] 21:53:48:885 KERNEL/(11135:11135): No se pudo conectar al servidor 127.0.0.1:8001
+[ERROR] 21:53:48:886 KERNEL/(11135:11135): No se pudo conectar al servidor 127.0.0.1:8002
+[ERROR] 21:53:48:887 KERNEL/(11135:11135): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 21:53:48:887 KERNEL/(11135:11135): Esperando conexiones de consolas...
+[INFO] 21:53:48:887 KERNEL/(11135:11137): Inicia el planificador de corto plazo
+[INFO] 21:53:48:888 KERNEL/(11135:11136): Inicia el planificador de largo plazo
+[ERROR] 21:54:35:887 KERNEL/(11892:11892): No se pudo conectar al servidor 127.0.0.1:8001
+[ERROR] 21:54:35:888 KERNEL/(11892:11892): No se pudo conectar al servidor 127.0.0.1:8002
+[ERROR] 21:54:35:889 KERNEL/(11892:11892): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 21:54:35:891 KERNEL/(11892:11892): Esperando conexiones de consolas...
+[INFO] 21:54:35:891 KERNEL/(11892:11894): Inicia el planificador de corto plazo
+[INFO] 21:54:35:891 KERNEL/(11892:11893): Inicia el planificador de largo plazo
+[INFO] 21:54:44:251 KERNEL/(11892:11892): Se conecto una consola
+[INFO] 21:54:44:252 KERNEL/(11892:11955): Se recibieron instrucciones de una consola
+[INFO] 21:54:44:252 KERNEL/(11892:11955): Se Crea el proceso <0> en NEW
+[INFO] 21:54:44:252 KERNEL/(11892:11893): PID <0> a ready en base al algortmo de planificacion <FIFO>
+[INFO] 21:54:44:252 KERNEL/(11892:11893): Se mando la señal al planificador de corto plazo
+[INFO] 21:54:44:253 KERNEL/(11892:11894): Empieza ciclo de instruccion
+[INFO] 21:55:25:750 KERNEL/(12124:12124): Se conecto al servidor 127.0.0.1:8001
+[ERROR] 21:55:25:750 KERNEL/(12124:12124): No se pudo conectar al servidor 127.0.0.1:8002
+[ERROR] 21:55:25:751 KERNEL/(12124:12124): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 21:55:25:751 KERNEL/(12124:12124): Esperando conexiones de consolas...
+[INFO] 21:55:25:751 KERNEL/(12124:12126): Inicia el planificador de corto plazo
+[INFO] 21:55:25:751 KERNEL/(12124:12125): Inicia el planificador de largo plazo
+[INFO] 21:57:48:314 KERNEL/(2375:2375): Se conecto al servidor 127.0.0.1:8001
+[ERROR] 21:57:48:330 KERNEL/(2375:2375): No se pudo conectar al servidor 127.0.0.1:8002
+[ERROR] 21:57:48:330 KERNEL/(2375:2375): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 21:57:48:330 KERNEL/(2375:2375): Esperando conexiones de consolas...
+[INFO] 21:57:48:330 KERNEL/(2375:2376): Inicia el planificador de largo plazo
+[INFO] 21:57:48:331 KERNEL/(2375:2377): Inicia el planificador de corto plazo
+[INFO] 21:57:55:727 KERNEL/(2375:2375): Se conecto una consola
+[INFO] 21:57:55:737 KERNEL/(2375:2434): Se recibieron instrucciones de una consola
+[INFO] 21:57:55:737 KERNEL/(2375:2434): Se Crea el proceso <0> en NEW
+[INFO] 21:58:46:694 KERNEL/(2568:2568): Se conecto al servidor 127.0.0.1:8001
+[ERROR] 21:58:46:695 KERNEL/(2568:2568): No se pudo conectar al servidor 127.0.0.1:8002
+[ERROR] 21:58:46:695 KERNEL/(2568:2568): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 21:58:46:695 KERNEL/(2568:2568): Esperando conexiones de consolas...
+[INFO] 21:58:46:695 KERNEL/(2568:2570): Inicia el planificador de corto plazo
+[INFO] 21:58:46:695 KERNEL/(2568:2569): Inicia el planificador de largo plazo
+[INFO] 21:59:27:182 KERNEL/(3051:3051): Se conecto al servidor 127.0.0.1:8001
+[ERROR] 21:59:27:183 KERNEL/(3051:3051): No se pudo conectar al servidor 127.0.0.1:8002
+[ERROR] 21:59:27:183 KERNEL/(3051:3051): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 21:59:27:183 KERNEL/(3051:3051): Esperando conexiones de consolas...
+[INFO] 21:59:27:183 KERNEL/(3051:3053): Inicia el planificador de corto plazo
+[INFO] 21:59:27:183 KERNEL/(3051:3052): Inicia el planificador de largo plazo
+[INFO] 21:59:50:293 KERNEL/(3051:3051): Se conecto una consola
+[INFO] 21:59:50:295 KERNEL/(3051:3179): Se recibieron instrucciones de una consola
+[INFO] 21:59:50:295 KERNEL/(3051:3179): Se Crea el proceso <0> en NEW
+[INFO] 22:13:22:291 KERNEL/(3900:3900): Se conecto al servidor 127.0.0.1:8001
+[ERROR] 22:13:22:291 KERNEL/(3900:3900): No se pudo conectar al servidor 127.0.0.1:8002
+[ERROR] 22:13:22:292 KERNEL/(3900:3900): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 22:13:22:293 KERNEL/(3900:3900): Esperando conexiones de consolas...
+[INFO] 22:13:22:294 KERNEL/(3900:3916): Inicia el planificador de largo plazo
+[INFO] 22:13:22:295 KERNEL/(3900:3917): Inicia el planificador de corto plazo
+[INFO] 22:13:30:011 KERNEL/(3900:3900): Se conecto una consola
+[INFO] 22:13:30:012 KERNEL/(3900:4105): Se recibieron instrucciones de una consola
+[INFO] 22:13:30:017 KERNEL/(3900:4105): Se Crea el proceso <0> en NEW
+[INFO] 22:14:06:513 KERNEL/(3900:3916): PID <0> a ready en base al algortmo de planificacion <FIFO>
+[INFO] 22:14:06:513 KERNEL/(3900:3916): Se mando la señal al planificador de corto plazo
+[INFO] 22:14:06:514 KERNEL/(3900:3917): Empieza ciclo de instruccion
+[INFO] 22:17:31:493 KERNEL/(4719:4719): Se conecto al servidor 127.0.0.1:8001
+[ERROR] 22:17:31:493 KERNEL/(4719:4719): No se pudo conectar al servidor 127.0.0.1:8002
+[ERROR] 22:17:31:494 KERNEL/(4719:4719): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 22:17:31:494 KERNEL/(4719:4732): Inicia el planificador de largo plazo
+[INFO] 22:17:31:497 KERNEL/(4719:4733): Inicia el planificador de corto plazo
+[INFO] 22:17:31:497 KERNEL/(4719:4719): Esperando conexiones de consolas...
+[INFO] 22:18:14:333 KERNEL/(5826:5826): Se conecto al servidor 127.0.0.1:8001
+[ERROR] 22:18:14:333 KERNEL/(5826:5826): No se pudo conectar al servidor 127.0.0.1:8002
+[ERROR] 22:18:14:333 KERNEL/(5826:5826): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 22:18:14:334 KERNEL/(5826:5837): Inicia el planificador de largo plazo
+[INFO] 22:18:14:335 KERNEL/(5826:5826): Esperando conexiones de consolas...
+[INFO] 22:18:14:336 KERNEL/(5826:5838): Inicia el planificador de corto plazo
+[INFO] 22:18:20:753 KERNEL/(5826:5826): Se conecto una consola
+[INFO] 22:18:20:755 KERNEL/(5826:6034): Se recibieron instrucciones de una consola
+[INFO] 22:18:55:860 KERNEL/(5826:6034): Se Crea el proceso <0> en NEW
+[INFO] 22:20:23:295 KERNEL/(6656:6656): Se conecto al servidor 127.0.0.1:8001
+[ERROR] 22:20:23:295 KERNEL/(6656:6656): No se pudo conectar al servidor 127.0.0.1:8002
+[ERROR] 22:20:23:295 KERNEL/(6656:6656): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 22:20:23:298 KERNEL/(6656:6656): Esperando conexiones de consolas...
+[INFO] 22:20:23:298 KERNEL/(6656:6668): Inicia el planificador de largo plazo
+[INFO] 22:20:23:298 KERNEL/(6656:6669): Inicia el planificador de corto plazo
+[INFO] 22:21:15:854 KERNEL/(7609:7609): Se conecto al servidor 127.0.0.1:8001
+[ERROR] 22:21:15:855 KERNEL/(7609:7609): No se pudo conectar al servidor 127.0.0.1:8002
+[ERROR] 22:21:15:855 KERNEL/(7609:7609): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 22:21:15:855 KERNEL/(7609:7625): Inicia el planificador de largo plazo
+[INFO] 22:21:15:857 KERNEL/(7609:7609): Esperando conexiones de consolas...
+[INFO] 22:21:15:857 KERNEL/(7609:7626): Inicia el planificador de corto plazo
+[INFO] 22:21:23:273 KERNEL/(7609:7609): Se conecto una consola
+[INFO] 22:21:23:274 KERNEL/(7609:7812): Se recibieron instrucciones de una consola
+[INFO] 22:21:23:274 KERNEL/(7609:7812): <0>
+[INFO] 22:21:36:357 KERNEL/(7609:7812): Se Crea el proceso <0> en NEW
+[INFO] 22:21:48:490 KERNEL/(7609:7625): PID <0> a ready en base al algortmo de planificacion <FIFO>
+[INFO] 22:21:48:492 KERNEL/(7609:7625): Se mando la señal al planificador de corto plazo
+[INFO] 22:21:48:492 KERNEL/(7609:7626): Empieza ciclo de instruccion
+[INFO] 22:26:11:958 KERNEL/(8518:8518): Se conecto al servidor 127.0.0.1:8001
+[ERROR] 22:26:11:959 KERNEL/(8518:8518): No se pudo conectar al servidor 127.0.0.1:8002
+[ERROR] 22:26:11:959 KERNEL/(8518:8518): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 22:26:11:960 KERNEL/(8518:8526): Inicia el planificador de largo plazo
+[INFO] 22:26:12:065 KERNEL/(8518:8518): Esperando conexiones de consolas...
+[INFO] 22:26:12:065 KERNEL/(8518:8530): Inicia el planificador de corto plazo
+[INFO] 22:26:19:048 KERNEL/(8518:8518): Se conecto una consola
+[INFO] 22:26:19:049 KERNEL/(8518:8688): Se recibieron instrucciones de una consola
+[INFO] 22:26:24:050 KERNEL/(8518:8688): Se Crea el proceso <0> en NEW
+[INFO] 22:26:57:413 KERNEL/(9148:9148): Se conecto al servidor 127.0.0.1:8001
+[ERROR] 22:26:57:413 KERNEL/(9148:9148): No se pudo conectar al servidor 127.0.0.1:8002
+[ERROR] 22:26:57:413 KERNEL/(9148:9148): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 22:26:57:413 KERNEL/(9148:9157): Inicia el planificador de largo plazo
+[INFO] 22:26:57:414 KERNEL/(9148:9148): Esperando conexiones de consolas...
+[INFO] 22:26:57:419 KERNEL/(9148:9159): Inicia el planificador de corto plazo
+[INFO] 22:29:42:718 KERNEL/(2546:2546): Se conecto al servidor 127.0.0.1:8001
+[ERROR] 22:29:42:719 KERNEL/(2546:2546): No se pudo conectar al servidor 127.0.0.1:8002
+[ERROR] 22:29:42:719 KERNEL/(2546:2546): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 22:29:42:720 KERNEL/(2546:2565): Inicia el planificador de largo plazo
+[INFO] 22:29:42:728 KERNEL/(2546:2546): Esperando conexiones de consolas...
+[INFO] 22:29:42:729 KERNEL/(2546:2566): Inicia el planificador de corto plazo
+[INFO] 22:29:50:127 KERNEL/(2546:2546): Se conecto una consola
+[INFO] 22:29:50:130 KERNEL/(2546:2739): Se recibieron instrucciones de una consola
+[INFO] 22:29:56:926 KERNEL/(2546:2739): Se Crea el proceso <0> en NEW
+[INFO] 22:30:25:708 KERNEL/(3191:3191): Se conecto al servidor 127.0.0.1:8001
+[ERROR] 22:30:25:710 KERNEL/(3191:3191): No se pudo conectar al servidor 127.0.0.1:8002
+[ERROR] 22:30:25:710 KERNEL/(3191:3191): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 22:30:25:749 KERNEL/(3191:3195): Inicia el planificador de largo plazo
+[INFO] 22:30:25:753 KERNEL/(3191:3191): Esperando conexiones de consolas...
+[INFO] 22:30:25:756 KERNEL/(3191:3202): Inicia el planificador de corto plazo
+[ERROR] 22:30:47:279 KERNEL/(3509:3509): No se pudo conectar al servidor 127.0.0.1:8001
+[ERROR] 22:30:47:279 KERNEL/(3509:3509): No se pudo conectar al servidor 127.0.0.1:8002
+[ERROR] 22:30:47:279 KERNEL/(3509:3509): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 22:30:47:281 KERNEL/(3509:3517): Inicia el planificador de largo plazo
+[INFO] 22:30:47:291 KERNEL/(3509:3509): Esperando conexiones de consolas...
+[INFO] 22:30:47:292 KERNEL/(3509:3518): Inicia el planificador de corto plazo
+[INFO] 22:31:23:103 KERNEL/(4327:4327): Se conecto al servidor 127.0.0.1:8001
+[ERROR] 22:31:23:104 KERNEL/(4327:4327): No se pudo conectar al servidor 127.0.0.1:8002
+[ERROR] 22:31:23:104 KERNEL/(4327:4327): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 22:31:23:138 KERNEL/(4327:4343): Inicia el planificador de largo plazo
+[INFO] 22:31:23:140 KERNEL/(4327:4344): Inicia el planificador de corto plazo
+[INFO] 22:31:23:140 KERNEL/(4327:4327): Esperando conexiones de consolas...
+[INFO] 22:31:30:291 KERNEL/(4327:4327): Se conecto una consola
+[INFO] 22:31:30:292 KERNEL/(4327:4518): Se recibieron instrucciones de una consola
+[INFO] 22:31:30:292 KERNEL/(4327:4518): Se Crea el proceso <0> en NEW

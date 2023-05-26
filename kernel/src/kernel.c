@@ -12,7 +12,8 @@ int main(int argc, char *argv[]) {
   inicializar_variables_globales(config);
 
   //Hilos que maneja el kernel
-  pthread_t hilo_recibir_consola, hilo_planificacion_largo, hilo_planificacion_corto;
+  // pthread_t hilo_recibir_consola
+  pthread_t hilo_planificacion_largo, hilo_planificacion_corto;
 
   int conexion_cpu, conexion_memoria, conexion_filesystem;
   inicializar_conexiones(&conexion_cpu, &conexion_memoria, &conexion_filesystem, config);

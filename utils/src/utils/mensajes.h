@@ -52,15 +52,6 @@ typedef struct
 } t_instruccion;
 
 
-// Otra opcipn
-// typedef struct
-// {
-//     t_operacion operacion;
-//     char *parametro1;
-//     char *parametro2;
-//     char *parametro3;
-
-// } t_instruccion;
 
 typedef struct
 {

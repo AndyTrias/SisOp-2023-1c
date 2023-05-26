@@ -12,3 +12,56 @@
 [INFO] 16:51:28:572 CONSOLA/(7071:7071): Se conecto al servidor 127.0.0.1:8000
 [INFO] 16:51:28:572 CONSOLA/(7071:7071): Paquete enviado
 [INFO] 16:51:28:586 CONSOLA/(7071:7071): El kernel finalizo las instrucciones. Cerrando la consola
+[INFO] 21:26:53:059 CONSOLA/(8328:8328): Se conecto al servidor 127.0.0.1:8000
+[INFO] 21:26:53:060 CONSOLA/(8328:8328): Paquete enviado
+[ERROR] 21:26:53:283 CONSOLA/(8328:8328): Operacion desconocida
+[INFO] 21:28:47:761 CONSOLA/(8453:8453): Se conecto al servidor 127.0.0.1:8000
+[INFO] 21:28:47:761 CONSOLA/(8453:8453): Paquete enviado
+[ERROR] 21:28:47:959 CONSOLA/(8453:8453): Operacion desconocida
+[INFO] 21:30:16:521 CONSOLA/(8796:8796): Se conecto al servidor 127.0.0.1:8000
+[INFO] 21:30:16:522 CONSOLA/(8796:8796): Paquete enviado
+[ERROR] 21:31:58:799 CONSOLA/(8796:8796): Operacion desconocida
+[ERROR] 21:32:11:834 CONSOLA/(9395:9395): No se pudo conectar al servidor 127.0.0.1:8000
+[ERROR] 21:32:18:436 CONSOLA/(9517:9517): No se pudo conectar al servidor 127.0.0.1:8000
+[ERROR] 21:32:40:701 CONSOLA/(9800:9800): No se pudo conectar al servidor 127.0.0.1:8000
+[INFO] 21:52:56:766 CONSOLA/(10796:10796): Se conecto al servidor 127.0.0.1:8000
+[INFO] 21:52:56:767 CONSOLA/(10796:10796): Paquete enviado
+[ERROR] 21:52:56:976 CONSOLA/(10796:10796): Operacion desconocida
+[ERROR] 21:53:18:344 CONSOLA/(10876:10876): No se pudo conectar al servidor 127.0.0.1:8000
+[ERROR] 21:54:00:853 CONSOLA/(11272:11272): No se pudo conectar al servidor 127.0.0.1:8000
+[INFO] 21:54:44:251 CONSOLA/(11954:11954): Se conecto al servidor 127.0.0.1:8000
+[INFO] 21:54:44:251 CONSOLA/(11954:11954): Paquete enviado
+[ERROR] 21:54:44:377 CONSOLA/(11954:11954): Operacion desconocida
+[ERROR] 21:55:30:815 CONSOLA/(12161:12161): No se pudo conectar al servidor 127.0.0.1:8000
+[INFO] 21:57:55:727 CONSOLA/(2433:2433): Se conecto al servidor 127.0.0.1:8000
+[INFO] 21:57:55:737 CONSOLA/(2433:2433): Paquete enviado
+[ERROR] 21:57:55:939 CONSOLA/(2433:2433): Operacion desconocida
+[ERROR] 21:58:50:377 CONSOLA/(2613:2613): No se pudo conectar al servidor 127.0.0.1:8000
+[ERROR] 21:58:51:649 CONSOLA/(2627:2627): No se pudo conectar al servidor 127.0.0.1:8000
+[ERROR] 21:58:52:440 CONSOLA/(2651:2651): No se pudo conectar al servidor 127.0.0.1:8000
+[ERROR] 21:58:53:287 CONSOLA/(2664:2664): No se pudo conectar al servidor 127.0.0.1:8000
+[INFO] 21:59:50:293 CONSOLA/(3178:3178): Se conecto al servidor 127.0.0.1:8000
+[INFO] 21:59:50:294 CONSOLA/(3178:3178): Paquete enviado
+[ERROR] 21:59:50:444 CONSOLA/(3178:3178): Operacion desconocida
+[INFO] 22:13:30:010 CONSOLA/(4084:4084): Se conecto al servidor 127.0.0.1:8000
+[INFO] 22:13:30:011 CONSOLA/(4084:4084): Paquete enviado
+[ERROR] 22:17:10:703 CONSOLA/(4084:4084): Operacion desconocida
+[ERROR] 22:17:37:014 CONSOLA/(4872:4872): No se pudo conectar al servidor 127.0.0.1:8000
+[INFO] 22:18:20:753 CONSOLA/(6013:6013): Se conecto al servidor 127.0.0.1:8000
+[INFO] 22:18:20:753 CONSOLA/(6013:6013): Paquete enviado
+[ERROR] 22:19:29:904 CONSOLA/(6013:6013): Operacion desconocida
+[ERROR] 22:20:29:487 CONSOLA/(6812:6812): No se pudo conectar al servidor 127.0.0.1:8000
+[INFO] 22:21:23:273 CONSOLA/(7801:7801): Se conecto al servidor 127.0.0.1:8000
+[INFO] 22:21:23:273 CONSOLA/(7801:7801): Paquete enviado
+[ERROR] 22:23:20:655 CONSOLA/(7801:7801): Operacion desconocida
+[INFO] 22:26:19:048 CONSOLA/(8684:8684): Se conecto al servidor 127.0.0.1:8000
+[INFO] 22:26:19:048 CONSOLA/(8684:8684): Paquete enviado
+[ERROR] 22:26:29:970 CONSOLA/(8684:8684): Operacion desconocida
+[ERROR] 22:27:05:015 CONSOLA/(9328:9328): No se pudo conectar al servidor 127.0.0.1:8000
+[INFO] 22:29:50:127 CONSOLA/(2723:2723): Se conecto al servidor 127.0.0.1:8000
+[INFO] 22:29:50:130 CONSOLA/(2723:2723): Paquete enviado
+[ERROR] 22:30:10:119 CONSOLA/(2723:2723): Operacion desconocida
+[ERROR] 22:30:31:240 CONSOLA/(3339:3339): No se pudo conectar al servidor 127.0.0.1:8000
+[INFO] 22:31:30:291 CONSOLA/(4502:4502): Se conecto al servidor 127.0.0.1:8000
+[INFO] 22:31:30:291 CONSOLA/(4502:4502): Paquete enviado
+[ERROR] 22:32:12:000 CONSOLA/(4502:4502): Operacion desconocida

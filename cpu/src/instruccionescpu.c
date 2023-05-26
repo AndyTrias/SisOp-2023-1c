@@ -128,8 +128,14 @@ op_code execute(t_instruccion* instruccion_actual, t_ctx *ctx)
 
 		return 0;
 	case WAIT:
-		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0]);
-		return PETICION;
+		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0]);
+		strcpy(ctx->recurso, instruccion_actual->parametros[0]);
+		return WAIT;
+	
+	case SIGNAL:
+		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0]);
+		return SIGNAL;
+	
 	case YIELD:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d", ctx->PID, instruccion_actual->operacion);
 		return DESALOJAR;

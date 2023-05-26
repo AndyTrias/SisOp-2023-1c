@@ -16,6 +16,8 @@
     void empezar_ciclo_si_vacio();
     void definir_accion(int, t_pcb *);
     void recibir_de_cpu(int);
+    void reemplazar_exec_por_nuevo();
+
 
 
 
