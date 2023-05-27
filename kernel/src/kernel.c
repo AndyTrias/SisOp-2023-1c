@@ -20,7 +20,6 @@ int main(int argc, char *argv[]) {
 
   char *puerto_escucha = config_get_string_value(config, "PUERTO_ESCUCHA");
   int socket_servidor = crear_servidor(IP, puerto_escucha);
-  //conectar_consola(socket_servidor);
   
   //hilo para recibir consolas
   //err= pthread_create(&hilo_recibir_consola, NULL, (void *)recibir_consolas, &socket_servidor);

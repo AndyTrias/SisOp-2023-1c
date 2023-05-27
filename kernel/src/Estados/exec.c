@@ -8,13 +8,7 @@ void reemplazar_ctx(t_ctx *nuevo_ctx){
     EJECUTANDO->contexto = *nuevo_ctx;
 }
 
-void mandar_a_exit_o_blocked(t_pcb *proceso){
-    if(list_size(proceso->contexto.instrucciones)==0){ //transitorio
-        terminar_proceso(proceso);
-    }else{
-        //mandar_a_blocked(proceso);
-    }
-}
+
 
 void enviar_a_cpu(){
     
@@ -42,19 +36,19 @@ void definir_accion(int cod_op, t_pcb *proceso){
     {
     case DESALOJAR:
         agregar_a_lista_ready(proceso);
-        reemplazar_exec_por_nuevo();
         log_info(LOGGER_KERNEL, "Se recibio un mensaje de desalojo");
+        reemplazar_exec_por_nuevo();
         break;
 
     case PETICION:
-        reemplazar_exec_por_nuevo();
         log_info(LOGGER_KERNEL, "Se recibio un mensaje de peticion");
         //I/O
+        reemplazar_exec_por_nuevo();
         break;
     
     case BLOQUEAR:
-        reemplazar_exec_por_nuevo();
         log_info(LOGGER_KERNEL, "Se recibio un mensaje de bloqueo");
+        reemplazar_exec_por_nuevo();
         break;
 
     case TERMINAR:
@@ -64,9 +58,20 @@ void definir_accion(int cod_op, t_pcb *proceso){
         break;
 
     case WAIT:
+        // cree una nueva struct dentro del contexto que tiene un char** parametros
+        // me parecio lo mas generico para pasar todo el resto de instrucciones 
+        // tipo I/O, F_OPEN, F_CLOSE, F_SEEK, F_READ, F_WRITE, F_TRUNCATE, WAIT, SIGNAL, CREATE_SEGMENT,
+
+        // seria algo asi como
+        // char* recurso = proceso->contexto->motivos_desalojo->parametros[0];
+
+        // si recurso fuese un int habria que castearlo con la funcion atoi()
+        // int cantidad = atoi(proceso->contexto->motivos_desalojo->parametros[1]);
+
         if ( 1 /*no hay recursos disponibles*/){
-            reemplazar_exec_por_nuevo();
             log_info(LOGGER_KERNEL, "Se recibio un mensaje de wait");
+            reemplazar_exec_por_nuevo();
+
         }
         else{
             //se le da el recurso;

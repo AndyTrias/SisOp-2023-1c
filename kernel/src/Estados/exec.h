@@ -11,7 +11,6 @@
 
     void reemplazar_proceso(t_pcb *);
     void reemplazar_ctx(t_ctx *);
-    void mandar_a_exit_o_blocked(t_pcb *);
     void enviar_a_cpu();
     void empezar_ciclo_si_vacio();
     void definir_accion(int, t_pcb *);
