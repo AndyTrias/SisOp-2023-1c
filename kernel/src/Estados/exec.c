@@ -1,9 +1,7 @@
 #include "exec.h"
 
-t_pcb* reemplazar_proceso(t_pcb *nuevo_pcb){
-    t_pcb *aux = EJECUTANDO;
+void reemplazar_proceso(t_pcb *nuevo_pcb){
     EJECUTANDO = nuevo_pcb;
-    return aux;
 }
 
 void reemplazar_ctx(t_ctx *nuevo_ctx){
@@ -60,9 +58,9 @@ void definir_accion(int cod_op, t_pcb *proceso){
         break;
 
     case TERMINAR:
-        reemplazar_exec_por_nuevo();
         log_info(LOGGER_KERNEL, "Se recibio un mensaje de finalizacion");
         terminar_proceso(proceso);
+        reemplazar_exec_por_nuevo();
         break;
 
     case WAIT:

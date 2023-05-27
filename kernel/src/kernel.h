@@ -1,7 +1,6 @@
 #ifndef KERNEL_H_
 #define KERNEL_H_
 
-#include <utils/aux.h>
 #include <utils/configs.h>
 #include <utils/conexiones.h>
 #include <init.h>

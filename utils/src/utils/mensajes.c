@@ -142,14 +142,18 @@ void serializar_contexto(t_ctx *ctx, t_paquete *paquete)
 	// Serializo Registros
 	serializar_registros(&ctx->registros, paquete);
 	
-	// serializo recurso
+	// serializo moivos de desalojo
+	int tamanio_parametro;
+	agregar_a_paquete_dato_serializado(paquete, &(ctx->motivos_desalojo->cantidad_parametros), sizeof(int));
 
-	// Aggrego el tamanio del recurso ya que es char*
-	int tamanio_recurso = strlen(ctx->recurso) + 1;
-	agregar_a_paquete_dato_serializado(paquete, &tamanio_recurso, sizeof(int));
+	for (int i = 0; i < ctx->motivos_desalojo->cantidad_parametros; i++)
+	{
+		tamanio_parametro = strlen(ctx->motivos_desalojo->parametros[i]) + 1;
+		agregar_a_paquete_dato_serializado(paquete, &tamanio_parametro, sizeof(int));
+		agregar_a_paquete_dato_serializado(paquete, ctx->motivos_desalojo->parametros[i], tamanio_parametro);		
+	}
 
-	// agrego el recurso
-	agregar_a_paquete_dato_serializado(paquete, &ctx->recurso, tamanio_recurso);
+	
 }
 
 void serializar_instrucciones(t_list *instrucciones, t_paquete *paquete)
@@ -224,13 +228,22 @@ t_ctx *deserializar_contexto(void *buffer)
 	ctx->registros = deserealizar_registros(buffer, &desplazamiento); 
 
 
-	// deseaerializo recurso
-	int tamanio_recurso;
-	memcpy(&tamanio_recurso, buffer + desplazamiento, sizeof(int));
+	// deserializo motivos de desalojo
+	ctx->motivos_desalojo = malloc(sizeof(t_parametros_variables));
+	memcpy(&ctx->motivos_desalojo->cantidad_parametros, buffer + desplazamiento, sizeof(int));
 	desplazamiento += sizeof(int);
 
-	memcpy(&ctx->recurso, buffer + desplazamiento, tamanio_recurso);
-	desplazamiento += tamanio_recurso;
+	ctx->motivos_desalojo->parametros = malloc(sizeof(char *) * ctx->motivos_desalojo->cantidad_parametros);
+	for (int i = 0; i < ctx->motivos_desalojo->cantidad_parametros; i++)
+	{
+		int tamanio_parametro;
+		memcpy(&tamanio_parametro, buffer + desplazamiento, sizeof(int));
+		desplazamiento += sizeof(int);
+
+		ctx->motivos_desalojo->parametros[i] = malloc(tamanio_parametro);
+		memcpy(ctx->motivos_desalojo->parametros[i], buffer + desplazamiento, tamanio_parametro);
+		desplazamiento += tamanio_parametro;
+	}
 
 	free(buffer);
 	

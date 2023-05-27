@@ -9,7 +9,7 @@
     #include <utils/mensajes.h>
     #include "exit.h"
 
-    t_pcb* reemplazar_proceso(t_pcb *);
+    void reemplazar_proceso(t_pcb *);
     void reemplazar_ctx(t_ctx *);
     void mandar_a_exit_o_blocked(t_pcb *);
     void enviar_a_cpu();

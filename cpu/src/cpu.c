@@ -20,19 +20,7 @@ int main(int argc, char *argv[]) {
     
     conectar_kernel(socket_servidor);
     
-    /*
-    log_info(cpu_log,"Esperando la conexion de interrupcion...");
-    log_info(cpu_log,"Todo listo, inicializando...");
-    log_info(cpu_log,"No hay CTX, esperando...");
-    while(true){
-        recibir_paquete_kernel(int);
-        log_info(cpu_log,"Llego el CTX");
-        ctx = deserealizar_instruccion(void*, int* );
-        log_info(cpu_log,"CTX obtenido!!!");
-        ciclo_de_instruccion(ctx);
-    }
-    free(buffer);
-    */
+    
 
     terminar_programa(LOGGER_CPU, config);
     terminar_conexiones(1, conexion_memoria);

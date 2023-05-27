@@ -3,7 +3,6 @@
 
     #include <utils/logs.h>
     #include <utils/conexiones.h>
-    #include <utils/aux.h>
     #include <utils/configs.h>
     #include <conectar_modulos.h>
     #include <stdio.h>
