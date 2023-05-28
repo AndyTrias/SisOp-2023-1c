@@ -38,18 +38,10 @@ void definir_accion(int cod_op, t_pcb *proceso){
         log_info(LOGGER_KERNEL, "Se recibio un mensaje de desalojo");
         reemplazar_exec_por_nuevo();
         break;
-
-    case PETICION:
-        log_info(LOGGER_KERNEL, "Se recibio un mensaje de peticion");
-        //I/O
-        reemplazar_exec_por_nuevo();
-        break;
-    
     case BLOQUEAR:
         log_info(LOGGER_KERNEL, "Se recibio un mensaje de bloqueo");
         reemplazar_exec_por_nuevo();
         break;
-
     case TERMINAR:
         log_info(LOGGER_KERNEL, "Se recibio un mensaje de finalizacion");
         terminar_proceso(proceso);
@@ -78,19 +70,19 @@ void definir_accion(int cod_op, t_pcb *proceso){
         break;
     
     case IO:
-        log_info(LOGGER_KERNEL, "Se recibio un mensaje de IO");
+        log_info(LOGGER_KERNEL, "Se recibio un mensaje de petición I/O");
         t_instruccion* instruccion_utilizable = list_get(proceso->contexto.instrucciones, proceso->contexto.program_counter - 1);
-        int tiempo_bloqueo = instruccion_utilizable->parametros[0];
+        int tiempo_bloqueo = atoi(instruccion_utilizable->parametros[0]);
+        agregar_a_lista_block(proceso);
+        // La pregunta más grande es, cómo hacer para que se envíen instrucciones al CPU mientras que Kernerl ejecuta el I/O. El CPU debería recibir algo no?
+        // Creo tener una solución para lo de abajo pero no para lo de arriba si de verdad es un problema. En un toque lo sigo. 
+        reemplazar_exec_por_nuevo(); //¡¡¡¡ Funciona!!!! Pero el tema es que en este caso se queda sin procesos en ready y lo que hace es esperar a que haya un proceso en ready 
+                                    // Eso está bien pero mientras debería poder ejecutar esta instrucción y al mismo tiempo debería revisar si hay un nuevo proceso en ready
+                                    // imagino que eso se hace con hilos pero bueno.
         log_info(LOGGER_KERNEL, "PID: %d - Ejecuta IO: %d", proceso->contexto.PID, tiempo_bloqueo);
-        /*
-        pasar_de_exec_a_block();
-            t_pcb * proceso_entrante = ceder_proceso_a_exec();
-            agregar_a_lista_block(t_pcb* proceso)
-            void bloquear_IO(int tiempo_bloqueo){
-                sleep(tiempo_bloqueo); 
-            };
-        reemplazar_exec_por_nuevo();
-        */
+        sleep(tiempo_bloqueo);
+        agregar_a_lista_ready(sacar_de_lista_block(0)); // Esta parte parece que funciona porque funcionó con el Proceso 0 y el 1 
+                                                        // Imagino que podría verse afectado cuando haya una instrucción I/O que termine antes que el primero que estaba en la cola. O acaso no comparten la misma lista de Block 
         break;
     }
 }
