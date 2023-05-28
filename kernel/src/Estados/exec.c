@@ -1,5 +1,4 @@
 #include "exec.h"
-
 void reemplazar_proceso(t_pcb *nuevo_pcb){
     EJECUTANDO = nuevo_pcb;
 }
@@ -67,7 +66,7 @@ void definir_accion(int cod_op, t_pcb *proceso){
 
         // si recurso fuese un int habria que castearlo con la funcion atoi()
         // int cantidad = atoi(proceso->contexto->motivos_desalojo->parametros[1]);
-
+    
         if ( 1 /*no hay recursos disponibles*/){
             log_info(LOGGER_KERNEL, "Se recibio un mensaje de wait");
             reemplazar_exec_por_nuevo();
@@ -77,14 +76,23 @@ void definir_accion(int cod_op, t_pcb *proceso){
             //se le da el recurso;
         };
         break;
-
-
+    
+    case IO:
+        log_info(LOGGER_KERNEL, "Se recibio un mensaje de IO");
+        t_instruccion* instruccion_utilizable = list_get(proceso->contexto.instrucciones, proceso->contexto.program_counter - 1);
+        int tiempo_bloqueo = instruccion_utilizable->parametros[0];
+        log_info(LOGGER_KERNEL, "PID: %d - Ejecuta IO: %d", proceso->contexto.PID, tiempo_bloqueo);
+        agregar_a_lista_block(t_pcb* proceso)
+        void bloquear_IO(int tiempo_bloqueo){
+            sleep(tiempo_bloqueo);
+        }
+        reemplazar_exec_por_nuevo();
+        break;
     }
 }
 
 void reemplazar_exec_por_nuevo(){
     t_pcb *proceso_entrante = ceder_proceso_a_exec(); //pide un proceso a ready segun el algoritmo
-
     reemplazar_proceso(proceso_entrante);
 }
 
