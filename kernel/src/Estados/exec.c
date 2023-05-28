@@ -82,11 +82,15 @@ void definir_accion(int cod_op, t_pcb *proceso){
         t_instruccion* instruccion_utilizable = list_get(proceso->contexto.instrucciones, proceso->contexto.program_counter - 1);
         int tiempo_bloqueo = instruccion_utilizable->parametros[0];
         log_info(LOGGER_KERNEL, "PID: %d - Ejecuta IO: %d", proceso->contexto.PID, tiempo_bloqueo);
-        agregar_a_lista_block(t_pcb* proceso)
-        void bloquear_IO(int tiempo_bloqueo){
-            sleep(tiempo_bloqueo);
-        }
+        /*
+        pasar_de_exec_a_block();
+            t_pcb * proceso_entrante = ceder_proceso_a_exec();
+            agregar_a_lista_block(t_pcb* proceso)
+            void bloquear_IO(int tiempo_bloqueo){
+                sleep(tiempo_bloqueo); 
+            };
         reemplazar_exec_por_nuevo();
+        */
         break;
     }
 }
