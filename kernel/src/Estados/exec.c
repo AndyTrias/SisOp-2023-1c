@@ -67,19 +67,30 @@ void definir_accion(int cod_op, t_pcb *proceso){
 
         // si recurso fuese un int habria que castearlo con la funcion atoi()
         // int cantidad = atoi(proceso->contexto->motivos_desalojo->parametros[1]);
-
-        if ( 1 /*no hay recursos disponibles*/){
+        int recurso_id = get_id_recurso(proceso->contexto.motivos_desalojo->parametros[0]);
+        if (INSTANCIAS_RECURSOS[recurso_id]==0){
             log_info(LOGGER_KERNEL, "Se recibio un mensaje de wait");
             reemplazar_exec_por_nuevo();
 
         }
         else{
-            //se le da el recurso;
+            sem_wait(SEMAFOROS_RECURSOS[recurso_id]);
+            log_info(LOGGER_KERNEL, "Se recibio un mensaje de wait del recurso %d", recurso_id);
+            INSTANCIAS_RECURSOS[recurso_id]--;
         };
+        break;
+
+    case SIGNAL:
+        // char* recurso = proceso->contexto->motivos_desalojo->parametros[0];
+        // int cantidad = atoi(proceso->contexto->motivos_desalojo->parametros[1]);
+        sem_signal(SEMAFOROS_RECURSOS[recurso_id]);
+        log_info(LOGGER_KERNEL, "Se recibio un mensaje de signal del recurso %d", recurso_id);
+        INSTANCIAS_RECURSOS[recurso_id]++;
         break;
 
 
     }
+    
 }
 
 void reemplazar_exec_por_nuevo(){

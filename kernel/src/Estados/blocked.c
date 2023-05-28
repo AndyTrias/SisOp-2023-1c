@@ -1,0 +1,1 @@
+//tiene que esperar todos los signal de los semaforos en SEMAFOROS_RECURSOS

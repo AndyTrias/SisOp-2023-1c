@@ -23,6 +23,13 @@ void inicializar_conexiones(int *conexion_cpu, int *conexion_memoria, int *conex
 
 }
 
+void inicializar_listas_blocked(){
+    int i;
+    for (i = 0; i < list_size(RECURSOS); i++) {
+        LISTAS_BLOCKED[i] = list_create();
+    }
+}
+
 void inicializar_variables_globales(t_config* config) {
 
     LOGGER_KERNEL = log_create("./logs/kernel.log", "KERNEL", 1, LOG_LEVEL_INFO);
@@ -32,7 +39,11 @@ void inicializar_variables_globales(t_config* config) {
     LISTA_NEW = list_create();
     LISTA_READY = list_create();
     EJECUTANDO = NULL;
-    LISTA_BLOCK = list_create();
+    //inicializar LISTAS_BLOCKED con tantas listas como recursos haya en el archivo de configuracion
+    LISTAS_BLOCKED = malloc(sizeof(t_list) * list_size(RECURSOS));
+    inicializar_listas_blocked();
+
+
 
     ALGORITMO_PLANIFICACION = config_get_string_value(config, "ALGORITMO_PLANIFICACION");
     ESTIMACION_INICIAL = config_get_int_value(config, "ESTIMACION_INICIAL");
@@ -45,6 +56,14 @@ void inicializar_variables_globales(t_config* config) {
     inicializar_semaforos();
 }
 
+void inicializar_semaforos_recursos()
+{
+    int i;
+    for (i = 0; i < list_size(RECURSOS); i++) {
+        sem_init(&SEMAFOROS_RECURSOS[i], 0, atoi(INSTANCIAS_RECURSOS[i]));
+    }
+}
+
 void inicializar_semaforos() {
     pthread_mutex_init(&MUTEX_LISTA_NEW, NULL);
     pthread_mutex_init(&MUTEX_LISTA_READY, NULL);
@@ -54,4 +73,6 @@ void inicializar_semaforos() {
     sem_init(&PROCESO_EN_BLOCK, 0, 0);
     sem_init(&GRADO_MULTIPROGRAMACION, 0, GRADO_MAX_MULTIPROGRAMACION);
     sem_init(&CORTO_PLAZO, 0, 0);
+    SEMAFOROS_RECURSOS = malloc(sizeof(sem_t) * list_size(RECURSOS));
+    SEMAFOROS_RECURSOS = inicializar_semaforos_recursos();
 }
