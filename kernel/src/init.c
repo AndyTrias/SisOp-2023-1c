@@ -43,7 +43,7 @@ void inicializar_variables_globales(t_config* config) {
     LISTAS_BLOCK = list_create();
     //inicializar LISTAS_BLOCKED con tantas listas como recursos haya en el archivo de configuracion
     inicializar_listas_blocked();
-
+    TIEMPO_CORRIENDO = temporal_create();
 
 
     ALGORITMO_PLANIFICACION = config_get_string_value(config, "ALGORITMO_PLANIFICACION");

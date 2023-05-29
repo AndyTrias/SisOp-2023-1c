@@ -13,10 +13,11 @@
     void reemplazar_proceso(t_pcb *);
     void reemplazar_ctx(t_ctx *);
     void enviar_a_cpu();
-    void empezar_ciclo_si_vacio();
+    void empezar_ciclo();
     void definir_accion(int, t_pcb *);
     void recibir_de_cpu(int);
     void reemplazar_exec_por_nuevo();
+    void estimado_prox_rafaga();
 
 
 

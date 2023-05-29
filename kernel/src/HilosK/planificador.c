@@ -4,7 +4,7 @@ void* planificador_corto(){
     log_info(LOGGER_KERNEL, "Inicia el planificador de corto plazo");
     sem_wait(&CORTO_PLAZO);
     log_info(LOGGER_KERNEL, "Empieza ciclo de instruccion");
-    empezar_ciclo_si_vacio();
+    empezar_ciclo();
     while (1){
         recibir_de_cpu(SOCKET_CPU);
     }
