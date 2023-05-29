@@ -17,17 +17,16 @@ void enviar_a_cpu(){
 
     enviar_paquete(paquete, SOCKET_CPU);
 
-    log_info(LOGGER_KERNEL,"Se envia el PID <%d> al CPU",EJECUTANDO->contexto.PID);
+    log_info(LOGGER_KERNEL,"Se envia el proceso PID <%d> al CPU",EJECUTANDO->contexto.PID);
+
+    if (strcmp(ALGORITMO_PLANIFICACION, "HRRN") == 0){TIEMPO_EN_CPU = temporal_create();}
 }
 
 
 
-void empezar_ciclo_si_vacio(){
-    if (EJECUTANDO == NULL){ 
-        EJECUTANDO = ceder_proceso_a_exec();
-        enviar_a_cpu();
-    }
-    
+void empezar_ciclo(){  
+    EJECUTANDO = ceder_proceso_a_exec();
+    enviar_a_cpu();
 }
 
 void definir_accion(int cod_op, t_pcb *proceso){
@@ -39,9 +38,9 @@ void definir_accion(int cod_op, t_pcb *proceso){
         reemplazar_exec_por_nuevo();
         break;
     case TERMINAR:
-        log_info(LOGGER_KERNEL, "Se recibio un mensaje de finalizacion");
+        log_info(LOGGER_KERNEL, "Finaliza el proceso <%d> - Motivo: <SUCCESS / SEG_FAULT /OUT_OF_MEMORY",proceso->contexto.PID);
         terminar_proceso(proceso);
-        reemplazar_exec_por_nuevo();
+        EJECUTANDO= ceder_proceso_a_exec();
         break;
     case WAIT:
         wait(proceso);
@@ -60,8 +59,7 @@ void definir_accion(int cod_op, t_pcb *proceso){
 }
 
 void reemplazar_exec_por_nuevo(){
-    //calculo de proxima rafaga
-    //EN BASE A LO QUE SE ESTABA EJECUTANDO
+    if (strcmp(ALGORITMO_PLANIFICACION, "HRRN") == 0){estimado_prox_rafaga();}
     t_pcb *proceso_entrante = ceder_proceso_a_exec(); //pide un proceso a ready segun el algoritmo
     reemplazar_proceso(proceso_entrante);
 }
@@ -77,9 +75,21 @@ void recibir_de_cpu(int conexion_cpu){
 
     reemplazar_ctx(ctx);
 
+    log_info(LOGGER_KERNEL,"Se recibe de CPU el proceso PID <%d>",ctx->PID);
+
     definir_accion(cod_op, EJECUTANDO);
 
     enviar_a_cpu();
 
 
+}
+void estimado_prox_rafaga(){
+    int64_t tiempo_en_cpu= temporal_gettime(TIEMPO_EN_CPU);
+    temporal_destroy(TIEMPO_EN_CPU);
+    
+    float proxima_rafaga= HRRN_ALFA * tiempo_en_cpu + (1-HRRN_ALFA)*EJECUTANDO->estimado_prox_rafaga;
+    
+    EJECUTANDO->estimado_prox_rafaga= proxima_rafaga;
+
+    log_info(LOGGER_KERNEL,"Se realizo el estimado de proxima rafaga para el PID<%d>, nuevo estimado: %f",EJECUTANDO->contexto.PID,EJECUTANDO->estimado_prox_rafaga);
 }

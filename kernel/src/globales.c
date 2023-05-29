@@ -3,6 +3,7 @@
 
 
 t_log* LOGGER_KERNEL;
+int SOCKET_CPU;
 
 //Contador de procesos generados
 int PID_COUNT = 0;
@@ -31,9 +32,10 @@ pthread_mutex_t MUTEX_LISTA_NEW;
 pthread_mutex_t MUTEX_LISTA_READY;
 pthread_mutex_t MUTEX_LISTA_BLOCK;
 
+//Temporales
 
-int SOCKET_CPU;
 t_temporal* TIEMPO_CORRIENDO;
+t_temporal* TIEMPO_EN_CPU;
 
 //Declaracion de monitores para las variables globales
 
@@ -49,7 +51,7 @@ void agregar_a_lista_new(t_pcb* nuevo){
 void agregar_a_lista_ready(t_pcb *nuevo){
     pthread_mutex_lock(&MUTEX_LISTA_READY);
     temporal_stop(nuevo->tiempo_desde_ult_ready);
-    nuevo->tiempo_llegada_ready= temporal_gettime(nuevo->tiempo_desde_ult_ready);
+    nuevo->tiempo_llegada_ready= temporal_gettime(nuevo->tiempo_desde_ult_ready)+temporal_gettime(TIEMPO_CORRIENDO);
     list_add(LISTA_READY, nuevo);
     pthread_mutex_unlock(&MUTEX_LISTA_READY);
     sem_post(&PROCESO_EN_READY);

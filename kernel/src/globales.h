@@ -41,6 +41,7 @@ extern pthread_mutex_t MUTEX_LISTA_BLOCK;
 
 extern int SOCKET_CPU;
 extern t_temporal* TIEMPO_CORRIENDO;
+extern t_temporal* TIEMPO_EN_CPU;
 
 //Declaro las funciones de los monitores
 void agregar_a_lista_new(t_pcb* );
