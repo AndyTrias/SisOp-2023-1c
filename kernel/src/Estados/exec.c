@@ -74,15 +74,37 @@ void definir_accion(int cod_op, t_pcb *proceso){
         t_instruccion* instruccion_utilizable = list_get(proceso->contexto.instrucciones, proceso->contexto.program_counter - 1);
         int tiempo_bloqueo = atoi(instruccion_utilizable->parametros[0]);
         agregar_a_lista_block(proceso);
-        // La pregunta más grande es, cómo hacer para que se envíen instrucciones al CPU mientras que Kernerl ejecuta el I/O. El CPU debería recibir algo no?
-        // Creo tener una solución para lo de abajo pero no para lo de arriba si de verdad es un problema. En un toque lo sigo. 
-        reemplazar_exec_por_nuevo(); //¡¡¡¡ Funciona!!!! Pero el tema es que en este caso se queda sin procesos en ready y lo que hace es esperar a que haya un proceso en ready 
-                                    // Eso está bien pero mientras debería poder ejecutar esta instrucción y al mismo tiempo debería revisar si hay un nuevo proceso en ready
-                                    // imagino que eso se hace con hilos pero bueno.
         log_info(LOGGER_KERNEL, "PID: %d - Ejecuta IO: %d", proceso->contexto.PID, tiempo_bloqueo);
-        sleep(tiempo_bloqueo);
-        agregar_a_lista_ready(sacar_de_lista_block(0)); // Esta parte parece que funciona porque funcionó con el Proceso 0 y el 1 
-                                                        // Imagino que podría verse afectado cuando haya una instrucción I/O que termine antes que el primero que estaba en la cola. O acaso no comparten la misma lista de Block 
+        bool falta_proceso_en_execute = true;
+
+        
+        // Este while necesita una buena condición, de momento no se me ocurre.
+        /*Este while sirve para verificar que hay un proceso en ready, si no verificas antes de reemplazar_exec_por_nuevo.
+        se va a parar el programa hasta que haya un nuevo proceso en ready, osea hasta que se conecte un nuevo módulo porque este queda suspendido*/
+        
+        
+        t_pcb *proceso_entrante = ceder_proceso_a_exec();
+        while(tiempo_bloqueo != 0){
+            
+            if (falta_proceso_en_execute){
+                if (){
+                    reemplazar_proceso(proceso_entrante);
+                    falta_proceso_en_execute = false;
+                }
+            }
+            */
+            sleep(1);
+            tiempo_bloqueo--;
+        }
+
+        // Imagino que podría verse afectado cuando haya una instrucción I/O que termine antes que el primero 
+        // que estaba en la cola. Habría que probarlo pero no sé como.
+        agregar_a_lista_ready(sacar_de_lista_block(0));  
+        
+        
+        if (falta_proceso_en_execute){
+            reemplazar_proceso(proceso_entrante);
+        }
         break;
     }
 }
