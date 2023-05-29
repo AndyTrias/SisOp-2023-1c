@@ -208,6 +208,10 @@ t_ctx *deserializar_contexto(void *buffer)
 
 
 	// Deserializo PID, PC y cant_instrucciones
+	
+
+
+// Aveces ocurre Segment Fault cuando cierras mal o algo así los módulos
 	memcpy(&ctx->PID, buffer + desplazamiento, sizeof(ctx->PID));
 	desplazamiento += sizeof(ctx->PID);
 	memcpy(&ctx->program_counter, buffer + desplazamiento, sizeof(ctx->program_counter));

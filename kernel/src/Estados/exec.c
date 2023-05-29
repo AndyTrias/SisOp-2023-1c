@@ -1,5 +1,4 @@
 #include "exec.h"
-
 void reemplazar_proceso(t_pcb *nuevo_pcb){
     EJECUTANDO = nuevo_pcb;
 }
@@ -39,18 +38,10 @@ void definir_accion(int cod_op, t_pcb *proceso){
         log_info(LOGGER_KERNEL, "Se recibio un mensaje de desalojo");
         reemplazar_exec_por_nuevo();
         break;
-
-    case PETICION:
-        log_info(LOGGER_KERNEL, "Se recibio un mensaje de peticion");
-        //I/O
-        reemplazar_exec_por_nuevo();
-        break;
-    
     case BLOQUEAR:
         log_info(LOGGER_KERNEL, "Se recibio un mensaje de bloqueo");
         reemplazar_exec_por_nuevo();
         break;
-
     case TERMINAR:
         log_info(LOGGER_KERNEL, "Se recibio un mensaje de finalizacion");
         terminar_proceso(proceso);
@@ -63,8 +54,44 @@ void definir_accion(int cod_op, t_pcb *proceso){
     case SIGNAL:
         signal(proceso);
         break;
+    
+    case IO:
+        log_info(LOGGER_KERNEL, "Se recibio un mensaje de petición I/O");
+        t_instruccion* instruccion_utilizable = list_get(proceso->contexto.instrucciones, proceso->contexto.program_counter - 1);
+        int tiempo_bloqueo = atoi(instruccion_utilizable->parametros[0]);
+        agregar_a_lista_block(proceso);
+        log_info(LOGGER_KERNEL, "PID: %d - Ejecuta IO: %d", proceso->contexto.PID, tiempo_bloqueo);
+        bool falta_proceso_en_execute = true;
 
+        
+        // Este while necesita una buena condición, de momento no se me ocurre.
+        /*Este while sirve para verificar que hay un proceso en ready, si no verificas antes de reemplazar_exec_por_nuevo.
+        se va a parar el programa hasta que haya un nuevo proceso en ready, osea hasta que se conecte un nuevo módulo porque este queda suspendido*/
+        
+        
+        t_pcb *proceso_entrante = ceder_proceso_a_exec();
+        while(tiempo_bloqueo != 0){
+            
+            if (falta_proceso_en_execute){
+                if (){
+                    reemplazar_proceso(proceso_entrante);
+                    falta_proceso_en_execute = false;
+                }
+            }
+            */
+            sleep(1);
+            tiempo_bloqueo--;
+        }
 
+        // Imagino que podría verse afectado cuando haya una instrucción I/O que termine antes que el primero 
+        // que estaba en la cola. Habría que probarlo pero no sé como.
+        agregar_a_lista_ready(sacar_de_lista_block(0));  
+        
+        
+        if (falta_proceso_en_execute){
+            reemplazar_proceso(proceso_entrante);
+        }
+        break;
     }
 
     
@@ -72,7 +99,6 @@ void definir_accion(int cod_op, t_pcb *proceso){
 
 void reemplazar_exec_por_nuevo(){
     t_pcb *proceso_entrante = ceder_proceso_a_exec(); //pide un proceso a ready segun el algoritmo
-
     reemplazar_proceso(proceso_entrante);
 }
 

@@ -74,7 +74,7 @@ t_pcb* sacar_de_lista_new(int posicion){
 }
 
 t_pcb* sacar_de_lista_ready(int posicion){
-    sem_wait(&PROCESO_EN_READY);
+    sem_wait(&PROCESO_EN_READY); //Me parece que es este semaforo el 
     pthread_mutex_lock(&MUTEX_LISTA_READY);
     t_pcb * pcb = list_remove(LISTA_READY, posicion);
     temporal_resume(pcb->tiempo_desde_ult_ready);
