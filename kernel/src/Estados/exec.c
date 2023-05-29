@@ -51,6 +51,7 @@ void definir_accion(int cod_op, t_pcb *proceso){
         break;
     
     case IO:
+        io(proceso);
         break;
         
     }

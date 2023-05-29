@@ -35,7 +35,8 @@ void signal(t_pcb *proceso)
     }
     log_info(LOGGER_KERNEL, "Se recibio un mensaje de signal del recurso %d", recurso_id);
 
-    void* algo_en_execute()
+
+void* algo_en_execute()
 {
     reemplazar_exec_por_nuevo();
     log_info(LOGGER_KERNEL, "TERMINO ESTA COSA");
@@ -69,5 +70,3 @@ void io(t_pcb *proceso){
     pthread_join(algo_en_ready, NULL);
     */  
 }
-}
-

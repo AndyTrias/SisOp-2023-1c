@@ -10,4 +10,5 @@
 
     void wait(t_pcb*);
     void signal(t_pcb*);
+    void io(t_pcb*);
 #endif
