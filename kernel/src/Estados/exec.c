@@ -56,40 +56,17 @@ void definir_accion(int cod_op, t_pcb *proceso){
         terminar_proceso(proceso);
         reemplazar_exec_por_nuevo();
         break;
-
     case WAIT:
-        // cree una nueva struct dentro del contexto que tiene un char** parametros
-        // me parecio lo mas generico para pasar todo el resto de instrucciones 
-        // tipo I/O, F_OPEN, F_CLOSE, F_SEEK, F_READ, F_WRITE, F_TRUNCATE, WAIT, SIGNAL, CREATE_SEGMENT,
-
-        // seria algo asi como
-        // char* recurso = proceso->contexto->motivos_desalojo->parametros[0];
-
-        // si recurso fuese un int habria que castearlo con la funcion atoi()
-        // int cantidad = atoi(proceso->contexto->motivos_desalojo->parametros[1]);
-        int recurso_id = get_id_recurso(proceso->contexto.motivos_desalojo->parametros[0]);
-        if (INSTANCIAS_RECURSOS[recurso_id]==0){
-            log_info(LOGGER_KERNEL, "Se recibio un mensaje de wait");
-            reemplazar_exec_por_nuevo();
-
-        }
-        else{
-            sem_wait(SEMAFOROS_RECURSOS[recurso_id]);
-            log_info(LOGGER_KERNEL, "Se recibio un mensaje de wait del recurso %d", recurso_id);
-            INSTANCIAS_RECURSOS[recurso_id]--;
-        };
+        wait(proceso);
         break;
 
     case SIGNAL:
-        // char* recurso = proceso->contexto->motivos_desalojo->parametros[0];
-        // int cantidad = atoi(proceso->contexto->motivos_desalojo->parametros[1]);
-        sem_signal(SEMAFOROS_RECURSOS[recurso_id]);
-        log_info(LOGGER_KERNEL, "Se recibio un mensaje de signal del recurso %d", recurso_id);
-        INSTANCIAS_RECURSOS[recurso_id]++;
+        signal(proceso);
         break;
 
 
     }
+
     
 }
 

@@ -6,6 +6,7 @@
 #include <utils/planificacion/pcb.h>
 #include <pthread.h>
 #include <semaphore.h>
+#include <string.h>
 
 extern t_log* LOGGER_KERNEL;
 
@@ -16,7 +17,7 @@ extern int PID_COUNT;
 extern t_list* LISTA_NEW;
 extern t_list* LISTA_READY;
 extern t_pcb* EJECUTANDO;
-extern t_list* LISTAS_BLOCK[];
+extern t_list* LISTAS_BLOCK;
 
 
 // Variables de configuracion
@@ -36,7 +37,6 @@ extern sem_t CORTO_PLAZO;
 extern pthread_mutex_t MUTEX_LISTA_NEW;
 extern pthread_mutex_t MUTEX_LISTA_READY;
 extern pthread_mutex_t MUTEX_LISTA_BLOCK;
-extern sem_t *SEMAFOROS_RECURSOS[];
 
 
 extern int SOCKET_CPU;

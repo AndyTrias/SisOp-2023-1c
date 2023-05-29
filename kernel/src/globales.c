@@ -11,7 +11,7 @@ int PID_COUNT = 0;
 t_list* LISTA_NEW;
 t_list* LISTA_READY;
 t_pcb* EJECUTANDO;
-t_list* LISTAS_BLOCK[];
+t_list* LISTAS_BLOCK;
 
 // Variables de configuracion
 char* ALGORITMO_PLANIFICACION;
@@ -30,7 +30,7 @@ sem_t CORTO_PLAZO;
 pthread_mutex_t MUTEX_LISTA_NEW;
 pthread_mutex_t MUTEX_LISTA_READY;
 pthread_mutex_t MUTEX_LISTA_BLOCK;
-sem_t *SEMAFOROS_RECURSOS[];
+
 
 int SOCKET_CPU;
 t_temporal* TIEMPO_CORRIENDO;
@@ -110,7 +110,7 @@ t_pcb* get_de_lista_ready(int posicion){
 
 int get_id_recurso(char String[]){
     int i;
-    for(i=0; i<list_size(RECURSOS); i++){
+    for(i=0; i<sizeof(RECURSOS); i++){
         if(strcmp(String, RECURSOS[i])==0){
             return i;
         }
