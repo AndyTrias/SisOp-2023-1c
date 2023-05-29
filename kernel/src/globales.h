@@ -6,6 +6,7 @@
 #include <utils/planificacion/pcb.h>
 #include <pthread.h>
 #include <semaphore.h>
+#include <string.h>
 
 extern t_log* LOGGER_KERNEL;
 
@@ -16,7 +17,8 @@ extern int PID_COUNT;
 extern t_list* LISTA_NEW;
 extern t_list* LISTA_READY;
 extern t_pcb* EJECUTANDO;
-extern t_list* LISTA_BLOCK;
+extern t_list* LISTAS_BLOCK;
+
 
 // Variables de configuracion
 extern char* ALGORITMO_PLANIFICACION;
@@ -36,6 +38,7 @@ extern pthread_mutex_t MUTEX_LISTA_NEW;
 extern pthread_mutex_t MUTEX_LISTA_READY;
 extern pthread_mutex_t MUTEX_LISTA_BLOCK;
 
+
 extern int SOCKET_CPU;
 extern t_temporal* TIEMPO_CORRIENDO;
 
@@ -43,14 +46,16 @@ extern t_temporal* TIEMPO_CORRIENDO;
 void agregar_a_lista_new(t_pcb* );
 void agregar_a_lista_ready(t_pcb* );
 void agregar_a_lista_exec(t_pcb* );
-void agregar_a_lista_block(t_pcb* );
+//void agregar_a_lista_block(t_pcb* );
 
 t_pcb* sacar_de_lista_new(int);
 t_pcb* sacar_de_lista_ready(int);
 void sacar_elemento_de_lista_ready(t_pcb* );
 t_pcb* sacar_de_lista_exec(int);
-t_pcb* sacar_de_lista_block(int);
+//t_pcb* sacar_de_lista_block(int);
 
 t_pcb* get_de_lista_ready(int);
+
+int get_id_recurso(char String[]);
 
 #endif

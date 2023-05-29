@@ -47,26 +47,12 @@ void definir_accion(int cod_op, t_pcb *proceso){
         terminar_proceso(proceso);
         reemplazar_exec_por_nuevo();
         break;
-
     case WAIT:
-        // cree una nueva struct dentro del contexto que tiene un char** parametros
-        // me parecio lo mas generico para pasar todo el resto de instrucciones 
-        // tipo I/O, F_OPEN, F_CLOSE, F_SEEK, F_READ, F_WRITE, F_TRUNCATE, WAIT, SIGNAL, CREATE_SEGMENT,
+        wait(proceso);
+        break;
 
-        // seria algo asi como
-        // char* recurso = proceso->contexto->motivos_desalojo->parametros[0];
-
-        // si recurso fuese un int habria que castearlo con la funcion atoi()
-        // int cantidad = atoi(proceso->contexto->motivos_desalojo->parametros[1]);
-    
-        if ( 1 /*no hay recursos disponibles*/){
-            log_info(LOGGER_KERNEL, "Se recibio un mensaje de wait");
-            reemplazar_exec_por_nuevo();
-
-        }
-        else{
-            //se le da el recurso;
-        };
+    case SIGNAL:
+        signal(proceso);
         break;
     
     case IO:
@@ -107,6 +93,8 @@ void definir_accion(int cod_op, t_pcb *proceso){
         }
         break;
     }
+
+    
 }
 
 void reemplazar_exec_por_nuevo(){

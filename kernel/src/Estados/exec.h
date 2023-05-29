@@ -8,6 +8,7 @@
     #include <commons/collections/list.h>
     #include <utils/mensajes.h>
     #include "exit.h"
+    #include "blocked.h"
 
     void reemplazar_proceso(t_pcb *);
     void reemplazar_ctx(t_ctx *);
