@@ -26,7 +26,8 @@ void inicializar_conexiones(int *conexion_cpu, int *conexion_memoria, int *conex
 void inicializar_listas_blocked(){
     int i;
     for (i = 0; i < sizeof(RECURSOS); i++) {
-        list_add(LISTAS_BLOCK,list_create());
+        t_list* aux = list_create();
+        list_add(LISTAS_BLOCK,aux);
     }
 }
 
@@ -39,6 +40,7 @@ void inicializar_variables_globales(t_config* config) {
     LISTA_NEW = list_create();
     LISTA_READY = list_create();
     EJECUTANDO = NULL;
+    LISTAS_BLOCK = list_create();
     //inicializar LISTAS_BLOCKED con tantas listas como recursos haya en el archivo de configuracion
     inicializar_listas_blocked();
 
