@@ -35,6 +35,7 @@ void signal(t_pcb *proceso)
     }
     log_info(LOGGER_KERNEL, "Se recibio un mensaje de signal del recurso %d", recurso_id);
 
+}
 
 void* algo_en_execute()
 {
@@ -43,30 +44,15 @@ void* algo_en_execute()
     return NULL;
 }
 
-
 void io(t_pcb *proceso){
     t_instruccion* instruccion_utilizable = list_get(proceso->contexto.instrucciones, proceso->contexto.program_counter -1);
     int tiempo_io = atoi(instruccion_utilizable->parametros[0]); 
     log_info(LOGGER_KERNEL, "PID: %d - Ejecuta IO: %d", proceso->contexto.PID, tiempo_io);
-    // NO está llegando :(. Era para probar que onda
-    /*
     list_add(LISTAS_BLOCK, proceso);
-
-
     pthread_t algo_en_ready;
-    list_add(LISTAS_BLOCK, proceso);
-
     pthread_create(&algo_en_ready, NULL, (void *) algo_en_execute, NULL);
-    while (tiempo_io!=0)
-    {
-        sleep(10);
-        tiempo_io--;
-        log_info(LOGGER_KERNEL, "CICLO");
-    }
-    
-    
-    t_pcb *proceso_a_desbloquear = list_remove(LISTAS_BLOCK, 0);
+    usleep(tiempo_io * 1000);
+    t_pcb *proceso_a_desbloquear = list_remove(LISTAS_BLOCK, sizeof(RECURSOS));
     agregar_a_lista_ready(proceso_a_desbloquear);
-    pthread_join(algo_en_ready, NULL);
-    */  
+    pthread_join(algo_en_ready, NULL);  
 }

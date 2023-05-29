@@ -53,7 +53,9 @@ void definir_accion(int cod_op, t_pcb *proceso){
     case IO:
         io(proceso);
         break;
-        
+    default:
+        log_info(LOGGER_KERNEL, "No implementamos esta función");
+        break;
     }
 
     
