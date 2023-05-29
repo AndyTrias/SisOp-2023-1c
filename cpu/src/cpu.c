@@ -20,7 +20,6 @@ int main(int argc, char *argv[]) {
     
     conectar_kernel(socket_servidor);
     
-    
 
     terminar_programa(LOGGER_CPU, config);
     terminar_conexiones(1, conexion_memoria);

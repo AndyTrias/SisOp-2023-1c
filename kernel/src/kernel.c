@@ -18,6 +18,9 @@ int main(int argc, char *argv[]) {
   int conexion_cpu, conexion_memoria, conexion_filesystem;
   inicializar_conexiones(&conexion_cpu, &conexion_memoria, &conexion_filesystem, config);
 
+  enviar_mensaje("Hola Memoria, soy el kernel", conexion_memoria);
+  enviar_mensaje("Hola Memoria, soy el kernel2", conexion_memoria);
+
   char *puerto_escucha = config_get_string_value(config, "PUERTO_ESCUCHA");
   int socket_servidor = crear_servidor(IP, puerto_escucha);
   

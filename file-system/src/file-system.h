@@ -7,5 +7,7 @@
     #include <init.h>
     #include <stdio.h>
     #include <stdlib.h>
+    #include "conectar_kernel.h"
+    #include "globales.h"
 
 #endif

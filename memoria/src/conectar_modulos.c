@@ -3,32 +3,42 @@
 void conectar_modulos(int socket_servidor) {
     log_info(logger_memoria, "Esperando conexiones de modulos...");
     
-    pthread_t hilo_modulo;
+    pthread_t hilo_kernel, hilo_cpu, hilo_fs;
+    int socket_kernel, socket_cpu, socket_fs, socket_cliente;
 
-    while (1) {
-        int socket_modulo = esperar_cliente(socket_servidor);
-        log_info(logger_memoria, "Se conecto un modulo");
-        pthread_create(&hilo_modulo, NULL, (void*) nuevo_modulo, &socket_modulo);
-        pthread_detach(hilo_modulo);
+    for (int i = 0; i < 3; i++) {
+        socket_cliente = esperar_cliente(socket_servidor);
+        switch(recibir_operacion(socket_cliente)) {
+            case 0:
+                log_info(logger_memoria, "Se conecto el file system");
+                socket_fs = socket_cliente;
+                pthread_create(&hilo_fs, NULL, (void *) nuevo_modulo, &socket_fs);
+                pthread_detach(hilo_fs);
+                break;
+            case 1:
+                log_info(logger_memoria, "Se conecto el kernel");
+                socket_kernel = socket_cliente;
+                pthread_create(&hilo_kernel, NULL, (void *) nuevo_modulo, &socket_kernel);
+                pthread_detach(hilo_kernel);
+                break;
+            case 2:
+                log_info(logger_memoria, "Se conecto el cpu");
+                socket_cpu = socket_cliente;
+                pthread_create(&hilo_cpu, NULL, (void *) nuevo_modulo, &socket_cpu);
+                pthread_detach(hilo_cpu);
+                break;
+        }
     }
+
 }
 
 void nuevo_modulo(int* socket_modulo) {
     while(1) {
         int cod_op = recibir_operacion(*socket_modulo);
         switch(cod_op) {
-            case INSTRUCCIONES_CONSOLA:
-                recibir_paquete(*socket_modulo);
-                break;
             
             case MENSAJE:
                 recibir_mensaje(*socket_modulo);
-                break;
-            
-            case PAQUETE:
-                t_list* lista = recibir_paquete(*socket_modulo);
-                log_info(logger_memoria, "Me llegaron los siguientes valores:\n");
-                list_iterate(lista, (void*) iterator);
                 break;
             
             case -1:
@@ -40,8 +50,4 @@ void nuevo_modulo(int* socket_modulo) {
                 return;
         }
     }
-}
-
-void iterator(char* value) {
-    log_info(logger_memoria,"%s", value);
 }

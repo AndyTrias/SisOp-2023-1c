@@ -2,24 +2,26 @@
 
 int main(int argc, char *argv[]) {
   
+    LOGGER_FILE_SYSTEM = iniciar_logger("./logs/file-system.log", "CONSOLA");
+
     if (argc != 2) {
-    printf("Debe ingresar el archivo de configuracion\n");
-    exit(1);
+        log_error(LOGGER_FILE_SYSTEM, "Debe ingresar el archivo de configuracion\n");
+        exit(1);
     }
 
-  
-    t_log* logger = iniciar_logger("./logs/file-system.log", "CONSOLA");
-    t_config* config = iniciar_config("./config/file-system.config");
+    t_config* config = iniciar_config(argv[1]);
     
     int conexion_memoria;
-    inicializar_conexiones(&conexion_memoria, config, logger);
+    inicializar_conexiones(&conexion_memoria, config);
 
     enviar_mensaje("Hola Memoria, soy el file-system", conexion_memoria);
 
     char *puerto_escucha = config_get_string_value(config, "PUERTO_ESCUCHA");
-    inicializar_servidor(IP, puerto_escucha, logger);
+    int socket_servidor = crear_servidor(IP, puerto_escucha);
 
-    terminar_programa(logger, config);
+    conectar_kernel(socket_servidor);
+
+    terminar_programa(LOGGER_FILE_SYSTEM, config);
     terminar_conexiones(1, conexion_memoria);
 
     return 0;
