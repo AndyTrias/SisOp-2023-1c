@@ -33,3 +33,23 @@
 [INFO] 20:16:19:843 CONSOLA/(81833:81833): Se conecto al servidor 127.0.0.1:8002
 [INFO] 20:16:19:843 CONSOLA/(81833:81833): Esperando kernel....
 [INFO] 20:16:44:619 CONSOLA/(81833:81833): Se conecto el kernel
+[INFO] 22:48:43:249 CONSOLA/(2930:2930): Se conecto al servidor 127.0.0.1:8002
+[INFO] 22:48:43:249 CONSOLA/(2930:2930): Esperando kernel....
+[INFO] 22:49:16:623 CONSOLA/(2930:2930): Se conecto el kernel
+[ERROR] 23:00:05:586 CONSOLA/(7736:7736): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 23:00:05:586 CONSOLA/(7736:7736): Esperando kernel....
+[INFO] 23:01:00:854 CONSOLA/(8088:8088): Se conecto al servidor 127.0.0.1:8002
+[INFO] 23:01:00:854 CONSOLA/(8088:8088): Esperando kernel....
+[INFO] 23:01:14:821 CONSOLA/(8088:8088): Se conecto el kernel
+[INFO] 23:02:45:676 CONSOLA/(8088:8088): Se desconecto el kernel
+[INFO] 23:04:57:997 CONSOLA/(11784:11784): Se conecto al servidor 127.0.0.1:8002
+[INFO] 23:04:57:997 CONSOLA/(11784:11784): Esperando kernel....
+[INFO] 23:05:10:530 CONSOLA/(11784:11784): Se conecto el kernel
+[INFO] 23:07:34:266 CONSOLA/(11784:11784): Se desconecto el kernel
+[INFO] 23:08:59:665 CONSOLA/(36851:36851): Se conecto al servidor 127.0.0.1:8002
+[INFO] 23:08:59:665 CONSOLA/(36851:36851): Esperando kernel....
+[INFO] 23:09:20:113 CONSOLA/(36851:36851): Se conecto el kernel
+[INFO] 23:12:42:242 CONSOLA/(37996:37996): Se conecto al servidor 127.0.0.1:8002
+[INFO] 23:12:42:242 CONSOLA/(37996:37996): Esperando kernel....
+[INFO] 23:12:52:456 CONSOLA/(37996:37996): Se conecto el kernel
+[INFO] 23:13:29:637 CONSOLA/(37996:37996): Se desconecto el kernel

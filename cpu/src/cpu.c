@@ -14,6 +14,8 @@ int main(int argc, char *argv[]) {
     int conexion_memoria;
     inicializar_conexiones(&conexion_memoria, config, LOGGER_CPU);
 
+    enviar_mensaje("Hola soy la CPU", conexion_memoria);
+
     char *puerto_escucha = config_get_string_value(config, "PUERTO_ESCUCHA");
     int socket_servidor = crear_servidor(IP, puerto_escucha);
 

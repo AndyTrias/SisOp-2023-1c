@@ -13,19 +13,19 @@ void conectar_modulos(int socket_servidor) {
                 log_info(logger_memoria, "Se conecto el file system");
                 socket_fs = socket_cliente;
                 pthread_create(&hilo_fs, NULL, (void *) nuevo_modulo, &socket_fs);
-                pthread_detach(hilo_fs);
+                pthread_join(hilo_fs, NULL);
                 break;
             case 1:
                 log_info(logger_memoria, "Se conecto el kernel");
                 socket_kernel = socket_cliente;
                 pthread_create(&hilo_kernel, NULL, (void *) nuevo_modulo, &socket_kernel);
-                pthread_detach(hilo_kernel);
+                pthread_join(hilo_kernel, NULL);
                 break;
             case 2:
                 log_info(logger_memoria, "Se conecto el cpu");
                 socket_cpu = socket_cliente;
                 pthread_create(&hilo_cpu, NULL, (void *) nuevo_modulo, &socket_cpu);
-                pthread_detach(hilo_cpu);
+                pthread_join(hilo_cpu, NULL);
                 break;
         }
     }

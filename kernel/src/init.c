@@ -14,10 +14,14 @@ void inicializar_conexiones(int *conexion_cpu, int *conexion_memoria, int *conex
     char *ip_memoria = config_get_string_value(config, "IP_MEMORIA");
     char *puerto_memoria = config_get_string_value(config, "PUERTO_MEMORIA");
 
-
     *conexion_cpu = inicializar_cliente(ip_cpu, puerto_cpu, LOGGER_KERNEL);
     *conexion_memoria = inicializar_cliente(ip_memoria, puerto_memoria, LOGGER_KERNEL);
     *conexion_filesystem = inicializar_cliente(ip_filesystem, puerto_filesystem, LOGGER_KERNEL);
+
+    int *identificador = malloc(sizeof(int));
+    *identificador = 1;
+    send(*conexion_memoria, identificador, sizeof(int), 0);
+    free(identificador);
 
     SOCKET_CPU = *conexion_cpu;
     SOCKET_MEMORIA = *conexion_memoria;
