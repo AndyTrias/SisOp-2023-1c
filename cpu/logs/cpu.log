@@ -89,3 +89,5 @@
 [INFO] 00:53:57:174 CPU/(4872:4872): Program Counter: 5
 [INFO] 00:53:57:174 CPU/(4872:4872): Instruccion nº5: 14
 [INFO] 00:53:57:174 CPU/(4872:4872): PID: 0  -Ejecutando: 14
+[ERROR] 01:38:28:767 CPU/(16519:16519): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 01:38:28:768 CPU/(16519:16519): Esperando kernel....
