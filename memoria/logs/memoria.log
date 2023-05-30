@@ -90,3 +90,35 @@
 [INFO] 23:13:29:639 MEMORIA/(37838:38677): Se desconecto un modulo
 [INFO] 23:13:29:639 MEMORIA/(37838:37838): Se conecto el kernel
 [INFO] 23:13:29:641 MEMORIA/(37838:38680): Se desconecto un modulo
+[INFO] 23:18:40:542 MEMORIA/(39607:39607): Esperando conexiones de modulos...
+[INFO] 23:18:45:412 MEMORIA/(39607:39607): Se conecto el file system
+[INFO] 23:18:45:412 MEMORIA/(39607:39759): Me llego el mensaje: 
+[INFO] 23:24:13:716 MEMORIA/(41153:41153): Esperando conexiones de modulos...
+[INFO] 23:24:17:996 MEMORIA/(41153:41153): Se conecto el file system
+[INFO] 23:24:17:997 MEMORIA/(41153:41297): Me llego el mensaje: 
+[INFO] 23:26:11:390 MEMORIA/(41617:41617): Esperando conexiones de modulos...
+[INFO] 23:26:16:262 MEMORIA/(41617:41617): Se conecto el file system
+[INFO] 23:26:16:263 MEMORIA/(41617:41748): Me llego el mensaje: 
+[INFO] 23:29:02:794 MEMORIA/(43252:43252): Esperando conexiones de modulos...
+[INFO] 23:29:08:645 MEMORIA/(43252:43252): Se conecto el file system
+[INFO] 23:29:17:452 MEMORIA/(43252:43419): Me llego el mensaje: Hola Memoria, soy el file-system
+[INFO] 23:30:43:524 MEMORIA/(43955:43955): Esperando conexiones de modulos...
+[INFO] 23:32:45:681 MEMORIA/(44712:44712): Esperando conexiones de modulos...
+[INFO] 23:33:32:865 MEMORIA/(45274:45274): Esperando conexiones de modulos...
+[INFO] 23:33:37:556 MEMORIA/(45274:45274): Se conecto el file system
+[INFO] 23:33:42:574 MEMORIA/(45274:45420): Me llego el mensaje: Hola Memoria, soy el file-system
+[INFO] 23:37:01:348 MEMORIA/(46026:46026): Esperando conexiones de modulos...
+[INFO] 23:37:25:154 MEMORIA/(46377:46377): Esperando conexiones de modulos...
+[INFO] 23:37:29:060 MEMORIA/(46377:46377): Se conecto el file system
+[INFO] 23:37:29:061 MEMORIA/(46377:46512): Me llego el mensaje: Hola Memoria, soy el file-system
+[INFO] 23:37:33:593 MEMORIA/(46377:46377): Se conecto el cpu
+[INFO] 23:37:33:594 MEMORIA/(46377:46662): Me llego el mensaje: Hola soy la CPU
+[INFO] 23:37:41:489 MEMORIA/(46377:46377): Se conecto el kernel
+[INFO] 23:37:48:524 MEMORIA/(46377:46927): Me llego el mensaje: Dame la tabla de segmentos inicial
+[INFO] 23:37:48:525 MEMORIA/(46377:46662): Me llego el mensaje: Leer de la siguiente direccion de memoria ASD
+[INFO] 23:37:48:525 MEMORIA/(46377:46662): Me llego el mensaje: Escribi en la siguiente direccion de memoria BX el valor (null)
+[INFO] 23:37:48:565 MEMORIA/(46377:46927): Me llego el mensaje: Libera las estructuras de memoria
+[INFO] 23:38:22:312 MEMORIA/(46377:46927): Me llego el mensaje: Dame la tabla de segmentos inicial
+[INFO] 23:38:22:312 MEMORIA/(46377:46662): Me llego el mensaje: Leer de la siguiente direccion de memoria ASD
+[INFO] 23:38:22:312 MEMORIA/(46377:46662): Me llego el mensaje: Escribi en la siguiente direccion de memoria BX el valor (null)
+[INFO] 23:38:22:326 MEMORIA/(46377:46927): Me llego el mensaje: Libera las estructuras de memoria

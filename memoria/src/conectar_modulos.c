@@ -13,7 +13,7 @@ void conectar_modulos(int socket_servidor) {
                 log_info(logger_memoria, "Se conecto el file system");
                 socket_fs = socket_cliente;
                 pthread_create(&hilo_fs, NULL, (void *) nuevo_modulo, &socket_fs);
-                pthread_join(hilo_fs, NULL);
+                pthread_detach(hilo_fs);
                 break;
             case 1:
                 log_info(logger_memoria, "Se conecto el kernel");
@@ -25,7 +25,7 @@ void conectar_modulos(int socket_servidor) {
                 log_info(logger_memoria, "Se conecto el cpu");
                 socket_cpu = socket_cliente;
                 pthread_create(&hilo_cpu, NULL, (void *) nuevo_modulo, &socket_cpu);
-                pthread_join(hilo_cpu, NULL);
+                pthread_detach(hilo_cpu);
                 break;
         }
     }
@@ -38,7 +38,9 @@ void nuevo_modulo(int* socket_modulo) {
         switch(cod_op) {
             
             case MENSAJE:
-                recibir_mensaje(*socket_modulo);
+                char* mensaje_recibido = recibir_mensaje(*socket_modulo);
+                log_info(logger_memoria, "Me llego el mensaje: %s", mensaje_recibido);
+                free(mensaje_recibido);
                 break;
             
             case -1:

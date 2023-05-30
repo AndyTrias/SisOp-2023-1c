@@ -72,23 +72,19 @@ op_code execute(t_instruccion* instruccion_actual, t_ctx *ctx)
 
 	case MOV_IN:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
-		char* valor = string_new();
-		string_append(&valor, "Dame el valor de la siguiente direccion de memoria");
-		string_append(&valor, instruccion_actual->parametros[1]);
-		enviar_mensaje(valor, SOCKET_MEMORIA);
+		char* mensaje = string_from_format("Leer de la siguiente direccion de memoria %s", instruccion_actual->parametros[1]);
+
+		enviar_mensaje(mensaje, SOCKET_MEMORIA);
+		return 0;
 
 	case MOV_OUT:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
-		char* valor2 = string_new();
-		string_append(&valor, "Escribi en la siguiente direccion de memoria ");
-		string_append(&valor, instruccion_actual->parametros[1]);
-		string_append(&valor, " el valor ");
-		string_append(&valor, obtenerRegistro(&ctx->registros, instruccion_actual->parametros[0]));
-		enviar_mensaje(valor, SOCKET_MEMORIA);
+		// haceme un string format para las strings de arriba
 
+		char* mensaje_a_enviar = string_from_format("Escribi en la siguiente direccion de memoria %s el valor %s", instruccion_actual->parametros[0], obtenerRegistro(&ctx->registros, instruccion_actual->parametros[1]));
 
-		enviar_mensaje("Escribi en la siguiente direccion de memoria el valor %s", SOCKET_MEMORIA);
-
+		enviar_mensaje(mensaje_a_enviar, SOCKET_MEMORIA);
+		return 0;
 	case WAIT:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0]);
 		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[0]);

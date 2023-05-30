@@ -71,7 +71,7 @@ void crear_buffer(t_paquete *);
 void *serializar_paquete(t_paquete *, int);
 void enviar_mensaje(char *, int);
 int recibir_operacion(int);
-void recibir_mensaje(int);
+char* recibir_mensaje(int);
 void agregar_a_paquete_dato_serializado(t_paquete *, void *, int);
 void enviar_paquete(t_paquete *, int);
 void *recibir_paquete(int, int*);
