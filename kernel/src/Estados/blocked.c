@@ -15,8 +15,8 @@ void wait(t_pcb *proceso)
     {
         // sem_wait(SEMAFOROS_RECURSOS[recurso_id]);
         INSTANCIAS_RECURSOS[recurso_id]--;
-        log_info(LOGGER_KERNEL,"PID: <%d> - Wait: <%s> - Instancias: <%d>",proceso->contexto.PID,RECURSOS[recurso_id],atoi(INSTANCIAS_RECURSOS[recurso_id]));
     };
+    log_info(LOGGER_KERNEL,"PID: <%d> - Wait: <%s> - Instancias: <%d>",proceso->contexto.PID,RECURSOS[recurso_id],atoi(INSTANCIAS_RECURSOS[recurso_id]));
 }
 
 void signal(t_pcb *proceso)
@@ -40,11 +40,9 @@ void signal(t_pcb *proceso)
 void* instruccion_IO(t_pcb * proceso)
 {  
     t_instruccion* instruccion_utilizable = list_get(proceso->contexto.instrucciones, proceso->contexto.program_counter -1);
-    log_info(LOGGER_KERNEL, "PID: %d - Ejecuta IO: %s", proceso->contexto.PID, instruccion_utilizable->parametros[0]);
     int tiempo = atoi(instruccion_utilizable->parametros[0]);
-    log_info(LOGGER_KERNEL, "DORMIR");
+    log_info(LOGGER_KERNEL, "PID: %d - Ejecuta IO: %d", proceso->contexto.PID, tiempo);
     usleep(tiempo * 1000);
-    log_info(LOGGER_KERNEL, "LISTO ");
     agregar_a_lista_ready(proceso);
     return NULL;
 }
@@ -55,6 +53,5 @@ void io(t_pcb *proceso)
     pthread_detach(hacer_IO);
     
     reemplazar_exec_por_nuevo();
-    log_info(LOGGER_KERNEL, "TERMINO ESTA COSA");
 }
 

@@ -38,7 +38,7 @@ void definir_accion(int cod_op, t_pcb *proceso){
         reemplazar_exec_por_nuevo();
         break;
     case EXIT:
-        log_info(LOGGER_KERNEL, "Finaliza el proceso <%d> - Motivo: <SUCCESS / SEG_FAULT /OUT_OF_MEMORY",proceso->contexto.PID);
+        log_info(LOGGER_KERNEL, "Finaliza el proceso <%d> - Motivo: <SUCCESS / SEG_FAULT /OUT_OF_MEMORY>",proceso->contexto.PID);
         terminar_proceso(proceso);
         EJECUTANDO= ceder_proceso_a_exec();
         break;
@@ -49,7 +49,6 @@ void definir_accion(int cod_op, t_pcb *proceso){
     case SIGNAL:
         signal(proceso);
         break;
-    
     case IO:
         io(proceso);
         break;
