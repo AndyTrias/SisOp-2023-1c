@@ -7,6 +7,7 @@
     // Variables de configuracion
     extern t_log* LOGGER_CPU;
     extern int SOCKET_KERNEL;
+    extern int SOCKET_MEMORIA;
 
 
     extern int TIEMPO_RETARDO;

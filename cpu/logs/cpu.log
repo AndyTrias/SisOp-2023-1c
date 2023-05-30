@@ -58,3 +58,34 @@
 [INFO] 23:31:32:812 CPU/(16391:16391): Program Counter: 5
 [INFO] 23:31:32:812 CPU/(16391:16391): Instruccion nº5: 14
 [INFO] 23:31:32:812 CPU/(16391:16391): PID: 1  -Ejecutando: 14
+[ERROR] 00:53:43:269 CPU/(4872:4872): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 00:53:43:269 CPU/(4872:4872): Esperando kernel....
+[INFO] 00:53:49:983 CPU/(4872:4872): Se conecto el kernel
+[INFO] 00:53:57:123 CPU/(4872:4872): Se recibio un contexto del kernel
+[INFO] 00:53:57:123 CPU/(4872:4872): Comenzando ciclo con nuevo CTX...
+[INFO] 00:53:57:124 CPU/(4872:4872): Program Counter: 0
+[INFO] 00:53:57:124 CPU/(4872:4872): Instruccion nº1: 8
+[INFO] 00:53:57:124 CPU/(4872:4872): PID: 0  -Ejecutando: 8 - AX HOLA
+[INFO] 00:53:57:124 CPU/(4872:4872): Program Counter: 1
+[INFO] 00:53:57:124 CPU/(4872:4872): Instruccion nº2: 7
+[INFO] 00:53:57:124 CPU/(4872:4872): PID: 0  -Ejecutando: 7 - 10 
+[INFO] 00:53:57:173 CPU/(4872:4872): Se recibio un contexto del kernel
+[INFO] 00:53:57:173 CPU/(4872:4872): Comenzando ciclo con nuevo CTX...
+[INFO] 00:53:57:173 CPU/(4872:4872): Program Counter: 2
+[INFO] 00:53:57:173 CPU/(4872:4872): Instruccion nº3: 9
+[INFO] 00:53:57:173 CPU/(4872:4872): PID: 0  -Ejecutando: 9 - DISCO
+[INFO] 00:53:57:173 CPU/(4872:4872): Se recibio un contexto del kernel
+[INFO] 00:53:57:173 CPU/(4872:4872): Comenzando ciclo con nuevo CTX...
+[INFO] 00:53:57:173 CPU/(4872:4872): Program Counter: 3
+[INFO] 00:53:57:173 CPU/(4872:4872): Instruccion nº4: 10
+[INFO] 00:53:57:173 CPU/(4872:4872): PID: 0  -Ejecutando: 10 - DISCO
+[INFO] 00:53:57:173 CPU/(4872:4872): Se recibio un contexto del kernel
+[INFO] 00:53:57:173 CPU/(4872:4872): Comenzando ciclo con nuevo CTX...
+[INFO] 00:53:57:173 CPU/(4872:4872): Program Counter: 4
+[INFO] 00:53:57:173 CPU/(4872:4872): Instruccion nº5: 15
+[INFO] 00:53:57:173 CPU/(4872:4872): PID: 0  -Ejecutando: 15
+[INFO] 00:53:57:174 CPU/(4872:4872): Se recibio un contexto del kernel
+[INFO] 00:53:57:174 CPU/(4872:4872): Comenzando ciclo con nuevo CTX...
+[INFO] 00:53:57:174 CPU/(4872:4872): Program Counter: 5
+[INFO] 00:53:57:174 CPU/(4872:4872): Instruccion nº5: 14
+[INFO] 00:53:57:174 CPU/(4872:4872): PID: 0  -Ejecutando: 14

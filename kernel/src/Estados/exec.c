@@ -32,12 +32,12 @@ void empezar_ciclo(){
 void definir_accion(int cod_op, t_pcb *proceso){
     switch (cod_op)
     {
-    case DESALOJAR:
+    case YIELD:
         agregar_a_lista_ready(proceso);
         log_info(LOGGER_KERNEL, "Se recibio un mensaje de desalojo");
         reemplazar_exec_por_nuevo();
         break;
-    case TERMINAR:
+    case EXIT:
         log_info(LOGGER_KERNEL, "Finaliza el proceso <%d> - Motivo: <SUCCESS / SEG_FAULT /OUT_OF_MEMORY",proceso->contexto.PID);
         terminar_proceso(proceso);
         EJECUTANDO= ceder_proceso_a_exec();

@@ -5,6 +5,7 @@ void inicializar_conexiones(int *conexion_memoria, t_config* config, t_log* logg
     char *puerto_memoria = config_get_string_value(config, "PUERTO_MEMORIA");
 
     *conexion_memoria = inicializar_cliente(ip_memoria, puerto_memoria, logger);
+    SOCKET_MEMORIA = *conexion_memoria;
     int *identificador = malloc(sizeof(int));
     *identificador = 2;
     send(*conexion_memoria, identificador, sizeof(int), 0);

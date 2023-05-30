@@ -389,3 +389,41 @@
 [INFO] 23:31:32:812 KERNEL/(16573:16586): Se envia el proceso PID <1> al CPU
 [INFO] 23:31:32:812 KERNEL/(16573:16586): Se recibe de CPU el proceso PID <1>
 [INFO] 23:31:32:812 KERNEL/(16573:16586): Finaliza el proceso <1> - Motivo: <SUCCESS / SEG_FAULT /OUT_OF_MEMORY
+[ERROR] 00:52:38:866 KERNEL/(4482:4482): No se pudo conectar al servidor 127.0.0.1:8001
+[ERROR] 00:52:38:866 KERNEL/(4482:4482): No se pudo conectar al servidor 127.0.0.1:8002
+[ERROR] 00:52:38:866 KERNEL/(4482:4482): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 00:52:38:867 KERNEL/(4482:4498): Inicia el planificador de largo plazo
+[INFO] 00:52:38:868 KERNEL/(4482:4482): Esperando conexiones de consolas...
+[INFO] 00:52:38:868 KERNEL/(4482:4499): Inicia el planificador de corto plazo
+[INFO] 00:53:49:983 KERNEL/(5014:5014): Se conecto al servidor 127.0.0.1:8001
+[ERROR] 00:53:49:983 KERNEL/(5014:5014): No se pudo conectar al servidor 127.0.0.1:8002
+[ERROR] 00:53:49:984 KERNEL/(5014:5014): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 00:53:49:984 KERNEL/(5014:5030): Inicia el planificador de largo plazo
+[INFO] 00:53:49:990 KERNEL/(5014:5014): Esperando conexiones de consolas...
+[INFO] 00:53:49:991 KERNEL/(5014:5031): Inicia el planificador de corto plazo
+[INFO] 00:53:57:121 KERNEL/(5014:5014): Se conecto una consola
+[INFO] 00:53:57:122 KERNEL/(5014:5204): Se recibieron instrucciones de una consola
+[INFO] 00:53:57:122 KERNEL/(5014:5204): Se Crea el proceso <0> en NEW
+[INFO] 00:53:57:122 KERNEL/(5014:5030): PID <0> a ready en base al algortmo de planificacion <HRRN>
+[INFO] 00:53:57:123 KERNEL/(5014:5030): Se mando la señal al planificador de corto plazo
+[INFO] 00:53:57:123 KERNEL/(5014:5031): Empieza ciclo de instruccion
+[INFO] 00:53:57:123 KERNEL/(5014:5031): Se envia el proceso PID <0> al CPU
+[INFO] 00:53:57:125 KERNEL/(5014:5031): Se recibe de CPU el proceso PID <0>
+[INFO] 00:53:57:125 KERNEL/(5014:5031): PID: 0 - Ejecuta IO: 10
+[INFO] 00:53:57:162 KERNEL/(5014:5205): Se realizo el estimado de proxima rafaga para el PID<0>, nuevo estimado: 5019.000000
+[INFO] 00:53:57:172 KERNEL/(5014:5031): PID <0> a ready en base al algortmo de planificacion <HRRN>
+[INFO] 00:53:57:172 KERNEL/(5014:5205): TERMINO ESTA COSA
+[INFO] 00:53:57:172 KERNEL/(5014:5031): Se envia el proceso PID <0> al CPU
+[INFO] 00:53:57:173 KERNEL/(5014:5031): Se recibe de CPU el proceso PID <0>
+[INFO] 00:53:57:173 KERNEL/(5014:5031): Se recibio un mensaje de wait del recurso 0
+[INFO] 00:53:57:173 KERNEL/(5014:5031): Se envia el proceso PID <0> al CPU
+[INFO] 00:53:57:173 KERNEL/(5014:5031): Se recibe de CPU el proceso PID <0>
+[INFO] 00:53:57:173 KERNEL/(5014:5031): Se recibio un mensaje de signal del recurso 0
+[INFO] 00:53:57:173 KERNEL/(5014:5031): Se envia el proceso PID <0> al CPU
+[INFO] 00:53:57:173 KERNEL/(5014:5031): Se recibe de CPU el proceso PID <0>
+[INFO] 00:53:57:173 KERNEL/(5014:5031): PID <0> a ready en base al algortmo de planificacion <HRRN>
+[INFO] 00:53:57:173 KERNEL/(5014:5031): Se recibio un mensaje de desalojo
+[INFO] 00:53:57:173 KERNEL/(5014:5031): Se realizo el estimado de proxima rafaga para el PID<0>, nuevo estimado: 2509.500000
+[INFO] 00:53:57:174 KERNEL/(5014:5031): Se envia el proceso PID <0> al CPU
+[INFO] 00:53:57:174 KERNEL/(5014:5031): Se recibe de CPU el proceso PID <0>
+[INFO] 00:53:57:174 KERNEL/(5014:5031): Finaliza el proceso <0> - Motivo: <SUCCESS / SEG_FAULT /OUT_OF_MEMORY

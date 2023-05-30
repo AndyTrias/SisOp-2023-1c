@@ -15,5 +15,7 @@ extern t_log* LOGGER_CPU;
 extern int TIEMPO_RETARDO;
 
 void ciclo_de_instruccion(t_ctx* ctx);
+char* obtenerRegistro(t_registros* registros, const char*);
+
 
 #endif

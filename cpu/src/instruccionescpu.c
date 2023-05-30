@@ -30,49 +30,34 @@ void decode(t_instruccion* instruccion, int retraso)
 	}
 }
 
-int comparar_letra(char *letra)
+char* obtenerRegistro(t_registros* registros, const char* nombreRegistro)
 {
-	int i = 0;
-	int j = strlen(letra) - 2;
-	char *comparador = "ABCD";
-	while (i != 4)
-	{
-		if (comparador[i] == letra[j])
-		{
-			break;
-		};
-		i++;
-	};
-
-	return i;
-}
-
-int devolver_num_registro(char *original)
-{
-	int k = 0;
-	char nombre_registro[strlen(original) - 1];
-	strcpy(nombre_registro, original);
-
-	if (strlen(nombre_registro) == 3)
-	{
-		k = comparar_letra((nombre_registro));
-
-		if (string_starts_with(nombre_registro, "R"))
-		{
-			k = 8 + k;
-		};
-
-		if (string_starts_with(nombre_registro, "E"))
-		{
-			k = 4 + k;
-		};
-	};
-
-	if (strlen(nombre_registro) == 2)
-	{
-		k = comparar_letra(nombre_registro);
-	};
-	return k;
+    if (strcmp(nombreRegistro, "AX") == 0)
+        return registros->AX;
+    else if (strcmp(nombreRegistro, "BX") == 0)
+        return registros->BX;
+    else if (strcmp(nombreRegistro, "CX") == 0)
+        return registros->CX;
+    else if (strcmp(nombreRegistro, "DX") == 0)
+        return registros->DX;
+    else if (strcmp(nombreRegistro, "EAX") == 0)
+        return registros->EAX;
+    else if (strcmp(nombreRegistro, "EBX") == 0)
+        return registros->EBX;
+    else if (strcmp(nombreRegistro, "ECX") == 0)
+        return registros->ECX;
+    else if (strcmp(nombreRegistro, "EDX") == 0)
+        return registros->EDX;
+    else if (strcmp(nombreRegistro, "RAX") == 0)
+        return registros->RAX;
+    else if (strcmp(nombreRegistro, "RBX") == 0)
+        return registros->RBX;
+    else if (strcmp(nombreRegistro, "RCX") == 0)
+        return registros->RCX;
+    else if (strcmp(nombreRegistro, "RDX") == 0)
+        return registros->RDX;
+    else
+        return NULL; // Si el nombre del registro no coincide, devuelve NULL o puedes manejarlo de otra manera según tus necesidades.
 }
 
 op_code execute(t_instruccion* instruccion_actual, t_ctx *ctx)
@@ -81,50 +66,29 @@ op_code execute(t_instruccion* instruccion_actual, t_ctx *ctx)
 	{
 	case SET:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
-		switch (devolver_num_registro(instruccion_actual->parametros[0]))
-		{
-		case 0:
-			strcpy(ctx->registros.AX, instruccion_actual->parametros[1]);
-			log_info(LOGGER_CPU, "Num: %s", ctx->registros.AX);
-			break;
-		case 1:
-			strcpy(ctx->registros.BX, instruccion_actual->parametros[1]);
-			break;
-		case 2:
-			strcpy(ctx->registros.CX, instruccion_actual->parametros[1]);
-			break;
-		case 3:
-			strcpy(ctx->registros.DX, instruccion_actual->parametros[1]);
-			break;
-		case 4:
-			strcpy(ctx->registros.EAX, instruccion_actual->parametros[1]);
-			break;
-		case 5:
-			strcpy(ctx->registros.EBX, instruccion_actual->parametros[1]);
-			break;
-		case 6:
-			strcpy(ctx->registros.ECX, instruccion_actual->parametros[1]);
-			break;
-		case 7:
-			strcpy(ctx->registros.EDX, instruccion_actual->parametros[1]);
-			break;
-		case 8:
-			strcpy(ctx->registros.RAX, instruccion_actual->parametros[1]);
-			break;
-		case 9:
-			strcpy(ctx->registros.RBX, instruccion_actual->parametros[1]);
-			break;
-		case 10:
-			strcpy(ctx->registros.RCX, instruccion_actual->parametros[1]);
-			break;
-		case 11:
-			strcpy(ctx->registros.RDX, instruccion_actual->parametros[1]);
-			break;
-		default:
-			break;
-		}
-
+		char* registro = obtenerRegistro(&ctx->registros, instruccion_actual->parametros[0]);
+		strcpy(registro, instruccion_actual->parametros[1]);
 		return 0;
+
+	case MOV_IN:
+		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
+		char* valor = string_new();
+		string_append(&valor, "Dame el valor de la siguiente direccion de memoria");
+		string_append(&valor, instruccion_actual->parametros[1]);
+		enviar_mensaje(valor, SOCKET_MEMORIA);
+
+	case MOV_OUT:
+		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
+		char* valor = string_new();
+		string_append(&valor, "Escribi en la siguiente direccion de memoria ");
+		string_append(&valor, instruccion_actual->parametros[1]);
+		string_append(&valor, " el valor ");
+		string_append(&valor, obtenerRegistro(&ctx->registros, instruccion_actual->parametros[0]));
+		enviar_mensaje(valor, SOCKET_MEMORIA);
+
+
+		enviar_mensaje("Escribi en la siguiente direccion de memoria el valor %s", SOCKET_MEMORIA);
+
 	case WAIT:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0]);
 		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[0]);
@@ -137,10 +101,10 @@ op_code execute(t_instruccion* instruccion_actual, t_ctx *ctx)
 	
 	case YIELD:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d", ctx->PID, instruccion_actual->operacion);
-		return DESALOJAR;
+		return YIELD;
 	case EXIT:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d", ctx->PID, instruccion_actual->operacion);
-		return TERMINAR;
+		return EXIT;
 	case IO:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s ", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0]);
 		return IO;
