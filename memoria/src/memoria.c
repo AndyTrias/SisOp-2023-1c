@@ -7,7 +7,7 @@ int main(int argc, char *argv[]) {
         exit(1);
     }
 
-    logger_memoria = iniciar_logger("./logs/memoria.log", "CONSOLA");
+    logger_memoria = iniciar_logger("./logs/memoria.log", "MEMORIA");
     t_config* config = iniciar_config(argv[1]);
     
     char *puerto_escucha = config_get_string_value(config, "PUERTO_ESCUCHA");

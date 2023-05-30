@@ -4,6 +4,7 @@
 
 t_log* LOGGER_KERNEL;
 int SOCKET_CPU;
+int SOCKET_MEMORIA;
 
 //Contador de procesos generados
 int PID_COUNT = 0;

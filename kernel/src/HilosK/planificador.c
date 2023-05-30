@@ -17,10 +17,8 @@ void* planificador_largo(){
     while (1){
         sem_wait(&PROCESO_EN_NEW);
         sem_wait(&GRADO_MULTIPROGRAMACION);
-        t_pcb* aux;
-        aux= sacar_de_lista_new(0);
 
-        agregar_a_lista_ready(aux);
+        admitir_proceso();
        
         sem_post(&CORTO_PLAZO);
 

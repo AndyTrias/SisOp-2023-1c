@@ -40,6 +40,7 @@ extern pthread_mutex_t MUTEX_LISTA_BLOCK;
 
 
 extern int SOCKET_CPU;
+extern int SOCKET_MEMORIA;
 extern t_temporal* TIEMPO_CORRIENDO;
 extern t_temporal* TIEMPO_EN_CPU;
 

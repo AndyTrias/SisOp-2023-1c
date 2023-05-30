@@ -20,6 +20,7 @@ void inicializar_conexiones(int *conexion_cpu, int *conexion_memoria, int *conex
     *conexion_filesystem = inicializar_cliente(ip_filesystem, puerto_filesystem, LOGGER_KERNEL);
 
     SOCKET_CPU = *conexion_cpu;
+    SOCKET_MEMORIA = *conexion_memoria;
 
 }
 
