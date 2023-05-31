@@ -3,12 +3,16 @@
 
 #include <utils/logs.h>
 #include <commons/collections/list.h>
+#include <commons/string.h>
 #include <utils/planificacion/pcb.h>
 #include <pthread.h>
 #include <semaphore.h>
 #include <string.h>
 
 extern t_log* LOGGER_KERNEL;
+extern int SOCKET_CPU;
+extern int SOCKET_MEMORIA;
+extern int SOCKET_FILESYSTEM;
 
 //Contador de procesos generados
 extern int PID_COUNT;
@@ -39,8 +43,7 @@ extern pthread_mutex_t MUTEX_LISTA_READY;
 extern pthread_mutex_t MUTEX_LISTA_BLOCK;
 
 
-extern int SOCKET_CPU;
-extern int SOCKET_MEMORIA;
+
 extern t_temporal* TIEMPO_CORRIENDO;
 extern t_temporal* TIEMPO_EN_CPU;
 
@@ -58,6 +61,5 @@ t_pcb* sacar_de_lista_exec(int);
 
 t_pcb* get_de_lista_ready(int);
 
-int get_id_recurso(char String[]);
 
 #endif

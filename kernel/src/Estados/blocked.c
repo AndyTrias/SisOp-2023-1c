@@ -55,3 +55,15 @@ void io(t_pcb *proceso)
     reemplazar_exec_por_nuevo();
 }
 
+int get_id_recurso(char String[])
+{
+    int i;
+    for (i = 0; i < string_array_size(RECURSOS); i++)
+    {
+        if (strcmp(String, RECURSOS[i]) == 0)
+        {
+            return i;
+        }
+    }
+    return -1;
+}

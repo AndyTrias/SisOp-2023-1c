@@ -6,9 +6,8 @@
     #include "globales.h"
     #include <string.h>
 
-    void inicializar_conexiones(int *, int *, int *, t_config*);
+    void inicializar_conexiones(t_config*);
     void inicializar_variables_globales(t_config*);
     void inicializar_semaforos();
-
-    void inicializar_listas_blocked();
+    void inicializar_estados();
 #endif
