@@ -9,5 +9,7 @@
     #include <stdlib.h>
     #include "conectar_kernel.h"
     #include "globales.h"
+    #include <sys/mman.h>
+    #include <commons/bitarray.h>
 
 #endif
