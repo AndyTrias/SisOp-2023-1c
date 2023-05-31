@@ -72,3 +72,6 @@
 [INFO] 23:37:29:060 CONSOLA/(46508:46508): Se conecto al servidor 127.0.0.1:8002
 [INFO] 23:37:29:060 CONSOLA/(46508:46508): Esperando kernel....
 [INFO] 23:37:41:489 CONSOLA/(46508:46508): Se conecto el kernel
+[INFO] 19:17:35:252 CONSOLA/(7295:7295): Tamanio del bloque: 64
+[INFO] 19:17:35:253 CONSOLA/(7295:7295): Cantidad de bloques: 65536
+[ERROR] 19:17:35:253 CONSOLA/(7295:7295): Error al mapear el archivo a la memoria

@@ -3,6 +3,7 @@
 
 #include <commons/log.h>
 #include <utils/mensajes.h>
+#include <utils/conexiones.h>
 
 extern t_log* LOGGER_FILE_SYSTEM;
 
