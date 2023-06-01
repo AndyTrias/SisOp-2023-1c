@@ -17,7 +17,7 @@ void enviar_a_cpu(){
 
     enviar_paquete(paquete, SOCKET_CPU);
 
-    log_info(LOGGER_KERNEL,"Se envia el proceso PID <%d> al CPU",EJECUTANDO->contexto.PID);
+    log_info(LOGGER_KERNEL,"Se envia el proceso PID: <%d> al CPU",EJECUTANDO->contexto.PID);
 
     if (strcmp(ALGORITMO_PLANIFICACION, "HRRN") == 0){TIEMPO_EN_CPU = temporal_create();}
 }
@@ -34,11 +34,13 @@ void definir_accion(int cod_op, t_pcb *proceso){
     {
     case YIELD:
         agregar_a_lista_ready(proceso);
-        log_info(LOGGER_KERNEL, "Se recibio un mensaje de desalojo");
+        log_info(LOGGER_KERNEL, "Yield PID: <%d>",proceso->contexto.PID);
+        cambio_de_estado(proceso->contexto.PID,"Exec","Ready");
         reemplazar_exec_por_nuevo();
         break;
     case EXIT:
-        log_info(LOGGER_KERNEL, "Finaliza el proceso <%d> - Motivo: <SUCCESS / SEG_FAULT /OUT_OF_MEMORY>",proceso->contexto.PID);
+        cambio_de_estado(proceso->contexto.PID,"Exec","Exit");
+        log_info(LOGGER_KERNEL, "Finaliza el proceso <%d> - Motivo: <SUCCESS>",proceso->contexto.PID);
         terminar_proceso(proceso);
         EJECUTANDO= ceder_proceso_a_exec();
         break;
@@ -77,7 +79,7 @@ void recibir_de_cpu(int conexion_cpu){
 
     reemplazar_ctx(ctx);
 
-    log_info(LOGGER_KERNEL,"Se recibe de CPU el proceso PID <%d>",ctx->PID);
+    log_info(LOGGER_KERNEL,"Se recibe de CPU el proceso PID: <%d>",ctx->PID);
 
     definir_accion(cod_op, EJECUTANDO);
 
@@ -93,5 +95,5 @@ void estimado_prox_rafaga(){
     
     EJECUTANDO->estimado_prox_rafaga= proxima_rafaga;
 
-    log_info(LOGGER_KERNEL,"Se realizo el estimado de proxima rafaga para el PID<%d>, nuevo estimado: %f",EJECUTANDO->contexto.PID,EJECUTANDO->estimado_prox_rafaga);
+    log_info(LOGGER_KERNEL,"Se realizo el estimado de proxima rafaga para el PID: <%d>, nuevo estimado: %f",EJECUTANDO->contexto.PID,EJECUTANDO->estimado_prox_rafaga);
 }

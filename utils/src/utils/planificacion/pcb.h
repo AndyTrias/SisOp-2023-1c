@@ -5,6 +5,7 @@
 #include <commons/temporal.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 typedef struct
 {
@@ -52,6 +53,9 @@ typedef struct
 } t_pcb;
 
 void agregar_parametro_desalojo(t_ctx* ctx, char* parametro);
+char get_pid(t_pcb*);
+char* mostrar_pids(t_list* lista);
+void concatenarCharACadena(char c, char *cadena);
 
 
 #endif

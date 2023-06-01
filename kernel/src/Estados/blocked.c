@@ -9,6 +9,7 @@ void wait(t_pcb *proceso)
     if (INSTANCIAS_RECURSOS[recurso_id] == 0)
     { // no hay recursos disponibles para darle
         reemplazar_exec_por_nuevo();
+        cambio_de_estado(proceso->contexto.PID,"Exec","Block");
         list_add(list_get(LISTAS_BLOCK, recurso_id), proceso);
     }
     else
@@ -26,6 +27,7 @@ void signal(t_pcb *proceso)
     if (list_size(lista_del_recurso) > 0)
     {
         t_pcb *proceso_a_desbloquear = list_remove(list_get(LISTAS_BLOCK, recurso_id), 0);
+        cambio_de_estado(proceso_a_desbloquear->contexto.PID,"Block","Ready");
         agregar_a_lista_ready(proceso_a_desbloquear);
     }
     else
@@ -41,7 +43,7 @@ void* instruccion_IO(t_pcb * proceso)
 {  
     t_instruccion* instruccion_utilizable = list_get(proceso->contexto.instrucciones, proceso->contexto.program_counter -1);
     int tiempo = atoi(instruccion_utilizable->parametros[0]);
-    log_info(LOGGER_KERNEL, "PID: %d - Ejecuta IO: %d", proceso->contexto.PID, tiempo);
+    log_info(LOGGER_KERNEL, "PID: <%d> - Ejecuta IO: %d", proceso->contexto.PID, tiempo);
     usleep(tiempo * 1000);
     agregar_a_lista_ready(proceso);
     return NULL;

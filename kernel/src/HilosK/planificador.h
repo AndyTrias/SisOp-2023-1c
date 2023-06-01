@@ -6,4 +6,5 @@
     #include <Estados/exec.h>
     void* planificador_corto();
     void* planificador_largo();
+    
 #endif

@@ -5,4 +5,3 @@ void agregar_parametro_desalojo(t_ctx* ctx, char* parametro){
     ctx->motivos_desalojo->parametros[ctx->motivos_desalojo->cantidad_parametros] = parametro;
     ctx->motivos_desalojo->cantidad_parametros++;
 };
-

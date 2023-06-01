@@ -55,10 +55,10 @@ void agregar_a_lista_ready(t_pcb *nuevo)
     temporal_stop(nuevo->tiempo_desde_ult_ready);
     nuevo->tiempo_llegada_ready = temporal_gettime(nuevo->tiempo_desde_ult_ready) + temporal_gettime(TIEMPO_CORRIENDO);
     list_add(LISTA_READY, nuevo);
+    log_info(LOGGER_KERNEL,  "Cola Ready <%s>: [%s]",ALGORITMO_PLANIFICACION, "ayuda loco");
     pthread_mutex_unlock(&MUTEX_LISTA_READY);
     sem_post(&PROCESO_EN_READY);
 
-    log_info(LOGGER_KERNEL, "PID <%d> a ready en base al algortmo de planificacion <%s>", nuevo->contexto.PID, ALGORITMO_PLANIFICACION);
 }
 
 /*
@@ -116,3 +116,7 @@ t_pcb *get_de_lista_ready(int posicion)
     return pcb;
 }
 
+//cambios de estado
+void cambio_de_estado(int pid, char*anterior, char* nuevo){
+    log_info(LOGGER_KERNEL,"PID: <%d> - Estado Anterior: <%s> - Estado Actual: <%s>",pid,anterior,nuevo);
+}

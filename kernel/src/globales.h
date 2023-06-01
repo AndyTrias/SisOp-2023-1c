@@ -61,5 +61,7 @@ t_pcb* sacar_de_lista_exec(int);
 
 t_pcb* get_de_lista_ready(int);
 
+//cambios de estado
+void cambio_de_estado();
 
 #endif
