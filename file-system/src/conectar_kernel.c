@@ -6,7 +6,7 @@ void conectar_kernel(int socket_servidor)
     int socket_kernel = esperar_cliente(socket_servidor);
     log_info(LOGGER_FILE_SYSTEM, "Se conecto el kernel");
     enviado_de_kernel(&socket_kernel);
-    
+
 }
 
 void enviado_de_kernel(int *socket_kernel)
