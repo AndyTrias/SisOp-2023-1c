@@ -19,6 +19,7 @@ void wait(t_pcb *proceso)
     log_info(LOGGER_KERNEL,"PID: <%d> - Wait: <%s> - Instancias: <%d>",proceso->contexto.PID,RECURSOS[recurso_id],atoi(INSTANCIAS_RECURSOS[recurso_id]));
     }else{
         log_info(LOGGER_KERNEL,"Se realiza Wait de proceso inexitente: <%s>",proceso->contexto.motivos_desalojo->parametros[0]);
+        terminar_proceso(proceso);
     }
     
 }
@@ -42,7 +43,7 @@ void signal(t_pcb *proceso)
         log_info(LOGGER_KERNEL,"PID: <%d> - Signal: <%s> - Instancias: <%d>",proceso->contexto.PID,RECURSOS[recurso_id],atoi(INSTANCIAS_RECURSOS[recurso_id]));
     }else{
         log_info(LOGGER_KERNEL,"Se realiza Signal de proceso inexitente: <%s>",proceso->contexto.motivos_desalojo->parametros[0]);
-
+        terminar_proceso(proceso);
     }
     
 
