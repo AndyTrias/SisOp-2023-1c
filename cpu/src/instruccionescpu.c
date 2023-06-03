@@ -26,7 +26,7 @@ void decode(t_instruccion* instruccion)
 {
 	if (instruccion->operacion == SET)
 	{
-		usleep(TIEMPO_RETARDO*1000);
+		usleep(TIEMPO_RETARDO*1000000);
 	}
 }
 
