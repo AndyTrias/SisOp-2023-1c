@@ -27,3 +27,9 @@ void* planificador_largo(){
     }
     
 }
+void* recibir_consolas(int socket_servidor){
+    
+    while(1){
+        conectar_consola(socket_servidor);
+    }
+}

@@ -1,11 +1,11 @@
 #include "conectar_consola.h"
-pthread_t hilo_consola;
 void conectar_consola(int socket_servidor)
 {
     log_info(LOGGER_KERNEL, "Esperando conexiones de consolas...");
     
     while (1)
     {
+        pthread_t hilo_consola; 
         int socket_consola = esperar_cliente(socket_servidor);
         log_info(LOGGER_KERNEL, "Se conecto una consola");
         pthread_create(&hilo_consola, NULL, (void *) enviado_de_consola, &socket_consola);
@@ -24,17 +24,14 @@ void enviado_de_consola(int *socket_consola)
             log_info(LOGGER_KERNEL, "Se recibieron instrucciones de una consola");
             t_list *instrucciones = recibir_paquete_consola(*socket_consola);
             nuevo_proceso(instrucciones, *socket_consola);
-            pthread_cancel(hilo_consola);
-            break;
+            return;
 
         case -1:
             log_info(LOGGER_KERNEL, "Se desconecto una consola");
-            pthread_cancel(hilo_consola);
             return;
 
         default:
             log_error(LOGGER_KERNEL, "Operacion desconocida");
-            pthread_cancel(hilo_consola);
             return;
         }
 }
