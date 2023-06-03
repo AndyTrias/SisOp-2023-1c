@@ -18,7 +18,7 @@ void wait(t_pcb *proceso)
         }
     log_info(LOGGER_KERNEL,"PID: <%d> - Wait: <%s> - Instancias: <%d>",proceso->contexto.PID,RECURSOS[recurso_id],atoi(INSTANCIAS_RECURSOS[recurso_id]));
     }else{
-        log_info(LOGGER_KERNEL,"Se realiza Wait de proceso inexitente: <%s>",proceso->contexto.motivos_desalojo->parametros[0]);
+        log_info(LOGGER_KERNEL,"Se realiza Wait de proceso inexistente: < %s > ",proceso->contexto.motivos_desalojo->parametros[0]);
         cambio_de_estado(proceso->contexto.PID,"Block","Exit");
         terminar_proceso(proceso);
     }

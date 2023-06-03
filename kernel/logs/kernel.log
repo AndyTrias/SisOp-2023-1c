@@ -1,137 +1,19 @@
-
-[INFO] 01:39:53:922 KERNEL/(10009:10009): Se conecto al servidor 127.0.0.1:8001
-[ERROR] 01:39:53:923 KERNEL/(10009:10009): No se pudo conectar al servidor 127.0.0.1:8002
-[ERROR] 01:39:53:924 KERNEL/(10009:10009): No se pudo conectar al servidor 127.0.0.1:8003
-[INFO] 01:39:53:924 KERNEL/(10009:10009): Esperando conexiones de consolas...
-[INFO] 01:39:53:927 KERNEL/(10009:10011): Inicia el planificador de corto plazo
-[INFO] 01:39:53:930 KERNEL/(10009:10010): Inicia el planificador de largo plazo
-[INFO] 01:40:35:441 KERNEL/(10009:10009): Se conecto una consola
-[INFO] 01:40:35:449 KERNEL/(10009:10223): Se recibieron instrucciones de una consola
-[INFO] 01:40:35:450 KERNEL/(10009:10223): Se Crea el proceso <0> en NEW
-[INFO] 01:40:35:450 KERNEL/(10009:10010): Cola Ready <HRRN>: [ayuda loco]
-[INFO] 01:40:35:450 KERNEL/(10009:10010): Se mando la señal al planificador de corto plazo
-[INFO] 01:40:35:451 KERNEL/(10009:10011): Empieza ciclo de instruccion
-[INFO] 01:40:35:451 KERNEL/(10009:10011): Se envia el proceso PID: <0> al CPU
-[INFO] 01:40:37:322 KERNEL/(10009:10009): Se conecto una consola
-[INFO] 01:40:37:327 KERNEL/(10009:10256): Se recibieron instrucciones de una consola
-[INFO] 01:40:37:332 KERNEL/(10009:10256): Se Crea el proceso <1> en NEW
-[INFO] 01:40:37:332 KERNEL/(10009:10010): Cola Ready <HRRN>: [ayuda loco]
-[INFO] 01:40:37:332 KERNEL/(10009:10010): Se mando la señal al planificador de corto plazo
-[INFO] 01:40:39:384 KERNEL/(10009:10009): Se conecto una consola
-[INFO] 01:40:39:393 KERNEL/(10009:10295): Se recibieron instrucciones de una consola
-[INFO] 01:40:39:395 KERNEL/(10009:10295): Se Crea el proceso <2> en NEW
-[INFO] 01:40:39:396 KERNEL/(10009:10010): Cola Ready <HRRN>: [ayuda loco]
-[INFO] 01:40:39:396 KERNEL/(10009:10010): Se mando la señal al planificador de corto plazo
-[INFO] 01:40:47:473 KERNEL/(10009:10011): Se recibe de CPU el proceso PID: <0>
-[INFO] 01:40:47:474 KERNEL/(10009:10011): Cola Ready <HRRN>: [ayuda loco]
-[INFO] 01:40:47:474 KERNEL/(10009:10011): Yield PID: <0>
-[INFO] 01:40:47:474 KERNEL/(10009:10011): PID: <0> - Estado Anterior: <Exec> - Estado Actual: <Ready>
-[INFO] 01:40:47:474 KERNEL/(10009:10011): Se realizo el estimado de proxima rafaga para el PID: <0>, nuevo estimado: 11008.500000
-[INFO] 01:40:47:475 KERNEL/(10009:10011): Se envia el proceso PID: <1> al CPU
-[INFO] 01:40:49:482 KERNEL/(10009:10011): Se recibe de CPU el proceso PID: <1>
-[INFO] 01:40:49:482 KERNEL/(10009:10011): Cola Ready <HRRN>: [ayuda loco]
-[INFO] 01:40:49:482 KERNEL/(10009:10011): Yield PID: <1>
-[INFO] 01:40:49:482 KERNEL/(10009:10011): PID: <1> - Estado Anterior: <Exec> - Estado Actual: <Ready>
-[INFO] 01:40:49:483 KERNEL/(10009:10011): Se realizo el estimado de proxima rafaga para el PID: <1>, nuevo estimado: 6002.000000
-[INFO] 01:40:49:483 KERNEL/(10009:10011): Se envia el proceso PID: <2> al CPU
-[INFO] 01:40:51:491 KERNEL/(10009:10011): Se recibe de CPU el proceso PID: <2>
-[INFO] 01:40:51:492 KERNEL/(10009:10011): Cola Ready <HRRN>: [ayuda loco]
-[INFO] 01:40:51:492 KERNEL/(10009:10011): Yield PID: <2>
-[INFO] 01:40:51:492 KERNEL/(10009:10011): PID: <2> - Estado Anterior: <Exec> - Estado Actual: <Ready>
-[INFO] 01:40:51:492 KERNEL/(10009:10011): Se realizo el estimado de proxima rafaga para el PID: <2>, nuevo estimado: 6002.000000
-[INFO] 01:40:51:492 KERNEL/(10009:10011): Se envia el proceso PID: <2> al CPU
-[INFO] 01:40:53:496 KERNEL/(10009:10011): Se recibe de CPU el proceso PID: <2>
-[INFO] 01:40:53:496 KERNEL/(10009:10011): Cola Ready <HRRN>: [ayuda loco]
-[INFO] 01:40:53:496 KERNEL/(10009:10011): Yield PID: <2>
-[INFO] 01:40:53:497 KERNEL/(10009:10011): PID: <2> - Estado Anterior: <Exec> - Estado Actual: <Ready>
-[INFO] 01:40:53:497 KERNEL/(10009:10011): Se realizo el estimado de proxima rafaga para el PID: <2>, nuevo estimado: 4002.000000
-[INFO] 01:40:53:497 KERNEL/(10009:10011): Se envia el proceso PID: <1> al CPU
-[INFO] 01:40:55:501 KERNEL/(10009:10011): Se recibe de CPU el proceso PID: <1>
-[INFO] 01:40:55:501 KERNEL/(10009:10011): Cola Ready <HRRN>: [ayuda loco]
-[INFO] 01:40:55:501 KERNEL/(10009:10011): Yield PID: <1>
-[INFO] 01:40:55:501 KERNEL/(10009:10011): PID: <1> - Estado Anterior: <Exec> - Estado Actual: <Ready>
-[INFO] 01:40:55:501 KERNEL/(10009:10011): Se realizo el estimado de proxima rafaga para el PID: <1>, nuevo estimado: 4002.000000
-[INFO] 01:40:55:501 KERNEL/(10009:10011): Se envia el proceso PID: <0> al CPU
-[INFO] 01:40:57:506 KERNEL/(10009:10011): Se recibe de CPU el proceso PID: <0>
-[INFO] 01:40:57:506 KERNEL/(10009:10011): PID: <0> - Estado Anterior: <Exec> - Estado Actual: <Exit>
-[INFO] 01:40:57:506 KERNEL/(10009:10011): Finaliza el proceso <0> - Motivo: <SUCCESS>
-[INFO] 01:40:57:506 KERNEL/(10009:10011): Se envia el proceso PID: <2> al CPU
-[INFO] 01:40:59:514 KERNEL/(10009:10011): Se recibe de CPU el proceso PID: <2>
-[INFO] 01:40:59:514 KERNEL/(10009:10011): Cola Ready <HRRN>: [ayuda loco]
-[INFO] 01:40:59:515 KERNEL/(10009:10011): Yield PID: <2>
-[INFO] 01:40:59:515 KERNEL/(10009:10011): PID: <2> - Estado Anterior: <Exec> - Estado Actual: <Ready>
-[INFO] 01:40:59:515 KERNEL/(10009:10011): Se realizo el estimado de proxima rafaga para el PID: <2>, nuevo estimado: 3004.000000
-[INFO] 01:40:59:515 KERNEL/(10009:10011): Se envia el proceso PID: <1> al CPU
-[INFO] 01:41:01:518 KERNEL/(10009:10011): Se recibe de CPU el proceso PID: <1>
-[INFO] 01:41:01:518 KERNEL/(10009:10011): Cola Ready <HRRN>: [ayuda loco]
-[INFO] 01:41:01:518 KERNEL/(10009:10011): Yield PID: <1>
-[INFO] 01:41:01:518 KERNEL/(10009:10011): PID: <1> - Estado Anterior: <Exec> - Estado Actual: <Ready>
-[INFO] 01:41:01:518 KERNEL/(10009:10011): Se realizo el estimado de proxima rafaga para el PID: <1>, nuevo estimado: 3001.500000
-[INFO] 01:41:01:518 KERNEL/(10009:10011): Se envia el proceso PID: <2> al CPU
-[INFO] 01:41:03:521 KERNEL/(10009:10011): Se recibe de CPU el proceso PID: <2>
-[INFO] 01:41:03:521 KERNEL/(10009:10011): Cola Ready <HRRN>: [ayuda loco]
-[INFO] 01:41:03:521 KERNEL/(10009:10011): Yield PID: <2>
-[INFO] 01:41:03:521 KERNEL/(10009:10011): PID: <2> - Estado Anterior: <Exec> - Estado Actual: <Ready>
-[INFO] 01:41:03:522 KERNEL/(10009:10011): Se realizo el estimado de proxima rafaga para el PID: <2>, nuevo estimado: 2503.000000
-[INFO] 01:41:03:522 KERNEL/(10009:10011): Se envia el proceso PID: <1> al CPU
-[INFO] 01:41:05:532 KERNEL/(10009:10011): Se recibe de CPU el proceso PID: <1>
-[INFO] 01:41:05:532 KERNEL/(10009:10011): Cola Ready <HRRN>: [ayuda loco]
-[INFO] 01:41:05:532 KERNEL/(10009:10011): Yield PID: <1>
-[INFO] 01:41:05:532 KERNEL/(10009:10011): PID: <1> - Estado Anterior: <Exec> - Estado Actual: <Ready>
-[INFO] 01:41:05:532 KERNEL/(10009:10011): Se realizo el estimado de proxima rafaga para el PID: <1>, nuevo estimado: 2504.750000
-[INFO] 01:41:05:532 KERNEL/(10009:10011): Se envia el proceso PID: <2> al CPU
-[INFO] 01:41:07:542 KERNEL/(10009:10011): Se recibe de CPU el proceso PID: <2>
-[INFO] 01:41:07:542 KERNEL/(10009:10011): Cola Ready <HRRN>: [ayuda loco]
-[INFO] 01:41:07:542 KERNEL/(10009:10011): Yield PID: <2>
-[INFO] 01:41:07:542 KERNEL/(10009:10011): PID: <2> - Estado Anterior: <Exec> - Estado Actual: <Ready>
-[INFO] 01:41:07:543 KERNEL/(10009:10011): Se realizo el estimado de proxima rafaga para el PID: <2>, nuevo estimado: 2255.000000
-[INFO] 01:41:07:543 KERNEL/(10009:10011): Se envia el proceso PID: <1> al CPU
-[INFO] 01:41:09:550 KERNEL/(10009:10011): Se recibe de CPU el proceso PID: <1>
-[INFO] 01:41:09:550 KERNEL/(10009:10011): Cola Ready <HRRN>: [ayuda loco]
-[INFO] 01:41:09:550 KERNEL/(10009:10011): Yield PID: <1>
-[INFO] 01:41:09:550 KERNEL/(10009:10011): PID: <1> - Estado Anterior: <Exec> - Estado Actual: <Ready>
-[INFO] 01:41:09:550 KERNEL/(10009:10011): Se realizo el estimado de proxima rafaga para el PID: <1>, nuevo estimado: 2254.375000
-[INFO] 01:41:09:550 KERNEL/(10009:10011): Se envia el proceso PID: <2> al CPU
-[INFO] 01:41:11:554 KERNEL/(10009:10011): Se recibe de CPU el proceso PID: <2>
-[INFO] 01:41:11:554 KERNEL/(10009:10011): Cola Ready <HRRN>: [ayuda loco]
-[INFO] 01:41:11:554 KERNEL/(10009:10011): Yield PID: <2>
-[INFO] 01:41:11:554 KERNEL/(10009:10011): PID: <2> - Estado Anterior: <Exec> - Estado Actual: <Ready>
-[INFO] 01:41:11:554 KERNEL/(10009:10011): Se realizo el estimado de proxima rafaga para el PID: <2>, nuevo estimado: 2128.500000
-[INFO] 01:41:11:554 KERNEL/(10009:10011): Se envia el proceso PID: <1> al CPU
-[INFO] 01:41:13:555 KERNEL/(10009:10011): Se recibe de CPU el proceso PID: <1>
-[INFO] 01:41:13:555 KERNEL/(10009:10011): Cola Ready <HRRN>: [ayuda loco]
-[INFO] 01:41:13:555 KERNEL/(10009:10011): Yield PID: <1>
-[INFO] 01:41:13:555 KERNEL/(10009:10011): PID: <1> - Estado Anterior: <Exec> - Estado Actual: <Ready>
-[INFO] 01:41:13:555 KERNEL/(10009:10011): Se realizo el estimado de proxima rafaga para el PID: <1>, nuevo estimado: 2127.187500
-[INFO] 01:41:13:556 KERNEL/(10009:10011): Se envia el proceso PID: <2> al CPU
-[INFO] 01:41:15:558 KERNEL/(10009:10011): Se recibe de CPU el proceso PID: <2>
-[INFO] 01:41:15:559 KERNEL/(10009:10011): Cola Ready <HRRN>: [ayuda loco]
-[INFO] 01:41:15:559 KERNEL/(10009:10011): Yield PID: <2>
-[INFO] 01:41:15:559 KERNEL/(10009:10011): PID: <2> - Estado Anterior: <Exec> - Estado Actual: <Ready>
-[INFO] 01:41:15:559 KERNEL/(10009:10011): Se realizo el estimado de proxima rafaga para el PID: <2>, nuevo estimado: 2065.250000
-[INFO] 01:41:15:559 KERNEL/(10009:10011): Se envia el proceso PID: <1> al CPU
-[INFO] 01:41:17:574 KERNEL/(10009:10011): Se recibe de CPU el proceso PID: <1>
-[INFO] 01:41:17:574 KERNEL/(10009:10011): Cola Ready <HRRN>: [ayuda loco]
-[INFO] 01:41:17:574 KERNEL/(10009:10011): Yield PID: <1>
-[INFO] 01:41:17:574 KERNEL/(10009:10011): PID: <1> - Estado Anterior: <Exec> - Estado Actual: <Ready>
-[INFO] 01:41:17:575 KERNEL/(10009:10011): Se realizo el estimado de proxima rafaga para el PID: <1>, nuevo estimado: 2070.093750
-[INFO] 01:41:17:576 KERNEL/(10009:10011): Se envia el proceso PID: <2> al CPU
-[INFO] 01:41:18:582 KERNEL/(10009:10011): Se recibe de CPU el proceso PID: <2>
-[INFO] 01:41:18:582 KERNEL/(10009:10011): Cola Ready <HRRN>: [ayuda loco]
-[INFO] 01:41:18:582 KERNEL/(10009:10011): Yield PID: <2>
-[INFO] 01:41:18:582 KERNEL/(10009:10011): PID: <2> - Estado Anterior: <Exec> - Estado Actual: <Ready>
-[INFO] 01:41:18:582 KERNEL/(10009:10011): Se realizo el estimado de proxima rafaga para el PID: <2>, nuevo estimado: 1534.625000
-[INFO] 01:41:18:582 KERNEL/(10009:10011): Se envia el proceso PID: <1> al CPU
-[INFO] 01:41:19:583 KERNEL/(10009:10011): Se recibe de CPU el proceso PID: <1>
-[INFO] 01:41:19:583 KERNEL/(10009:10011): Cola Ready <HRRN>: [ayuda loco]
-[INFO] 01:41:19:583 KERNEL/(10009:10011): Yield PID: <1>
-[INFO] 01:41:19:583 KERNEL/(10009:10011): PID: <1> - Estado Anterior: <Exec> - Estado Actual: <Ready>
-[INFO] 01:41:19:583 KERNEL/(10009:10011): Se realizo el estimado de proxima rafaga para el PID: <1>, nuevo estimado: 1535.046875
-[INFO] 01:41:19:583 KERNEL/(10009:10011): Se envia el proceso PID: <2> al CPU
-[INFO] 01:41:20:584 KERNEL/(10009:10011): Se recibe de CPU el proceso PID: <2>
-[INFO] 01:41:20:585 KERNEL/(10009:10011): PID: <2> - Estado Anterior: <Exec> - Estado Actual: <Exit>
-[INFO] 01:41:20:586 KERNEL/(10009:10011): Finaliza el proceso <2> - Motivo: <SUCCESS>
-[INFO] 01:41:20:586 KERNEL/(10009:10011): Se envia el proceso PID: <1> al CPU
-[INFO] 01:41:21:590 KERNEL/(10009:10011): Se recibe de CPU el proceso PID: <1>
-[INFO] 01:41:21:590 KERNEL/(10009:10011): PID: <1> - Estado Anterior: <Exec> - Estado Actual: <Exit>
-[INFO] 01:41:21:590 KERNEL/(10009:10011): Finaliza el proceso <1> - Motivo: <SUCCESS>
+[INFO] 03:29:20:706 KERNEL/(11256:11256): Se conecto una consola
+[INFO] 03:29:20:709 KERNEL/(11256:11404): Se recibieron instrucciones de una consola
+[INFO] 03:29:20:709 KERNEL/(11256:11404): Se Crea el proceso <0> en NEW
+[INFO] 03:29:20:709 KERNEL/(11256:11272): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 03:29:20:709 KERNEL/(11256:11272): Se mando la señal al planificador de corto plazo
+[INFO] 03:29:20:710 KERNEL/(11256:11273): Empieza ciclo de instruccion
+[INFO] 03:29:20:710 KERNEL/(11256:11273): Se envia el proceso PID: <0> al CPU
+[INFO] 03:29:21:054 KERNEL/(11256:11256): Se conecto una consola
+[INFO] 03:29:21:055 KERNEL/(11256:11408): Se recibieron instrucciones de una consola
+[INFO] 03:29:21:055 KERNEL/(11256:11408): Se Crea el proceso <1> en NEW
+[INFO] 03:29:21:055 KERNEL/(11256:11272): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 03:29:21:055 KERNEL/(11256:11272): Se mando la señal al planificador de corto plazo
+[INFO] 03:29:21:713 KERNEL/(11256:11273): Se recibe de CPU el proceso PID: <0>
+[INFO] 03:29:21:714 KERNEL/(11256:11273): Se realiza Wait de proceso inexistente: < LA_TERCERA_DE_FRANCIA > 
+[INFO] 03:29:21:714 KERNEL/(11256:11273): PID: <0> - Estado Anterior: <Block> - Estado Actual: <Exit>
+[INFO] 03:29:21:714 KERNEL/(11256:11273): Se envia el proceso PID: <1> al CPU
+[INFO] 03:29:22:718 KERNEL/(11256:11273): Se recibe de CPU el proceso PID: <1>
+[INFO] 03:29:22:718 KERNEL/(11256:11273): Se realiza Signal de proceso inexitente: <EL_CUARTO_DE_FRANCIA>
+[INFO] 03:29:22:718 KERNEL/(11256:11273): PID: <1> - Estado Anterior: <Block> - Estado Actual: <Exit>
