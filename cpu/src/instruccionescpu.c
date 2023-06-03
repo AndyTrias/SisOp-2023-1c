@@ -22,11 +22,11 @@ t_instruccion* fetch(t_ctx *ctx)
 	return instruccion_nueva;
 }
 
-void decode(t_instruccion* instruccion, int retraso)
+void decode(t_instruccion* instruccion)
 {
 	if (instruccion->operacion == SET)
 	{
-		usleep(retraso * 1000);
+		usleep(TIEMPO_RETARDO*1000);
 	}
 }
 
@@ -138,7 +138,7 @@ void ciclo_de_instruccion(t_ctx *ctx)
 	while (ctx != NULL && ctx->program_counter <= ctx->cant_instrucciones)	{
 		instruccion_actual = fetch(ctx);
 		log_info(LOGGER_CPU, "Instruccion nº%d: %d", ctx->program_counter, instruccion_actual->operacion);
-		decode(instruccion_actual, TIEMPO_RETARDO);
+		decode(instruccion_actual);
 		int cod_op = execute(instruccion_actual, ctx);
 
 		// Devuelve 0 si debe seguir ejecutando

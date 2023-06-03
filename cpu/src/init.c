@@ -14,6 +14,7 @@ void inicializar_conexiones(int *conexion_memoria, t_config* config, t_log* logg
 
 void inicializar_variables_globales(t_config* config) {
 
+    LOGGER_CPU = iniciar_logger("./logs/cpu.log", "CPU");
     TIEMPO_RETARDO = atoi(config_get_string_value(config, "RETARDO_INSTRUCCION"));
 
 }

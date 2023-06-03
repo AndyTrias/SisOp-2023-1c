@@ -2,10 +2,10 @@
 void conectar_consola(int socket_servidor)
 {
     log_info(LOGGER_KERNEL, "Esperando conexiones de consolas...");
+    pthread_t hilo_consola; 
     
     while (1)
     {
-        pthread_t hilo_consola; 
         int socket_consola = esperar_cliente(socket_servidor);
         log_info(LOGGER_KERNEL, "Se conecto una consola");
         pthread_create(&hilo_consola, NULL, (void *) enviado_de_consola, &socket_consola);

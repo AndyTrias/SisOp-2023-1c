@@ -14,8 +14,10 @@
 extern t_log* LOGGER_CPU;
 extern int TIEMPO_RETARDO;
 
-void ciclo_de_instruccion(t_ctx* ctx);
-char* obtenerRegistro(t_registros* registros, const char*);
+void ciclo_de_instruccion(t_ctx* );
+char* obtenerRegistro(t_registros* , const char*);
+t_instruccion* fetch(t_ctx *);
+void decode(t_instruccion* );
 
 
 #endif
