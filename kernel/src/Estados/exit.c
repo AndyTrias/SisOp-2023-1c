@@ -13,4 +13,5 @@ void terminar_proceso(t_pcb *proceso){
     free(paquete);
     
     sem_post(&GRADO_MULTIPROGRAMACION);
+    EJECUTANDO= ceder_proceso_a_exec();
 }

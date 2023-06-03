@@ -42,7 +42,7 @@ void definir_accion(int cod_op, t_pcb *proceso){
         cambio_de_estado(proceso->contexto.PID,"Exec","Exit");
         log_info(LOGGER_KERNEL, "Finaliza el proceso <%d> - Motivo: <SUCCESS>",proceso->contexto.PID);
         terminar_proceso(proceso);
-        EJECUTANDO= ceder_proceso_a_exec();
+        
         break;
     case WAIT:
         wait(proceso);
