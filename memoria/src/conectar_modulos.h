@@ -6,10 +6,9 @@
     #include <utils/conexiones.h>
     #include <utils/mensajes.h>
 
-    extern t_log* logger_memoria;
+    extern t_log* LOGGER_MEMORIA;
 
     void conectar_modulos(int);
     void nuevo_modulo(int*);
-    void iterator(char*);
 
 #endif
