@@ -8,7 +8,6 @@
     #include <stdio.h>
     #include <stdlib.h>
     #include "estructuras.h"
-
-    t_log* LOGGER_MEMORIA;
+    #include "globales.h"
 
 #endif

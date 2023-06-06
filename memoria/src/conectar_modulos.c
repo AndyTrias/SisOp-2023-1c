@@ -18,7 +18,7 @@ void conectar_modulos(int socket_servidor) {
             case 1:
                 log_info(LOGGER_MEMORIA, "Se conecto el kernel");
                 socket_kernel = socket_cliente;
-                pthread_create(&hilo_kernel, NULL, (void *) nuevo_modulo, &socket_kernel);
+                pthread_create(&hilo_kernel, NULL, (void *) recibir_kernel, &socket_kernel);
                 pthread_join(hilo_kernel, NULL);
                 break;
             case 2:
@@ -30,6 +30,45 @@ void conectar_modulos(int socket_servidor) {
         }
     }
 
+}
+
+void recibir_kernel(int* socket_modulo) {
+    while(1) {
+        int cod_op = recibir_operacion(*socket_modulo);
+        switch(cod_op) {
+            case CREAR_TABLA_SEGMENTOS:
+                log_info(LOGGER_MEMORIA, "Se recibio un CREAR_TABLA_SEGMENTOS");
+                t_paquete *paquete = crear_paquete(TABLA_SEGMENTOS);
+                t_list *tabla_segmentos = crear_tabla_segmentos();
+                serializar_tabla_segmentos(tabla_segmentos, paquete);
+                enviar_paquete(paquete, *socket_modulo);
+                break;
+            case CREATE_SEGMENT:
+                log_info(LOGGER_MEMORIA, "Se recibio un CREATE_SEGMENT");
+                t_ctx *ctx = recibir_paquete_kernel(*socket_modulo);
+                
+
+                break;
+            
+            case -1:
+                log_info(LOGGER_MEMORIA, "Se desconecto un modulo");
+                return;
+            
+            default:
+                log_error(LOGGER_MEMORIA, "Operacion desconocida");
+                return;
+        }
+    }
+}
+
+t_ctx* recibir_paquete_kernel(int socket_kernel)
+{
+    int size;
+    void *buffer = recibir_buffer(&size, socket_kernel);
+
+    t_ctx *ctx = deserializar_contexto(buffer);
+
+    return ctx;
 }
 
 void nuevo_modulo(int* socket_modulo) {

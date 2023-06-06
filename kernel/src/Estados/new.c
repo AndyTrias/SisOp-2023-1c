@@ -26,9 +26,9 @@ t_pcb *crear_pcb(t_list* instrucciones, int socket_consola){
 }
 
 void nuevo_proceso(t_list* instrucciones, int socket_consola){ 
-    t_pcb *proceso = crear_pcb(instrucciones, socket_consola);
-    
-    agregar_a_lista_new(proceso);
+  t_pcb *proceso = crear_pcb(instrucciones, socket_consola);
+  
+  agregar_a_lista_new(proceso);
     
 }
 
@@ -37,4 +37,3 @@ void nuevo_proceso(t_list* instrucciones, int socket_consola){
 t_pcb *get_proceso_desde_new(){ 
     return sacar_de_lista_new(0); 
 }
-
