@@ -1,0 +1,88 @@
+[INFO] 18:54:43:742 CONSOLA/(3625:3625): Tamanio del bloque: 64
+[INFO] 18:54:43:742 CONSOLA/(3625:3625): Cantidad de bloques: 65536
+[INFO] 18:54:43:743 CONSOLA/(3625:3625): Tamaño del bitmap: 524288
+[INFO] 18:56:56:385 CONSOLA/(3974:3974): Tamanio del bloque: 64
+[INFO] 18:56:56:386 CONSOLA/(3974:3974): Cantidad de bloques: 65536
+[ERROR] 18:56:56:391 CONSOLA/(3974:3974): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 18:56:56:391 CONSOLA/(3974:3974): Esperando kernel....
+[INFO] 18:57:10:381 CONSOLA/(4138:4138): Tamanio del bloque: 64
+[INFO] 18:57:10:381 CONSOLA/(4138:4138): Cantidad de bloques: 65536
+[ERROR] 18:57:10:392 CONSOLA/(4138:4138): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 18:57:10:393 CONSOLA/(4138:4138): Esperando kernel....
+[INFO] 18:57:54:155 CONSOLA/(4335:4335): Tamanio del bloque: 64
+[INFO] 18:57:54:156 CONSOLA/(4335:4335): Cantidad de bloques: 65536
+[INFO] 18:59:19:199 CONSOLA/(4602:4602): Tamanio del bloque: 64
+[INFO] 18:59:19:199 CONSOLA/(4602:4602): Cantidad de bloques: 65536
+[INFO] 18:59:43:398 CONSOLA/(4802:4802): Tamanio del bloque: 64
+[INFO] 18:59:43:399 CONSOLA/(4802:4802): Cantidad de bloques: 65536
+[INFO] 19:00:01:981 CONSOLA/(5004:5004): Tamanio del bloque: 64
+[INFO] 19:00:01:982 CONSOLA/(5004:5004): Cantidad de bloques: 65536
+[INFO] 19:02:22:185 CONSOLA/(5281:5281): Tamanio del bloque: 64
+[INFO] 19:02:22:185 CONSOLA/(5281:5281): Cantidad de bloques: 65536
+[INFO] 19:02:36:869 CONSOLA/(5480:5480): Tamanio del bloque: 64
+[INFO] 19:02:36:869 CONSOLA/(5480:5480): Cantidad de bloques: 65536
+[INFO] 19:02:50:975 CONSOLA/(5670:5670): Tamanio del bloque: 64
+[INFO] 19:02:50:976 CONSOLA/(5670:5670): Cantidad de bloques: 65536
+[INFO] 19:04:26:833 CONSOLA/(5869:5869): Tamanio del bloque: 64
+[INFO] 19:04:26:833 CONSOLA/(5869:5869): Cantidad de bloques: 65536
+[ERROR] 19:04:26:833 CONSOLA/(5869:5869): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 19:04:26:833 CONSOLA/(5869:5869): Esperando kernel....
+[INFO] 19:05:30:119 CONSOLA/(6115:6115): Tamanio del bloque: 64
+[INFO] 19:05:30:119 CONSOLA/(6115:6115): Cantidad de bloques: 65536
+[INFO] 19:05:30:119 CONSOLA/(6115:6115): Bitmap 200: 0
+[ERROR] 19:05:30:119 CONSOLA/(6115:6115): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 19:05:30:119 CONSOLA/(6115:6115): Esperando kernel....
+[INFO] 19:06:41:494 CONSOLA/(6477:6477): Tamanio del bloque: 64
+[INFO] 19:06:41:497 CONSOLA/(6477:6477): Cantidad de bloques: 65536
+[INFO] 19:06:41:497 CONSOLA/(6477:6477): Bitmap 200: 0
+[INFO] 19:06:41:497 CONSOLA/(6477:6477): Bitmap 200: 1
+[ERROR] 19:06:41:497 CONSOLA/(6477:6477): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 19:06:41:498 CONSOLA/(6477:6477): Esperando kernel....
+[INFO] 19:07:54:296 CONSOLA/(6729:6729): Tamanio del bloque: 64
+[INFO] 19:07:54:296 CONSOLA/(6729:6729): Cantidad de bloques: 65536
+[INFO] 19:07:54:296 CONSOLA/(6729:6729): Bitmap 200: 0
+[INFO] 19:07:54:296 CONSOLA/(6729:6729): Bitmap 99: 1
+[INFO] 19:07:54:296 CONSOLA/(6729:6729): Bitmap 99: 8
+[ERROR] 19:07:54:296 CONSOLA/(6729:6729): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 19:07:54:296 CONSOLA/(6729:6729): Esperando kernel....
+[INFO] 19:09:05:575 CONSOLA/(6926:6926): Tamanio del bloque: 64
+[INFO] 19:09:05:575 CONSOLA/(6926:6926): Cantidad de bloques: 65536
+[INFO] 19:09:05:575 CONSOLA/(6926:6926): Bitmap 200: 0
+[INFO] 19:09:05:575 CONSOLA/(6926:6926): Bitmap 99: 1
+[INFO] 19:09:05:575 CONSOLA/(6926:6926): Bitmap 99: 65536
+[ERROR] 19:09:05:575 CONSOLA/(6926:6926): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 19:09:05:575 CONSOLA/(6926:6926): Esperando kernel....
+[INFO] 19:10:31:631 CONSOLA/(7190:7190): Tamanio del bloque: 64
+[INFO] 19:10:31:631 CONSOLA/(7190:7190): Cantidad de bloques: 65536
+[INFO] 19:10:31:632 CONSOLA/(7190:7190): Bitmap 200: 0
+[INFO] 19:10:31:632 CONSOLA/(7190:7190): Bitmap 99: 0
+[INFO] 19:10:31:632 CONSOLA/(7190:7190): Bitmap 99: 65536
+[ERROR] 19:10:31:632 CONSOLA/(7190:7190): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 19:10:31:632 CONSOLA/(7190:7190): Esperando kernel....
+[INFO] 19:27:55:562 CONSOLA/(7912:7912): Tamanio del bloque: 64
+[INFO] 19:27:55:562 CONSOLA/(7912:7912): Cantidad de bloques: 65536
+[INFO] 19:28:42:968 CONSOLA/(8125:8125): Tamanio del bloque: 64
+[INFO] 19:28:42:968 CONSOLA/(8125:8125): Cantidad de bloques: 65536
+[INFO] 19:29:07:094 CONSOLA/(8301:8301): Tamanio del bloque: 64
+[INFO] 19:29:07:094 CONSOLA/(8301:8301): Cantidad de bloques: 65536
+[INFO] 19:29:07:099 CONSOLA/(8301:8301): Se creo un bitmap de 524288 bytes
+[ERROR] 19:29:07:100 CONSOLA/(8301:8301): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 19:29:07:100 CONSOLA/(8301:8301): Esperando kernel....
+[INFO] 19:32:14:013 CONSOLA/(8564:8564): Se creo un bitmap de 8192 bytes
+[ERROR] 19:32:14:013 CONSOLA/(8564:8564): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 19:32:14:013 CONSOLA/(8564:8564): Esperando kernel....
+[INFO] 19:33:07:276 CONSOLA/(8836:8836): Se creo un bitmap de 65536 bits
+[ERROR] 19:33:07:276 CONSOLA/(8836:8836): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 19:33:07:276 CONSOLA/(8836:8836): Esperando kernel....
+[INFO] 19:52:25:612 CONSOLA/(10601:10601): Se creo un bitmap de 65536 bits
+[ERROR] 19:52:25:612 CONSOLA/(10601:10601): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 19:52:25:612 CONSOLA/(10601:10601): Esperando kernel....
+[INFO] 19:53:54:155 CONSOLA/(10811:10811): Se creo un bitmap de 65536 bits
+[ERROR] 19:53:54:155 CONSOLA/(10811:10811): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 19:53:54:155 CONSOLA/(10811:10811): Esperando kernel....
+[INFO] 19:55:00:896 CONSOLA/(11048:11048): Se creo un bitmap de 65536 bits
+[ERROR] 19:55:00:896 CONSOLA/(11048:11048): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 19:55:00:896 CONSOLA/(11048:11048): Esperando kernel....
+[INFO] 19:56:13:285 CONSOLA/(11271:11271): Se creo un bitmap de 65536 bits
+[ERROR] 19:56:13:286 CONSOLA/(11271:11271): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 19:56:13:286 CONSOLA/(11271:11271): Esperando kernel....

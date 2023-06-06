@@ -4,12 +4,13 @@
     #include <utils/logs.h>
     #include <utils/conexiones.h>
     #include <utils/configs.h>
-    #include <init.h>
+    
     #include <stdio.h>
     #include <stdlib.h>
-    #include "conectar_kernel.h"
+    #include <unistd.h>
+    
+    #include <init.h>
     #include "globales.h"
-    #include <sys/mman.h>
-    #include <commons/bitarray.h>
+    #include "conectar_kernel.h"
 
 #endif

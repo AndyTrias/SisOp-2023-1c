@@ -1,6 +1,8 @@
 # Generated files
 bin/
 obj/
+bloques/bitmap.dat
+
 
 # Eclipse files
 RemoteSystemsTempFiles/
