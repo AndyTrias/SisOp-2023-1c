@@ -57,7 +57,7 @@ void recibir_kernel(int* socket_modulo) {
             case CREATE_SEGMENT:
                 log_info(LOGGER_MEMORIA, "Se recibio un CREATE_SEGMENT");
                 t_ctx *ctx = recibir_paquete_kernel(*socket_modulo);
-                
+                int id_segmento = crear_segmento(ctx->motivos_desalojo->parametros[0], ctx->motivos_desalojo->parametros[1]);
 
                 break;
             
