@@ -322,17 +322,6 @@ t_registros deserealizar_registros(void *buffer, int*desplazamiento)
     return registros;
 }
 
-void serializar_tabla_segmentos(t_list* tabla_segmentos, t_paquete* paquete){
-	int cant_segmentos = list_size(tabla_segmentos);
-    agregar_a_paquete_dato_serializado(paquete, &cant_segmentos, sizeof(int));
-    for (int i = 0; i < cant_segmentos; i++) {
-        t_segmento* segmento = list_get(tabla_segmentos, i);
-        agregar_a_paquete_dato_serializado(paquete, &(segmento->id_segmento), sizeof(int));
-        agregar_a_paquete_dato_serializado(paquete, &(segmento->base), sizeof(int));
-        agregar_a_paquete_dato_serializado(paquete, &(segmento->tamanio), sizeof(int));
-    }
-}
-
 t_list* deserializar_tabla_segmentos(void* buffer, int* desplazamiento){
     t_list* tabla_segmentos = list_create();
     int cant_segmentos;

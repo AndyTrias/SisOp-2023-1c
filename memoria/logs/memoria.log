@@ -137,3 +137,53 @@
 [INFO] 01:01:45:035 MEMORIA/(38062:38218): Me llego el mensaje: Hola soy la CPU
 [INFO] 01:01:49:755 MEMORIA/(38062:38062): Se conecto el kernel
 [INFO] 01:02:00:182 MEMORIA/(38062:38218): Se desconecto un modulo
+[INFO] 21:13:12:611 MEMORIA/(2707:2707): Se creo el espacio contiguo de memoria
+[INFO] 21:13:12:611 MEMORIA/(2707:2707): Se creo el hueco inicial de tamanio 3968
+[INFO] 21:13:12:611 MEMORIA/(2707:2707): Esperando conexiones de modulos...
+[INFO] 21:13:23:355 MEMORIA/(2707:2707): Se conecto el cpu
+[INFO] 21:13:23:355 MEMORIA/(2707:2880): Me llego el mensaje: Hola soy la CPU
+[INFO] 21:13:29:838 MEMORIA/(2707:2707): Se conecto el kernel
+[INFO] 21:13:49:413 MEMORIA/(2707:2880): Se desconecto un modulo
+[INFO] 21:17:01:646 MEMORIA/(3886:3886): Se creo el espacio contiguo de memoria
+[INFO] 21:17:01:646 MEMORIA/(3886:3886): Se creo el hueco inicial de tamanio 3968
+[INFO] 21:17:01:646 MEMORIA/(3886:3886): Esperando conexiones de modulos...
+[INFO] 21:17:06:444 MEMORIA/(3886:3886): Se conecto el cpu
+[INFO] 21:17:06:445 MEMORIA/(3886:4020): Me llego el mensaje: Hola soy la CPU
+[INFO] 21:17:12:069 MEMORIA/(3886:3886): Se conecto el kernel
+[INFO] 21:17:22:549 MEMORIA/(3886:4020): Se desconecto un modulo
+[INFO] 21:17:35:718 MEMORIA/(3886:4230): Se desconecto un modulo
+[INFO] 21:18:00:288 MEMORIA/(4841:4841): Se creo el espacio contiguo de memoria
+[INFO] 21:18:00:288 MEMORIA/(4841:4841): Se creo el hueco inicial de tamanio 3968
+[INFO] 21:18:00:288 MEMORIA/(4841:4841): Esperando conexiones de modulos...
+[INFO] 21:18:05:766 MEMORIA/(4841:4841): Se conecto el cpu
+[INFO] 21:18:05:766 MEMORIA/(4841:4973): Me llego el mensaje: Hola soy la CPU
+[INFO] 21:18:10:814 MEMORIA/(4841:4841): Se conecto el kernel
+[INFO] 21:18:17:347 MEMORIA/(4841:5159): Se recibio un CREAR_TABLA_SEGMENTOS
+[INFO] 21:21:34:304 MEMORIA/(5725:5725): Se creo el espacio contiguo de memoria
+[INFO] 21:21:34:304 MEMORIA/(5725:5725): Se creo el hueco inicial de tamanio 3968
+[INFO] 21:21:34:304 MEMORIA/(5725:5725): Esperando conexiones de modulos...
+[INFO] 21:21:41:470 MEMORIA/(5725:5725): Se conecto el cpu
+[INFO] 21:21:41:471 MEMORIA/(5725:5901): Me llego el mensaje: Hola soy la CPU
+[INFO] 21:21:47:836 MEMORIA/(5725:5725): Se conecto el kernel
+[INFO] 21:22:11:350 MEMORIA/(5725:6123): Se recibio un CREAR_TABLA_SEGMENTOS
+[INFO] 21:23:12:451 MEMORIA/(6697:6697): Se creo el espacio contiguo de memoria
+[INFO] 21:23:12:452 MEMORIA/(6697:6697): Se creo el hueco inicial de tamanio 3968
+[INFO] 21:23:12:452 MEMORIA/(6697:6697): Esperando conexiones de modulos...
+[INFO] 21:23:17:894 MEMORIA/(6697:6697): Se conecto el cpu
+[INFO] 21:23:17:894 MEMORIA/(6697:6871): Me llego el mensaje: Hola soy la CPU
+[INFO] 21:23:23:504 MEMORIA/(6697:6697): Se conecto el kernel
+[INFO] 21:23:54:837 MEMORIA/(6697:7071): Se recibio un CREAR_TABLA_SEGMENTOS
+[INFO] 21:26:45:086 MEMORIA/(8138:8138): Se creo el espacio contiguo de memoria
+[INFO] 21:26:45:086 MEMORIA/(8138:8138): Se creo el hueco inicial de tamanio 3968
+[INFO] 21:26:45:086 MEMORIA/(8138:8138): Esperando conexiones de modulos...
+[INFO] 21:26:51:252 MEMORIA/(8138:8138): Se conecto el cpu
+[INFO] 21:26:51:253 MEMORIA/(8138:8313): Me llego el mensaje: Hola soy la CPU
+[INFO] 21:26:59:286 MEMORIA/(8138:8138): Se conecto el kernel
+[INFO] 21:27:09:120 MEMORIA/(8138:8538): Se recibio un CREAR_TABLA_SEGMENTOS
+[INFO] 21:28:18:758 MEMORIA/(9247:9247): Se creo el espacio contiguo de memoria
+[INFO] 21:28:18:758 MEMORIA/(9247:9247): Se creo el hueco inicial de tamanio 3968
+[INFO] 21:28:18:758 MEMORIA/(9247:9247): Esperando conexiones de modulos...
+[INFO] 21:28:24:817 MEMORIA/(9247:9247): Se conecto el cpu
+[INFO] 21:28:24:817 MEMORIA/(9247:9423): Me llego el mensaje: Hola soy la CPU
+[INFO] 21:28:29:395 MEMORIA/(9247:9247): Se conecto el kernel
+[INFO] 21:28:48:084 MEMORIA/(9247:9573): Se recibio un CREAR_TABLA_SEGMENTOS

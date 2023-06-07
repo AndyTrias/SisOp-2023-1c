@@ -273,3 +273,39 @@
 [INFO] 01:01:45:035 CPU/(38205:38205): Esperando kernel....
 [INFO] 01:01:49:755 CPU/(38205:38205): Se conecto el kernel
 [ERROR] 01:02:00:181 CPU/(38205:38205): Operacion desconocida
+[INFO] 21:13:23:354 CPU/(2876:2876): Se conecto al servidor 127.0.0.1:8002
+[INFO] 21:13:23:355 CPU/(2876:2876): Esperando kernel....
+[INFO] 21:13:29:837 CPU/(2876:2876): Se conecto el kernel
+[ERROR] 21:13:49:413 CPU/(2876:2876): Operacion desconocida
+[INFO] 21:17:06:444 CPU/(4016:4016): Se conecto al servidor 127.0.0.1:8002
+[INFO] 21:17:06:444 CPU/(4016:4016): Esperando kernel....
+[INFO] 21:17:12:068 CPU/(4016:4016): Se conecto el kernel
+[ERROR] 21:17:22:549 CPU/(4016:4016): Operacion desconocida
+[INFO] 21:18:05:766 CPU/(4968:4968): Se conecto al servidor 127.0.0.1:8002
+[INFO] 21:18:05:766 CPU/(4968:4968): Esperando kernel....
+[INFO] 21:18:10:814 CPU/(4968:4968): Se conecto el kernel
+[INFO] 21:21:41:470 CPU/(5892:5892): Se conecto al servidor 127.0.0.1:8002
+[INFO] 21:21:41:470 CPU/(5892:5892): Esperando kernel....
+[INFO] 21:21:47:836 CPU/(5892:5892): Se conecto el kernel
+[INFO] 21:23:17:893 CPU/(6863:6863): Se conecto al servidor 127.0.0.1:8002
+[INFO] 21:23:17:893 CPU/(6863:6863): Esperando kernel....
+[INFO] 21:23:23:504 CPU/(6863:6863): Se conecto el kernel
+[INFO] 21:24:29:079 CPU/(6863:6863): Se desconecto el kernel
+[INFO] 21:26:51:252 CPU/(8308:8308): Se conecto al servidor 127.0.0.1:8002
+[INFO] 21:26:51:252 CPU/(8308:8308): Esperando kernel....
+[INFO] 21:26:59:286 CPU/(8308:8308): Se conecto el kernel
+[INFO] 21:27:36:338 CPU/(8308:8308): Se recibio un contexto del kernel
+[INFO] 21:27:36:338 CPU/(8308:8308): Comenzando ciclo con nuevo CTX...
+[INFO] 21:27:36:338 CPU/(8308:8308): Program Counter: 0
+[INFO] 21:27:36:339 CPU/(8308:8308): Instruccion nº1: 6
+[INFO] 21:27:36:339 CPU/(8308:8308): PID: 0  -Ejecutando: 6 - 1 128
+[INFO] 21:27:36:340 CPU/(8308:8308): Se recibio un contexto del kernel
+[INFO] 21:27:36:340 CPU/(8308:8308): Comenzando ciclo con nuevo CTX...
+[INFO] 21:27:36:340 CPU/(8308:8308): Program Counter: 1
+[INFO] 21:27:36:340 CPU/(8308:8308): Instruccion nº1: 14
+[INFO] 21:27:36:340 CPU/(8308:8308): PID: 0  -Ejecutando: 14
+[INFO] 21:28:13:620 CPU/(8308:8308): Se desconecto el kernel
+[INFO] 21:28:24:817 CPU/(9418:9418): Se conecto al servidor 127.0.0.1:8002
+[INFO] 21:28:24:817 CPU/(9418:9418): Esperando kernel....
+[INFO] 21:28:29:395 CPU/(9418:9418): Se conecto el kernel
+[INFO] 21:30:31:633 CPU/(9418:9418): Se desconecto el kernel

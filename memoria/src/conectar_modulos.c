@@ -32,6 +32,17 @@ void conectar_modulos(int socket_servidor) {
 
 }
 
+
+void serializar_tabla_segmentos(t_list* tabla_segmentos, t_paquete* paquete){
+    agregar_a_paquete_dato_serializado(paquete, &CONFIG->cant_segmentos, sizeof(int));
+    for (int i = 0; i < CONFIG->cant_segmentos; i++) {
+        t_segmento* segmento = list_get(tabla_segmentos, i);
+        agregar_a_paquete_dato_serializado(paquete, &(segmento->id_segmento), sizeof(int));
+        agregar_a_paquete_dato_serializado(paquete, &(segmento->base), sizeof(int));
+        agregar_a_paquete_dato_serializado(paquete, &(segmento->tamanio), sizeof(int));
+    }
+}
+
 void recibir_kernel(int* socket_modulo) {
     while(1) {
         int cod_op = recibir_operacion(*socket_modulo);
