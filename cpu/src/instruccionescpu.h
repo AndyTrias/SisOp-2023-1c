@@ -13,6 +13,7 @@
 
 extern t_log* LOGGER_CPU;
 extern int TIEMPO_RETARDO;
+extern int TAM_MAX_SEGMENTO;
 
 void ciclo_de_instruccion(t_ctx* );
 char* obtenerRegistro(t_registros* , const char*);

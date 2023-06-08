@@ -1,4 +1,5 @@
 #include "exec.h"
+
 void reemplazar_proceso(t_pcb *nuevo_pcb){
     EJECUTANDO = nuevo_pcb;
 }
@@ -42,18 +43,22 @@ void definir_accion(int cod_op, t_pcb *proceso){
         cambio_de_estado(proceso->contexto.PID,"Exec","Exit");
         log_info(LOGGER_KERNEL, "Finaliza el proceso <%d> - Motivo: <SUCCESS>",proceso->contexto.PID);
         terminar_proceso(proceso);
-        
         break;
     case WAIT:
         wait(proceso);
         break;
-
     case SIGNAL:
         signal(proceso);
         break;
     case IO:
         io(proceso);
         break;
+    case F_OPEN:
+        crear_abrir_archivo(proceso);
+    case F_SEEK:
+        break;
+    case F_CLOSE:
+        cerrar_archivo(proceso);
     default:
         log_info(LOGGER_KERNEL, "No implementamos esta función");
         break;

@@ -7,5 +7,5 @@ int SOCKET_MEMORIA;
 
 
 int TIEMPO_RETARDO;
-
+int TAM_MAX_SEGMENTO;
 

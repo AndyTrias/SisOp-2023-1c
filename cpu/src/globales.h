@@ -11,6 +11,7 @@
 
 
     extern int TIEMPO_RETARDO;
+    extern int TAM_MAX_SEGMENTO;
 
 
 #endif

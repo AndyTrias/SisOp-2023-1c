@@ -16,5 +16,5 @@ void inicializar_variables_globales(t_config* config) {
 
     LOGGER_CPU = iniciar_logger("./logs/cpu.log", "CPU");
     TIEMPO_RETARDO = atoi(config_get_string_value(config, "RETARDO_INSTRUCCION"));
-
+    TAM_MAX_SEGMENTO = atoi(config_get_string_value(config, "TAM_MAX_SEGMENTO"));
 }
