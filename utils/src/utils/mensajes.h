@@ -21,7 +21,9 @@ typedef enum
     DESALOJAR,
     BLOQUEAR,
     TERMINAR,
-    PETICION
+    PETICION,
+    CREAR_TABLA_SEGMENTOS,
+    TABLA_SEGMENTOS
 } op_code;
 
 typedef enum
@@ -65,6 +67,12 @@ typedef struct
     t_buffer *buffer;
 } t_paquete;
 
+typedef struct {
+    int id_segmento;
+    int base;
+    int tamanio;
+} t_segmento;
+
 // Funciones del tp0
 t_paquete *crear_paquete(int);
 void crear_buffer(t_paquete *);
@@ -74,7 +82,6 @@ int recibir_operacion(int);
 char* recibir_mensaje(int);
 void agregar_a_paquete_dato_serializado(t_paquete *, void *, int);
 void enviar_paquete(t_paquete *, int);
-void *recibir_paquete(int, int*);
 void* recibir_buffer(int* , int);
 
 
@@ -86,7 +93,7 @@ void serializar_registros(t_registros *, t_paquete *);
 t_ctx *deserializar_contexto(void *);
 t_registros deserealizar_registros(void *, int*);
 t_instruccion* deserealizar_instruccion(void*, int* );
-
+t_list* deserializar_tabla_segmentos(void* , int* );
 
 
 

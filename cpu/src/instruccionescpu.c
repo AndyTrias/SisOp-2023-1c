@@ -100,6 +100,11 @@ op_code execute(t_instruccion* instruccion_actual, t_ctx *ctx)
 	case IO:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s ", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0]);
 		return IO;
+	case CREATE_SEGMENT:
+		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
+		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[0]);
+		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[1]);
+		return CREATE_SEGMENT;
 	/*
 	case MOV_OUT:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
@@ -116,8 +121,7 @@ op_code execute(t_instruccion* instruccion_actual, t_ctx *ctx)
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0]);
 	case F_TRUNCATE:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
-	case CREATE_SEGMENT:
-		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
+	
 	case F_WRITE:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
 	case F_READ:

@@ -1,18 +1,28 @@
 #include "ready.h"
 
+t_list* recibir_tabla_segmentos(int socket_cliente){
+    int size;
+    void* buffer = recibir_buffer(&size, socket_cliente);
+
+    int desplazamiento = 0;
+    
+    t_list* tabla_segmentos = deserializar_tabla_segmentos(buffer, &desplazamiento);
+
+    free(buffer);
+
+    return tabla_segmentos;
+}
+
 void admitir_proceso()
 {
     t_pcb * proceso_en_new = sacar_de_lista_new(0);
     agregar_a_lista_ready(proceso_en_new);
 
-    enviar_mensaje("Dame la tabla de segmentos inicial", SOCKET_MEMORIA);
-    // guardar la tabla de segmentos en el pcb
+    enviar_paquete(crear_paquete(CREAR_TABLA_SEGMENTOS), SOCKET_MEMORIA);
+    int cod_op = recibir_operacion(SOCKET_MEMORIA);
+    t_list* tabla_segmentos = recibir_tabla_segmentos(SOCKET_MEMORIA);
+    proceso_en_new->tabla_segmentos = tabla_segmentos;
 
-    // Lo hizo copilot
-    // t_paquete* paquete = recibir_paquete(SOCKET_MEMORIA);
-    // nuevo->contexto.segmentos = deserializar_tabla_segmentos(paquete->data);
-    // free(paquete->data);
-    // free(paquete);
 }
 
 t_pcb *get_proceso_por_fifo()

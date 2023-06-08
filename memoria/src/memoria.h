@@ -7,7 +7,7 @@
     #include <conectar_modulos.h>
     #include <stdio.h>
     #include <stdlib.h>
-
-    t_log* logger_memoria;
+    #include "estructuras.h"
+    #include "globales.h"
 
 #endif

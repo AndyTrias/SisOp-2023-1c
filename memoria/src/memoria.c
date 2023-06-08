@@ -7,14 +7,15 @@ int main(int argc, char *argv[]) {
         exit(1);
     }
 
-    logger_memoria = iniciar_logger("./logs/memoria.log", "MEMORIA");
+    LOGGER_MEMORIA = iniciar_logger("./logs/memoria.log", "MEMORIA");
     t_config* config = iniciar_config(argv[1]);
+    iniciar_estructuras(config);
     
     char *puerto_escucha = config_get_string_value(config, "PUERTO_ESCUCHA");
     int socket_servidor = crear_servidor(IP, puerto_escucha);
     conectar_modulos(socket_servidor);
 
-    terminar_programa(logger_memoria, config);
+    terminar_programa(LOGGER_MEMORIA, config);
 
     return 0;
 }
