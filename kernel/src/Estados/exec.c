@@ -59,6 +59,9 @@ void definir_accion(int cod_op, t_pcb *proceso){
         break;
     case F_CLOSE:
         cerrar_archivo(proceso);
+    case CREATE_SEGMENT:
+        crear_segmento(proceso);
+        break;
     default:
         log_info(LOGGER_KERNEL, "No implementamos esta función");
         break;
@@ -101,4 +104,13 @@ void estimado_prox_rafaga(){
     EJECUTANDO->estimado_prox_rafaga= proxima_rafaga;
 
     log_info(LOGGER_KERNEL,"Se realizo el estimado de proxima rafaga para el PID: <%d>, nuevo estimado: %f",EJECUTANDO->contexto.PID,EJECUTANDO->estimado_prox_rafaga);
+}
+
+void crear_segmento(t_pcb *proceso){
+    // enviar a memoria CREATE_SEGMENT con sus 2 parametros (id del segmento y tamanio)
+
+    t_paquete *paquete = crear_paquete(CREATE_SEGMENT);
+    serializar_contexto(&proceso->contexto, paquete);
+    enviar_paquete(paquete, SOCKET_MEMORIA);
+
 }

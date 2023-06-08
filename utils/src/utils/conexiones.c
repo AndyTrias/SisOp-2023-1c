@@ -17,6 +17,9 @@ int crear_conexion(char *ip, char* puerto)
 	                    server_info->ai_socktype,
 	                    server_info->ai_protocol);
 
+	int val = 1;
+	setsockopt(socket_cliente, SOL_SOCKET, SO_REUSEADDR, &val, sizeof(val));
+
 	if (connect(socket_cliente, server_info->ai_addr, server_info->ai_addrlen) == -1){
 		return -1;
 	}
@@ -56,6 +59,9 @@ int crear_servidor(char *ip, char* puerto)
 	getaddrinfo(ip, puerto, &hints, &servinfo);
 
 	socket_servidor = socket(servinfo->ai_family, servinfo->ai_socktype, servinfo->ai_protocol);
+
+	int val = 1;
+	setsockopt(socket_servidor, SOL_SOCKET, SO_REUSEADDR, &val, sizeof(val));
 
 	bind(socket_servidor, servinfo->ai_addr, servinfo->ai_addrlen);
 

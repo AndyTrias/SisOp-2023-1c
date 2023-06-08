@@ -322,4 +322,20 @@ t_registros deserealizar_registros(void *buffer, int*desplazamiento)
     return registros;
 }
 
-
+t_list* deserializar_tabla_segmentos(void* buffer, int* desplazamiento){
+    t_list* tabla_segmentos = list_create();
+    int cant_segmentos;
+    memcpy(&cant_segmentos, buffer + *desplazamiento, sizeof(int));
+    *desplazamiento += sizeof(int);
+    for (int i = 0; i < cant_segmentos; i++) {
+        t_segmento* segmento = malloc(sizeof(t_segmento));
+        memcpy(&segmento->id_segmento, buffer + *desplazamiento, sizeof(int));
+        *desplazamiento += sizeof(int);
+        memcpy(&segmento->base, buffer + *desplazamiento, sizeof(int));
+        *desplazamiento += sizeof(int);
+        memcpy(&segmento->tamanio, buffer + *desplazamiento, sizeof(int));
+        *desplazamiento += sizeof(int);
+        list_add(tabla_segmentos, segmento);
+    }
+    return tabla_segmentos;
+}
