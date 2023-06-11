@@ -65,39 +65,3 @@
 [INFO] 03:29:22:718 CPU/(11137:11137): Instruccion nº2: 10
 [INFO] 03:29:22:718 CPU/(11137:11137): PID: 1  -Ejecutando: 10 - EL_CUARTO_DE_FRANCIA
 [INFO] 03:29:52:141 CPU/(11137:11137): Se desconecto el kernel
-[INFO] 01:29:12:789 CPU/(15140:15140): Se conecto al servidor 127.0.0.1:8002
-[INFO] 01:29:12:790 CPU/(15140:15140): Esperando kernel....
-[INFO] 01:29:18:090 CPU/(15140:15140): Se conecto el kernel
-[INFO] 01:30:32:278 CPU/(15140:15140): Se desconecto el kernel
-[INFO] 01:30:40:181 CPU/(16259:16259): Se conecto al servidor 127.0.0.1:8002
-[INFO] 01:30:40:181 CPU/(16259:16259): Esperando kernel....
-[INFO] 01:30:45:092 CPU/(16259:16259): Se conecto el kernel
-[INFO] 01:31:22:830 CPU/(16259:16259): Se desconecto el kernel
-[INFO] 01:31:35:242 CPU/(17089:17089): Se conecto al servidor 127.0.0.1:8002
-[INFO] 01:31:35:242 CPU/(17089:17089): Esperando kernel....
-[INFO] 01:31:39:160 CPU/(17089:17089): Se conecto el kernel
-[INFO] 01:34:29:904 CPU/(17089:17089): Se desconecto el kernel
-[INFO] 01:34:44:949 CPU/(18110:18110): Se conecto al servidor 127.0.0.1:8002
-[INFO] 01:34:44:949 CPU/(18110:18110): Esperando kernel....
-[INFO] 01:34:49:161 CPU/(18110:18110): Se conecto el kernel
-[INFO] 01:37:34:152 CPU/(18110:18110): Se desconecto el kernel
-[ERROR] 01:38:37:509 CPU/(18967:18967): No se pudo conectar al servidor 127.0.0.1:8002
-[INFO] 01:38:37:509 CPU/(18967:18967): Esperando kernel....
-[INFO] 01:38:47:706 CPU/(19261:19261): Se conecto al servidor 127.0.0.1:8002
-[INFO] 01:38:47:706 CPU/(19261:19261): Esperando kernel....
-[INFO] 01:38:51:429 CPU/(19261:19261): Se conecto el kernel
-[INFO] 01:39:51:556 CPU/(19261:19261): Se desconecto el kernel
-[INFO] 01:41:08:288 CPU/(20345:20345): Se conecto al servidor 127.0.0.1:8002
-[INFO] 01:41:08:288 CPU/(20345:20345): Esperando kernel....
-[INFO] 01:42:15:018 CPU/(20345:20345): Se conecto el kernel
-[INFO] 01:42:25:419 CPU/(20345:20345): Se recibio un contexto del kernel
-[INFO] 01:42:25:419 CPU/(20345:20345): Comenzando ciclo con nuevo CTX...
-[INFO] 01:42:25:419 CPU/(20345:20345): Program Counter: 0
-[INFO] 01:42:25:420 CPU/(20345:20345): Instruccion nº1: 11
-[INFO] 01:42:25:420 CPU/(20345:20345): PID: 0  -Ejecutando: 11 - ARCHIVO
-[INFO] 01:42:38:096 CPU/(20345:20345): Se recibio un contexto del kernel
-[INFO] 01:42:38:096 CPU/(20345:20345): Comenzando ciclo con nuevo CTX...
-[INFO] 01:42:38:096 CPU/(20345:20345): Program Counter: 1
-[INFO] 01:42:38:097 CPU/(20345:20345): Instruccion nº2: 12
-[INFO] 01:42:38:097 CPU/(20345:20345): PID: 0  -Ejecutando: 12 - ARCHIVO
-[INFO] 01:43:27:820 CPU/(20345:20345): Se desconecto el kernel

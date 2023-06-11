@@ -111,7 +111,6 @@ void crear_segmento(t_pcb *proceso){
 
     t_paquete *paquete = crear_paquete(CREATE_SEGMENT);
     serializar_contexto(&proceso->contexto, paquete);
-    serializar_tabla_segmentos(proceso->contexto.tabla_segmentos, paquete, proceso->contexto.tabla_segmentos->elements_count);
     enviar_paquete(paquete, SOCKET_MEMORIA);
 
 }
