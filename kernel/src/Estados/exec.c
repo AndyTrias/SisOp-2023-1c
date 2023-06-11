@@ -82,8 +82,10 @@ void recibir_de_cpu(int conexion_cpu){
     
     int size;
     void* buffer = recibir_buffer(&size, conexion_cpu);
+    int* desplazamiento = malloc(sizeof(int));
+    *desplazamiento = 0;
     
-    t_ctx * ctx = deserializar_contexto(buffer);
+    t_ctx * ctx = deserializar_contexto(buffer, desplazamiento);
 
     reemplazar_ctx(ctx);
 
@@ -109,8 +111,17 @@ void estimado_prox_rafaga(){
 void crear_segmento(t_pcb *proceso){
     // enviar a memoria CREATE_SEGMENT con sus 2 parametros (id del segmento y tamanio)
 
-    t_paquete *paquete = crear_paquete(CREATE_SEGMENT);
+    t_paquete *paquete = crear_paquete(CREAR_SEGMENTO);
     serializar_contexto(&proceso->contexto, paquete);
     enviar_paquete(paquete, SOCKET_MEMORIA);
 
+    int cod_op = recibir_operacion(SOCKET_MEMORIA);
+    t_segmento* segmento = list_get(proceso->tabla_segmentos, atoi(proceso->contexto.motivos_desalojo->parametros[0]));
+    
+    int size;
+    void* buffer = recibir_buffer(&size, SOCKET_MEMORIA);
+    memcpy(&segmento->base, buffer, sizeof(int));
+    segmento->tamanio = atoi(proceso->contexto.motivos_desalojo->parametros[1]);
+
+    log_info(LOGGER_KERNEL, "PID: <%d> - Crear Segmento - Id: <%d> - Tamaño: <%d>", proceso->contexto.PID, segmento->id_segmento, segmento->tamanio);
 }

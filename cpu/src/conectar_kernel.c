@@ -38,7 +38,10 @@ t_ctx* recibir_paquete_kernel(int socket_kernel)
     int size;
     void *buffer = recibir_buffer(&size, socket_kernel);
 
-    t_ctx *ctx = deserializar_contexto(buffer);
+    int *desplazamiento = malloc(sizeof(int));
+    *desplazamiento = 0;
+
+    t_ctx *ctx = deserializar_contexto(buffer, desplazamiento);
 
     return ctx;
 }

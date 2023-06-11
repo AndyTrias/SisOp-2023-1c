@@ -24,6 +24,8 @@ void iniciar_estructuras(t_config* config){
     hueco->id_hueco = 0;
     hueco->base = tam_segmento_0;
     hueco->tamanio = tam_memoria - tam_segmento_0;
+    hueco->base = SEGMENTO_0->base + tam_segmento_0;
+    hueco->libre = true;
     list_add(LISTA_HUECOS, hueco);
     log_info(LOGGER_MEMORIA, "Se creo el hueco inicial de tamanio %d", hueco->tamanio);
 

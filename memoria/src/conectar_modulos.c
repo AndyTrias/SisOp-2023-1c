@@ -32,42 +32,36 @@ void conectar_modulos(int socket_servidor) {
 
 }
 
-
-void serializar_tabla_segmentos(t_list* tabla_segmentos, t_paquete* paquete){
-    agregar_a_paquete_dato_serializado(paquete, &CONFIG->cant_segmentos, sizeof(int));
-    for (int i = 0; i < CONFIG->cant_segmentos; i++) {
-        t_segmento* segmento = list_get(tabla_segmentos, i);
-        agregar_a_paquete_dato_serializado(paquete, &(segmento->id_segmento), sizeof(int));
-        agregar_a_paquete_dato_serializado(paquete, &(segmento->base), sizeof(int));
-        agregar_a_paquete_dato_serializado(paquete, &(segmento->tamanio), sizeof(int));
-    }
-}
-
-void recibir_kernel(int* socket_modulo) {
-    while(1) {
+void recibir_kernel(int *socket_modulo)
+{
+    while (1)
+    {
         int cod_op = recibir_operacion(*socket_modulo);
-        switch(cod_op) {
-            case CREAR_TABLA_SEGMENTOS:
-                log_info(LOGGER_MEMORIA, "Se recibio un CREAR_TABLA_SEGMENTOS");
-                t_paquete *paquete = crear_paquete(TABLA_SEGMENTOS);
-                t_list *tabla_segmentos = crear_tabla_segmentos();
-                serializar_tabla_segmentos(tabla_segmentos, paquete);
-                enviar_paquete(paquete, *socket_modulo);
-                break;
-            case CREATE_SEGMENT:
-                log_info(LOGGER_MEMORIA, "Se recibio un CREATE_SEGMENT");
-                t_ctx *ctx = recibir_paquete_kernel(*socket_modulo);
-                int id_segmento = crear_segmento(ctx->motivos_desalojo->parametros[0], ctx->motivos_desalojo->parametros[1]);
+        switch (cod_op)
+        {
+        case CREAR_TABLA_SEGMENTOS:
+            log_info(LOGGER_MEMORIA, "Se recibio un CREAR_TABLA_SEGMENTOS");
+            t_paquete *paquete = crear_paquete(CREAR_TABLA_SEGMENTOS);
+            t_list *tabla_segmentos = crear_tabla_segmentos();
+            serializar_tabla_segmentos(tabla_segmentos, paquete, CONFIG->cant_segmentos);
+            enviar_paquete(paquete, *socket_modulo);
+            break;
+        case CREAR_SEGMENTO:
+            log_info(LOGGER_MEMORIA, "Se recibio un CREATE_SEGMENT");
+            t_ctx *ctx = recibir_paquete_kernel(*socket_modulo);
+            void* base = crear_segmento(atoi(ctx->motivos_desalojo->parametros[0]), atoi(ctx->motivos_desalojo->parametros[1]));
+            paquete = crear_paquete(CREAR_SEGMENTO);
+            agregar_a_paquete_dato_serializado(paquete, &base, sizeof(void*));
+            enviar_paquete(paquete, *socket_modulo);
+            break;
 
-                break;
-            
-            case -1:
-                log_info(LOGGER_MEMORIA, "Se desconecto un modulo");
-                return;
-            
-            default:
-                log_error(LOGGER_MEMORIA, "Operacion desconocida");
-                return;
+        case -1:
+            log_info(LOGGER_MEMORIA, "Se desconecto un modulo");
+            return;
+
+        default:
+            log_error(LOGGER_MEMORIA, "Operacion desconocida");
+            break;
         }
     }
 }
@@ -77,8 +71,12 @@ t_ctx* recibir_paquete_kernel(int socket_kernel)
     int size;
     void *buffer = recibir_buffer(&size, socket_kernel);
 
-    t_ctx *ctx = deserializar_contexto(buffer);
-
+    int *desplazamiento = malloc(sizeof(int));
+    *desplazamiento = 0; 
+    
+    t_ctx* ctx = deserializar_contexto(buffer, desplazamiento);
+    
+    free(desplazamiento);
     return ctx;
 }
 
