@@ -86,3 +86,42 @@
 [INFO] 19:56:13:285 CONSOLA/(11271:11271): Se creo un bitmap de 65536 bits
 [ERROR] 19:56:13:286 CONSOLA/(11271:11271): No se pudo conectar al servidor 127.0.0.1:8002
 [INFO] 19:56:13:286 CONSOLA/(11271:11271): Esperando kernel....
+[INFO] 02:52:20:774 CONSOLA/(3707:3707): Bit 2: 0
+[INFO] 02:52:20:776 CONSOLA/(3707:3707): Se creo un bitmap de 65536 bits
+[ERROR] 02:52:20:779 CONSOLA/(3707:3707): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 02:52:20:780 CONSOLA/(3707:3707): Esperando kernel....
+[INFO] 02:52:44:520 CONSOLA/(3860:3860): Bit 2: 1
+[INFO] 02:52:44:520 CONSOLA/(3860:3860): Se creo un bitmap de 65536 bits
+[ERROR] 02:52:44:521 CONSOLA/(3860:3860): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 02:52:44:521 CONSOLA/(3860:3860): Esperando kernel....
+[INFO] 02:53:01:183 CONSOLA/(4031:4031): Bit 2: 1
+[INFO] 02:53:01:183 CONSOLA/(4031:4031): Se creo un bitmap de 65536 bits
+[ERROR] 02:53:01:183 CONSOLA/(4031:4031): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 02:53:01:184 CONSOLA/(4031:4031): Esperando kernel....
+[INFO] 02:53:22:626 CONSOLA/(4206:4206): Bit 2: 1
+[INFO] 02:53:22:626 CONSOLA/(4206:4206): Bit 3: 0
+[INFO] 02:53:22:626 CONSOLA/(4206:4206): Se creo un bitmap de 65536 bits
+[ERROR] 02:53:22:626 CONSOLA/(4206:4206): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 02:53:22:626 CONSOLA/(4206:4206): Esperando kernel....
+[ERROR] 02:58:53:306 CONSOLA/(4437:4437): Error al abrir el archivo del bitmap
+[ERROR] 02:59:27:534 CONSOLA/(4605:4605): Error al abrir el archivo del bitmap
+[INFO] 03:27:40:714 CONSOLA/(5880:5880): Se creo un bitmap de 65536 bits
+[ERROR] 03:27:40:715 CONSOLA/(5880:5880): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 03:27:40:715 CONSOLA/(5880:5880): Esperando kernel....
+[ERROR] 03:31:45:774 CONSOLA/(6524:6524): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 03:31:45:776 CONSOLA/(6524:6524): Esperando kernel....
+[ERROR] 03:32:19:106 CONSOLA/(6815:6815): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 03:32:19:107 CONSOLA/(6815:6815): Esperando kernel....
+[INFO] 03:32:41:329 CONSOLA/(6984:6984): Se creo un bitmap de 65536 bits
+[ERROR] 03:32:41:329 CONSOLA/(6984:6984): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 03:32:41:329 CONSOLA/(6984:6984): Esperando kernel....
+[ERROR] 04:21:15:074 CONSOLA/(10943:10943): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 04:21:15:075 CONSOLA/(10943:10943): Esperando kernel....
+[INFO] 04:21:38:847 CONSOLA/(11296:11296): Se creo un bitmap de 65536 bits
+[INFO] 04:22:04:147 CONSOLA/(11438:11438): Se creo un bitmap de 65536 bits
+[INFO] 04:26:25:670 CONSOLA/(11835:11835): Se creo un archvo de bitmaps de 65536 bits
+[INFO] 04:26:25:674 CONSOLA/(11835:11835): Se creo un archivo de bloques de 4194304 bytes
+[ERROR] 04:26:25:674 CONSOLA/(11835:11835): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 04:26:25:674 CONSOLA/(11835:11835): Esperando kernel....
+[ERROR] 04:26:36:231 CONSOLA/(11993:11993): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 04:26:36:231 CONSOLA/(11993:11993): Esperando kernel....
