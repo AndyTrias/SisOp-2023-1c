@@ -134,6 +134,7 @@ void serializar_contexto(t_ctx *ctx, t_paquete *paquete)
 	agregar_a_paquete_dato_serializado(paquete, &ctx->program_counter, sizeof(ctx->program_counter));
 	agregar_a_paquete_dato_serializado(paquete, &ctx->cant_instrucciones, sizeof(ctx->cant_instrucciones));
 
+	
 	// Serializo Instrucciones
 	serializar_instrucciones(ctx->instrucciones, paquete);
 
@@ -150,6 +151,7 @@ void serializar_contexto(t_ctx *ctx, t_paquete *paquete)
 		agregar_a_paquete_dato_serializado(paquete, &tamanio_parametro, sizeof(int));
 		agregar_a_paquete_dato_serializado(paquete, ctx->motivos_desalojo->parametros[i], tamanio_parametro);		
 	}
+
 	
 }
 

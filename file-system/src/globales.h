@@ -8,4 +8,6 @@
 
     extern t_bitarray* BITMAP_BLOQUES;
 
+    extern FILE * ARCHIVO_BLOQUES;
+
 #endif
