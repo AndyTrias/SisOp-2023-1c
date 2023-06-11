@@ -34,8 +34,6 @@ void conectar_modulos(int socket_servidor)
     }
 }
 
-
-
 void recibir_kernel(int *socket_modulo)
 {
     while (1)
@@ -45,16 +43,18 @@ void recibir_kernel(int *socket_modulo)
         {
         case CREAR_TABLA_SEGMENTOS:
             log_info(LOGGER_MEMORIA, "Se recibio un CREAR_TABLA_SEGMENTOS");
-            t_paquete *paquete = crear_paquete(TABLA_SEGMENTOS);
+            t_paquete *paquete = crear_paquete(CREAR_TABLA_SEGMENTOS);
             t_list *tabla_segmentos = crear_tabla_segmentos();
             serializar_tabla_segmentos(tabla_segmentos, paquete, CONFIG->cant_segmentos);
             enviar_paquete(paquete, *socket_modulo);
             break;
-        case CREATE_SEGMENT:
+        case CREAR_SEGMENTO:
             log_info(LOGGER_MEMORIA, "Se recibio un CREATE_SEGMENT");
             t_ctx *ctx = recibir_paquete_kernel(*socket_modulo);
-            crear_segmento(ctx->motivos_desalojo->parametros[0], ctx->motivos_desalojo->parametros[1], ctx->tabla_segmentos);
-            
+            void* base = crear_segmento(atoi(ctx->motivos_desalojo->parametros[0]), atoi(ctx->motivos_desalojo->parametros[1]));
+            paquete = crear_paquete(CREAR_SEGMENTO);
+            agregar_a_paquete_dato_serializado(paquete, &base, sizeof(void*));
+            enviar_paquete(paquete, *socket_modulo);
             break;
 
         case -1:
@@ -63,18 +63,22 @@ void recibir_kernel(int *socket_modulo)
 
         default:
             log_error(LOGGER_MEMORIA, "Operacion desconocida");
-            return;
+            break;
         }
     }
 }
 
-t_ctx *recibir_paquete_kernel(int socket_kernel)
+t_ctx* recibir_paquete_kernel(int socket_kernel)
 {
     int size;
     void *buffer = recibir_buffer(&size, socket_kernel);
 
-    t_ctx *ctx = deserializar_contexto(buffer);
-
+    int *desplazamiento = malloc(sizeof(int));
+    *desplazamiento = 0; 
+    
+    t_ctx* ctx = deserializar_contexto(buffer, desplazamiento);
+    
+    free(desplazamiento);
     return ctx;
 }
 

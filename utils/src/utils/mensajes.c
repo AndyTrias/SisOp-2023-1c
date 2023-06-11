@@ -210,52 +210,48 @@ void serializar_tabla_segmentos(t_list *tabla_segmentos, t_paquete *paquete, int
     }
 }
 
-t_ctx *deserializar_contexto(void *buffer)
+t_ctx *deserializar_contexto(void *buffer, int *desplazamiento)
 {
 	t_ctx *ctx = malloc(sizeof(t_ctx));
-	int desplazamiento = 0;
-
 
 	// Deserializo PID, PC y cant_instrucciones
-	
 
-
-// Aveces ocurre Segment Fault cuando cierras mal o algo así los módulos
-	memcpy(&ctx->PID, buffer + desplazamiento, sizeof(ctx->PID));
-	desplazamiento += sizeof(ctx->PID);
-	memcpy(&ctx->program_counter, buffer + desplazamiento, sizeof(ctx->program_counter));
-	desplazamiento += sizeof(ctx->program_counter);
-	memcpy(&ctx->cant_instrucciones, buffer + desplazamiento, sizeof(ctx->cant_instrucciones));
-	desplazamiento += sizeof(ctx->cant_instrucciones);
+	// Aveces ocurre Segment Fault cuando cierras mal o algo así los módulos
+	memcpy(&ctx->PID, buffer + *desplazamiento, sizeof(ctx->PID));
+	*desplazamiento += sizeof(ctx->PID);
+	memcpy(&ctx->program_counter, buffer + *desplazamiento, sizeof(ctx->program_counter));
+	*desplazamiento += sizeof(ctx->program_counter);
+	memcpy(&ctx->cant_instrucciones, buffer + *desplazamiento, sizeof(ctx->cant_instrucciones));
+	*desplazamiento += sizeof(ctx->cant_instrucciones);
 
 	// Deserializo Instrucciones
 	ctx->instrucciones = list_create();
 
 	for (int i = 0; i < ctx->cant_instrucciones; i++)
 	{
-		list_add(ctx->instrucciones, deserealizar_instruccion(buffer, &desplazamiento));
+		list_add(ctx->instrucciones, deserealizar_instruccion(buffer, desplazamiento));
 
 	}
 
 	// Deserializo Registros
-	ctx->registros = deserealizar_registros(buffer, &desplazamiento); 
+	ctx->registros = deserealizar_registros(buffer, desplazamiento); 
 
 
 	// deserializo motivos de desalojo
 	ctx->motivos_desalojo = malloc(sizeof(t_parametros_variables));
-	memcpy(&ctx->motivos_desalojo->cantidad_parametros, buffer + desplazamiento, sizeof(int));
-	desplazamiento += sizeof(int);
+	memcpy(&ctx->motivos_desalojo->cantidad_parametros, buffer + *desplazamiento, sizeof(int));
+	*desplazamiento += sizeof(int);
 
 	ctx->motivos_desalojo->parametros = malloc(sizeof(char *) * ctx->motivos_desalojo->cantidad_parametros);
 	for (int i = 0; i < ctx->motivos_desalojo->cantidad_parametros; i++)
 	{
 		int tamanio_parametro;
-		memcpy(&tamanio_parametro, buffer + desplazamiento, sizeof(int));
-		desplazamiento += sizeof(int);
+		memcpy(&tamanio_parametro, buffer + *desplazamiento, sizeof(int));
+		*desplazamiento += sizeof(int);
 
 		ctx->motivos_desalojo->parametros[i] = malloc(tamanio_parametro);
-		memcpy(ctx->motivos_desalojo->parametros[i], buffer + desplazamiento, tamanio_parametro);
-		desplazamiento += tamanio_parametro;
+		memcpy(ctx->motivos_desalojo->parametros[i], buffer + *desplazamiento, tamanio_parametro);
+		*desplazamiento += tamanio_parametro;
 	}
 
 	free(buffer);

@@ -18,8 +18,9 @@
     } t_configuracion;
 
     typedef struct {
-        int base; 
+        void* base; 
         int tamanio;
+        bool libre;
     } t_hueco;
 
     extern t_log* LOGGER_MEMORIA;

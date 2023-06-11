@@ -101,3 +101,622 @@
 [INFO] 01:42:39:621 KERNEL/(20804:20810): Se recibe de CPU el proceso PID: <0>
 [INFO] 01:42:39:621 KERNEL/(20804:20810): PID: 0 - Cerrar Archivo: ARCHIVO
 [INFO] 01:42:39:621 KERNEL/(20804:20810): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 16:35:32:907 KERNEL/(6430:6430): Se conecto al servidor 127.0.0.1:8001
+[INFO] 16:35:32:907 KERNEL/(6430:6430): Se conecto al servidor 127.0.0.1:8002
+[ERROR] 16:35:32:907 KERNEL/(6430:6430): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 16:35:32:908 KERNEL/(6430:6435): Inicia el planificador de largo plazo
+[INFO] 16:35:32:908 KERNEL/(6430:6430): Esperando conexiones de consolas...
+[INFO] 16:35:32:908 KERNEL/(6430:6437): Inicia el planificador de corto plazo
+[INFO] 16:35:38:171 KERNEL/(6430:6430): Se conecto una consola
+[INFO] 16:35:38:171 KERNEL/(6430:6657): Se recibieron instrucciones de una consola
+[INFO] 16:35:38:172 KERNEL/(6430:6657): Se Crea el proceso <0> en NEW
+[INFO] 16:35:38:172 KERNEL/(6430:6435): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 16:35:38:172 KERNEL/(6430:6435): Se mando la señal al planificador de corto plazo
+[INFO] 16:35:38:172 KERNEL/(6430:6437): Empieza ciclo de instruccion
+[INFO] 16:35:38:172 KERNEL/(6430:6437): Se envia el proceso PID: <0> al CPU
+[INFO] 16:35:41:063 KERNEL/(6430:6437): Se recibe de CPU el proceso PID: <0>
+[INFO] 16:35:41:063 KERNEL/(6430:6437): PID: 0 - Abrir Archivo: ARCHIVO
+[INFO] 16:35:41:063 KERNEL/(6430:6437): Se creó el archivo
+[INFO] 16:35:41:063 KERNEL/(6430:6437): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 16:35:41:063 KERNEL/(6430:6437): Se envia el proceso PID: <0> al CPU
+[INFO] 16:35:41:063 KERNEL/(6430:6437): Se recibe de CPU el proceso PID: <0>
+[INFO] 16:35:41:063 KERNEL/(6430:6437): PID: 0 - Cerrar Archivo: ARCHIVO
+[INFO] 16:35:41:063 KERNEL/(6430:6437): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:18:24:197 KERNEL/(10343:10343): Se conecto al servidor 127.0.0.1:8001
+[INFO] 17:18:24:198 KERNEL/(10343:10343): Se conecto al servidor 127.0.0.1:8002
+[ERROR] 17:18:24:198 KERNEL/(10343:10343): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 17:18:24:198 KERNEL/(10343:10361): Inicia el planificador de largo plazo
+[INFO] 17:18:24:198 KERNEL/(10343:10343): Esperando conexiones de consolas...
+[INFO] 17:18:24:198 KERNEL/(10343:10363): Inicia el planificador de corto plazo
+[INFO] 17:18:29:148 KERNEL/(10343:10343): Se conecto una consola
+[INFO] 17:18:29:149 KERNEL/(10343:10563): Se recibieron instrucciones de una consola
+[INFO] 17:18:29:149 KERNEL/(10343:10563): Se Crea el proceso <0> en NEW
+[INFO] 17:18:29:149 KERNEL/(10343:10361): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:18:29:149 KERNEL/(10343:10361): Se mando la señal al planificador de corto plazo
+[INFO] 17:18:29:149 KERNEL/(10343:10363): Empieza ciclo de instruccion
+[INFO] 17:18:29:149 KERNEL/(10343:10363): Se envia el proceso PID: <0> al CPU
+[INFO] 17:18:29:150 KERNEL/(10343:10363): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:18:29:150 KERNEL/(10343:10363): PID: 0 - Abrir Archivo: ARCHIVO
+[INFO] 17:18:29:150 KERNEL/(10343:10363): Se creó el archivo
+[INFO] 17:18:29:150 KERNEL/(10343:10363): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:18:29:150 KERNEL/(10343:10363): Se envia el proceso PID: <0> al CPU
+[INFO] 17:18:29:150 KERNEL/(10343:10363): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:18:29:150 KERNEL/(10343:10363): PID: 0 - Cerrar Archivo: ARCHIVO
+[INFO] 17:18:29:150 KERNEL/(10343:10363): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:18:51:767 KERNEL/(10343:10363): Se envia el proceso PID: <0> al CPU
+[INFO] 17:18:51:767 KERNEL/(10343:10363): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:18:51:767 KERNEL/(10343:10363): PID: <0> - Estado Anterior: <Exec> - Estado Actual: <Exit>
+[INFO] 17:18:51:767 KERNEL/(10343:10363): Finaliza el proceso <0> - Motivo: <SUCCESS>
+[INFO] 17:19:35:620 KERNEL/(11297:11297): Se conecto al servidor 127.0.0.1:8001
+[INFO] 17:19:35:620 KERNEL/(11297:11297): Se conecto al servidor 127.0.0.1:8002
+[ERROR] 17:19:35:620 KERNEL/(11297:11297): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 17:19:35:620 KERNEL/(11297:11316): Inicia el planificador de largo plazo
+[INFO] 17:19:35:621 KERNEL/(11297:11318): Inicia el planificador de corto plazo
+[INFO] 17:19:35:622 KERNEL/(11297:11297): Esperando conexiones de consolas...
+[INFO] 17:19:41:152 KERNEL/(11297:11297): Se conecto una consola
+[INFO] 17:19:41:153 KERNEL/(11297:11510): Se recibieron instrucciones de una consola
+[INFO] 17:19:41:153 KERNEL/(11297:11510): Se Crea el proceso <0> en NEW
+[INFO] 17:19:41:153 KERNEL/(11297:11316): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:19:46:013 KERNEL/(11297:11316): Se mando la señal al planificador de corto plazo
+[INFO] 17:19:46:013 KERNEL/(11297:11318): Empieza ciclo de instruccion
+[INFO] 17:19:46:013 KERNEL/(11297:11318): Se envia el proceso PID: <0> al CPU
+[INFO] 17:19:46:013 KERNEL/(11297:11318): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:19:46:013 KERNEL/(11297:11318): PID: 0 - Abrir Archivo: ARCHIVO
+[INFO] 17:19:46:013 KERNEL/(11297:11318): Se creó el archivo
+[INFO] 17:19:46:013 KERNEL/(11297:11318): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:19:46:013 KERNEL/(11297:11318): Se envia el proceso PID: <0> al CPU
+[INFO] 17:19:46:014 KERNEL/(11297:11318): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:19:46:014 KERNEL/(11297:11318): PID: 0 - Cerrar Archivo: ARCHIVO
+[INFO] 17:19:46:014 KERNEL/(11297:11318): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:19:46:014 KERNEL/(11297:11318): Se envia el proceso PID: <0> al CPU
+[INFO] 17:19:46:014 KERNEL/(11297:11318): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:19:46:014 KERNEL/(11297:11318): PID: <0> - Estado Anterior: <Exec> - Estado Actual: <Exit>
+[INFO] 17:19:46:014 KERNEL/(11297:11318): Finaliza el proceso <0> - Motivo: <SUCCESS>
+[INFO] 17:22:18:302 KERNEL/(12691:12691): Se conecto al servidor 127.0.0.1:8001
+[INFO] 17:22:18:302 KERNEL/(12691:12691): Se conecto al servidor 127.0.0.1:8002
+[ERROR] 17:22:18:302 KERNEL/(12691:12691): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 17:22:18:303 KERNEL/(12691:12695): Inicia el planificador de largo plazo
+[INFO] 17:22:18:304 KERNEL/(12691:12691): Esperando conexiones de consolas...
+[INFO] 17:22:18:304 KERNEL/(12691:12697): Inicia el planificador de corto plazo
+[INFO] 17:22:27:108 KERNEL/(12691:12691): Se conecto una consola
+[INFO] 17:22:27:108 KERNEL/(12691:12920): Se recibieron instrucciones de una consola
+[INFO] 17:22:27:108 KERNEL/(12691:12920): Se Crea el proceso <0> en NEW
+[INFO] 17:22:27:108 KERNEL/(12691:12695): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:22:32:948 KERNEL/(12691:12695): Se mando la señal al planificador de corto plazo
+[INFO] 17:22:32:948 KERNEL/(12691:12697): Empieza ciclo de instruccion
+[INFO] 17:22:32:949 KERNEL/(12691:12697): Se envia el proceso PID: <0> al CPU
+[INFO] 17:22:32:949 KERNEL/(12691:12697): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:22:32:949 KERNEL/(12691:12697): PID: 0 - Abrir Archivo: ARCHIVO
+[INFO] 17:22:32:949 KERNEL/(12691:12697): Se creó el archivo
+[INFO] 17:22:32:949 KERNEL/(12691:12697): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:22:32:949 KERNEL/(12691:12697): Se envia el proceso PID: <0> al CPU
+[INFO] 17:22:32:949 KERNEL/(12691:12697): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:22:32:949 KERNEL/(12691:12697): PID: 0 - Cerrar Archivo: ARCHIVO
+[INFO] 17:22:32:949 KERNEL/(12691:12697): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:22:32:949 KERNEL/(12691:12697): Se envia el proceso PID: <0> al CPU
+[INFO] 17:22:32:950 KERNEL/(12691:12697): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:22:32:950 KERNEL/(12691:12697): PID: <0> - Estado Anterior: <Exec> - Estado Actual: <Exit>
+[INFO] 17:22:32:950 KERNEL/(12691:12697): Finaliza el proceso <0> - Motivo: <SUCCESS>
+[INFO] 17:23:17:727 KERNEL/(13619:13619): Se conecto al servidor 127.0.0.1:8001
+[INFO] 17:23:17:727 KERNEL/(13619:13619): Se conecto al servidor 127.0.0.1:8002
+[ERROR] 17:23:17:727 KERNEL/(13619:13619): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 17:23:17:728 KERNEL/(13619:13624): Inicia el planificador de largo plazo
+[INFO] 17:23:17:728 KERNEL/(13619:13619): Esperando conexiones de consolas...
+[INFO] 17:23:17:728 KERNEL/(13619:13626): Inicia el planificador de corto plazo
+[INFO] 17:23:22:304 KERNEL/(13619:13619): Se conecto una consola
+[INFO] 17:23:22:304 KERNEL/(13619:13817): Se recibieron instrucciones de una consola
+[INFO] 17:23:22:304 KERNEL/(13619:13817): Se Crea el proceso <0> en NEW
+[INFO] 17:23:22:304 KERNEL/(13619:13624): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:23:25:933 KERNEL/(13619:13624): Se mando la señal al planificador de corto plazo
+[INFO] 17:23:25:933 KERNEL/(13619:13626): Empieza ciclo de instruccion
+[INFO] 17:23:25:933 KERNEL/(13619:13626): Se envia el proceso PID: <0> al CPU
+[INFO] 17:23:25:934 KERNEL/(13619:13626): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:23:25:934 KERNEL/(13619:13626): PID: 0 - Abrir Archivo: ARCHIVO
+[INFO] 17:23:25:934 KERNEL/(13619:13626): Se creó el archivo
+[INFO] 17:23:25:934 KERNEL/(13619:13626): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:23:25:934 KERNEL/(13619:13626): Se envia el proceso PID: <0> al CPU
+[INFO] 17:23:25:934 KERNEL/(13619:13626): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:23:25:934 KERNEL/(13619:13626): PID: 0 - Cerrar Archivo: ARCHIVO
+[INFO] 17:23:25:934 KERNEL/(13619:13626): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:23:25:934 KERNEL/(13619:13626): Se envia el proceso PID: <0> al CPU
+[INFO] 17:23:25:935 KERNEL/(13619:13626): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:23:25:935 KERNEL/(13619:13626): PID: <0> - Estado Anterior: <Exec> - Estado Actual: <Exit>
+[INFO] 17:23:25:935 KERNEL/(13619:13626): Finaliza el proceso <0> - Motivo: <SUCCESS>
+[INFO] 17:28:31:881 KERNEL/(16607:16607): Se conecto al servidor 127.0.0.1:8001
+[INFO] 17:28:31:881 KERNEL/(16607:16607): Se conecto al servidor 127.0.0.1:8002
+[ERROR] 17:28:31:881 KERNEL/(16607:16607): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 17:28:31:881 KERNEL/(16607:16611): Inicia el planificador de largo plazo
+[INFO] 17:28:31:882 KERNEL/(16607:16607): Esperando conexiones de consolas...
+[INFO] 17:28:31:882 KERNEL/(16607:16613): Inicia el planificador de corto plazo
+[INFO] 17:28:36:008 KERNEL/(16607:16607): Se conecto una consola
+[INFO] 17:28:36:009 KERNEL/(16607:16800): Se recibieron instrucciones de una consola
+[INFO] 17:28:36:009 KERNEL/(16607:16800): Se Crea el proceso <0> en NEW
+[INFO] 17:28:36:009 KERNEL/(16607:16611): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:28:40:742 KERNEL/(16607:16611): Se mando la señal al planificador de corto plazo
+[INFO] 17:28:40:742 KERNEL/(16607:16613): Empieza ciclo de instruccion
+[INFO] 17:28:40:742 KERNEL/(16607:16613): Se envia el proceso PID: <0> al CPU
+[INFO] 17:28:40:742 KERNEL/(16607:16613): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:28:40:742 KERNEL/(16607:16613): PID: 0 - Abrir Archivo: ARCHIVO
+[INFO] 17:28:40:742 KERNEL/(16607:16613): Se creó el archivo
+[INFO] 17:28:40:742 KERNEL/(16607:16613): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:28:40:742 KERNEL/(16607:16613): Se envia el proceso PID: <0> al CPU
+[INFO] 17:28:40:742 KERNEL/(16607:16613): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:28:40:742 KERNEL/(16607:16613): PID: 0 - Cerrar Archivo: ARCHIVO
+[INFO] 17:28:40:742 KERNEL/(16607:16613): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:28:55:453 KERNEL/(16607:16613): Se envia el proceso PID: <0> al CPU
+[INFO] 17:28:55:454 KERNEL/(16607:16613): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:28:55:454 KERNEL/(16607:16613): PID: <0> - Estado Anterior: <Exec> - Estado Actual: <Exit>
+[INFO] 17:28:55:454 KERNEL/(16607:16613): Finaliza el proceso <0> - Motivo: <SUCCESS>
+[INFO] 17:29:38:052 KERNEL/(17567:17567): Se conecto al servidor 127.0.0.1:8001
+[INFO] 17:29:38:052 KERNEL/(17567:17567): Se conecto al servidor 127.0.0.1:8002
+[ERROR] 17:29:38:052 KERNEL/(17567:17567): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 17:29:38:053 KERNEL/(17567:17580): Inicia el planificador de largo plazo
+[INFO] 17:29:38:053 KERNEL/(17567:17567): Esperando conexiones de consolas...
+[INFO] 17:29:38:053 KERNEL/(17567:17582): Inicia el planificador de corto plazo
+[INFO] 17:29:40:890 KERNEL/(17567:17567): Se conecto una consola
+[INFO] 17:29:40:891 KERNEL/(17567:17716): Se recibieron instrucciones de una consola
+[INFO] 17:29:40:891 KERNEL/(17567:17716): Se Crea el proceso <0> en NEW
+[INFO] 17:29:40:891 KERNEL/(17567:17580): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:29:44:050 KERNEL/(17567:17580): Se mando la señal al planificador de corto plazo
+[INFO] 17:29:44:050 KERNEL/(17567:17582): Empieza ciclo de instruccion
+[INFO] 17:29:44:051 KERNEL/(17567:17582): Se envia el proceso PID: <0> al CPU
+[INFO] 17:29:44:051 KERNEL/(17567:17582): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:29:44:051 KERNEL/(17567:17582): PID: 0 - Abrir Archivo: ARCHIVO
+[INFO] 17:29:44:051 KERNEL/(17567:17582): Se creó el archivo
+[INFO] 17:29:44:051 KERNEL/(17567:17582): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:29:44:051 KERNEL/(17567:17582): Se envia el proceso PID: <0> al CPU
+[INFO] 17:29:44:051 KERNEL/(17567:17582): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:29:44:051 KERNEL/(17567:17582): PID: 0 - Cerrar Archivo: ARCHIVO
+[INFO] 17:29:44:051 KERNEL/(17567:17582): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:30:05:718 KERNEL/(17567:17582): Se envia el proceso PID: <0> al CPU
+[INFO] 17:30:05:719 KERNEL/(17567:17582): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:30:05:719 KERNEL/(17567:17582): PID: <0> - Estado Anterior: <Exec> - Estado Actual: <Exit>
+[INFO] 17:30:05:719 KERNEL/(17567:17582): Finaliza el proceso <0> - Motivo: <SUCCESS>
+[INFO] 17:31:41:612 KERNEL/(18642:18642): Se conecto al servidor 127.0.0.1:8001
+[INFO] 17:31:41:612 KERNEL/(18642:18642): Se conecto al servidor 127.0.0.1:8002
+[ERROR] 17:31:41:612 KERNEL/(18642:18642): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 17:31:41:613 KERNEL/(18642:18646): Inicia el planificador de largo plazo
+[INFO] 17:31:41:613 KERNEL/(18642:18642): Esperando conexiones de consolas...
+[INFO] 17:31:41:613 KERNEL/(18642:18648): Inicia el planificador de corto plazo
+[INFO] 17:31:45:164 KERNEL/(18642:18642): Se conecto una consola
+[INFO] 17:31:45:165 KERNEL/(18642:18806): Se recibieron instrucciones de una consola
+[INFO] 17:31:45:165 KERNEL/(18642:18806): Se Crea el proceso <0> en NEW
+[INFO] 17:31:45:165 KERNEL/(18642:18646): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:31:45:165 KERNEL/(18642:18646): Se mando la señal al planificador de corto plazo
+[INFO] 17:31:45:165 KERNEL/(18642:18648): Empieza ciclo de instruccion
+[INFO] 17:31:45:165 KERNEL/(18642:18648): Se envia el proceso PID: <0> al CPU
+[INFO] 17:31:45:166 KERNEL/(18642:18648): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:31:45:166 KERNEL/(18642:18648): PID: 0 - Abrir Archivo: ARCHIVO
+[INFO] 17:31:45:166 KERNEL/(18642:18648): Se creó el archivo
+[INFO] 17:31:45:166 KERNEL/(18642:18648): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:31:45:166 KERNEL/(18642:18648): Se envia el proceso PID: <0> al CPU
+[INFO] 17:31:45:166 KERNEL/(18642:18648): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:31:45:166 KERNEL/(18642:18648): PID: 0 - Cerrar Archivo: ARCHIVO
+[INFO] 17:31:45:166 KERNEL/(18642:18648): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:31:48:533 KERNEL/(18642:18648): Se envia el proceso PID: <0> al CPU
+[INFO] 17:31:48:533 KERNEL/(18642:18648): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:31:48:533 KERNEL/(18642:18648): PID: <0> - Estado Anterior: <Exec> - Estado Actual: <Exit>
+[INFO] 17:31:48:533 KERNEL/(18642:18648): Finaliza el proceso <0> - Motivo: <SUCCESS>
+[INFO] 17:32:19:563 KERNEL/(19417:19417): Se conecto al servidor 127.0.0.1:8001
+[INFO] 17:32:19:563 KERNEL/(19417:19417): Se conecto al servidor 127.0.0.1:8002
+[ERROR] 17:32:19:563 KERNEL/(19417:19417): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 17:32:19:565 KERNEL/(19417:19417): Esperando conexiones de consolas...
+[INFO] 17:32:19:565 KERNEL/(19417:19436): Inicia el planificador de largo plazo
+[INFO] 17:32:19:565 KERNEL/(19417:19438): Inicia el planificador de corto plazo
+[INFO] 17:32:23:047 KERNEL/(19417:19417): Se conecto una consola
+[INFO] 17:32:23:049 KERNEL/(19417:19596): Se recibieron instrucciones de una consola
+[INFO] 17:32:23:049 KERNEL/(19417:19596): Se Crea el proceso <0> en NEW
+[INFO] 17:32:23:049 KERNEL/(19417:19436): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:32:23:049 KERNEL/(19417:19436): Se mando la señal al planificador de corto plazo
+[INFO] 17:32:23:049 KERNEL/(19417:19438): Empieza ciclo de instruccion
+[INFO] 17:32:23:049 KERNEL/(19417:19438): Se envia el proceso PID: <0> al CPU
+[INFO] 17:32:23:049 KERNEL/(19417:19438): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:32:23:049 KERNEL/(19417:19438): PID: 0 - Abrir Archivo: ARCHIVO
+[INFO] 17:32:23:049 KERNEL/(19417:19438): Se creó el archivo
+[INFO] 17:32:23:049 KERNEL/(19417:19438): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:32:23:049 KERNEL/(19417:19438): Se envia el proceso PID: <0> al CPU
+[INFO] 17:32:23:049 KERNEL/(19417:19438): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:32:23:049 KERNEL/(19417:19438): PID: 0 - Cerrar Archivo: ARCHIVO
+[INFO] 17:32:23:049 KERNEL/(19417:19438): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:32:23:049 KERNEL/(19417:19438): Se envia el proceso PID: <0> al CPU
+[INFO] 17:32:23:049 KERNEL/(19417:19438): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:32:23:049 KERNEL/(19417:19438): PID: <0> - Estado Anterior: <Exec> - Estado Actual: <Exit>
+[INFO] 17:32:23:049 KERNEL/(19417:19438): Finaliza el proceso <0> - Motivo: <SUCCESS>
+[INFO] 17:34:47:677 KERNEL/(20356:20356): Se conecto al servidor 127.0.0.1:8001
+[INFO] 17:34:47:677 KERNEL/(20356:20356): Se conecto al servidor 127.0.0.1:8002
+[ERROR] 17:34:47:677 KERNEL/(20356:20356): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 17:34:47:678 KERNEL/(20356:20372): Inicia el planificador de largo plazo
+[INFO] 17:34:47:679 KERNEL/(20356:20356): Esperando conexiones de consolas...
+[INFO] 17:34:47:679 KERNEL/(20356:20374): Inicia el planificador de corto plazo
+[INFO] 17:34:51:257 KERNEL/(20356:20356): Se conecto una consola
+[INFO] 17:34:51:258 KERNEL/(20356:20544): Se recibieron instrucciones de una consola
+[INFO] 17:34:51:258 KERNEL/(20356:20544): Se Crea el proceso <0> en NEW
+[INFO] 17:34:51:258 KERNEL/(20356:20372): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:34:51:258 KERNEL/(20356:20372): Se mando la señal al planificador de corto plazo
+[INFO] 17:34:51:258 KERNEL/(20356:20374): Empieza ciclo de instruccion
+[INFO] 17:34:51:258 KERNEL/(20356:20374): Se envia el proceso PID: <0> al CPU
+[INFO] 17:34:51:259 KERNEL/(20356:20374): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:34:51:259 KERNEL/(20356:20374): PID: 0 - Abrir Archivo: ARCHIVO
+[INFO] 17:34:51:259 KERNEL/(20356:20374): Se creó el archivo
+[INFO] 17:34:51:259 KERNEL/(20356:20374): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:34:51:259 KERNEL/(20356:20374): Se envia el proceso PID: <0> al CPU
+[INFO] 17:34:51:259 KERNEL/(20356:20374): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:34:51:259 KERNEL/(20356:20374): PID: 0 - Cerrar Archivo: ARCHIVO
+[INFO] 17:34:51:259 KERNEL/(20356:20374): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:34:51:259 KERNEL/(20356:20374): Se envia el proceso PID: <0> al CPU
+[INFO] 17:34:51:259 KERNEL/(20356:20374): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:34:51:260 KERNEL/(20356:20374): PID: <0> - Estado Anterior: <Exec> - Estado Actual: <Exit>
+[INFO] 17:34:51:260 KERNEL/(20356:20374): Finaliza el proceso <0> - Motivo: <SUCCESS>
+[INFO] 17:35:34:447 KERNEL/(21096:21096): Se conecto al servidor 127.0.0.1:8001
+[INFO] 17:35:34:448 KERNEL/(21096:21096): Se conecto al servidor 127.0.0.1:8002
+[ERROR] 17:35:34:448 KERNEL/(21096:21096): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 17:35:34:449 KERNEL/(21096:21104): Inicia el planificador de largo plazo
+[INFO] 17:35:34:449 KERNEL/(21096:21096): Esperando conexiones de consolas...
+[INFO] 17:35:34:449 KERNEL/(21096:21105): Inicia el planificador de corto plazo
+[INFO] 17:35:38:009 KERNEL/(21096:21096): Se conecto una consola
+[INFO] 17:35:38:010 KERNEL/(21096:21260): Se recibieron instrucciones de una consola
+[INFO] 17:35:38:010 KERNEL/(21096:21260): Se Crea el proceso <0> en NEW
+[INFO] 17:35:38:010 KERNEL/(21096:21104): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:35:38:010 KERNEL/(21096:21104): Se mando la señal al planificador de corto plazo
+[INFO] 17:35:38:010 KERNEL/(21096:21105): Empieza ciclo de instruccion
+[INFO] 17:35:38:010 KERNEL/(21096:21105): Se envia el proceso PID: <0> al CPU
+[INFO] 17:35:38:011 KERNEL/(21096:21105): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:35:38:011 KERNEL/(21096:21105): PID: 0 - Abrir Archivo: ARCHIVO
+[INFO] 17:35:38:011 KERNEL/(21096:21105): Se creó el archivo
+[INFO] 17:35:38:011 KERNEL/(21096:21105): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:35:38:011 KERNEL/(21096:21105): Se envia el proceso PID: <0> al CPU
+[INFO] 17:35:38:011 KERNEL/(21096:21105): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:35:38:011 KERNEL/(21096:21105): PID: 0 - Cerrar Archivo: ARCHIVO
+[INFO] 17:35:38:011 KERNEL/(21096:21105): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:35:38:011 KERNEL/(21096:21105): Se envia el proceso PID: <0> al CPU
+[INFO] 17:35:38:012 KERNEL/(21096:21105): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:35:38:012 KERNEL/(21096:21105): PID: <0> - Estado Anterior: <Exec> - Estado Actual: <Exit>
+[INFO] 17:35:38:012 KERNEL/(21096:21105): Finaliza el proceso <0> - Motivo: <SUCCESS>
+[INFO] 17:36:23:522 KERNEL/(21884:21884): Se conecto al servidor 127.0.0.1:8001
+[INFO] 17:36:23:523 KERNEL/(21884:21884): Se conecto al servidor 127.0.0.1:8002
+[ERROR] 17:36:23:523 KERNEL/(21884:21884): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 17:36:23:523 KERNEL/(21884:21892): Inicia el planificador de largo plazo
+[INFO] 17:36:23:524 KERNEL/(21884:21884): Esperando conexiones de consolas...
+[INFO] 17:36:23:524 KERNEL/(21884:21894): Inicia el planificador de corto plazo
+[INFO] 17:36:26:067 KERNEL/(21884:21884): Se conecto una consola
+[INFO] 17:36:26:067 KERNEL/(21884:22041): Se recibieron instrucciones de una consola
+[INFO] 17:36:26:067 KERNEL/(21884:22041): Se Crea el proceso <0> en NEW
+[INFO] 17:36:26:067 KERNEL/(21884:21892): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:36:26:068 KERNEL/(21884:21892): Se mando la señal al planificador de corto plazo
+[INFO] 17:36:26:068 KERNEL/(21884:21894): Empieza ciclo de instruccion
+[INFO] 17:36:26:068 KERNEL/(21884:21894): Se envia el proceso PID: <0> al CPU
+[INFO] 17:36:26:068 KERNEL/(21884:21894): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:36:26:068 KERNEL/(21884:21894): PID: 0 - Abrir Archivo: ARCHIVO
+[INFO] 17:36:26:068 KERNEL/(21884:21894): Se creó el archivo
+[INFO] 17:36:26:068 KERNEL/(21884:21894): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:36:26:068 KERNEL/(21884:21894): Se envia el proceso PID: <0> al CPU
+[INFO] 17:36:26:068 KERNEL/(21884:21894): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:36:26:068 KERNEL/(21884:21894): PID: 0 - Cerrar Archivo: ARCHIVO
+[INFO] 17:36:26:068 KERNEL/(21884:21894): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:36:26:068 KERNEL/(21884:21894): Se envia el proceso PID: <0> al CPU
+[INFO] 17:36:26:069 KERNEL/(21884:21894): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:36:26:069 KERNEL/(21884:21894): PID: <0> - Estado Anterior: <Exec> - Estado Actual: <Exit>
+[INFO] 17:36:26:069 KERNEL/(21884:21894): Finaliza el proceso <0> - Motivo: <SUCCESS>
+[INFO] 17:40:45:586 KERNEL/(24114:24114): Se conecto al servidor 127.0.0.1:8001
+[INFO] 17:40:45:586 KERNEL/(24114:24114): Se conecto al servidor 127.0.0.1:8002
+[ERROR] 17:40:45:586 KERNEL/(24114:24114): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 17:40:45:586 KERNEL/(24114:24118): Inicia el planificador de largo plazo
+[INFO] 17:40:45:587 KERNEL/(24114:24120): Inicia el planificador de corto plazo
+[INFO] 17:40:45:587 KERNEL/(24114:24114): Esperando conexiones de consolas...
+[INFO] 17:40:49:342 KERNEL/(24114:24114): Se conecto una consola
+[INFO] 17:40:49:342 KERNEL/(24114:24300): Se recibieron instrucciones de una consola
+[INFO] 17:40:49:342 KERNEL/(24114:24300): Se Crea el proceso <0> en NEW
+[INFO] 17:40:49:342 KERNEL/(24114:24118): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:41:01:055 KERNEL/(24114:24118): Se mando la señal al planificador de corto plazo
+[INFO] 17:41:01:055 KERNEL/(24114:24120): Empieza ciclo de instruccion
+[INFO] 17:41:01:055 KERNEL/(24114:24120): Se envia el proceso PID: <0> al CPU
+[INFO] 17:41:43:161 KERNEL/(25182:25182): Se conecto al servidor 127.0.0.1:8001
+[INFO] 17:41:43:161 KERNEL/(25182:25182): Se conecto al servidor 127.0.0.1:8002
+[ERROR] 17:41:43:161 KERNEL/(25182:25182): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 17:41:43:162 KERNEL/(25182:25195): Inicia el planificador de largo plazo
+[INFO] 17:41:43:163 KERNEL/(25182:25182): Esperando conexiones de consolas...
+[INFO] 17:41:43:163 KERNEL/(25182:25197): Inicia el planificador de corto plazo
+[INFO] 17:41:48:900 KERNEL/(25182:25182): Se conecto una consola
+[INFO] 17:41:48:900 KERNEL/(25182:25427): Se recibieron instrucciones de una consola
+[INFO] 17:41:48:900 KERNEL/(25182:25427): Se Crea el proceso <0> en NEW
+[INFO] 17:41:48:900 KERNEL/(25182:25195): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:41:48:900 KERNEL/(25182:25195): Se mando la señal al planificador de corto plazo
+[INFO] 17:41:48:901 KERNEL/(25182:25197): Empieza ciclo de instruccion
+[INFO] 17:41:48:901 KERNEL/(25182:25197): Se envia el proceso PID: <0> al CPU
+[INFO] 17:41:48:901 KERNEL/(25182:25197): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:41:48:901 KERNEL/(25182:25197): PID: 0 - Abrir Archivo: ARCHIVO
+[INFO] 17:41:48:901 KERNEL/(25182:25197): Se creó el archivo
+[INFO] 17:41:48:901 KERNEL/(25182:25197): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:41:48:901 KERNEL/(25182:25197): Se envia el proceso PID: <0> al CPU
+[INFO] 17:41:48:901 KERNEL/(25182:25197): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:41:48:901 KERNEL/(25182:25197): PID: 0 - Cerrar Archivo: ARCHIVO
+[INFO] 17:41:48:901 KERNEL/(25182:25197): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:41:48:901 KERNEL/(25182:25197): Se envia el proceso PID: <0> al CPU
+[INFO] 17:41:48:901 KERNEL/(25182:25197): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:41:48:901 KERNEL/(25182:25197): PID: <0> - Estado Anterior: <Exec> - Estado Actual: <Exit>
+[INFO] 17:41:48:901 KERNEL/(25182:25197): Finaliza el proceso <0> - Motivo: <SUCCESS>
+[INFO] 17:42:51:992 KERNEL/(26039:26039): Se conecto al servidor 127.0.0.1:8001
+[INFO] 17:42:51:992 KERNEL/(26039:26039): Se conecto al servidor 127.0.0.1:8002
+[ERROR] 17:42:51:992 KERNEL/(26039:26039): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 17:42:51:992 KERNEL/(26039:26059): Inicia el planificador de largo plazo
+[INFO] 17:42:51:993 KERNEL/(26039:26039): Esperando conexiones de consolas...
+[INFO] 17:42:51:993 KERNEL/(26039:26060): Inicia el planificador de corto plazo
+[INFO] 17:42:54:712 KERNEL/(26039:26039): Se conecto una consola
+[INFO] 17:42:54:713 KERNEL/(26039:26219): Se recibieron instrucciones de una consola
+[INFO] 17:42:54:713 KERNEL/(26039:26219): Se Crea el proceso <0> en NEW
+[INFO] 17:42:54:713 KERNEL/(26039:26059): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:42:54:713 KERNEL/(26039:26059): Se mando la señal al planificador de corto plazo
+[INFO] 17:42:54:713 KERNEL/(26039:26060): Empieza ciclo de instruccion
+[INFO] 17:42:54:713 KERNEL/(26039:26060): Se envia el proceso PID: <0> al CPU
+[INFO] 17:42:54:713 KERNEL/(26039:26060): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:42:54:713 KERNEL/(26039:26060): PID: 0 - Abrir Archivo: ARCHIVO
+[INFO] 17:42:54:713 KERNEL/(26039:26060): Se creó el archivo
+[INFO] 17:42:54:713 KERNEL/(26039:26060): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:42:54:713 KERNEL/(26039:26060): Se envia el proceso PID: <0> al CPU
+[INFO] 17:42:54:714 KERNEL/(26039:26060): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:42:54:714 KERNEL/(26039:26060): PID: 0 - Cerrar Archivo: ARCHIVO
+[INFO] 17:42:54:714 KERNEL/(26039:26060): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:42:54:714 KERNEL/(26039:26060): Se envia el proceso PID: <0> al CPU
+[INFO] 17:42:54:714 KERNEL/(26039:26060): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:42:54:714 KERNEL/(26039:26060): PID: <0> - Estado Anterior: <Exec> - Estado Actual: <Exit>
+[INFO] 17:42:54:714 KERNEL/(26039:26060): Finaliza el proceso <0> - Motivo: <SUCCESS>
+[INFO] 17:43:20:384 KERNEL/(26764:26764): Se conecto al servidor 127.0.0.1:8001
+[INFO] 17:43:20:384 KERNEL/(26764:26764): Se conecto al servidor 127.0.0.1:8002
+[ERROR] 17:43:20:384 KERNEL/(26764:26764): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 17:43:20:384 KERNEL/(26764:26771): Inicia el planificador de largo plazo
+[INFO] 17:43:20:385 KERNEL/(26764:26764): Esperando conexiones de consolas...
+[INFO] 17:43:20:385 KERNEL/(26764:26773): Inicia el planificador de corto plazo
+[INFO] 17:43:23:009 KERNEL/(26764:26764): Se conecto una consola
+[INFO] 17:43:23:010 KERNEL/(26764:26945): Se recibieron instrucciones de una consola
+[INFO] 17:43:23:010 KERNEL/(26764:26945): Se Crea el proceso <0> en NEW
+[INFO] 17:43:23:010 KERNEL/(26764:26771): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:43:23:010 KERNEL/(26764:26771): Se mando la señal al planificador de corto plazo
+[INFO] 17:43:23:010 KERNEL/(26764:26773): Empieza ciclo de instruccion
+[INFO] 17:43:23:010 KERNEL/(26764:26773): Se envia el proceso PID: <0> al CPU
+[INFO] 17:43:23:011 KERNEL/(26764:26773): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:43:23:011 KERNEL/(26764:26773): PID: 0 - Abrir Archivo: ARCHIVO
+[INFO] 17:43:23:011 KERNEL/(26764:26773): Se creó el archivo
+[INFO] 17:43:23:011 KERNEL/(26764:26773): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:43:23:011 KERNEL/(26764:26773): Se envia el proceso PID: <0> al CPU
+[INFO] 17:43:23:011 KERNEL/(26764:26773): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:43:23:011 KERNEL/(26764:26773): PID: 0 - Cerrar Archivo: ARCHIVO
+[INFO] 17:43:23:011 KERNEL/(26764:26773): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:43:23:011 KERNEL/(26764:26773): Se envia el proceso PID: <0> al CPU
+[INFO] 17:43:23:012 KERNEL/(26764:26773): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:43:23:012 KERNEL/(26764:26773): PID: <0> - Estado Anterior: <Exec> - Estado Actual: <Exit>
+[INFO] 17:43:23:012 KERNEL/(26764:26773): Finaliza el proceso <0> - Motivo: <SUCCESS>
+[INFO] 17:45:26:192 KERNEL/(27723:27723): Se conecto al servidor 127.0.0.1:8001
+[INFO] 17:45:26:192 KERNEL/(27723:27723): Se conecto al servidor 127.0.0.1:8002
+[ERROR] 17:45:26:192 KERNEL/(27723:27723): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 17:45:26:192 KERNEL/(27723:27727): Inicia el planificador de largo plazo
+[INFO] 17:45:26:193 KERNEL/(27723:27723): Esperando conexiones de consolas...
+[INFO] 17:45:26:193 KERNEL/(27723:27729): Inicia el planificador de corto plazo
+[INFO] 17:45:29:545 KERNEL/(27723:27723): Se conecto una consola
+[INFO] 17:45:29:546 KERNEL/(27723:27894): Se recibieron instrucciones de una consola
+[INFO] 17:45:29:546 KERNEL/(27723:27894): Se Crea el proceso <0> en NEW
+[INFO] 17:45:29:546 KERNEL/(27723:27727): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:45:29:546 KERNEL/(27723:27727): Se mando la señal al planificador de corto plazo
+[INFO] 17:45:29:546 KERNEL/(27723:27729): Empieza ciclo de instruccion
+[INFO] 17:45:29:546 KERNEL/(27723:27729): Se envia el proceso PID: <0> al CPU
+[INFO] 17:45:29:546 KERNEL/(27723:27729): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:45:29:546 KERNEL/(27723:27729): PID: 0 - Abrir Archivo: ARCHIVO
+[INFO] 17:45:29:546 KERNEL/(27723:27729): Se creó el archivo
+[INFO] 17:45:29:546 KERNEL/(27723:27729): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:45:29:546 KERNEL/(27723:27729): Se envia el proceso PID: <0> al CPU
+[INFO] 17:45:29:547 KERNEL/(27723:27729): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:45:29:547 KERNEL/(27723:27729): PID: 0 - Cerrar Archivo: ARCHIVO
+[INFO] 17:45:29:547 KERNEL/(27723:27729): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:45:29:547 KERNEL/(27723:27729): Se envia el proceso PID: <0> al CPU
+[INFO] 17:45:29:547 KERNEL/(27723:27729): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:45:29:547 KERNEL/(27723:27729): PID: <0> - Estado Anterior: <Exec> - Estado Actual: <Exit>
+[INFO] 17:45:29:547 KERNEL/(27723:27729): Finaliza el proceso <0> - Motivo: <SUCCESS>
+[INFO] 17:49:04:256 KERNEL/(28957:28957): Se conecto al servidor 127.0.0.1:8001
+[INFO] 17:49:04:256 KERNEL/(28957:28957): Se conecto al servidor 127.0.0.1:8002
+[ERROR] 17:49:04:257 KERNEL/(28957:28957): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 17:49:04:258 KERNEL/(28957:28961): Inicia el planificador de largo plazo
+[INFO] 17:49:04:258 KERNEL/(28957:28957): Esperando conexiones de consolas...
+[INFO] 17:49:04:258 KERNEL/(28957:28963): Inicia el planificador de corto plazo
+[INFO] 17:49:08:083 KERNEL/(28957:28957): Se conecto una consola
+[INFO] 17:49:08:083 KERNEL/(28957:29128): Se recibieron instrucciones de una consola
+[INFO] 17:49:08:083 KERNEL/(28957:29128): Se Crea el proceso <0> en NEW
+[INFO] 17:49:08:083 KERNEL/(28957:28961): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:49:08:083 KERNEL/(28957:28961): Se mando la señal al planificador de corto plazo
+[INFO] 17:49:08:083 KERNEL/(28957:28963): Empieza ciclo de instruccion
+[INFO] 17:49:08:083 KERNEL/(28957:28963): Se envia el proceso PID: <0> al CPU
+[INFO] 17:49:08:084 KERNEL/(28957:28963): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:49:08:084 KERNEL/(28957:28963): PID: 0 - Abrir Archivo: ARCHIVO
+[INFO] 17:49:08:084 KERNEL/(28957:28963): Se creó el archivo
+[INFO] 17:49:08:084 KERNEL/(28957:28963): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:49:08:084 KERNEL/(28957:28963): Se envia el proceso PID: <0> al CPU
+[INFO] 17:49:08:084 KERNEL/(28957:28963): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:49:08:084 KERNEL/(28957:28963): PID: 0 - Cerrar Archivo: ARCHIVO
+[INFO] 17:49:08:084 KERNEL/(28957:28963): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:49:08:084 KERNEL/(28957:28963): Se envia el proceso PID: <0> al CPU
+[INFO] 17:49:08:084 KERNEL/(28957:28963): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:49:08:084 KERNEL/(28957:28963): PID: <0> - Estado Anterior: <Exec> - Estado Actual: <Exit>
+[INFO] 17:49:08:084 KERNEL/(28957:28963): Finaliza el proceso <0> - Motivo: <SUCCESS>
+[INFO] 18:31:22:427 KERNEL/(30037:30037): Se conecto al servidor 127.0.0.1:8001
+[INFO] 18:31:22:427 KERNEL/(30037:30037): Se conecto al servidor 127.0.0.1:8002
+[ERROR] 18:31:22:427 KERNEL/(30037:30037): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 18:31:22:429 KERNEL/(30037:30041): Inicia el planificador de largo plazo
+[INFO] 18:31:22:429 KERNEL/(30037:30037): Esperando conexiones de consolas...
+[INFO] 18:31:22:429 KERNEL/(30037:30043): Inicia el planificador de corto plazo
+[INFO] 18:31:26:262 KERNEL/(30037:30037): Se conecto una consola
+[INFO] 18:31:26:263 KERNEL/(30037:30213): Se recibieron instrucciones de una consola
+[INFO] 18:31:26:263 KERNEL/(30037:30213): Se Crea el proceso <0> en NEW
+[INFO] 18:31:26:263 KERNEL/(30037:30041): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 18:31:26:263 KERNEL/(30037:30041): Se mando la señal al planificador de corto plazo
+[INFO] 18:31:26:263 KERNEL/(30037:30043): Empieza ciclo de instruccion
+[INFO] 18:31:26:263 KERNEL/(30037:30043): Se envia el proceso PID: <0> al CPU
+[INFO] 18:31:26:263 KERNEL/(30037:30043): Se recibe de CPU el proceso PID: <0>
+[INFO] 18:31:26:263 KERNEL/(30037:30043): PID: 0 - Abrir Archivo: ARCHIVO
+[INFO] 18:31:26:263 KERNEL/(30037:30043): Se creó el archivo
+[INFO] 18:31:26:263 KERNEL/(30037:30043): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 18:31:26:263 KERNEL/(30037:30043): Se envia el proceso PID: <0> al CPU
+[INFO] 18:31:26:264 KERNEL/(30037:30043): Se recibe de CPU el proceso PID: <0>
+[INFO] 18:31:26:264 KERNEL/(30037:30043): PID: 0 - Cerrar Archivo: ARCHIVO
+[INFO] 18:31:26:264 KERNEL/(30037:30043): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 18:31:26:264 KERNEL/(30037:30043): Se envia el proceso PID: <0> al CPU
+[INFO] 18:31:26:266 KERNEL/(30037:30043): Se recibe de CPU el proceso PID: <0>
+[INFO] 18:31:26:266 KERNEL/(30037:30043): PID: <0> - Estado Anterior: <Exec> - Estado Actual: <Exit>
+[INFO] 18:31:26:266 KERNEL/(30037:30043): Finaliza el proceso <0> - Motivo: <SUCCESS>
+[INFO] 18:32:18:105 KERNEL/(30767:30767): Se conecto al servidor 127.0.0.1:8001
+[INFO] 18:32:18:105 KERNEL/(30767:30767): Se conecto al servidor 127.0.0.1:8002
+[ERROR] 18:32:18:105 KERNEL/(30767:30767): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 18:32:18:106 KERNEL/(30767:30774): Inicia el planificador de largo plazo
+[INFO] 18:32:18:106 KERNEL/(30767:30776): Inicia el planificador de corto plazo
+[INFO] 18:32:18:106 KERNEL/(30767:30767): Esperando conexiones de consolas...
+[INFO] 18:32:21:787 KERNEL/(30767:30767): Se conecto una consola
+[INFO] 18:32:21:787 KERNEL/(30767:30946): Se recibieron instrucciones de una consola
+[INFO] 18:32:21:787 KERNEL/(30767:30946): Se Crea el proceso <0> en NEW
+[INFO] 18:32:21:787 KERNEL/(30767:30774): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 18:32:21:787 KERNEL/(30767:30774): Se mando la señal al planificador de corto plazo
+[INFO] 18:32:21:787 KERNEL/(30767:30776): Empieza ciclo de instruccion
+[INFO] 18:32:21:787 KERNEL/(30767:30776): Se envia el proceso PID: <0> al CPU
+[INFO] 18:32:21:788 KERNEL/(30767:30776): Se recibe de CPU el proceso PID: <0>
+[INFO] 18:32:21:788 KERNEL/(30767:30776): Se envia el proceso PID: <0> al CPU
+[INFO] 18:32:21:788 KERNEL/(30767:30776): Se recibe de CPU el proceso PID: <0>
+[INFO] 18:32:21:788 KERNEL/(30767:30776): PID: <0> - Estado Anterior: <Exec> - Estado Actual: <Exit>
+[INFO] 18:32:21:788 KERNEL/(30767:30776): Finaliza el proceso <0> - Motivo: <SUCCESS>
+[INFO] 18:33:18:277 KERNEL/(31510:31510): Se conecto al servidor 127.0.0.1:8001
+[INFO] 18:33:18:277 KERNEL/(31510:31510): Se conecto al servidor 127.0.0.1:8002
+[ERROR] 18:33:18:277 KERNEL/(31510:31510): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 18:33:18:278 KERNEL/(31510:31517): Inicia el planificador de largo plazo
+[INFO] 18:33:18:279 KERNEL/(31510:31510): Esperando conexiones de consolas...
+[INFO] 18:33:18:279 KERNEL/(31510:31519): Inicia el planificador de corto plazo
+[INFO] 18:33:20:698 KERNEL/(31510:31510): Se conecto una consola
+[INFO] 18:33:20:698 KERNEL/(31510:31674): Se recibieron instrucciones de una consola
+[INFO] 18:33:20:698 KERNEL/(31510:31674): Se Crea el proceso <0> en NEW
+[INFO] 18:33:20:698 KERNEL/(31510:31517): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 18:33:20:699 KERNEL/(31510:31517): Se mando la señal al planificador de corto plazo
+[INFO] 18:33:20:699 KERNEL/(31510:31519): Empieza ciclo de instruccion
+[INFO] 18:33:20:699 KERNEL/(31510:31519): Se envia el proceso PID: <0> al CPU
+[INFO] 18:33:20:699 KERNEL/(31510:31519): Se recibe de CPU el proceso PID: <0>
+[INFO] 18:33:20:699 KERNEL/(31510:31519): Se envia el proceso PID: <0> al CPU
+[INFO] 18:33:20:699 KERNEL/(31510:31519): Se recibe de CPU el proceso PID: <0>
+[INFO] 18:33:20:699 KERNEL/(31510:31519): PID: <0> - Estado Anterior: <Exec> - Estado Actual: <Exit>
+[INFO] 18:33:20:699 KERNEL/(31510:31519): Finaliza el proceso <0> - Motivo: <SUCCESS>
+[INFO] 18:33:57:656 KERNEL/(32241:32241): Se conecto al servidor 127.0.0.1:8001
+[INFO] 18:33:57:656 KERNEL/(32241:32241): Se conecto al servidor 127.0.0.1:8002
+[ERROR] 18:33:57:656 KERNEL/(32241:32241): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 18:33:57:657 KERNEL/(32241:32260): Inicia el planificador de largo plazo
+[INFO] 18:33:57:657 KERNEL/(32241:32241): Esperando conexiones de consolas...
+[INFO] 18:33:57:657 KERNEL/(32241:32262): Inicia el planificador de corto plazo
+[INFO] 18:34:00:205 KERNEL/(32241:32241): Se conecto una consola
+[INFO] 18:34:00:206 KERNEL/(32241:32384): Se recibieron instrucciones de una consola
+[INFO] 18:34:00:206 KERNEL/(32241:32384): Se Crea el proceso <0> en NEW
+[INFO] 18:34:00:206 KERNEL/(32241:32260): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 18:34:00:206 KERNEL/(32241:32260): Se mando la señal al planificador de corto plazo
+[INFO] 18:34:00:206 KERNEL/(32241:32262): Empieza ciclo de instruccion
+[INFO] 18:34:00:206 KERNEL/(32241:32262): Se envia el proceso PID: <0> al CPU
+[INFO] 18:34:00:206 KERNEL/(32241:32262): Se recibe de CPU el proceso PID: <0>
+[INFO] 18:34:00:206 KERNEL/(32241:32262): Se envia el proceso PID: <0> al CPU
+[INFO] 18:34:00:207 KERNEL/(32241:32262): Se recibe de CPU el proceso PID: <0>
+[INFO] 18:34:00:207 KERNEL/(32241:32262): PID: <0> - Estado Anterior: <Exec> - Estado Actual: <Exit>
+[INFO] 18:34:00:207 KERNEL/(32241:32262): Finaliza el proceso <0> - Motivo: <SUCCESS>
+[INFO] 18:36:55:693 KERNEL/(33173:33173): Se conecto al servidor 127.0.0.1:8001
+[INFO] 18:36:55:693 KERNEL/(33173:33173): Se conecto al servidor 127.0.0.1:8002
+[ERROR] 18:36:55:693 KERNEL/(33173:33173): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 18:36:55:694 KERNEL/(33173:33178): Inicia el planificador de largo plazo
+[INFO] 18:36:55:695 KERNEL/(33173:33173): Esperando conexiones de consolas...
+[INFO] 18:36:55:695 KERNEL/(33173:33180): Inicia el planificador de corto plazo
+[INFO] 18:37:02:558 KERNEL/(33173:33173): Se conecto una consola
+[INFO] 18:37:02:558 KERNEL/(33173:33376): Se recibieron instrucciones de una consola
+[INFO] 18:37:02:558 KERNEL/(33173:33376): Se Crea el proceso <0> en NEW
+[INFO] 18:37:02:558 KERNEL/(33173:33178): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 18:37:02:559 KERNEL/(33173:33178): Se mando la señal al planificador de corto plazo
+[INFO] 18:37:02:559 KERNEL/(33173:33180): Empieza ciclo de instruccion
+[INFO] 18:37:02:559 KERNEL/(33173:33180): Se envia el proceso PID: <0> al CPU
+[INFO] 18:37:02:559 KERNEL/(33173:33180): Se recibe de CPU el proceso PID: <0>
+[INFO] 18:37:02:559 KERNEL/(33173:33180): Se envia el proceso PID: <0> al CPU
+[INFO] 18:37:02:561 KERNEL/(33173:33180): Se recibe de CPU el proceso PID: <0>
+[INFO] 18:37:02:561 KERNEL/(33173:33180): PID: <0> - Estado Anterior: <Exec> - Estado Actual: <Exit>
+[INFO] 18:37:02:561 KERNEL/(33173:33180): Finaliza el proceso <0> - Motivo: <SUCCESS>
+[INFO] 18:38:19:634 KERNEL/(34135:34135): Se conecto al servidor 127.0.0.1:8001
+[INFO] 18:38:19:634 KERNEL/(34135:34135): Se conecto al servidor 127.0.0.1:8002
+[ERROR] 18:38:19:634 KERNEL/(34135:34135): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 18:38:19:635 KERNEL/(34135:34142): Inicia el planificador de largo plazo
+[INFO] 18:38:19:635 KERNEL/(34135:34144): Inicia el planificador de corto plazo
+[INFO] 18:38:19:635 KERNEL/(34135:34135): Esperando conexiones de consolas...
+[INFO] 18:38:22:050 KERNEL/(34135:34135): Se conecto una consola
+[INFO] 18:38:22:050 KERNEL/(34135:34306): Se recibieron instrucciones de una consola
+[INFO] 18:38:22:050 KERNEL/(34135:34306): Se Crea el proceso <0> en NEW
+[INFO] 18:38:22:050 KERNEL/(34135:34142): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 18:38:22:051 KERNEL/(34135:34142): Se mando la señal al planificador de corto plazo
+[INFO] 18:38:22:051 KERNEL/(34135:34144): Empieza ciclo de instruccion
+[INFO] 18:38:22:051 KERNEL/(34135:34144): Se envia el proceso PID: <0> al CPU
+[INFO] 18:38:22:051 KERNEL/(34135:34144): Se recibe de CPU el proceso PID: <0>
+[INFO] 18:38:22:051 KERNEL/(34135:34144): Se envia el proceso PID: <0> al CPU
+[INFO] 18:38:22:051 KERNEL/(34135:34144): Se recibe de CPU el proceso PID: <0>
+[INFO] 18:38:22:051 KERNEL/(34135:34144): PID: <0> - Estado Anterior: <Exec> - Estado Actual: <Exit>
+[INFO] 18:38:22:051 KERNEL/(34135:34144): Finaliza el proceso <0> - Motivo: <SUCCESS>
+[INFO] 18:41:14:735 KERNEL/(35084:35084): Se conecto al servidor 127.0.0.1:8001
+[INFO] 18:41:14:735 KERNEL/(35084:35084): Se conecto al servidor 127.0.0.1:8002
+[ERROR] 18:41:14:735 KERNEL/(35084:35084): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 18:41:14:735 KERNEL/(35084:35091): Inicia el planificador de largo plazo
+[INFO] 18:41:14:736 KERNEL/(35084:35084): Esperando conexiones de consolas...
+[INFO] 18:41:14:736 KERNEL/(35084:35093): Inicia el planificador de corto plazo
+[INFO] 18:41:18:383 KERNEL/(35084:35084): Se conecto una consola
+[INFO] 18:41:18:383 KERNEL/(35084:35254): Se recibieron instrucciones de una consola
+[INFO] 18:41:18:383 KERNEL/(35084:35254): Se Crea el proceso <0> en NEW
+[INFO] 18:41:18:384 KERNEL/(35084:35091): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 18:41:18:384 KERNEL/(35084:35091): Se mando la señal al planificador de corto plazo
+[INFO] 18:41:18:384 KERNEL/(35084:35093): Empieza ciclo de instruccion
+[INFO] 18:41:18:384 KERNEL/(35084:35093): Se envia el proceso PID: <0> al CPU
+[INFO] 18:41:18:384 KERNEL/(35084:35093): Se recibe de CPU el proceso PID: <0>
+[INFO] 18:41:18:384 KERNEL/(35084:35093): Se envia el proceso PID: <0> al CPU
+[INFO] 18:41:18:384 KERNEL/(35084:35093): Se recibe de CPU el proceso PID: <0>
+[INFO] 18:41:18:384 KERNEL/(35084:35093): PID: <0> - Estado Anterior: <Exec> - Estado Actual: <Exit>
+[INFO] 18:41:18:384 KERNEL/(35084:35093): Finaliza el proceso <0> - Motivo: <SUCCESS>
+[INFO] 19:00:33:112 KERNEL/(38571:38571): Se conecto al servidor 127.0.0.1:8001
+[INFO] 19:00:33:112 KERNEL/(38571:38571): Se conecto al servidor 127.0.0.1:8002
+[ERROR] 19:00:33:112 KERNEL/(38571:38571): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 19:00:33:113 KERNEL/(38571:38575): Inicia el planificador de largo plazo
+[INFO] 19:00:33:114 KERNEL/(38571:38571): Esperando conexiones de consolas...
+[INFO] 19:00:33:114 KERNEL/(38571:38577): Inicia el planificador de corto plazo
+[INFO] 19:00:36:892 KERNEL/(38571:38571): Se conecto una consola
+[INFO] 19:00:36:892 KERNEL/(38571:38767): Se recibieron instrucciones de una consola
+[INFO] 19:00:36:892 KERNEL/(38571:38767): Se Crea el proceso <0> en NEW
+[INFO] 19:00:36:893 KERNEL/(38571:38575): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 19:00:36:893 KERNEL/(38571:38575): Se mando la señal al planificador de corto plazo
+[INFO] 19:00:36:893 KERNEL/(38571:38577): Empieza ciclo de instruccion
+[INFO] 19:00:36:893 KERNEL/(38571:38577): Se envia el proceso PID: <0> al CPU
+[INFO] 19:00:36:893 KERNEL/(38571:38577): Se recibe de CPU el proceso PID: <0>
+[INFO] 19:01:09:667 KERNEL/(38571:38577): PID: <0> - Crear Segmento - Id: <1> - Tamaño: <128>
+[INFO] 19:01:09:668 KERNEL/(38571:38577): Se envia el proceso PID: <0> al CPU
+[INFO] 19:01:09:668 KERNEL/(38571:38577): Se recibe de CPU el proceso PID: <0>
+[INFO] 19:01:09:668 KERNEL/(38571:38577): PID: <0> - Estado Anterior: <Exec> - Estado Actual: <Exit>
+[INFO] 19:01:09:668 KERNEL/(38571:38577): Finaliza el proceso <0> - Motivo: <SUCCESS>
+[INFO] 19:01:19:674 KERNEL/(39462:39462): Se conecto al servidor 127.0.0.1:8001
+[INFO] 19:01:19:674 KERNEL/(39462:39462): Se conecto al servidor 127.0.0.1:8002
+[ERROR] 19:01:19:674 KERNEL/(39462:39462): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 19:01:19:674 KERNEL/(39462:39466): Inicia el planificador de largo plazo
+[INFO] 19:01:19:674 KERNEL/(39462:39462): Esperando conexiones de consolas...
+[INFO] 19:01:19:675 KERNEL/(39462:39468): Inicia el planificador de corto plazo
+[INFO] 19:01:22:122 KERNEL/(39462:39462): Se conecto una consola
+[INFO] 19:01:22:123 KERNEL/(39462:39638): Se recibieron instrucciones de una consola
+[INFO] 19:01:22:123 KERNEL/(39462:39638): Se Crea el proceso <0> en NEW
+[INFO] 19:01:22:123 KERNEL/(39462:39466): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 19:01:22:123 KERNEL/(39462:39466): Se mando la señal al planificador de corto plazo
+[INFO] 19:01:22:123 KERNEL/(39462:39468): Empieza ciclo de instruccion
+[INFO] 19:01:22:123 KERNEL/(39462:39468): Se envia el proceso PID: <0> al CPU
+[INFO] 19:01:22:124 KERNEL/(39462:39468): Se recibe de CPU el proceso PID: <0>
+[INFO] 19:02:52:593 KERNEL/(40310:40310): Se conecto al servidor 127.0.0.1:8001
+[INFO] 19:02:52:593 KERNEL/(40310:40310): Se conecto al servidor 127.0.0.1:8002
+[ERROR] 19:02:52:593 KERNEL/(40310:40310): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 19:02:52:594 KERNEL/(40310:40320): Inicia el planificador de largo plazo
+[INFO] 19:02:52:594 KERNEL/(40310:40310): Esperando conexiones de consolas...
+[INFO] 19:02:52:594 KERNEL/(40310:40322): Inicia el planificador de corto plazo
+[INFO] 19:02:58:701 KERNEL/(40310:40310): Se conecto una consola
+[INFO] 19:02:58:701 KERNEL/(40310:40544): Se recibieron instrucciones de una consola
+[INFO] 19:02:58:701 KERNEL/(40310:40544): Se Crea el proceso <0> en NEW
+[INFO] 19:02:58:701 KERNEL/(40310:40320): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 19:02:58:701 KERNEL/(40310:40320): Se mando la señal al planificador de corto plazo
+[INFO] 19:02:58:701 KERNEL/(40310:40322): Empieza ciclo de instruccion
+[INFO] 19:02:58:701 KERNEL/(40310:40322): Se envia el proceso PID: <0> al CPU
+[INFO] 19:02:58:702 KERNEL/(40310:40322): Se recibe de CPU el proceso PID: <0>
+[INFO] 19:03:21:966 KERNEL/(40310:40322): PID: <0> - Crear Segmento - Id: <1> - Tamaño: <128>
+[INFO] 19:03:32:780 KERNEL/(40310:40322): Se envia el proceso PID: <0> al CPU
+[INFO] 19:03:32:780 KERNEL/(40310:40322): Se recibe de CPU el proceso PID: <0>
+[INFO] 19:03:32:780 KERNEL/(40310:40322): PID: <0> - Estado Anterior: <Exec> - Estado Actual: <Exit>
+[INFO] 19:03:32:780 KERNEL/(40310:40322): Finaliza el proceso <0> - Motivo: <SUCCESS>
