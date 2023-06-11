@@ -22,3 +22,21 @@
 [INFO] 03:29:21:054 CONSOLA/(11407:11407): Paquete enviado
 [INFO] 03:29:21:714 CONSOLA/(11403:11403): El kernel finalizo las instrucciones. Cerrando la consola
 [INFO] 03:29:22:719 CONSOLA/(11407:11407): El kernel finalizo las instrucciones. Cerrando la consola
+[INFO] 01:29:24:507 CONSOLA/(15591:15591): Se conecto al servidor 127.0.0.1:8000
+[INFO] 01:29:24:507 CONSOLA/(15591:15591): Paquete enviado
+[ERROR] 01:30:32:278 CONSOLA/(15591:15591): Operacion desconocida
+[INFO] 01:30:49:648 CONSOLA/(16594:16594): Se conecto al servidor 127.0.0.1:8000
+[INFO] 01:30:49:648 CONSOLA/(16594:16594): Paquete enviado
+[ERROR] 01:31:22:830 CONSOLA/(16594:16594): Operacion desconocida
+[INFO] 01:31:43:160 CONSOLA/(17413:17413): Se conecto al servidor 127.0.0.1:8000
+[INFO] 01:31:43:160 CONSOLA/(17413:17413): Paquete enviado
+[ERROR] 01:34:29:904 CONSOLA/(17413:17413): Operacion desconocida
+[INFO] 01:34:53:456 CONSOLA/(18420:18420): Se conecto al servidor 127.0.0.1:8000
+[INFO] 01:34:53:456 CONSOLA/(18420:18420): Paquete enviado
+[ERROR] 01:37:34:152 CONSOLA/(18420:18420): Operacion desconocida
+[INFO] 01:38:55:640 CONSOLA/(19583:19583): Se conecto al servidor 127.0.0.1:8000
+[INFO] 01:38:55:641 CONSOLA/(19583:19583): Paquete enviado
+[ERROR] 01:39:51:556 CONSOLA/(19583:19583): Operacion desconocida
+[INFO] 01:42:19:524 CONSOLA/(20995:20995): Se conecto al servidor 127.0.0.1:8000
+[INFO] 01:42:19:524 CONSOLA/(20995:20995): Paquete enviado
+[ERROR] 01:43:27:820 CONSOLA/(20995:20995): Operacion desconocida

@@ -134,7 +134,6 @@ void serializar_contexto(t_ctx *ctx, t_paquete *paquete)
 	agregar_a_paquete_dato_serializado(paquete, &ctx->program_counter, sizeof(ctx->program_counter));
 	agregar_a_paquete_dato_serializado(paquete, &ctx->cant_instrucciones, sizeof(ctx->cant_instrucciones));
 
-	
 	// Serializo Instrucciones
 	serializar_instrucciones(ctx->instrucciones, paquete);
 
@@ -151,7 +150,6 @@ void serializar_contexto(t_ctx *ctx, t_paquete *paquete)
 		agregar_a_paquete_dato_serializado(paquete, &tamanio_parametro, sizeof(int));
 		agregar_a_paquete_dato_serializado(paquete, ctx->motivos_desalojo->parametros[i], tamanio_parametro);		
 	}
-
 	
 }
 
@@ -198,6 +196,18 @@ void serializar_registros(t_registros *registros, t_paquete *paquete)
 	agregar_a_paquete_dato_serializado(paquete, &(registros->RBX), sizeof(registros->RBX));
 	agregar_a_paquete_dato_serializado(paquete, &(registros->RCX), sizeof(registros->RCX));
 	agregar_a_paquete_dato_serializado(paquete, &(registros->RDX), sizeof(registros->RDX));
+}
+
+void serializar_tabla_segmentos(t_list *tabla_segmentos, t_paquete *paquete, int cant_segmentos)
+{
+    agregar_a_paquete_dato_serializado(paquete, &cant_segmentos, sizeof(int));
+    for (int i = 0; i < cant_segmentos; i++)
+    {
+        t_segmento *segmento = list_get(tabla_segmentos, i);
+        agregar_a_paquete_dato_serializado(paquete, &(segmento->id_segmento), sizeof(int));
+        agregar_a_paquete_dato_serializado(paquete, &(segmento->base), sizeof(int));
+        agregar_a_paquete_dato_serializado(paquete, &(segmento->tamanio), sizeof(int));
+    }
 }
 
 t_ctx *deserializar_contexto(void *buffer)

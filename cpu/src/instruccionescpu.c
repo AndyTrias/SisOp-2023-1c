@@ -32,10 +32,10 @@ void decode(t_instruccion* instruccion)
 	case SET:
 		usleep(TIEMPO_RETARDO * 1000000);
 		break;
-	case WRITE:
-		break;
-	case READ:
-		break;
+	// case WRITE:
+	// 	break;
+	// case READ:
+	// 	break;
 	default:
 		break;
 	}
@@ -119,12 +119,6 @@ op_code execute(t_instruccion* instruccion_actual, t_ctx *ctx)
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0]);
 		return F_OPEN;
 
-	case CREATE_SEGMENT:
-		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
-		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[0]);
-		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[1]);
-		return CREATE_SEGMENT;
-
 	case F_WRITE:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
 		return F_WRITE;
@@ -140,9 +134,11 @@ op_code execute(t_instruccion* instruccion_actual, t_ctx *ctx)
 	case F_CLOSE:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0]);
 		return F_CLOSE;
-	
+
 	case CREATE_SEGMENT:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
+		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[0]);
+		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[1]);
 		return CREATE_SEGMENT;
 	
 	case DELETE_SEGMENT:

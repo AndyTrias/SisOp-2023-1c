@@ -39,6 +39,7 @@ typedef struct
     int program_counter;
     t_registros registros;
     t_parametros_variables *motivos_desalojo;
+    t_list* tabla_segmentos;
 } t_ctx;
 
 typedef struct
