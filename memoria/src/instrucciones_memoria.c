@@ -1,5 +1,6 @@
 #include "instrucciones_memoria.h"
 
+
 void* crear_segmento(int id_segmento, int tamanio) {
     t_hueco* hueco = NULL;
     if (strcmp(CONFIG->algoritmo_asignacion, "FIRST") == 0) {
