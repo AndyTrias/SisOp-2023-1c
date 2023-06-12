@@ -17,6 +17,9 @@ extern int SOCKET_FILESYSTEM;
 //Contador de procesos generados
 extern int PID_COUNT;
 
+//Tabla global de archivos abiertos
+extern t_list* TABLA_GLOBAL_DE_ARCHIVOS_ABIERTOS 
+
 //Listas para los estados
 extern t_list* LISTA_NEW;
 extern t_list* LISTA_READY;
@@ -35,12 +38,12 @@ extern char** INSTANCIAS_RECURSOS;
 //Semaforos
 extern sem_t PROCESO_EN_NEW;
 extern sem_t PROCESO_EN_READY;
-extern sem_t PROCESO_EN_BLOCK;
 extern sem_t GRADO_MULTIPROGRAMACION;
 extern sem_t CORTO_PLAZO;
+extern sem_t ARCHIVO_ABIERTO;
 extern pthread_mutex_t MUTEX_LISTA_NEW;
 extern pthread_mutex_t MUTEX_LISTA_READY;
-extern pthread_mutex_t MUTEX_LISTA_BLOCK;
+extern pthread_mutex_t MUTEX_TABLA_ARCHIVOS;
 
 
 
@@ -51,13 +54,13 @@ extern t_temporal* TIEMPO_EN_CPU;
 void agregar_a_lista_new(t_pcb* );
 void agregar_a_lista_ready(t_pcb* );
 void agregar_a_lista_exec(t_pcb* );
-//void agregar_a_lista_block(t_pcb* );
+
 
 t_pcb* sacar_de_lista_new(int);
 t_pcb* sacar_de_lista_ready(int);
 void sacar_elemento_de_lista_ready(t_pcb* );
 t_pcb* sacar_de_lista_exec(int);
-//t_pcb* sacar_de_lista_block(int);
+
 
 t_pcb* get_de_lista_ready(int);
 

@@ -23,10 +23,9 @@ void inicializar_variables_globales(t_config* config) {
 void inicializar_semaforos() {
     pthread_mutex_init(&MUTEX_LISTA_NEW, NULL);
     pthread_mutex_init(&MUTEX_LISTA_READY, NULL);
-    pthread_mutex_init(&MUTEX_LISTA_BLOCK, NULL);
+    pthread_mutex_init(&MUTEX_TABLA_ARCHIVOS, NULL);
     sem_init(&PROCESO_EN_NEW, 0, 0);
     sem_init(&PROCESO_EN_READY, 0, 0);
-    sem_init(&PROCESO_EN_BLOCK, 0, 0);
     sem_init(&GRADO_MULTIPROGRAMACION, 0, GRADO_MAX_MULTIPROGRAMACION);
     sem_init(&CORTO_PLAZO, 0, 0);
 

@@ -9,6 +9,8 @@
     #include <utils/mensajes.h>
     #include "exit.h"
     #include "blocked.h"
+    #include <manejo_fs.h>
+    #include<manejo_memoria.h>
 
     void reemplazar_proceso(t_pcb *);
     void reemplazar_ctx(t_ctx *);
