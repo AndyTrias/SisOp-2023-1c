@@ -13,8 +13,8 @@ int main(int argc, char *argv[]) {
 
     inicializar_archivos(config);
 
-    t_dictionary *diccionario = dictionary_create();
-    
+    // t_dictionary *diccionario = dictionary_create();
+
 
     
     int conexion_memoria;

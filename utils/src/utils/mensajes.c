@@ -347,7 +347,7 @@ t_registros deserealizar_registros(void *buffer, int*desplazamiento)
 
 t_parametros_variables* deserealizar_motivos_desalojo(void *buffer, int*desplazamiento){
 	t_parametros_variables *motivos_desalojo = malloc(sizeof(t_parametros_variables));
-	memcpy(motivos_desalojo->cantidad_parametros, buffer + *desplazamiento, sizeof(int));
+	memcpy(&motivos_desalojo->cantidad_parametros, buffer + *desplazamiento, sizeof(int));
 	*desplazamiento += sizeof(int);
 
 	motivos_desalojo->parametros = malloc(sizeof(char *) * motivos_desalojo->cantidad_parametros);
@@ -361,6 +361,8 @@ t_parametros_variables* deserealizar_motivos_desalojo(void *buffer, int*desplaza
 		memcpy(motivos_desalojo->parametros[i], buffer + *desplazamiento, tamanio_parametro);
 		*desplazamiento += tamanio_parametro;
 	}
+
+	return motivos_desalojo;
 }
 
 t_list* recibir_tabla_segmentos(int socket_cliente){
