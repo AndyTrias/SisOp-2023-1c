@@ -1,5 +1,5 @@
-#ifndef ALGORITMOS_ASIGNACION_H
-#define ALGORITMOS_ASIGNACION_H
+#ifndef FUNCIONES_AUXILIARES_H
+#define FUNCIONES_AUXILIARES_H
 
     #include <utils/logs.h>
     #include <utils/configs.h>
@@ -12,4 +12,5 @@
     t_hueco* get_hueco_con_worst_fit(int);
     void modificar_lista_huecos(t_hueco*, int);
     bool comprobar_compactacion(int);
+    void comprobar_consolidacion_huecos_aledanios(int);
 #endif

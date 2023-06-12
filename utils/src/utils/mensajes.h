@@ -19,9 +19,8 @@ typedef enum
     MENSAJE, // Se utiliza de kernel a consola
     CONTEXTO, // Se utiliza de kernel a cpu
     CREAR_TABLA_SEGMENTOS,
-    CREAR_SEGMENTO,
-    ELIMINAR_SEGMENTO,
     F_CREATE,
+    TERMINAR
 } op_code;
 
 typedef enum

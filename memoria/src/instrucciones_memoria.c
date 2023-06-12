@@ -26,12 +26,9 @@ void* crear_segmento(int id_segmento, int tamanio) {
     return hueco->base;
 }
 
-void imprimir_hueco(t_hueco* hueco) {
-    log_info(LOGGER_MEMORIA, "Hueco: base %p, tamanio %d, libre %d", hueco->base, hueco->tamanio, hueco->libre);
-}
-
-void eliminar_segmento(t_list* tabla_segmentos, int id_segmento) {
+void eliminar_segmento(t_list* tabla_segmentos, int id_segmento, int PID) {
     t_segmento* segmento = list_get(tabla_segmentos, id_segmento);
+    if (PID != -1) log_info(LOGGER_MEMORIA, "PID: <%d> - Eliminar Segmento: <%d> - Base: <%p> - TAMAÑO: <%d>", PID, id_segmento, segmento->base, segmento->tamanio);
 
     //buscar hueco que tenga la misma base que el segmento y marcarlo como libre
     int index_hueco = 0;
@@ -46,37 +43,18 @@ void eliminar_segmento(t_list* tabla_segmentos, int id_segmento) {
 
     comprobar_consolidacion_huecos_aledanios(index_hueco);
 
-    list_iterate(LISTA_HUECOS, (void*) imprimir_hueco);
-
     segmento->base = NULL;
     segmento->tamanio = 0;
     list_replace(tabla_segmentos, id_segmento, segmento);
 }
 
-void comprobar_consolidacion_huecos_aledanios(int index_hueco) {
-    t_hueco* hueco_actual = list_get(LISTA_HUECOS, index_hueco);
-    t_hueco* hueco_anterior = NULL;
-    t_hueco* hueco_siguiente = NULL;
-
-    if (index_hueco > 0) {
-        hueco_anterior = list_get(LISTA_HUECOS, index_hueco - 1);
+void finalizar_proceso(t_list* tabla_segmentos){
+    for (int i = 0; i < list_size(tabla_segmentos); i++) {
+        t_segmento* segmento = list_get(tabla_segmentos, i);
+        if (segmento->base != NULL) {
+            eliminar_segmento(tabla_segmentos, i, -1);
+        }
     }
 
-    if (index_hueco < list_size(LISTA_HUECOS) - 1) {
-        hueco_siguiente = list_get(LISTA_HUECOS, index_hueco + 1);
-    }
-
-    if (hueco_anterior && hueco_anterior->libre) {
-        hueco_anterior->tamanio += hueco_actual->tamanio;
-        list_remove(LISTA_HUECOS, index_hueco);
-        hueco_actual = hueco_anterior;
-        index_hueco--;
-        free(hueco_anterior);
-    }
-
-    if (hueco_siguiente && hueco_siguiente->libre) {
-        hueco_actual->tamanio += hueco_siguiente->tamanio;
-        list_remove(LISTA_HUECOS, index_hueco + 1);
-        free(hueco_siguiente);
-    }
+    list_destroy(tabla_segmentos);
 }

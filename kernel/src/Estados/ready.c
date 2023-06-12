@@ -5,6 +5,7 @@ void admitir_proceso()
     t_pcb * proceso_en_new = sacar_de_lista_new(0);
     agregar_a_lista_ready(proceso_en_new);
     t_paquete* paquete = crear_paquete(CREAR_TABLA_SEGMENTOS);
+    agregar_a_paquete_dato_serializado(paquete, &proceso_en_new->contexto.PID, sizeof(int));
     enviar_paquete(paquete, SOCKET_MEMORIA);
     free(paquete);
 

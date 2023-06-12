@@ -40,34 +40,63 @@ void recibir_kernel(int *socket_modulo)
         switch (cod_op)
         {
         case CREAR_TABLA_SEGMENTOS:
-            log_info(LOGGER_MEMORIA, "Se recibio un CREAR_TABLA_SEGMENTOS");
+            //recibe
+            t_ctx* ctx = recibir_paquete_kernel(*socket_modulo);
+
+            // crea
             t_list *tabla_segmentos = crear_tabla_segmentos();
+            log_info(LOGGER_MEMORIA, "Creación de Proceso PID: <%d>", ctx->PID);
+
+            // envia
             t_paquete *paquete = crear_paquete(CREAR_TABLA_SEGMENTOS);
             serializar_tabla_segmentos(tabla_segmentos, paquete);
             enviar_paquete(paquete, *socket_modulo);
             free(paquete);
+            free(ctx);
+
             break;
-        case CREAR_SEGMENTO:
-            log_info(LOGGER_MEMORIA, "Se recibio un CREATE_SEGMENT");
-            t_ctx *ctx = recibir_paquete_kernel(*socket_modulo);
 
+        case TERMINAR:
+            // recibe
+            ctx = recibir_paquete_kernel(*socket_modulo);
+
+            // elimina
+            finalizar_proceso(ctx->tabla_segmentos);
+            log_info(LOGGER_MEMORIA, "Eliminación de Proceso PID: <%d>", ctx->PID);
+
+            free(ctx);
+            break;
+
+        case CREATE_SEGMENT:
+            // recibe
+            ctx = recibir_paquete_kernel(*socket_modulo);
+
+            // crea
             void* base = crear_segmento(atoi(ctx->motivos_desalojo->parametros[0]), atoi(ctx->motivos_desalojo->parametros[1]));
-
-            paquete = crear_paquete(CREAR_SEGMENTO);
+            log_info(LOGGER_MEMORIA, "PID: <%d> - Crear Segmento: <%d> - Base: <%p> - TAMAÑO: <%d>", ctx->PID, atoi(ctx->motivos_desalojo->parametros[0]), base, atoi(ctx->motivos_desalojo->parametros[1]));
+            
+            // envia
+            paquete = crear_paquete(CREATE_SEGMENT);
             agregar_a_paquete_dato_serializado(paquete, &base, sizeof(void*));
             enviar_paquete(paquete, *socket_modulo);
             free(paquete);
+            free(ctx);
+
             break;
-        case ELIMINAR_SEGMENTO:
-            log_info(LOGGER_MEMORIA, "Se recibio un DELETE_SEGMENT");
+        case DELETE_SEGMENT:
+            // recibe
             ctx = recibir_paquete_kernel(*socket_modulo);
 
-            eliminar_segmento(ctx->tabla_segmentos, atoi(ctx->motivos_desalojo->parametros[0]));
+            // elimina
+            eliminar_segmento(ctx->tabla_segmentos, atoi(ctx->motivos_desalojo->parametros[0]), ctx->PID);
+            // log obligatorio en eliminar segmento
 
-            paquete = crear_paquete(ELIMINAR_SEGMENTO);
+            // envia
+            paquete = crear_paquete(DELETE_SEGMENT);
             serializar_tabla_segmentos(tabla_segmentos, paquete);
             enviar_paquete(paquete, *socket_modulo);
             free(paquete);
+            free(ctx);
             break;
 
         case -1:

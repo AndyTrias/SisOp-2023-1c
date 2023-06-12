@@ -23,8 +23,6 @@ void enviado_de_consola(int *socket_consola)
         
             log_info(LOGGER_KERNEL, "Se recibieron instrucciones de una consola");
             t_list *instrucciones = recibir_paquete_consola(*socket_consola);
-            //print instruccion
-            t_instruccion* i = list_get(instrucciones, 0);
             nuevo_proceso(instrucciones, *socket_consola);
             return;
 

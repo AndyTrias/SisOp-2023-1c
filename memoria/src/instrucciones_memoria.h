@@ -4,13 +4,13 @@
     #include <commons/collections/list.h>
     #include <utils/planificacion/pcb.h>
     #include "estructuras.h"
-    #include "algoritmos_asignacion.h"
+    #include "funciones_auxiliares.h"
 
     extern t_list* LISTA_HUECOS;
     extern t_configuracion* CONFIG;
 
     void* crear_segmento(int, int);
-    void eliminar_segmento(t_list*, int);
-    void comprobar_consolidacion_huecos_aledanios(int);
+    void eliminar_segmento(t_list*, int, int);
+    void finalizar_proceso(t_list*);
 
 #endif

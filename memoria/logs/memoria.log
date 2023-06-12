@@ -298,3 +298,22 @@
 [INFO] 03:17:42:676 MEMORIA/(36992:37299): Hueco: base 0x55555555c860, tamanio 4096, libre 0
 [INFO] 03:18:09:844 MEMORIA/(36992:37299): Se desconecto un modulo
 [INFO] 03:18:09:844 MEMORIA/(36992:37139): Se desconecto un modulo
+[INFO] 17:14:18:701 MEMORIA/(7066:7066): Se creo el espacio contiguo de memoria
+[INFO] 17:14:18:701 MEMORIA/(7066:7066): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555e860
+[INFO] 17:14:18:701 MEMORIA/(7066:7066): Se creo el hueco libre inicial de tamanio 3968 en la direccion 0x55555555e8e0
+[INFO] 17:14:18:701 MEMORIA/(7066:7066): Esperando conexiones de modulos...
+[INFO] 17:14:28:882 MEMORIA/(7066:7066): Se conecto el cpu
+[INFO] 17:15:08:252 MEMORIA/(7066:7066): Se conecto el kernel
+[INFO] 17:15:14:877 MEMORIA/(7066:7585): Creación de Proceso PID: <0>
+[INFO] 17:15:14:877 MEMORIA/(7066:7585): PID: <0> - Crear Segmento: <1> - Base: <0x55555555e8e0> - TAMAÑO: <128>
+[INFO] 17:15:14:878 MEMORIA/(7066:7585): PID: <0> - Eliminar Segmento: <1> - Base: <0x55555555e8e0> - TAMAÑO: <128>
+[INFO] 17:15:56:719 MEMORIA/(8183:8183): Se creo el espacio contiguo de memoria
+[INFO] 17:15:56:719 MEMORIA/(8183:8183): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555e860
+[INFO] 17:15:56:719 MEMORIA/(8183:8183): Se creo el hueco libre inicial de tamanio 3968 en la direccion 0x55555555e8e0
+[INFO] 17:15:56:719 MEMORIA/(8183:8183): Esperando conexiones de modulos...
+[INFO] 17:16:00:297 MEMORIA/(8183:8183): Se conecto el cpu
+[INFO] 17:16:04:738 MEMORIA/(8183:8183): Se conecto el kernel
+[INFO] 17:16:08:770 MEMORIA/(8183:8569): Creación de Proceso PID: <0>
+[INFO] 17:16:08:771 MEMORIA/(8183:8569): PID: <0> - Crear Segmento: <1> - Base: <0x55555555e8e0> - TAMAÑO: <128>
+[INFO] 17:16:08:772 MEMORIA/(8183:8569): PID: <0> - Eliminar Segmento: <1> - Base: <0x55555555e8e0> - TAMAÑO: <128>
+[INFO] 17:16:08:774 MEMORIA/(8183:8569): Eliminación de Proceso PID: <0>
