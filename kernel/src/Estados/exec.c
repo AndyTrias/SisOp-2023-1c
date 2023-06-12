@@ -18,6 +18,8 @@ void enviar_a_cpu(){
 
     enviar_paquete(paquete, SOCKET_CPU);
 
+    free(paquete);
+
     log_info(LOGGER_KERNEL,"Se envia el proceso PID: <%d> al CPU",EJECUTANDO->contexto.PID);
 
     if (strcmp(ALGORITMO_PLANIFICACION, "HRRN") == 0){TIEMPO_EN_CPU = temporal_create();}
@@ -61,6 +63,9 @@ void definir_accion(int cod_op, t_pcb *proceso){
         cerrar_archivo(proceso);
     case CREATE_SEGMENT:
         crear_segmento(proceso);
+        break;
+    case DELETE_SEGMENT:
+        eliminar_segmento(proceso);
         break;
     default:
         log_info(LOGGER_KERNEL, "No implementamos esta función");
@@ -114,14 +119,36 @@ void crear_segmento(t_pcb *proceso){
     t_paquete *paquete = crear_paquete(CREAR_SEGMENTO);
     serializar_contexto(&proceso->contexto, paquete);
     enviar_paquete(paquete, SOCKET_MEMORIA);
+    free(paquete);
 
-    int cod_op = recibir_operacion(SOCKET_MEMORIA);
-    t_segmento* segmento = list_get(proceso->tabla_segmentos, atoi(proceso->contexto.motivos_desalojo->parametros[0]));
-    
     int size;
     void* buffer = recibir_buffer(&size, SOCKET_MEMORIA);
+    
+    t_segmento* segmento = list_get(proceso->contexto.tabla_segmentos, atoi(proceso->contexto.motivos_desalojo->parametros[0]));
+
     memcpy(&segmento->base, buffer, sizeof(int));
     segmento->tamanio = atoi(proceso->contexto.motivos_desalojo->parametros[1]);
 
     log_info(LOGGER_KERNEL, "PID: <%d> - Crear Segmento - Id: <%d> - Tamaño: <%d>", proceso->contexto.PID, segmento->id_segmento, segmento->tamanio);
+}
+
+void eliminar_segmento(t_pcb *proceso){
+    // enviar a memoria DELETE_SEGMENT con su parametro (id del segmento)
+
+    t_paquete *paquete = crear_paquete(ELIMINAR_SEGMENTO);
+    serializar_contexto(&proceso->contexto, paquete);
+    enviar_paquete(paquete, SOCKET_MEMORIA);
+    free(paquete);
+
+    int cod_op = recibir_operacion(SOCKET_MEMORIA);
+
+    int size;
+    void* buffer = recibir_buffer(&size, SOCKET_MEMORIA);
+    int desplazamiento = 0;
+    t_list* tabla_segmentos_actualizada = deserializar_tabla_segmentos(buffer, &desplazamiento);
+    free(buffer);
+
+    proceso->contexto.tabla_segmentos = tabla_segmentos_actualizada;
+
+    log_info(LOGGER_KERNEL, "PID: <%d> - Eliminar Segmento - Id Segmento: <%d>", proceso->contexto.PID, atoi(proceso->contexto.motivos_desalojo->parametros[0]));
 }

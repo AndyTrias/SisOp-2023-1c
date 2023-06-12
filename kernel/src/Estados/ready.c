@@ -17,11 +17,12 @@ void admitir_proceso()
 {
     t_pcb * proceso_en_new = sacar_de_lista_new(0);
     agregar_a_lista_ready(proceso_en_new);
-
-    enviar_paquete(crear_paquete(CREAR_TABLA_SEGMENTOS), SOCKET_MEMORIA);
+    t_paquete* paquete = crear_paquete(CREAR_TABLA_SEGMENTOS);
+    enviar_paquete(paquete, SOCKET_MEMORIA);
+    free(paquete);
     int cod_op = recibir_operacion(SOCKET_MEMORIA);
     t_list* tabla_segmentos = recibir_tabla_segmentos(SOCKET_MEMORIA);
-    proceso_en_new->tabla_segmentos = tabla_segmentos;
+    proceso_en_new->contexto.tabla_segmentos = tabla_segmentos;
 
 }
 

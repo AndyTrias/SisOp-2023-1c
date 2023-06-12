@@ -39,8 +39,17 @@ t_hueco* get_hueco_con_worst_fit(int tamanio){
     return hueco;
 }
 
-void imprimir_hueco(t_hueco* hueco) {
-    log_info(LOGGER_MEMORIA, "Hueco: base %p, tamanio %d, libre %d", hueco->base, hueco->tamanio, hueco->libre);
+bool comprobar_compactacion(int tamanio){
+    // sumar el tamaño de todos los hueccos libres
+    int tamanio_huecos_libres = 0;
+    for (int i = 0; i < list_size(LISTA_HUECOS); i++) {
+        t_hueco* hueco_actual = list_get(LISTA_HUECOS, i);
+        if (hueco_actual->libre) {
+            tamanio_huecos_libres += hueco_actual->tamanio;
+        }
+    }
+
+    return tamanio_huecos_libres >= tamanio;
 }
 
 void modificar_lista_huecos(t_hueco* hueco, int tamanio) {
@@ -57,7 +66,5 @@ void modificar_lista_huecos(t_hueco* hueco, int tamanio) {
     list_remove_element(LISTA_HUECOS, hueco);
     list_add_in_index(LISTA_HUECOS, list_size(LISTA_HUECOS), hueco);
     list_add_in_index(LISTA_HUECOS, list_size(LISTA_HUECOS), hueco_restante);
-
-    list_iterate(LISTA_HUECOS, (void*) imprimir_hueco);
 }
 

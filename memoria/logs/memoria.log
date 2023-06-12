@@ -575,3 +575,641 @@
 [ERROR] 19:03:32:780 MEMORIA/(39967:40321): Operacion desconocida
 [ERROR] 19:03:32:780 MEMORIA/(39967:40321): Operacion desconocida
 [ERROR] 19:03:32:780 MEMORIA/(39967:40321): Operacion desconocida
+[INFO] 20:39:53:831 MEMORIA/(2428:2428): Se creo el espacio contiguo de memoria
+[INFO] 20:39:53:862 MEMORIA/(2428:2428): Se creo el segmento 0
+[INFO] 20:39:53:865 MEMORIA/(2428:2428): Se creo la lista de huecos libres
+[INFO] 20:39:53:872 MEMORIA/(2428:2428): Esperando conexiones de modulos...
+[INFO] 20:40:19:892 MEMORIA/(2428:2428): Se conecto el cpu
+[INFO] 20:40:19:923 MEMORIA/(2428:2626): Me llego el mensaje: Hola soy la CPU
+[INFO] 20:40:31:951 MEMORIA/(2428:2428): Se conecto el kernel
+[INFO] 20:40:49:100 MEMORIA/(2428:2704): Se recibio un CREAR_TABLA_SEGMENTOS
+[ERROR] 20:40:49:105 MEMORIA/(2428:2704): Operacion desconocida
+[INFO] 20:40:49:106 MEMORIA/(2428:2704): Se recibio un CREATE_SEGMENT
+[INFO] 20:40:49:114 MEMORIA/(2428:2704): Hueco: base 0x4aa2f10, tamanio 128, libre 0
+[INFO] 20:40:49:115 MEMORIA/(2428:2704): Hueco: base 0x4aa2f90, tamanio 3840, libre 1
+[ERROR] 20:40:49:116 MEMORIA/(2428:2704): Operacion desconocida
+[ERROR] 20:40:49:116 MEMORIA/(2428:2704): Operacion desconocida
+[ERROR] 20:40:49:116 MEMORIA/(2428:2704): Operacion desconocida
+[ERROR] 20:40:49:116 MEMORIA/(2428:2704): Operacion desconocida
+[ERROR] 20:40:49:116 MEMORIA/(2428:2704): Operacion desconocida
+[ERROR] 20:40:49:117 MEMORIA/(2428:2704): Operacion desconocida
+[ERROR] 20:40:49:117 MEMORIA/(2428:2704): Operacion desconocida
+[ERROR] 20:40:49:117 MEMORIA/(2428:2704): Operacion desconocida
+[ERROR] 20:40:49:117 MEMORIA/(2428:2704): Operacion desconocida
+[ERROR] 20:40:49:117 MEMORIA/(2428:2704): Operacion desconocida
+[INFO] 20:42:42:496 MEMORIA/(3087:3087): Se creo el espacio contiguo de memoria
+[INFO] 20:42:42:531 MEMORIA/(3087:3087): Se creo el segmento 0
+[INFO] 20:42:42:534 MEMORIA/(3087:3087): Se creo la lista de huecos libres
+[INFO] 20:42:42:547 MEMORIA/(3087:3087): Esperando conexiones de modulos...
+[INFO] 20:42:46:098 MEMORIA/(3087:3087): Se conecto el cpu
+[INFO] 20:42:46:182 MEMORIA/(3087:3112): Me llego el mensaje: Hola soy la CPU
+[INFO] 20:42:48:574 MEMORIA/(3087:3087): Se conecto el kernel
+[INFO] 20:42:51:102 MEMORIA/(3087:3146): Se recibio un CREAR_TABLA_SEGMENTOS
+[ERROR] 20:42:51:109 MEMORIA/(3087:3146): Operacion desconocida
+[INFO] 20:42:51:110 MEMORIA/(3087:3146): Se recibio un CREATE_SEGMENT
+[INFO] 20:42:51:121 MEMORIA/(3087:3146): Hueco: base 0x4aa2f10, tamanio 128, libre 0
+[INFO] 20:42:51:121 MEMORIA/(3087:3146): Hueco: base 0x4aa2f90, tamanio 3840, libre 1
+[ERROR] 20:42:51:123 MEMORIA/(3087:3146): Operacion desconocida
+[ERROR] 20:42:51:123 MEMORIA/(3087:3146): Operacion desconocida
+[ERROR] 20:42:51:124 MEMORIA/(3087:3146): Operacion desconocida
+[ERROR] 20:42:51:124 MEMORIA/(3087:3146): Operacion desconocida
+[ERROR] 20:42:51:124 MEMORIA/(3087:3146): Operacion desconocida
+[ERROR] 20:42:51:125 MEMORIA/(3087:3146): Operacion desconocida
+[ERROR] 20:42:51:125 MEMORIA/(3087:3146): Operacion desconocida
+[ERROR] 20:42:51:125 MEMORIA/(3087:3146): Operacion desconocida
+[ERROR] 20:42:51:126 MEMORIA/(3087:3146): Operacion desconocida
+[ERROR] 20:42:51:126 MEMORIA/(3087:3146): Operacion desconocida
+[INFO] 20:47:21:190 MEMORIA/(4216:4216): Se creo el espacio contiguo de memoria
+[INFO] 20:47:21:231 MEMORIA/(4216:4216): Se creo el segmento 0
+[INFO] 20:47:21:234 MEMORIA/(4216:4216): Se creo la lista de huecos libres
+[INFO] 20:47:21:243 MEMORIA/(4216:4216): Esperando conexiones de modulos...
+[INFO] 20:47:23:206 MEMORIA/(4216:4216): Se conecto el cpu
+[INFO] 20:47:23:282 MEMORIA/(4216:4241): Me llego el mensaje: Hola soy la CPU
+[INFO] 20:47:25:407 MEMORIA/(4216:4216): Se conecto el kernel
+[INFO] 20:47:27:779 MEMORIA/(4216:4261): Se recibio un CREAR_TABLA_SEGMENTOS
+[ERROR] 20:47:27:788 MEMORIA/(4216:4261): Operacion desconocida
+[INFO] 20:47:27:789 MEMORIA/(4216:4261): Se recibio un CREATE_SEGMENT
+[INFO] 20:47:27:802 MEMORIA/(4216:4261): Hueco: base 0x4aa2f10, tamanio 128, libre 0
+[INFO] 20:47:27:803 MEMORIA/(4216:4261): Hueco: base 0x4aa2f90, tamanio 3840, libre 1
+[ERROR] 20:47:27:804 MEMORIA/(4216:4261): Operacion desconocida
+[ERROR] 20:47:27:804 MEMORIA/(4216:4261): Operacion desconocida
+[ERROR] 20:47:27:805 MEMORIA/(4216:4261): Operacion desconocida
+[ERROR] 20:47:27:805 MEMORIA/(4216:4261): Operacion desconocida
+[ERROR] 20:47:27:805 MEMORIA/(4216:4261): Operacion desconocida
+[ERROR] 20:47:27:805 MEMORIA/(4216:4261): Operacion desconocida
+[ERROR] 20:47:27:806 MEMORIA/(4216:4261): Operacion desconocida
+[ERROR] 20:47:27:806 MEMORIA/(4216:4261): Operacion desconocida
+[ERROR] 20:47:27:806 MEMORIA/(4216:4261): Operacion desconocida
+[ERROR] 20:47:27:806 MEMORIA/(4216:4261): Operacion desconocida
+[INFO] 20:48:01:569 MEMORIA/(4427:4427): Se creo el espacio contiguo de memoria
+[INFO] 20:48:01:606 MEMORIA/(4427:4427): Se creo el segmento 0
+[INFO] 20:48:01:609 MEMORIA/(4427:4427): Se creo la lista de huecos libres
+[INFO] 20:48:01:624 MEMORIA/(4427:4427): Esperando conexiones de modulos...
+[INFO] 20:48:04:094 MEMORIA/(4427:4427): Se conecto el cpu
+[INFO] 20:48:04:176 MEMORIA/(4427:4465): Me llego el mensaje: Hola soy la CPU
+[INFO] 20:48:06:470 MEMORIA/(4427:4427): Se conecto el kernel
+[INFO] 20:48:08:750 MEMORIA/(4427:4489): Se recibio un CREAR_TABLA_SEGMENTOS
+[ERROR] 20:48:08:758 MEMORIA/(4427:4489): Operacion desconocida
+[INFO] 20:48:08:758 MEMORIA/(4427:4489): Se recibio un CREATE_SEGMENT
+[INFO] 20:48:08:780 MEMORIA/(4427:4489): Hueco: base 0x4aa2f10, tamanio 128, libre 0
+[INFO] 20:48:08:780 MEMORIA/(4427:4489): Hueco: base 0x4aa2f90, tamanio 3840, libre 1
+[ERROR] 20:48:08:782 MEMORIA/(4427:4489): Operacion desconocida
+[ERROR] 20:48:08:783 MEMORIA/(4427:4489): Operacion desconocida
+[ERROR] 20:48:08:784 MEMORIA/(4427:4489): Operacion desconocida
+[ERROR] 20:48:08:784 MEMORIA/(4427:4489): Operacion desconocida
+[ERROR] 20:48:08:785 MEMORIA/(4427:4489): Operacion desconocida
+[ERROR] 20:48:08:785 MEMORIA/(4427:4489): Operacion desconocida
+[ERROR] 20:48:08:786 MEMORIA/(4427:4489): Operacion desconocida
+[ERROR] 20:48:08:786 MEMORIA/(4427:4489): Operacion desconocida
+[ERROR] 20:48:08:786 MEMORIA/(4427:4489): Operacion desconocida
+[ERROR] 20:48:08:787 MEMORIA/(4427:4489): Operacion desconocida
+[INFO] 20:59:09:279 MEMORIA/(5217:5217): Se creo el espacio contiguo de memoria
+[INFO] 20:59:09:317 MEMORIA/(5217:5217): Se creo el segmento 0
+[INFO] 20:59:09:322 MEMORIA/(5217:5217): Se creo la lista de huecos libres
+[INFO] 20:59:09:335 MEMORIA/(5217:5217): Esperando conexiones de modulos...
+[INFO] 20:59:12:750 MEMORIA/(5217:5217): Se conecto el cpu
+[INFO] 20:59:12:827 MEMORIA/(5217:5245): Me llego el mensaje: Hola soy la CPU
+[INFO] 20:59:15:145 MEMORIA/(5217:5217): Se conecto el kernel
+[INFO] 20:59:17:277 MEMORIA/(5217:5281): Se recibio un CREAR_TABLA_SEGMENTOS
+[ERROR] 20:59:17:283 MEMORIA/(5217:5281): Operacion desconocida
+[INFO] 20:59:17:284 MEMORIA/(5217:5281): Se recibio un CREATE_SEGMENT
+[INFO] 20:59:17:306 MEMORIA/(5217:5281): Hueco: base 0x4aa2f10, tamanio 128, libre 0
+[INFO] 20:59:17:307 MEMORIA/(5217:5281): Hueco: base 0x4aa2f90, tamanio 3840, libre 1
+[ERROR] 20:59:17:308 MEMORIA/(5217:5281): Operacion desconocida
+[ERROR] 20:59:17:309 MEMORIA/(5217:5281): Operacion desconocida
+[ERROR] 20:59:17:310 MEMORIA/(5217:5281): Operacion desconocida
+[ERROR] 20:59:17:310 MEMORIA/(5217:5281): Operacion desconocida
+[ERROR] 20:59:17:310 MEMORIA/(5217:5281): Operacion desconocida
+[ERROR] 20:59:17:310 MEMORIA/(5217:5281): Operacion desconocida
+[ERROR] 20:59:17:311 MEMORIA/(5217:5281): Operacion desconocida
+[ERROR] 20:59:17:311 MEMORIA/(5217:5281): Operacion desconocida
+[ERROR] 20:59:17:311 MEMORIA/(5217:5281): Operacion desconocida
+[ERROR] 20:59:17:312 MEMORIA/(5217:5281): Operacion desconocida
+[INFO] 20:59:40:749 MEMORIA/(5434:5434): Se creo el espacio contiguo de memoria
+[INFO] 20:59:40:786 MEMORIA/(5434:5434): Se creo el segmento 0
+[INFO] 20:59:40:790 MEMORIA/(5434:5434): Se creo la lista de huecos libres
+[INFO] 20:59:40:799 MEMORIA/(5434:5434): Esperando conexiones de modulos...
+[INFO] 20:59:43:079 MEMORIA/(5434:5434): Se conecto el cpu
+[INFO] 20:59:43:150 MEMORIA/(5434:5459): Me llego el mensaje: Hola soy la CPU
+[INFO] 20:59:45:871 MEMORIA/(5434:5434): Se conecto el kernel
+[INFO] 20:59:52:908 MEMORIA/(5434:5488): Se desconecto un modulo
+[INFO] 20:59:52:911 MEMORIA/(5434:5459): Se desconecto un modulo
+[INFO] 21:00:05:118 MEMORIA/(6010:6010): Se creo el espacio contiguo de memoria
+[INFO] 21:00:05:156 MEMORIA/(6010:6010): Se creo el segmento 0
+[INFO] 21:00:05:159 MEMORIA/(6010:6010): Se creo la lista de huecos libres
+[INFO] 21:00:05:169 MEMORIA/(6010:6010): Esperando conexiones de modulos...
+[INFO] 21:00:08:660 MEMORIA/(6010:6010): Se conecto el cpu
+[INFO] 21:00:08:735 MEMORIA/(6010:6035): Me llego el mensaje: Hola soy la CPU
+[INFO] 21:00:10:885 MEMORIA/(6010:6010): Se conecto el kernel
+[INFO] 21:00:15:661 MEMORIA/(6010:6064): Se recibio un CREAR_TABLA_SEGMENTOS
+[INFO] 21:01:51:645 MEMORIA/(6580:6580): Se creo el espacio contiguo de memoria
+[INFO] 21:01:51:682 MEMORIA/(6580:6580): Se creo el segmento 0
+[INFO] 21:01:51:685 MEMORIA/(6580:6580): Se creo la lista de huecos libres
+[INFO] 21:01:51:699 MEMORIA/(6580:6580): Esperando conexiones de modulos...
+[INFO] 21:01:53:896 MEMORIA/(6580:6580): Se conecto el cpu
+[INFO] 21:01:53:974 MEMORIA/(6580:6597): Me llego el mensaje: Hola soy la CPU
+[INFO] 21:01:56:692 MEMORIA/(6580:6580): Se conecto el kernel
+[INFO] 21:01:58:902 MEMORIA/(6580:6634): Se recibio un CREAR_TABLA_SEGMENTOS
+[ERROR] 21:01:58:909 MEMORIA/(6580:6634): Operacion desconocida
+[INFO] 21:01:58:912 MEMORIA/(6580:6634): Se recibio un CREATE_SEGMENT
+[INFO] 21:01:58:935 MEMORIA/(6580:6634): Hueco: base 0x4aa2f10, tamanio 128, libre 0
+[INFO] 21:01:58:935 MEMORIA/(6580:6634): Hueco: base 0x4aa2f90, tamanio 3840, libre 1
+[ERROR] 21:01:58:937 MEMORIA/(6580:6634): Operacion desconocida
+[ERROR] 21:01:58:937 MEMORIA/(6580:6634): Operacion desconocida
+[ERROR] 21:01:58:937 MEMORIA/(6580:6634): Operacion desconocida
+[ERROR] 21:01:58:938 MEMORIA/(6580:6634): Operacion desconocida
+[ERROR] 21:01:58:938 MEMORIA/(6580:6634): Operacion desconocida
+[ERROR] 21:01:58:938 MEMORIA/(6580:6634): Operacion desconocida
+[ERROR] 21:01:58:938 MEMORIA/(6580:6634): Operacion desconocida
+[ERROR] 21:01:58:939 MEMORIA/(6580:6634): Operacion desconocida
+[ERROR] 21:01:58:939 MEMORIA/(6580:6634): Operacion desconocida
+[ERROR] 21:01:58:939 MEMORIA/(6580:6634): Operacion desconocida
+[INFO] 21:05:24:889 MEMORIA/(7041:7041): Se creo el espacio contiguo de memoria
+[INFO] 21:05:24:933 MEMORIA/(7041:7041): Se creo el segmento 0
+[INFO] 21:05:24:936 MEMORIA/(7041:7041): Se creo la lista de huecos libres
+[INFO] 21:05:24:952 MEMORIA/(7041:7041): Esperando conexiones de modulos...
+[INFO] 21:05:27:104 MEMORIA/(7041:7041): Se conecto el cpu
+[INFO] 21:05:27:179 MEMORIA/(7041:7060): Me llego el mensaje: Hola soy la CPU
+[INFO] 21:05:29:272 MEMORIA/(7041:7041): Se conecto el kernel
+[INFO] 21:05:32:324 MEMORIA/(7041:7085): Se recibio un CREAR_TABLA_SEGMENTOS
+[ERROR] 21:05:32:331 MEMORIA/(7041:7085): Operacion desconocida
+[INFO] 21:05:32:332 MEMORIA/(7041:7085): Se recibio un CREATE_SEGMENT
+[INFO] 21:05:32:350 MEMORIA/(7041:7085): Hueco: base 0x4aa2f10, tamanio 128, libre 0
+[INFO] 21:05:32:351 MEMORIA/(7041:7085): Hueco: base 0x4aa2f90, tamanio 3840, libre 1
+[ERROR] 21:05:32:353 MEMORIA/(7041:7085): Operacion desconocida
+[ERROR] 21:05:32:354 MEMORIA/(7041:7085): Operacion desconocida
+[ERROR] 21:05:32:355 MEMORIA/(7041:7085): Operacion desconocida
+[ERROR] 21:05:32:355 MEMORIA/(7041:7085): Operacion desconocida
+[ERROR] 21:05:32:356 MEMORIA/(7041:7085): Operacion desconocida
+[ERROR] 21:05:32:356 MEMORIA/(7041:7085): Operacion desconocida
+[ERROR] 21:05:32:357 MEMORIA/(7041:7085): Operacion desconocida
+[ERROR] 21:05:32:358 MEMORIA/(7041:7085): Operacion desconocida
+[ERROR] 21:05:32:359 MEMORIA/(7041:7085): Operacion desconocida
+[ERROR] 21:05:32:360 MEMORIA/(7041:7085): Operacion desconocida
+[INFO] 21:07:03:068 MEMORIA/(7379:7379): Se creo el espacio contiguo de memoria
+[INFO] 21:07:03:068 MEMORIA/(7379:7379): Se creo el segmento 0
+[INFO] 21:07:03:068 MEMORIA/(7379:7379): Se creo la lista de huecos libres
+[INFO] 21:07:03:068 MEMORIA/(7379:7379): Esperando conexiones de modulos...
+[INFO] 21:07:10:860 MEMORIA/(7379:7379): Se conecto el cpu
+[INFO] 21:07:16:516 MEMORIA/(7379:7601): Me llego el mensaje: Hola soy la CPU
+[INFO] 21:07:32:249 MEMORIA/(7379:7379): Se conecto el kernel
+[INFO] 21:09:00:909 MEMORIA/(8523:8523): Se creo el espacio contiguo de memoria
+[INFO] 21:09:00:910 MEMORIA/(8523:8523): Se creo el segmento 0
+[INFO] 21:09:00:910 MEMORIA/(8523:8523): Se creo la lista de huecos libres
+[INFO] 21:09:00:910 MEMORIA/(8523:8523): Esperando conexiones de modulos...
+[INFO] 21:09:19:063 MEMORIA/(8523:8523): Se conecto el cpu
+[INFO] 21:09:23:501 MEMORIA/(8523:8523): Se conecto el kernel
+[INFO] 21:09:56:395 MEMORIA/(8523:8887): Se recibio un CREAR_TABLA_SEGMENTOS
+[ERROR] 21:10:31:308 MEMORIA/(8523:8887): Operacion desconocida
+[INFO] 21:10:58:920 MEMORIA/(8523:8887): Se recibio un CREATE_SEGMENT
+[INFO] 21:10:58:920 MEMORIA/(8523:8887): Hueco: base 0x55555555c8e0, tamanio 0, libre 0
+[INFO] 21:10:58:920 MEMORIA/(8523:8887): Hueco: base 0x55555555c8e0, tamanio 3968, libre 1
+[ERROR] 21:12:20:253 MEMORIA/(8523:8887): Operacion desconocida
+[ERROR] 21:12:20:253 MEMORIA/(8523:8887): Operacion desconocida
+[ERROR] 21:12:20:253 MEMORIA/(8523:8887): Operacion desconocida
+[ERROR] 21:12:20:253 MEMORIA/(8523:8887): Operacion desconocida
+[ERROR] 21:12:20:253 MEMORIA/(8523:8887): Operacion desconocida
+[ERROR] 21:12:20:253 MEMORIA/(8523:8887): Operacion desconocida
+[ERROR] 21:12:20:253 MEMORIA/(8523:8887): Operacion desconocida
+[ERROR] 21:12:20:253 MEMORIA/(8523:8887): Operacion desconocida
+[ERROR] 21:12:20:253 MEMORIA/(8523:8887): Operacion desconocida
+[ERROR] 21:12:20:253 MEMORIA/(8523:8887): Operacion desconocida
+[INFO] 21:13:04:021 MEMORIA/(9842:9842): Se creo el espacio contiguo de memoria
+[INFO] 21:13:04:021 MEMORIA/(9842:9842): Se creo el segmento 0
+[INFO] 21:13:04:021 MEMORIA/(9842:9842): Se creo la lista de huecos libres
+[INFO] 21:13:04:021 MEMORIA/(9842:9842): Esperando conexiones de modulos...
+[INFO] 21:13:09:503 MEMORIA/(9842:9842): Se conecto el cpu
+[INFO] 21:13:13:551 MEMORIA/(9842:9842): Se conecto el kernel
+[INFO] 21:13:32:002 MEMORIA/(9842:10198): Se recibio un CREAR_TABLA_SEGMENTOS
+[ERROR] 21:13:41:448 MEMORIA/(9842:10198): Operacion desconocida
+[INFO] 21:15:21:990 MEMORIA/(11156:11156): Se creo el espacio contiguo de memoria
+[INFO] 21:15:21:991 MEMORIA/(11156:11156): Se creo el segmento 0
+[INFO] 21:15:21:991 MEMORIA/(11156:11156): Se creo la lista de huecos libres
+[INFO] 21:15:21:991 MEMORIA/(11156:11156): Esperando conexiones de modulos...
+[INFO] 21:15:28:538 MEMORIA/(11156:11156): Se conecto el cpu
+[INFO] 21:15:32:221 MEMORIA/(11156:11156): Se conecto el kernel
+[INFO] 21:15:46:373 MEMORIA/(11156:11439): Se recibio un CREAR_TABLA_SEGMENTOS
+[INFO] 21:16:49:237 MEMORIA/(12006:12006): Se creo el espacio contiguo de memoria
+[INFO] 21:16:49:237 MEMORIA/(12006:12006): Se creo el segmento 0
+[INFO] 21:16:49:237 MEMORIA/(12006:12006): Se creo la lista de huecos libres
+[INFO] 21:16:49:237 MEMORIA/(12006:12006): Esperando conexiones de modulos...
+[INFO] 21:16:57:793 MEMORIA/(12006:12006): Se conecto el cpu
+[INFO] 21:17:02:224 MEMORIA/(12006:12006): Se conecto el kernel
+[INFO] 21:17:40:152 MEMORIA/(12006:12390): Se recibio un CREAR_TABLA_SEGMENTOS
+[ERROR] 21:19:17:896 MEMORIA/(12006:12390): Operacion desconocida
+[INFO] 21:23:26:058 MEMORIA/(13762:13762): Se creo el espacio contiguo de memoria
+[INFO] 21:23:26:058 MEMORIA/(13762:13762): Se creo el segmento 0
+[INFO] 21:23:26:058 MEMORIA/(13762:13762): Se creo la lista de huecos libres
+[INFO] 21:23:26:058 MEMORIA/(13762:13762): Esperando conexiones de modulos...
+[INFO] 21:23:30:805 MEMORIA/(13762:13762): Se conecto el cpu
+[INFO] 21:23:34:872 MEMORIA/(13762:13762): Se conecto el kernel
+[INFO] 21:23:43:375 MEMORIA/(13762:14111): Se recibio un CREAR_TABLA_SEGMENTOS
+[ERROR] 21:23:43:381 MEMORIA/(13762:14111): Operacion desconocida
+[INFO] 21:24:05:079 MEMORIA/(14642:14642): Se creo el espacio contiguo de memoria
+[INFO] 21:24:05:079 MEMORIA/(14642:14642): Se creo el segmento 0
+[INFO] 21:24:05:079 MEMORIA/(14642:14642): Se creo la lista de huecos libres
+[INFO] 21:24:05:079 MEMORIA/(14642:14642): Esperando conexiones de modulos...
+[INFO] 21:24:08:643 MEMORIA/(14642:14642): Se conecto el cpu
+[INFO] 21:24:12:457 MEMORIA/(14642:14642): Se conecto el kernel
+[INFO] 21:24:16:961 MEMORIA/(14642:14987): Se recibio un CREAR_TABLA_SEGMENTOS
+[ERROR] 21:24:16:961 MEMORIA/(14642:14987): Operacion desconocida
+[INFO] 21:24:16:962 MEMORIA/(14642:14987): Se recibio un CREATE_SEGMENT
+[INFO] 21:24:16:962 MEMORIA/(14642:14987): Hueco: base 0x55555555c8e0, tamanio 0, libre 0
+[INFO] 21:24:16:962 MEMORIA/(14642:14987): Hueco: base 0x55555555c8e0, tamanio 3968, libre 1
+[INFO] 21:26:36:908 MEMORIA/(15690:15690): Se creo el espacio contiguo de memoria
+[INFO] 21:26:36:908 MEMORIA/(15690:15690): Se creo el segmento 0
+[INFO] 21:26:36:908 MEMORIA/(15690:15690): Se creo la lista de huecos libres
+[INFO] 21:26:36:908 MEMORIA/(15690:15690): Esperando conexiones de modulos...
+[INFO] 21:26:40:960 MEMORIA/(15690:15690): Se conecto el cpu
+[INFO] 21:26:47:400 MEMORIA/(15690:15690): Se conecto el kernel
+[INFO] 21:27:05:313 MEMORIA/(15690:16087): Se recibio un CREAR_TABLA_SEGMENTOS
+[ERROR] 21:27:33:771 MEMORIA/(15690:16087): Operacion desconocida
+[INFO] 21:29:48:449 MEMORIA/(15690:16087): Se recibio un CREATE_SEGMENT
+[INFO] 21:29:48:449 MEMORIA/(15690:16087): Hueco: base 0x55555555c8e0, tamanio 0, libre 0
+[INFO] 21:29:48:449 MEMORIA/(15690:16087): Hueco: base 0x55555555c8e0, tamanio 3968, libre 1
+[INFO] 21:29:59:756 MEMORIA/(15690:16087): Se recibio un CREAR_TABLA_SEGMENTOS
+[ERROR] 21:30:02:966 MEMORIA/(15690:16087): Operacion desconocida
+[INFO] 21:30:02:966 MEMORIA/(15690:16087): Se recibio un CREATE_SEGMENT
+[INFO] 21:30:02:966 MEMORIA/(15690:16087): Hueco: base 0x55555555c8e0, tamanio 0, libre 0
+[INFO] 21:30:02:966 MEMORIA/(15690:16087): Hueco: base 0x55555555c8e0, tamanio 0, libre 0
+[INFO] 21:30:02:966 MEMORIA/(15690:16087): Hueco: base 0x55555555c8e0, tamanio 3968, libre 1
+[INFO] 21:30:55:261 MEMORIA/(17237:17237): Se creo el espacio contiguo de memoria
+[INFO] 21:30:55:261 MEMORIA/(17237:17237): Se creo el segmento 0
+[INFO] 21:30:55:261 MEMORIA/(17237:17237): Se creo la lista de huecos libres
+[INFO] 21:30:55:261 MEMORIA/(17237:17237): Esperando conexiones de modulos...
+[INFO] 21:31:00:526 MEMORIA/(17237:17237): Se conecto el cpu
+[INFO] 21:31:05:919 MEMORIA/(17237:17237): Se conecto el kernel
+[INFO] 21:31:10:470 MEMORIA/(17237:17605): Se recibio un CREAR_TABLA_SEGMENTOS
+[ERROR] 21:31:10:470 MEMORIA/(17237:17605): Operacion desconocida
+[INFO] 21:31:10:471 MEMORIA/(17237:17605): Se recibio un CREATE_SEGMENT
+[INFO] 21:31:59:929 MEMORIA/(18109:18109): Se creo el espacio contiguo de memoria
+[INFO] 21:31:59:929 MEMORIA/(18109:18109): Se creo el segmento 0
+[INFO] 21:31:59:929 MEMORIA/(18109:18109): Se creo la lista de huecos libres
+[INFO] 21:31:59:929 MEMORIA/(18109:18109): Esperando conexiones de modulos...
+[INFO] 21:32:03:464 MEMORIA/(18109:18109): Se conecto el cpu
+[INFO] 21:32:07:223 MEMORIA/(18109:18109): Se conecto el kernel
+[INFO] 21:32:10:256 MEMORIA/(18109:18412): Se recibio un CREAR_TABLA_SEGMENTOS
+[ERROR] 21:32:10:256 MEMORIA/(18109:18412): Operacion desconocida
+[INFO] 21:32:10:257 MEMORIA/(18109:18412): Se recibio un CREATE_SEGMENT
+[INFO] 21:32:32:253 MEMORIA/(18826:18826): Se creo el espacio contiguo de memoria
+[INFO] 21:32:32:253 MEMORIA/(18826:18826): Se creo el segmento 0
+[INFO] 21:32:32:253 MEMORIA/(18826:18826): Se creo la lista de huecos libres
+[INFO] 21:32:32:253 MEMORIA/(18826:18826): Esperando conexiones de modulos...
+[INFO] 21:32:35:877 MEMORIA/(18826:18826): Se conecto el cpu
+[INFO] 21:32:39:392 MEMORIA/(18826:18826): Se conecto el kernel
+[INFO] 21:32:42:164 MEMORIA/(18826:19139): Se recibio un CREAR_TABLA_SEGMENTOS
+[ERROR] 21:32:42:165 MEMORIA/(18826:19139): Operacion desconocida
+[INFO] 21:32:42:165 MEMORIA/(18826:19139): Se recibio un CREATE_SEGMENT
+[INFO] 22:21:09:388 MEMORIA/(21353:21353): Se creo el espacio contiguo de memoria
+[INFO] 22:21:09:388 MEMORIA/(21353:21353): Se creo el segmento 0
+[INFO] 22:21:09:388 MEMORIA/(21353:21353): Se creo la lista de huecos libres
+[INFO] 22:21:09:388 MEMORIA/(21353:21353): Esperando conexiones de modulos...
+[INFO] 22:21:13:343 MEMORIA/(21353:21353): Se conecto el cpu
+[INFO] 22:22:22:331 MEMORIA/(21353:21353): Se conecto el kernel
+[INFO] 22:22:27:231 MEMORIA/(21353:22129): Se recibio un CREAR_TABLA_SEGMENTOS
+[ERROR] 22:22:27:231 MEMORIA/(21353:22129): Operacion desconocida
+[INFO] 22:23:20:203 MEMORIA/(22642:22642): Se creo el espacio contiguo de memoria
+[INFO] 22:23:20:203 MEMORIA/(22642:22642): Se creo el segmento 0
+[INFO] 22:23:20:203 MEMORIA/(22642:22642): Se creo la lista de huecos libres
+[INFO] 22:23:20:203 MEMORIA/(22642:22642): Esperando conexiones de modulos...
+[INFO] 22:23:24:445 MEMORIA/(22642:22642): Se conecto el cpu
+[INFO] 22:23:29:819 MEMORIA/(22642:22642): Se conecto el kernel
+[INFO] 22:23:33:794 MEMORIA/(22642:23066): Se recibio un CREAR_TABLA_SEGMENTOS
+[ERROR] 22:23:33:794 MEMORIA/(22642:23066): Operacion desconocida
+[INFO] 22:24:42:849 MEMORIA/(23577:23577): Se creo el espacio contiguo de memoria
+[INFO] 22:24:42:849 MEMORIA/(23577:23577): Se creo el segmento 0
+[INFO] 22:24:42:849 MEMORIA/(23577:23577): Se creo la lista de huecos libres
+[INFO] 22:24:42:849 MEMORIA/(23577:23577): Esperando conexiones de modulos...
+[INFO] 22:24:47:628 MEMORIA/(23577:23577): Se conecto el cpu
+[INFO] 22:24:52:192 MEMORIA/(23577:23577): Se conecto el kernel
+[INFO] 22:24:56:707 MEMORIA/(23577:23967): Se recibio un CREAR_TABLA_SEGMENTOS
+[ERROR] 22:24:56:707 MEMORIA/(23577:23967): Operacion desconocida
+[INFO] 22:24:56:708 MEMORIA/(23577:23967): Se recibio un CREATE_SEGMENT
+[INFO] 22:25:29:624 MEMORIA/(23577:23967): Hueco: base 0x55555555c8e0, tamanio 0, libre 0
+[INFO] 22:25:29:624 MEMORIA/(23577:23967): Hueco: base 0x55555555c8e0, tamanio 3968, libre 1
+[INFO] 22:25:44:498 MEMORIA/(23577:23967): Se desconecto un modulo
+[INFO] 22:25:44:498 MEMORIA/(23577:23776): Se desconecto un modulo
+[INFO] 22:25:52:158 MEMORIA/(24685:24685): Se creo el espacio contiguo de memoria
+[INFO] 22:25:52:158 MEMORIA/(24685:24685): Se creo el segmento 0
+[INFO] 22:25:52:158 MEMORIA/(24685:24685): Se creo la lista de huecos libres
+[INFO] 22:25:52:158 MEMORIA/(24685:24685): Esperando conexiones de modulos...
+[INFO] 22:26:02:638 MEMORIA/(24685:24685): Se conecto el cpu
+[INFO] 22:26:08:383 MEMORIA/(24685:24685): Se conecto el kernel
+[INFO] 22:26:43:802 MEMORIA/(24685:25003): Se recibio un CREAR_TABLA_SEGMENTOS
+[ERROR] 22:26:43:802 MEMORIA/(24685:25003): Operacion desconocida
+[INFO] 22:26:43:803 MEMORIA/(24685:25003): Se recibio un CREATE_SEGMENT
+[INFO] 22:26:43:803 MEMORIA/(24685:25003): Hueco: base 0x55555555c8e0, tamanio 0, libre 0
+[INFO] 22:26:43:803 MEMORIA/(24685:25003): Hueco: base 0x55555555c8e0, tamanio 3968, libre 1
+[INFO] 22:26:46:953 MEMORIA/(24685:24840): Se desconecto un modulo
+[INFO] 22:26:46:953 MEMORIA/(24685:25003): Se desconecto un modulo
+[INFO] 22:27:07:250 MEMORIA/(25689:25689): Se creo el espacio contiguo de memoria
+[INFO] 22:27:07:250 MEMORIA/(25689:25689): Se creo el segmento 0
+[INFO] 22:27:07:250 MEMORIA/(25689:25689): Se creo la lista de huecos libres
+[INFO] 22:27:07:250 MEMORIA/(25689:25689): Esperando conexiones de modulos...
+[INFO] 22:27:11:382 MEMORIA/(25689:25689): Se conecto el cpu
+[INFO] 22:27:15:275 MEMORIA/(25689:25689): Se conecto el kernel
+[INFO] 22:27:59:811 MEMORIA/(25689:25973): Se recibio un CREAR_TABLA_SEGMENTOS
+[ERROR] 22:27:59:812 MEMORIA/(25689:25973): Operacion desconocida
+[INFO] 22:28:00:230 MEMORIA/(25689:25973): Se recibio un CREATE_SEGMENT
+[INFO] 22:28:00:230 MEMORIA/(25689:25973): Hueco: base 0x55555555c8e0, tamanio 0, libre 0
+[INFO] 22:28:00:230 MEMORIA/(25689:25973): Hueco: base 0x55555555c8e0, tamanio 3968, libre 1
+[INFO] 22:29:31:843 MEMORIA/(26758:26758): Se creo el espacio contiguo de memoria
+[INFO] 22:29:31:843 MEMORIA/(26758:26758): Se creo el segmento 0
+[INFO] 22:29:31:843 MEMORIA/(26758:26758): Se creo la lista de huecos libres
+[INFO] 22:29:31:843 MEMORIA/(26758:26758): Esperando conexiones de modulos...
+[INFO] 22:29:35:501 MEMORIA/(26758:26758): Se conecto el cpu
+[INFO] 22:29:38:975 MEMORIA/(26758:26758): Se conecto el kernel
+[INFO] 22:32:20:227 MEMORIA/(26758:27033): Se recibio un CREAR_TABLA_SEGMENTOS
+[ERROR] 22:32:20:227 MEMORIA/(26758:27033): Operacion desconocida
+[INFO] 22:33:34:272 MEMORIA/(26758:26889): Se desconecto un modulo
+[INFO] 22:34:04:519 MEMORIA/(28201:28201): Se creo el espacio contiguo de memoria
+[INFO] 22:34:04:519 MEMORIA/(28201:28201): Se creo el segmento 0
+[INFO] 22:34:04:519 MEMORIA/(28201:28201): Se creo la lista de huecos libres
+[INFO] 22:34:04:519 MEMORIA/(28201:28201): Esperando conexiones de modulos...
+[INFO] 22:34:11:813 MEMORIA/(28201:28201): Se conecto el cpu
+[INFO] 22:34:17:157 MEMORIA/(28201:28201): Se conecto el kernel
+[INFO] 22:34:39:983 MEMORIA/(28201:28650): Se recibio un CREAR_TABLA_SEGMENTOS
+[ERROR] 22:34:39:983 MEMORIA/(28201:28650): Operacion desconocida
+[INFO] 22:37:49:259 MEMORIA/(29584:29584): Se creo el espacio contiguo de memoria
+[INFO] 22:37:49:259 MEMORIA/(29584:29584): Se creo el segmento 0
+[INFO] 22:37:49:259 MEMORIA/(29584:29584): Se creo la lista de huecos libres
+[INFO] 22:37:49:259 MEMORIA/(29584:29584): Esperando conexiones de modulos...
+[INFO] 22:38:31:376 MEMORIA/(29584:29584): Se conecto el cpu
+[INFO] 22:38:36:878 MEMORIA/(29584:29584): Se conecto el kernel
+[INFO] 22:38:40:796 MEMORIA/(29584:30089): Se recibio un CREAR_TABLA_SEGMENTOS
+[ERROR] 22:38:40:796 MEMORIA/(29584:30089): Operacion desconocida
+[INFO] 22:42:51:127 MEMORIA/(29584:30089): Se desconecto un modulo
+[INFO] 22:42:51:127 MEMORIA/(29584:29848): Se desconecto un modulo
+[INFO] 22:44:00:863 MEMORIA/(31688:31688): Se creo el espacio contiguo de memoria
+[INFO] 22:44:00:863 MEMORIA/(31688:31688): Se creo el segmento 0
+[INFO] 22:44:00:863 MEMORIA/(31688:31688): Se creo la lista de huecos libres
+[INFO] 22:44:00:863 MEMORIA/(31688:31688): Esperando conexiones de modulos...
+[INFO] 22:44:06:046 MEMORIA/(31688:31688): Se conecto el cpu
+[INFO] 22:44:08:944 MEMORIA/(31688:31688): Se conecto el kernel
+[INFO] 22:44:15:583 MEMORIA/(31688:32013): Se recibio un CREAR_TABLA_SEGMENTOS
+[ERROR] 22:44:15:583 MEMORIA/(31688:32013): Operacion desconocida
+[INFO] 22:46:02:772 MEMORIA/(32653:32653): Se creo el espacio contiguo de memoria
+[INFO] 22:46:02:772 MEMORIA/(32653:32653): Se creo el segmento 0
+[INFO] 22:46:02:772 MEMORIA/(32653:32653): Se creo la lista de huecos libres
+[INFO] 22:46:02:772 MEMORIA/(32653:32653): Esperando conexiones de modulos...
+[INFO] 22:46:07:870 MEMORIA/(32653:32653): Se conecto el cpu
+[INFO] 22:46:12:213 MEMORIA/(32653:32653): Se conecto el kernel
+[INFO] 22:46:15:261 MEMORIA/(32653:33044): Se recibio un CREAR_TABLA_SEGMENTOS
+[ERROR] 22:46:15:261 MEMORIA/(32653:33044): Operacion desconocida
+[INFO] 22:47:28:868 MEMORIA/(33454:33454): Se creo el espacio contiguo de memoria
+[INFO] 22:47:28:868 MEMORIA/(33454:33454): Se creo el segmento 0
+[INFO] 22:47:28:868 MEMORIA/(33454:33454): Se creo la lista de huecos libres
+[INFO] 22:47:28:868 MEMORIA/(33454:33454): Esperando conexiones de modulos...
+[INFO] 22:47:32:642 MEMORIA/(33454:33454): Se conecto el cpu
+[INFO] 22:47:37:366 MEMORIA/(33454:33454): Se conecto el kernel
+[INFO] 22:47:39:931 MEMORIA/(33454:33843): Se recibio un CREAR_TABLA_SEGMENTOS
+[ERROR] 22:47:39:931 MEMORIA/(33454:33843): Operacion desconocida
+[INFO] 22:48:22:741 MEMORIA/(34273:34273): Se creo el espacio contiguo de memoria
+[INFO] 22:48:22:741 MEMORIA/(34273:34273): Se creo el segmento 0
+[INFO] 22:48:22:741 MEMORIA/(34273:34273): Se creo la lista de huecos libres
+[INFO] 22:48:22:741 MEMORIA/(34273:34273): Esperando conexiones de modulos...
+[INFO] 22:48:26:649 MEMORIA/(34273:34273): Se conecto el cpu
+[INFO] 22:48:31:222 MEMORIA/(34273:34273): Se conecto el kernel
+[INFO] 22:48:35:911 MEMORIA/(34273:34619): Se recibio un CREAR_TABLA_SEGMENTOS
+[INFO] 22:50:22:388 MEMORIA/(35191:35191): Se creo el espacio contiguo de memoria
+[INFO] 22:50:22:388 MEMORIA/(35191:35191): Se creo el segmento 0
+[INFO] 22:50:22:388 MEMORIA/(35191:35191): Se creo la lista de huecos libres
+[INFO] 22:50:22:388 MEMORIA/(35191:35191): Esperando conexiones de modulos...
+[INFO] 22:50:28:639 MEMORIA/(35191:35191): Se conecto el cpu
+[INFO] 22:50:47:713 MEMORIA/(35191:35191): Se conecto el kernel
+[INFO] 22:50:50:483 MEMORIA/(35191:35614): Se recibio un CREAR_TABLA_SEGMENTOS
+[ERROR] 22:51:58:868 MEMORIA/(35191:35614): Operacion desconocida
+[INFO] 22:52:12:242 MEMORIA/(35191:35372): Se desconecto un modulo
+[INFO] 22:52:15:620 MEMORIA/(35191:35614): Se desconecto un modulo
+[INFO] 22:53:04:220 MEMORIA/(36349:36349): Se creo el espacio contiguo de memoria
+[INFO] 22:53:04:220 MEMORIA/(36349:36349): Se creo el segmento 0
+[INFO] 22:53:04:220 MEMORIA/(36349:36349): Se creo la lista de huecos libres
+[INFO] 22:53:04:220 MEMORIA/(36349:36349): Esperando conexiones de modulos...
+[INFO] 22:53:09:241 MEMORIA/(36349:36349): Se conecto el cpu
+[INFO] 22:53:13:169 MEMORIA/(36349:36349): Se conecto el kernel
+[INFO] 22:53:16:605 MEMORIA/(36349:36632): Se recibio un CREAR_TABLA_SEGMENTOS
+[ERROR] 22:53:16:605 MEMORIA/(36349:36632): Operacion desconocida
+[INFO] 22:55:40:205 MEMORIA/(37457:37457): Se creo el espacio contiguo de memoria
+[INFO] 22:55:40:205 MEMORIA/(37457:37457): Se creo el segmento 0
+[INFO] 22:55:40:205 MEMORIA/(37457:37457): Se creo la lista de huecos libres
+[INFO] 22:55:40:206 MEMORIA/(37457:37457): Esperando conexiones de modulos...
+[INFO] 22:55:46:275 MEMORIA/(37457:37457): Se conecto el cpu
+[INFO] 22:55:52:381 MEMORIA/(37457:37457): Se conecto el kernel
+[INFO] 22:55:54:985 MEMORIA/(37457:37970): Se recibio un CREAR_TABLA_SEGMENTOS
+[ERROR] 22:55:54:985 MEMORIA/(37457:37970): Operacion desconocida
+[INFO] 22:55:57:974 MEMORIA/(37457:37970): Se recibio un CREATE_SEGMENT
+[INFO] 22:55:57:974 MEMORIA/(37457:37970): Hueco: base 0x55555555c8e0, tamanio 128, libre 0
+[INFO] 22:55:57:974 MEMORIA/(37457:37970): Hueco: base 0x55555555c960, tamanio 3840, libre 1
+[INFO] 23:49:16:588 MEMORIA/(37457:37970): Se desconecto un modulo
+[INFO] 23:49:16:588 MEMORIA/(37457:37688): Se desconecto un modulo
+[INFO] 23:50:23:943 MEMORIA/(43756:43756): Se creo el espacio contiguo de memoria
+[INFO] 23:50:23:943 MEMORIA/(43756:43756): Se creo el segmento 0
+[INFO] 23:50:23:943 MEMORIA/(43756:43756): Se creo la lista de huecos libres
+[INFO] 23:50:23:943 MEMORIA/(43756:43756): Esperando conexiones de modulos...
+[INFO] 23:50:28:974 MEMORIA/(43756:43756): Se conecto el cpu
+[INFO] 23:51:43:402 MEMORIA/(43756:43756): Se conecto el kernel
+[INFO] 23:51:47:036 MEMORIA/(43756:44455): Se recibio un CREAR_TABLA_SEGMENTOS
+[ERROR] 23:51:47:036 MEMORIA/(43756:44455): Operacion desconocida
+[INFO] 23:51:47:037 MEMORIA/(43756:44455): Se recibio un CREATE_SEGMENT
+[INFO] 23:51:47:038 MEMORIA/(43756:44455): Se recibio un DELETE_SEGMENT
+[INFO] 23:52:39:289 MEMORIA/(44983:44983): Se creo el espacio contiguo de memoria
+[INFO] 23:52:39:289 MEMORIA/(44983:44983): Se creo el segmento 0
+[INFO] 23:52:39:289 MEMORIA/(44983:44983): Se creo la lista de huecos libres
+[INFO] 23:52:39:289 MEMORIA/(44983:44983): Esperando conexiones de modulos...
+[INFO] 23:52:43:231 MEMORIA/(44983:44983): Se conecto el cpu
+[INFO] 23:52:46:665 MEMORIA/(44983:44983): Se conecto el kernel
+[INFO] 23:52:48:948 MEMORIA/(44983:45316): Se recibio un CREAR_TABLA_SEGMENTOS
+[ERROR] 23:52:48:948 MEMORIA/(44983:45316): Operacion desconocida
+[INFO] 23:52:48:949 MEMORIA/(44983:45316): Se recibio un CREATE_SEGMENT
+[INFO] 23:52:48:950 MEMORIA/(44983:45316): Se recibio un DELETE_SEGMENT
+[INFO] 23:56:16:122 MEMORIA/(46055:46055): Se creo el espacio contiguo de memoria
+[INFO] 23:56:16:122 MEMORIA/(46055:46055): Se creo el segmento 0
+[INFO] 23:56:16:122 MEMORIA/(46055:46055): Se creo la lista de huecos libres
+[INFO] 23:56:16:122 MEMORIA/(46055:46055): Esperando conexiones de modulos...
+[INFO] 23:56:19:948 MEMORIA/(46055:46055): Se conecto el cpu
+[INFO] 23:56:23:729 MEMORIA/(46055:46055): Se conecto el kernel
+[INFO] 23:56:26:063 MEMORIA/(46055:46404): Se recibio un CREAR_TABLA_SEGMENTOS
+[ERROR] 23:56:26:063 MEMORIA/(46055:46404): Operacion desconocida
+[INFO] 00:00:19:722 MEMORIA/(46965:46965): Se creo el espacio contiguo de memoria
+[INFO] 00:00:19:722 MEMORIA/(46965:46965): Se creo el segmento 0
+[INFO] 00:00:19:722 MEMORIA/(46965:46965): Se creo la lista de huecos libres
+[INFO] 00:00:19:722 MEMORIA/(46965:46965): Esperando conexiones de modulos...
+[INFO] 00:00:24:514 MEMORIA/(46965:46965): Se conecto el cpu
+[INFO] 00:00:28:848 MEMORIA/(46965:46965): Se conecto el kernel
+[INFO] 00:00:33:046 MEMORIA/(46965:47461): Se recibio un CREAR_TABLA_SEGMENTOS
+[INFO] 00:43:13:495 MEMORIA/(48953:48953): Se creo el espacio contiguo de memoria
+[INFO] 00:43:13:495 MEMORIA/(48953:48953): Se creo el segmento 0
+[INFO] 00:43:13:495 MEMORIA/(48953:48953): Se creo la lista de huecos libres
+[INFO] 00:43:13:496 MEMORIA/(48953:48953): Esperando conexiones de modulos...
+[INFO] 00:43:18:044 MEMORIA/(48953:48953): Se conecto el cpu
+[INFO] 00:43:22:349 MEMORIA/(48953:48953): Se conecto el kernel
+[INFO] 00:43:26:491 MEMORIA/(48953:49355): Se recibio un CREAR_TABLA_SEGMENTOS
+[ERROR] 00:43:37:781 MEMORIA/(48953:49355): Operacion desconocida
+[INFO] 00:43:43:275 MEMORIA/(48953:49355): Se recibio un CREATE_SEGMENT
+[INFO] 00:43:43:276 MEMORIA/(48953:49355): Se recibio un DELETE_SEGMENT
+[INFO] 00:44:21:771 MEMORIA/(50040:50040): Se creo el espacio contiguo de memoria
+[INFO] 00:44:21:771 MEMORIA/(50040:50040): Se creo el segmento 0
+[INFO] 00:44:21:771 MEMORIA/(50040:50040): Se creo la lista de huecos libres
+[INFO] 00:44:21:771 MEMORIA/(50040:50040): Esperando conexiones de modulos...
+[INFO] 00:44:25:305 MEMORIA/(50040:50040): Se conecto el cpu
+[INFO] 00:44:31:353 MEMORIA/(50040:50040): Se conecto el kernel
+[INFO] 00:44:33:908 MEMORIA/(50040:50415): Se recibio un CREAR_TABLA_SEGMENTOS
+[ERROR] 00:44:35:994 MEMORIA/(50040:50415): Operacion desconocida
+[INFO] 00:49:25:029 MEMORIA/(51696:51696): Se creo el espacio contiguo de memoria
+[INFO] 00:49:25:029 MEMORIA/(51696:51696): Se creo el segmento 0
+[INFO] 00:49:25:029 MEMORIA/(51696:51696): Se creo la lista de huecos libres
+[INFO] 00:49:25:029 MEMORIA/(51696:51696): Esperando conexiones de modulos...
+[INFO] 00:49:33:891 MEMORIA/(51696:51696): Se conecto el cpu
+[INFO] 00:49:38:480 MEMORIA/(51696:51696): Se conecto el kernel
+[INFO] 00:49:44:334 MEMORIA/(51696:52201): Se recibio un CREAR_TABLA_SEGMENTOS
+[INFO] 00:50:39:552 MEMORIA/(52852:52852): Se creo el espacio contiguo de memoria
+[INFO] 00:50:39:552 MEMORIA/(52852:52852): Se creo el segmento 0
+[INFO] 00:50:39:552 MEMORIA/(52852:52852): Se creo la lista de huecos libres
+[INFO] 00:50:39:552 MEMORIA/(52852:52852): Esperando conexiones de modulos...
+[INFO] 00:50:44:016 MEMORIA/(52852:52852): Se conecto el cpu
+[INFO] 00:50:48:445 MEMORIA/(52852:52852): Se conecto el kernel
+[INFO] 00:50:51:283 MEMORIA/(52852:53270): Se recibio un CREAR_TABLA_SEGMENTOS
+[INFO] 00:53:46:714 MEMORIA/(53862:53862): Se creo el espacio contiguo de memoria
+[INFO] 00:53:46:714 MEMORIA/(53862:53862): Se creo el segmento 0
+[INFO] 00:53:46:714 MEMORIA/(53862:53862): Se creo la lista de huecos libres
+[INFO] 00:53:46:714 MEMORIA/(53862:53862): Esperando conexiones de modulos...
+[INFO] 00:53:51:655 MEMORIA/(53862:53862): Se conecto el cpu
+[INFO] 00:53:55:874 MEMORIA/(53862:53862): Se conecto el kernel
+[INFO] 00:54:00:017 MEMORIA/(53862:54255): Se recibio un CREAR_TABLA_SEGMENTOS
+[ERROR] 00:54:00:017 MEMORIA/(53862:54255): Operacion desconocida
+[INFO] 00:54:50:862 MEMORIA/(54733:54733): Se creo el espacio contiguo de memoria
+[INFO] 00:54:50:862 MEMORIA/(54733:54733): Se creo el segmento 0
+[INFO] 00:54:50:862 MEMORIA/(54733:54733): Se creo la lista de huecos libres
+[INFO] 00:54:50:863 MEMORIA/(54733:54733): Esperando conexiones de modulos...
+[INFO] 00:54:54:937 MEMORIA/(54733:54733): Se conecto el cpu
+[INFO] 00:54:59:138 MEMORIA/(54733:54733): Se conecto el kernel
+[INFO] 00:55:01:527 MEMORIA/(54733:55111): Se recibio un CREAR_TABLA_SEGMENTOS
+[ERROR] 00:55:01:527 MEMORIA/(54733:55111): Operacion desconocida
+[INFO] 00:56:28:601 MEMORIA/(55616:55616): Se creo el espacio contiguo de memoria
+[INFO] 00:56:28:601 MEMORIA/(55616:55616): Se creo el segmento 0
+[INFO] 00:56:28:601 MEMORIA/(55616:55616): Se creo la lista de huecos libres
+[INFO] 00:56:28:601 MEMORIA/(55616:55616): Esperando conexiones de modulos...
+[INFO] 00:56:34:882 MEMORIA/(55616:55616): Se conecto el cpu
+[INFO] 00:56:38:606 MEMORIA/(55616:55616): Se conecto el kernel
+[INFO] 00:56:41:582 MEMORIA/(55616:55970): Se recibio un CREAR_TABLA_SEGMENTOS
+[ERROR] 00:56:41:582 MEMORIA/(55616:55970): Operacion desconocida
+[INFO] 00:58:07:695 MEMORIA/(56458:56458): Se creo el espacio contiguo de memoria
+[INFO] 00:58:07:695 MEMORIA/(56458:56458): Se creo el segmento 0
+[INFO] 00:58:07:695 MEMORIA/(56458:56458): Se creo la lista de huecos libres
+[INFO] 00:58:07:695 MEMORIA/(56458:56458): Esperando conexiones de modulos...
+[INFO] 00:58:11:776 MEMORIA/(56458:56458): Se conecto el cpu
+[INFO] 00:58:15:758 MEMORIA/(56458:56458): Se conecto el kernel
+[INFO] 00:58:18:234 MEMORIA/(56458:56801): Se recibio un CREAR_TABLA_SEGMENTOS
+[INFO] 01:05:05:007 MEMORIA/(57449:57449): Se creo el espacio contiguo de memoria
+[INFO] 01:05:05:007 MEMORIA/(57449:57449): Se creo el segmento 0
+[INFO] 01:05:05:007 MEMORIA/(57449:57449): Se creo la lista de huecos libres
+[INFO] 01:05:05:007 MEMORIA/(57449:57449): Esperando conexiones de modulos...
+[INFO] 01:05:12:224 MEMORIA/(57449:57449): Se conecto el cpu
+[INFO] 01:05:16:148 MEMORIA/(57449:57449): Se conecto el kernel
+[INFO] 01:05:18:643 MEMORIA/(57449:57850): Se recibio un CREAR_TABLA_SEGMENTOS
+[ERROR] 01:05:21:621 MEMORIA/(57449:57850): Operacion desconocida
+[INFO] 01:06:23:909 MEMORIA/(57449:57850): Se recibio un CREATE_SEGMENT
+[INFO] 01:06:23:909 MEMORIA/(57449:57850): Se recibio un DELETE_SEGMENT
+[INFO] 01:23:23:053 MEMORIA/(59119:59119): Se creo el espacio contiguo de memoria
+[INFO] 01:23:23:053 MEMORIA/(59119:59119): Se creo el segmento 0
+[INFO] 01:23:23:053 MEMORIA/(59119:59119): Se creo la lista de huecos libres
+[INFO] 01:23:23:053 MEMORIA/(59119:59119): Esperando conexiones de modulos...
+[INFO] 01:23:26:721 MEMORIA/(59119:59119): Se conecto el cpu
+[INFO] 01:23:32:887 MEMORIA/(59119:59119): Se conecto el kernel
+[INFO] 01:23:36:698 MEMORIA/(59119:59495): Se recibio un CREAR_TABLA_SEGMENTOS
+[ERROR] 01:23:36:698 MEMORIA/(59119:59495): Operacion desconocida
+[INFO] 01:23:39:254 MEMORIA/(59119:59495): Se recibio un CREATE_SEGMENT
+[INFO] 01:23:39:255 MEMORIA/(59119:59495): Se recibio un DELETE_SEGMENT
+[INFO] 01:24:32:791 MEMORIA/(59119:59495): Hueco: base 0x55555555c8e0, tamanio 3968, libre 0
+[INFO] 01:28:36:174 MEMORIA/(60246:60246): Se creo el espacio contiguo de memoria
+[INFO] 01:28:36:174 MEMORIA/(60246:60246): Se creo el segmento 0
+[INFO] 01:28:36:174 MEMORIA/(60246:60246): Se creo la lista de huecos libres
+[INFO] 01:28:36:174 MEMORIA/(60246:60246): Esperando conexiones de modulos...
+[INFO] 01:28:40:039 MEMORIA/(60246:60246): Se conecto el cpu
+[INFO] 01:28:44:384 MEMORIA/(60246:60246): Se conecto el kernel
+[INFO] 01:28:46:779 MEMORIA/(60246:60572): Se recibio un CREAR_TABLA_SEGMENTOS
+[ERROR] 01:28:46:779 MEMORIA/(60246:60572): Operacion desconocida
+[INFO] 01:28:46:780 MEMORIA/(60246:60572): Se recibio un CREATE_SEGMENT
+[INFO] 01:28:46:780 MEMORIA/(60246:60572): Se recibio un DELETE_SEGMENT
+[INFO] 01:28:46:780 MEMORIA/(60246:60572): Hueco: base 0x55555555c8e0, tamanio 3968, libre 0
+[INFO] 01:29:18:980 MEMORIA/(61012:61012): Se creo el espacio contiguo de memoria
+[INFO] 01:29:18:980 MEMORIA/(61012:61012): Se creo el segmento 0
+[INFO] 01:29:18:980 MEMORIA/(61012:61012): Se creo la lista de huecos libres
+[INFO] 01:29:18:981 MEMORIA/(61012:61012): Esperando conexiones de modulos...
+[INFO] 01:29:23:186 MEMORIA/(61012:61012): Se conecto el cpu
+[INFO] 01:29:26:799 MEMORIA/(61012:61012): Se conecto el kernel
+[INFO] 01:29:29:189 MEMORIA/(61012:61350): Se recibio un CREAR_TABLA_SEGMENTOS
+[ERROR] 01:29:29:189 MEMORIA/(61012:61350): Operacion desconocida
+[INFO] 01:29:29:189 MEMORIA/(61012:61350): Se recibio un CREATE_SEGMENT
+[INFO] 01:29:29:189 MEMORIA/(61012:61350): Se recibio un DELETE_SEGMENT
+[INFO] 01:29:29:189 MEMORIA/(61012:61350): Hueco: base 0x55555555c8e0, tamanio 3968, libre 0
+[INFO] 01:29:57:230 MEMORIA/(61910:61910): Se creo el espacio contiguo de memoria
+[INFO] 01:29:57:230 MEMORIA/(61910:61910): Se creo el segmento 0
+[INFO] 01:29:57:230 MEMORIA/(61910:61910): Se creo la lista de huecos libres
+[INFO] 01:29:57:230 MEMORIA/(61910:61910): Esperando conexiones de modulos...
+[INFO] 01:30:00:831 MEMORIA/(61910:61910): Se conecto el cpu
+[INFO] 01:30:04:852 MEMORIA/(61910:61910): Se conecto el kernel
+[INFO] 01:30:07:293 MEMORIA/(61910:62237): Se recibio un CREAR_TABLA_SEGMENTOS
+[ERROR] 01:30:07:293 MEMORIA/(61910:62237): Operacion desconocida
+[INFO] 01:30:07:294 MEMORIA/(61910:62237): Se recibio un CREATE_SEGMENT
+[INFO] 01:30:07:294 MEMORIA/(61910:62237): Se recibio un DELETE_SEGMENT
+[INFO] 01:30:07:294 MEMORIA/(61910:62237): Hueco: base 0x55555555c8e0, tamanio 3968, libre 0
+[INFO] 01:31:40:448 MEMORIA/(62843:62843): Se creo el espacio contiguo de memoria
+[INFO] 01:31:40:448 MEMORIA/(62843:62843): Se creo el segmento 0
+[INFO] 01:31:40:448 MEMORIA/(62843:62843): Se creo la lista de huecos libres
+[INFO] 01:31:40:449 MEMORIA/(62843:62843): Esperando conexiones de modulos...
+[INFO] 01:31:44:099 MEMORIA/(62843:62843): Se conecto el cpu
+[INFO] 01:31:47:816 MEMORIA/(62843:62843): Se conecto el kernel
+[INFO] 01:31:50:617 MEMORIA/(62843:63156): Se recibio un CREAR_TABLA_SEGMENTOS
+[ERROR] 01:31:50:617 MEMORIA/(62843:63156): Operacion desconocida
+[INFO] 01:31:50:617 MEMORIA/(62843:63156): Se recibio un CREATE_SEGMENT
+[INFO] 01:31:50:618 MEMORIA/(62843:63156): Se recibio un DELETE_SEGMENT
+[INFO] 01:31:50:618 MEMORIA/(62843:63156): Hueco: base 0x55555555c8e0, tamanio 3968, libre 0
+[INFO] 01:33:45:217 MEMORIA/(63760:63760): Se creo el espacio contiguo de memoria
+[INFO] 01:33:45:217 MEMORIA/(63760:63760): Se creo el segmento 0
+[INFO] 01:33:45:217 MEMORIA/(63760:63760): Se creo la lista de huecos libres
+[INFO] 01:33:45:217 MEMORIA/(63760:63760): Esperando conexiones de modulos...
+[INFO] 01:33:48:566 MEMORIA/(63760:63760): Se conecto el cpu
+[INFO] 01:33:52:470 MEMORIA/(63760:63760): Se conecto el kernel
+[INFO] 01:33:55:209 MEMORIA/(63760:64074): Se recibio un CREAR_TABLA_SEGMENTOS
+[ERROR] 01:33:55:209 MEMORIA/(63760:64074): Operacion desconocida
+[INFO] 01:33:55:209 MEMORIA/(63760:64074): Se recibio un CREATE_SEGMENT
+[INFO] 01:33:55:210 MEMORIA/(63760:64074): Se recibio un DELETE_SEGMENT
+[INFO] 01:33:55:210 MEMORIA/(63760:64074): Hueco: base 0x55555555c8e0, tamanio 3968, libre 0
+[INFO] 01:34:09:883 MEMORIA/(63760:64074): Se desconecto un modulo
+[INFO] 01:34:09:884 MEMORIA/(63760:63906): Se desconecto un modulo
+[INFO] 01:35:23:657 MEMORIA/(64678:64678): Se creo el espacio contiguo de memoria
+[INFO] 01:35:23:657 MEMORIA/(64678:64678): Se creo el segmento 0
+[INFO] 01:35:23:657 MEMORIA/(64678:64678): Se creo la lista de huecos libres
+[INFO] 01:35:23:657 MEMORIA/(64678:64678): Esperando conexiones de modulos...
+[INFO] 01:35:27:979 MEMORIA/(64678:64678): Se conecto el cpu
+[INFO] 01:35:44:040 MEMORIA/(64678:64678): Se conecto el kernel
+[INFO] 01:35:47:303 MEMORIA/(64678:65166): Se recibio un CREAR_TABLA_SEGMENTOS
+[ERROR] 01:35:47:303 MEMORIA/(64678:65166): Operacion desconocida
+[INFO] 01:35:47:303 MEMORIA/(64678:65166): Se recibio un CREATE_SEGMENT
+[INFO] 01:35:47:303 MEMORIA/(64678:65166): Se recibio un DELETE_SEGMENT
+[INFO] 01:35:47:303 MEMORIA/(64678:65166): Hueco: base 0x55555555c8e0, tamanio 3968, libre 0
+[INFO] 01:38:25:891 MEMORIA/(65764:65764): Se creo el espacio contiguo de memoria
+[INFO] 01:38:25:891 MEMORIA/(65764:65764): Se creo el segmento 0
+[INFO] 01:38:25:891 MEMORIA/(65764:65764): Se creo la lista de huecos libres
+[INFO] 01:38:25:891 MEMORIA/(65764:65764): Esperando conexiones de modulos...
+[INFO] 01:38:29:631 MEMORIA/(65764:65764): Se conecto el cpu
+[INFO] 01:38:33:810 MEMORIA/(65764:65764): Se conecto el kernel
+[INFO] 01:38:36:206 MEMORIA/(65764:66194): Se recibio un CREAR_TABLA_SEGMENTOS
+[ERROR] 01:38:36:206 MEMORIA/(65764:66194): Operacion desconocida
+[INFO] 01:38:36:207 MEMORIA/(65764:66194): Se recibio un CREATE_SEGMENT
+[INFO] 01:38:36:207 MEMORIA/(65764:66194): Se recibio un DELETE_SEGMENT
+[INFO] 01:38:36:207 MEMORIA/(65764:66194): Hueco: base 0x55555555c8e0, tamanio 3968, libre 0
+[INFO] 01:39:38:259 MEMORIA/(66664:66664): Se creo el espacio contiguo de memoria
+[INFO] 01:39:38:259 MEMORIA/(66664:66664): Se creo el segmento 0
+[INFO] 01:39:38:259 MEMORIA/(66664:66664): Se creo la lista de huecos libres
+[INFO] 01:39:38:259 MEMORIA/(66664:66664): Esperando conexiones de modulos...
+[INFO] 01:39:41:941 MEMORIA/(66664:66664): Se conecto el cpu
+[INFO] 01:39:45:627 MEMORIA/(66664:66664): Se conecto el kernel
+[INFO] 01:39:48:045 MEMORIA/(66664:66995): Se recibio un CREAR_TABLA_SEGMENTOS
+[ERROR] 01:39:48:045 MEMORIA/(66664:66995): Operacion desconocida
+[INFO] 01:39:48:046 MEMORIA/(66664:66995): Se recibio un CREATE_SEGMENT
+[INFO] 01:39:48:046 MEMORIA/(66664:66995): Se recibio un DELETE_SEGMENT
+[INFO] 01:39:48:046 MEMORIA/(66664:66995): Hueco: base 0x55555555c8e0, tamanio 3968, libre 0
+[INFO] 01:40:40:742 MEMORIA/(66664:66995): Se desconecto un modulo
+[INFO] 01:40:40:750 MEMORIA/(66664:66811): Se desconecto un modulo

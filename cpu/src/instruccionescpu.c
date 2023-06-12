@@ -84,13 +84,13 @@ op_code execute(t_instruccion* instruccion_actual, t_ctx *ctx)
 	case MOV_IN:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
 		char* mensaje = string_from_format("Leer de la siguiente direccion de memoria %s", instruccion_actual->parametros[1]);
-		enviar_mensaje(mensaje, SOCKET_MEMORIA);
+		//enviar_mensaje(mensaje, SOCKET_MEMORIA);
 		return 0;
 
 	case MOV_OUT:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
 		char* mensaje_a_enviar = string_from_format("Escribi en la siguiente direccion de memoria %s el valor %s", instruccion_actual->parametros[0], obtenerRegistro(&ctx->registros, instruccion_actual->parametros[1]));
-		enviar_mensaje(mensaje_a_enviar, SOCKET_MEMORIA);
+		//enviar_mensaje(mensaje_a_enviar, SOCKET_MEMORIA);
 		return 0;
 	
 	case WAIT:
@@ -143,6 +143,7 @@ op_code execute(t_instruccion* instruccion_actual, t_ctx *ctx)
 	
 	case DELETE_SEGMENT:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0]);
+		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[0]);
 		return DELETE_SEGMENT;
 	
 	default:
@@ -170,6 +171,7 @@ void ciclo_de_instruccion(t_ctx *ctx)
 			t_paquete *paquete = crear_paquete(cod_op);
 			serializar_contexto(ctx, paquete);
 			enviar_paquete(paquete, SOCKET_KERNEL);
+			free(paquete);
 			ctx = NULL;
 		}
 	}
