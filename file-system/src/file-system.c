@@ -13,6 +13,9 @@ int main(int argc, char *argv[]) {
 
     inicializar_archivos(config);
 
+    t_dictionary *diccionario = dictionary_create();
+    
+
     
     int conexion_memoria;
     inicializar_conexiones(&conexion_memoria, config);

@@ -142,15 +142,7 @@ void serializar_contexto(t_ctx *ctx, t_paquete *paquete)
 	serializar_registros(&ctx->registros, paquete);
 	
 	// serializo moivos de desalojo
-	int tamanio_parametro;
-	agregar_a_paquete_dato_serializado(paquete, &(ctx->motivos_desalojo->cantidad_parametros), sizeof(int));
-
-	for (int i = 0; i < ctx->motivos_desalojo->cantidad_parametros; i++)
-	{
-		tamanio_parametro = strlen(ctx->motivos_desalojo->parametros[i]) + 1;
-		agregar_a_paquete_dato_serializado(paquete, &tamanio_parametro, sizeof(int));
-		agregar_a_paquete_dato_serializado(paquete, ctx->motivos_desalojo->parametros[i], tamanio_parametro);		
-	}
+	serializar_motivos_desalojo(ctx->motivos_desalojo, paquete);
 
 	serializar_tabla_segmentos(ctx->tabla_segmentos, paquete);
 	
@@ -200,6 +192,20 @@ void serializar_registros(t_registros *registros, t_paquete *paquete)
 	agregar_a_paquete_dato_serializado(paquete, &(registros->RCX), sizeof(registros->RCX));
 	agregar_a_paquete_dato_serializado(paquete, &(registros->RDX), sizeof(registros->RDX));
 }
+
+void serializar_motivos_desalojo(t_parametros_variables *motivos_desalojo, t_paquete *paquete)
+{
+	int tamanio_parametro;
+	agregar_a_paquete_dato_serializado(paquete, &(motivos_desalojo->cantidad_parametros), sizeof(int));
+
+	for (int i = 0; i < motivos_desalojo->cantidad_parametros; i++)
+	{
+		tamanio_parametro = strlen(motivos_desalojo->parametros[i]) + 1;
+		agregar_a_paquete_dato_serializado(paquete, &tamanio_parametro, sizeof(int));
+		agregar_a_paquete_dato_serializado(paquete, motivos_desalojo->parametros[i], tamanio_parametro);		
+	}
+}
+
 
 void serializar_tabla_segmentos(t_list *tabla_segmentos, t_paquete *paquete)
 {
@@ -260,21 +266,7 @@ t_ctx *deserializar_contexto(void *buffer, int *desplazamiento)
 
 
 	// deserializo motivos de desalojo
-	ctx->motivos_desalojo = malloc(sizeof(t_parametros_variables));
-	memcpy(&ctx->motivos_desalojo->cantidad_parametros, buffer + *desplazamiento, sizeof(int));
-	*desplazamiento += sizeof(int);
-
-	ctx->motivos_desalojo->parametros = malloc(sizeof(char *) * ctx->motivos_desalojo->cantidad_parametros);
-	for (int i = 0; i < ctx->motivos_desalojo->cantidad_parametros; i++)
-	{
-		int tamanio_parametro;
-		memcpy(&tamanio_parametro, buffer + *desplazamiento, sizeof(int));
-		*desplazamiento += sizeof(int);
-
-		ctx->motivos_desalojo->parametros[i] = malloc(tamanio_parametro);
-		memcpy(ctx->motivos_desalojo->parametros[i], buffer + *desplazamiento, tamanio_parametro);
-		*desplazamiento += tamanio_parametro;
-	}
+	ctx->motivos_desalojo = deserealizar_motivos_desalojo(buffer, desplazamiento);
 
 	// Deserializo tabla de segmentos
 	ctx->tabla_segmentos = deserializar_tabla_segmentos(buffer, desplazamiento);
@@ -351,6 +343,24 @@ t_registros deserealizar_registros(void *buffer, int*desplazamiento)
     *desplazamiento += sizeof(registros.RDX);
 
     return registros;
+}
+
+t_parametros_variables* deserealizar_motivos_desalojo(void *buffer, int*desplazamiento){
+	t_parametros_variables *motivos_desalojo = malloc(sizeof(t_parametros_variables));
+	memcpy(motivos_desalojo->cantidad_parametros, buffer + *desplazamiento, sizeof(int));
+	*desplazamiento += sizeof(int);
+
+	motivos_desalojo->parametros = malloc(sizeof(char *) * motivos_desalojo->cantidad_parametros);
+	for (int i = 0; i < motivos_desalojo->cantidad_parametros; i++)
+	{
+		int tamanio_parametro;
+		memcpy(&tamanio_parametro, buffer + *desplazamiento, sizeof(int));
+		*desplazamiento += sizeof(int);
+
+		motivos_desalojo->parametros[i] = malloc(tamanio_parametro);
+		memcpy(motivos_desalojo->parametros[i], buffer + *desplazamiento, tamanio_parametro);
+		*desplazamiento += tamanio_parametro;
+	}
 }
 
 t_list* recibir_tabla_segmentos(int socket_cliente){

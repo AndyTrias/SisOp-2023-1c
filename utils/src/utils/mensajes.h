@@ -18,13 +18,10 @@ typedef enum
     INSTRUCCIONES, // Se utiliza de consola a kernel
     MENSAJE, // Se utiliza de kernel a consola
     CONTEXTO, // Se utiliza de kernel a cpu
-    DESALOJAR,
-    BLOQUEAR,
-    TERMINAR,
-    PETICION,
     CREAR_TABLA_SEGMENTOS,
     CREAR_SEGMENTO,
     ELIMINAR_SEGMENTO,
+    F_CREATE,
 } op_code;
 
 typedef enum
@@ -91,12 +88,15 @@ void serializar_contexto(t_ctx*, t_paquete*);
 void serializar_instrucciones(t_list *, t_paquete* );
 void serializar_instruccion(t_instruccion *, t_paquete *);
 void serializar_registros(t_registros *, t_paquete *);
+void serializar_motivos_desalojo(t_parametros_variables *, t_paquete *);
 void serializar_tabla_segmentos(t_list *, t_paquete *);
 t_ctx *deserializar_contexto(void *, int*);
 t_registros deserealizar_registros(void *, int*);
 t_instruccion* deserealizar_instruccion(void*, int* );
+t_parametros_variables* deserealizar_motivos_desalojo(void *, int*);
 t_list* deserializar_tabla_segmentos(void*, int*);
 t_list* recibir_tabla_segmentos(int);
+
 
 
 

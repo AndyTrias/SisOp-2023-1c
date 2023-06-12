@@ -77,9 +77,10 @@ FILE *levantar_bloques(int tamaño_bloque, int cantidad_bloques, char *path)
 t_config *levantar_superbloque(t_config *config)
 {
     char *path_superbloque = config_get_string_value(config, "PATH_SUPERBLOQUE");
+    log_info(LOGGER_FILE_SYSTEM, "Se levanto el superbloque");
+    
     return iniciar_config(path_superbloque);
 
-    log_info(LOGGER_FILE_SYSTEM, "Se levanto el superbloque");
 }
 
 
