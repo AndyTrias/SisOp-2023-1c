@@ -39,12 +39,12 @@ typedef struct
     int program_counter;
     t_registros registros;
     t_parametros_variables *motivos_desalojo;
+    t_list* tabla_segmentos;
 } t_ctx;
 
 typedef struct
 {
     t_ctx contexto;
-    t_list* tabla_segmentos;
     float estimado_prox_rafaga;
     t_temporal *tiempo_desde_ult_ready; // cuando pasa a ready usar temporal_stop
     int64_t tiempo_llegada_ready;       // cuando pasa a ready usar  = temporal_gettime(tiempo_desde_ult_ready)
