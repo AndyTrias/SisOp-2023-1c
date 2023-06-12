@@ -352,3 +352,16 @@ t_registros deserealizar_registros(void *buffer, int*desplazamiento)
 
     return registros;
 }
+
+t_list* recibir_tabla_segmentos(int socket_cliente){
+    int size;
+    void* buffer = recibir_buffer(&size, socket_cliente);
+
+    int desplazamiento = 0;
+    
+    t_list* tabla_segmentos = deserializar_tabla_segmentos(buffer, &desplazamiento);
+
+    free(buffer);
+
+    return tabla_segmentos;
+}

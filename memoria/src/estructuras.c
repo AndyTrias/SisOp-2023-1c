@@ -20,16 +20,20 @@ void iniciar_estructuras(t_config* config){
     CONFIG->algoritmo_asignacion = algoritmo_asignacion;
 
     LISTA_HUECOS = list_create();
-    t_hueco* hueco = malloc(sizeof(t_hueco));
-    hueco->id_hueco = 0;
-    hueco->base = tam_segmento_0;
-    hueco->tamanio = tam_memoria - tam_segmento_0;
-    hueco->base = SEGMENTO_0->base + tam_segmento_0;
-    hueco->libre = true;
-    list_add(LISTA_HUECOS, hueco);
-    log_info(LOGGER_MEMORIA, "Se creo el hueco inicial de tamanio %d", hueco->tamanio);
 
-    
+    t_hueco* hueco_segmento_0 = malloc(sizeof(t_hueco));
+    hueco_segmento_0->base = MEMORIA_PRINCIPAL;
+    hueco_segmento_0->tamanio = tam_segmento_0;
+    hueco_segmento_0->libre = false;
+    list_add(LISTA_HUECOS, hueco_segmento_0);
+    log_info(LOGGER_MEMORIA, "Se creo el hueco del segmento 0 de tamanio %d en la direccion %p", hueco_segmento_0->tamanio, hueco_segmento_0->base);
+
+    t_hueco* hueco_libre_inicial = malloc(sizeof(t_hueco));
+    hueco_libre_inicial->base = MEMORIA_PRINCIPAL + tam_segmento_0;
+    hueco_libre_inicial->tamanio = tam_memoria - tam_segmento_0;
+    hueco_libre_inicial->libre = true;
+    list_add(LISTA_HUECOS, hueco_libre_inicial);
+    log_info(LOGGER_MEMORIA, "Se creo el hueco libre inicial de tamanio %d en la direccion %p", hueco_libre_inicial->tamanio, hueco_libre_inicial->base);
 }
 
 t_list* crear_tabla_segmentos(){
@@ -37,7 +41,7 @@ t_list* crear_tabla_segmentos(){
     for (int i = 0; i < CONFIG->cant_segmentos; i++) {
         t_segmento* segmento = malloc(sizeof(t_segmento));
         segmento->id_segmento = i;
-        segmento->base = -1;
+        segmento->base = NULL;
         segmento->tamanio = 0;
         list_add(tabla_segmentos, segmento);
     }
@@ -47,7 +51,7 @@ t_list* crear_tabla_segmentos(){
 
 void agregar_segmento_0(t_list* tabla_segmentos){
     t_segmento* segmento_0 = list_get(tabla_segmentos, 0);
-    segmento_0->base = 0;
+    segmento_0->base = MEMORIA_PRINCIPAL;
     segmento_0->tamanio = CONFIG->tam_segmento_0;
 }
 

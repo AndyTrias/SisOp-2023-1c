@@ -113,6 +113,10 @@ void estimado_prox_rafaga(){
     log_info(LOGGER_KERNEL,"Se realizo el estimado de proxima rafaga para el PID: <%d>, nuevo estimado: %f",EJECUTANDO->contexto.PID,EJECUTANDO->estimado_prox_rafaga);
 }
 
+void mostrar_segmento(t_segmento* segmento){
+    log_info(LOGGER_KERNEL, "Id: <%d> - Base: <%p> - Tamaño: <%d>", segmento->id_segmento, segmento->base, segmento->tamanio);
+}
+
 void crear_segmento(t_pcb *proceso){
     // enviar a memoria CREATE_SEGMENT con sus 2 parametros (id del segmento y tamanio)
 
@@ -121,16 +125,21 @@ void crear_segmento(t_pcb *proceso){
     enviar_paquete(paquete, SOCKET_MEMORIA);
     free(paquete);
 
+    recibir_operacion(SOCKET_MEMORIA);
     int size;
     void* buffer = recibir_buffer(&size, SOCKET_MEMORIA);
     
     t_segmento* segmento = list_get(proceso->contexto.tabla_segmentos, atoi(proceso->contexto.motivos_desalojo->parametros[0]));
 
-    memcpy(&segmento->base, buffer, sizeof(int));
+    memcpy(&(segmento->base), buffer, sizeof(void*));
     segmento->tamanio = atoi(proceso->contexto.motivos_desalojo->parametros[1]);
+
+    list_iterate(proceso->contexto.tabla_segmentos, (void*) mostrar_segmento);
 
     log_info(LOGGER_KERNEL, "PID: <%d> - Crear Segmento - Id: <%d> - Tamaño: <%d>", proceso->contexto.PID, segmento->id_segmento, segmento->tamanio);
 }
+
+
 
 void eliminar_segmento(t_pcb *proceso){
     // enviar a memoria DELETE_SEGMENT con su parametro (id del segmento)
@@ -140,15 +149,13 @@ void eliminar_segmento(t_pcb *proceso){
     enviar_paquete(paquete, SOCKET_MEMORIA);
     free(paquete);
 
-    int cod_op = recibir_operacion(SOCKET_MEMORIA);
-
-    int size;
-    void* buffer = recibir_buffer(&size, SOCKET_MEMORIA);
-    int desplazamiento = 0;
-    t_list* tabla_segmentos_actualizada = deserializar_tabla_segmentos(buffer, &desplazamiento);
-    free(buffer);
+    recibir_operacion(SOCKET_MEMORIA);
+    recibir_operacion(SOCKET_MEMORIA);
+    t_list* tabla_segmentos_actualizada = recibir_tabla_segmentos(SOCKET_MEMORIA);
 
     proceso->contexto.tabla_segmentos = tabla_segmentos_actualizada;
+
+    list_iterate(proceso->contexto.tabla_segmentos, (void*)mostrar_segmento);
 
     log_info(LOGGER_KERNEL, "PID: <%d> - Eliminar Segmento - Id Segmento: <%d>", proceso->contexto.PID, atoi(proceso->contexto.motivos_desalojo->parametros[0]));
 }

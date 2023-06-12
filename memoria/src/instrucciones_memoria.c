@@ -1,6 +1,5 @@
 #include "instrucciones_memoria.h"
 
-
 void* crear_segmento(int id_segmento, int tamanio) {
     t_hueco* hueco = NULL;
     if (strcmp(CONFIG->algoritmo_asignacion, "FIRST") == 0) {
@@ -49,7 +48,7 @@ void eliminar_segmento(t_list* tabla_segmentos, int id_segmento) {
 
     list_iterate(LISTA_HUECOS, (void*) imprimir_hueco);
 
-    segmento->base = -1;
+    segmento->base = NULL;
     segmento->tamanio = 0;
     list_replace(tabla_segmentos, id_segmento, segmento);
 }

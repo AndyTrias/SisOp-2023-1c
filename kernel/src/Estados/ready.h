@@ -8,6 +8,7 @@
     #include "new.h"
     #include "exec.h"
     #include <globales.h>
+    #include <utils/mensajes.h>
 
     int get_grado_de_multiprogramacion(int);
     bool hay_espacio_ready();

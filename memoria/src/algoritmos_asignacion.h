@@ -11,4 +11,5 @@
     t_hueco* get_hueco_con_best_fit(int);
     t_hueco* get_hueco_con_worst_fit(int);
     void modificar_lista_huecos(t_hueco*, int);
+    bool comprobar_compactacion(int);
 #endif

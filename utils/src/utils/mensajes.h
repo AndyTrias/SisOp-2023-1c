@@ -93,11 +93,10 @@ void serializar_instruccion(t_instruccion *, t_paquete *);
 void serializar_registros(t_registros *, t_paquete *);
 void serializar_tabla_segmentos(t_list *, t_paquete *);
 t_ctx *deserializar_contexto(void *, int*);
-t_ctx *deserializar_contexto(void *);
 t_registros deserealizar_registros(void *, int*);
 t_instruccion* deserealizar_instruccion(void*, int* );
 t_list* deserializar_tabla_segmentos(void*, int*);
-
+t_list* recibir_tabla_segmentos(int);
 
 
 

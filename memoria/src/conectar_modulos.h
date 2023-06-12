@@ -7,6 +7,7 @@
     #include <utils/mensajes.h>
     #include <utils/planificacion/pcb.h>
     #include "globales.h"
+    #include "instrucciones_memoria.h"
 
     extern t_log* LOGGER_MEMORIA;
     extern t_configuracion* CONFIG;

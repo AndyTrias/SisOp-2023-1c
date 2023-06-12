@@ -1,18 +1,5 @@
 #include "ready.h"
 
-t_list* recibir_tabla_segmentos(int socket_cliente){
-    int size;
-    void* buffer = recibir_buffer(&size, socket_cliente);
-
-    int desplazamiento = 0;
-    
-    t_list* tabla_segmentos = deserializar_tabla_segmentos(buffer, &desplazamiento);
-
-    free(buffer);
-
-    return tabla_segmentos;
-}
-
 void admitir_proceso()
 {
     t_pcb * proceso_en_new = sacar_de_lista_new(0);
@@ -20,7 +7,8 @@ void admitir_proceso()
     t_paquete* paquete = crear_paquete(CREAR_TABLA_SEGMENTOS);
     enviar_paquete(paquete, SOCKET_MEMORIA);
     free(paquete);
-    int cod_op = recibir_operacion(SOCKET_MEMORIA);
+
+    recibir_operacion(SOCKET_MEMORIA);
     t_list* tabla_segmentos = recibir_tabla_segmentos(SOCKET_MEMORIA);
     proceso_en_new->contexto.tabla_segmentos = tabla_segmentos;
 
