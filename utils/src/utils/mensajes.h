@@ -22,6 +22,8 @@ typedef enum
     CREAR_SEGMENTO,
     ELIMINAR_SEGMENTO,
     F_CREATE,
+    COMPACTAR,
+    OUT_OF_MEMORY
 } op_code;
 
 typedef enum
@@ -41,7 +43,7 @@ typedef enum
     F_CLOSE,
     DELETE_SEGMENT, 
     EXIT, // Ver como la definimos
-    YIELD 
+    YIELD
 } t_operacion;
 
 typedef struct
