@@ -854,3 +854,41 @@
 [INFO] 17:16:08:773 KERNEL/(8563:8570): Se recibe de CPU el proceso PID: <0>
 [INFO] 17:16:08:773 KERNEL/(8563:8570): PID: <0> - Estado Anterior: <Exec> - Estado Actual: <Exit>
 [INFO] 17:16:08:773 KERNEL/(8563:8570): Finaliza el proceso <0> - Motivo: <SUCCESS>
+[INFO] 17:57:59:770 KERNEL/(12603:12603): Se conecto al servidor 127.0.0.1:8001
+[INFO] 17:57:59:770 KERNEL/(12603:12603): Se conecto al servidor 127.0.0.1:8002
+[ERROR] 17:57:59:770 KERNEL/(12603:12603): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 17:57:59:770 KERNEL/(12603:12607): Inicia el planificador de largo plazo
+[INFO] 17:57:59:771 KERNEL/(12603:12603): Esperando conexiones de consolas...
+[INFO] 17:57:59:771 KERNEL/(12603:12609): Inicia el planificador de corto plazo
+[INFO] 17:58:03:606 KERNEL/(12603:12603): Se conecto una consola
+[INFO] 17:58:03:606 KERNEL/(12603:12797): Se recibieron instrucciones de una consola
+[INFO] 17:58:03:606 KERNEL/(12603:12797): Se Crea el proceso <0> en NEW
+[INFO] 17:58:03:607 KERNEL/(12603:12607): Cola Ready <FIFO>: [ayuda loco]
+[INFO] 17:58:03:607 KERNEL/(12603:12607): Se mando la señal al planificador de corto plazo
+[INFO] 17:58:03:607 KERNEL/(12603:12609): Empieza ciclo de instruccion
+[INFO] 17:58:03:607 KERNEL/(12603:12609): Se envia el proceso PID: <0> al CPU
+[INFO] 17:58:03:607 KERNEL/(12603:12609): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:58:03:608 KERNEL/(12603:12609): Id: <0> - Base: <0x55555555e860> - Tamaño: <128>
+[INFO] 17:58:03:608 KERNEL/(12603:12609): Id: <1> - Base: <0x55555555e8e0> - Tamaño: <128>
+[INFO] 17:58:03:608 KERNEL/(12603:12609): Id: <2> - Base: <(nil)> - Tamaño: <0>
+[INFO] 17:58:03:608 KERNEL/(12603:12609): Id: <3> - Base: <(nil)> - Tamaño: <0>
+[INFO] 17:58:03:608 KERNEL/(12603:12609): Id: <4> - Base: <(nil)> - Tamaño: <0>
+[INFO] 17:58:03:608 KERNEL/(12603:12609): Id: <5> - Base: <(nil)> - Tamaño: <0>
+[INFO] 17:58:03:608 KERNEL/(12603:12609): Id: <6> - Base: <(nil)> - Tamaño: <0>
+[INFO] 17:58:03:608 KERNEL/(12603:12609): Id: <7> - Base: <(nil)> - Tamaño: <0>
+[INFO] 17:58:03:608 KERNEL/(12603:12609): Id: <8> - Base: <(nil)> - Tamaño: <0>
+[INFO] 17:58:03:608 KERNEL/(12603:12609): Id: <9> - Base: <(nil)> - Tamaño: <0>
+[INFO] 17:58:03:608 KERNEL/(12603:12609): Id: <10> - Base: <(nil)> - Tamaño: <0>
+[INFO] 17:58:03:608 KERNEL/(12603:12609): Id: <11> - Base: <(nil)> - Tamaño: <0>
+[INFO] 17:58:03:608 KERNEL/(12603:12609): Id: <12> - Base: <(nil)> - Tamaño: <0>
+[INFO] 17:58:03:608 KERNEL/(12603:12609): Id: <13> - Base: <(nil)> - Tamaño: <0>
+[INFO] 17:58:03:608 KERNEL/(12603:12609): Id: <14> - Base: <(nil)> - Tamaño: <0>
+[INFO] 17:58:03:608 KERNEL/(12603:12609): Id: <15> - Base: <(nil)> - Tamaño: <0>
+[INFO] 17:58:03:608 KERNEL/(12603:12609): PID: <0> - Crear Segmento - Id: <1> - Tamaño: <128>
+[INFO] 17:58:03:608 KERNEL/(12603:12609): Se envia el proceso PID: <0> al CPU
+[INFO] 17:58:03:608 KERNEL/(12603:12609): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:58:03:608 KERNEL/(12603:12609): PID: <0> - Eliminar Segmento - Id Segmento: <1>
+[INFO] 17:58:03:608 KERNEL/(12603:12609): Se envia el proceso PID: <0> al CPU
+[INFO] 17:58:03:609 KERNEL/(12603:12609): Se recibe de CPU el proceso PID: <0>
+[INFO] 17:58:03:609 KERNEL/(12603:12609): PID: <0> - Estado Anterior: <Exec> - Estado Actual: <Exit>
+[INFO] 17:58:03:609 KERNEL/(12603:12609): Finaliza el proceso <0> - Motivo: <SUCCESS>

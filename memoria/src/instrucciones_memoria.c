@@ -9,7 +9,9 @@ void* crear_segmento(int id_segmento, int tamanio) {
     } else if (strcmp(CONFIG->algoritmo_asignacion, "WORST") == 0) {
         hueco = get_hueco_con_worst_fit(tamanio);
     } else if (comprobar_compactacion(tamanio)){
-        // aqui hay q pedirle a kernel que solicite compactacion
+        t_paquete* paquete = crear_paquete(COMPACTACION);
+        enviar_paquete(paquete, SOCKET_KERNEL);
+        free(paquete);
         log_info(LOGGER_MEMORIA, "Se solicita compactacion");
     } else {
         log_error(LOGGER_MEMORIA, "Algoritmo de asignacion no valido");
@@ -18,6 +20,9 @@ void* crear_segmento(int id_segmento, int tamanio) {
 
     if (!hueco) {
         log_error(LOGGER_MEMORIA, "No hay hueco disponible para crear el segmento");
+        t_paquete* paquete = crear_paquete(OUT_OF_MEMORY);
+        enviar_paquete(paquete, SOCKET_KERNEL);
+        free(paquete);
         return NULL;
     }
 
@@ -57,4 +62,8 @@ void finalizar_proceso(t_list* tabla_segmentos){
     }
 
     list_destroy(tabla_segmentos);
+}
+
+void* leer(void* direccion_fisica){
+    return direccion_fisica;
 }

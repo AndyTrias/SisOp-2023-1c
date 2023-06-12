@@ -20,7 +20,9 @@ typedef enum
     CONTEXTO, // Se utiliza de kernel a cpu
     CREAR_TABLA_SEGMENTOS,
     F_CREATE,
-    TERMINAR
+    TERMINAR,
+    COMPACTACION,
+    OUT_OF_MEMORY
 } op_code;
 
 typedef enum

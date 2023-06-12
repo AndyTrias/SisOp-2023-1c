@@ -9,7 +9,7 @@
     extern t_list* LISTA_HUECOS;
     
     extern t_log* LOGGER_MEMORIA;
-
+    extern int SOCKET_KERNEL;
 
 
 #endif
