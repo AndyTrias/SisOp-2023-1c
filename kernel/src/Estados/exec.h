@@ -20,7 +20,8 @@
     void recibir_de_cpu(int);
     void reemplazar_exec_por_nuevo();
     void estimado_prox_rafaga();
-
+    void crear_segmento(t_pcb *);
+    void eliminar_segmento(t_pcb *);
 
 
 

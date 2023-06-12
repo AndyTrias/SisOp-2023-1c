@@ -111,4 +111,5 @@ void estimado_prox_rafaga(){
     EJECUTANDO->estimado_prox_rafaga= proxima_rafaga;
 
     log_info(LOGGER_KERNEL,"Se realizo el estimado de proxima rafaga para el PID: <%d>, nuevo estimado: %f",EJECUTANDO->contexto.PID,EJECUTANDO->estimado_prox_rafaga);
-}
+
+  }

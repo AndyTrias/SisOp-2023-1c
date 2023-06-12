@@ -13,8 +13,9 @@
     extern t_configuracion* CONFIG;
 
     void conectar_modulos(int);
-    void nuevo_modulo(int*);
     void recibir_kernel(int*);
-    t_ctx* recibir_paquete_kernel(int);
+    void recibir_cpu(int*);
+    void recibir_fs(int*);
+    t_ctx* recibir_contexto(int);
 
 #endif

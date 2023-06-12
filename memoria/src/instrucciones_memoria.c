@@ -9,7 +9,9 @@ void* crear_segmento(int id_segmento, int tamanio) {
     } else if (strcmp(CONFIG->algoritmo_asignacion, "WORST") == 0) {
         hueco = get_hueco_con_worst_fit(tamanio);
     } else if (comprobar_compactacion(tamanio)){
-        // aqui hay q pedirle a kernel que solicite compactacion
+        t_paquete* paquete = crear_paquete(COMPACTACION);
+        enviar_paquete(paquete, SOCKET_KERNEL);
+        free(paquete);
         log_info(LOGGER_MEMORIA, "Se solicita compactacion");
     } else {
         log_error(LOGGER_MEMORIA, "Algoritmo de asignacion no valido");
@@ -18,6 +20,9 @@ void* crear_segmento(int id_segmento, int tamanio) {
 
     if (!hueco) {
         log_error(LOGGER_MEMORIA, "No hay hueco disponible para crear el segmento");
+        t_paquete* paquete = crear_paquete(OUT_OF_MEMORY);
+        enviar_paquete(paquete, SOCKET_KERNEL);
+        free(paquete);
         return NULL;
     }
 
@@ -26,12 +31,9 @@ void* crear_segmento(int id_segmento, int tamanio) {
     return hueco->base;
 }
 
-void imprimir_hueco(t_hueco* hueco) {
-    log_info(LOGGER_MEMORIA, "Hueco: base %p, tamanio %d, libre %d", hueco->base, hueco->tamanio, hueco->libre);
-}
-
-void eliminar_segmento(t_list* tabla_segmentos, int id_segmento) {
+void eliminar_segmento(t_list* tabla_segmentos, int id_segmento, int PID) {
     t_segmento* segmento = list_get(tabla_segmentos, id_segmento);
+    if (PID != -1) log_info(LOGGER_MEMORIA, "PID: <%d> - Eliminar Segmento: <%d> - Base: <%p> - TAMAÑO: <%d>", PID, id_segmento, segmento->base, segmento->tamanio);
 
     //buscar hueco que tenga la misma base que el segmento y marcarlo como libre
     int index_hueco = 0;
@@ -46,37 +48,22 @@ void eliminar_segmento(t_list* tabla_segmentos, int id_segmento) {
 
     comprobar_consolidacion_huecos_aledanios(index_hueco);
 
-    list_iterate(LISTA_HUECOS, (void*) imprimir_hueco);
-
     segmento->base = NULL;
     segmento->tamanio = 0;
     list_replace(tabla_segmentos, id_segmento, segmento);
 }
 
-void comprobar_consolidacion_huecos_aledanios(int index_hueco) {
-    t_hueco* hueco_actual = list_get(LISTA_HUECOS, index_hueco);
-    t_hueco* hueco_anterior = NULL;
-    t_hueco* hueco_siguiente = NULL;
-
-    if (index_hueco > 0) {
-        hueco_anterior = list_get(LISTA_HUECOS, index_hueco - 1);
+void finalizar_proceso(t_list* tabla_segmentos){
+    for (int i = 0; i < list_size(tabla_segmentos); i++) {
+        t_segmento* segmento = list_get(tabla_segmentos, i);
+        if (segmento->base != NULL) {
+            eliminar_segmento(tabla_segmentos, i, -1);
+        }
     }
 
-    if (index_hueco < list_size(LISTA_HUECOS) - 1) {
-        hueco_siguiente = list_get(LISTA_HUECOS, index_hueco + 1);
-    }
+    list_destroy(tabla_segmentos);
+}
 
-    if (hueco_anterior && hueco_anterior->libre) {
-        hueco_anterior->tamanio += hueco_actual->tamanio;
-        list_remove(LISTA_HUECOS, index_hueco);
-        hueco_actual = hueco_anterior;
-        index_hueco--;
-        free(hueco_anterior);
-    }
-
-    if (hueco_siguiente && hueco_siguiente->libre) {
-        hueco_actual->tamanio += hueco_siguiente->tamanio;
-        list_remove(LISTA_HUECOS, index_hueco + 1);
-        free(hueco_siguiente);
-    }
+void* leer(void* direccion_fisica){
+    return direccion_fisica;
 }
