@@ -17,8 +17,8 @@ void crear_abrir_archivo(t_pcb * proceso){
 
     log_info(LOGGER_KERNEL, "Se creó el archivo");
     
-    agregar_a_lista_ready(proceso);
     // cambio_de_estado(proceso->contexto.PID,"Exec","Ready");
+    agregar_a_lista_ready(proceso);
     reemplazar_exec_por_nuevo();
 }
 
