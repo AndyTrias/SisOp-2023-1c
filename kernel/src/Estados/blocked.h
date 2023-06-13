@@ -12,7 +12,5 @@
     void signal(t_pcb*);
     void io(t_pcb*);
     int get_id_recurso(char[]);
-    void crear_abrir_archivo(t_pcb * proceso);
-    void cerrar_archivo(t_pcb * proceso);
 
 #endif

@@ -20,8 +20,8 @@ typedef enum
     CONTEXTO, // Se utiliza de kernel a cpu
     CREAR_TABLA_SEGMENTOS,
     F_CREATE,
+    COMPACTAR,
     TERMINAR,
-    COMPACTACION,
     OUT_OF_MEMORY
 } op_code;
 
@@ -42,7 +42,7 @@ typedef enum
     F_CLOSE,
     DELETE_SEGMENT, 
     EXIT, // Ver como la definimos
-    YIELD 
+    YIELD
 } t_operacion;
 
 typedef struct
