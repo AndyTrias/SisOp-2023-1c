@@ -115,27 +115,44 @@ op_code execute(t_instruccion* instruccion_actual, t_ctx *ctx)
 
 	case IO:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s ", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0]);
+		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[0]);
 		return IO;
 
 	case F_OPEN:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0]);
+		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[0]);
 		return F_OPEN;
 
 	case F_WRITE:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
+		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[0]);
+		agregar_parametro_desalojo(ctx, MMU(instruccion_actual->parametros[1]));
+		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[2]);
 		return F_WRITE;
 	
 	case F_READ:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
+		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[0]);
+		agregar_parametro_desalojo(ctx, MMU(instruccion_actual->parametros[1]));
+		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[2]);
 		return F_READ;
 	
 	case F_TRUNCATE:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
+		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[0]);
+		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[1]);
 		return F_TRUNCATE;
 	
 	case F_CLOSE:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0]);
+		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[0]);
 		return F_CLOSE;
+
+	case F_SEEK:
+		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
+		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[0]);
+		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[1]);
+		return F_SEEK;
 	
 	case CREATE_SEGMENT:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
