@@ -126,14 +126,22 @@ op_code execute(t_instruccion* instruccion_actual, t_ctx *ctx)
 	case F_WRITE:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
 		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[0]);
-		agregar_parametro_desalojo(ctx, MMU(instruccion_actual->parametros[1]));
+		int dir_fisica = MMU(instruccion_actual->parametros[1]);
+		if (dir_fisica == -1){
+			return SEG_FAULT;
+		}
+		agregar_parametro_desalojo(ctx, dir_fisica);
 		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[2]);
-		return F_WRITE;
+		return F_READ;
 	
 	case F_READ:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
 		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[0]);
-		agregar_parametro_desalojo(ctx, MMU(instruccion_actual->parametros[1]));
+		int dir_fisica = MMU(instruccion_actual->parametros[1]);
+		if (dir_fisica == -1){
+			return SEG_FAULT;
+		}
+		agregar_parametro_desalojo(ctx, dir_fisica);
 		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[2]);
 		return F_READ;
 	
@@ -177,7 +185,6 @@ int MMU(int direccion_logica, int bytes, t_ctx *ctx){
 	if (offset + bytes > 128/*TAMANIO_MAX_SEG*/){
 		log_error(LOGGER_CPU, "Error: SEG_FAULT");
 		return -1;
-
 	}
 
 	int direccion_fisica = list_get(ctx->tabla_segmentos, num_segmento) + offset;
