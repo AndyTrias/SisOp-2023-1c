@@ -42,7 +42,8 @@ typedef enum
     F_CLOSE,
     DELETE_SEGMENT, 
     EXIT, // Ver como la definimos
-    YIELD
+    YIELD,
+    SEG_FAULT
 } t_operacion;
 
 typedef struct
