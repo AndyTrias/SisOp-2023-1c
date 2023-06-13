@@ -170,9 +170,15 @@ op_code execute(t_instruccion* instruccion_actual, t_ctx *ctx)
 	}
 };
 
-int MMU(int direccion_logica, t_ctx *ctx){
+int MMU(int direccion_logica, int bytes, t_ctx *ctx){
 	int num_segmento = floor_div(direccion_logica, 128/*TAMANIO_MAX_SEG*/);
 	int offset = direccion_logica % 128/*TAMANIO_MAX_SEG*/;
+
+	if (offset + bytes > 128/*TAMANIO_MAX_SEG*/){
+		log_error(LOGGER_CPU, "Error: SEG_FAULT");
+		return -1;
+
+	}
 
 	int direccion_fisica = list_get(ctx->tabla_segmentos, num_segmento) + offset;
 	return direccion_fisica;
