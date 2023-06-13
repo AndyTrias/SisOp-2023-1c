@@ -6,6 +6,8 @@
 // */
 
 
+
+
 bool primera_instruccion = 0;
 
 // //Cuando recibe un ctx
@@ -150,6 +152,21 @@ op_code execute(t_instruccion* instruccion_actual, t_ctx *ctx)
 		return 0;
 	}
 };
+
+int MMU(int direccion_logica, t_ctx *ctx){
+	int num_segmento = floor_div(direccion_logica, 128/*TAMANIO_MAX_SEG*/);
+	int offset = direccion_logica % 128/*TAMANIO_MAX_SEG*/;
+
+	int direccion_fisica = list_get(ctx->tabla_segmentos, num_segmento) + offset;
+	return direccion_fisica;
+}
+
+int floor_div(int a, int b)
+{
+	return (a - (a % b)) / b;
+}
+
+
 
 void ciclo_de_instruccion(t_ctx *ctx)
 {
