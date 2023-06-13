@@ -46,6 +46,13 @@ void definir_accion(int cod_op, t_pcb *proceso){
         log_info(LOGGER_KERNEL, "Finaliza el proceso <%d> - Motivo: <SUCCESS>",proceso->contexto.PID);
         terminar_proceso(proceso);
         break;
+
+    case SEG_FAULT:
+        cambio_de_estado(proceso->contexto.PID,"Exec","Exit");
+        log_info(LOGGER_KERNEL, "Finaliza el proceso <%d> - Motivo: <SEGMENTATION_FAULT>",proceso->contexto.PID);
+        terminar_proceso(proceso);
+        break;
+        
     case WAIT:
         wait(proceso);
         break;
