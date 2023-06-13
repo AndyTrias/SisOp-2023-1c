@@ -9,7 +9,7 @@ int SOCKET_FILESYSTEM;
 int PID_COUNT = 0;
 
 //Tabla global de archivos abiertos
-t_list* TABLA_GLOBAL_DE_ARCHIVOS_ABIERTOS 
+t_list* TABLA_GLOBAL_DE_ARCHIVOS_ABIERTOS; 
 
 // Listas para los estados
 t_list *LISTA_NEW;

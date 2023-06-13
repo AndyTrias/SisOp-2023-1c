@@ -18,7 +18,7 @@ extern int SOCKET_FILESYSTEM;
 extern int PID_COUNT;
 
 //Tabla global de archivos abiertos
-extern t_list* TABLA_GLOBAL_DE_ARCHIVOS_ABIERTOS 
+extern t_list* TABLA_GLOBAL_DE_ARCHIVOS_ABIERTOS; 
 
 //Listas para los estados
 extern t_list* LISTA_NEW;
