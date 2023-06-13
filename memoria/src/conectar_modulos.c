@@ -72,16 +72,9 @@ void recibir_kernel(int *socket_modulo)
             ctx = recibir_contexto(*socket_modulo);
 
             // crea
-            void* base = crear_segmento(atoi(ctx->motivos_desalojo->parametros[0]), atoi(ctx->motivos_desalojo->parametros[1]));
-            if (!base){
-                free(ctx);
-                return;
-            }
-            log_info(LOGGER_MEMORIA, "PID: <%d> - Crear Segmento: <%d> - Base: <%p> - TAMAÑO: <%d>", ctx->PID, atoi(ctx->motivos_desalojo->parametros[0]), base, atoi(ctx->motivos_desalojo->parametros[1]));
+            paquete = crear_segmento(atoi(ctx->motivos_desalojo->parametros[0]), atoi(ctx->motivos_desalojo->parametros[1]), ctx->PID);
             
             // envia
-            paquete = crear_paquete(CREATE_SEGMENT);
-            agregar_a_paquete_dato_serializado(paquete, &base, sizeof(void*));
             enviar_paquete(paquete, *socket_modulo);
             free(paquete);
             free(ctx);

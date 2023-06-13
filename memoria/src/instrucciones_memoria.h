@@ -10,7 +10,7 @@
     extern t_list* LISTA_HUECOS;
     extern t_configuracion* CONFIG;
 
-    void* crear_segmento(int, int);
+    t_paquete* crear_segmento(int, int, int);
     void eliminar_segmento(t_list*, int, int);
     void finalizar_proceso(t_list*);
     void* leer(void*);

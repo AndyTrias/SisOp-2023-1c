@@ -1,6 +1,6 @@
 #include "instrucciones_memoria.h"
 
-void* crear_segmento(int id_segmento, int tamanio) {
+t_paquete* crear_segmento(int id_segmento, int tamanio, int PID) {
     t_hueco* hueco = NULL;
     if (strcmp(CONFIG->algoritmo_asignacion, "FIRST") == 0) {
         hueco = get_hueco_con_first_fit(tamanio);
@@ -9,9 +9,7 @@ void* crear_segmento(int id_segmento, int tamanio) {
     } else if (strcmp(CONFIG->algoritmo_asignacion, "WORST") == 0) {
         hueco = get_hueco_con_worst_fit(tamanio);
     } else if (comprobar_compactacion(tamanio)){
-        t_paquete* paquete = crear_paquete(COMPACTACION);
-        enviar_paquete(paquete, SOCKET_KERNEL);
-        free(paquete);
+        return crear_paquete(COMPACTACION);
         log_info(LOGGER_MEMORIA, "Se solicita compactacion");
     } else {
         log_error(LOGGER_MEMORIA, "Algoritmo de asignacion no valido");
@@ -20,15 +18,15 @@ void* crear_segmento(int id_segmento, int tamanio) {
 
     if (!hueco) {
         log_error(LOGGER_MEMORIA, "No hay hueco disponible para crear el segmento");
-        t_paquete* paquete = crear_paquete(OUT_OF_MEMORY);
-        enviar_paquete(paquete, SOCKET_KERNEL);
-        free(paquete);
-        return NULL;
+        return crear_paquete(OUT_OF_MEMORY);
     }
 
     modificar_lista_huecos(hueco, tamanio);
 
-    return hueco->base;
+    t_paquete* paquete = crear_paquete(CREATE_SEGMENT);
+    agregar_a_paquete_dato_serializado(paquete, &(hueco->base), sizeof(void*));
+    log_info(LOGGER_MEMORIA, "PID: <%d> - Crear Segmento: <%d> - Base: <%p> - TAMAÑO: <%d>", PID, id_segmento, hueco->base, tamanio);
+    return paquete;
 }
 
 void eliminar_segmento(t_list* tabla_segmentos, int id_segmento, int PID) {

@@ -329,3 +329,15 @@
 [INFO] 17:58:03:609 MEMORIA/(12255:12608): Eliminación de Proceso PID: <0>
 [INFO] 17:58:10:888 MEMORIA/(12255:12608): Se desconecto un modulo
 [INFO] 17:58:10:888 MEMORIA/(12255:12413): Se desconecto un modulo
+[INFO] 20:43:25:765 MEMORIA/(3313:3313): Se creo el espacio contiguo de memoria
+[INFO] 20:43:25:766 MEMORIA/(3313:3313): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555e860
+[INFO] 20:43:25:766 MEMORIA/(3313:3313): Se creo el hueco libre inicial de tamanio 3968 en la direccion 0x55555555e8e0
+[INFO] 20:43:25:766 MEMORIA/(3313:3313): Esperando conexiones de modulos...
+[INFO] 20:43:34:003 MEMORIA/(3313:3313): Se conecto el cpu
+[INFO] 20:43:39:041 MEMORIA/(3313:3313): Se conecto el kernel
+[INFO] 20:43:43:792 MEMORIA/(3313:3668): Creación de Proceso PID: <0>
+[INFO] 20:43:43:792 MEMORIA/(3313:3668): PID: <0> - Crear Segmento: <1> - Base: <0x55555555e8e0> - TAMAÑO: <128>
+[INFO] 20:43:43:793 MEMORIA/(3313:3668): PID: <0> - Eliminar Segmento: <1> - Base: <0x55555555e8e0> - TAMAÑO: <128>
+[INFO] 20:43:43:795 MEMORIA/(3313:3668): Eliminación de Proceso PID: <0>
+[INFO] 20:48:52:359 MEMORIA/(3313:3668): Se desconecto un modulo
+[INFO] 20:48:52:359 MEMORIA/(3313:3486): Se desconecto un modulo
