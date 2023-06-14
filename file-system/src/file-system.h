@@ -15,4 +15,9 @@
     #include <globales.h>
     #include <conectar_kernel.h>
 
+    // Usados para abrir el directorio
+    #include <dirent.h>
+    // #include <sys/stat.h>
+    #include <commons/string.h>
+
 #endif
