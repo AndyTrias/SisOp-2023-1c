@@ -81,10 +81,10 @@ void recibir_kernel(int *socket_modulo)
 
             break;
         case DELETE_SEGMENT:
-            // recibe
+            // recibe 
             ctx = recibir_contexto(*socket_modulo);
 
-            // elimina
+            // elimina              
             eliminar_segmento(ctx->tabla_segmentos, atoi(ctx->motivos_desalojo->parametros[0]), ctx->PID);
             // log obligatorio en eliminar segmento
 
@@ -94,6 +94,20 @@ void recibir_kernel(int *socket_modulo)
             enviar_paquete(paquete, *socket_modulo);
             free(paquete);
             free(ctx);
+            break;
+
+        case F_READ:
+            // recibe
+            ctx = recibir_contexto(*socket_modulo);
+            
+            
+            break;
+
+        case F_WRITE:
+            // recibe
+            ctx = recibir_contexto(*socket_modulo);
+
+
             break;
 
         case -1:

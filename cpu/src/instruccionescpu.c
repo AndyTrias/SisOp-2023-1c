@@ -85,8 +85,12 @@ op_code execute(t_instruccion* instruccion_actual, t_ctx *ctx)
 
 	case MOV_IN:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
-		char* mensaje = string_from_format("Leer de la siguiente direccion de memoria %s", instruccion_actual->parametros[1]);
-		//enviar_mensaje(mensaje, SOCKET_MEMORIA);
+		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[0]);
+		agregar_parametro_desalojo(ctx, MMU(instruccion_actual->parametros[1], instruccion_actual->parametros[0]));
+		t_paquete* paquete = crear_paquete(MOV_IN);
+		serializar_motivos_desalojo(paquete, ctx->motivos_desalojo);
+		enviar_paquete(paquete, SOCKET_MEMORIA);
+		free(paquete);
 		return 0;
 
 	case MOV_OUT:
