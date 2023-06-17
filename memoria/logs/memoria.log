@@ -392,3 +392,30 @@
 [INFO] 19:25:01:337 MEMORIA/(14337:14337): Se conecto el kernel
 [INFO] 19:25:04:303 MEMORIA/(14337:14810): Creación de Proceso PID: <0>
 [INFO] 19:26:46:501 MEMORIA/(14337:14568): Se desconecto un modulo
+[INFO] 19:38:50:672 MEMORIA/(21301:21301): Se creo el espacio contiguo de memoria
+[INFO] 19:38:50:672 MEMORIA/(21301:21301): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555e860
+[INFO] 19:38:50:672 MEMORIA/(21301:21301): Se creo el hueco libre inicial de tamanio 3968 en la direccion 0x55555555e8e0
+[INFO] 19:38:50:672 MEMORIA/(21301:21301): Esperando conexiones de modulos...
+[INFO] 19:39:27:160 MEMORIA/(21301:21301): Se conecto el cpu
+[INFO] 19:39:40:343 MEMORIA/(21301:21301): Se conecto el kernel
+[INFO] 19:39:43:890 MEMORIA/(21301:21815): Creación de Proceso PID: <0>
+[INFO] 19:39:43:891 MEMORIA/(21301:21815): PID: <0> - Crear Segmento: <1> - Base: <0x55555555e8e0> - TAMAÑO: <128>
+[INFO] 19:39:43:891 MEMORIA/(21301:21815): PID: <0> - Eliminar Segmento: <1> - Base: <0x55555555e8e0> - TAMAÑO: <128>
+[INFO] 19:43:11:536 MEMORIA/(22399:22399): Se creo el espacio contiguo de memoria
+[INFO] 19:43:11:536 MEMORIA/(22399:22399): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555e860
+[INFO] 19:43:11:536 MEMORIA/(22399:22399): Se creo el hueco libre inicial de tamanio 3968 en la direccion 0x55555555e8e0
+[INFO] 19:43:11:536 MEMORIA/(22399:22399): Esperando conexiones de modulos...
+[INFO] 19:43:16:536 MEMORIA/(22399:22399): Se conecto el cpu
+[INFO] 19:43:19:875 MEMORIA/(22399:22399): Se conecto el kernel
+[INFO] 19:43:22:474 MEMORIA/(22399:22789): Creación de Proceso PID: <0>
+[INFO] 19:43:22:475 MEMORIA/(22399:22789): PID: <0> - Crear Segmento: <1> - Base: <0x55555555e8e0> - TAMAÑO: <128>
+[INFO] 19:43:22:476 MEMORIA/(22399:22789): PID: <0> - Eliminar Segmento: <1> - Base: <0x55555555e8e0> - TAMAÑO: <128>
+[INFO] 19:43:45:981 MEMORIA/(23193:23193): Se creo el espacio contiguo de memoria
+[INFO] 19:43:45:981 MEMORIA/(23193:23193): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555e860
+[INFO] 19:43:45:981 MEMORIA/(23193:23193): Se creo el hueco libre inicial de tamanio 3968 en la direccion 0x55555555e8e0
+[INFO] 19:43:45:981 MEMORIA/(23193:23193): Esperando conexiones de modulos...
+[INFO] 19:43:50:042 MEMORIA/(23193:23193): Se conecto el cpu
+[INFO] 19:43:54:542 MEMORIA/(23193:23193): Se conecto el kernel
+[INFO] 19:43:57:203 MEMORIA/(23193:23580): Creación de Proceso PID: <0>
+[INFO] 19:43:57:203 MEMORIA/(23193:23580): PID: <0> - Crear Segmento: <1> - Base: <0x55555555e8e0> - TAMAÑO: <128>
+[INFO] 19:43:57:204 MEMORIA/(23193:23580): PID: <0> - Eliminar Segmento: <1> - Base: <0x55555555e8e0> - TAMAÑO: <128>

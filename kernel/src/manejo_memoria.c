@@ -52,7 +52,6 @@ void eliminar_segmento(t_pcb *proceso){
     free(paquete);
 
     recibir_operacion(SOCKET_MEMORIA);
-    recibir_operacion(SOCKET_MEMORIA);
     t_list* tabla_segmentos_actualizada = recibir_tabla_segmentos(SOCKET_MEMORIA);
 
     proceso->contexto.tabla_segmentos = tabla_segmentos_actualizada;
