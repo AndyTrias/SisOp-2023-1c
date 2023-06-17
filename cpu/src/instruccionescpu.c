@@ -86,17 +86,30 @@ op_code execute(t_instruccion* instruccion_actual, t_ctx *ctx)
 	case MOV_IN:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
 		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[0]);
-		agregar_parametro_desalojo(ctx, MMU(instruccion_actual->parametros[1], instruccion_actual->parametros[0], ctx));
+		int dir_fisica = MMU(instruccion_actual->parametros[1], instruccion_actual->parametros[0], ctx);
+		if (dir_fisica == -1){
+			return SEG_FAULT;
+		}
+		agregar_parametro_desalojo(ctx, dir_fisica);
 		t_paquete* paquete = crear_paquete(MOV_IN);
 		serializar_motivos_desalojo(paquete, ctx->motivos_desalojo);
 		enviar_paquete(paquete, SOCKET_MEMORIA);
 		free(paquete);
+		char *valor_leido = recibir_mensaje(SOCKET_MEMORIA);
+		log_info(LOGGER_CPU, "PID: %d  -Acción: ESCRIBIR - Segmento: %s - Dirección Física: %s - Valor: %s", ctx->PID, floor_div(instruccion_actual->parametros[0], TAM_MAX_SEGMENTO/*TAMANIO_MAX_SEG*/), dir_fisica, valor_leido);
 		return 0;
 
 	case MOV_OUT:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
 		char* mensaje_a_enviar = string_from_format("Escribi en la siguiente direccion de memoria %s el valor %s", instruccion_actual->parametros[0], obtenerRegistro(&ctx->registros, instruccion_actual->parametros[1]));
+		dir_fisica = MMU(instruccion_actual->parametros[0], instruccion_actual->parametros[1], ctx);
+		if (dir_fisica == -1){
+			return SEG_FAULT;
+		}
 		//enviar_mensaje(mensaje_a_enviar, SOCKET_MEMORIA);
+		//recibir ok memoria
+		log_info(LOGGER_CPU, "PID: %d  -Acción: LEER - Segmento: %s - Dirección Física: %s - Valor: %s", ctx->PID, floor_div(instruccion_actual->parametros[0], TAM_MAX_SEGMENTO/*TAMANIO_MAX_SEG*/), dir_fisica, mensaje_a_enviar);
+
 		return 0;
 	
 	case WAIT:
@@ -184,10 +197,10 @@ op_code execute(t_instruccion* instruccion_actual, t_ctx *ctx)
 };
 
 int MMU(int direccion_logica, int bytes, t_ctx *ctx){
-	int num_segmento = floor_div(direccion_logica, 128/*TAMANIO_MAX_SEG*/);
-	int offset = direccion_logica % 128/*TAMANIO_MAX_SEG*/;
+	int num_segmento = floor_div(direccion_logica, TAM_MAX_SEGMENTO/*TAMANIO_MAX_SEG*/);
+	int offset = direccion_logica % TAM_MAX_SEGMENTO/*TAMANIO_MAX_SEG*/;
 
-	if (offset + bytes > 128/*TAMANIO_MAX_SEG*/){
+	if (offset + bytes > TAM_MAX_SEGMENTO/*TAMANIO_MAX_SEG*/){
 		//“PID: <PID> - Error SEG_FAULT- Segmento: <NUMERO SEGMENTO> - Offset: <OFFSET> - Tamaño: <TAMAÑO>”
 		log_error(LOGGER_CPU, "PID: %d - Error SEG_FAULT- Segmento: %d - Offset: %d - Tamaño: %d", ctx->PID, num_segmento, offset, bytes);
 		return -1;
