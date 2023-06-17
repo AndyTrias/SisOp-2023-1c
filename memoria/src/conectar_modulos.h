@@ -17,5 +17,5 @@
     void recibir_cpu(int*);
     void recibir_fs(int*);
     t_ctx* recibir_contexto(int);
-
+    t_parametros_variables* recibir_parametros_variables(int);
 #endif

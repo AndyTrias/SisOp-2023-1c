@@ -131,16 +131,28 @@ void recibir_cpu(int* socket_modulo) {
                 t_ctx* ctx = recibir_contexto(*socket_modulo);
 
                 // lee
-                void* data = leer(atoi(ctx->motivos_desalojo->parametros[0]));
+                //void* data = leer(atoi(ctx->motivos_desalojo->parametros[0]));
                 log_info(LOGGER_MEMORIA, "PID: <%d> - Acción: <LEER> - Dirección física: <%d> - Tamaño: <%d> - Origen: <CPU>", ctx->PID, atoi(ctx->motivos_desalojo->parametros[0]), atoi(ctx->motivos_desalojo->parametros[1]));
                 
                 // envia
                 t_paquete *paquete = crear_paquete(F_READ);
-                agregar_a_paquete_dato_serializado(paquete, &data, sizeof(void*));
+                //agregar_a_paquete_dato_serializado(paquete, &data, sizeof(void*));
                 enviar_paquete(paquete, *socket_modulo);
                 free(paquete);
                 free(ctx);
 
+                break;
+            
+            case MOV_IN:
+                t_parametros_variables* parametros = recibir_parametros_variables(*socket_modulo);
+                char* valor_leido = leer_valor_direccion_fisica(parametros->parametros[0]);
+                paquete = crear_paquete(MOV_IN);
+                agregar_a_paquete_dato_serializado(paquete, &valor_leido, sizeof(char*));
+                enviar_paquete(paquete, *socket_modulo);
+                free(paquete);
+                break;
+        
+            case MOV_OUT:
                 break;
             
             case -1:
@@ -188,4 +200,18 @@ t_ctx* recibir_contexto(int socket)
     
     free(desplazamiento);
     return ctx;
+}
+
+t_parametros_variables* recibir_parametros_variables(int socket)
+{
+    int size;
+    void *buffer = recibir_buffer(&size, socket);
+
+    int *desplazamiento = malloc(sizeof(int));
+    *desplazamiento = 0; 
+    
+    t_parametros_variables* parametros = deserealizar_motivos_desalojo(buffer, desplazamiento);
+    
+    free(desplazamiento);
+    return parametros;
 }

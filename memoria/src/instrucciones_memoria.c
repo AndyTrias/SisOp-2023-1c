@@ -9,7 +9,7 @@ t_paquete* crear_segmento(int id_segmento, int tamanio, int PID) {
     } else if (strcmp(CONFIG->algoritmo_asignacion, "WORST") == 0) {
         hueco = get_hueco_con_worst_fit(tamanio);
     } else if (comprobar_compactacion(tamanio)){
-        return crear_paquete(COMPACTACION);
+        return crear_paquete(COMPACTAR);
         log_info(LOGGER_MEMORIA, "Se solicita compactacion");
     } else {
         log_error(LOGGER_MEMORIA, "Algoritmo de asignacion no valido");
@@ -62,6 +62,6 @@ void finalizar_proceso(t_list* tabla_segmentos){
     list_destroy(tabla_segmentos);
 }
 
-void* leer(void* direccion_fisica){
-    return direccion_fisica;
+char* leer_valor_direccion_fisica(void* direccion_fisica){
+    return (char*)direccion_fisica;
 }
