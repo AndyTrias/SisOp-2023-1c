@@ -98,7 +98,9 @@ op_code execute(t_instruccion* instruccion_actual, t_ctx *ctx)
 		char *valor_leido = recibir_mensaje(SOCKET_MEMORIA);
 		log_info(LOGGER_CPU, "PID: %d  -Acción: ESCRIBIR - Segmento: %s - Dirección Física: %s - Valor: %s", ctx->PID, floor_div(instruccion_actual->parametros[0], TAM_MAX_SEGMENTO/*TAMANIO_MAX_SEG*/), dir_fisica, valor_leido);
 		//acceder a registro en instruccion_actual->parametros[1] y guardar valor_leido
-		//ctx->registros.(instruccion_actual->parametros[1]) = valor_leido;
+		registro = obtenerRegistro(&ctx->registros, instruccion_actual->parametros[1]);
+		strcpy(registro, valor_leido);
+		free(valor_leido);
 		return 0;
 
 	case MOV_OUT:
@@ -199,8 +201,8 @@ op_code execute(t_instruccion* instruccion_actual, t_ctx *ctx)
 };
 
 void* MMU(int direccion_logica, int bytes, t_ctx *ctx){
-	int num_segmento = floor_div(direccion_logica, 128/*TAMANIO_MAX_SEG*/);
-	int offset = direccion_logica % 128/*TAMANIO_MAX_SEG*/;
+	int num_segmento = floor_div(direccion_logica, TAM_MAX_SEGMENTO);
+	int offset = direccion_logica % TAM_MAX_SEGMENTO/*TAMANIO_MAX_SEG*/;
 
 	if (offset + bytes > TAM_MAX_SEGMENTO/*TAMANIO_MAX_SEG*/){
 		//“PID: <PID> - Error SEG_FAULT- Segmento: <NUMERO SEGMENTO> - Offset: <OFFSET> - Tamaño: <TAMAÑO>”

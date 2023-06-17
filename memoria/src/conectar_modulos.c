@@ -146,10 +146,8 @@ void recibir_cpu(int* socket_modulo) {
             case MOV_IN:
                 t_parametros_variables* parametros = recibir_parametros_variables(*socket_modulo);
                 char* valor_leido = leer_valor_direccion_fisica(parametros->parametros[0]);
-                paquete = crear_paquete(MOV_IN);
-                agregar_a_paquete_dato_serializado(paquete, &valor_leido, sizeof(char*));
-                enviar_paquete(paquete, *socket_modulo);
-                free(paquete);
+                enviar_mensaje(valor_leido, *socket_modulo);
+                free(valor_leido);
                 break;
         
             case MOV_OUT:
