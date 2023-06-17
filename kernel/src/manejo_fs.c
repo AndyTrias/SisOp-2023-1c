@@ -6,8 +6,7 @@ typedef struct{
 }t_fcb;
 typedef struct {
   char identificador[30];
-  int contador;
-  t_fcb * metadatos;
+  t_list * lista_de_procesos_bloqueados;
 }t_tabla_global;
 
 
@@ -15,6 +14,50 @@ typedef struct{
   t_fcb * puntero;
   char * modo;
 }t_file;
+
+
+
+
+//tabla de archivos tiene que tener toda la info necesaria y una lista de procesos bloqueados
+
+int busqueda_tabla_global(char * nombre_archivo){
+  int i = 0;
+  while (i < list_size(TABLA_GLOBAL_DE_ARCHIVOS_ABIERTOS)){
+    t_tabla_global * auxiliar = list_get(TABLA_GLOBAL_DE_ARCHIVOS_ABIERTOS, i);
+    if (strcmp(nombre_archivo, auxiliar->identificador)==0){
+      return i;
+    }
+    i++;
+  }
+  return -1;
+}
+
+void agregar_entrada_tabla(char nombre){
+  t_tabla_global * auxiliar = malloc(sizeof(t_tabla_global));
+  strcpy(auxiliar->identificador, nombre);
+  auxiliar->lista_de_procesos_bloqueados = list_create();
+  list_add(TABLA_GLOBAL_DE_ARCHIVOS_ABIERTOS, auxiliar);
+}
+
+void f_open(t_pcb *proceso, char nombre_archivo[30]){
+  int busqueda = busqueda_tabla_global(nombre_archivo);
+  if (busqueda == -1){
+    // no esta
+    if (/*preguntar a fs si existe*/){
+      //pedirle a fs que cree el archivo
+    }
+
+    agregar_entrada_tabla(nombre_archivo);
+  } else {
+    //esta
+    list_add(list_get(TABLA_GLOBAL_DE_ARCHIVOS_ABIERTOS, busqueda) ->lista_de_procesos_bloqueados, proceso);
+    //agregar a lista del proceso
+
+  }
+
+
+}
+
 
 
 void * devuelve_tabla_global_del_archivo(t_list * tabla_global,char * nombre_archivo){
