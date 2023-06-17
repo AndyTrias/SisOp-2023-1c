@@ -86,7 +86,7 @@ op_code execute(t_instruccion* instruccion_actual, t_ctx *ctx)
 	case MOV_IN:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
 		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[0]);
-		agregar_parametro_desalojo(ctx, MMU(instruccion_actual->parametros[1], instruccion_actual->parametros[0]));
+		agregar_parametro_desalojo(ctx, MMU(instruccion_actual->parametros[1], instruccion_actual->parametros[0], ctx));
 		t_paquete* paquete = crear_paquete(MOV_IN);
 		serializar_motivos_desalojo(paquete, ctx->motivos_desalojo);
 		enviar_paquete(paquete, SOCKET_MEMORIA);
@@ -130,7 +130,7 @@ op_code execute(t_instruccion* instruccion_actual, t_ctx *ctx)
 	case F_WRITE:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
 		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[0]);
-		int dir_fisica = MMU(instruccion_actual->parametros[1]);
+		int dir_fisica = MMU(instruccion_actual->parametros[1], instruccion_actual->parametros[2], ctx);
 		if (dir_fisica == -1){
 			return SEG_FAULT;
 		}
@@ -141,8 +141,9 @@ op_code execute(t_instruccion* instruccion_actual, t_ctx *ctx)
 	case F_READ:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
 		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[0]);
-		int dir_fisica = MMU(instruccion_actual->parametros[1]);
+		int dir_fisica = MMU(instruccion_actual->parametros[1], instruccion_actual->parametros[2], ctx);
 		if (dir_fisica == -1){
+			
 			return SEG_FAULT;
 		}
 		agregar_parametro_desalojo(ctx, dir_fisica);
@@ -187,7 +188,8 @@ int MMU(int direccion_logica, int bytes, t_ctx *ctx){
 	int offset = direccion_logica % 128/*TAMANIO_MAX_SEG*/;
 
 	if (offset + bytes > 128/*TAMANIO_MAX_SEG*/){
-		log_error(LOGGER_CPU, "Error: SEG_FAULT");
+		//“PID: <PID> - Error SEG_FAULT- Segmento: <NUMERO SEGMENTO> - Offset: <OFFSET> - Tamaño: <TAMAÑO>”
+		log_error(LOGGER_CPU, "PID: %d - Error SEG_FAULT- Segmento: %d - Offset: %d - Tamaño: %d", ctx->PID, num_segmento, offset, bytes);
 		return -1;
 	}
 
