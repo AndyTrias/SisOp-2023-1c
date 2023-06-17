@@ -97,6 +97,8 @@ op_code execute(t_instruccion* instruccion_actual, t_ctx *ctx)
 		free(paquete);
 		char *valor_leido = recibir_mensaje(SOCKET_MEMORIA);
 		log_info(LOGGER_CPU, "PID: %d  -Acción: ESCRIBIR - Segmento: %s - Dirección Física: %s - Valor: %s", ctx->PID, floor_div(instruccion_actual->parametros[0], TAM_MAX_SEGMENTO/*TAMANIO_MAX_SEG*/), dir_fisica, valor_leido);
+		//acceder a registro en instruccion_actual->parametros[1] y guardar valor_leido
+		ctx->registros->(instruccion_actual->parametros[1]) = valor_leido;
 		return 0;
 
 	case MOV_OUT:
