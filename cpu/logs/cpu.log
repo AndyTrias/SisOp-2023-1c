@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 [INFO] 20:23:51:869 CPU/(37344:37344): Se conecto al servidor 127.0.0.1:8002
 [INFO] 20:23:51:869 CPU/(37344:37344): Esperando kernel....
 [INFO] 20:23:54:948 CPU/(37344:37344): Se conecto el kernel
@@ -662,3 +663,8 @@
 [INFO] 19:44:06:146 CPU/(23338:23338): Instruccion nº3: 5
 [INFO] 19:44:06:146 CPU/(23338:23338): PID: 0  -Ejecutando: 5 - BX 120
 >>>>>>> fa0ae4b (mov in ahi andamo)
+=======
+version https://git-lfs.github.com/spec/v1
+oid sha256:38c2845393691e3815d53ef4105249e600cce19c9f8d7d05ed705a181fb9da62
+size 1273
+>>>>>>> cbcc7a0 (	modified:   consola/logs/consola.log)

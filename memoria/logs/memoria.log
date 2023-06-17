@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 [INFO] 20:23:46:530 MEMORIA/(37191:37191): Se creo el espacio contiguo de memoria
 [INFO] 20:23:46:530 MEMORIA/(37191:37191): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555e860
 [INFO] 20:23:46:530 MEMORIA/(37191:37191): Se creo el hueco libre inicial de tamanio 3968 en la direccion 0x55555555e8e0
@@ -431,3 +432,8 @@
 [INFO] 19:43:57:203 MEMORIA/(23193:23580): PID: <0> - Crear Segmento: <1> - Base: <0x55555555e8e0> - TAMAÑO: <128>
 [INFO] 19:43:57:204 MEMORIA/(23193:23580): PID: <0> - Eliminar Segmento: <1> - Base: <0x55555555e8e0> - TAMAÑO: <128>
 >>>>>>> fa0ae4b (mov in ahi andamo)
+=======
+version https://git-lfs.github.com/spec/v1
+oid sha256:688124e0fc0b1624caff9d69088c93c7cde7e4c669aab9f32bb6f5ca9cd01b03
+size 835
+>>>>>>> cbcc7a0 (	modified:   consola/logs/consola.log)
