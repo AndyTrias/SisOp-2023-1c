@@ -86,8 +86,8 @@ op_code execute(t_instruccion* instruccion_actual, t_ctx *ctx)
 	case MOV_IN:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
 		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[0]);
-		int dir_fisica = MMU(instruccion_actual->parametros[1], instruccion_actual->parametros[0], ctx);
-		if (dir_fisica == -1){
+		void* dir_fisica = MMU(atoi(instruccion_actual->parametros[1]), atoi(instruccion_actual->parametros[0]), ctx);
+		if (!dir_fisica){
 			return SEG_FAULT;
 		}
 		agregar_parametro_desalojo(ctx, dir_fisica);
@@ -98,19 +98,19 @@ op_code execute(t_instruccion* instruccion_actual, t_ctx *ctx)
 		char *valor_leido = recibir_mensaje(SOCKET_MEMORIA);
 		log_info(LOGGER_CPU, "PID: %d  -Acción: ESCRIBIR - Segmento: %s - Dirección Física: %s - Valor: %s", ctx->PID, floor_div(instruccion_actual->parametros[0], TAM_MAX_SEGMENTO/*TAMANIO_MAX_SEG*/), dir_fisica, valor_leido);
 		//acceder a registro en instruccion_actual->parametros[1] y guardar valor_leido
-		ctx->registros->(instruccion_actual->parametros[1]) = valor_leido;
+		//ctx->registros.(instruccion_actual->parametros[1]) = valor_leido;
 		return 0;
 
 	case MOV_OUT:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
 		char* mensaje_a_enviar = string_from_format("Escribi en la siguiente direccion de memoria %s el valor %s", instruccion_actual->parametros[0], obtenerRegistro(&ctx->registros, instruccion_actual->parametros[1]));
-		dir_fisica = MMU(instruccion_actual->parametros[0], instruccion_actual->parametros[1], ctx);
-		if (dir_fisica == -1){
+		dir_fisica = MMU(atoi(instruccion_actual->parametros[0]), atoi(instruccion_actual->parametros[1]), ctx);
+		if (!dir_fisica){
 			return SEG_FAULT;
 		}
 		//enviar_mensaje(mensaje_a_enviar, SOCKET_MEMORIA);
 		//recibir ok memoria
-		log_info(LOGGER_CPU, "PID: %d  -Acción: LEER - Segmento: %s - Dirección Física: %s - Valor: %s", ctx->PID, floor_div(instruccion_actual->parametros[0], TAM_MAX_SEGMENTO/*TAMANIO_MAX_SEG*/), dir_fisica, mensaje_a_enviar);
+		//log_info(LOGGER_CPU, "PID: %d  -Acción: LEER - Segmento: %s - Dirección Física: %p - Valor: %s", ctx->PID, floor_div(instruccion_actual->parametros[0], TAM_MAX_SEGMENTO/*TAMANIO_MAX_SEG*/), dir_fisica, mensaje_a_enviar);
 
 		return 0;
 	
@@ -145,7 +145,7 @@ op_code execute(t_instruccion* instruccion_actual, t_ctx *ctx)
 	case F_WRITE:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
 		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[0]);
-		void* dir_fisica = MMU(atoi(instruccion_actual->parametros[1]), atoi(instruccion_actual->parametros[2]), ctx);
+		dir_fisica = MMU(atoi(instruccion_actual->parametros[1]), atoi(instruccion_actual->parametros[2]), ctx);
 		if (!dir_fisica){
 			return SEG_FAULT;
 		}
