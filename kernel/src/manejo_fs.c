@@ -6,6 +6,7 @@ typedef struct{
 }t_fcb;
 typedef struct {
   char identificador[30];
+  int PID; //para verificar que solo el archivo abierto lo pueda operar
   t_list * lista_de_procesos_bloqueados;
 }t_tabla_global;
 
@@ -32,14 +33,24 @@ int busqueda_tabla_global(char * nombre_archivo){
   return -1;
 }
 
-void agregar_entrada_tabla(char nombre){
+void agregar_entrada_tabla(char nombre, int pid){
   t_tabla_global * auxiliar = malloc(sizeof(t_tabla_global));
   strcpy(auxiliar->identificador, nombre);
   auxiliar->lista_de_procesos_bloqueados = list_create();
+  auxiliar->PID = pid;
   list_add(TABLA_GLOBAL_DE_ARCHIVOS_ABIERTOS, auxiliar);
 }
 
-void f_open(t_pcb *proceso, char nombre_archivo[30]){
+void eliminar_entrada_tabla(int posicion){
+    t_tabla_global * auxiliar = list_get(TABLA_GLOBAL_DE_ARCHIVOS_ABIERTOS, posicion);
+    list_destroy(auxiliar->lista_de_procesos_bloqueados);
+    free(auxiliar);
+    list_remove(TABLA_GLOBAL_DE_ARCHIVOS_ABIERTOS, posicion);
+
+}
+
+
+int f_open(t_pcb *proceso, char nombre_archivo[30]){
   int busqueda = busqueda_tabla_global(nombre_archivo);
   if (busqueda == -1){
     // no esta
@@ -47,14 +58,35 @@ void f_open(t_pcb *proceso, char nombre_archivo[30]){
       //pedirle a fs que cree el archivo
     }
 
-    agregar_entrada_tabla(nombre_archivo);
+    agregar_entrada_tabla(nombre_archivo, proceso->contexto.PID);
+    return 1; //bloqueado
   } else {
     //esta
     list_add(list_get(TABLA_GLOBAL_DE_ARCHIVOS_ABIERTOS, busqueda) ->lista_de_procesos_bloqueados, proceso);
     //agregar a lista del proceso
+    return 0; //puede seguir
 
   }
 
+}
+
+void f_close(t_pcb *proceso, char nombre_archivo[30]){
+  int busqueda = busqueda_tabla_global(nombre_archivo);
+  if (busqueda == -1 || list_get(TABLA_GLOBAL_DE_ARCHIVOS_ABIERTOS, busqueda) ->PID != proceso->contexto.PID){
+    // no esta
+    //error
+  } else {
+    if (list_size(list_get(TABLA_GLOBAL_DE_ARCHIVOS_ABIERTOS, busqueda) ->lista_de_procesos_bloqueados) == 0){
+      //no hay nadie mas
+      eliminar_entrada_tabla(busqueda);
+    } else {
+      //hay alguien mas
+      t_pcb *proceso_a_desbloquear = list_remove(list_get(TABLA_GLOBAL_DE_ARCHIVOS_ABIERTOS, busqueda) ->lista_de_procesos_bloqueados, 0);
+      //cambiar pid
+      list_get(TABLA_GLOBAL_DE_ARCHIVOS_ABIERTOS, busqueda) ->PID = proceso_a_desbloquear->contexto.PID;
+      agregar_a_lista_ready(proceso_a_desbloquear);
+    }
+  }
 
 }
 

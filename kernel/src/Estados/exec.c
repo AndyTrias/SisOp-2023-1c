@@ -63,7 +63,9 @@ void definir_accion(int cod_op, t_pcb *proceso){
         io(proceso);
         break;
     case F_OPEN:
-        crear_abrir_archivo(proceso);
+        if (f_open(proceso, proceso->contexto.motivos_desalojo->parametros[0])){ //1 bloqueado, 0 desbloqueado
+            reemplazar_exec_por_nuevo();
+        }
     case F_SEEK:
         break;
     case F_CLOSE:
