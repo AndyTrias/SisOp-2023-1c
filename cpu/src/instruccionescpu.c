@@ -88,14 +88,14 @@ op_code execute(t_instruccion* instruccion_actual, t_ctx *ctx)
 		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[0]);
 		agregar_parametro_desalojo(ctx, MMU(instruccion_actual->parametros[1], instruccion_actual->parametros[0], ctx));
 		t_paquete* paquete = crear_paquete(MOV_IN);
-		serializar_motivos_desalojo(paquete, ctx->motivos_desalojo);
+		serializar_motivos_desalojo(ctx->motivos_desalojo, paquete);
 		enviar_paquete(paquete, SOCKET_MEMORIA);
 		free(paquete);
 		return 0;
 
 	case MOV_OUT:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
-		char* mensaje_a_enviar = string_from_format("Escribi en la siguiente direccion de memoria %s el valor %s", instruccion_actual->parametros[0], obtenerRegistro(&ctx->registros, instruccion_actual->parametros[1]));
+		//char* mensaje_a_enviar = string_from_format("Escribi en la siguiente direccion de memoria %s el valor %s", instruccion_actual->parametros[0], obtenerRegistro(&ctx->registros, instruccion_actual->parametros[1]));
 		//enviar_mensaje(mensaje_a_enviar, SOCKET_MEMORIA);
 		return 0;
 	
@@ -130,8 +130,8 @@ op_code execute(t_instruccion* instruccion_actual, t_ctx *ctx)
 	case F_WRITE:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
 		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[0]);
-		int dir_fisica = MMU(instruccion_actual->parametros[1], instruccion_actual->parametros[2], ctx);
-		if (dir_fisica == -1){
+		void* dir_fisica = MMU(atoi(instruccion_actual->parametros[1]), atoi(instruccion_actual->parametros[2]), ctx);
+		if (!dir_fisica){
 			return SEG_FAULT;
 		}
 		agregar_parametro_desalojo(ctx, dir_fisica);
@@ -141,8 +141,8 @@ op_code execute(t_instruccion* instruccion_actual, t_ctx *ctx)
 	case F_READ:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
 		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[0]);
-		int dir_fisica = MMU(instruccion_actual->parametros[1], instruccion_actual->parametros[2], ctx);
-		if (dir_fisica == -1){
+		dir_fisica = MMU(atoi(instruccion_actual->parametros[1]), atoi(instruccion_actual->parametros[2]), ctx);
+		if (!dir_fisica){
 			
 			return SEG_FAULT;
 		}
@@ -183,17 +183,18 @@ op_code execute(t_instruccion* instruccion_actual, t_ctx *ctx)
 	}
 };
 
-int MMU(int direccion_logica, int bytes, t_ctx *ctx){
+void* MMU(int direccion_logica, int bytes, t_ctx *ctx){
 	int num_segmento = floor_div(direccion_logica, 128/*TAMANIO_MAX_SEG*/);
 	int offset = direccion_logica % 128/*TAMANIO_MAX_SEG*/;
 
 	if (offset + bytes > 128/*TAMANIO_MAX_SEG*/){
 		//“PID: <PID> - Error SEG_FAULT- Segmento: <NUMERO SEGMENTO> - Offset: <OFFSET> - Tamaño: <TAMAÑO>”
 		log_error(LOGGER_CPU, "PID: %d - Error SEG_FAULT- Segmento: %d - Offset: %d - Tamaño: %d", ctx->PID, num_segmento, offset, bytes);
-		return -1;
+		return NULL;
 	}
 
-	int direccion_fisica = list_get(ctx->tabla_segmentos, num_segmento) + offset;
+	t_segmento* segmento = list_get(ctx->tabla_segmentos, num_segmento);
+	void* direccion_fisica = segmento->base + offset;
 	return direccion_fisica;
 }
 

@@ -1,15 +1,15 @@
 #include "manejo_fs.h"
 
+typedef struct{
+  bool control_de_acceso[10];
+  int ubicacion_en_disco;
+}t_fcb;
 typedef struct {
   char identificador[30];
   int contador;
   t_fcb * metadatos;
 }t_tabla_global;
 
-typedef struct{
-  bool control_de_acceso[10];
-  int ubicacion_en_disco;
-}t_fcb;
 
 typedef struct{
   t_fcb * puntero;
@@ -37,7 +37,7 @@ void * devuelve_tabla_global_del_archivo(t_list * tabla_global,char * nombre_arc
 void crear_abrir_archivo(t_pcb * proceso){
   t_instruccion* instruccion_utilizable = list_get(proceso->contexto.instrucciones, proceso->contexto.program_counter - 1);
   
-  strcpy(archivo->path, instruccion_utilizable->parametros[0]);
+  //strcpy(archivo->path, instruccion_utilizable->parametros[0]);
   log_info(LOGGER_KERNEL, "PID: %d - Abrir Archivo: %s", proceso->contexto.PID, instruccion_utilizable->parametros[0]);
   t_file * archivo= malloc(sizeof(t_file));
   
@@ -67,11 +67,11 @@ void crear_abrir_archivo(t_pcb * proceso){
   reemplazar_exec_por_nuevo();
 }
 
-void cerrar_archivo(t_pcb * proceso){
+void cerrar_archivo(t_pcb* proceso){
     t_instruccion* instruccion_utilizable = list_get(proceso->contexto.instrucciones, proceso->contexto.program_counter - 1);
     log_info(LOGGER_KERNEL, "PID: %d - Cerrar Archivo: %s", proceso->contexto.PID, instruccion_utilizable->parametros[0]);
-    t_tabla_global * identidad;
-    identidad = devuelve_tabla_global_del_archivo(TABLA_GLOBAL_DE_ARCHIVOS_ABIERTOS, instruccion_utilizable->parametros[0];
+    t_tabla_global* identidad;
+    identidad = devuelve_tabla_global_del_archivo(TABLA_GLOBAL_DE_ARCHIVOS_ABIERTOS, instruccion_utilizable->parametros[0]);
     //Falta método para encontrar la lista que quiero de momento esto funcionaría además de que habría que eliminar sus permisos.
     list_remove(proceso->archivos_abiertos, 0);
     identidad->contador--;

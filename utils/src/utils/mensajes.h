@@ -18,10 +18,10 @@ typedef enum
     INSTRUCCIONES, // Se utiliza de consola a kernel
     MENSAJE, // Se utiliza de kernel a consola
     CONTEXTO, // Se utiliza de kernel a cpu
+    COMPACTAR,
     CREAR_TABLA_SEGMENTOS,
     TERMINAR,
     F_CREATE,
-    COMPACTAR,
     OUT_OF_MEMORY
 } op_code;
 

@@ -515,3 +515,79 @@
 [INFO] 20:43:43:794 CPU/(3481:3481): Instruccion nº2: 14
 [INFO] 20:43:43:794 CPU/(3481:3481): PID: 0  -Ejecutando: 14
 [INFO] 20:48:52:359 CPU/(3481:3481): Se desconecto el kernel
+[INFO] 19:09:04:434 CPU/(7963:7963): Se conecto al servidor 127.0.0.1:8002
+[INFO] 19:09:04:434 CPU/(7963:7963): Esperando kernel....
+[INFO] 19:12:58:013 CPU/(7963:7963): Se conecto el kernel
+[INFO] 19:15:09:249 CPU/(10173:10173): Se conecto al servidor 127.0.0.1:8002
+[INFO] 19:15:09:249 CPU/(10173:10173): Esperando kernel....
+[INFO] 19:15:13:377 CPU/(10173:10173): Se conecto el kernel
+[INFO] 19:15:15:906 CPU/(10173:10173): Se recibio un contexto del kernel
+[INFO] 19:15:21:082 CPU/(10173:10173): Comenzando ciclo con nuevo CTX...
+[INFO] 19:15:21:082 CPU/(10173:10173): Program Counter: 0
+[INFO] 19:15:21:082 CPU/(10173:10173): Instruccion nº1: 6
+[INFO] 19:15:21:082 CPU/(10173:10173): PID: 0  -Ejecutando: 6 - 1 128
+[INFO] 19:15:21:083 CPU/(10173:10173): Se recibio un contexto del kernel
+[INFO] 19:15:24:501 CPU/(10173:10173): Comenzando ciclo con nuevo CTX...
+[INFO] 19:15:24:501 CPU/(10173:10173): Program Counter: 1
+[INFO] 19:15:24:501 CPU/(10173:10173): Instruccion nº2: 13
+[INFO] 19:15:24:501 CPU/(10173:10173): PID: 0  -Ejecutando: 13 - 1
+[INFO] 19:15:24:501 CPU/(10173:10173): Se recibio un contexto del kernel
+[INFO] 19:15:24:501 CPU/(10173:10173): Comenzando ciclo con nuevo CTX...
+[INFO] 19:15:24:501 CPU/(10173:10173): Program Counter: 2
+[INFO] 19:15:24:501 CPU/(10173:10173): Instruccion nº3: 5
+[INFO] 19:15:24:501 CPU/(10173:10173): PID: 0  -Ejecutando: 5 - BX 120
+[ERROR] 19:15:24:501 CPU/(10173:10173): PID: 0 - Error SEG_FAULT- Segmento: 11185122 - Offset: 16 - Tamaño: 1431695600
+[INFO] 19:16:29:096 CPU/(11180:11180): Se conecto al servidor 127.0.0.1:8002
+[INFO] 19:16:29:097 CPU/(11180:11180): Esperando kernel....
+[INFO] 19:16:32:780 CPU/(11180:11180): Se conecto el kernel
+[INFO] 19:16:36:016 CPU/(11180:11180): Se recibio un contexto del kernel
+[INFO] 19:16:36:016 CPU/(11180:11180): Comenzando ciclo con nuevo CTX...
+[INFO] 19:16:36:016 CPU/(11180:11180): Program Counter: 0
+[INFO] 19:16:36:016 CPU/(11180:11180): Instruccion nº1: 6
+[INFO] 19:16:36:016 CPU/(11180:11180): PID: 0  -Ejecutando: 6 - 1 128
+[INFO] 19:16:36:017 CPU/(11180:11180): Se recibio un contexto del kernel
+[INFO] 19:16:36:017 CPU/(11180:11180): Comenzando ciclo con nuevo CTX...
+[INFO] 19:16:36:017 CPU/(11180:11180): Program Counter: 1
+[INFO] 19:16:36:017 CPU/(11180:11180): Instruccion nº2: 13
+[INFO] 19:16:36:017 CPU/(11180:11180): PID: 0  -Ejecutando: 13 - 1
+[INFO] 19:16:36:017 CPU/(11180:11180): Se recibio un contexto del kernel
+[INFO] 19:16:36:017 CPU/(11180:11180): Comenzando ciclo con nuevo CTX...
+[INFO] 19:16:36:017 CPU/(11180:11180): Program Counter: 2
+[INFO] 19:16:36:017 CPU/(11180:11180): Instruccion nº3: 5
+[INFO] 19:16:36:017 CPU/(11180:11180): PID: 0  -Ejecutando: 5 - BX 120
+[ERROR] 19:16:36:017 CPU/(11180:11180): PID: 0 - Error SEG_FAULT- Segmento: 11185122 - Offset: 16 - Tamaño: 1431695600
+[INFO] 19:18:59:929 CPU/(12004:12004): Se conecto al servidor 127.0.0.1:8002
+[INFO] 19:18:59:929 CPU/(12004:12004): Esperando kernel....
+[INFO] 19:19:03:566 CPU/(12004:12004): Se conecto el kernel
+[INFO] 19:19:30:489 CPU/(12004:12004): Se recibio un contexto del kernel
+[INFO] 19:19:30:489 CPU/(12004:12004): Comenzando ciclo con nuevo CTX...
+[INFO] 19:19:30:489 CPU/(12004:12004): Program Counter: 0
+[INFO] 19:19:30:489 CPU/(12004:12004): Instruccion nº1: 6
+[INFO] 19:19:30:489 CPU/(12004:12004): PID: 0  -Ejecutando: 6 - 1 128
+[INFO] 19:20:13:306 CPU/(12004:12004): Se recibio un contexto del kernel
+[INFO] 19:20:13:306 CPU/(12004:12004): Comenzando ciclo con nuevo CTX...
+[INFO] 19:20:13:306 CPU/(12004:12004): Program Counter: 1
+[INFO] 19:20:13:306 CPU/(12004:12004): Instruccion nº2: 13
+[INFO] 19:20:13:306 CPU/(12004:12004): PID: 0  -Ejecutando: 13 - 1
+[INFO] 19:21:16:041 CPU/(12004:12004): Se recibio un contexto del kernel
+[INFO] 19:21:16:041 CPU/(12004:12004): Comenzando ciclo con nuevo CTX...
+[INFO] 19:21:16:041 CPU/(12004:12004): Program Counter: 2
+[INFO] 19:21:16:041 CPU/(12004:12004): Instruccion nº3: 5
+[INFO] 19:21:16:041 CPU/(12004:12004): PID: 0  -Ejecutando: 5 - BX 120
+[ERROR] 19:21:16:041 CPU/(12004:12004): PID: 0 - Error SEG_FAULT- Segmento: 11185122 - Offset: 16 - Tamaño: 1431695600
+[INFO] 19:23:38:095 CPU/(13477:13477): Se conecto al servidor 127.0.0.1:8002
+[INFO] 19:23:38:096 CPU/(13477:13477): Esperando kernel....
+[INFO] 19:23:41:927 CPU/(13477:13477): Se conecto el kernel
+[INFO] 19:23:45:822 CPU/(13477:13477): Se recibio un contexto del kernel
+[INFO] 19:23:45:822 CPU/(13477:13477): Comenzando ciclo con nuevo CTX...
+[INFO] 19:23:45:822 CPU/(13477:13477): Program Counter: 0
+[INFO] 19:23:45:822 CPU/(13477:13477): Instruccion nº1: 6
+[INFO] 19:23:45:822 CPU/(13477:13477): PID: 0  -Ejecutando: 6 - 1 128
+[INFO] 19:24:57:183 CPU/(14552:14552): Se conecto al servidor 127.0.0.1:8002
+[INFO] 19:24:57:184 CPU/(14552:14552): Esperando kernel....
+[INFO] 19:25:01:337 CPU/(14552:14552): Se conecto el kernel
+[INFO] 19:25:04:303 CPU/(14552:14552): Se recibio un contexto del kernel
+[INFO] 19:25:04:303 CPU/(14552:14552): Comenzando ciclo con nuevo CTX...
+[INFO] 19:25:04:303 CPU/(14552:14552): Program Counter: 0
+[INFO] 19:25:04:303 CPU/(14552:14552): Instruccion nº1: 6
+[INFO] 19:25:04:303 CPU/(14552:14552): PID: 0  -Ejecutando: 6 - 1 128

@@ -6,7 +6,7 @@ void mostrar_segmento(t_segmento* segmento){
 
 void crear_segmento(t_pcb *proceso){// enviar a memoria CREATE_SEGMENT con sus 2 parametros (id del segmento y tamanio)
     //se solicita la creacion del segmento
-    t_paquete *paquete = crear_paquete(CREAR_SEGMENTO);
+    t_paquete *paquete = crear_paquete(CREATE_SEGMENT);
     serializar_contexto(&proceso->contexto, paquete);
     enviar_paquete(paquete, SOCKET_MEMORIA);
     free(paquete);
@@ -16,7 +16,7 @@ void crear_segmento(t_pcb *proceso){// enviar a memoria CREATE_SEGMENT con sus 2
     void* buffer = recibir_buffer(&size, SOCKET_MEMORIA);
     
     switch(cod_op){
-        case CREAR_SEGMENTO:
+        case CREATE_SEGMENT:
             t_segmento* segmento = list_get(proceso->contexto.tabla_segmentos, atoi(proceso->contexto.motivos_desalojo->parametros[0]));
 
             memcpy(&(segmento->base), buffer, sizeof(void*));
@@ -46,7 +46,7 @@ void crear_segmento(t_pcb *proceso){// enviar a memoria CREATE_SEGMENT con sus 2
 void eliminar_segmento(t_pcb *proceso){
     // enviar a memoria DELETE_SEGMENT con su parametro (id del segmento)
 
-    t_paquete *paquete = crear_paquete(ELIMINAR_SEGMENTO);
+    t_paquete *paquete = crear_paquete(DELETE_SEGMENT);
     serializar_contexto(&proceso->contexto, paquete);
     enviar_paquete(paquete, SOCKET_MEMORIA);
     free(paquete);
