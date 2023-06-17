@@ -148,7 +148,10 @@ void recibir_cpu(int* socket_modulo) {
                 char* valor_leido = leer_valor_direccion_fisica(parametros->parametros[0]);
                 enviar_mensaje(valor_leido, *socket_modulo);
                 free(valor_leido);
+<<<<<<< HEAD
                 free(parametros);
+=======
+>>>>>>> fa0ae4b (mov in ahi andamo)
                 break;
         
             case MOV_OUT:
