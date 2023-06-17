@@ -105,15 +105,16 @@ op_code execute(t_instruccion* instruccion_actual, t_ctx *ctx)
 
 	case MOV_OUT:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
-		char* mensaje_a_enviar = string_from_format("Escribi en la siguiente direccion de memoria %s el valor %s", instruccion_actual->parametros[0], obtenerRegistro(&ctx->registros, instruccion_actual->parametros[1]));
+		registro = obtenerRegistro(&ctx->registros, instruccion_actual->parametros[1]);
+		char* valor = malloc(strlen(registro) + 1); 
 		dir_fisica = MMU(atoi(instruccion_actual->parametros[0]), atoi(instruccion_actual->parametros[1]), ctx);
 		if (!dir_fisica){
 			return SEG_FAULT;
 		}
-		//enviar_mensaje(mensaje_a_enviar, SOCKET_MEMORIA);
+		//enviar a memoria valor y dir_fisica
 		//recibir ok memoria
-		//log_info(LOGGER_CPU, "PID: %d  -Acción: LEER - Segmento: %s - Dirección Física: %p - Valor: %s", ctx->PID, floor_div(instruccion_actual->parametros[0], TAM_MAX_SEGMENTO/*TAMANIO_MAX_SEG*/), dir_fisica, mensaje_a_enviar);
-
+		//log_info(LOGGER_CPU, "PID: %d  -Acción: LEER - Segmento: %s - Dirección Física: %p - Valor: %s", ctx->PID, floor_div(instruccion_actual->parametros[0], TAM_MAX_SEGMENTO/*TAMANIO_MAX_SEG*/), dir_fisica, valor);
+		free(valor);
 		return 0;
 	
 	case WAIT:
