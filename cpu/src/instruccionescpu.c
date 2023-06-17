@@ -96,7 +96,7 @@ op_code execute(t_instruccion* instruccion_actual, t_ctx *ctx)
 		enviar_paquete(paquete, SOCKET_MEMORIA);
 		free(paquete);
 		char *valor_leido = recibir_mensaje(SOCKET_MEMORIA);
-		log_info(LOGGER_CPU, "PID: %d  -Acción: ESCRIBIR - Segmento: %s - Dirección Física: %s - Valor: %s", ctx->PID, floor_div(instruccion_actual->parametros[0], TAM_MAX_SEGMENTO/*TAMANIO_MAX_SEG*/), dir_fisica, valor_leido);
+		log_info(LOGGER_CPU, "PID: %d  -Acción: LEER - Segmento: %s - Dirección Física: %s - Valor: %s", ctx->PID, floor_div(instruccion_actual->parametros[0], TAM_MAX_SEGMENTO/*TAMANIO_MAX_SEG*/), dir_fisica, valor_leido);
 		//acceder a registro en instruccion_actual->parametros[1] y guardar valor_leido
 		registro = obtenerRegistro(&ctx->registros, instruccion_actual->parametros[1]);
 		strcpy(registro, valor_leido);
@@ -105,16 +105,27 @@ op_code execute(t_instruccion* instruccion_actual, t_ctx *ctx)
 
 	case MOV_OUT:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
-		registro = obtenerRegistro(&ctx->registros, instruccion_actual->parametros[1]);
-		char* valor = malloc(strlen(registro) + 1); 
+		registro = obtenerRegistro(&ctx->registros, instruccion_actual->parametros[1]); 
 		dir_fisica = MMU(atoi(instruccion_actual->parametros[0]), atoi(instruccion_actual->parametros[1]), ctx);
 		if (!dir_fisica){
 			return SEG_FAULT;
 		}
-		//enviar a memoria valor y dir_fisica
+		agregar_parametro_desalojo(ctx, registro);
+		agregar_parametro_desalojo(ctx, dir_fisica);
+		paquete = crear_paquete(MOV_OUT);
+		serializar_motivos_desalojo(ctx->motivos_desalojo, paquete);
+		enviar_paquete(paquete, SOCKET_MEMORIA);
+		free(paquete);
+
 		//recibir ok memoria
-		//log_info(LOGGER_CPU, "PID: %d  -Acción: LEER - Segmento: %s - Dirección Física: %p - Valor: %s", ctx->PID, floor_div(instruccion_actual->parametros[0], TAM_MAX_SEGMENTO/*TAMANIO_MAX_SEG*/), dir_fisica, valor);
-		free(valor);
+		char* mensaje = recibir_mensaje(SOCKET_MEMORIA);
+		if (strcmp(mensaje, "OK") != 0){
+			log_error(LOGGER_CPU, "PID: %d  -Error al escribir en memoria", ctx->PID);
+			return SEG_FAULT;
+		}
+
+		log_info(LOGGER_CPU, "PID: %d  -Acción: ESCRIBIR - Segmento: %s - Dirección Física: %s - Valor: %s", ctx->PID, floor_div(instruccion_actual->parametros[1], TAM_MAX_SEGMENTO/*TAMANIO_MAX_SEG*/), dir_fisica, registro);
+
 		return 0;
 	
 	case WAIT:

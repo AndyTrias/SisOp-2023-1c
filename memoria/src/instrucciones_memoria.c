@@ -65,3 +65,7 @@ void finalizar_proceso(t_list* tabla_segmentos){
 char* leer_valor_direccion_fisica(void* direccion_fisica){
     return (char*)direccion_fisica;
 }
+
+void escribir_valor_direccion_fisica(char* valor, void* direccion_fisica){
+    memcpy(direccion_fisica, valor, strlen(valor) + 1);
+}
