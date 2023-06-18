@@ -93,9 +93,10 @@ void f_close(t_pcb *proceso, char* nombre_archivo){
   }
 }
 
-void f_seek(t_pcb *proceso, char* nombre_archivo, int posicion){
+void f_seek(t_pcb *proceso, char* nombre_archivo, char* inicio){
   int busqueda = busqueda_tabla_global(nombre_archivo);
   t_tabla_global* entrada_tabla = list_get(TABLA_GLOBAL_DE_ARCHIVOS_ABIERTOS, busqueda);
+  int posicion= atoi(proceso->contexto.motivos_desalojo->parametros[1]);
   
   if (busqueda == -1 || entrada_tabla->PID != proceso->contexto.PID){
     log_error(LOGGER_KERNEL, "PID: %d - Error al hacer seek en Archivo: %s", proceso->contexto.PID, nombre_archivo);
@@ -115,7 +116,7 @@ void f_truncate(t_pcb *proceso, char* nombre_archivo){
   if (busqueda == -1 || entrada_tabla->PID != proceso->contexto.PID){
     log_error(LOGGER_KERNEL, "PID: %d - Error al hacer truncate en Archivo: %s", proceso->contexto.PID, nombre_archivo);
   } else {
-    int tamanio = proceso->contexto.motivos_desalojo->parametros[1];
+    int tamanio = atoi(proceso->contexto.motivos_desalojo->parametros[1]);
    //mandar a file system archivo y tamanio
    list_add(BLOQUEADOS_FS, proceso);
    log_info(LOGGER_KERNEL, "PID: %d - Truncar Archivo: %s - Tamaño: %d", proceso->contexto.PID, nombre_archivo, tamanio);
@@ -138,14 +139,15 @@ int obtener_puntero(t_pcb *proceso, char* nombre_archivo){
   }
 }
 
-void f_read(t_pcb *proceso, char* nombre_archivo, int cant_bytes){
+void f_read(t_pcb *proceso, char* nombre_archivo, char* cant){
   int busqueda = busqueda_tabla_global(nombre_archivo);
   t_tabla_global* entrada_tabla = list_get(TABLA_GLOBAL_DE_ARCHIVOS_ABIERTOS, busqueda);
-  
+  int cant_bytes= atoi(proceso->contexto.motivos_desalojo->parametros[1]);
+
   if (busqueda == -1 || entrada_tabla->PID != proceso->contexto.PID){
     log_error(LOGGER_KERNEL, "PID: %d - Error al hacer read en Archivo: %s", proceso->contexto.PID, nombre_archivo);
   } else {
-    int dir_fisica = proceso->contexto.motivos_desalojo->parametros[1];
+   int dir_fisica = atoi(proceso->contexto.motivos_desalojo->parametros[1]); // cant_bytes y dir_fisica tienen el mismo numero
     int puntero = obtener_puntero(proceso, nombre_archivo);
    //mandar a file system archivo y cant_bytes
    list_add(BLOQUEADOS_FS, proceso);
@@ -157,15 +159,16 @@ void f_read(t_pcb *proceso, char* nombre_archivo, int cant_bytes){
 
 }
 
-void f_write(t_pcb *proceso, char* nombre_archivo, int cant_bytes){
+void f_write(t_pcb *proceso, char* nombre_archivo, char* cant){
   int busqueda = busqueda_tabla_global(nombre_archivo);
   t_tabla_global* entrada_tabla = list_get(TABLA_GLOBAL_DE_ARCHIVOS_ABIERTOS, busqueda);
-  
+  int cant_bytes= atoi(proceso->contexto.motivos_desalojo->parametros[1]);
+
   if (busqueda == -1 || entrada_tabla->PID != proceso->contexto.PID){
     log_error(LOGGER_KERNEL, "PID: %d - Error al hacer read en Archivo: %s", proceso->contexto.PID, nombre_archivo);
   } else {
    //mandar a file system archivo y cant_bytes
-   int dir_fisica = proceso->contexto.motivos_desalojo->parametros[1];
+   int dir_fisica = atoi(proceso->contexto.motivos_desalojo->parametros[1]); // cant_bytes y dir_fisica tienen el mismo numero
    int puntero = obtener_puntero(proceso, nombre_archivo);
    list_add(BLOQUEADOS_FS, proceso);
    //Escribir Archivo: “PID: <PID> - Escribir Archivo: <NOMBRE ARCHIVO> - Puntero <PUNTERO> - Dirección Memoria <DIRECCIÓN MEMORIA> - Tamaño <TAMAÑO>”

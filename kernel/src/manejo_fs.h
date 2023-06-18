@@ -24,10 +24,10 @@
     int existe_archivo(char* );
     int f_open(t_pcb *, char* );
     void f_close(t_pcb *, char* );
-    void f_seek(t_pcb *, char* , int );
+    void f_seek(t_pcb *, char* , char* );
     void f_truncate(t_pcb *, char* );
-    void f_read(t_pcb *, char* , int );
-    void f_write(t_pcb *, char* , int );
+    void f_read(t_pcb *, char* , char* );
+    void f_write(t_pcb *, char* , char* );
     void desbloquear_de_fs(char* );
     t_pcb * buscar_bloqueados_fs(int );
 
