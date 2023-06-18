@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 
     // Estrucutra administrativa para manejar los fcb
     // modularizar en un archivo aparte
-    t_dictionary *diccionario = dictionary_create();
+    DICCIONARIO_FCB = dictionary_create();
     char* path_fcb = config_get_string_value(config, "PATH_FCB");
     DIR *directorio = opendir(path_fcb);
     if (directorio == NULL)
@@ -36,13 +36,13 @@ int main(int argc, char *argv[])
             char* nombre_archivo = string_from_format("%s", archivo->d_name);
             
             t_config *config_archivo = iniciar_config(ruta_archivo);
-            dictionary_put(diccionario, nombre_archivo, config_archivo);
+            dictionary_put(DICCIONARIO_FCB, nombre_archivo, config_archivo);
 
             // Realizar operaciones con el archivo
             log_info(LOGGER_FILE_SYSTEM,  "Archivo encontrado: %s\n", ruta_archivo);
         }
     }
-    t_config *config_deseada = dictionary_get(diccionario, "Notas1erParcialK9999");
+    t_config *config_deseada = dictionary_get(DICCIONARIO_FCB, "Notas1erParcialK9999");
     config_set_value(config_deseada, "TAMANIO_ARCHIVO", "100");
     config_save(config_deseada);
 

@@ -5,8 +5,13 @@
    #include <utils/planificacion/pcb.h>
    #include <globales.h>
 
+   // revisar
+   #include <utils/config.h>
 
-   void atender_solicitudes(int cod_op, t_parametros_variables *parametros_instruccion);
+
+   void atender_solicitudes(int, t_parametros_variables *);
+   t_config *crear_fcb();
+
     
     
 #endif
