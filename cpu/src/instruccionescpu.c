@@ -85,11 +85,11 @@ op_code execute(t_instruccion* instruccion_actual, t_ctx *ctx)
 
 	case MOV_IN:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
-		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[0]);
 		void* dir_fisica = MMU(atoi(instruccion_actual->parametros[1]), atoi(instruccion_actual->parametros[0]), ctx);
 		if (!dir_fisica){
 			return SEG_FAULT;
 		}
+		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[0]);
 		agregar_parametro_desalojo(ctx, dir_fisica);
 		t_paquete* paquete = crear_paquete(MOV_IN);
 		serializar_motivos_desalojo(ctx->motivos_desalojo, paquete);
@@ -118,13 +118,14 @@ op_code execute(t_instruccion* instruccion_actual, t_ctx *ctx)
 		free(paquete);
 
 		//recibir ok memoria
+		recibir_operacion(SOCKET_MEMORIA);
 		char* mensaje = recibir_mensaje(SOCKET_MEMORIA);
 		if (strcmp(mensaje, "OK") != 0){
 			log_error(LOGGER_CPU, "PID: %d  -Error al escribir en memoria", ctx->PID);
 			return SEG_FAULT;
 		}
 
-		log_info(LOGGER_CPU, "PID: %d  -Acción: ESCRIBIR - Segmento: %s - Dirección Física: %s - Valor: %s", ctx->PID, floor_div(instruccion_actual->parametros[1], TAM_MAX_SEGMENTO/*TAMANIO_MAX_SEG*/), dir_fisica, registro);
+		log_info(LOGGER_CPU, "PID: %d  -Acción: ESCRIBIR - Segmento: %s - Dirección Física: %s - Valor: %s", ctx->PID, floor_div(atoi(instruccion_actual->parametros[1]), TAM_MAX_SEGMENTO), dir_fisica, "hola");
 
 		return 0;
 	
