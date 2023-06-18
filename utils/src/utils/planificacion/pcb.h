@@ -53,9 +53,16 @@ typedef struct
 } t_pcb;
 
 void agregar_parametro_desalojo(t_ctx* ctx, char* parametro);
+void agregar_parametro_variable(t_parametros_variables* , char* );
+
 char get_pid(t_pcb*);
 char* mostrar_pids(t_list* lista);
 void concatenarCharACadena(char c, char *cadena);
+
+void liberar_parametros_variables(t_parametros_variables* );
+void liberar_parametros_desalojo(t_ctx* ctx);
+
+
 
 
 #endif

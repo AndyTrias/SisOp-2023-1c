@@ -22,6 +22,8 @@ void inicializar_archivos(t_config *config)
 
     BITMAP_BLOQUES = levantar_bitmap(block_count, config_get_string_value(config, "PATH_BITMAP"));
     ARCHIVO_BLOQUES = levantar_bloques(block_count, block_size, config_get_string_value(config, "PATH_BLOQUES"));
+
+    
 }
 
 t_bitarray *levantar_bitmap(int cantidad_bloques, char *path)
@@ -95,7 +97,7 @@ FILE *abrir_o_crear_archivo(char *path, int cantidad_de_bytes_necesarios, bool *
         *archivo_recien_creado = true;
         if (file == NULL)
         {
-            log_error(LOGGER_FILE_SYSTEM, "Error al crear el archivo del bitmap");
+            log_error(LOGGER_FILE_SYSTEM, "Error al crear el archivo");
             abort();
         }
 

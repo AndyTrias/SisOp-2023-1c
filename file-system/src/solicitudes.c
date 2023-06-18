@@ -5,14 +5,10 @@ void atender_solicitudes(int cod_op, t_parametros_variables *parametros_instrucc
 
     char *nombre_archivo = parametros_instruccion->parametros[0];
 
-    char* path_archivo = string_from_format("%s/%s", path_fcb, nombre_archivo);
-
     switch (cod_op)
     {
     case F_CREATE:
-        t_config* config_nuevo_archivo = crear_fcb();
-        dictionary_put(DICCIONARIO_FCB, nombre_archivo, iniciar_config(nombre_archivo));
-
+        crear_fcb(nombre_archivo);
         break;
 
     case F_OPEN:
@@ -42,17 +38,18 @@ void atender_solicitudes(int cod_op, t_parametros_variables *parametros_instrucc
 }
 
 
-t_config *crear_fcb()
+
+int buscar_bloque_libre()
 {
-    t_config *nuevo = iniciar_config(path_archivo);
-
-    config_set_value(nuevo, "NOMBRE_ARCHIVO", nombre_archivo);
-    config_set_value(nuevo, "TAMANIO_ARCHIVO", "0");
-
-    
-    config_set_value(nuevo, "PUNTERO_DIRECTO", "0");
-    config_set_value(nuevo, "PUNTERO_INDIRECTO", "0");
-        
-    config_save(nuevo)
-    return nuevo;
+    int i;
+    for (i = 0; i < bitarray_get_max_bit(BITMAP_BLOQUES); i++)
+    {
+        if (bitarray_test_bit(BITMAP_BLOQUES, i) == 0)
+        {
+            bitarray_set_bit(BITMAP_BLOQUES, i);
+            return i;
+        }
+    }
+    return -1;
 }
+

@@ -3,14 +3,18 @@
     
    #include <utils/mensajes.h>
    #include <utils/planificacion/pcb.h>
-   #include <globales.h>
+   #include <utils/configs.h>
 
-   // revisar
-   #include <utils/config.h>
+   
+   #include <commons/string.h>
+   
+   #include <globales.h>
+   #include <fcb.h>
 
 
    void atender_solicitudes(int, t_parametros_variables *);
-   t_config *crear_fcb();
+   int buscar_bloque_libre();
+
 
     
     

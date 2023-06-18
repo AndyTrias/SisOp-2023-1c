@@ -7,3 +7,5 @@ t_bitarray* BITMAP_BLOQUES;
 FILE * ARCHIVO_BLOQUES;
 
 t_dictionary * DICCIONARIO_FCB;
+
+

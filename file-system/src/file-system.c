@@ -15,52 +15,39 @@ int main(int argc, char *argv[])
 
     inicializar_archivos(config);
 
-    // Estrucutra administrativa para manejar los fcb
-    // modularizar en un archivo aparte
-    DICCIONARIO_FCB = dictionary_create();
-    char* path_fcb = config_get_string_value(config, "PATH_FCB");
-    DIR *directorio = opendir(path_fcb);
-    if (directorio == NULL)
-    {
-        log_error(LOGGER_FILE_SYSTEM, "Error al abrir el directorio de FCB.\n");
-        abort();
-    }
-
-    struct dirent *archivo;
-    while ((archivo = readdir(directorio)) != NULL)
-    {
-        if (archivo->d_type == DT_REG)
-        { 
-            // Solo procesar archivos regulares (ignorar directorios y otros tipos)
-            char *ruta_archivo = string_from_format("%s/%s", path_fcb, archivo->d_name);
-            char* nombre_archivo = string_from_format("%s", archivo->d_name);
-            
-            t_config *config_archivo = iniciar_config(ruta_archivo);
-            dictionary_put(DICCIONARIO_FCB, nombre_archivo, config_archivo);
-
-            // Realizar operaciones con el archivo
-            log_info(LOGGER_FILE_SYSTEM,  "Archivo encontrado: %s\n", ruta_archivo);
-        }
-    }
-    t_config *config_deseada = dictionary_get(DICCIONARIO_FCB, "Notas1erParcialK9999");
-    config_set_value(config_deseada, "TAMANIO_ARCHIVO", "100");
-    config_save(config_deseada);
-
-    closedir(directorio);
+    // Caragamos todos los fcb en la memoria
+    levantar_diccionario_fcb(config);
 
 
-int conexion_memoria;
-inicializar_conexiones(&conexion_memoria, config);
+    // testeo de solicitudes sin conexion
+    t_parametros_variables *parametros_instruccion = malloc(sizeof(t_parametros_variables));
+    parametros_instruccion->cantidad_parametros = 0;
+    agregar_parametro_variable(parametros_instruccion, "archivoTestFcb");
 
-enviar_mensaje("Hola Memoria, soy el file-system", conexion_memoria);
+    // atender_solicitudes(F_OPEN, parametros_instruccion);
+    // atender_solicitudes(F_CREATE, parametros_instruccion);
+    // atender_solicitudes(F_OPEN, parametros_instruccion);
 
-char *puerto_escucha = config_get_string_value(config, "PUERTO_ESCUCHA");
-int socket_servidor = crear_servidor(IP, puerto_escucha);
+    liberar_parametros_variables(parametros_instruccion);
 
-conectar_kernel(socket_servidor);
+    agregar_parametro_variable(parametros_instruccion, "archivo2");
+    agregar_parametro_variable(parametros_instruccion, "archivo3");
 
-terminar_programa(LOGGER_FILE_SYSTEM, config);
-terminar_conexiones(1, conexion_memoria);
 
-return 0;
+
+
+    int conexion_memoria;
+    inicializar_conexiones(&conexion_memoria, config);
+
+    enviar_mensaje("Hola Memoria, soy el file-system", conexion_memoria);
+
+    char *puerto_escucha = config_get_string_value(config, "PUERTO_ESCUCHA");
+    int socket_servidor = crear_servidor(IP, puerto_escucha);
+
+    conectar_kernel(socket_servidor);
+
+    terminar_programa(LOGGER_FILE_SYSTEM, config);
+    terminar_conexiones(1, conexion_memoria);
+
+    return 0;
 }

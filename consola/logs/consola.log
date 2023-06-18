@@ -159,3 +159,41 @@ version https://git-lfs.github.com/spec/v1
 oid sha256:5a64711cde3a42a6789cea8f4f835c44e8e1ccec95d596dee7f26a9c950bf7e4
 size 241
 >>>>>>> cbcc7a0 (	modified:   consola/logs/consola.log)
+[INFO] 18:47:17:409 CONSOLA/(20659:20659): Se conecto al servidor 127.0.0.1:8000
+[INFO] 18:47:17:410 CONSOLA/(20659:20659): Paquete enviado
+[ERROR] 18:52:14:227 CONSOLA/(20659:20659): Operacion desconocida
+[INFO] 18:55:19:034 CONSOLA/(22235:22235): Se conecto al servidor 127.0.0.1:8000
+[INFO] 18:55:19:034 CONSOLA/(22235:22235): Paquete enviado
+[ERROR] 18:59:02:318 CONSOLA/(22235:22235): Operacion desconocida
+[INFO] 18:59:55:201 CONSOLA/(24233:24233): Se conecto al servidor 127.0.0.1:8000
+[INFO] 18:59:55:210 CONSOLA/(24233:24233): Paquete enviado
+[ERROR] 19:08:11:278 CONSOLA/(24233:24233): Operacion desconocida
+[INFO] 19:08:46:894 CONSOLA/(26770:26770): Se conecto al servidor 127.0.0.1:8000
+[INFO] 19:08:46:894 CONSOLA/(26770:26770): Paquete enviado
+[ERROR] 19:09:28:613 CONSOLA/(26770:26770): Operacion desconocida
+[INFO] 19:10:28:049 CONSOLA/(27997:27997): Se conecto al servidor 127.0.0.1:8000
+[INFO] 19:10:28:049 CONSOLA/(27997:27997): Paquete enviado
+[ERROR] 19:11:27:370 CONSOLA/(27997:27997): Operacion desconocida
+[INFO] 19:11:54:311 CONSOLA/(28854:28854): Se conecto al servidor 127.0.0.1:8000
+[INFO] 19:11:54:311 CONSOLA/(28854:28854): Paquete enviado
+[ERROR] 19:13:31:988 CONSOLA/(28854:28854): Operacion desconocida
+[INFO] 19:14:13:940 CONSOLA/(29760:29760): Se conecto al servidor 127.0.0.1:8000
+[INFO] 19:14:13:940 CONSOLA/(29760:29760): Paquete enviado
+[ERROR] 19:15:47:323 CONSOLA/(29760:29760): Operacion desconocida
+[INFO] 19:22:11:827 CONSOLA/(31479:31479): Se conecto al servidor 127.0.0.1:8000
+[INFO] 19:22:11:827 CONSOLA/(31479:31479): Paquete enviado
+[ERROR] 19:22:34:198 CONSOLA/(31479:31479): Operacion desconocida
+[INFO] 19:23:19:583 CONSOLA/(32457:32457): Se conecto al servidor 127.0.0.1:8000
+[INFO] 19:23:19:583 CONSOLA/(32457:32457): Paquete enviado
+[INFO] 19:26:19:500 CONSOLA/(2930:2930): Se conecto al servidor 127.0.0.1:8000
+[INFO] 19:26:19:501 CONSOLA/(2930:2930): Paquete enviado
+[ERROR] 19:28:41:757 CONSOLA/(2930:2930): Operacion desconocida
+[INFO] 19:30:17:198 CONSOLA/(4061:4061): Se conecto al servidor 127.0.0.1:8000
+[INFO] 19:30:17:198 CONSOLA/(4061:4061): Paquete enviado
+[ERROR] 19:30:57:196 CONSOLA/(4061:4061): Operacion desconocida
+[INFO] 19:31:35:387 CONSOLA/(5003:5003): Se conecto al servidor 127.0.0.1:8000
+[INFO] 19:31:35:388 CONSOLA/(5003:5003): Paquete enviado
+[ERROR] 19:33:31:558 CONSOLA/(5003:5003): Operacion desconocida
+[INFO] 19:34:49:915 CONSOLA/(6064:6064): Se conecto al servidor 127.0.0.1:8000
+[INFO] 19:34:49:916 CONSOLA/(6064:6064): Paquete enviado
+[ERROR] 19:35:30:536 CONSOLA/(6064:6064): Operacion desconocida
