@@ -13,12 +13,24 @@
 
     typedef struct{
         int puntero;
-        char nombre[30];
+        char* nombre;
     }t_file;
 
-    void crear_abrir_archivo(t_pcb * proceso);
-    void cerrar_archivo(t_pcb * proceso);
-    void seek(t_pcb * proceso);
+    int busqueda_tabla_global(char * );
+    int busqueda_tabla_proceso(t_pcb * , char * );
+    int obtener_puntero(t_pcb *, char* );
+    void agregar_entrada_tabla(char* , int );
+    void eliminar_entrada_tabla(int );
+    int existe_archivo(char* );
+    int f_open(t_pcb *, char* );
+    void f_close(t_pcb *, char* );
+    void f_seek(t_pcb *, char* , int );
+    void f_truncate(t_pcb *, char* );
+    void f_read(t_pcb *, char* , int );
+    void f_write(t_pcb *, char* , int );
+    void desbloquear_de_fs(char* );
+    t_pcb * buscar_bloqueados_fs(int );
+
 
     
 #endif

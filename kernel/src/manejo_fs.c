@@ -25,7 +25,7 @@ int busqueda_tabla_proceso(t_pcb * proceso, char * nombre_archivo){
   return -1;
 }
 
-void agregar_entrada_tabla(char nombre, int pid){
+void agregar_entrada_tabla(char* nombre, int pid){
   t_tabla_global * auxiliar = malloc(sizeof(t_tabla_global));
   strcpy(auxiliar->identificador, nombre);
   auxiliar->lista_de_procesos_bloqueados = list_create();
@@ -40,14 +40,14 @@ void eliminar_entrada_tabla(int posicion){
     list_remove(TABLA_GLOBAL_DE_ARCHIVOS_ABIERTOS, posicion);
 }
 
-int existe_archivo(char nombre[30]){
+int existe_archivo(char* nombre){
   //mandar_a_fs
   //esperar respuesta
 }
 
 
 
-int f_open(t_pcb *proceso, char nombre_archivo[30]){
+int f_open(t_pcb *proceso, char* nombre_archivo){
   int busqueda = busqueda_tabla_global(nombre_archivo);
   //t_file * archivo = malloc(sizeof(t_file));
   //strcpy(archivo->nombre, nombre_archivo);
@@ -68,7 +68,7 @@ int f_open(t_pcb *proceso, char nombre_archivo[30]){
   }
 }
 
-void f_close(t_pcb *proceso, char nombre_archivo[30]){
+void f_close(t_pcb *proceso, char* nombre_archivo){
   int busqueda = busqueda_tabla_global(nombre_archivo);
   t_tabla_global* entrada_tabla = list_get(TABLA_GLOBAL_DE_ARCHIVOS_ABIERTOS, busqueda);
   
@@ -93,7 +93,7 @@ void f_close(t_pcb *proceso, char nombre_archivo[30]){
   }
 }
 
-void f_seek(t_pcb *proceso, char nombre_archivo[30], int posicion){
+void f_seek(t_pcb *proceso, char* nombre_archivo, int posicion){
   int busqueda = busqueda_tabla_global(nombre_archivo);
   t_tabla_global* entrada_tabla = list_get(TABLA_GLOBAL_DE_ARCHIVOS_ABIERTOS, busqueda);
   
@@ -108,7 +108,7 @@ void f_seek(t_pcb *proceso, char nombre_archivo[30], int posicion){
 }
 //Truncate, READ y WRITE
 
-void f_truncate(t_pcb *proceso, char nombre_archivo[30]){
+void f_truncate(t_pcb *proceso, char* nombre_archivo){
   int busqueda = busqueda_tabla_global(nombre_archivo);
   t_tabla_global* entrada_tabla = list_get(TABLA_GLOBAL_DE_ARCHIVOS_ABIERTOS, busqueda);
   
@@ -126,7 +126,7 @@ void f_truncate(t_pcb *proceso, char nombre_archivo[30]){
   }
 }
 
-int obtener_puntero(t_pcb *proceso, char nombre_archivo[30]){
+int obtener_puntero(t_pcb *proceso, char* nombre_archivo){
   int busqueda = busqueda_tabla_global(nombre_archivo);
   t_tabla_global* entrada_tabla = list_get(TABLA_GLOBAL_DE_ARCHIVOS_ABIERTOS, busqueda);
   
@@ -138,7 +138,7 @@ int obtener_puntero(t_pcb *proceso, char nombre_archivo[30]){
   }
 }
 
-void f_read(t_pcb *proceso, char nombre_archivo[30], int cant_bytes){
+void f_read(t_pcb *proceso, char* nombre_archivo, int cant_bytes){
   int busqueda = busqueda_tabla_global(nombre_archivo);
   t_tabla_global* entrada_tabla = list_get(TABLA_GLOBAL_DE_ARCHIVOS_ABIERTOS, busqueda);
   
@@ -157,7 +157,7 @@ void f_read(t_pcb *proceso, char nombre_archivo[30], int cant_bytes){
 
 }
 
-void f_write(t_pcb *proceso, char nombre_archivo[30], int cant_bytes){
+void f_write(t_pcb *proceso, char* nombre_archivo, int cant_bytes){
   int busqueda = busqueda_tabla_global(nombre_archivo);
   t_tabla_global* entrada_tabla = list_get(TABLA_GLOBAL_DE_ARCHIVOS_ABIERTOS, busqueda);
   
