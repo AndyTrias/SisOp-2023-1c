@@ -1,5 +1,12 @@
 #include "planificador.h"
 
+
+void solicitar_creacion(char nombre[30]){
+  //mandar_a_fs
+  //esperar respuesta
+}
+
+
 void* planificador_corto(){
     log_info(LOGGER_KERNEL, "Inicia el planificador de corto plazo");
     sem_wait(&CORTO_PLAZO);
@@ -10,8 +17,6 @@ void* planificador_corto(){
     }
     
 }
-
-
 void* planificador_largo(){
     log_info(LOGGER_KERNEL, "Inicia el planificador de largo plazo");
     while (1){
@@ -26,4 +31,32 @@ void* planificador_largo(){
 
     }
     
+}
+void* comunicacion_fs(){
+
+   while(1){
+    int cod_op = recibir_operacion(SOCKET_FILESYSTEM);
+    
+    int size;
+    void* buffer = recibir_buffer(&size, SOCKET_FILESYSTEM);
+    int* desplazamiento = malloc(sizeof(int));
+    *desplazamiento = 0;
+
+    char* nombre_archivo;// = deserealizar_nombre(buffer, desplazamiento);
+
+    switch (cod_op){
+    case EXISTE:
+        sem_post(&RESPUESTA_FS);
+        break;
+    case NO_EXISTE:
+        solicitar_creacion(nombre_archivo);
+        break;
+    case OP_TERMINADA:
+        desbloquear_de_fs(nombre_archivo);
+        break;
+    default:
+        break;
+    }
+   }
+   
 }

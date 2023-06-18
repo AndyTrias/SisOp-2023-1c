@@ -16,6 +16,7 @@ t_list *LISTA_NEW;
 t_list *LISTA_READY;
 t_pcb *EJECUTANDO;
 t_list *LISTAS_BLOCK;
+t_list* BLOQUEADOS_FS;
 
 // Variables de configuracion
 char *ALGORITMO_PLANIFICACION;
@@ -31,6 +32,7 @@ sem_t PROCESO_EN_READY;
 sem_t GRADO_MULTIPROGRAMACION;
 sem_t CORTO_PLAZO;
 sem_t ARCHIVO_ABIERTO;
+sem_t RESPUESTA_FS;
 pthread_mutex_t MUTEX_LISTA_NEW;
 pthread_mutex_t MUTEX_LISTA_READY;
 pthread_mutex_t MUTEX_TABLA_ARCHIVOS;
@@ -62,12 +64,6 @@ void agregar_a_lista_ready(t_pcb *nuevo){
 
 }
 
-void agregar_a_tabla_global_de_archivos(FILE* archivo){
-    pthread_mutex_lock(&MUTEX_TABLA_ARCHIVOS);
-    list_add(TABLA_GLOBAL_DE_ARCHIVOS_ABIERTOS, archivo);
-    pthread_mutex_unlock(&MUTEX_TABLA_ARCHIVOS);
-    sem_post(&ARCHIVO_ABIERTO);
-}
 // Para sacar elemento X de la lista
 t_pcb *sacar_de_lista_new(int posicion)
 {
