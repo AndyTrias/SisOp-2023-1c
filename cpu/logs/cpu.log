@@ -819,3 +819,50 @@ size 1273
 [INFO] 19:34:49:919 CPU/(5729:5729): Program Counter: 1
 [INFO] 19:34:49:919 CPU/(5729:5729): Instruccion nº2: 5
 [INFO] 19:34:49:919 CPU/(5729:5729): PID: 0  -Ejecutando: 5 - AX 120
+[ERROR] 20:31:40:356 CPU/(38265:38265): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 20:31:40:356 CPU/(38265:38265): Esperando kernel....
+[INFO] 20:31:45:682 CPU/(38265:38265): Se conecto el kernel
+[INFO] 20:32:01:956 CPU/(39045:39045): Se conecto al servidor 127.0.0.1:8002
+[INFO] 20:32:01:956 CPU/(39045:39045): Esperando kernel....
+[INFO] 20:32:05:297 CPU/(39045:39045): Se conecto el kernel
+[INFO] 20:32:12:266 CPU/(39045:39045): Se recibio un contexto del kernel
+[INFO] 20:32:12:266 CPU/(39045:39045): Comenzando ciclo con nuevo CTX...
+[INFO] 20:32:12:266 CPU/(39045:39045): Program Counter: 0
+[INFO] 20:32:12:266 CPU/(39045:39045): Instruccion nº1: 2
+[INFO] 20:32:12:266 CPU/(39045:39045): PID: 0  -Ejecutando: 2 - 120 AX
+[INFO] 20:32:12:267 CPU/(39045:39045): PID: 0  -Acción: ESCRIBIR - Segmento: (null) - Dirección Física: 1 - Valor: hola
+[INFO] 20:32:12:267 CPU/(39045:39045): Program Counter: 1
+[INFO] 20:32:12:267 CPU/(39045:39045): Instruccion nº2: 5
+[INFO] 20:32:12:267 CPU/(39045:39045): PID: 0  -Ejecutando: 5 - AX 120
+[INFO] 20:32:12:267 CPU/(39045:39045): 1
+[INFO] 20:32:57:179 CPU/(39895:39895): Se conecto al servidor 127.0.0.1:8002
+[INFO] 20:32:57:179 CPU/(39895:39895): Esperando kernel....
+[INFO] 20:33:01:678 CPU/(39895:39895): Se conecto el kernel
+[INFO] 20:33:04:195 CPU/(39895:39895): Se recibio un contexto del kernel
+[INFO] 20:33:04:196 CPU/(39895:39895): Comenzando ciclo con nuevo CTX...
+[INFO] 20:33:04:196 CPU/(39895:39895): Program Counter: 0
+[INFO] 20:33:04:196 CPU/(39895:39895): Instruccion nº1: 2
+[INFO] 20:33:04:196 CPU/(39895:39895): PID: 0  -Ejecutando: 2 - 120 AX
+[INFO] 20:33:54:074 CPU/(39895:39895): PID: 0  -Acción: ESCRIBIR - Segmento: (null) - Dirección Física: 1 - Valor: hola
+[INFO] 20:33:54:075 CPU/(39895:39895): Program Counter: 1
+[INFO] 20:33:54:075 CPU/(39895:39895): Instruccion nº2: 5
+[INFO] 20:33:54:075 CPU/(39895:39895): PID: 0  -Ejecutando: 5 - AX 120
+[INFO] 20:33:54:075 CPU/(39895:39895): 1
+[INFO] 20:34:39:676 CPU/(40952:40952): Se conecto al servidor 127.0.0.1:8002
+[INFO] 20:34:39:676 CPU/(40952:40952): Esperando kernel....
+[INFO] 20:34:43:856 CPU/(40952:40952): Se conecto el kernel
+[INFO] 20:34:46:136 CPU/(40952:40952): Se recibio un contexto del kernel
+[INFO] 20:34:46:136 CPU/(40952:40952): Comenzando ciclo con nuevo CTX...
+[INFO] 20:34:46:136 CPU/(40952:40952): Program Counter: 0
+[INFO] 20:34:46:136 CPU/(40952:40952): Instruccion nº1: 2
+[INFO] 20:34:46:136 CPU/(40952:40952): PID: 0  -Ejecutando: 2 - 120 AX
+[ERROR] 20:35:07:004 CPU/(40952:40952): PID: 0  -Error al escribir en memoria
+[INFO] 20:35:13:455 CPU/(41806:41806): Se conecto al servidor 127.0.0.1:8002
+[INFO] 20:35:13:455 CPU/(41806:41806): Esperando kernel....
+[INFO] 20:35:18:853 CPU/(41806:41806): Se conecto el kernel
+[INFO] 20:35:21:354 CPU/(41806:41806): Se recibio un contexto del kernel
+[INFO] 20:35:21:354 CPU/(41806:41806): Comenzando ciclo con nuevo CTX...
+[INFO] 20:35:21:354 CPU/(41806:41806): Program Counter: 0
+[INFO] 20:35:21:354 CPU/(41806:41806): Instruccion nº1: 2
+[INFO] 20:35:21:354 CPU/(41806:41806): PID: 0  -Ejecutando: 2 - 120 AX
+[ERROR] 20:45:59:240 CPU/(41806:41806): PID: 0  -Error al escribir en memoria

@@ -69,3 +69,13 @@ char* leer_valor_direccion_fisica(void* direccion_fisica){
 void escribir_valor_direccion_fisica(char* valor, void* direccion_fisica){
     memcpy(direccion_fisica, valor, strlen(valor) + 1);
 }
+
+char* leer_fs(void* direccion_fisica, int tamanio){
+    char* valor = malloc(tamanio);
+    memcpy(valor, direccion_fisica, tamanio);
+    return valor;
+}
+
+void escribir_fs(char* valor, void* direccion_fisica, int tamanio){
+    memcpy(direccion_fisica, valor, tamanio);
+}

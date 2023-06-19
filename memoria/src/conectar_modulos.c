@@ -126,26 +126,9 @@ void recibir_cpu(int* socket_modulo) {
         int cod_op = recibir_operacion(*socket_modulo);
         switch(cod_op) {
             
-            case F_READ:
-                // recibe
-                t_ctx* ctx = recibir_contexto(*socket_modulo);
-
-                // lee
-                //void* data = leer(atoi(ctx->motivos_desalojo->parametros[0]));
-                log_info(LOGGER_MEMORIA, "PID: <%d> - Acción: <LEER> - Dirección física: <%d> - Tamaño: <%d> - Origen: <CPU>", ctx->PID, atoi(ctx->motivos_desalojo->parametros[0]), atoi(ctx->motivos_desalojo->parametros[1]));
-                
-                // envia
-                t_paquete *paquete = crear_paquete(F_READ);
-                //agregar_a_paquete_dato_serializado(paquete, &data, sizeof(void*));
-                enviar_paquete(paquete, *socket_modulo);
-                free(paquete);
-                free(ctx);
-
-                break;
-            
             case MOV_IN:
                 t_parametros_variables* parametros = recibir_parametros_variables(*socket_modulo);
-                char* valor_leido = leer_valor_direccion_fisica(parametros->parametros[1]);
+                char* valor_leido = leer_valor_direccion_fisica(*parametros->parametros[1]);
                 enviar_mensaje(valor_leido, *socket_modulo);
                 free(valor_leido);
                 liberar_parametros_variables(parametros);
@@ -174,10 +157,34 @@ void recibir_fs(int* socket_modulo) {
         int cod_op = recibir_operacion(*socket_modulo);
         switch(cod_op) {
             
-            case MENSAJE:
-                char* mensaje_recibido = recibir_mensaje(*socket_modulo);
-                log_info(LOGGER_MEMORIA, "Me llego el mensaje: %s", mensaje_recibido);
-                free(mensaje_recibido);
+            case F_READ:
+                // recibe
+                t_ctx* ctx = recibir_contexto(*socket_modulo);
+
+                // lee
+                // direc fisica, tamanio
+                char* valor = leer_fs(ctx->motivos_desalojo->parametros[0], atoi(ctx->motivos_desalojo->parametros[1]));
+                log_info(LOGGER_MEMORIA, "PID: <%d> - Acción: <LEER> - Dirección física: <%d> - Tamaño: <%d> - Origen: <CPU>", ctx->PID, atoi(ctx->motivos_desalojo->parametros[0]), atoi(ctx->motivos_desalojo->parametros[1]));
+                
+                // enviar
+                enviar_mensaje(valor, *socket_modulo);
+                free(ctx);
+
+                break;
+
+            case F_WRITE:
+                // recibe
+                t_ctx* ctx = recibir_contexto(*socket_modulo);
+
+                // lee
+                // valor, direc fisica, tamanio
+                escribir_fs(ctx->motivos_desalojo->parametros[0], ctx->motivos_desalojo->parametros[1], atoi(ctx->motivos_desalojo->parametros[2]));
+                log_info(LOGGER_MEMORIA, "PID: <%d> - Acción: <LEER> - Dirección física: <%d> - Tamaño: <%d> - Origen: <CPU>", ctx->PID, atoi(ctx->motivos_desalojo->parametros[0]), atoi(ctx->motivos_desalojo->parametros[1]));
+                
+                // envia
+                enviar_mensaje("OK", *socket_modulo);
+                free(ctx);
+
                 break;
             
             case -1:

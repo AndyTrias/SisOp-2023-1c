@@ -111,7 +111,7 @@ op_code execute(t_instruccion *instruccion_actual, t_ctx *ctx)
 			return SEG_FAULT;
 		}
 		agregar_parametro_desalojo(ctx, registro);
-		agregar_parametro_desalojo(ctx, dir_fisica);
+		agregar_parametro_desalojo(ctx, &dir_fisica);
 		paquete = crear_paquete(MOV_OUT);
 		serializar_motivos_desalojo(ctx->motivos_desalojo, paquete);
 		enviar_paquete(paquete, SOCKET_MEMORIA);
