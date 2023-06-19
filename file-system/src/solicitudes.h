@@ -12,8 +12,12 @@
    #include <fcb.h>
 
 
+   // Revisar
+   #include <sys/mman.h>
+
+
    void atender_solicitudes(int, t_parametros_variables *);
-   int buscar_bloque_libre();
+   u_int32_t buscar_bloque_libre();
 
 
     

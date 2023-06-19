@@ -89,6 +89,7 @@ op_code execute(t_instruccion *instruccion_actual, t_ctx *ctx)
 		}
 		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[0]);
 		agregar_parametro_desalojo(ctx, dir_fisica);
+		log_info(LOGGER_CPU, "%d", strlen(dir_fisica));
 		t_paquete *paquete = crear_paquete(MOV_IN);
 		serializar_motivos_desalojo(ctx->motivos_desalojo, paquete);
 		enviar_paquete(paquete, SOCKET_MEMORIA);

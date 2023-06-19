@@ -11,6 +11,7 @@
 
     void levantar_diccionario_fcb(t_config*);
     void crear_fcb(char*);
+    void actualizar_fcb(char*, char*, char*);
 
 
     

@@ -19,21 +19,23 @@ int main(int argc, char *argv[])
     levantar_diccionario_fcb(config);
 
 
-    // testeo de solicitudes sin conexion
+    // Test de solicitudes sin conexion
     t_parametros_variables *parametros_instruccion = malloc(sizeof(t_parametros_variables));
     parametros_instruccion->cantidad_parametros = 0;
-    agregar_parametro_variable(parametros_instruccion, "archivoTestFcb");
+    agregar_parametro_variable(parametros_instruccion, "archivoTestFcb2");
 
-    // atender_solicitudes(F_OPEN, parametros_instruccion);
-    // atender_solicitudes(F_CREATE, parametros_instruccion);
-    // atender_solicitudes(F_OPEN, parametros_instruccion);
+    atender_solicitudes(F_CREATE, parametros_instruccion);
+    atender_solicitudes(F_OPEN, parametros_instruccion);
+    
+    agregar_parametro_variable(parametros_instruccion, "10");
+    atender_solicitudes(F_TRUNCATE, parametros_instruccion);
 
     liberar_parametros_variables(parametros_instruccion);
+    agregar_parametro_variable(parametros_instruccion, "archivoTestFcb2");
+    agregar_parametro_variable(parametros_instruccion, "180");
+    atender_solicitudes(F_TRUNCATE, parametros_instruccion);
 
-    agregar_parametro_variable(parametros_instruccion, "archivo2");
-    agregar_parametro_variable(parametros_instruccion, "archivo3");
-
-
+    liberar_parametros_variables(parametros_instruccion);    
 
 
     int conexion_memoria;
