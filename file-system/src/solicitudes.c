@@ -8,12 +8,14 @@ void atender_solicitudes(int cod_op, t_parametros_variables *parametros_instrucc
     switch (cod_op)
     {
     case F_CREATE:
+        log_info(LOGGER_FILE_SYSTEM, "Crear Archivo: %s", nombre_archivo);
         crear_fcb(nombre_archivo);
 
         // Devolver OK a kernel
         break;
 
     case F_OPEN:
+        log_info(LOGGER_FILE_SYSTEM, "Abrir Archivo: %s", nombre_archivo);
         if (dictionary_get(DICCIONARIO_FCB, nombre_archivo) == NULL)
             log_info(LOGGER_FILE_SYSTEM, "El archivo no existe");
         // Devolver que no existe a kernel
@@ -23,63 +25,59 @@ void atender_solicitudes(int cod_op, t_parametros_variables *parametros_instrucc
         break;
 
     case F_TRUNCATE:
+        int tamanio_nuevo = atoi(parametros_instruccion->parametros[1]);
+        int tamanio_actual = obtener_tamanio(nombre_archivo);
+        log_info(LOGGER_FILE_SYSTEM, "Truncar Archivo: %s - Tamaño: %d", nombre_archivo, tamanio_nuevo);
 
-        t_config *fcb = dictionary_get(DICCIONARIO_FCB, nombre_archivo);
-        int tamanio_actual = config_get_int_value(fcb, "TAMANIO_ARCHIVO");
-        int block_size = 64;
-        int block_count = 65536; 
-        int cantidad_punteros_actual = (tamanio_actual -1) / block_size;
-        
-        int nuevo_tamanio = atoi(parametros_instruccion->parametros[1]);
+        int cantidad_bloques_actual = (tamanio_actual + TAMANIO_BLOQUES - 1) / TAMANIO_BLOQUES;
+        int cantidad_bloques_necesarios = (tamanio_nuevo + TAMANIO_BLOQUES - 1) / TAMANIO_BLOQUES;
 
-        if (nuevo_tamanio > tamanio_actual)
+        void *mapeo = mmap(NULL, (TAMANIO_BLOQUES * CANTIDAD_BLOQUES), PROT_READ | PROT_WRITE, MAP_SHARED, fileno(ARCHIVO_BLOQUES), 0);
+        void *bloque_puntero_indirecto = mapeo + TAMANIO_BLOQUES * obtener_puntero_indirecto(nombre_archivo);
+
+        // Se agranda el archivo
+        if (tamanio_nuevo > tamanio_actual)
         {
-            int tamanio_necesario = nuevo_tamanio - tamanio_actual;
+            int cantidad_bloques_a_agregar = cantidad_bloques_necesarios - cantidad_bloques_actual;
 
-            int cantidad_bloques_necesarios = (tamanio_necesario + block_size - 1) / block_size;
-
-            // Ya tiene asignado el puntero directo
+            // El puntero directo siempre se mantiene
             // Se asigna un bloque menos
-            if (tamanio_actual < block_size)
+            if (tamanio_actual < TAMANIO_BLOQUES)
             {
-                cantidad_bloques_necesarios--;
+                cantidad_bloques_a_agregar--;
             }
 
-            // asignar todos los bloques libres en el bitmap de bloques
-            // asignar esos bloques libres en el archivo de bloques
-            void *mapeo = mmap(NULL, block_size * block_count, PROT_READ | PROT_WRITE, MAP_SHARED, fileno(ARCHIVO_BLOQUES), 0);
-            void* bloque_puntero_indirecto = mapeo + block_size * config_get_int_value(fcb, "PUNTERO_INDIRECTO");
-
-            // calculo la cantidad de punteros que tiene ese bloques para ir a esa posicion
-
-
-            int i;
-            u_int32_t bloque_libre;
-            for (i = 0; i < cantidad_bloques_necesarios; i++)
-            {
-                bloque_libre = buscar_bloque_libre();
-                if (bloque_libre == -1)
-                {
-                    log_error(LOGGER_FILE_SYSTEM, "No hay bloques libres");
-                    return;
-                }
-                else{
-                    memcpy((cantidad_punteros_actual + i) * sizeof(u_int32_t) + bloque_puntero_indirecto, &bloque_libre, sizeof(uint32_t));
-                }
-            }
-            msync(mapeo, block_size * block_count, MS_SYNC);
-            munmap(mapeo, block_size * block_count);
+            // Asignar todos los bloques libres en el bitmap de bloques
+            // Asignar esos bloques libres en el archivo de bloques
+            asignar_bloques_al_puntero_indirecto(bloque_puntero_indirecto, cantidad_bloques_necesarios, tamanio_actual);
         }
 
+        // Se achica el archivo
+        else
+        {
+            int cantidad_bloques_a_liberar = cantidad_bloques_actual - cantidad_bloques_necesarios;
+
+            // Si el nuevo tamanio es menor a 64
+            // el puntero directo se mantiene
+            if (tamanio_nuevo < TAMANIO_BLOQUES)
+            {
+                cantidad_bloques_a_liberar--;
+            }
+
+            liberar_bloques_del_puntero_indirecto(bloque_puntero_indirecto, cantidad_bloques_a_liberar, tamanio_actual);
+        }
+
+        msync(mapeo, CANTIDAD_BLOQUES * TAMANIO_BLOQUES, MS_SYNC);
+        munmap(mapeo, CANTIDAD_BLOQUES * TAMANIO_BLOQUES);
         actualizar_fcb(nombre_archivo, "TAMANIO_ARCHIVO", parametros_instruccion->parametros[1]);
         break;
 
     case F_READ:
-        log_info(LOGGER_FILE_SYSTEM, "Se recibio un mensaje del kernel");
+        log_info(LOGGER_FILE_SYSTEM, "Leer Archivo: %s - Puntero: %s - Memoria: %s - Tamaño: %s", nombre_archivo, parametros_instruccion->parametros[1], parametros_instruccion->parametros[2], parametros_instruccion->parametros[3]);
         break;
 
     case F_WRITE:
-        log_info(LOGGER_FILE_SYSTEM, "Se recibio un mensaje del kernel");
+        log_info(LOGGER_FILE_SYSTEM, "Escribir Archivo: %s - Puntero: %s - Memoria: %s - Tamaño: %s", nombre_archivo, parametros_instruccion->parametros[1], parametros_instruccion->parametros[2], parametros_instruccion->parametros[3]);
         break;
 
     default:
@@ -88,16 +86,4 @@ void atender_solicitudes(int cod_op, t_parametros_variables *parametros_instrucc
     }
 }
 
-u_int32_t buscar_bloque_libre()
-{
-    int i;
-    for (i = 0; i < bitarray_get_max_bit(BITMAP_BLOQUES); i++)
-    {
-        if (bitarray_test_bit(BITMAP_BLOQUES, i) == 0)
-        {
-            bitarray_set_bit(BITMAP_BLOQUES, i);
-            return i;
-        }
-    }
-    return -1;
-}
+

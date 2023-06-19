@@ -14,8 +14,8 @@
     
     void inicializar_archivos(t_config* );
     t_config* levantar_superbloque(t_config* config);
-    t_bitarray* levantar_bitmap(int , char* );
-    FILE* levantar_bloques(int tamaño_bloque, int cantidad_bloques, char* path);
+    t_bitarray* levantar_bitmap(char* );
+    FILE* levantar_bloques(char* );
 
     // Auxiliares
     void truncar_archivo(FILE *file, int tamaño);

@@ -69,3 +69,17 @@ void actualizar_fcb(char *nombre_archivo, char *clave, char *valor)
     config_set_value(fcb, clave, valor);
     config_save(fcb);
 }
+
+
+int obtener_tamanio(char *nombre_archivo)
+{
+    t_config *fcb = dictionary_get(DICCIONARIO_FCB, nombre_archivo);
+    return config_get_int_value(fcb, "TAMANIO_ARCHIVO");
+}
+
+
+int obtener_puntero_indirecto(char *nombre_archivo)
+{
+    t_config *fcb = dictionary_get(DICCIONARIO_FCB, nombre_archivo);
+    return config_get_int_value(fcb, "PUNTERO_INDIRECTO");
+}

@@ -27,8 +27,8 @@ int main(int argc, char *argv[])
     atender_solicitudes(F_CREATE, parametros_instruccion);
     atender_solicitudes(F_OPEN, parametros_instruccion);
     
-    agregar_parametro_variable(parametros_instruccion, "10");
-    atender_solicitudes(F_TRUNCATE, parametros_instruccion);
+    // agregar_parametro_variable(parametros_instruccion, "257");
+    // atender_solicitudes(F_TRUNCATE, parametros_instruccion);
 
     liberar_parametros_variables(parametros_instruccion);
     agregar_parametro_variable(parametros_instruccion, "archivoTestFcb2");
@@ -40,8 +40,6 @@ int main(int argc, char *argv[])
 
     int conexion_memoria;
     inicializar_conexiones(&conexion_memoria, config);
-
-    enviar_mensaje("Hola Memoria, soy el file-system", conexion_memoria);
 
     char *puerto_escucha = config_get_string_value(config, "PUERTO_ESCUCHA");
     int socket_servidor = crear_servidor(IP, puerto_escucha);

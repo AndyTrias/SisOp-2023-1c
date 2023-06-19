@@ -13,4 +13,7 @@
 
     extern t_dictionary * DICCIONARIO_FCB;
 
+    extern int TAMANIO_BLOQUES;
+    extern int CANTIDAD_BLOQUES;
+
 #endif

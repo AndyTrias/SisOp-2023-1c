@@ -119,3 +119,123 @@
 [INFO] 19:21:19:992 FILE SYSTEM/(30650:30650): Archivo encontrado: ./fcb/archivoTestFcb
 
 [ERROR] 19:21:30:313 FILE SYSTEM/(30650:30650): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 19:26:35:222 FILE SYSTEM/(4380:4380): Se levanto el superbloque
+[INFO] 19:26:35:226 FILE SYSTEM/(4380:4380): Archivo encontrado: ./fcb/Notas1erParcialK9999
+
+[INFO] 19:26:35:226 FILE SYSTEM/(4380:4380): Archivo encontrado: ./fcb/archivoTestFcb2
+
+[INFO] 19:26:35:226 FILE SYSTEM/(4380:4380): Archivo encontrado: ./fcb/archivoTestFcb
+
+[INFO] 19:26:35:226 FILE SYSTEM/(4380:4380): Crear Archivo: archivoTestFcb2
+[ERROR] 19:26:35:226 FILE SYSTEM/(4380:4380): El archivo archivoTestFcb2 ya existe.
+
+[INFO] 19:26:35:227 FILE SYSTEM/(4380:4380): Abrir Archivo: archivoTestFcb2
+[INFO] 19:26:35:227 FILE SYSTEM/(4380:4380): El archivo existe
+[INFO] 19:26:45:339 FILE SYSTEM/(4380:4380): Truncar Archivo: archivoTestFcb2 - Tamaño: 257
+[INFO] 19:28:26:326 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 0 - Estado: 1
+[INFO] 19:28:26:327 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 1 - Estado: 1
+[INFO] 19:28:26:327 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 2 - Estado: 1
+[INFO] 19:28:26:327 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 3 - Estado: 1
+[INFO] 19:28:26:327 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 4 - Estado: 1
+[INFO] 19:28:26:327 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 5 - Estado: 1
+[INFO] 19:28:26:327 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 6 - Estado: 1
+[INFO] 19:28:26:327 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 7 - Estado: 1
+[INFO] 19:28:26:327 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 8 - Estado: 0
+[INFO] 19:28:26:327 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 0 - Estado: 1
+[INFO] 19:28:26:327 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 1 - Estado: 1
+[INFO] 19:28:26:327 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 2 - Estado: 1
+[INFO] 19:28:26:327 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 3 - Estado: 1
+[INFO] 19:28:26:327 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 4 - Estado: 1
+[INFO] 19:28:26:327 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 5 - Estado: 1
+[INFO] 19:28:26:327 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 6 - Estado: 1
+[INFO] 19:28:26:327 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 7 - Estado: 1
+[INFO] 19:28:26:327 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 8 - Estado: 1
+[INFO] 19:28:26:327 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 9 - Estado: 0
+[INFO] 19:28:26:327 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 0 - Estado: 1
+[INFO] 19:28:26:327 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 1 - Estado: 1
+[INFO] 19:28:26:327 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 2 - Estado: 1
+[INFO] 19:28:26:327 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 3 - Estado: 1
+[INFO] 19:28:26:327 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 4 - Estado: 1
+[INFO] 19:28:26:327 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 5 - Estado: 1
+[INFO] 19:28:26:327 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 6 - Estado: 1
+[INFO] 19:28:26:327 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 7 - Estado: 1
+[INFO] 19:28:26:327 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 8 - Estado: 1
+[INFO] 19:28:26:327 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 9 - Estado: 1
+[INFO] 19:28:26:327 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 10 - Estado: 0
+[INFO] 19:28:26:327 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 0 - Estado: 1
+[INFO] 19:28:26:327 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 1 - Estado: 1
+[INFO] 19:28:26:327 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 2 - Estado: 1
+[INFO] 19:28:26:327 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 3 - Estado: 1
+[INFO] 19:28:26:327 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 4 - Estado: 1
+[INFO] 19:28:26:327 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 5 - Estado: 1
+[INFO] 19:28:26:327 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 6 - Estado: 1
+[INFO] 19:28:26:327 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 7 - Estado: 1
+[INFO] 19:28:26:327 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 8 - Estado: 1
+[INFO] 19:28:26:328 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 9 - Estado: 1
+[INFO] 19:28:26:328 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 10 - Estado: 1
+[INFO] 19:28:26:328 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 11 - Estado: 0
+[INFO] 19:28:26:328 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 0 - Estado: 1
+[INFO] 19:28:26:328 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 1 - Estado: 1
+[INFO] 19:28:26:328 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 2 - Estado: 1
+[INFO] 19:28:26:328 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 3 - Estado: 1
+[INFO] 19:28:26:328 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 4 - Estado: 1
+[INFO] 19:28:26:328 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 5 - Estado: 1
+[INFO] 19:28:26:328 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 6 - Estado: 1
+[INFO] 19:28:26:328 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 7 - Estado: 1
+[INFO] 19:28:26:328 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 8 - Estado: 1
+[INFO] 19:28:26:328 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 9 - Estado: 1
+[INFO] 19:28:26:328 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 10 - Estado: 1
+[INFO] 19:28:26:328 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 11 - Estado: 1
+[INFO] 19:28:26:328 FILE SYSTEM/(4380:4380): Acceso a Bitmap - Bloque: 12 - Estado: 0
+[INFO] 19:32:07:407 FILE SYSTEM/(4812:4812): Se levanto el superbloque
+[INFO] 19:32:07:408 FILE SYSTEM/(4812:4812): Archivo encontrado: ./fcb/Notas1erParcialK9999
+
+[INFO] 19:32:07:408 FILE SYSTEM/(4812:4812): Archivo encontrado: ./fcb/archivoTestFcb2
+
+[INFO] 19:32:07:408 FILE SYSTEM/(4812:4812): Archivo encontrado: ./fcb/archivoTestFcb
+
+[INFO] 19:32:07:408 FILE SYSTEM/(4812:4812): Crear Archivo: archivoTestFcb2
+[ERROR] 19:32:07:408 FILE SYSTEM/(4812:4812): El archivo archivoTestFcb2 ya existe.
+
+[INFO] 19:32:07:408 FILE SYSTEM/(4812:4812): Abrir Archivo: archivoTestFcb2
+[INFO] 19:32:07:408 FILE SYSTEM/(4812:4812): El archivo existe
+[INFO] 19:32:18:956 FILE SYSTEM/(4812:4812): Truncar Archivo: archivoTestFcb2 - Tamaño: 180
+[INFO] 19:38:24:383 FILE SYSTEM/(4812:4812): Acceso a Bitmap - Bloque: 10 - Estado: 1
+[INFO] 19:38:24:387 FILE SYSTEM/(4812:4812): Acceso a Bitmap - Bloque: 9 - Estado: 1
+[INFO] 19:38:24:387 FILE SYSTEM/(4812:4812): Acceso a Bitmap - Bloque: 0 - Estado: 1
+[INFO] 19:38:24:387 FILE SYSTEM/(4812:4812): Acceso a Bitmap - Bloque: 1 - Estado: 1
+[INFO] 19:38:24:387 FILE SYSTEM/(4812:4812): Acceso a Bitmap - Bloque: 2 - Estado: 1
+[INFO] 19:38:24:387 FILE SYSTEM/(4812:4812): Acceso a Bitmap - Bloque: 3 - Estado: 1
+[INFO] 19:38:24:387 FILE SYSTEM/(4812:4812): Acceso a Bitmap - Bloque: 4 - Estado: 1
+[INFO] 19:38:24:387 FILE SYSTEM/(4812:4812): Acceso a Bitmap - Bloque: 5 - Estado: 1
+[INFO] 19:38:24:387 FILE SYSTEM/(4812:4812): Acceso a Bitmap - Bloque: 6 - Estado: 1
+[INFO] 19:38:24:387 FILE SYSTEM/(4812:4812): Acceso a Bitmap - Bloque: 7 - Estado: 1
+[INFO] 19:38:24:387 FILE SYSTEM/(4812:4812): Acceso a Bitmap - Bloque: 8 - Estado: 1
+[INFO] 19:38:24:387 FILE SYSTEM/(4812:4812): Acceso a Bitmap - Bloque: 9 - Estado: 0
+[INFO] 19:38:24:387 FILE SYSTEM/(4812:4812): Acceso a Bitmap - Bloque: 0 - Estado: 1
+[INFO] 19:38:24:387 FILE SYSTEM/(4812:4812): Acceso a Bitmap - Bloque: 1 - Estado: 1
+[INFO] 19:38:24:387 FILE SYSTEM/(4812:4812): Acceso a Bitmap - Bloque: 2 - Estado: 1
+[INFO] 19:38:24:387 FILE SYSTEM/(4812:4812): Acceso a Bitmap - Bloque: 3 - Estado: 1
+[INFO] 19:38:24:387 FILE SYSTEM/(4812:4812): Acceso a Bitmap - Bloque: 4 - Estado: 1
+[INFO] 19:38:24:387 FILE SYSTEM/(4812:4812): Acceso a Bitmap - Bloque: 5 - Estado: 1
+[INFO] 19:38:24:387 FILE SYSTEM/(4812:4812): Acceso a Bitmap - Bloque: 6 - Estado: 1
+[INFO] 19:38:24:387 FILE SYSTEM/(4812:4812): Acceso a Bitmap - Bloque: 7 - Estado: 1
+[INFO] 19:38:24:387 FILE SYSTEM/(4812:4812): Acceso a Bitmap - Bloque: 8 - Estado: 1
+[INFO] 19:38:24:387 FILE SYSTEM/(4812:4812): Acceso a Bitmap - Bloque: 9 - Estado: 1
+[INFO] 19:38:24:387 FILE SYSTEM/(4812:4812): Acceso a Bitmap - Bloque: 10 - Estado: 0
+[INFO] 19:38:24:387 FILE SYSTEM/(4812:4812): Acceso a Bitmap - Bloque: 0 - Estado: 1
+[INFO] 19:38:24:387 FILE SYSTEM/(4812:4812): Acceso a Bitmap - Bloque: 1 - Estado: 1
+[INFO] 19:38:24:387 FILE SYSTEM/(4812:4812): Acceso a Bitmap - Bloque: 2 - Estado: 1
+[INFO] 19:38:24:387 FILE SYSTEM/(4812:4812): Acceso a Bitmap - Bloque: 3 - Estado: 1
+[INFO] 19:38:24:387 FILE SYSTEM/(4812:4812): Acceso a Bitmap - Bloque: 4 - Estado: 1
+[INFO] 19:38:24:387 FILE SYSTEM/(4812:4812): Acceso a Bitmap - Bloque: 5 - Estado: 1
+[INFO] 19:38:24:387 FILE SYSTEM/(4812:4812): Acceso a Bitmap - Bloque: 6 - Estado: 1
+[INFO] 19:38:24:387 FILE SYSTEM/(4812:4812): Acceso a Bitmap - Bloque: 7 - Estado: 1
+[INFO] 19:38:24:388 FILE SYSTEM/(4812:4812): Acceso a Bitmap - Bloque: 8 - Estado: 1
+[INFO] 19:38:24:390 FILE SYSTEM/(4812:4812): Acceso a Bitmap - Bloque: 9 - Estado: 1
+[INFO] 19:38:24:392 FILE SYSTEM/(4812:4812): Acceso a Bitmap - Bloque: 10 - Estado: 1
+[INFO] 19:38:24:392 FILE SYSTEM/(4812:4812): Acceso a Bitmap - Bloque: 11 - Estado: 1
+[INFO] 19:38:24:392 FILE SYSTEM/(4812:4812): Acceso a Bitmap - Bloque: 12 - Estado: 1
+[INFO] 19:38:24:392 FILE SYSTEM/(4812:4812): Acceso a Bitmap - Bloque: 13 - Estado: 0
+[ERROR] 19:38:24:398 FILE SYSTEM/(4812:4812): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 19:38:24:398 FILE SYSTEM/(4812:4812): Esperando kernel....

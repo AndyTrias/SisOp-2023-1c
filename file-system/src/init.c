@@ -17,23 +17,23 @@ void inicializar_archivos(t_config *config)
 
     t_config *superbloque = levantar_superbloque(config);
 
-    int block_count = config_get_int_value(superbloque, "BLOCK_COUNT");
-    int block_size = config_get_int_value(superbloque, "BLOCK_SIZE");
+    CANTIDAD_BLOQUES = config_get_int_value(superbloque, "BLOCK_COUNT");
+    TAMANIO_BLOQUES = config_get_int_value(superbloque, "BLOCK_SIZE");
 
-    BITMAP_BLOQUES = levantar_bitmap(block_count, config_get_string_value(config, "PATH_BITMAP"));
-    ARCHIVO_BLOQUES = levantar_bloques(block_count, block_size, config_get_string_value(config, "PATH_BLOQUES"));
+    BITMAP_BLOQUES = levantar_bitmap(config_get_string_value(config, "PATH_BITMAP"));
+    ARCHIVO_BLOQUES = levantar_bloques(config_get_string_value(config, "PATH_BLOQUES"));
 
     
 }
 
-t_bitarray *levantar_bitmap(int cantidad_bloques, char *path)
+t_bitarray *levantar_bitmap(char *path)
 {
 
     // La cantidad de bits es la cantidad de bloques
     // int cantidad_de_bits = cantidad_bloques;
     // Cada bloque pesa un byte
     // Como cada byte son 8 bits -> la cantidad de bytes necesario es la cantidad de bloques dividido 8
-    int cantidad_de_bytes_necesarios = cantidad_bloques / 8;
+    int cantidad_de_bytes_necesarios = CANTIDAD_BLOQUES / 8;
     bool archivo_recien_creado = false;
 
     FILE* file = abrir_o_crear_archivo(path, cantidad_de_bytes_necesarios, &archivo_recien_creado);
@@ -62,15 +62,15 @@ t_bitarray *levantar_bitmap(int cantidad_bloques, char *path)
     return bitmap;
 }
 
-FILE *levantar_bloques(int tamaño_bloque, int cantidad_bloques, char *path)
+FILE *levantar_bloques(char *path)
 {
     bool archivo_recien_creado = false;
     
-    FILE* file = abrir_o_crear_archivo(path, tamaño_bloque * cantidad_bloques, &archivo_recien_creado);
+    FILE* file = abrir_o_crear_archivo(path, TAMANIO_BLOQUES * CANTIDAD_BLOQUES, &archivo_recien_creado);
 
     if (archivo_recien_creado)
     {
-        log_info(LOGGER_FILE_SYSTEM, "Se creo un archivo de bloques de %d bytes", tamaño_bloque * cantidad_bloques);
+        log_info(LOGGER_FILE_SYSTEM, "Se creo un archivo de bloques de %d bytes", TAMANIO_BLOQUES * CANTIDAD_BLOQUES);
     }
 
     return file;
