@@ -82,18 +82,22 @@ op_code execute(t_instruccion *instruccion_actual, t_ctx *ctx)
 
 	case MOV_IN:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
-		void *dir_fisica = MMU(atoi(instruccion_actual->parametros[1]), atoi(instruccion_actual->parametros[0]), ctx);
+		long dir_fisica = MMU(atoi(instruccion_actual->parametros[1]), atoi(instruccion_actual->parametros[0]), ctx);
 		if (!dir_fisica)
 		{
 			return SEG_FAULT;
 		}
+		char* dir_fisica_string = malloc(10);
+		sprintf(dir_fisica_string, "%ld", dir_fisica);
 		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[0]);
-		agregar_parametro_desalojo(ctx, dir_fisica);
-		log_info(LOGGER_CPU, "%d", strlen(dir_fisica));
+		agregar_parametro_desalojo(ctx, dir_fisica_string);
+
 		t_paquete *paquete = crear_paquete(MOV_IN);
 		serializar_motivos_desalojo(ctx->motivos_desalojo, paquete);
 		enviar_paquete(paquete, SOCKET_MEMORIA);
 		free(paquete);
+		free(dir_fisica_string);
+
 		char *valor_leido = recibir_mensaje(SOCKET_MEMORIA);
 		log_info(LOGGER_CPU, "PID: %d  -Acción: LEER - Segmento: %s - Dirección Física: %s - Valor: %s", ctx->PID, floor_div(instruccion_actual->parametros[0], TAM_MAX_SEGMENTO /*TAMANIO_MAX_SEG*/), dir_fisica, valor_leido);
 		// acceder a registro en instruccion_actual->parametros[1] y guardar valor_leido
@@ -110,12 +114,15 @@ op_code execute(t_instruccion *instruccion_actual, t_ctx *ctx)
 		{
 			return SEG_FAULT;
 		}
+		dir_fisica_string = malloc(10);
+		sprintf(dir_fisica_string, "%ld", dir_fisica);
 		agregar_parametro_desalojo(ctx, registro);
-		agregar_parametro_desalojo(ctx, &dir_fisica);
+		agregar_parametro_desalojo(ctx, dir_fisica_string);
 		paquete = crear_paquete(MOV_OUT);
 		serializar_motivos_desalojo(ctx->motivos_desalojo, paquete);
 		enviar_paquete(paquete, SOCKET_MEMORIA);
 		free(paquete);
+		free(dir_fisica_string);
 
 		// recibir ok memoria
 		recibir_operacion(SOCKET_MEMORIA);
@@ -216,7 +223,7 @@ op_code execute(t_instruccion *instruccion_actual, t_ctx *ctx)
 	}
 };
 
-void *MMU(int direccion_logica, int bytes, t_ctx *ctx)
+long MMU(int direccion_logica, int bytes, t_ctx *ctx)
 {
 	int num_segmento = floor_div(direccion_logica, TAM_MAX_SEGMENTO);
 	int offset = direccion_logica % TAM_MAX_SEGMENTO /*TAMANIO_MAX_SEG*/;
@@ -229,7 +236,7 @@ void *MMU(int direccion_logica, int bytes, t_ctx *ctx)
 	}
 
 	t_segmento *segmento = list_get(ctx->tabla_segmentos, num_segmento);
-	void *direccion_fisica = segmento->base + offset;
+	long direccion_fisica = segmento->base + offset;
 	return direccion_fisica;
 }
 

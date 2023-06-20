@@ -62,12 +62,16 @@ void finalizar_proceso(t_list* tabla_segmentos){
     list_destroy(tabla_segmentos);
 }
 
-char* leer_valor_direccion_fisica(void* direccion_fisica){
-    return (char*)direccion_fisica;
+char* leer_valor_direccion_fisica(long direccion_fisica){
+    // leer solo el valor de la direccion fisica
+    char* valor = malloc(sizeof(char));
+    memcpy(valor, (void*)direccion_fisica, sizeof(char));
+    return valor;
 }
 
-void escribir_valor_direccion_fisica(char* valor, void* direccion_fisica){
-    memcpy(direccion_fisica, valor, strlen(valor) + 1);
+void escribir_valor_direccion_fisica(char* valor, long direccion_fisica){
+    void* direccion = (void*)direccion_fisica;
+    memcpy(direccion, valor, sizeof(strlen(valor)) + 1);
 }
 
 char* leer_fs(void* direccion_fisica, int tamanio){

@@ -20,7 +20,7 @@ char* obtenerRegistro(t_registros* , const char*);
 t_instruccion* fetch(t_ctx *);
 void decode(t_instruccion* );
 int floor_div(int, int);
-void* MMU(int, int,t_ctx* );
+long MMU(int, int,t_ctx* );
 
 
 #endif
