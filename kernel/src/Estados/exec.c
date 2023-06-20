@@ -92,7 +92,7 @@ void definir_accion(int cod_op, t_pcb *proceso){
         break;
 
     case F_TRUNCATE:
-        f_truncate(proceso,proceso->contexto.motivos_desalojo->parametros[0]);
+        f_truncate(proceso,proceso->contexto.motivos_desalojo->parametros[0], proceso->contexto.motivos_desalojo->parametros[1]);
         //cambio_de_estado(proceso->contexto.PID,"Exec","Ready");
         reemplazar_exec_por_nuevo();
         break;

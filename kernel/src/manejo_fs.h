@@ -13,7 +13,7 @@
 
     typedef struct{
         int puntero;
-        char* nombre;
+        char nombre[30];
     }t_file;
 
     int busqueda_tabla_global(char * );
@@ -25,7 +25,7 @@
     int f_open(t_pcb *, char* );
     void f_close(t_pcb *, char* );
     void f_seek(t_pcb *, char* , char* );
-    void f_truncate(t_pcb *, char* );
+    void f_truncate(t_pcb *, char* , char* );
     void f_read(t_pcb *, char* , char* );
     void f_write(t_pcb *, char* , char* );
     void desbloquear_de_fs(char* );

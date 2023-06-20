@@ -33,6 +33,13 @@ void agregar_entrada_tabla(char* nombre, int pid){
   list_add(TABLA_GLOBAL_DE_ARCHIVOS_ABIERTOS, auxiliar);
 }
 
+void agregar_archivo_abierto(t_list * lista_archivo_abierto, char* nombre){
+  t_file * archivo = malloc(sizeof(t_file));
+  strcpy(archivo->nombre, nombre);
+  archivo->puntero = 0;
+  list_add(lista_archivo_abierto, archivo);
+}
+
 void eliminar_entrada_tabla(int posicion){
     t_tabla_global * auxiliar = list_get(TABLA_GLOBAL_DE_ARCHIVOS_ABIERTOS, posicion);
     list_destroy(auxiliar->lista_de_procesos_bloqueados);
@@ -49,19 +56,18 @@ int existe_archivo(char* nombre){
 
 int f_open(t_pcb *proceso, char* nombre_archivo){
   int busqueda = busqueda_tabla_global(nombre_archivo);
-  //t_file * archivo = malloc(sizeof(t_file));
-  //strcpy(archivo->nombre, nombre_archivo);
-  //agregar a tabla del proceso con el puntero en 0
-  //list_add(proceso->archivos_abiertos,archivo );
+
   if (busqueda == -1){
     existe_archivo(nombre_archivo);
     sem_wait(&RESPUESTA_FS);
     agregar_entrada_tabla(nombre_archivo, proceso->contexto.PID);
+    agregar_archivo_abierto(proceso->archivos_abiertos, nombre_archivo);
     log_info(LOGGER_KERNEL, "PID: %d - Abrir Archivo: %s", proceso->contexto.PID, nombre_archivo);
     return 0; //puede seguir
   } else {
     //si esta en la tabla
     t_tabla_global* entrada_tabla = list_get(TABLA_GLOBAL_DE_ARCHIVOS_ABIERTOS, busqueda);
+    agregar_archivo_abierto(proceso->archivos_abiertos, nombre_archivo);
     list_add(entrada_tabla->lista_de_procesos_bloqueados, proceso);
     log_info(LOGGER_KERNEL, "PID: %d - Bloqueado por: %s", proceso->contexto.PID, nombre_archivo);
     return 1; //bloqueado
@@ -75,16 +81,16 @@ void f_close(t_pcb *proceso, char* nombre_archivo){
   if (busqueda == -1 || entrada_tabla->PID != proceso->contexto.PID){
     log_error(LOGGER_KERNEL, "PID: %d - Error al cerrar Archivo: %s", proceso->contexto.PID, nombre_archivo);
   } else {
-    if (list_size( entrada_tabla ->lista_de_procesos_bloqueados) == 0){
+    if (list_size(entrada_tabla ->lista_de_procesos_bloqueados) == 0){
       //no hay nadie mas
       eliminar_entrada_tabla(busqueda);
     } else {
       //hay alguien mas
-      list_remove(proceso->archivos_abiertos, busqueda_tabla_proceso(proceso, nombre_archivo));
+      list_remove(proceso->archivos_abiertos, busqueda_tabla_proceso(proceso, nombre_archivo)); //elimina el archivos de la lista del proceso
 
-      t_pcb *proceso_a_desbloquear = list_remove(entrada_tabla->lista_de_procesos_bloqueados, 0);
+      t_pcb *proceso_a_desbloquear = list_remove(entrada_tabla->lista_de_procesos_bloqueados, 0); // Saca el proceso de la lista de bloqueados
       //cambiar pid, cede el control sobre el archivo a otro proceso y lo desbloquea
-      entrada_tabla->PID = proceso_a_desbloquear->contexto.PID;
+      entrada_tabla->PID = proceso_a_desbloquear->contexto.PID; 
       agregar_a_lista_ready(proceso_a_desbloquear);
       
       log_info(LOGGER_KERNEL, "PID: %d - Cerrar Archivo: %s", proceso->contexto.PID, nombre_archivo);
@@ -96,34 +102,31 @@ void f_close(t_pcb *proceso, char* nombre_archivo){
 void f_seek(t_pcb *proceso, char* nombre_archivo, char* inicio){
   int busqueda = busqueda_tabla_global(nombre_archivo);
   t_tabla_global* entrada_tabla = list_get(TABLA_GLOBAL_DE_ARCHIVOS_ABIERTOS, busqueda);
-  int posicion= atoi(proceso->contexto.motivos_desalojo->parametros[1]);
-  
+  int posicion= atoi(inicio);
   if (busqueda == -1 || entrada_tabla->PID != proceso->contexto.PID){
     log_error(LOGGER_KERNEL, "PID: %d - Error al hacer seek en Archivo: %s", proceso->contexto.PID, nombre_archivo);
   } else {
     //cambiar puntero
     t_file * archivo = list_get(proceso->archivos_abiertos, busqueda_tabla_proceso(proceso, nombre_archivo));
     archivo->puntero = posicion;
-    log_info(LOGGER_KERNEL, "PID: %d - Actualizar puntero Archivo: %s - Puntero %d", proceso->contexto.PID, nombre_archivo, posicion);
+    log_info(LOGGER_KERNEL, "PID: %d - Actualizar puntero Archivo: %s - Puntero %d", proceso->contexto.PID, nombre_archivo, archivo->puntero);
   }
 }
 //Truncate, READ y WRITE
 
-void f_truncate(t_pcb *proceso, char* nombre_archivo){
+void f_truncate(t_pcb *proceso, char* nombre_archivo, char* tamanio_nuevo){
   int busqueda = busqueda_tabla_global(nombre_archivo);
   t_tabla_global* entrada_tabla = list_get(TABLA_GLOBAL_DE_ARCHIVOS_ABIERTOS, busqueda);
   
   if (busqueda == -1 || entrada_tabla->PID != proceso->contexto.PID){
     log_error(LOGGER_KERNEL, "PID: %d - Error al hacer truncate en Archivo: %s", proceso->contexto.PID, nombre_archivo);
   } else {
-    int tamanio = atoi(proceso->contexto.motivos_desalojo->parametros[1]);
-   //mandar a file system archivo y tamanio
-   list_add(BLOQUEADOS_FS, proceso);
-   log_info(LOGGER_KERNEL, "PID: %d - Truncar Archivo: %s - Tamaño: %d", proceso->contexto.PID, nombre_archivo, tamanio);
-   log_info(LOGGER_KERNEL, "PID: %d - Bloqueado por: %s", proceso->contexto.PID, nombre_archivo);
-
-
-
+    int tamanio = atoi(tamanio_nuevo);
+    //mandar a file system nombre_archivo y tamanio
+    list_add(BLOQUEADOS_FS, proceso);
+    log_info(LOGGER_KERNEL, "PID: %d - Truncar Archivo: %s - Tamaño: %d", proceso->contexto.PID, nombre_archivo, tamanio);
+ 
+    log_info(LOGGER_KERNEL, "PID: %d - Bloqueado por: %s", proceso->contexto.PID, nombre_archivo);
   }
 }
 
@@ -133,6 +136,7 @@ int obtener_puntero(t_pcb *proceso, char* nombre_archivo){
   
   if (busqueda == -1 || entrada_tabla->PID != proceso->contexto.PID){
     log_error(LOGGER_KERNEL, "PID: %d - Error al hacer read en Archivo: %s", proceso->contexto.PID, nombre_archivo);
+    return -1;
   } else {
     t_file *aux = list_get(proceso->archivos_abiertos, busqueda_tabla_proceso(proceso, nombre_archivo));
     return aux->puntero;
@@ -185,10 +189,9 @@ void desbloquear_de_fs(char* nombre_archivo){
   t_tabla_global * entrada_tabla = list_get(TABLA_GLOBAL_DE_ARCHIVOS_ABIERTOS, busqueda_tabla_global(nombre_archivo));
   t_pcb *proceso = buscar_bloqueados_fs(entrada_tabla->PID);
   agregar_a_lista_ready(proceso);
-
 }
 
- t_pcb * buscar_bloqueados_fs(int pid){
+t_pcb * buscar_bloqueados_fs(int pid){
   int i = 0;
   while (i < list_size(BLOQUEADOS_FS)){
     t_pcb * auxiliar = list_get(BLOQUEADOS_FS, i);
