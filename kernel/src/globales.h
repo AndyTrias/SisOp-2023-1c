@@ -25,6 +25,7 @@ extern t_list* LISTA_NEW;
 extern t_list* LISTA_READY;
 extern t_pcb* EJECUTANDO;
 extern t_list* LISTAS_BLOCK;
+extern t_list* BLOQUEADOS_FS;
 
 
 // Variables de configuracion
@@ -41,6 +42,7 @@ extern sem_t PROCESO_EN_READY;
 extern sem_t GRADO_MULTIPROGRAMACION;
 extern sem_t CORTO_PLAZO;
 extern sem_t ARCHIVO_ABIERTO;
+extern sem_t RESPUESTA_FS;
 extern pthread_mutex_t MUTEX_LISTA_NEW;
 extern pthread_mutex_t MUTEX_LISTA_READY;
 extern pthread_mutex_t MUTEX_TABLA_ARCHIVOS;

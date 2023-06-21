@@ -67,11 +67,39 @@ void definir_accion(int cod_op, t_pcb *proceso)
         io(proceso);
         break;
     case F_OPEN:
-        crear_abrir_archivo(proceso);
+    //si esta en mi tabla lo bloqueo
+    //se le pregunta a fs si existe
+    //si existe se crea la entrada
+    //si no se le pide que lo cree y dsp se crea la entrada
+        if (f_open(proceso, proceso->contexto.motivos_desalojo->parametros[0])){ //0 bloqueado, 1 desbloqueado
+            
+            reemplazar_exec_por_nuevo();
+        }
     case F_SEEK:
+        f_seek(proceso, proceso->contexto.motivos_desalojo->parametros[0], proceso->contexto.motivos_desalojo->parametros[1]);
         break;
+
     case F_CLOSE:
-        cerrar_archivo(proceso);
+        f_close(proceso, proceso->contexto.motivos_desalojo->parametros[0]);
+
+    case F_READ:
+
+        f_read(proceso, proceso->contexto.motivos_desalojo->parametros[0], proceso->contexto.motivos_desalojo->parametros[1]);
+        //cambio_de_estado(proceso->contexto.PID,"Exec","Ready");
+        reemplazar_exec_por_nuevo();
+        break;
+
+    case F_WRITE:
+        f_write(proceso, proceso->contexto.motivos_desalojo->parametros[0], proceso->contexto.motivos_desalojo->parametros[1]);
+        //cambio_de_estado(proceso->contexto.PID,"Exec","Ready");
+        reemplazar_exec_por_nuevo();
+        break;
+
+    case F_TRUNCATE:
+        f_truncate(proceso,proceso->contexto.motivos_desalojo->parametros[0], proceso->contexto.motivos_desalojo->parametros[1]);
+        //cambio_de_estado(proceso->contexto.PID,"Exec","Ready");
+        reemplazar_exec_por_nuevo();
+        break;
     case CREATE_SEGMENT:
         crear_segmento(proceso);
         break;

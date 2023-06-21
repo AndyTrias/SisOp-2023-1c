@@ -28,6 +28,7 @@ void inicializar_semaforos() {
     sem_init(&PROCESO_EN_READY, 0, 0);
     sem_init(&GRADO_MULTIPROGRAMACION, 0, GRADO_MAX_MULTIPROGRAMACION);
     sem_init(&CORTO_PLAZO, 0, 0);
+    sem_init(&RESPUESTA_FS,0,0);
 
 }
 

@@ -21,7 +21,9 @@ typedef enum
     COMPACTAR,
     CREAR_TABLA_SEGMENTOS,
     TERMINAR,
-    F_CREATE,
+    NO_EXISTE, //Se utiliza para la comunicacion entre kernel y fs
+    EXISTE,    //Se utiliza para la comunicacion entre kernel y fs
+    OP_TERMINADA, //Se utiliza para la comunicacion entre kernel y fs
     OUT_OF_MEMORY
 } op_code;
 
