@@ -18,4 +18,5 @@
     void recibir_fs(int*);
     t_ctx* recibir_contexto(int);
     t_parametros_variables* recibir_parametros_variables(int);
+    char* leer_valor_direccion_fisica(long);
 #endif

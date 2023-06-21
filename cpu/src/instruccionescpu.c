@@ -29,7 +29,7 @@ void decode(t_instruccion *instruccion)
 	switch (instruccion->operacion)
 	{
 	case SET:
-		usleep(TIEMPO_RETARDO * 1000000);
+		usleep(TIEMPO_RETARDO * 1000);
 		break;
 	// case WRITE:
 	// 	break;
@@ -98,10 +98,11 @@ op_code execute(t_instruccion *instruccion_actual, t_ctx *ctx)
 		free(paquete);
 		free(dir_fisica_string);
 
+		recibir_operacion(SOCKET_MEMORIA);
 		char *valor_leido = recibir_mensaje(SOCKET_MEMORIA);
-		log_info(LOGGER_CPU, "PID: %d  -Acción: LEER - Segmento: %s - Dirección Física: %s - Valor: %s", ctx->PID, floor_div(instruccion_actual->parametros[0], TAM_MAX_SEGMENTO /*TAMANIO_MAX_SEG*/), dir_fisica, valor_leido);
+		log_info(LOGGER_CPU, "PID: %d  -Acción: LEER - Segmento: %d - Dirección Física: %p - Valor: %s", ctx->PID, floor_div(atoi(instruccion_actual->parametros[1]), TAM_MAX_SEGMENTO), (void*)dir_fisica, valor_leido);
 		// acceder a registro en instruccion_actual->parametros[1] y guardar valor_leido
-		registro = obtenerRegistro(&ctx->registros, instruccion_actual->parametros[1]);
+		registro = obtenerRegistro(&ctx->registros, instruccion_actual->parametros[0]);
 		strcpy(registro, valor_leido);
 		free(valor_leido);
 		return 0;
