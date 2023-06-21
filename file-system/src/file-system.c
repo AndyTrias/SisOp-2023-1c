@@ -30,9 +30,9 @@ int main(int argc, char *argv[])
     // agregar_parametro_variable(parametros_instruccion, "257");
     // atender_solicitudes(F_TRUNCATE, parametros_instruccion);
 
-    liberar_parametros_variables(parametros_instruccion);
-    agregar_parametro_variable(parametros_instruccion, "archivoTestFcb2");
-    agregar_parametro_variable(parametros_instruccion, "180");
+    // liberar_parametros_variables(parametros_instruccion);
+    // agregar_parametro_variable(parametros_instruccion, "archivoTestFcb2");
+    agregar_parametro_variable(parametros_instruccion, "0");
     atender_solicitudes(F_TRUNCATE, parametros_instruccion);
 
     liberar_parametros_variables(parametros_instruccion);    

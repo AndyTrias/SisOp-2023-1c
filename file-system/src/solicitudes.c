@@ -49,7 +49,7 @@ void atender_solicitudes(int cod_op, t_parametros_variables *parametros_instrucc
 
             // Asignar todos los bloques libres en el bitmap de bloques
             // Asignar esos bloques libres en el archivo de bloques
-            asignar_bloques_al_puntero_indirecto(bloque_puntero_indirecto, cantidad_bloques_necesarios, tamanio_actual);
+            asignar_bloques_al_puntero_indirecto(bloque_puntero_indirecto, cantidad_bloques_a_agregar, tamanio_actual);
         }
 
         // Se achica el archivo
