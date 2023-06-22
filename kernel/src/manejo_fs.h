@@ -21,7 +21,8 @@
     int obtener_puntero(t_pcb *, char* );
     void agregar_entrada_tabla(char* , int );
     void eliminar_entrada_tabla(int );
-    int existe_archivo(char* );
+    void existe_archivo(char* );
+    void solicitar_creacion(char*);
     int f_open(t_pcb *, char* );
     void f_close(t_pcb *, char* );
     void f_seek(t_pcb *, char* , char* );
