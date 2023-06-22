@@ -269,8 +269,8 @@ void ciclo_de_instruccion(t_ctx *ctx)
 			enviar_paquete(paquete, SOCKET_KERNEL);
 			free(paquete);
 			ctx = NULL;
+		} else {
+			liberar_parametros_desalojo(ctx);
 		}
-
-		liberar_parametros_desalojo(ctx);
 	}
 }

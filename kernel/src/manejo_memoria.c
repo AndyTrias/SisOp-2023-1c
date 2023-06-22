@@ -1,9 +1,5 @@
 #include "manejo_memoria.h"
 
-void mostrar_segmento(t_segmento* segmento){
-    log_info(LOGGER_KERNEL, "Id: <%d> - Base: <%p> - Tamaño: <%d>", segmento->id_segmento, segmento->base, segmento->tamanio);
-}
-
 void crear_segmento(t_pcb *proceso){// enviar a memoria CREATE_SEGMENT con sus 2 parametros (id del segmento y tamanio)
     //se solicita la creacion del segmento
     t_paquete *paquete = crear_paquete(CREATE_SEGMENT);
@@ -21,8 +17,6 @@ void crear_segmento(t_pcb *proceso){// enviar a memoria CREATE_SEGMENT con sus 2
 
             memcpy(&(segmento->base), buffer, sizeof(void*));
             segmento->tamanio = atoi(proceso->contexto.motivos_desalojo->parametros[1]);
-
-            list_iterate(proceso->contexto.tabla_segmentos, (void*) mostrar_segmento);
 
             log_info(LOGGER_KERNEL, "PID: <%d> - Crear Segmento - Id: <%d> - Tamaño: <%d>", proceso->contexto.PID, segmento->id_segmento, segmento->tamanio);
             //supongo que cuando termina de crear el segmento se manda de nuevo al cpu por ende no cambio de pcb
@@ -55,8 +49,6 @@ void eliminar_segmento(t_pcb *proceso){
     t_list* tabla_segmentos_actualizada = recibir_tabla_segmentos(SOCKET_MEMORIA);
 
     proceso->contexto.tabla_segmentos = tabla_segmentos_actualizada;
-
-    list_iterate(proceso->contexto.tabla_segmentos, (void*)mostrar_segmento);
 
     log_info(LOGGER_KERNEL, "PID: <%d> - Eliminar Segmento - Id Segmento: <%d>", proceso->contexto.PID, atoi(proceso->contexto.motivos_desalojo->parametros[0]));
 }

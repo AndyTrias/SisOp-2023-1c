@@ -95,19 +95,9 @@ void recibir_kernel(int *socket_modulo)
             free(paquete);
             free(ctx);
             break;
-
-        case F_READ:
-            // recibe
-            ctx = recibir_contexto(*socket_modulo);
-            
-            
-            break;
-
-        case F_WRITE:
-            // recibe
-            ctx = recibir_contexto(*socket_modulo);
-
-
+        
+        case COMPACTAR:
+        
             break;
 
         case -1:
@@ -120,7 +110,6 @@ void recibir_kernel(int *socket_modulo)
         }
     }
 }
-
 void recibir_cpu(int* socket_modulo) {
     while(1) {
         int cod_op = recibir_operacion(*socket_modulo);

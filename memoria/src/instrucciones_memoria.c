@@ -84,3 +84,7 @@ char* leer_fs(void* direccion_fisica, int tamanio){
 void escribir_fs(char* valor, void* direccion_fisica, int tamanio){
     memcpy(direccion_fisica, valor, tamanio);
 }
+
+void compactar(t_list* tablas_segmentos){
+    
+}
