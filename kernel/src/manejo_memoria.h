@@ -1,7 +1,7 @@
 #ifndef MANEJO_MEMORIA_H
 #define MANEJO_MEMORIA_H
 
-    #include<globales.h>
+    #include <globales.h>
     #include <utils/mensajes.h>
     #include <Estados/exit.h>
 

@@ -24,6 +24,7 @@ typedef enum
     NO_EXISTE, //Se utiliza para la comunicacion entre kernel y fs
     EXISTE,    //Se utiliza para la comunicacion entre kernel y fs
     OP_TERMINADA, //Se utiliza para la comunicacion entre kernel y fs
+    F_CREATE, //Se utiliza cuando el Kernel intenta abrir un archivo que no existe entonces le dice a fs que lo cree
     OUT_OF_MEMORY
 } op_code;
 

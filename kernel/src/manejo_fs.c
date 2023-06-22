@@ -1,6 +1,5 @@
 #include "manejo_fs.h"
 //tabla de archivos tiene que tener toda la info necesaria y una lista de procesos bloqueados
-
 int busqueda_tabla_global(char * nombre_archivo){
   int i = 0;
   while (i < list_size(TABLA_GLOBAL_DE_ARCHIVOS_ABIERTOS)){
@@ -47,11 +46,19 @@ void eliminar_entrada_tabla(int posicion){
     list_remove(TABLA_GLOBAL_DE_ARCHIVOS_ABIERTOS, posicion);
 }
 
-int existe_archivo(char* nombre){
-  //mandar_a_fs
-  //esperar respuesta
+void existe_archivo(char* nombre){ //Solicita la apertura de un archivo para verificar si existe
+  t_paquete *paquete = crear_paquete(F_OPEN);
+  agregar_parametro_desalojo(&EJECUTANDO->contexto,nombre);
+  enviar_paquete(paquete, SOCKET_FILESYSTEM);
+  free(paquete);
 }
 
+void solicitar_creacion(char* nombre){ //Solicita la creacion de un archivo
+  t_paquete *paquete = crear_paquete(F_CREATE);
+  agregar_parametro_desalojo(&EJECUTANDO->contexto,nombre);
+  enviar_paquete(paquete, SOCKET_FILESYSTEM);
+  free(paquete);
+}
 
 
 int f_open(t_pcb *proceso, char* nombre_archivo){
