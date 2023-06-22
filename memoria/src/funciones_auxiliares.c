@@ -53,6 +53,24 @@ bool comprobar_compactacion(int tamanio){
     return tamanio_huecos_libres >= tamanio;
 }
 
+void mostrar_lista(t_hueco* hueco) {
+    printf("Hueco: base %p, tamanio %d, libre %d\n", hueco->base, hueco->tamanio, hueco->libre);
+}
+
+int obtener_indice_de_lista_huecos(t_hueco* hueco) {
+    int index = -1;
+    for (int i = 0; i < list_size(LISTA_HUECOS); i++) {
+        t_hueco* hueco_actual = list_get(LISTA_HUECOS, i);
+        if (hueco_actual->base == hueco->base) {
+            index = i;
+            break;
+        }
+    }
+
+    return index = -1;
+}
+
+
 void modificar_lista_huecos(t_hueco* hueco, int tamanio) {
     // dividir el hueco en 2, uno para el segmento y otro para el hueco restante
     t_hueco* hueco_restante = malloc(sizeof(t_hueco));
@@ -63,10 +81,10 @@ void modificar_lista_huecos(t_hueco* hueco, int tamanio) {
     hueco->tamanio = tamanio;
     hueco->libre = false;
 
-    // reemplazar el hueco por los 2 nuevos (usar las funciones del commons)
-    list_remove_element(LISTA_HUECOS, hueco);
-    list_add_in_index(LISTA_HUECOS, list_size(LISTA_HUECOS), hueco);
-    list_add_in_index(LISTA_HUECOS, list_size(LISTA_HUECOS), hueco_restante);
+    // agregar el hueco restante a la lista de huecos despues del hueco actual
+    int index_hueco = obtener_indice_de_lista_huecos(hueco);
+    list_add_in_index(LISTA_HUECOS, index_hueco + 1, hueco_restante);
+
 }
 
 

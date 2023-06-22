@@ -11,7 +11,6 @@ void terminar_proceso(t_pcb *proceso){
 
     serializar_contexto(&proceso->contexto, paquete);
     enviar_paquete(paquete, SOCKET_MEMORIA);
-    
     free(paquete);
     
     sem_post(&GRADO_MULTIPROGRAMACION);

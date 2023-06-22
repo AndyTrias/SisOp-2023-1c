@@ -1,5 +1,9 @@
 #include "conectar_modulos.h"
 
+void mostrar_huecos(t_hueco* hueco){
+    printf("Base: %p - Tamaño: %d - Libre: %d\n", hueco->base, hueco->tamanio, hueco->libre);
+}
+
 void conectar_modulos(int socket_servidor) {
     log_info(LOGGER_MEMORIA, "Esperando conexiones de modulos...");
     
@@ -59,7 +63,6 @@ void recibir_kernel(int *socket_modulo)
         case TERMINAR:
             // recibe
             ctx = recibir_contexto(*socket_modulo);
-
             // elimina
             finalizar_proceso(ctx->tabla_segmentos);
             log_info(LOGGER_MEMORIA, "Eliminación de Proceso PID: <%d>", ctx->PID);
@@ -75,6 +78,9 @@ void recibir_kernel(int *socket_modulo)
             paquete = crear_segmento(atoi(ctx->motivos_desalojo->parametros[0]), atoi(ctx->motivos_desalojo->parametros[1]), ctx->PID);
             
             // envia
+            printf("SE CREO UN SEGMENTO\n");
+            list_iterate(LISTA_HUECOS, (void*) mostrar_huecos);
+            printf("---------------------\n");
             enviar_paquete(paquete, *socket_modulo);
             free(paquete);
             free(ctx);
@@ -147,32 +153,19 @@ void recibir_fs(int* socket_modulo) {
         switch(cod_op) {
             
             case F_READ:
-                // recibe
                 t_parametros_variables* parametros = recibir_parametros_variables(*socket_modulo);
-
-                // lee
-                // direc fisica, tamanio
-                char* valor = leer_fs(parametros->parametros[0], atoi(parametros->parametros[1]));
-                //log_info(LOGGER_MEMORIA, "PID: <%d> - Acción: <LEER> - Dirección física: <%d> - Tamaño: <%d> - Origen: <CPU>", ctx->PID, atoi(ctx->motivos_desalojo->parametros[0]), atoi(ctx->motivos_desalojo->parametros[1]));
-                
-                // enviar
-                enviar_mensaje(valor, *socket_modulo);
-                //free(ctx);
+                escribir_valor_direccion_fisica(parametros->parametros[0], strtol(parametros->parametros[1], NULL, 10));
+                enviar_mensaje("OK", *socket_modulo);
+                liberar_parametros_variables(parametros);
 
                 break;
 
             case F_WRITE:
-                // recibe
-                t_ctx* ctx = recibir_parametros_variables(*socket_modulo);
-
-                // lee
-                // valor, direc fisica, tamanio
-                escribir_fs(ctx->motivos_desalojo->parametros[0], ctx->motivos_desalojo->parametros[1], atoi(ctx->motivos_desalojo->parametros[2]));
-                log_info(LOGGER_MEMORIA, "PID: <%d> - Acción: <LEER> - Dirección física: <%d> - Tamaño: <%d> - Origen: <CPU>", ctx->PID, atoi(ctx->motivos_desalojo->parametros[0]), atoi(ctx->motivos_desalojo->parametros[1]));
-                
-                // envia
-                enviar_mensaje("OK", *socket_modulo);
-                free(ctx);
+                parametros = recibir_parametros_variables(*socket_modulo);
+                char* valor_leido = leer_valor_direccion_fisica(strtol(parametros->parametros[0], NULL, 10));
+                enviar_mensaje(valor_leido, *socket_modulo);
+                free(valor_leido);
+                liberar_parametros_variables(parametros);
 
                 break;
             

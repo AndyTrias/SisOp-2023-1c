@@ -9,7 +9,7 @@ t_pcb *crear_pcb(t_list* instrucciones, int socket_consola){
   nuevo->contexto.instrucciones = instrucciones;
   nuevo->estimado_prox_rafaga= ESTIMACION_INICIAL;
   
-  nuevo->contexto.motivos_desalojo = malloc(sizeof(t_parametros_variables));
+  nuevo->contexto.motivos_desalojo = calloc(1, sizeof(t_parametros_variables));
   nuevo->contexto.motivos_desalojo->cantidad_parametros = 0;
   nuevo->contexto.motivos_desalojo->parametros = NULL;
   

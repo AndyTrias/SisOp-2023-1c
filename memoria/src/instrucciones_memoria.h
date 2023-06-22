@@ -13,5 +13,7 @@
     t_paquete* crear_segmento(int, int, int);
     void eliminar_segmento(t_list*, int, int);
     void finalizar_proceso(t_list*);
+    char* leer_valor_direccion_fisica(long);
+    void escribir_valor_direccion_fisica(char* , long);
 
 #endif

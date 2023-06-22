@@ -134,7 +134,7 @@ op_code execute(t_instruccion *instruccion_actual, t_ctx *ctx)
 			return SEG_FAULT;
 		}
 
-		log_info(LOGGER_CPU, "PID: %d  -Acción: ESCRIBIR - Segmento: %s - Dirección Física: %s - Valor: %s", ctx->PID, floor_div(atoi(instruccion_actual->parametros[1]), TAM_MAX_SEGMENTO), dir_fisica, "hola");
+		log_info(LOGGER_CPU, "PID: %d  -Acción: ESCRIBIR - Segmento: %d - Dirección Física: %p - Valor: %s", ctx->PID, floor_div(atoi(instruccion_actual->parametros[1]), TAM_MAX_SEGMENTO), (void*)dir_fisica, registro);
 
 		return 0;
 
@@ -174,7 +174,9 @@ op_code execute(t_instruccion *instruccion_actual, t_ctx *ctx)
 		{
 			return SEG_FAULT;
 		}
-		agregar_parametro_desalojo(ctx, dir_fisica);
+		dir_fisica_string = malloc(10);
+		sprintf(dir_fisica_string, "%ld", dir_fisica);
+		agregar_parametro_desalojo(ctx, dir_fisica_string);
 		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[2]);
 		return F_READ;
 
@@ -187,7 +189,9 @@ op_code execute(t_instruccion *instruccion_actual, t_ctx *ctx)
 
 			return SEG_FAULT;
 		}
-		agregar_parametro_desalojo(ctx, dir_fisica);
+		dir_fisica_string = malloc(10);
+		sprintf(dir_fisica_string, "%ld", dir_fisica);
+		agregar_parametro_desalojo(ctx, dir_fisica_string);
 		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[2]);
 		return F_READ;
 
@@ -233,11 +237,11 @@ long MMU(int direccion_logica, int bytes, t_ctx *ctx)
 	{
 		// “PID: <PID> - Error SEG_FAULT- Segmento: <NUMERO SEGMENTO> - Offset: <OFFSET> - Tamaño: <TAMAÑO>”
 		log_error(LOGGER_CPU, "PID: %d - Error SEG_FAULT- Segmento: %d - Offset: %d - Tamaño: %d", ctx->PID, num_segmento, offset, bytes);
-		return NULL;
+		return -1;
 	}
 
 	t_segmento *segmento = list_get(ctx->tabla_segmentos, num_segmento);
-	long direccion_fisica = segmento->base + offset;
+	long direccion_fisica = (long)(segmento->base + offset);
 	return direccion_fisica;
 }
 
