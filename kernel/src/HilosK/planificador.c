@@ -1,12 +1,5 @@
 #include "planificador.h"
 
-
-void solicitar_creacion(char nombre[30]){
-  //mandar_a_fs
-  //esperar respuesta
-}
-
-
 void* planificador_corto(){
     log_info(LOGGER_KERNEL, "Inicia el planificador de corto plazo");
     sem_wait(&CORTO_PLAZO);
