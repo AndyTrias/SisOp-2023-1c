@@ -78,9 +78,6 @@ void recibir_kernel(int *socket_modulo)
             paquete = crear_segmento(atoi(ctx->motivos_desalojo->parametros[0]), atoi(ctx->motivos_desalojo->parametros[1]), ctx->PID);
             
             // envia
-            printf("SE CREO UN SEGMENTO\n");
-            list_iterate(LISTA_HUECOS, (void*) mostrar_huecos);
-            printf("---------------------\n");
             enviar_paquete(paquete, *socket_modulo);
             free(paquete);
             free(ctx);

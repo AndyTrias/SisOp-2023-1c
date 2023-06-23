@@ -47,7 +47,6 @@ typedef enum
     EXIT, // Ver como la definimos
     YIELD,
     SEG_FAULT,
-    F_CREATE
 } t_operacion;
 
 typedef struct
