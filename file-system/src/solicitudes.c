@@ -73,11 +73,11 @@ void atender_solicitudes(int cod_op, t_parametros_variables *parametros_instrucc
         break;
 
     case F_READ:
-        log_info(LOGGER_FILE_SYSTEM, "Leer Archivo: %s - Puntero: %s - Memoria: %s - Tamaño: %s", nombre_archivo, parametros_instruccion->parametros[1], parametros_instruccion->parametros[2], parametros_instruccion->parametros[3]);
+        log_info(LOGGER_FILE_SYSTEM, "Leer Archivo: %s - Puntero: %s - Memoria: %s - Tamaño: %s", nombre_archivo, parametros_instruccion->parametros[3], parametros_instruccion->parametros[1], parametros_instruccion->parametros[2]);
         break;
 
     case F_WRITE:
-        log_info(LOGGER_FILE_SYSTEM, "Escribir Archivo: %s - Puntero: %s - Memoria: %s - Tamaño: %s", nombre_archivo, parametros_instruccion->parametros[1], parametros_instruccion->parametros[2], parametros_instruccion->parametros[3]);
+        log_info(LOGGER_FILE_SYSTEM, "Escribir Archivo: %s - Puntero: %s - Memoria: %s - Tamaño: %s", nombre_archivo, parametros_instruccion->parametros[3], parametros_instruccion->parametros[1], parametros_instruccion->parametros[2]);
         break;
 
     default:
