@@ -11,6 +11,8 @@ u_int32_t buscar_bloque_libre()
         if (!estado)
         {
             bitarray_set_bit(BITMAP_BLOQUES, i);
+            // msync(BITMAP_BLOQUES->bitarray, BITMAP_BLOQUES->size, MS_SYNC);
+
             return i;
         }
     }
@@ -22,6 +24,7 @@ void marcar_bloque_como_libre(uint32_t bloque)
 
     log_info(LOGGER_FILE_SYSTEM, "Acceso a Bitmap - Se marca al Bloque: %d como Libre", bloque);
     bitarray_clean_bit(BITMAP_BLOQUES, bloque);
+    // msync(BITMAP_BLOQUES->bitarray, BITMAP_BLOQUES->size, MS_SYNC);
 }
 
 void asignar_bloques_al_puntero_indirecto(void *puntero, int cantidad_bloques_necesarios, int tamanio_archivo)
