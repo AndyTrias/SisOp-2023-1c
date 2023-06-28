@@ -25,6 +25,9 @@ void* planificador_largo(){
     }
     
 }
+
+// no sé que es
+/*
 void* comunicacion_fs(){
 
    while(1){
@@ -53,3 +56,4 @@ void* comunicacion_fs(){
    }
    
 }
+*/

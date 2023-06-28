@@ -8,8 +8,8 @@
     #include <globales.h>
     #include "exec.h"
     
-    void wait(t_pcb*);
-    void signal(t_pcb*);
+    void wait(t_pcb*, char*);
+    void signal(t_pcb*, char*);
     void io(t_pcb*);
     int get_id_recurso(char[]);
 

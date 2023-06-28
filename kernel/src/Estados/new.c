@@ -15,6 +15,7 @@ t_pcb *crear_pcb(t_list* instrucciones, int socket_consola){
   
   nuevo->tiempo_desde_ult_ready = temporal_create();
   nuevo->archivos_abiertos = list_create();
+  nuevo->recursos_en_uso = list_create();
 
   nuevo->socket_consola = socket_consola;
 
