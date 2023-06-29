@@ -10,6 +10,11 @@
 
     void levantar_diccionario_fcb(t_config*);
     void crear_fcb(char*);
+    void asignar_puntero_directo(char *nombre_archivo);
+    void liberar_puntero_directo(char *nombre_archivo);
+    void asignar_puntero_indirecto(char *nombre_archivo);
+    void liberar_puntero_indirecto(char *nombre_archivo);
+    
     void actualizar_fcb(char*, char*, char*);
 
     // Getters 
