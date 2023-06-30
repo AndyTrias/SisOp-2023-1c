@@ -54,13 +54,52 @@ void crear_fcb(char *nombre_archivo)
         config_set_value(nuevo, "NOMBRE_ARCHIVO", nombre_archivo);
         config_set_value(nuevo, "TAMANIO_ARCHIVO", "0");
 
-        config_set_value(nuevo, "PUNTERO_DIRECTO", string_itoa(buscar_bloque_libre()));
-        config_set_value(nuevo, "PUNTERO_INDIRECTO", string_itoa(buscar_bloque_libre()));
-
         config_save(nuevo);
 
         dictionary_put(DICCIONARIO_FCB, nombre_archivo, nuevo);
     }
+}
+
+void asignar_puntero_directo(char *nombre_archivo)
+{
+    log_info(LOGGER_FILE_SYSTEM, "Asignacion de puntero directo - Archivo: %s", nombre_archivo);
+
+    t_config *fcb = dictionary_get(DICCIONARIO_FCB, nombre_archivo);
+    config_set_value(fcb, "PUNTERO_DIRECTO", string_itoa(buscar_bloque_libre()));
+    config_save(fcb);
+
+    free(fcb);
+}
+
+void asignar_puntero_indirecto(char *nombre_archivo)
+{
+    log_info(LOGGER_FILE_SYSTEM, "Asignacion de puntero indirecto - Archivo: %s", nombre_archivo);
+
+    t_config *fcb = dictionary_get(DICCIONARIO_FCB, nombre_archivo);
+    config_set_value(fcb, "PUNTERO_INDIRECTO", string_itoa(buscar_bloque_libre()));
+    config_save(fcb);
+
+    free(fcb);
+}
+
+void liberar_puntero_directo(char *nombre_archivo)
+{
+    t_config *fcb = dictionary_get(DICCIONARIO_FCB, nombre_archivo);
+    marcar_bloque_como_libre(config_get_int_value(fcb, "PUNTERO_DIRECTO"));
+    config_remove_key(fcb, "PUNTERO_DIRECTO");
+    config_save(fcb);
+
+    free(fcb);
+}
+
+void liberar_puntero_indirecto(char *nombre_archivo)
+{
+    t_config *fcb = dictionary_get(DICCIONARIO_FCB, nombre_archivo);
+    marcar_bloque_como_libre(config_get_int_value(fcb, "PUNTERO_INDIRECTO"));
+    config_remove_key(fcb, "PUNTERO_INDIRECTO");
+    config_save(fcb);
+
+    free(fcb);
 }
 
 void actualizar_fcb(char *nombre_archivo, char *clave, char *valor)
@@ -70,13 +109,11 @@ void actualizar_fcb(char *nombre_archivo, char *clave, char *valor)
     config_save(fcb);
 }
 
-
 int obtener_tamanio(char *nombre_archivo)
 {
     t_config *fcb = dictionary_get(DICCIONARIO_FCB, nombre_archivo);
     return config_get_int_value(fcb, "TAMANIO_ARCHIVO");
 }
-
 
 int obtener_puntero_indirecto(char *nombre_archivo)
 {

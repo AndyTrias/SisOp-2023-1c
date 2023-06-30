@@ -1,9 +1,11 @@
 #include <solicitudes.h>
 
+char* nombre_archivo;
+
 void atender_solicitudes(int cod_op, t_parametros_variables *parametros_instruccion)
 {
 
-    char *nombre_archivo = parametros_instruccion->parametros[0];
+    nombre_archivo = parametros_instruccion->parametros[0];
 
     switch (cod_op)
     {
@@ -27,29 +29,28 @@ void atender_solicitudes(int cod_op, t_parametros_variables *parametros_instrucc
     case F_TRUNCATE:
         int tamanio_nuevo = atoi(parametros_instruccion->parametros[1]);
         int tamanio_actual = obtener_tamanio(nombre_archivo);
+        actualizar_fcb(nombre_archivo, "TAMANIO_ARCHIVO", parametros_instruccion->parametros[1]);
         log_info(LOGGER_FILE_SYSTEM, "Truncar Archivo: %s - Tamaño: %d", nombre_archivo, tamanio_nuevo);
 
+        // No se tiene en cuenta el puntero indirecto
         int cantidad_bloques_actual = (tamanio_actual + TAMANIO_BLOQUES - 1) / TAMANIO_BLOQUES;
         int cantidad_bloques_necesarios = (tamanio_nuevo + TAMANIO_BLOQUES - 1) / TAMANIO_BLOQUES;
 
-        void *mapeo = mmap(NULL, (TAMANIO_BLOQUES * CANTIDAD_BLOQUES), PROT_READ | PROT_WRITE, MAP_SHARED, fileno(ARCHIVO_BLOQUES), 0);
-        void *bloque_puntero_indirecto = mapeo + TAMANIO_BLOQUES * obtener_puntero_indirecto(nombre_archivo);
+        if (cantidad_bloques_actual == cantidad_bloques_necesarios)
+        {
+            // No se hace nada
+            log_info(LOGGER_FILE_SYSTEM, "No se modifican bloques");
+            break;
+        }
+
+        void *archivo_de_bloques = mmap(NULL, (TAMANIO_BLOQUES * CANTIDAD_BLOQUES), PROT_READ | PROT_WRITE, MAP_SHARED, fileno(ARCHIVO_BLOQUES), 0);
 
         // Se agranda el archivo
-        if (tamanio_nuevo > tamanio_actual)
+        if (cantidad_bloques_necesarios > cantidad_bloques_actual)
         {
             int cantidad_bloques_a_agregar = cantidad_bloques_necesarios - cantidad_bloques_actual;
 
-            // El puntero directo siempre se mantiene
-            // Se asigna un bloque menos
-            if (tamanio_actual < TAMANIO_BLOQUES)
-            {
-                cantidad_bloques_a_agregar--;
-            }
-
-            // Asignar todos los bloques libres en el bitmap de bloques
-            // Asignar esos bloques libres en el archivo de bloques
-            asignar_bloques_al_puntero_indirecto(bloque_puntero_indirecto, cantidad_bloques_a_agregar, tamanio_actual);
+            agrandar_archivo(archivo_de_bloques, cantidad_bloques_a_agregar, cantidad_bloques_actual, tamanio_actual == 0);
         }
 
         // Se achica el archivo
@@ -57,27 +58,19 @@ void atender_solicitudes(int cod_op, t_parametros_variables *parametros_instrucc
         {
             int cantidad_bloques_a_liberar = cantidad_bloques_actual - cantidad_bloques_necesarios;
 
-            // Si el nuevo tamanio es menor a 64
-            // el puntero directo se mantiene
-            if (tamanio_nuevo < TAMANIO_BLOQUES)
-            {
-                cantidad_bloques_a_liberar--;
-            }
-
-            liberar_bloques_del_puntero_indirecto(bloque_puntero_indirecto, cantidad_bloques_a_liberar, tamanio_actual);
+            achicar_archivo(archivo_de_bloques, cantidad_bloques_a_liberar, cantidad_bloques_actual, tamanio_nuevo == 0);
         }
 
-        msync(mapeo, CANTIDAD_BLOQUES * TAMANIO_BLOQUES, MS_SYNC);
-        munmap(mapeo, CANTIDAD_BLOQUES * TAMANIO_BLOQUES);
-        actualizar_fcb(nombre_archivo, "TAMANIO_ARCHIVO", parametros_instruccion->parametros[1]);
+        msync(archivo_de_bloques, CANTIDAD_BLOQUES * TAMANIO_BLOQUES, MS_SYNC);
+        munmap(archivo_de_bloques, CANTIDAD_BLOQUES * TAMANIO_BLOQUES);
         break;
 
     case F_READ:
-        log_info(LOGGER_FILE_SYSTEM, "Leer Archivo: %s - Puntero: %s - Memoria: %s - Tamaño: %s", nombre_archivo, parametros_instruccion->parametros[1], parametros_instruccion->parametros[2], parametros_instruccion->parametros[3]);
+        log_info(LOGGER_FILE_SYSTEM, "Leer Archivo: %s - Puntero: %s - Memoria: %s - Tamaño: %s", nombre_archivo, parametros_instruccion->parametros[3], parametros_instruccion->parametros[1], parametros_instruccion->parametros[2]);
         break;
 
     case F_WRITE:
-        log_info(LOGGER_FILE_SYSTEM, "Escribir Archivo: %s - Puntero: %s - Memoria: %s - Tamaño: %s", nombre_archivo, parametros_instruccion->parametros[1], parametros_instruccion->parametros[2], parametros_instruccion->parametros[3]);
+        log_info(LOGGER_FILE_SYSTEM, "Escribir Archivo: %s - Puntero: %s - Memoria: %s - Tamaño: %s", nombre_archivo, parametros_instruccion->parametros[3], parametros_instruccion->parametros[1], parametros_instruccion->parametros[2]);
         break;
 
     default:
@@ -86,4 +79,46 @@ void atender_solicitudes(int cod_op, t_parametros_variables *parametros_instrucc
     }
 }
 
+void agrandar_archivo(void* archivo_de_bloques, int cantidad_bloques_a_agregar, int actuales, bool nuevo_archivo)
+{
+    
 
+    // Si es la primera vez que se llama a truncate
+    // Se asigna el puntero directo e indirecto
+    if (nuevo_archivo)
+    {
+        asignar_puntero_directo(nombre_archivo);
+        asignar_puntero_indirecto(nombre_archivo);
+        cantidad_bloques_a_agregar--;
+    }
+
+    if (cantidad_bloques_a_agregar > 0)
+    {
+        // Hacer el log de acceso a bloque
+        // Hacer el retardo
+        void *bloque_puntero_indirecto = archivo_de_bloques + TAMANIO_BLOQUES * obtener_puntero_indirecto(nombre_archivo);
+        asignar_bloques_al_puntero_indirecto(bloque_puntero_indirecto, cantidad_bloques_a_agregar, actuales);
+    }
+}
+
+void achicar_archivo(void* archivo_de_bloques, int cantidad_bloques_a_liberar, int actuales, bool borrar_todo)
+{
+    if (borrar_todo)
+    {
+        liberar_puntero_directo(nombre_archivo);
+        cantidad_bloques_a_liberar--;
+    }
+
+    if (cantidad_bloques_a_liberar > 0)
+    {
+        // Hacer el log de acceso a bloque
+        // Hacer el retardo
+        void *bloque_puntero_indirecto = archivo_de_bloques + TAMANIO_BLOQUES * obtener_puntero_indirecto(nombre_archivo);
+        liberar_bloques_del_puntero_indirecto(bloque_puntero_indirecto, cantidad_bloques_a_liberar, actuales);
+    }
+
+    if (borrar_todo)
+    {
+        liberar_puntero_indirecto(nombre_archivo);
+    }
+}

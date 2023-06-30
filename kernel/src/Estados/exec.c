@@ -58,10 +58,10 @@ void definir_accion(int cod_op, t_pcb *proceso)
         break;
 
     case WAIT:
-        wait(proceso);
+        wait(proceso, proceso->contexto.motivos_desalojo->parametros[0]);
         break;
     case SIGNAL:
-        signal(proceso);
+        signal(proceso, proceso->contexto.motivos_desalojo->parametros[0]);
         break;
     case IO:
         io(proceso);

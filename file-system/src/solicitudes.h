@@ -15,5 +15,8 @@
 
 
    void atender_solicitudes(int, t_parametros_variables *);
+   void agrandar_archivo(void* archivo_de_bloques, int necesarios, int actuales, bool nuevo_archivo);
+   void achicar_archivo(void* archivo_de_bloques, int necesarios, int actuales, bool borrar_todo);
+
      
 #endif

@@ -11,6 +11,8 @@ u_int32_t buscar_bloque_libre()
         if (!estado)
         {
             bitarray_set_bit(BITMAP_BLOQUES, i);
+            // msync(BITMAP_BLOQUES->bitarray, BITMAP_BLOQUES->size, MS_SYNC);
+
             return i;
         }
     }
@@ -22,13 +24,11 @@ void marcar_bloque_como_libre(uint32_t bloque)
 
     log_info(LOGGER_FILE_SYSTEM, "Acceso a Bitmap - Se marca al Bloque: %d como Libre", bloque);
     bitarray_clean_bit(BITMAP_BLOQUES, bloque);
+    // msync(BITMAP_BLOQUES->bitarray, BITMAP_BLOQUES->size, MS_SYNC);
 }
 
-void asignar_bloques_al_puntero_indirecto(void *puntero, int cantidad_bloques_necesarios, int tamanio_archivo)
+void asignar_bloques_al_puntero_indirecto(void *puntero, int cantidad_bloques_necesarios, int bloques_actuales)
 {
-
-    // calculo la cantidad de punteros que tiene ese bloques para ir a esa posicion
-    int posicion_a_anotar = (tamanio_archivo - 1) / TAMANIO_BLOQUES;
 
     u_int32_t bloque_libre;
     for (int i = 0; i < cantidad_bloques_necesarios; i++)
@@ -41,15 +41,15 @@ void asignar_bloques_al_puntero_indirecto(void *puntero, int cantidad_bloques_ne
         }
         else
         {
-            memcpy((posicion_a_anotar + i) * sizeof(u_int32_t) + puntero, &bloque_libre, sizeof(uint32_t));
+            memcpy((bloques_actuales + i) * sizeof(u_int32_t) + puntero, &bloque_libre, sizeof(uint32_t));
         }
     }
 }
 
-void liberar_bloques_del_puntero_indirecto(void *puntero, int cantidad_bloques_a_liberar, int tamanio_archivo)
+void liberar_bloques_del_puntero_indirecto(void *puntero, int cantidad_bloques_a_liberar, int bloques_actuales)
 {
-
-    int posicion_a_leer = (tamanio_archivo - 1) / TAMANIO_BLOQUES - 1;
+    // Como es para leer me posiciono en el ultimo bloque - 1, que es donde empieza
+    int posicion_a_leer = bloques_actuales - 1;
 
     // NO EXISTE MAX EN C
     if (posicion_a_leer < 0){
