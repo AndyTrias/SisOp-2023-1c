@@ -8,8 +8,10 @@ void terminar_proceso(t_pcb *proceso){
     
     t_paquete* paquete = crear_paquete(TERMINAR);
     enviar_paquete(paquete, proceso->socket_consola);
+    free(paquete);
 
-    serializar_contexto(&proceso->contexto, paquete);
+    paquete = crear_paquete(TERMINAR);
+    serializar_contexto(&(proceso->contexto), paquete);
     enviar_paquete(paquete, SOCKET_MEMORIA);
     free(paquete);
     
