@@ -1,9 +1,5 @@
 #include "conectar_modulos.h"
 
-void mostrar_huecos(t_hueco* hueco){
-    printf("Base: %p - Tamaño: %d - Libre: %d\n", hueco->base, hueco->tamanio, hueco->libre);
-}
-
 void conectar_modulos(int socket_servidor) {
     log_info(LOGGER_MEMORIA, "Esperando conexiones de modulos...");
     
@@ -36,6 +32,16 @@ void conectar_modulos(int socket_servidor) {
 
 }
 
+void imprimir_hueco(t_hueco *hueco)
+{
+    printf("Base: %p, Tamanio: %d, Libre: %d\n", hueco->base, hueco->tamanio, hueco->libre);
+}
+
+void imprimir_segmento(t_segmento *segmento)
+{
+    printf("Base: %p, Tamanio: %d, Numero de segmento: %d\n", segmento->base, segmento->tamanio, segmento->id_segmento);
+}
+
 void recibir_kernel(int *socket_modulo)
 {
     while (1)
@@ -45,38 +51,51 @@ void recibir_kernel(int *socket_modulo)
         {
         case CREAR_TABLA_SEGMENTOS:
             //recibe
-            t_ctx* ctx = recibir_contexto(*socket_modulo);
+            int PID = recibir_int(*socket_modulo);
 
             // crea
             t_list *tabla_segmentos = crear_tabla_segmentos();
-            log_info(LOGGER_MEMORIA, "Creación de Proceso PID: <%d>", ctx->PID);
+            log_info(LOGGER_MEMORIA, "Creación de Proceso PID: <%d>", PID);
 
             // envia
             t_paquete *paquete = crear_paquete(CREAR_TABLA_SEGMENTOS);
             serializar_tabla_segmentos(tabla_segmentos, paquete);
             enviar_paquete(paquete, *socket_modulo);
             free(paquete);
-            free(ctx);
 
             break;
 
         case TERMINAR:
             // recibe
-            ctx = recibir_contexto(*socket_modulo);
-            // elimina
-            finalizar_proceso(ctx->tabla_segmentos);
-            log_info(LOGGER_MEMORIA, "Eliminación de Proceso PID: <%d>", ctx->PID);
+            int size;
+            void *buffer = recibir_buffer(&size, *socket_modulo);
 
-            free(ctx);
+            int *desplazamiento = malloc(sizeof(int));
+            *desplazamiento = 0; 
+            
+            PID = deserializar_int(buffer, desplazamiento);
+            tabla_segmentos = deserializar_tabla_segmentos(buffer, desplazamiento);
+
+            free(desplazamiento);
+
+            // eliminar
+            printf("LISTA HUECOS ANTES DE FINALIZAR PROCESO\n");
+            list_iterate(LISTA_HUECOS, (void*) imprimir_hueco);
+            printf("------------------------------\n");
+            finalizar_proceso(tabla_segmentos);
+            printf("LISTA HUECOS DESPUES DE FINALIZAR PROCESO\n");
+            list_iterate(LISTA_HUECOS, (void*) imprimir_hueco);
+            printf("------------------------------\n");
+            log_info(LOGGER_MEMORIA, "Eliminación de Proceso PID: <%d>", PID);
+
             break;
 
         case CREATE_SEGMENT:
             // recibe
-            ctx = recibir_contexto(*socket_modulo);
+            t_ctx* ctx = recibir_contexto(*socket_modulo);
 
             // crea
             paquete = crear_segmento(atoi(ctx->motivos_desalojo->parametros[0]), atoi(ctx->motivos_desalojo->parametros[1]), ctx->PID);
-            
             // envia
             enviar_paquete(paquete, *socket_modulo);
             free(paquete);
@@ -89,18 +108,17 @@ void recibir_kernel(int *socket_modulo)
 
             // elimina              
             eliminar_segmento(ctx->tabla_segmentos, atoi(ctx->motivos_desalojo->parametros[0]), ctx->PID);
-            // log obligatorio en eliminar segmento
 
             // envia
             paquete = crear_paquete(DELETE_SEGMENT);
-            serializar_tabla_segmentos(tabla_segmentos, paquete);
+            serializar_tabla_segmentos(ctx->tabla_segmentos, paquete);
             enviar_paquete(paquete, *socket_modulo);
             free(paquete);
-            free(ctx);
+
             break;
         
         case COMPACTAR:
-        
+            compactar();
             break;
 
         case -1:

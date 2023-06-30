@@ -14,14 +14,15 @@ void terminar_proceso(t_pcb *proceso){
     list_destroy(proceso->archivos_abiertos);
     list_destroy(proceso->recursos_en_uso);
     temporal_destroy(proceso->tiempo_desde_ult_ready);
-    
+
     t_paquete* paquete = crear_paquete(TERMINAR);
-    enviar_paquete(paquete, proceso->socket_consola);
+    agregar_a_paquete_dato_serializado(paquete, &proceso->contexto.PID, sizeof(int));
+    serializar_tabla_segmentos(proceso->contexto.tabla_segmentos, paquete);
+    enviar_paquete(paquete, SOCKET_MEMORIA);
     free(paquete);
 
     paquete = crear_paquete(TERMINAR);
-    serializar_contexto(&(proceso->contexto), paquete);
-    enviar_paquete(paquete, SOCKET_MEMORIA);
+    enviar_paquete(paquete, proceso->socket_consola);
     free(paquete);
     
     sem_post(&GRADO_MULTIPROGRAMACION);

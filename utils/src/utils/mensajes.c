@@ -216,6 +216,7 @@ void serializar_tabla_segmentos(t_list *tabla_segmentos, t_paquete *paquete)
         agregar_a_paquete_dato_serializado(paquete, &(segmento->id_segmento), sizeof(int));
         agregar_a_paquete_dato_serializado(paquete, &(segmento->base), sizeof(void*));
         agregar_a_paquete_dato_serializado(paquete, &(segmento->tamanio), sizeof(int));
+		
     }
 }
 
@@ -240,7 +241,7 @@ t_list* deserializar_tabla_segmentos(void* buffer, int* desplazamiento){
 
 t_ctx *deserializar_contexto(void *buffer, int *desplazamiento)
 {
-	t_ctx *ctx = malloc(sizeof(t_ctx));
+	t_ctx *ctx = calloc(1, sizeof(t_ctx));
 
 	// Deserializo PID, PC y cant_instrucciones
 
@@ -376,4 +377,25 @@ t_list* recibir_tabla_segmentos(int socket_cliente){
     free(buffer);
 
     return tabla_segmentos;
+}
+
+int deserializar_int(void *buffer, int *desplazamiento)
+{
+    int valor = *(int *)(buffer + *desplazamiento);
+    *desplazamiento += sizeof(int);
+    return valor;
+}
+
+int recibir_int(int socket)
+{
+    int size;
+    void *buffer = recibir_buffer(&size, socket);
+
+    int *desplazamiento = malloc(sizeof(int));
+    *desplazamiento = 0; 
+    
+    int valor = deserializar_int(buffer, desplazamiento);
+    
+    free(desplazamiento);
+    return valor;
 }

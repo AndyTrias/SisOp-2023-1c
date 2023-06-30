@@ -54,10 +54,10 @@ void existe_archivo(char* nombre){ //Solicita la apertura de un archivo para ver
 }
 
 void solicitar_creacion(char* nombre){ //Solicita la creacion de un archivo
-  t_paquete *paquete = crear_paquete(F_CREATE);
-  agregar_parametro_desalojo(&EJECUTANDO->contexto,nombre);
-  enviar_paquete(paquete, SOCKET_FILESYSTEM);
-  free(paquete);
+  // t_paquete *paquete = crear_paquete(F_CREATE);
+  // agregar_parametro_desalojo(&EJECUTANDO->contexto,nombre);
+  // enviar_paquete(paquete, SOCKET_FILESYSTEM);
+  // free(paquete);
 }
 
 

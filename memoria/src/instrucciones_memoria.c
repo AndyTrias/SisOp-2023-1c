@@ -8,15 +8,15 @@ t_paquete* crear_segmento(int id_segmento, int tamanio, int PID) {
         hueco = get_hueco_con_best_fit(tamanio);
     } else if (strcmp(CONFIG->algoritmo_asignacion, "WORST") == 0) {
         hueco = get_hueco_con_worst_fit(tamanio);
-    } else if (comprobar_compactacion(tamanio)){
-        return crear_paquete(COMPACTAR);
-        log_info(LOGGER_MEMORIA, "Se solicita compactacion");
     } else {
         log_error(LOGGER_MEMORIA, "Algoritmo de asignacion no valido");
         return NULL;
     }
 
-    if (!hueco) {
+    if (!hueco && comprobar_compactacion(tamanio)){
+        log_info(LOGGER_MEMORIA, "Se solicita compactacion");
+        return crear_paquete(COMPACTAR);
+    } else if (!hueco) {
         log_error(LOGGER_MEMORIA, "No hay hueco disponible para crear el segmento");
         return crear_paquete(OUT_OF_MEMORY);
     }
@@ -43,7 +43,6 @@ void eliminar_segmento(t_list* tabla_segmentos, int id_segmento, int PID) {
             break;
         }
     }
-
     comprobar_consolidacion_huecos_aledanios(index_hueco);
 
     segmento->base = NULL;
@@ -52,9 +51,10 @@ void eliminar_segmento(t_list* tabla_segmentos, int id_segmento, int PID) {
 }
 
 void finalizar_proceso(t_list* tabla_segmentos){
-    for (int i = 0; i < list_size(tabla_segmentos); i++) {
+    for (int i = 1; i < list_size(tabla_segmentos); i++) {
         t_segmento* segmento = list_get(tabla_segmentos, i);
         if (segmento->base != NULL) {
+            // quitar de la tabla de segmentos
             eliminar_segmento(tabla_segmentos, i, -1);
         }
     }
@@ -76,6 +76,63 @@ void escribir_valor_direccion_fisica(char* valor, long direccion_fisica){
     memcpy(direccion, valor, sizeof(strlen(valor)) + 1);
 }
 
-void compactar(t_list* tablas_segmentos){
-    
+void mostrar_hueco(t_hueco* hueco){
+    log_info(LOGGER_MEMORIA, "Hueco: <%p> - TAMAÑO: <%d> - LIBRE: <%d>", hueco->base, hueco->tamanio, hueco->libre);
+}
+
+void compactar(){
+    int nuevo_tamanio = 0;
+    void* base_del_primer_hueco = NULL;
+
+    for (int i = 1; i < list_size(LISTA_HUECOS); i++) {
+        t_hueco* hueco = list_get(LISTA_HUECOS, i);
+
+        if (base_del_primer_hueco == hueco->base){
+            hueco->tamanio = nuevo_tamanio;
+            // eliminar los huecos que estan a la derecha del hueco que se esta compactando
+            for (int j = i + 1; j < list_size(LISTA_HUECOS); j++) {
+                list_remove(LISTA_HUECOS, j);
+            }
+            break;
+        }
+
+        if (hueco->libre) {
+            // agregarlo al final de la lista de huecos
+            list_remove(LISTA_HUECOS, i);
+            list_add(LISTA_HUECOS, hueco);
+            nuevo_tamanio += hueco->tamanio;
+            if (!base_del_primer_hueco) base_del_primer_hueco = hueco->base;
+            i--;
+        }
+    }
+
+    // modificar las bases de los huecos en relacion a su tamanio (solo los ocupados)
+    void* base_actual = list_get(LISTA_HUECOS, 0)->base;
+    int tamanio_actual = list_get(LISTA_HUECOS, 0)->tamanio;
+
+    for (int i = 1; i < list_size(LISTA_HUECOS); i++) {
+        t_hueco* hueco = list_get(LISTA_HUECOS, i);
+        if (!hueco->libre) {
+            // modificar la tabla de segmentos
+            // buscar el segmento en todas las tablas de segmentos
+            for (int j = 0; j < list_size(TABLA_SEGMENTOS); j++) {
+                t_list* tabla_segmentos = list_get(TABLA_SEGMENTOS, j);
+                for (int k = 1; k < list_size(tabla_segmentos); k++) {
+                    t_segmento* segmento = list_get(tabla_segmentos, k);
+                    if (segmento->base == hueco->base) {
+                        segmento->base = base_actual + tamanio_actual;
+                        list_replace(tabla_segmentos, k, segmento);
+                        break;
+                    }
+                }
+            }
+
+            hueco->base = base_actual + tamanio_actual;
+            base_actual = hueco->base;
+            tamanio_actual = hueco->tamanio;
+        } else {
+            hueco->base = base_actual + tamanio_actual;
+            tamanio_actual += hueco->tamanio;
+        }
+    }
 }

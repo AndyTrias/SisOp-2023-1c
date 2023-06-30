@@ -101,8 +101,8 @@ t_instruccion* deserealizar_instruccion(void*, int* );
 t_parametros_variables* deserealizar_motivos_desalojo(void *, int*);
 t_list* deserializar_tabla_segmentos(void*, int*);
 t_list* recibir_tabla_segmentos(int);
-
-
+int deserializar_int(void *, int *);
+int recibir_int(int );
 
 
 

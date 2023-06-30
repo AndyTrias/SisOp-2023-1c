@@ -67,7 +67,7 @@ int obtener_indice_de_lista_huecos(t_hueco* hueco) {
         }
     }
 
-    return index = -1;
+    return index;
 }
 
 
@@ -80,6 +80,10 @@ void modificar_lista_huecos(t_hueco* hueco, int tamanio) {
 
     hueco->tamanio = tamanio;
     hueco->libre = false;
+
+    // usar el espacio en MEMORIA_PRINCIPAL
+    memset(hueco->base, 0, tamanio);
+    memset(hueco_restante->base, 0, hueco_restante->tamanio);
 
     // agregar el hueco restante a la lista de huecos despues del hueco actual
     int index_hueco = obtener_indice_de_lista_huecos(hueco);
@@ -96,7 +100,7 @@ void comprobar_consolidacion_huecos_aledanios(int index_hueco) {
     t_hueco* hueco_anterior = NULL;
     t_hueco* hueco_siguiente = NULL;
 
-    if (index_hueco > 0) {
+    if (index_hueco > 1) {
         hueco_anterior = list_get(LISTA_HUECOS, index_hueco - 1);
     }
 
@@ -107,14 +111,20 @@ void comprobar_consolidacion_huecos_aledanios(int index_hueco) {
     if (hueco_anterior && hueco_anterior->libre) {
         hueco_anterior->tamanio += hueco_actual->tamanio;
         list_remove(LISTA_HUECOS, index_hueco);
-        hueco_actual = hueco_anterior;
+
+        // copio el contenido del hueco actual al anterior
+        memcpy(hueco_actual, hueco_anterior, sizeof(t_hueco));
+        hueco_actual = (void*) hueco_anterior;
+        hueco_anterior = NULL;
+
         index_hueco--;
-        free(hueco_anterior);
+        memset(hueco_actual->base, 0, hueco_actual->tamanio);
     }
 
     if (hueco_siguiente && hueco_siguiente->libre) {
         hueco_actual->tamanio += hueco_siguiente->tamanio;
         list_remove(LISTA_HUECOS, index_hueco + 1);
+        memset(hueco_actual->base, 0, hueco_actual->tamanio);
         free(hueco_siguiente);
     }
 }

@@ -22,11 +22,11 @@ void crear_segmento(t_pcb *proceso){// enviar a memoria CREATE_SEGMENT con sus 2
             //supongo que cuando termina de crear el segmento se manda de nuevo al cpu por ende no cambio de pcb
             break;
         case COMPACTAR:
-            /*t_paquete *paquete = crear_paquete(COMPACTAR);
-            serializar_contexto(&proceso->contexto, paquete);
+            t_paquete *paquete = crear_paquete(COMPACTAR);
             enviar_paquete(paquete, SOCKET_MEMORIA);
             free(paquete);
-            */
+
+            recibir_operacion(SOCKET_MEMORIA);
             break;
         case OUT_OF_MEMORY:
             log_info(LOGGER_KERNEL,"Finaliza el proceso <%d> - Motivo: <OUT_OF_MEMORY>",proceso->contexto.PID);
