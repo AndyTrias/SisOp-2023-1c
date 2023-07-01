@@ -1,6 +1,6 @@
 #include "instrucciones_memoria.h"
 
-t_paquete* crear_segmento(int id_segmento, int tamanio, int PID) {
+t_paquete* crear_segmento(int id_segmento, int tamanio, t_ctx* ctx) {
     t_hueco* hueco = NULL;
     if (strcmp(CONFIG->algoritmo_asignacion, "FIRST") == 0) {
         hueco = get_hueco_con_first_fit(tamanio);
@@ -14,8 +14,9 @@ t_paquete* crear_segmento(int id_segmento, int tamanio, int PID) {
     }
 
     if (!hueco && comprobar_compactacion(tamanio)){
-        log_info(LOGGER_MEMORIA, "Se solicita compactacion");
-        return crear_paquete(COMPACTAR);
+        t_paquete* paquete = crear_paquete(COMPACTAR);
+        agregar_a_paquete_dato_serializado(paquete, &tamanio, sizeof(int));
+        return paquete;
     } else if (!hueco) {
         log_error(LOGGER_MEMORIA, "No hay hueco disponible para crear el segmento");
         return crear_paquete(OUT_OF_MEMORY);
@@ -23,9 +24,21 @@ t_paquete* crear_segmento(int id_segmento, int tamanio, int PID) {
 
     modificar_lista_huecos(hueco, tamanio);
 
+    t_segmento* segmento = list_get(ctx->tabla_segmentos, id_segmento);
+
+    memcpy(&(segmento->base), &hueco->base, sizeof(void*));
+    memcpy(&(segmento->tamanio), &tamanio, sizeof(int));
+
+    list_add(ctx->tabla_segmentos, segmento);
+
+    t_tabla_segmentos* ts = malloc(sizeof(t_tabla_segmentos));
+    ts->PID = ctx->PID;
+    ts->segmentos = ctx->tabla_segmentos;
+    list_replace(TABLA_SEGMENTOS_GLOBAL, ctx->PID, ts);
+
     t_paquete* paquete = crear_paquete(CREATE_SEGMENT);
-    agregar_a_paquete_dato_serializado(paquete, &(hueco->base), sizeof(void*));
-    log_info(LOGGER_MEMORIA, "PID: <%d> - Crear Segmento: <%d> - Base: <%p> - TAMAÑO: <%d>", PID, id_segmento, hueco->base, tamanio);
+    agregar_a_paquete_dato_serializado(paquete, &(segmento->base), sizeof(segmento->base));
+    log_info(LOGGER_MEMORIA, "PID: <%d> - Crear Segmento: <%d> - Base: <%p> - TAMAÑO: <%d>", ctx->PID, id_segmento, hueco->base, tamanio);
     return paquete;
 }
 
@@ -48,6 +61,11 @@ void eliminar_segmento(t_list* tabla_segmentos, int id_segmento, int PID) {
     segmento->base = NULL;
     segmento->tamanio = 0;
     list_replace(tabla_segmentos, id_segmento, segmento);
+    
+    t_tabla_segmentos* ts = malloc(sizeof(t_tabla_segmentos));
+    ts->PID = PID;
+    ts->segmentos = tabla_segmentos;
+    list_replace(TABLA_SEGMENTOS_GLOBAL, PID, ts);
 }
 
 void finalizar_proceso(t_list* tabla_segmentos){
@@ -80,7 +98,12 @@ void mostrar_hueco(t_hueco* hueco){
     log_info(LOGGER_MEMORIA, "Hueco: <%p> - TAMAÑO: <%d> - LIBRE: <%d>", hueco->base, hueco->tamanio, hueco->libre);
 }
 
+void mostrar_segmento(t_segmento* segmento){
+    log_info(LOGGER_MEMORIA, "Segmento: <%p> - TAMAÑO: <%d>", segmento->base, segmento->tamanio);
+}
+
 void compactar(){
+    log_info(LOGGER_MEMORIA, "Se solicita compactacion");
     int nuevo_tamanio = 0;
     void* base_del_primer_hueco = NULL;
 
@@ -107,21 +130,23 @@ void compactar(){
     }
 
     // modificar las bases de los huecos en relacion a su tamanio (solo los ocupados)
-    void* base_actual = list_get(LISTA_HUECOS, 0)->base;
-    int tamanio_actual = list_get(LISTA_HUECOS, 0)->tamanio;
+    t_hueco* hueco = list_get(LISTA_HUECOS, 0);
+    void* base_actual = hueco->base;
+    int tamanio_actual = hueco->tamanio;
 
     for (int i = 1; i < list_size(LISTA_HUECOS); i++) {
         t_hueco* hueco = list_get(LISTA_HUECOS, i);
         if (!hueco->libre) {
             // modificar la tabla de segmentos
             // buscar el segmento en todas las tablas de segmentos
-            for (int j = 0; j < list_size(TABLA_SEGMENTOS); j++) {
-                t_list* tabla_segmentos = list_get(TABLA_SEGMENTOS, j);
-                for (int k = 1; k < list_size(tabla_segmentos); k++) {
-                    t_segmento* segmento = list_get(tabla_segmentos, k);
+            for (int j = 0; j < list_size(TABLA_SEGMENTOS_GLOBAL); j++) {
+                t_tabla_segmentos* tabla_segmentos = list_get(TABLA_SEGMENTOS_GLOBAL, j);
+                for (int k = 1; k < list_size(tabla_segmentos->segmentos); k++) {
+                    t_segmento* segmento = list_get(tabla_segmentos->segmentos, k);
                     if (segmento->base == hueco->base) {
                         segmento->base = base_actual + tamanio_actual;
-                        list_replace(tabla_segmentos, k, segmento);
+                        list_replace(tabla_segmentos->segmentos, k, segmento);
+                        log_info(LOGGER_MEMORIA, "PID: <%d> - Segmento: <%d> - Base: <%p> - TAMAÑO: <%d>", tabla_segmentos->PID, k, segmento->base, segmento->tamanio);
                         break;
                     }
                 }
@@ -134,5 +159,6 @@ void compactar(){
             hueco->base = base_actual + tamanio_actual;
             tamanio_actual += hueco->tamanio;
         }
+
     }
 }

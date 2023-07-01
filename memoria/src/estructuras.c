@@ -19,6 +19,8 @@ void iniciar_estructuras(t_config* config){
     CONFIG->retardo_compactacion = retardo_compactacion;
     CONFIG->algoritmo_asignacion = algoritmo_asignacion;
 
+    TABLA_SEGMENTOS_GLOBAL = list_create();
+
     LISTA_HUECOS = list_create();
 
     t_hueco* hueco_segmento_0 = malloc(sizeof(t_hueco));

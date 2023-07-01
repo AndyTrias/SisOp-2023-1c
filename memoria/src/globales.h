@@ -7,6 +7,7 @@
 
     extern void* MEMORIA_PRINCIPAL;
     extern t_list* LISTA_HUECOS;
+    extern t_list* TABLA_SEGMENTOS_GLOBAL;
     
     extern t_log* LOGGER_MEMORIA;
     extern int SOCKET_KERNEL;

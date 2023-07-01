@@ -76,6 +76,11 @@ typedef struct {
     int tamanio;
 } t_segmento;
 
+typedef struct {
+    int PID;
+    t_list* segmentos;
+} t_tabla_segmentos;
+
 // Funciones del tp0
 t_paquete *crear_paquete(int);
 void crear_buffer(t_paquete *);
@@ -103,8 +108,9 @@ t_list* deserializar_tabla_segmentos(void*, int*);
 t_list* recibir_tabla_segmentos(int);
 int deserializar_int(void *, int *);
 int recibir_int(int );
-
-
+void serializar_todas_las_tablas_segmentos(t_list* , t_paquete* );
+t_list* deserealizar_todas_las_tablas_segmentos(void* , int* );
+t_list* recibir_todas_las_tablas_segmentos(int );
 
 
 #endif

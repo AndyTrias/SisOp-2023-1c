@@ -27,6 +27,7 @@
     extern void* MEMORIA_PRINCIPAL;
     extern t_configuracion* CONFIG;
     extern t_list* LISTA_HUECOS;
+    extern t_list* TABLA_SEGMENTOS_GLOBAL;
 
     void iniciar_estructuras(t_config* config);
     t_list* crear_tabla_segmentos();

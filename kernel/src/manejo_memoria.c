@@ -27,6 +27,11 @@ void crear_segmento(t_pcb *proceso){// enviar a memoria CREATE_SEGMENT con sus 2
             free(paquete);
 
             recibir_operacion(SOCKET_MEMORIA);
+            t_list* tablas_de_segmentos_actualizadas = recibir_todas_las_tablas_segmentos(SOCKET_MEMORIA);
+
+            // actualizar las tablas de segmentos
+            t_tabla_segmentos* tabla_segmentos = list_get(tablas_de_segmentos_actualizadas, proceso->contexto.PID);
+            t_segmento* s = list_get(tabla_segmentos->segmentos, 2);
             break;
         case OUT_OF_MEMORY:
             log_info(LOGGER_KERNEL,"Finaliza el proceso <%d> - Motivo: <OUT_OF_MEMORY>",proceso->contexto.PID);
