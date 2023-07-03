@@ -15,7 +15,8 @@ void levantar_diccionario_fcb(t_config *config)
     }
 
     struct dirent *archivo;
-    char *nombre_archivo, *ruta_archivo;
+    char *nombre_archivo = string_new();
+    char *ruta_archivo = string_new();
     while ((archivo = readdir(directorio)) != NULL)
     {
         if (archivo->d_type == DT_REG)
@@ -32,8 +33,8 @@ void levantar_diccionario_fcb(t_config *config)
         }
     }
     closedir(directorio);
-    free(nombre_archivo);
     free(ruta_archivo);
+    free(nombre_archivo);
     free(archivo);
 }
 
@@ -68,7 +69,7 @@ void asignar_puntero_directo(char *nombre_archivo)
     config_set_value(fcb, "PUNTERO_DIRECTO", string_itoa(buscar_bloque_libre()));
     config_save(fcb);
 
-    free(fcb);
+    // free(fcb);
 }
 
 void asignar_puntero_indirecto(char *nombre_archivo)
@@ -79,7 +80,7 @@ void asignar_puntero_indirecto(char *nombre_archivo)
     config_set_value(fcb, "PUNTERO_INDIRECTO", string_itoa(buscar_bloque_libre()));
     config_save(fcb);
 
-    free(fcb);
+    // free(fcb);
 }
 
 void liberar_puntero_directo(char *nombre_archivo)
@@ -89,7 +90,7 @@ void liberar_puntero_directo(char *nombre_archivo)
     config_remove_key(fcb, "PUNTERO_DIRECTO");
     config_save(fcb);
 
-    free(fcb);
+    // free(fcb);
 }
 
 void liberar_puntero_indirecto(char *nombre_archivo)
@@ -99,7 +100,7 @@ void liberar_puntero_indirecto(char *nombre_archivo)
     config_remove_key(fcb, "PUNTERO_INDIRECTO");
     config_save(fcb);
 
-    free(fcb);
+    // free(fcb);
 }
 
 void actualizar_fcb(char *nombre_archivo, char *clave, char *valor)
@@ -119,4 +120,10 @@ int obtener_puntero_indirecto(char *nombre_archivo)
 {
     t_config *fcb = dictionary_get(DICCIONARIO_FCB, nombre_archivo);
     return config_get_int_value(fcb, "PUNTERO_INDIRECTO");
+}
+
+int obtener_puntero_directo(char *nombre_archivo)
+{
+    t_config *fcb = dictionary_get(DICCIONARIO_FCB, nombre_archivo);
+    return config_get_int_value(fcb, "PUNTERO_DIRECTO");
 }

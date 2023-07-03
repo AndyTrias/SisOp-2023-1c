@@ -31,6 +31,9 @@ void asignar_bloques_al_puntero_indirecto(void *puntero, int cantidad_bloques_ne
 {
 
     u_int32_t bloque_libre;
+
+    // Como el primer bloque es el puntero directo es - 1
+    int punteros_actuales = MAX(bloques_actuales -1, 0);
     for (int i = 0; i < cantidad_bloques_necesarios; i++)
     {
         bloque_libre = buscar_bloque_libre();
@@ -41,25 +44,43 @@ void asignar_bloques_al_puntero_indirecto(void *puntero, int cantidad_bloques_ne
         }
         else
         {
-            memcpy((bloques_actuales + i) * sizeof(u_int32_t) + puntero, &bloque_libre, sizeof(uint32_t));
+            memcpy(puntero + sizeof(u_int32_t) * (punteros_actuales + i), &bloque_libre, sizeof(uint32_t));
         }
     }
 }
 
 void liberar_bloques_del_puntero_indirecto(void *puntero, int cantidad_bloques_a_liberar, int bloques_actuales)
 {
+    // Como el primer bloque es el puntero directo es - 1
     // Como es para leer me posiciono en el ultimo bloque - 1, que es donde empieza
-    int posicion_a_leer = bloques_actuales - 1;
+    int posicion_a_leer = MAX(bloques_actuales - 2, 0);
 
-    // NO EXISTE MAX EN C
-    if (posicion_a_leer < 0){
-        posicion_a_leer = 0;
-    }
 
-    u_int32_t bloque_actual;
     for (int i = 0; i < cantidad_bloques_a_liberar; i++)
     {
-        memcpy(&bloque_actual, puntero + (posicion_a_leer - i) * sizeof(u_int32_t) , sizeof(uint32_t));
-        marcar_bloque_como_libre(bloque_actual);
+        int bloque = leer_puntero_indirecto(puntero, posicion_a_leer - i);
+        marcar_bloque_como_libre(bloque);
     }
+}
+
+
+void* cargar_bloque_indirecto(char* nombre_archivo, void* archivo_de_bloques)
+{
+    // Hacer el retardo
+    // Hacer el log
+    return archivo_de_bloques + TAMANIO_BLOQUES * obtener_puntero_indirecto(nombre_archivo);
+}
+
+
+int leer_puntero_indirecto(void* puntero, int numero_de_bloque)
+{
+    int bloque_a_leer;
+    memcpy(&bloque_a_leer, puntero + numero_de_bloque * sizeof(u_int32_t), sizeof(uint32_t));
+    return bloque_a_leer;
+}
+
+char* leer_bloque(void* archivo_de_bloques, int bloque, int offset, int tamanio){
+    char* bloque_a_leer = string_new();
+    memcpy(bloque_a_leer, archivo_de_bloques + bloque * TAMANIO_BLOQUES + offset, tamanio);
+    return bloque_a_leer;
 }

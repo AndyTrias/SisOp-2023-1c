@@ -20,6 +20,7 @@
     // Getters 
     int obtener_tamanio(char*);
     int obtener_puntero_indirecto(char*);
+    int obtener_puntero_directo(char*);
 
 
     

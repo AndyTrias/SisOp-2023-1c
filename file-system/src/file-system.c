@@ -22,20 +22,16 @@ int main(int argc, char *argv[])
     // Test de solicitudes sin conexion
     t_parametros_variables *parametros_instruccion = malloc(sizeof(t_parametros_variables));
     parametros_instruccion->cantidad_parametros = 0;
-    agregar_parametro_variable(parametros_instruccion, "archivoTestFcb2");
+    agregar_parametro_variable(parametros_instruccion, "archivoTestFcb");
 
-    atender_solicitudes(F_CREATE, parametros_instruccion);
-    atender_solicitudes(F_OPEN, parametros_instruccion);
+    // atender_solicitudes(F_CREATES, parametros_instruccion);
+    // atender_solicitudes(F_OPEN, parametros_instruccion);
     
-    // agregar_parametro_variable(parametros_instruccion, "257");
+    // agregar_parametro_variable(parametros_instruccion, "152");
     // atender_solicitudes(F_TRUNCATE, parametros_instruccion);
 
-    // liberar_parametros_variables(parametros_instruccion);
-    // agregar_parametro_variable(parametros_instruccion, "archivoTestFcb2");
-    agregar_parametro_variable(parametros_instruccion, "0");
-    atender_solicitudes(F_TRUNCATE, parametros_instruccion);
 
-    liberar_parametros_variables(parametros_instruccion);    
+    // liberar_parametros_variables(parametros_instruccion);    
 
 
     int conexion_memoria;
