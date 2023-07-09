@@ -15,7 +15,7 @@
       "args": [
         // TODO: Agregar los argumentos que se necesiten
         "config/consola.config",
-        "pseudocodigo/instrucciones.txt",
+        "pseudocodigo/instruccionesCompletas.txt",
       ],
       "stopAtEntry": false,
       "cwd": "${workspaceFolder}",

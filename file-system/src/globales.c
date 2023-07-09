@@ -11,4 +11,8 @@ t_dictionary * DICCIONARIO_FCB;
 int TAMANIO_BLOQUES; 
 int CANTIDAD_BLOQUES;
 
+int SOCKET_MEMORIA;
+
+int RETARDO;
+
 

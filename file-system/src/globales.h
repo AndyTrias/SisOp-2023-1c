@@ -16,4 +16,8 @@
     extern int TAMANIO_BLOQUES;
     extern int CANTIDAD_BLOQUES;
 
+    extern int SOCKET_MEMORIA;
+
+    extern int RETARDO;
+
 #endif

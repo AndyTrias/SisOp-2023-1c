@@ -1,0 +1,24 @@
+[INFO] 00:07:21:356 CPU/(4842:4842): Se conecto al servidor 127.0.0.1:8002
+[INFO] 00:07:21:358 CPU/(4842:4842): Esperando kernel....
+[INFO] 00:07:31:290 CPU/(4842:4842): Se conecto el kernel
+[INFO] 00:07:45:760 CPU/(4842:4842): Se recibio un contexto del kernel
+[INFO] 00:07:45:760 CPU/(4842:4842): Comenzando ciclo con nuevo CTX...
+[INFO] 00:07:45:760 CPU/(4842:4842): Program Counter: 0
+[INFO] 00:07:45:760 CPU/(4842:4842): Instruccion nº1: 8
+[INFO] 00:07:46:762 CPU/(4842:4842): PID: 0  -Ejecutando: 8 - AX HOLA
+[INFO] 00:07:46:762 CPU/(4842:4842): Program Counter: 1
+[INFO] 00:07:46:762 CPU/(4842:4842): Instruccion nº2: 2
+[INFO] 00:07:46:762 CPU/(4842:4842): PID: 0  -Ejecutando: 2 - 120 AX
+[INFO] 00:08:17:029 CPU/(4842:4842): PID: 0  -Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 0x55555555e8d8 - Valor: HOLA
+[INFO] 05:08:56:979 CPU/(20052:20052): Se conecto al servidor 127.0.0.1:8002
+[INFO] 05:08:56:979 CPU/(20052:20052): Esperando kernel....
+[INFO] 05:09:06:446 CPU/(20052:20052): Se conecto el kernel
+[INFO] 05:09:21:253 CPU/(20052:20052): Se recibio un contexto del kernel
+[INFO] 05:09:21:254 CPU/(20052:20052): Comenzando ciclo con nuevo CTX...
+[INFO] 05:09:21:254 CPU/(20052:20052): Program Counter: 0
+[INFO] 05:09:21:254 CPU/(20052:20052): Instruccion nº1: 8
+[INFO] 05:09:22:255 CPU/(20052:20052): PID: 0  -Ejecutando: 8 - AX HOLA
+[INFO] 05:09:22:256 CPU/(20052:20052): Program Counter: 1
+[INFO] 05:09:22:256 CPU/(20052:20052): Instruccion nº2: 2
+[INFO] 05:09:22:256 CPU/(20052:20052): PID: 0  -Ejecutando: 2 - 120 AX
+[INFO] 05:09:43:839 CPU/(20052:20052): PID: 0  -Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 0x55555555e8d8 - Valor: HOLA

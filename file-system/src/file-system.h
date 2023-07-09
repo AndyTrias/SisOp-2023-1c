@@ -12,7 +12,7 @@
     
     #include <init.h>
     #include <globales.h>
-    #include <conectar_kernel.h>
+    #include <conexiones_modulos.h>
     #include <fcb.h>
 
 #endif

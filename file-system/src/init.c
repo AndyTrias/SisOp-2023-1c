@@ -15,6 +15,8 @@ void inicializar_conexiones(int *conexion_memoria, t_config *config)
 void inicializar_archivos(t_config *config)
 {
 
+    RETARDO = config_get_int_value(config, "RETARDO_ACCESO_BLOQUE");
+
     t_config *superbloque = levantar_superbloque(config);
 
     CANTIDAD_BLOQUES = config_get_int_value(superbloque, "BLOCK_COUNT");

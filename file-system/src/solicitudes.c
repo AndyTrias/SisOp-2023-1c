@@ -1,7 +1,9 @@
 #include <solicitudes.h>
 
 char *nombre_archivo;
-void* archivo_de_bloques;
+void *archivo_de_bloques;
+int posicion_archivo;
+char *memoria;
 
 void atender_solicitudes(int cod_op, t_parametros_variables *parametros_instruccion)
 {
@@ -66,56 +68,19 @@ void atender_solicitudes(int cod_op, t_parametros_variables *parametros_instrucc
         munmap(archivo_de_bloques, CANTIDAD_BLOQUES * TAMANIO_BLOQUES);
         break;
 
-    case F_READ:
-        int posicion_archivo = atoi(parametros_instruccion->parametros[3]);
-        int tamanio_a_leer = atoi(parametros_instruccion->parametros[2]);
-        char* memoria = parametros_instruccion->parametros[1];
-        log_info(LOGGER_FILE_SYSTEM, "Leer Archivo: %s - Puntero: %d - Memoria: %s - Tamaño: %d", nombre_archivo, posicion_archivo, memoria, tamanio_a_leer);
-
-        char *buffer = string_new();
-        int offset = posicion_archivo % TAMANIO_BLOQUES;
-
-        archivo_de_bloques = mmap(NULL, (TAMANIO_BLOQUES * CANTIDAD_BLOQUES), PROT_READ | PROT_WRITE, MAP_SHARED, fileno(ARCHIVO_BLOQUES), 0);
-        int tamanio_a_leer_del_bloque;
-
-        // leemos el puntero directo
-        if (posicion_archivo < 64)
-        {
-            tamanio_a_leer_del_bloque = MIN(tamanio_a_leer, TAMANIO_BLOQUES - offset);
-            string_append(&buffer, leer_bloque(archivo_de_bloques, obtener_puntero_directo(nombre_archivo), offset, tamanio_a_leer));
-            
-            offset = 0;
-            posicion_archivo += tamanio_a_leer_del_bloque;
-            tamanio_a_leer -= tamanio_a_leer_del_bloque;
-        }
-
-        if (tamanio_a_leer > 0)
-        {
-            void *puntero_indirecto = cargar_bloque_indirecto(archivo_de_bloques, nombre_archivo);
-        
-            while (tamanio_a_leer > 0)
-            {
-                int numero_de_bloque = posicion_archivo / TAMANIO_BLOQUES;
-                tamanio_a_leer_del_bloque = MIN(tamanio_a_leer, TAMANIO_BLOQUES - offset);
-                offset = 0;
-
-                int bloque = leer_puntero_indirecto(puntero_indirecto, numero_de_bloque);
- 
-                string_append(&buffer, leer_bloque(archivo_de_bloques, bloque, offset, tamanio_a_leer_del_bloque));
-
-                tamanio_a_leer -= tamanio_a_leer_del_bloque;
-            }
-        }
-
-        // Escribir el buffer en la memoria
-
-        free(memoria);
-        msync(archivo_de_bloques, CANTIDAD_BLOQUES * TAMANIO_BLOQUES, MS_SYNC);
-        munmap(archivo_de_bloques, CANTIDAD_BLOQUES * TAMANIO_BLOQUES);
-        break;
 
     case F_WRITE:
-        log_info(LOGGER_FILE_SYSTEM, "Escribir Archivo: %s - Puntero: %s - Memoria: %s - Tamaño: %s", nombre_archivo, parametros_instruccion->parametros[3], parametros_instruccion->parametros[1], parametros_instruccion->parametros[2]);
+    case F_READ:
+        char *memoria = parametros_instruccion->parametros[1];
+        int posicion = atoi(parametros_instruccion->parametros[3]);
+        int tamaño = atoi(parametros_instruccion->parametros[2]);
+
+        if (cod_op == F_WRITE)
+            f_write(memoria, posicion, tamaño);
+
+        else
+            f_read(memoria, posicion, tamaño);
+
         break;
 
     default:
@@ -139,8 +104,8 @@ void agrandar_archivo(void *archivo_de_bloques, int cantidad_bloques_a_agregar, 
     if (cantidad_bloques_a_agregar > 0)
     {
 
-        void *bloque_puntero_indirecto = cargar_bloque_indirecto(archivo_de_bloques, nombre_archivo);
-        asignar_bloques_al_puntero_indirecto(bloque_puntero_indirecto, cantidad_bloques_a_agregar, actuales);
+        cargar_puntero_indirecto(nombre_archivo);
+        asignar_bloques_al_puntero_indirecto(nombre_archivo, cantidad_bloques_a_agregar, actuales);
     }
 }
 
@@ -154,12 +119,73 @@ void achicar_archivo(void *archivo_de_bloques, int cantidad_bloques_a_liberar, i
 
     if (cantidad_bloques_a_liberar > 0)
     {
-        void *bloque_puntero_indirecto = cargar_bloque_indirecto(archivo_de_bloques, nombre_archivo);
-        liberar_bloques_del_puntero_indirecto(bloque_puntero_indirecto, cantidad_bloques_a_liberar, actuales);
+        cargar_puntero_indirecto(nombre_archivo);
+        liberar_bloques_del_puntero_indirecto(nombre_archivo, cantidad_bloques_a_liberar, actuales);
     }
 
     if (borrar_todo)
     {
         liberar_puntero_indirecto(nombre_archivo);
     }
+}
+
+void f_write(char *direccion, int posicion_archivo, int tamanio_a_escribir)
+{
+    char *valor_leido = "Loremipsumdolorsitamet,consecteturadipiscingelit.Sedsuscipitturpisvelullamcorper13fghgff";
+    // char* valor_leido = leer_direccion_de_memoria(direccion);
+    
+    log_info(LOGGER_FILE_SYSTEM, "Escribir Archivo: %s - Puntero: %d - Memoria: %s - Tamaño: %d", nombre_archivo, posicion_archivo, direccion, tamanio_a_escribir);
+
+    if (tamanio_a_escribir + posicion_archivo > 64)
+    {
+        // Se carga el puntero indirecto en la memoria
+        cargar_puntero_indirecto(nombre_archivo);
+    }
+
+    while (tamanio_a_escribir > 0)
+    {
+        int tamanio_a_escribir_del_bloque = MIN(tamanio_a_escribir, TAMANIO_BLOQUES - posicion_archivo % TAMANIO_BLOQUES);
+        int bloque_archivo = posicion_archivo / TAMANIO_BLOQUES;
+        int offset = posicion_archivo % TAMANIO_BLOQUES;
+
+        escribir_bloque(nombre_archivo, bloque_archivo, offset, tamanio_a_escribir_del_bloque, valor_leido);
+        valor_leido = string_substring_from(valor_leido, tamanio_a_escribir_del_bloque);
+
+        posicion_archivo += tamanio_a_escribir_del_bloque;
+        tamanio_a_escribir -= tamanio_a_escribir_del_bloque;
+    }
+
+
+    munmap(archivo_de_bloques, CANTIDAD_BLOQUES * TAMANIO_BLOQUES);
+}
+
+void f_read(char *direccion, int posicion_archivo, int tamanio_a_leer)
+{
+    char *buffer = string_new();
+    
+    log_info(LOGGER_FILE_SYSTEM, "Leer Archivo: %s - Puntero: %d - Memoria: %s - Tamaño: %d", nombre_archivo, posicion_archivo, direccion, tamanio_a_leer);
+
+    if (tamanio_a_leer + posicion_archivo > 64)
+    {
+        // Se carga el puntero indirecto en la memoria
+        cargar_puntero_indirecto(nombre_archivo);
+    }
+
+    while (tamanio_a_leer > 0)
+    {
+        int tamanio_a_leer_del_bloque = MIN(tamanio_a_leer, TAMANIO_BLOQUES - posicion_archivo % TAMANIO_BLOQUES);
+        int bloque_archivo = posicion_archivo / TAMANIO_BLOQUES;
+        int offset = posicion_archivo % TAMANIO_BLOQUES;
+
+        void *leido = leer_bloque(nombre_archivo, bloque_archivo, offset, tamanio_a_leer_del_bloque);
+        string_append(&buffer, (char*) leido);
+
+        posicion_archivo += tamanio_a_leer_del_bloque;
+        tamanio_a_leer -= tamanio_a_leer_del_bloque;
+    }
+
+    // escribir_valor_en_memoria(buffer, direccion);
+
+    log_info(LOGGER_FILE_SYSTEM, "Valor Leido: %s", buffer);
+    munmap(archivo_de_bloques, CANTIDAD_BLOQUES * TAMANIO_BLOQUES);
 }

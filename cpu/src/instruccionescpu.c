@@ -117,6 +117,7 @@ op_code execute(t_instruccion *instruccion_actual, t_ctx *ctx)
 		}
 		dir_fisica_string = malloc(10);
 		sprintf(dir_fisica_string, "%ld", dir_fisica);
+		
 		agregar_parametro_desalojo(ctx, registro);
 		agregar_parametro_desalojo(ctx, dir_fisica_string);
 		paquete = crear_paquete(MOV_OUT);
