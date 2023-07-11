@@ -26,8 +26,6 @@ void* planificador_largo(){
     
 }
 
-// no sé que es
-/*
 void* comunicacion_fs(){
 
    while(1){
@@ -45,9 +43,11 @@ void* comunicacion_fs(){
         sem_post(&RESPUESTA_FS);
         break;
     case NO_EXISTE:
-        solicitar_creacion(nombre_archivo);
+        solicitar_creacion();
         break;
-    case OP_TERMINADA:
+    case OP_TERMINADA: //esto es cuando termina el f truncate, 
+    //necesito el nombre del archivo que termino de hacer eso para desbloquear 
+    //al proceso bloquedo por el archivo
         desbloquear_de_fs(nombre_archivo);
         break;
     default:
@@ -56,4 +56,3 @@ void* comunicacion_fs(){
    }
    
 }
-*/

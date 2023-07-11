@@ -79,6 +79,9 @@ t_pcb* buscar_proceso(int pid_buscado){
     }
     t_pcb* proceso = buscar_block(pid_buscado);
    if(proceso != NULL) return proceso;
+
+   resulatdo_buesqueda = buscar_block_fs(pid_buscado);
+   if(resulatdo_buesqueda!=-1) return list_get(BLOQUEADOS_FS,resulatdo_buesqueda);
    else log_info(LOGGER_KERNEL,"No hay proceso con PID: <%d> al que se le pueda actualizar la tabla de segmetnos", pid_buscado); 
 }
 
@@ -108,4 +111,14 @@ t_pcb* buscar_block(int pid_buscado){
         i++;
     }
     return NULL;
+}
+int buscar_block_fs(int pid_buscado){
+    int i = 0;
+    t_pcb *proceso_aux;
+    while(i<list_size(BLOQUEADOS_FS)){
+        proceso_aux = list_get(BLOQUEADOS_FS,i);
+        if(proceso_aux->contexto.PID == pid_buscado) return i
+        i++;
+    }
+    return -1;
 }

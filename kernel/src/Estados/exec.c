@@ -71,7 +71,7 @@ void definir_accion(int cod_op, t_pcb *proceso)
     //se le pregunta a fs si existe
     //si existe se crea la entrada
     //si no se le pide que lo cree y dsp se crea la entrada
-        if (f_open(proceso, proceso->contexto.motivos_desalojo->parametros[0])){ //0 bloqueado, 1 desbloqueado
+        if (f_open(proceso, proceso->contexto.motivos_desalojo->parametros[0])){ //1 bloqueado, 0 desbloqueado
             
             reemplazar_exec_por_nuevo();
         }

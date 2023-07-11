@@ -46,18 +46,24 @@ void eliminar_entrada_tabla(int posicion){
     list_remove(TABLA_GLOBAL_DE_ARCHIVOS_ABIERTOS, posicion);
 }
 
-void existe_archivo(char* nombre){ //Solicita la apertura de un archivo para verificar si existe
+void existe_archivo(char*){ //Solicita la apertura de un archivo para verificar si existe
   t_paquete *paquete = crear_paquete(F_OPEN);
-  agregar_parametro_desalojo(&EJECUTANDO->contexto,nombre);
+  serializar_motivos_desalojo(&EJECUTANDO->contexto.motivos_desalojo);
   enviar_paquete(paquete, SOCKET_FILESYSTEM);
   free(paquete);
 }
 
 void solicitar_creacion(char* nombre){ //Solicita la creacion de un archivo
-  // t_paquete *paquete = crear_paquete(F_CREATE);
-  // agregar_parametro_desalojo(&EJECUTANDO->contexto,nombre);
-  // enviar_paquete(paquete, SOCKET_FILESYSTEM);
-  // free(paquete);
+  t_paquete *paquete = crear_paquete(F_CREATES);
+  serializar_motivos_desalojo(&EJECUTANDO->contexto.motivos_desalojo);
+  enviar_paquete(paquete, SOCKET_FILESYSTEM);
+  free(paquete);
+}
+void solicitar_truncamiento(){
+  t_paquete *paquete = crear_paquete(F_TRUNCATE);
+  serializar_motivos_desalojo(&EJECUTANDO->contexto.motivos_desalojo);
+  enviar_paquete(paquete, SOCKET_FILESYSTEM);
+  free(paquete);
 }
 
 
@@ -65,11 +71,13 @@ int f_open(t_pcb *proceso, char* nombre_archivo){
   int busqueda = busqueda_tabla_global(nombre_archivo);
 
   if (busqueda == -1){
-    existe_archivo(nombre_archivo);
+    existe_archivo(nombre_archivo);//pregunta a fs si existe dicho archivo
     sem_wait(&RESPUESTA_FS);
+
     agregar_entrada_tabla(nombre_archivo, proceso->contexto.PID);
     agregar_archivo_abierto(proceso->archivos_abiertos, nombre_archivo);
     log_info(LOGGER_KERNEL, "PID: %d - Abrir Archivo: %s", proceso->contexto.PID, nombre_archivo);
+
     return 0; //puede seguir
   } else {
     //si esta en la tabla
@@ -77,6 +85,7 @@ int f_open(t_pcb *proceso, char* nombre_archivo){
     agregar_archivo_abierto(proceso->archivos_abiertos, nombre_archivo);
     list_add(entrada_tabla->lista_de_procesos_bloqueados, proceso);
     log_info(LOGGER_KERNEL, "PID: %d - Bloqueado por: %s", proceso->contexto.PID, nombre_archivo);
+    cambio_de_estado(proceso->contexto.PID,"Exec","Block");
     return 1; //bloqueado
   }
 }
@@ -99,6 +108,7 @@ void f_close(t_pcb *proceso, char* nombre_archivo){
       //cambiar pid, cede el control sobre el archivo a otro proceso y lo desbloquea
       entrada_tabla->PID = proceso_a_desbloquear->contexto.PID; 
       agregar_a_lista_ready(proceso_a_desbloquear);
+      cambio_de_estado(proceso_a_desbloquear->contexto.PID,"Block","Ready");
       
       log_info(LOGGER_KERNEL, "PID: %d - Cerrar Archivo: %s", proceso->contexto.PID, nombre_archivo);
       
@@ -130,10 +140,12 @@ void f_truncate(t_pcb *proceso, char* nombre_archivo, char* tamanio_nuevo){
   } else {
     int tamanio = atoi(tamanio_nuevo);
     //mandar a file system nombre_archivo y tamanio
+    solicitar_truncamiento(tamanio);
     list_add(BLOQUEADOS_FS, proceso);
     log_info(LOGGER_KERNEL, "PID: %d - Truncar Archivo: %s - Tamaño: %d", proceso->contexto.PID, nombre_archivo, tamanio);
  
     log_info(LOGGER_KERNEL, "PID: %d - Bloqueado por: %s", proceso->contexto.PID, nombre_archivo);
+    cambio_de_estado(proceso->contexto.PID,"Exec","Block");
   }
 }
 
