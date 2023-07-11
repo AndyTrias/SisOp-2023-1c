@@ -75,16 +75,18 @@ t_pcb* buscar_proceso(int pid_buscado){
 
     resulatdo_buesqueda= buscar_ready(pid_buscado);
     if(resulatdo_buesqueda!=-1){
-        return sacar_de_lista_ready(resulatdo_buesqueda);
+        return get_de_lista_ready(resulatdo_buesqueda);
     }
 
    return buscar_block(pid_buscado);
 }
 
-int buscar_ready(pid){
+int buscar_ready(pid_buscado){
     int i=0;
-
+    t_pcb *proceso_aux;
     while(i<tamnio_lista_ready()){
-        
+        proceso_aux = get_de_lista_ready(i);
+        if(proceso_aux->contexto.PID == pid_buscado) return i
     }
+    return -1;
 }
