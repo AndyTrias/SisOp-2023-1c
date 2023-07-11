@@ -45,7 +45,7 @@ void* comunicacion_fs(){
     case NO_EXISTE:
         solicitar_creacion();
         break;
-    case OP_TERMINADA: //esto es cuando termina el f truncate, 
+    case OP_TERMINADA: //esto es cuando termina el f truncate read y write, 
     //necesito el nombre del archivo que termino de hacer eso para desbloquear 
     //al proceso bloquedo por el archivo
         desbloquear_de_fs(nombre_archivo);
