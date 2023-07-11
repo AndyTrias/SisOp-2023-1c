@@ -28,10 +28,7 @@ void crear_segmento(t_pcb *proceso){// enviar a memoria CREATE_SEGMENT con sus 2
 
             recibir_operacion(SOCKET_MEMORIA);
             t_list* tablas_de_segmentos_actualizadas = recibir_todas_las_tablas_segmentos(SOCKET_MEMORIA);
-
-            // actualizar las tablas de segmentos
-            t_tabla_segmentos* tabla_segmentos = list_get(tablas_de_segmentos_actualizadas, proceso->contexto.PID);
-            t_segmento* s = list_get(tabla_segmentos->segmentos, 2);
+            actualizar_tablas_de_segmentos(tablas_de_segmentos_actualizadas);
             break;
         case OUT_OF_MEMORY:
             log_info(LOGGER_KERNEL,"Finaliza el proceso <%d> - Motivo: <OUT_OF_MEMORY>",proceso->contexto.PID);
@@ -56,4 +53,38 @@ void eliminar_segmento(t_pcb *proceso){
     proceso->contexto.tabla_segmentos = tabla_segmentos_actualizada;
 
     log_info(LOGGER_KERNEL, "PID: <%d> - Eliminar Segmento - Id Segmento: <%d>", proceso->contexto.PID, atoi(proceso->contexto.motivos_desalojo->parametros[0]));
+}
+void actualizar_tablas_de_segmentos(t_list* lista_segmentos){
+    int i = 0;
+    t_tabla_segmentos* tabla_segmentos_por_proceso = list_get(lista_segmentos, i);
+    t_pcb* proceso_a_actualizar;
+
+    while(i<list_size(lista_segmentos)){
+        tabla_segmentos_por_proceso = list_get(lista_segmentos, i);
+        
+        proceso_a_actualizar= buscar_proceso(tabla_segmentos_por_proceso->PID);
+        proceso_a_actualizar->contexto.tabla_segmentos = tabla_segmentos_por_proceso->segmentos;
+        
+        i++;
+    }
+
+}
+t_pcb* buscar_proceso(int pid_buscado){
+    int resulatdo_buesqueda; //en -1 entoces no lo encontro
+    if(EJECUTANDO->contexto.PID == pid_buscado) return EJECUTANDO;
+
+    resulatdo_buesqueda= buscar_ready(pid_buscado);
+    if(resulatdo_buesqueda!=-1){
+        return sacar_de_lista_ready(resulatdo_buesqueda);
+    }
+
+   return buscar_block(pid_buscado);
+}
+
+int buscar_ready(pid){
+    int i=0;
+
+    while(i<tamnio_lista_ready()){
+        
+    }
 }

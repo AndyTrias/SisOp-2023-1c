@@ -101,7 +101,13 @@ t_pcb *get_de_lista_ready(int posicion)
 
     return pcb;
 }
-
+int tamnio_lista_ready(){
+    int i;
+    pthread_mutex_lock(&MUTEX_LISTA_NEW);
+    i= list_size(LISTA_READY);
+    pthread_mutex_unlock(&MUTEX_LISTA_NEW);
+    return i;
+}
 //cambios de estado
 void cambio_de_estado(int pid, char*anterior, char* nuevo){
     log_info(LOGGER_KERNEL,"PID: <%d> - Estado Anterior: <%s> - Estado Actual: <%s>",pid,anterior,nuevo);

@@ -31,7 +31,7 @@ t_pcb *get_proceso_por_hrrn()
     float RR_aux;
     t_pcb *proceso_aux;
 
-    while (i < list_size(LISTA_READY))
+    while (i < tamnio_lista_ready())
     {
         proceso_aux = get_de_lista_ready(i);
         RR_aux = 1 + ((tiempo_actual - proceso_aux->tiempo_llegada_ready) / proceso_aux->estimado_prox_rafaga);
