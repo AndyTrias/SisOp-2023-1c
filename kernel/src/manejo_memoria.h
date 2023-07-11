@@ -5,10 +5,12 @@
     #include <utils/mensajes.h>
     #include <Estados/exit.h>
 
-    void mostrar_segmento(t_segmento* );
     void crear_segmento(t_pcb *);
     void eliminar_segmento(t_pcb *);
-
+    void actualizar_tablas_de_segmentos(t_list* );
+    t_pcb* buscar_proceso(int );
+    int buscar_ready(int );
+    t_pcb* buscar_block(int );
     
 
 #endif

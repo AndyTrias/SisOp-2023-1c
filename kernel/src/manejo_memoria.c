@@ -82,7 +82,7 @@ t_pcb* buscar_proceso(int pid_buscado){
    else log_info(LOGGER_KERNEL,"No hay proceso con PID: <%d> al que se le pueda actualizar la tabla de segmetnos", pid_buscado); 
 }
 
-int buscar_ready(pid_buscado){
+int buscar_ready(int pid_buscado){
     int i=0;
     t_pcb *proceso_aux;
     while(i<tamnio_lista_ready()){
@@ -92,7 +92,7 @@ int buscar_ready(pid_buscado){
     }
     return -1;
 }
-t_pcb* buscar_block(pid_buscado){
+t_pcb* buscar_block(int pid_buscado){
     int i=0;
     int j=0;
     t_list* aux;
