@@ -16,7 +16,7 @@ void atender_solicitudes(int cod_op, t_parametros_variables *parametros_instrucc
         log_info(LOGGER_FILE_SYSTEM, "Crear Archivo: %s", nombre_archivo);
         crear_fcb(nombre_archivo);
 
-        // Devolver OK a kernel
+        // Devolver un existe, lo hicimos asi
         break;
 
     case F_OPEN:

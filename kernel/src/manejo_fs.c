@@ -49,23 +49,35 @@ void eliminar_entrada_tabla(int posicion){
 void existe_archivo(char*){ //Solicita la apertura de un archivo para verificar si existe
   t_paquete *paquete = crear_paquete(F_OPEN);
   serializar_motivos_desalojo(&EJECUTANDO->contexto.motivos_desalojo);
+  
   enviar_paquete(paquete, SOCKET_FILESYSTEM);
   free(paquete);
 }
 
 void solicitar_creacion(char* nombre){ //Solicita la creacion de un archivo
   t_paquete *paquete = crear_paquete(F_CREATES);
-  serializar_motivos_desalojo(&EJECUTANDO->contexto.motivos_desalojo);
+  serializar_motivos_desalojo(&EJECUTANDO->contexto.motivos_desalojo,paquete);
   enviar_paquete(paquete, SOCKET_FILESYSTEM);
   free(paquete);
 }
 void solicitar_truncamiento(){
   t_paquete *paquete = crear_paquete(F_TRUNCATE);
-  serializar_motivos_desalojo(&EJECUTANDO->contexto.motivos_desalojo);
+  serializar_motivos_desalojo(&EJECUTANDO->contexto.motivos_desalojo,paquete);
   enviar_paquete(paquete, SOCKET_FILESYSTEM);
   free(paquete);
 }
-
+void solicitar_lectura(int puntero, int desplazamiento, int dir_fisica){
+  t_paquete *paquete = crear_paquete(F_READ);
+  serializar_motivos_desalojo(&EJECUTANDO->contexto.motivos_desalojo,paquete);
+  serializar_motivos_desalojo(puntero,paquete);
+  serializar_motivos_desalojo(desplazamiento,paquete);
+  serializar_motivos_desalojo(dir_fisica,paquete);
+  enviar_paquete(paquete, SOCKET_FILESYSTEM);
+  free(paquete);
+}
+void solicitar_escritura(int desplazamieno, int dir_fisica){
+// no pase el puntero porque en el tp no lo dice, pero es solo agregarle el parametro
+}
 
 int f_open(t_pcb *proceso, char* nombre_archivo){
   int busqueda = busqueda_tabla_global(nombre_archivo);
@@ -162,22 +174,24 @@ int obtener_puntero(t_pcb *proceso, char* nombre_archivo){
   }
 }
 
-void f_read(t_pcb *proceso, char* nombre_archivo, char* cant){
+void f_read(t_pcb *proceso, char* nombre_archivo){
   int busqueda = busqueda_tabla_global(nombre_archivo);
   t_tabla_global* entrada_tabla = list_get(TABLA_GLOBAL_DE_ARCHIVOS_ABIERTOS, busqueda);
-  int cant_bytes= atoi(proceso->contexto.motivos_desalojo->parametros[1]);
+  int cant_bytes= atoi(proceso->contexto.motivos_desalojo->parametros[2]);
 
   if (busqueda == -1 || entrada_tabla->PID != proceso->contexto.PID){
     log_error(LOGGER_KERNEL, "PID: %d - Error al hacer read en Archivo: %s", proceso->contexto.PID, nombre_archivo);
   } else {
    int dir_fisica = atoi(proceso->contexto.motivos_desalojo->parametros[1]); // cant_bytes y dir_fisica tienen el mismo numero
-    int puntero = obtener_puntero(proceso, nombre_archivo);
+   int puntero = obtener_puntero(proceso, nombre_archivo);
    //mandar a file system archivo y cant_bytes
    list_add(BLOQUEADOS_FS, proceso);
-   //Leer Archivo: “PID: <PID> - Leer Archivo: <NOMBRE ARCHIVO> - Puntero <PUNTERO> - Dirección Memoria <DIRECCIÓN MEMORIA> - Tamaño <TAMAÑO>”
-   //Motivo de Bloqueo: “PID: <PID> - Bloqueado por: <IO / NOMBRE_RECURSO / NOMBRE_ARCHIVO>”
+   
    log_info(LOGGER_KERNEL, "PID: %d - Leer Archivo: %s - Puntero %d - Dirección Memoria %d - Tamaño %d", proceso->contexto.PID, nombre_archivo, puntero, dir_fisica, cant_bytes);
-   log_info(LOGGER_KERNEL, "PID: %d - Bloqueado por: %s", proceso->contexto.PID, nombre_archivo);  
+   log_info(LOGGER_KERNEL, "PID: %d - Bloqueado por: %s", proceso->contexto.PID, nombre_archivo);
+
+   cambio_de_estado(proceso->contexto.PID,"Exec","Block");
+
   }
 
 }
@@ -185,7 +199,7 @@ void f_read(t_pcb *proceso, char* nombre_archivo, char* cant){
 void f_write(t_pcb *proceso, char* nombre_archivo, char* cant){
   int busqueda = busqueda_tabla_global(nombre_archivo);
   t_tabla_global* entrada_tabla = list_get(TABLA_GLOBAL_DE_ARCHIVOS_ABIERTOS, busqueda);
-  int cant_bytes= atoi(proceso->contexto.motivos_desalojo->parametros[1]);
+  int cant_bytes= atoi(proceso->contexto.motivos_desalojo->parametros[2]);
 
   if (busqueda == -1 || entrada_tabla->PID != proceso->contexto.PID){
     log_error(LOGGER_KERNEL, "PID: %d - Error al hacer read en Archivo: %s", proceso->contexto.PID, nombre_archivo);
@@ -193,11 +207,14 @@ void f_write(t_pcb *proceso, char* nombre_archivo, char* cant){
    //mandar a file system archivo y cant_bytes
    int dir_fisica = atoi(proceso->contexto.motivos_desalojo->parametros[1]); // cant_bytes y dir_fisica tienen el mismo numero
    int puntero = obtener_puntero(proceso, nombre_archivo);
+   
+   solicitar_escritura(cant_bytes,dir_fisica);
+   
    list_add(BLOQUEADOS_FS, proceso);
-   //Escribir Archivo: “PID: <PID> - Escribir Archivo: <NOMBRE ARCHIVO> - Puntero <PUNTERO> - Dirección Memoria <DIRECCIÓN MEMORIA> - Tamaño <TAMAÑO>”
-    //Motivo de Bloqueo: “PID: <PID> - Bloqueado por: <IO / NOMBRE_RECURSO / NOMBRE_ARCHIVO>”
+  
     log_info(LOGGER_KERNEL, "PID: %d - Escribir Archivo: %s - Puntero %d - Dirección Memoria %d - Tamaño %d", proceso->contexto.PID, nombre_archivo, puntero, dir_fisica, cant_bytes);
     log_info(LOGGER_KERNEL, "PID: %d - Bloqueado por: %s", proceso->contexto.PID, nombre_archivo);
+    cambio_de_estado(proceso->contexto.PID, "Exec","Block");
 
   }
 }

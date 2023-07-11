@@ -85,19 +85,17 @@ void definir_accion(int cod_op, t_pcb *proceso)
     case F_READ:
 
         f_read(proceso, proceso->contexto.motivos_desalojo->parametros[0], proceso->contexto.motivos_desalojo->parametros[1]);
-        //cambio_de_estado(proceso->contexto.PID,"Exec","Ready");
+    
         reemplazar_exec_por_nuevo();
         break;
 
     case F_WRITE:
-        f_write(proceso, proceso->contexto.motivos_desalojo->parametros[0], proceso->contexto.motivos_desalojo->parametros[1]);
-        //cambio_de_estado(proceso->contexto.PID,"Exec","Ready");
+        f_write(proceso, proceso->contexto.motivos_desalojo->parametros[0]);
         reemplazar_exec_por_nuevo();
         break;
 
     case F_TRUNCATE:
-        f_truncate(proceso,proceso->contexto.motivos_desalojo->parametros[0], proceso->contexto.motivos_desalojo->parametros[1]);
-        //cambio_de_estado(proceso->contexto.PID,"Exec","Ready");
+        f_truncate(proceso,proceso->contexto.motivos_desalojo->parametros[0]);
         reemplazar_exec_por_nuevo();
         break;
     case CREATE_SEGMENT:
