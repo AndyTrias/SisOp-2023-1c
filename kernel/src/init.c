@@ -24,11 +24,15 @@ void inicializar_semaforos() {
     pthread_mutex_init(&MUTEX_LISTA_NEW, NULL);
     pthread_mutex_init(&MUTEX_LISTA_READY, NULL);
     pthread_mutex_init(&MUTEX_TABLA_ARCHIVOS, NULL);
+    pthread_mutex_init(&MUTEX_LISTA_BLOCKFS, NULL);
+    pthread_mutex_init(&SOLICITUD_FS, NULL);
     sem_init(&PROCESO_EN_NEW, 0, 0);
     sem_init(&PROCESO_EN_READY, 0, 0);
     sem_init(&GRADO_MULTIPROGRAMACION, 0, GRADO_MAX_MULTIPROGRAMACION);
     sem_init(&CORTO_PLAZO, 0, 0);
     sem_init(&RESPUESTA_FS,0,0);
+    sem_init(&PROCESO_EN_BLOCKFS,0,0);
+    sem_init(&ENTRADA_EN_TABLA_GLOBAL,0,0);
 
 }
 

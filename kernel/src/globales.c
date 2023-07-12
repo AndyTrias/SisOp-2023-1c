@@ -29,13 +29,17 @@ char **INSTANCIAS_RECURSOS;
 // Semaforos
 sem_t PROCESO_EN_NEW;
 sem_t PROCESO_EN_READY;
+sem_t PROCESO_EN_BLOCKFS;
 sem_t GRADO_MULTIPROGRAMACION;
 sem_t CORTO_PLAZO;
 sem_t ARCHIVO_ABIERTO;
 sem_t RESPUESTA_FS;
+sem_t ENTRADA_EN_TABLA_GLOBAL;
 pthread_mutex_t MUTEX_LISTA_NEW;
 pthread_mutex_t MUTEX_LISTA_READY;
-pthread_mutex_t MUTEX_TABLA_ARCHIVOS;
+pthread_mutex_t MUTEX_TABLA_ARCHIVOS;//revisar si hay que usarlo o fleta
+pthread_mutex_t MUTEX_LISTA_BLOCKFS;
+pthread_mutex_t SOLICITUD_FS;
 
 // Temporales
 
@@ -63,10 +67,23 @@ void agregar_a_lista_ready(t_pcb *nuevo){
     sem_post(&PROCESO_EN_READY);
 
 }
+void agregar_a_lista_blockfs(t_pcb *nuevo){
+    thread_mutex_lock(&MUTEX_LISTA_BLOCKFS);
+    list_add(BLOQUEADOS_FS, nuevo);
+    pthread_mutex_unlock(&MUTEX_LISTA_BLOCKFS);
+    sem_post(&PROCESO_EN_BLOCKFS);
+}
+void agregar_a_tabla_global(t_tabla_global *nuevo){
+    thread_mutex_lock(&MUTEX_TABLA_ARCHIVOS);
+    list_add(TABLA_GLOBAL_DE_ARCHIVOS_ABIERTOS, nuevo);
+    pthread_mutex_unlock(&MUTEX_TABLA_ARCHIVOS);
+    sem_post(&ENTRADA_EN_TABLA_GLOBAL);
+}
 
 // Para sacar elemento X de la lista
 t_pcb *sacar_de_lista_new(int posicion)
 {
+    sem_wait(&PROCESO_EN_NEW);
     pthread_mutex_lock(&MUTEX_LISTA_NEW);
     t_pcb *pcb = list_remove(LISTA_NEW, posicion);
     pthread_mutex_unlock(&MUTEX_LISTA_NEW);
@@ -82,6 +99,14 @@ t_pcb *sacar_de_lista_ready(int posicion)
     pthread_mutex_unlock(&MUTEX_LISTA_READY);
     return pcb;
 }
+t_tabla_global *sacar_de_tabla_global(int posicion)
+{
+    sem_wait(&ENTRADA_EN_TABLA_GLOBAL);
+    pthread_mutex_lock(&MUTEX_TABLA_ARCHIVOS);
+    t_tabla_global *elemento = list_remove(TABLA_GLOBAL_DE_ARCHIVOS_ABIERTOS, posicion);
+    pthread_mutex_unlock(&MUTEX_TABLA_ARCHIVOS);
+    return elemento;
+}
 void sacar_elemento_de_lista_ready(t_pcb *elemento)
 {
     sem_wait(&PROCESO_EN_READY);
@@ -89,6 +114,13 @@ void sacar_elemento_de_lista_ready(t_pcb *elemento)
     temporal_resume(elemento->tiempo_desde_ult_ready);
     list_remove_element(LISTA_READY, elemento);
     pthread_mutex_unlock(&MUTEX_LISTA_READY);
+}
+void sacar_elemento_de_lista_blockfs(t_pcb *elemento)
+{
+    sem_wait(&PROCESO_EN_BLOCKFS);
+    pthread_mutex_lock(&MUTEX_LISTA_BLOCKFS);
+    list_remove_element(BLOQUEADOS_FS, elemento);
+    pthread_mutex_unlock(&MUTEX_LISTA_BLOCKFS);
 }
 // Monitores para los get
 t_pcb *get_de_lista_ready(int posicion)
@@ -101,11 +133,45 @@ t_pcb *get_de_lista_ready(int posicion)
 
     return pcb;
 }
+t_pcb *get_de_lista_blockfs(int posicion)
+{
+    sem_wait(&PROCESO_EN_BLOCKFS);
+    pthread_mutex_lock(&MUTEX_LISTA_BLOCKFS);
+    t_pcb *pcb = list_get(BLOQUEADOS_FS, posicion);
+    pthread_mutex_unlock(&MUTEX_LISTA_BLOCKFS);
+    sem_post(&PROCESO_EN_BLOCKFS);
+
+    return pcb;
+}
+t_tabla_global *get_de_tabla_global(int posicion)
+{
+    sem_wait(&ENTRADA_EN_TABLA_GLOBAL);
+    pthread_mutex_lock(&MUTEX_TABLA_ARCHIVOS);
+    t_tabla_global *elemento = list_get(BLOQUEADOS_FS, posicion);
+    pthread_mutex_unlock(&MUTEX_TABLA_ARCHIVOS);
+    sem_post(&ENTRADA_EN_TABLA_GLOBAL);
+
+    return elemento;
+}
 int tamnio_lista_ready(){
     int i;
     pthread_mutex_lock(&MUTEX_LISTA_NEW);
     i= list_size(LISTA_READY);
     pthread_mutex_unlock(&MUTEX_LISTA_NEW);
+    return i;
+}
+int tamnio_lista_blockfs(){
+    int i;
+    pthread_mutex_lock(&MUTEX_LISTA_BLOCKFS);
+    i= list_size(BLOQUEADOS_FS);
+    pthread_mutex_unlock(&MUTEX_LISTA_BLOCKFS);
+    return i;
+}
+int tamnio_tabla_global(){
+    int i;
+    pthread_mutex_lock(&MUTEX_TABLA_ARCHIVOS);
+    i= list_size(TABLA_GLOBAL_DE_ARCHIVOS_ABIERTOS);
+    pthread_mutex_unlock(&MUTEX_TABLA_ARCHIVOS);
     return i;
 }
 //cambios de estado

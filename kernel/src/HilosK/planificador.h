@@ -7,6 +7,6 @@
     #include <manejo_fs.h>
     void* planificador_corto();
     void* planificador_largo();
-    void* recibir_consolas(int);
+    void* comunicacion_fs();
     
 #endif

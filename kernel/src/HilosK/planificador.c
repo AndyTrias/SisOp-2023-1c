@@ -40,14 +40,18 @@ void* comunicacion_fs(){
 
     switch (cod_op){
     case EXISTE:
+        pthread_mutex_unlock(&BLOQUEADOS_FS);
         sem_post(&RESPUESTA_FS);
         break;
     case NO_EXISTE:
+        pthread_mutex_unlock(&BLOQUEADOS_FS);
         solicitar_creacion();
         break;
     case OP_TERMINADA: //esto es cuando termina el f truncate read y write, 
     //necesito el nombre del archivo que termino de hacer eso para desbloquear 
     //al proceso bloquedo por el archivo
+        pthread_mutex_unlock(&BLOQUEADOS_FS);
+        char* nombre_archivo;// = deserealizar_nombre(buffer, desplazamiento);
         desbloquear_de_fs(nombre_archivo);
         break;
     default:
