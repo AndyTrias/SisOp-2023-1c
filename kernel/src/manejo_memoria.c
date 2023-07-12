@@ -18,6 +18,7 @@ void crear_segmento(t_pcb *proceso){// enviar a memoria CREATE_SEGMENT con sus 2
             memcpy(&(segmento->base), buffer, sizeof(void*));
             segmento->tamanio = atoi(proceso->contexto.motivos_desalojo->parametros[1]);
 
+            pthread_mutex_unlock(&SOLICITUD_MEMORIA);  
             log_info(LOGGER_KERNEL, "PID: <%d> - Crear Segmento - Id: <%d> - Tamaño: <%d>", proceso->contexto.PID, segmento->id_segmento, segmento->tamanio);
             //supongo que cuando termina de crear el segmento se manda de nuevo al cpu por ende no cambio de pcb
             break;
@@ -31,10 +32,10 @@ void crear_segmento(t_pcb *proceso){// enviar a memoria CREATE_SEGMENT con sus 2
             actualizar_tablas_de_segmentos(tablas_de_segmentos_actualizadas);
             break;
         case OUT_OF_MEMORY:
+            pthread_mutex_unlock(&SOLICITUD_MEMORIA);
             log_info(LOGGER_KERNEL,"Finaliza el proceso <%d> - Motivo: <OUT_OF_MEMORY>",proceso->contexto.PID);
             terminar_proceso(proceso);
             break;
-
     }
     
 }
@@ -51,6 +52,8 @@ void eliminar_segmento(t_pcb *proceso){
     t_list* tabla_segmentos_actualizada = recibir_tabla_segmentos(SOCKET_MEMORIA);
 
     proceso->contexto.tabla_segmentos = tabla_segmentos_actualizada;
+
+    pthread_mutex_unlock(&SOLICITUD_MEMORIA);    
 
     log_info(LOGGER_KERNEL, "PID: <%d> - Eliminar Segmento - Id Segmento: <%d>", proceso->contexto.PID, atoi(proceso->contexto.motivos_desalojo->parametros[0]));
 }
@@ -90,7 +93,7 @@ int buscar_ready(int pid_buscado){
     t_pcb *proceso_aux;
     while(i<tamnio_lista_ready()){
         proceso_aux = get_de_lista_ready(i);
-        if(proceso_aux->contexto.PID == pid_buscado) return i
+        if(proceso_aux->contexto.PID == pid_buscado) return i;
         i++;
     }
     return -1;
@@ -101,11 +104,11 @@ t_pcb* buscar_block(int pid_buscado){
     t_list* aux;
     t_pcb* proceso_aux;
     while(i<list_size(LISTAS_BLOCK)){
-        aux = list_get(LISTAS_BLOCK);
+        aux = list_get(LISTAS_BLOCK,i);
         while(j<list_size(aux)){
-            proceso_aux=list_get(aux);
+            proceso_aux=list_get(aux,j);
             if(proceso_aux->contexto.PID == pid_buscado) return proceso_aux;
-            j++
+            j++;
         }
         j=0;
         i++;
@@ -115,9 +118,9 @@ t_pcb* buscar_block(int pid_buscado){
 int buscar_block_fs(int pid_buscado){
     int i = 0;
     t_pcb *proceso_aux;
-    while(i<list_size(BLOQUEADOS_FS)){
-        proceso_aux = list_get(BLOQUEADOS_FS,i);
-        if(proceso_aux->contexto.PID == pid_buscado) return i
+    while(i<tamnio_lista_blockfs()){
+        proceso_aux = get_de_lista_blockfs(i);
+        if(proceso_aux->contexto.PID == pid_buscado) return i;
         i++;
     }
     return -1;

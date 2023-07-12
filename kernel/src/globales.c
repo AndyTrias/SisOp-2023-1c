@@ -37,9 +37,10 @@ sem_t RESPUESTA_FS;
 sem_t ENTRADA_EN_TABLA_GLOBAL;
 pthread_mutex_t MUTEX_LISTA_NEW;
 pthread_mutex_t MUTEX_LISTA_READY;
-pthread_mutex_t MUTEX_TABLA_ARCHIVOS;//revisar si hay que usarlo o fleta
+pthread_mutex_t MUTEX_TABLA_ARCHIVOS;
 pthread_mutex_t MUTEX_LISTA_BLOCKFS;
 pthread_mutex_t SOLICITUD_FS;
+pthread_mutex_t SOLICITUD_MEMORIA;
 
 // Temporales
 

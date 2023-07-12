@@ -84,7 +84,7 @@ void definir_accion(int cod_op, t_pcb *proceso)
 
     case F_READ:
 
-        f_read(proceso, proceso->contexto.motivos_desalojo->parametros[0], proceso->contexto.motivos_desalojo->parametros[1]);
+        f_read(proceso, proceso->contexto.motivos_desalojo->parametros[0]);
     
         reemplazar_exec_por_nuevo();
         break;
@@ -95,13 +95,15 @@ void definir_accion(int cod_op, t_pcb *proceso)
         break;
 
     case F_TRUNCATE:
-        f_truncate(proceso,proceso->contexto.motivos_desalojo->parametros[0]);
+        f_truncate(proceso,proceso->contexto.motivos_desalojo->parametros[0],proceso->contexto.motivos_desalojo->parametros[1]);
         reemplazar_exec_por_nuevo();
         break;
     case CREATE_SEGMENT:
+        pthread_mutex_lock(&SOLICITUD_MEMORIA);
         crear_segmento(proceso);
         break;
     case DELETE_SEGMENT:
+        pthread_mutex_lock(&SOLICITUD_MEMORIA);
         eliminar_segmento(proceso);
         break;
     default:

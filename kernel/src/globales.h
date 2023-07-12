@@ -50,6 +50,7 @@ extern pthread_mutex_t MUTEX_LISTA_READY;
 extern pthread_mutex_t MUTEX_TABLA_ARCHIVOS;
 extern pthread_mutex_t MUTEX_LISTA_BLOCKFS;
 extern pthread_mutex_t SOLICITUD_FS;
+extern pthread_mutex_t SOLICITUD_MEMORIA;
 
 
 extern t_temporal* TIEMPO_CORRIENDO;
