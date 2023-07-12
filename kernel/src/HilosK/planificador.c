@@ -40,11 +40,11 @@ void* comunicacion_fs(){
 
     switch (cod_op){
     case EXISTE:
-        pthread_mutex_unlock(&BLOQUEADOS_FS);
+        pthread_mutex_unlock(&SOLICITUD_FS);
         sem_post(&RESPUESTA_FS);
         break;
     case NO_EXISTE:
-        pthread_mutex_unlock(&BLOQUEADOS_FS);
+        pthread_mutex_unlock(&SOLICITUD_FS);
         solicitar_creacion();
         break;
     case OP_TERMINADA: //esto es cuando termina el f truncate read y write, 

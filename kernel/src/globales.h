@@ -9,6 +9,12 @@
 #include <semaphore.h>
 #include <string.h>
 
+typedef struct {
+        char identificador[30];
+        int PID; //para verificar que solo el archivo abierto lo pueda operar
+        t_list * lista_de_procesos_bloqueados;
+    }t_tabla_global;
+
 extern t_log* LOGGER_KERNEL;
 extern int SOCKET_CPU;
 extern int SOCKET_MEMORIA;
@@ -83,10 +89,6 @@ int tamnio_tabla_global();
 //cambios de estado
 void cambio_de_estado();
 
-typedef struct {
-        char identificador[30];
-        int PID; //para verificar que solo el archivo abierto lo pueda operar
-        t_list * lista_de_procesos_bloqueados;
-    }t_tabla_global;
+
 
 #endif

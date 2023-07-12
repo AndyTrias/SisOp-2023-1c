@@ -26,6 +26,7 @@ void inicializar_semaforos() {
     pthread_mutex_init(&MUTEX_TABLA_ARCHIVOS, NULL);
     pthread_mutex_init(&MUTEX_LISTA_BLOCKFS, NULL);
     pthread_mutex_init(&SOLICITUD_FS, NULL);
+    pthread_mutex_init(&SOLICITUD_MEMORIA, NULL);
     sem_init(&PROCESO_EN_NEW, 0, 0);
     sem_init(&PROCESO_EN_READY, 0, 0);
     sem_init(&GRADO_MULTIPROGRAMACION, 0, GRADO_MAX_MULTIPROGRAMACION);

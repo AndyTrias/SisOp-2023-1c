@@ -11,6 +11,8 @@
     t_pcb* buscar_proceso(int );
     int buscar_ready(int );
     t_pcb* buscar_block(int );
+    int buscar_block_fs(int );
+
     
 
 #endif

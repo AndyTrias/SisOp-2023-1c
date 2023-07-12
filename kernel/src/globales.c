@@ -69,13 +69,13 @@ void agregar_a_lista_ready(t_pcb *nuevo){
 
 }
 void agregar_a_lista_blockfs(t_pcb *nuevo){
-    thread_mutex_lock(&MUTEX_LISTA_BLOCKFS);
+    pthread_mutex_lock(&MUTEX_LISTA_BLOCKFS);
     list_add(BLOQUEADOS_FS, nuevo);
     pthread_mutex_unlock(&MUTEX_LISTA_BLOCKFS);
     sem_post(&PROCESO_EN_BLOCKFS);
 }
 void agregar_a_tabla_global(t_tabla_global *nuevo){
-    thread_mutex_lock(&MUTEX_TABLA_ARCHIVOS);
+    pthread_mutex_lock(&MUTEX_TABLA_ARCHIVOS);
     list_add(TABLA_GLOBAL_DE_ARCHIVOS_ABIERTOS, nuevo);
     pthread_mutex_unlock(&MUTEX_TABLA_ARCHIVOS);
     sem_post(&ENTRADA_EN_TABLA_GLOBAL);

@@ -66,7 +66,7 @@ void actualizar_tablas_de_segmentos(t_list* lista_segmentos){
         tabla_segmentos_por_proceso = list_get(lista_segmentos, i);
         
         proceso_a_actualizar= buscar_proceso(tabla_segmentos_por_proceso->PID);
-        proceso_a_actualizar->contexto.tabla_segmentos = tabla_segmentos_por_proceso->segmentos;
+        if(proceso_a_actualizar!= NULL)proceso_a_actualizar->contexto.tabla_segmentos = tabla_segmentos_por_proceso->segmentos;
         
         i++;
     }
@@ -84,8 +84,11 @@ t_pcb* buscar_proceso(int pid_buscado){
    if(proceso != NULL) return proceso;
 
    resulatdo_buesqueda = buscar_block_fs(pid_buscado);
-   if(resulatdo_buesqueda!=-1) return list_get(BLOQUEADOS_FS,resulatdo_buesqueda);
-   else log_info(LOGGER_KERNEL,"No hay proceso con PID: <%d> al que se le pueda actualizar la tabla de segmetnos", pid_buscado); 
+   if(resulatdo_buesqueda!=-1) return get_de_lista_blockfs(resulatdo_buesqueda);
+
+   log_info(LOGGER_KERNEL,"No hay proceso con PID: <%d> al que se le pueda actualizar la tabla de segmetnos", pid_buscado); 
+
+    return NULL;
 }
 
 int buscar_ready(int pid_buscado){
