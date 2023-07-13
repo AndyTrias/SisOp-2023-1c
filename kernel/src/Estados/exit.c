@@ -14,6 +14,8 @@ void terminar_proceso(t_pcb *proceso){
     list_destroy(proceso->archivos_abiertos);
     list_destroy(proceso->recursos_en_uso);
 
+    pthread_mutex_lock(&SOLICITUD_MEMORIA);
+    
     t_paquete* paquete = crear_paquete(TERMINAR);
     agregar_a_paquete_dato_serializado(paquete, &proceso->contexto.PID, sizeof(int));
     serializar_tabla_segmentos(proceso->contexto.tabla_segmentos, paquete);
@@ -24,6 +26,9 @@ void terminar_proceso(t_pcb *proceso){
     enviar_paquete(paquete, proceso->socket_consola);
     free(paquete);
     
+    recibir_operacion(SOCKET_MEMORIA);
+
+    pthread_mutex_unlock(&SOLICITUD_MEMORIA);
     sem_post(&GRADO_MULTIPROGRAMACION);
     EJECUTANDO= ceder_proceso_a_exec();
 }
