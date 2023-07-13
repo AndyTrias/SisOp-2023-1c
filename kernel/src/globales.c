@@ -62,7 +62,7 @@ void agregar_a_lista_ready(t_pcb *nuevo){
     pthread_mutex_lock(&MUTEX_LISTA_READY);
     
     temporal_stop(nuevo->tiempo_desde_ult_ready);
-    nuevo->tiempo_llegada_ready = temporal_gettime(nuevo->tiempo_desde_ult_ready) + temporal_gettime(TIEMPO_CORRIENDO);
+    nuevo->tiempo_llegada_ready = temporal_gettime(TIEMPO_CORRIENDO);
     list_add(LISTA_READY, nuevo);
     
     char* result = concatenarLista(LISTA_READY);
@@ -100,7 +100,6 @@ t_pcb *sacar_de_lista_ready(int posicion)
     sem_wait(&PROCESO_EN_READY); // Me parece que es este semaforo el
     pthread_mutex_lock(&MUTEX_LISTA_READY);
     t_pcb *pcb = list_remove(LISTA_READY, posicion);
-    temporal_resume(pcb->tiempo_desde_ult_ready);
     pthread_mutex_unlock(&MUTEX_LISTA_READY);
     return pcb;
 }

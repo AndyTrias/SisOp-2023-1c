@@ -13,7 +13,6 @@ t_pcb *crear_pcb(t_list* instrucciones, int socket_consola){
   nuevo->contexto.motivos_desalojo->cantidad_parametros = 0;
   nuevo->contexto.motivos_desalojo->parametros = NULL;
   
-  nuevo->tiempo_desde_ult_ready = temporal_create();
   nuevo->archivos_abiertos = list_create();
   nuevo->recursos_en_uso = list_create();
 

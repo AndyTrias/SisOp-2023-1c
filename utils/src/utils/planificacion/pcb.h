@@ -46,7 +46,6 @@ typedef struct
 {
     t_ctx contexto;
     float estimado_prox_rafaga;
-    t_temporal *tiempo_desde_ult_ready; // cuando pasa a ready usar temporal_stop
     int64_t tiempo_llegada_ready;       // cuando pasa a ready usar  = temporal_gettime(tiempo_desde_ult_ready)
     t_list *archivos_abiertos;
     t_list *recursos_en_uso;
