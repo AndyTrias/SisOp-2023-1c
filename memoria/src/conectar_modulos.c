@@ -85,6 +85,7 @@ void recibir_kernel(int *socket_modulo)
             // eliminar
             finalizar_proceso(tabla_segmentos->segmentos);
             log_info(LOGGER_MEMORIA, "Eliminacion de Proceso PID: <%d>", PID);
+            enviar_mensaje("OK", *socket_modulo);
             break;
 
         case CREATE_SEGMENT:

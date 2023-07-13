@@ -20,6 +20,9 @@ void terminar_proceso(t_pcb *proceso){
     enviar_paquete(paquete, SOCKET_MEMORIA);
     free(paquete);
 
+    recibir_operacion(SOCKET_MEMORIA);
+    recibir_mensaje(SOCKET_MEMORIA);
+
     paquete = crear_paquete(TERMINAR);
     enviar_paquete(paquete, proceso->socket_consola);
     free(paquete);
