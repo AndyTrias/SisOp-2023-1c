@@ -23,6 +23,9 @@ void crear_segmento(t_pcb *proceso){// enviar a memoria CREATE_SEGMENT con sus 2
             //supongo que cuando termina de crear el segmento se manda de nuevo al cpu por ende no cambio de pcb
             break;
         case COMPACTAR:
+            log_info(LOGGER_KERNEL,"Compactación: <Se solicitó compactación / Esperando Fin de Operaciones de FS>");
+            pthread_mutex_lock(&SOLICITUD_FS);
+            
             t_paquete *paquete = crear_paquete(COMPACTAR);
             enviar_paquete(paquete, SOCKET_MEMORIA);
             free(paquete);
@@ -30,6 +33,9 @@ void crear_segmento(t_pcb *proceso){// enviar a memoria CREATE_SEGMENT con sus 2
             recibir_operacion(SOCKET_MEMORIA);
             t_list* tablas_de_segmentos_actualizadas = recibir_todas_las_tablas_segmentos(SOCKET_MEMORIA);
             actualizar_tablas_de_segmentos(tablas_de_segmentos_actualizadas);
+
+            pthread_mutex_unlock(&SOLICITUD_FS);
+            log_info(LOGGER_KERNEL, "Se finalizó el proceso de compactación");
             break;
         case OUT_OF_MEMORY:
             pthread_mutex_unlock(&SOLICITUD_MEMORIA);

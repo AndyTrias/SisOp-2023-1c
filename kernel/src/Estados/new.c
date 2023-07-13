@@ -30,7 +30,6 @@ void nuevo_proceso(t_list* instrucciones, int socket_consola){
   t_pcb *proceso = crear_pcb(instrucciones, socket_consola);
   
   agregar_a_lista_new(proceso);
-    
 }
 
 // Es llamada por ready cada vez que necesita agregar un proceso a Ready porque tiene espacio

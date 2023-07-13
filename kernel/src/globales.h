@@ -8,6 +8,8 @@
 #include <pthread.h>
 #include <semaphore.h>
 #include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 typedef struct {
         char identificador[30];
@@ -88,6 +90,7 @@ int tamnio_lista_blockfs();
 int tamnio_tabla_global();
 //cambios de estado
 void cambio_de_estado();
+char* concatenarLista(t_list* );
 
 
 

@@ -174,7 +174,7 @@ int obtener_puntero(t_pcb *proceso, char* nombre_archivo){
   t_tabla_global* entrada_tabla = get_de_tabla_global(busqueda);
   
   if (busqueda == -1 || entrada_tabla->PID != proceso->contexto.PID){
-    log_error(LOGGER_KERNEL, "PID: %d - Error al hacer read en Archivo: %s", proceso->contexto.PID, nombre_archivo);
+    log_error(LOGGER_KERNEL, "PID: %d - Error al obtener puntero Archivo: %s", proceso->contexto.PID, nombre_archivo);
     return -1;
   } else {
     t_file *aux = list_get(proceso->archivos_abiertos, busqueda_tabla_proceso(proceso, nombre_archivo));

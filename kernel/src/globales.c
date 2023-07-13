@@ -60,10 +60,15 @@ void agregar_a_lista_new(t_pcb *nuevo){
 
 void agregar_a_lista_ready(t_pcb *nuevo){
     pthread_mutex_lock(&MUTEX_LISTA_READY);
+    
     temporal_stop(nuevo->tiempo_desde_ult_ready);
     nuevo->tiempo_llegada_ready = temporal_gettime(nuevo->tiempo_desde_ult_ready) + temporal_gettime(TIEMPO_CORRIENDO);
     list_add(LISTA_READY, nuevo);
-    log_info(LOGGER_KERNEL,  "Cola Ready <%s>: [%s]",ALGORITMO_PLANIFICACION, "ayuda loco");
+    
+    char* result = concatenarLista(LISTA_READY);
+    log_info(LOGGER_KERNEL,  "Cola Ready <%s>: [%s]",ALGORITMO_PLANIFICACION, result);
+    free(result);
+
     pthread_mutex_unlock(&MUTEX_LISTA_READY);
     sem_post(&PROCESO_EN_READY);
 
@@ -84,7 +89,6 @@ void agregar_a_tabla_global(t_tabla_global *nuevo){
 // Para sacar elemento X de la lista
 t_pcb *sacar_de_lista_new(int posicion)
 {
-    sem_wait(&PROCESO_EN_NEW);
     pthread_mutex_lock(&MUTEX_LISTA_NEW);
     t_pcb *pcb = list_remove(LISTA_NEW, posicion);
     pthread_mutex_unlock(&MUTEX_LISTA_NEW);
@@ -178,4 +182,39 @@ int tamnio_tabla_global(){
 //cambios de estado
 void cambio_de_estado(int pid, char*anterior, char* nuevo){
     log_info(LOGGER_KERNEL,"PID: <%d> - Estado Anterior: <%s> - Estado Actual: <%s>",pid,anterior,nuevo);
+}
+char* concatenarLista(t_list* lista){
+    // Calcula el tamaño total del string resultante
+    int totalSize = 0;
+    int i=0;
+    t_pcb* proceso;
+    while (i<list_size(lista)) {
+        // Asumiendo que cada número puede tener un máximo de 3 dígitos
+        totalSize += 3;
+        i++;
+    }
+
+    // Crea el string resultante
+    char* result = (char*)malloc(totalSize * sizeof(char));
+    result[0] = '\0'; // Inicializa el string como vacío
+
+    // Concatena los números con comas
+    i=0;
+    while (i<list_size(lista)) {
+        char numStr[11]; // Para almacenar el número como string
+        proceso= list_get(lista,i);
+        sprintf(numStr, "%d", proceso->contexto.PID); // Convierte el número a string
+
+        strcat(result, numStr);
+        strcat(result, ", ");
+        i++;
+    }
+
+    // Elimina la última coma y espacio
+    int len = strlen(result);
+    if (len >= 2) {
+        result[len - 2] = '\0';
+    }
+
+    return result;
 }

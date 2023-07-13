@@ -4,6 +4,9 @@ void admitir_proceso()
 {
     t_pcb * proceso_en_new = sacar_de_lista_new(0);
     agregar_a_lista_ready(proceso_en_new);
+    
+    pthread_mutex_lock(&SOLICITUD_MEMORIA);
+
     t_paquete* paquete = crear_paquete(CREAR_TABLA_SEGMENTOS);
     agregar_a_paquete_dato_serializado(paquete, &proceso_en_new->contexto.PID, sizeof(int));
     enviar_paquete(paquete, SOCKET_MEMORIA);
@@ -12,6 +15,8 @@ void admitir_proceso()
     recibir_operacion(SOCKET_MEMORIA);
     t_list* tabla_segmentos = recibir_tabla_segmentos(SOCKET_MEMORIA);
     proceso_en_new->contexto.tabla_segmentos = tabla_segmentos;
+   
+    pthread_mutex_unlock(&SOLICITUD_MEMORIA);
 
 }
 
