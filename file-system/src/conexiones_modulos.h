@@ -14,6 +14,10 @@ void enviado_de_kernel(int *);
 t_parametros_variables* recibir_paquete_kernel(int);
 char* leer_direccion_de_memoria(char *);
 void escribir_valor_en_memoria(char *, char *);
+void enviar_paquete_op_terminada(char*);
+void crear_y_enviar_paquete(int cod_op);
+
+
 
 
 #endif

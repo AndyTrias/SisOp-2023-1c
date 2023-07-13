@@ -17,16 +17,21 @@ void atender_solicitudes(int cod_op, t_parametros_variables *parametros_instrucc
         crear_fcb(nombre_archivo);
 
         // Devolver un existe, lo hicimos asi
+        crear_y_enviar_paquete(EXISTE);
         break;
 
     case F_OPEN:
         log_info(LOGGER_FILE_SYSTEM, "Abrir Archivo: %s", nombre_archivo);
+
         if (dictionary_get(DICCIONARIO_FCB, nombre_archivo) == NULL)
-            log_info(LOGGER_FILE_SYSTEM, "El archivo no existe");
-        // Devolver que no existe a kernel
+        {
+            crear_y_enviar_paquete(NO_EXISTE);
+
+        }
         else
-            log_info(LOGGER_FILE_SYSTEM, "El archivo existe");
-        // Devolver que existe a kernel
+        {
+            crear_y_enviar_paquete(EXISTE);
+        }
         break;
 
     case F_TRUNCATE:
@@ -66,8 +71,8 @@ void atender_solicitudes(int cod_op, t_parametros_variables *parametros_instrucc
 
         msync(archivo_de_bloques, CANTIDAD_BLOQUES * TAMANIO_BLOQUES, MS_SYNC);
         munmap(archivo_de_bloques, CANTIDAD_BLOQUES * TAMANIO_BLOQUES);
+        enviar_paquete_op_terminada(nombre_archivo);
         break;
-
 
     case F_WRITE:
     case F_READ:
@@ -81,7 +86,9 @@ void atender_solicitudes(int cod_op, t_parametros_variables *parametros_instrucc
         else
             f_read(memoria, posicion, tamaño);
 
+        enviar_paquete_op_terminada(nombre_archivo);
         break;
+
 
     default:
         log_error(LOGGER_FILE_SYSTEM, "Operacion desconocida");
@@ -133,7 +140,7 @@ void f_write(char *direccion, int posicion_archivo, int tamanio_a_escribir)
 {
     char *valor_leido = "Loremipsumdolorsitamet,consecteturadipiscingelit.Sedsuscipitturpisvelullamcorper13fghgff";
     // char* valor_leido = leer_direccion_de_memoria(direccion);
-    
+
     log_info(LOGGER_FILE_SYSTEM, "Escribir Archivo: %s - Puntero: %d - Memoria: %s - Tamaño: %d", nombre_archivo, posicion_archivo, direccion, tamanio_a_escribir);
 
     if (tamanio_a_escribir + posicion_archivo > 64)
@@ -155,14 +162,13 @@ void f_write(char *direccion, int posicion_archivo, int tamanio_a_escribir)
         tamanio_a_escribir -= tamanio_a_escribir_del_bloque;
     }
 
-
     munmap(archivo_de_bloques, CANTIDAD_BLOQUES * TAMANIO_BLOQUES);
 }
 
 void f_read(char *direccion, int posicion_archivo, int tamanio_a_leer)
 {
     char *buffer = string_new();
-    
+
     log_info(LOGGER_FILE_SYSTEM, "Leer Archivo: %s - Puntero: %d - Memoria: %s - Tamaño: %d", nombre_archivo, posicion_archivo, direccion, tamanio_a_leer);
 
     if (tamanio_a_leer + posicion_archivo > 64)
@@ -178,7 +184,7 @@ void f_read(char *direccion, int posicion_archivo, int tamanio_a_leer)
         int offset = posicion_archivo % TAMANIO_BLOQUES;
 
         void *leido = leer_bloque(nombre_archivo, bloque_archivo, offset, tamanio_a_leer_del_bloque);
-        string_append(&buffer, (char*) leido);
+        string_append(&buffer, (char *)leido);
 
         posicion_archivo += tamanio_a_leer_del_bloque;
         tamanio_a_leer -= tamanio_a_leer_del_bloque;

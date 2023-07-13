@@ -17,6 +17,7 @@
     extern int CANTIDAD_BLOQUES;
 
     extern int SOCKET_MEMORIA;
+    extern int SOCKET_KERNEL;
 
     extern int RETARDO;
 

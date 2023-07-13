@@ -3,9 +3,9 @@
 void conectar_kernel(int socket_servidor)
 {
     log_info(LOGGER_FILE_SYSTEM, "Esperando kernel....");
-    int socket_kernel = esperar_cliente(socket_servidor);
+    SOCKET_KERNEL = esperar_cliente(socket_servidor);
     log_info(LOGGER_FILE_SYSTEM, "Se conecto el kernel");
-    enviado_de_kernel(&socket_kernel);
+    enviado_de_kernel(&SOCKET_KERNEL);
 }
 
 void enviado_de_kernel(int *socket_kernel)
@@ -73,4 +73,21 @@ void escribir_valor_en_memoria(char *direccion_fisica, char *contenido)
     if (strcmp(mensaje, "OK"))
         log_error(LOGGER_FILE_SYSTEM, "No se pudo escribir la direccion de memoria");
 }
+
+
+void enviar_paquete_op_terminada(char* nombre_archivo){
+    t_paquete* paquete = crear_paquete(OP_TERMINADA);
+    int len = strlen(nombre_archivo) + 1;
+    agregar_a_paquete_dato_serializado(paquete, &len, sizeof(int));
+    agregar_a_paquete_dato_serializado(paquete, nombre_archivo, len);
+    enviar_paquete(paquete, SOCKET_KERNEL);
+    free(paquete);
+}
+
+void crear_y_enviar_paquete(int cod_op){
+    t_paquete* paquete = crear_paquete(cod_op);
+    enviar_paquete(paquete, SOCKET_KERNEL);
+    free(paquete);
+}
+
 

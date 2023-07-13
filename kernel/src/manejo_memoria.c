@@ -9,10 +9,11 @@ void crear_segmento(t_pcb *proceso){// enviar a memoria CREATE_SEGMENT con sus 2
 
     int cod_op = recibir_operacion(SOCKET_MEMORIA);
     int size;
-    void* buffer = recibir_buffer(&size, SOCKET_MEMORIA);
-    
+    void* buffer;
     switch(cod_op){
         case CREATE_SEGMENT:
+            buffer = recibir_buffer(&size, SOCKET_MEMORIA);
+
             t_segmento* segmento = list_get(proceso->contexto.tabla_segmentos, atoi(proceso->contexto.motivos_desalojo->parametros[0]));
 
             memcpy(&(segmento->base), buffer, sizeof(void*));
@@ -20,7 +21,6 @@ void crear_segmento(t_pcb *proceso){// enviar a memoria CREATE_SEGMENT con sus 2
 
             pthread_mutex_unlock(&SOLICITUD_MEMORIA);  
             log_info(LOGGER_KERNEL, "PID: <%d> - Crear Segmento - Id: <%d> - Tamaño: <%d>", proceso->contexto.PID, segmento->id_segmento, segmento->tamanio);
-            //supongo que cuando termina de crear el segmento se manda de nuevo al cpu por ende no cambio de pcb
             break;
         case COMPACTAR:
             log_info(LOGGER_KERNEL,"Compactación: <Se solicitó compactación / Esperando Fin de Operaciones de FS>");

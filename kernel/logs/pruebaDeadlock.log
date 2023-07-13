@@ -1,0 +1,53 @@
+[INFO] 19:56:15:182 KERNEL/(45821:45823): Inicia el planificador de largo plazo
+[INFO] 19:56:15:182 KERNEL/(45821:45821): Esperando conexiones de consolas...
+[INFO] 19:56:15:182 KERNEL/(45821:45824): Inicia el planificador de corto plazo
+[INFO] 19:56:18:764 KERNEL/(45821:45821): Se conecto una consola
+[INFO] 19:56:18:770 KERNEL/(45821:45983): Se recibieron instrucciones de una consola
+[INFO] 19:56:18:770 KERNEL/(45821:45983): Se Crea el proceso <0> en NEW
+[INFO] 19:56:18:771 KERNEL/(45821:45823): Cola Ready <FIFO>: [0]
+[INFO] 19:56:18:771 KERNEL/(45821:45823): Se mando la señal al planificador de corto plazo
+[INFO] 19:56:18:771 KERNEL/(45821:45824): Empieza ciclo de instruccion
+[INFO] 19:56:18:772 KERNEL/(45821:45824): Se envia el proceso PID: <0> al CPU
+[INFO] 19:56:18:772 KERNEL/(45821:45824): Se recibe de CPU el proceso PID: <0>
+[INFO] 19:56:18:772 KERNEL/(45821:45824): PID: <0> - Wait: <DISCO> - Instancias: <0>
+[INFO] 19:56:19:773 KERNEL/(45821:45824): Se envia el proceso PID: <0> al CPU
+[INFO] 19:56:19:774 KERNEL/(45821:45824): Se recibe de CPU el proceso PID: <0>
+[INFO] 19:56:19:777 KERNEL/(45821:45990): PID: <0> - Ejecuta IO: 10
+[INFO] 19:56:22:618 KERNEL/(45821:45821): Se conecto una consola
+[INFO] 19:56:22:622 KERNEL/(45821:46152): Se recibieron instrucciones de una consola
+[INFO] 19:56:22:626 KERNEL/(45821:46152): Se Crea el proceso <1> en NEW
+[INFO] 19:56:22:627 KERNEL/(45821:45823): Cola Ready <FIFO>: [1]
+[INFO] 19:56:22:628 KERNEL/(45821:45823): Se mando la señal al planificador de corto plazo
+[INFO] 19:56:23:628 KERNEL/(45821:45824): Se envia el proceso PID: <1> al CPU
+[INFO] 19:56:23:639 KERNEL/(45821:45824): Se recibe de CPU el proceso PID: <1>
+[INFO] 19:56:23:639 KERNEL/(45821:45824): PID: <1> - Wait: <IMPRESORA> - Instancias: <0>
+[INFO] 19:56:24:639 KERNEL/(45821:45824): Se envia el proceso PID: <1> al CPU
+[INFO] 19:56:24:640 KERNEL/(45821:45824): Se recibe de CPU el proceso PID: <1>
+[INFO] 19:56:24:641 KERNEL/(45821:46179): PID: <1> - Ejecuta IO: 10
+[INFO] 19:56:26:844 KERNEL/(45821:45821): Se conecto una consola
+[INFO] 19:56:26:847 KERNEL/(45821:46332): Se recibieron instrucciones de una consola
+[INFO] 19:56:26:848 KERNEL/(45821:46332): Se Crea el proceso <2> en NEW
+[INFO] 19:56:26:850 KERNEL/(45821:45823): Cola Ready <FIFO>: [2]
+[INFO] 19:56:26:850 KERNEL/(45821:45823): Se mando la señal al planificador de corto plazo
+[INFO] 19:56:27:864 KERNEL/(45821:45824): Se envia el proceso PID: <2> al CPU
+[INFO] 19:56:27:866 KERNEL/(45821:45824): Se recibe de CPU el proceso PID: <2>
+[INFO] 19:56:27:869 KERNEL/(45821:45824): PID: <2> - Wait: <SCANNER> - Instancias: <0>
+[INFO] 19:56:28:870 KERNEL/(45821:45824): Se envia el proceso PID: <2> al CPU
+[INFO] 19:56:28:871 KERNEL/(45821:45824): Se recibe de CPU el proceso PID: <2>
+[INFO] 19:56:28:871 KERNEL/(45821:46359): PID: <2> - Ejecuta IO: 10
+[INFO] 19:56:29:794 KERNEL/(45821:45990): Cola Ready <FIFO>: [0]
+[INFO] 19:56:30:861 KERNEL/(45821:45824): Se envia el proceso PID: <0> al CPU
+[INFO] 19:56:30:862 KERNEL/(45821:45824): Se recibe de CPU el proceso PID: <0>
+[INFO] 19:56:34:663 KERNEL/(45821:46179): Cola Ready <FIFO>: [1]
+[INFO] 19:56:34:664 KERNEL/(45821:45824): PID: <0> - Estado Anterior: <Exec> - Estado Actual: <Block>
+[INFO] 19:56:34:664 KERNEL/(45821:45824): PID: <0> - Bloqueado por: < IMPRESORA >
+[INFO] 19:56:35:861 KERNEL/(45821:45824): Se envia el proceso PID: <1> al CPU
+[INFO] 19:56:35:863 KERNEL/(45821:45824): Se recibe de CPU el proceso PID: <1>
+[INFO] 19:56:38:884 KERNEL/(45821:46359): Cola Ready <FIFO>: [2]
+[INFO] 19:56:38:884 KERNEL/(45821:45824): PID: <1> - Estado Anterior: <Exec> - Estado Actual: <Block>
+[INFO] 19:56:38:884 KERNEL/(45821:45824): PID: <1> - Bloqueado por: < SCANNER >
+[INFO] 19:56:39:899 KERNEL/(45821:45824): Se envia el proceso PID: <2> al CPU
+[INFO] 19:56:39:911 KERNEL/(45821:45824): Se recibe de CPU el proceso PID: <2>
+[INFO] 19:58:12:180 KERNEL/(45821:45821): Se conecto una consola
+[INFO] 19:58:12:727 KERNEL/(45821:46765): Se recibieron instrucciones de una consola
+[INFO] 19:58:12:730 KERNEL/(45821:46765): Se Crea el proceso <3> en NEW

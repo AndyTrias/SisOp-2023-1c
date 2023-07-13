@@ -61,7 +61,6 @@ void agregar_a_lista_new(t_pcb *nuevo){
 void agregar_a_lista_ready(t_pcb *nuevo){
     pthread_mutex_lock(&MUTEX_LISTA_READY);
     
-    temporal_stop(nuevo->tiempo_desde_ult_ready);
     nuevo->tiempo_llegada_ready = temporal_gettime(TIEMPO_CORRIENDO);
     list_add(LISTA_READY, nuevo);
     
@@ -115,7 +114,6 @@ void sacar_elemento_de_lista_ready(t_pcb *elemento)
 {
     sem_wait(&PROCESO_EN_READY);
     pthread_mutex_lock(&MUTEX_LISTA_READY);
-    temporal_resume(elemento->tiempo_desde_ult_ready);
     list_remove_element(LISTA_READY, elemento);
     pthread_mutex_unlock(&MUTEX_LISTA_READY);
 }

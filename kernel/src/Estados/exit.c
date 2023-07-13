@@ -29,7 +29,7 @@ void terminar_proceso(t_pcb *proceso){
     enviar_paquete(paquete, proceso->socket_consola);
     free(paquete);
     
-    recibir_operacion(SOCKET_MEMORIA);
+
 
     pthread_mutex_unlock(&SOLICITUD_MEMORIA);
     sem_post(&GRADO_MULTIPROGRAMACION);

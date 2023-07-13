@@ -33,10 +33,9 @@ void* comunicacion_fs(){
     
     int size;
     void* buffer = recibir_buffer(&size, SOCKET_FILESYSTEM);
-    int* desplazamiento = malloc(sizeof(int));
-    *desplazamiento = 0;
+    int desplazamiento = 0;
 
-    char* nombre_archivo;// = deserealizar_nombre(buffer, desplazamiento);
+    char* nombre_archivo = string_new();
 
     switch (cod_op){
     case EXISTE:
@@ -50,8 +49,15 @@ void* comunicacion_fs(){
     case OP_TERMINADA: //esto es cuando termina el f truncate read y write, 
     //necesito el nombre del archivo que termino de hacer eso para desbloquear 
     //al proceso bloquedo por el archivo
-        pthread_mutex_unlock(&BLOQUEADOS_FS);
-        char* nombre_archivo;// = deserealizar_nombre(buffer, desplazamiento);
+
+        pthread_mutex_unlock(&SOLICITUD_FS);
+        int tamanio_string;
+        memcpy(&tamanio_string, buffer + desplazamiento, sizeof(int));
+        desplazamiento += sizeof(int);
+
+        memcpy(nombre_archivo, buffer + desplazamiento, tamanio_string);
+        desplazamiento += tamanio_string;
+
         desbloquear_de_fs(nombre_archivo);
         break;
     default:
