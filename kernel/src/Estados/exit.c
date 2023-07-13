@@ -13,7 +13,6 @@ void terminar_proceso(t_pcb *proceso){
     list_destroy(proceso->contexto.instrucciones);
     list_destroy(proceso->archivos_abiertos);
     list_destroy(proceso->recursos_en_uso);
-    temporal_destroy(proceso->tiempo_desde_ult_ready);
 
     t_paquete* paquete = crear_paquete(TERMINAR);
     agregar_a_paquete_dato_serializado(paquete, &proceso->contexto.PID, sizeof(int));
