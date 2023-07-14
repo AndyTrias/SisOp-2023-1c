@@ -90,8 +90,9 @@ daemon:
 	done
 
 .PHONY: memcheck
+memcheck: CFLAGS = $(CDEBUG)
 memcheck: $(BIN)
-	valgrind --leak-check=full $(MEMCHECK_FLAGS) ./$(BIN) $(ARGS)
+	valgrind $(MEMCHECK_FLAGS) ./$(BIN) $(ARGS)
 
 .PHONY: helgrind
 helgrind: $(BIN)

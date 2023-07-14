@@ -30,6 +30,6 @@ void inicializar_conexiones(int *conexion_kernel, t_config* config) {
     *conexion_kernel = inicializar_cliente(ip_kernel, puerto_kernel, logger_consola);
     
     if (*conexion_kernel == -1) {
-        exit(1);
+        abort();
     }
 }

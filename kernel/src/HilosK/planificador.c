@@ -32,7 +32,6 @@ void* comunicacion_fs(){
     int cod_op = recibir_operacion(SOCKET_FILESYSTEM);
     
 
-    char* nombre_archivo = string_new();
 
     switch (cod_op){
     case EXISTE:
@@ -51,10 +50,10 @@ void* comunicacion_fs(){
         int desplazamiento = 0;
 
         int tamanio_string;
-        
         memcpy(&tamanio_string, buffer + desplazamiento, sizeof(int));
         desplazamiento += sizeof(int);
 
+        char* nombre_archivo = string_new();
         memcpy(nombre_archivo, buffer + desplazamiento, tamanio_string);
         desplazamiento += tamanio_string;
 

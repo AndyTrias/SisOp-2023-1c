@@ -3,7 +3,7 @@
 int main(int argc, char *argv[])
 {
 
-    LOGGER_FILE_SYSTEM = iniciar_logger("./logs/file-system.log", "FILE SYSTEM");
+    LOGGER_FILE_SYSTEM = iniciar_logger("./file-system.log", "FILE SYSTEM");
 
     if (argc != 2)
     {

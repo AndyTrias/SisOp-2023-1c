@@ -2,7 +2,7 @@
 
 void inicializar_variables_globales(t_config* config) {
 
-    LOGGER_KERNEL = log_create("./logs/kernel.log", "KERNEL", 1, LOG_LEVEL_INFO);
+    LOGGER_KERNEL = log_create("./kernel.log", "KERNEL", 1, LOG_LEVEL_INFO);
 
     PID_COUNT = 0;
 
