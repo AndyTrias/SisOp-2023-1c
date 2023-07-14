@@ -788,3 +788,7 @@
 [INFO] 22:10:49:386 CPU/(129474:129474): PID : 1 - <WAIT> - <RB> 
 [INFO] 22:10:49:388 CPU/(129474:129474): PID : 2 - <CREATE_SEGMENT> - <1 256> 
 [INFO] 22:10:49:544 CPU/(129474:129474): Se desconecto el kernel
+[ERROR] 22:43:10:642 CPU/(132758:132758): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 22:43:10:642 CPU/(132758:132758): Esperando kernel....
+[ERROR] 22:43:17:717 CPU/(132913:132913): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 22:43:17:717 CPU/(132913:132913): Esperando kernel....

@@ -926,3 +926,7 @@
 [INFO] 22:10:49:391 MEMORIA/(129191:129678): PID: <1> - Segmento: <9> - Base: <0x556bf3532af0> - TAMAÑO: <64>
 [ERROR] 22:10:49:391 MEMORIA/(129191:129678): Operacion desconocida
 [INFO] 22:10:49:544 MEMORIA/(129191:129678): Se desconecto un modulo
+[INFO] 22:39:17:908 MEMORIA/(131633:131633): Se creo el espacio contiguo de memoria
+[INFO] 22:39:17:908 MEMORIA/(131633:131633): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x557910b0cbb0
+[INFO] 22:39:17:908 MEMORIA/(131633:131633): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x557910b0cc30
+[INFO] 22:39:17:908 MEMORIA/(131633:131633): Esperando conexiones de modulos...
