@@ -75,13 +75,13 @@ op_code execute(t_instruccion *instruccion_actual, t_ctx *ctx)
 	switch (instruccion_actual->operacion)
 	{
 	case SET:
-		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
+		log_info(LOGGER_CPU, "PID : %d - <SET> - <%s %s>", ctx->PID, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
 		char *registro = obtenerRegistro(&ctx->registros, instruccion_actual->parametros[0]);
 		strcpy(registro, instruccion_actual->parametros[1]);
 		return 0;
 
 	case MOV_IN:
-		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
+		log_info(LOGGER_CPU, "PID : %d - <MOV_IN> - <%s %s> ", ctx->PID, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
 		long dir_fisica = MMU(atoi(instruccion_actual->parametros[1]), sizeof(instruccion_actual->parametros[0]), ctx);
 		if (!dir_fisica)
 		{
@@ -108,7 +108,7 @@ op_code execute(t_instruccion *instruccion_actual, t_ctx *ctx)
 		return 0;
 
 	case MOV_OUT:
-		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
+		log_info(LOGGER_CPU, "PID : %d - <MOV OUT> - <%s %s> ", ctx->PID, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
 		registro = obtenerRegistro(&ctx->registros, instruccion_actual->parametros[1]);
 		dir_fisica = MMU(atoi(instruccion_actual->parametros[0]), sizeof(instruccion_actual->parametros[1]), ctx);
 		if (!dir_fisica)
@@ -135,40 +135,40 @@ op_code execute(t_instruccion *instruccion_actual, t_ctx *ctx)
 			return SEG_FAULT;
 		}
 
-		log_info(LOGGER_CPU, "PID: %d  -Acción: ESCRIBIR - Segmento: %d - Dirección Física: %p - Valor: %s", ctx->PID, floor_div(atoi(instruccion_actual->parametros[1]), TAM_MAX_SEGMENTO), (void*)dir_fisica, registro);
-
+		log_info(LOGGER_CPU, "PID: %d - Acción: ESCRIBIR - Segmento: %d - Dirección Física: %p - Valor: %s", ctx->PID, floor_div(atoi(instruccion_actual->parametros[1]), TAM_MAX_SEGMENTO), (void*)dir_fisica, registro);
+		free(mensaje);
 		return 0;
 
 	case WAIT:
-		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0]);
+		log_info(LOGGER_CPU, "PID : %d - <WAIT> - <%s> ", ctx->PID, instruccion_actual->parametros[0]);
 		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[0]);
 		return WAIT;
 
 	case SIGNAL:
-		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0]);
+		log_info(LOGGER_CPU, "PID : %d - <SIGNAL> - <%s> ", ctx->PID, instruccion_actual->parametros[0]);
 		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[0]);
 		return SIGNAL;
 
 	case YIELD:
-		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d", ctx->PID, instruccion_actual->operacion);
+		log_info(LOGGER_CPU, "PID : %d - <YIELD>", ctx->PID);
 		return YIELD;
 
 	case EXIT:
-		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d", ctx->PID, instruccion_actual->operacion);
+		log_info(LOGGER_CPU, "PID : %d - <EXIT> ", ctx->PID);
 		return EXIT;
 
 	case IO:
-		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s ", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0]);
+		log_info(LOGGER_CPU, "PID : %d - <IO> - <%s>", ctx->PID,instruccion_actual->parametros[0]);
 		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[0]);
 		return IO;
 
 	case F_OPEN:
-		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0]);
+		log_info(LOGGER_CPU, "PID : %d - <F OPEN> - <%s> ", ctx->PID, instruccion_actual->parametros[0]);
 		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[0]);
 		return F_OPEN;
 
 	case F_WRITE:
-		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
+		log_info(LOGGER_CPU, "PID : %d - <F WRITE> - <%s %s %s> ", ctx->PID, instruccion_actual->parametros[0], instruccion_actual->parametros[1], instruccion_actual->parametros[2]);
 		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[0]);
 		dir_fisica = MMU(atoi(instruccion_actual->parametros[1]), atoi(instruccion_actual->parametros[2]), ctx);
 		if (!dir_fisica)
@@ -179,10 +179,10 @@ op_code execute(t_instruccion *instruccion_actual, t_ctx *ctx)
 		sprintf(dir_fisica_string, "%ld", dir_fisica);
 		agregar_parametro_desalojo(ctx, dir_fisica_string);
 		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[2]);
-		return F_READ;
+		return F_WRITE;
 
 	case F_READ:
-		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
+		log_info(LOGGER_CPU, "PID : %d - <F_READ> - <%s %s> ", ctx->PID, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
 		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[0]);
 		dir_fisica = MMU(atoi(instruccion_actual->parametros[1]), atoi(instruccion_actual->parametros[2]), ctx);
 		if (!dir_fisica)
@@ -197,30 +197,30 @@ op_code execute(t_instruccion *instruccion_actual, t_ctx *ctx)
 		return F_READ;
 
 	case F_TRUNCATE:
-		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
+		log_info(LOGGER_CPU, "PID : %d - <F TRUNCATE> - <%s %s> ", ctx->PID, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
 		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[0]);
 		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[1]);
 		return F_TRUNCATE;
 
 	case F_CLOSE:
-		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0]);
+		log_info(LOGGER_CPU, "PID : %d - <F CLOSE> - <%s> ", ctx->PID, instruccion_actual->parametros[0]);
 		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[0]);
 		return F_CLOSE;
 
 	case F_SEEK:
-		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
+		log_info(LOGGER_CPU, "PID : %d - <F SEEK> - <%s %s> ", ctx->PID, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
 		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[0]);
 		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[1]);
 		return F_SEEK;
 
 	case CREATE_SEGMENT:
-		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
+		log_info(LOGGER_CPU, "PID : %d - <CREATE_SEGMENT> - <%s %s> ", ctx->PID, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
 		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[0]);
 		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[1]);
 		return CREATE_SEGMENT;
 
 	case DELETE_SEGMENT:
-		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0]);
+		log_info(LOGGER_CPU, "PID : %d - <DELETE_SEGMENT> - <%s> ", ctx->PID,instruccion_actual->parametros[0]);
 		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[0]);
 		return DELETE_SEGMENT;
 
