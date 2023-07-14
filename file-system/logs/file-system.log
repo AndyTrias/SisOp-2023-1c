@@ -330,3 +330,23 @@
 [INFO] 22:10:25:956 FILE SYSTEM/(129337:129337): Esperando kernel....
 [INFO] 22:10:31:698 FILE SYSTEM/(129337:129337): Se conecto el kernel
 [INFO] 22:10:49:544 FILE SYSTEM/(129337:129337): Se desconecto el kernel
+[ERROR] 22:39:50:540 FILE SYSTEM/(3304:3304): No se pudo conectar al servidor 192.168.1.124:8002
+[INFO] 22:39:50:540 FILE SYSTEM/(3304:3304): Se levanto el superbloque
+[INFO] 22:39:50:540 FILE SYSTEM/(3304:3304): Archivo encontrado: ./fcb/archivoTestFcb
+
+[INFO] 22:39:50:541 FILE SYSTEM/(3304:3304): Esperando kernel....
+[ERROR] 22:42:55:740 FILE SYSTEM/(3481:3481): No se pudo conectar al servidor 192.168.1.124:8002
+[INFO] 22:42:55:740 FILE SYSTEM/(3481:3481): Se levanto el superbloque
+[INFO] 22:42:55:740 FILE SYSTEM/(3481:3481): Archivo encontrado: ./fcb/archivoTestFcb
+
+[INFO] 22:42:55:740 FILE SYSTEM/(3481:3481): Esperando kernel....
+[ERROR] 22:44:43:998 FILE SYSTEM/(3494:3494): No se pudo conectar al servidor 192.168.1.124:8002
+[INFO] 22:44:43:998 FILE SYSTEM/(3494:3494): Se levanto el superbloque
+[INFO] 22:44:43:999 FILE SYSTEM/(3494:3494): Archivo encontrado: ./fcb/archivoTestFcb
+
+[INFO] 22:44:43:999 FILE SYSTEM/(3494:3494): Esperando kernel....
+[ERROR] 22:44:51:414 FILE SYSTEM/(3495:3495): No se pudo conectar al servidor 192.168.1.124:8002
+[INFO] 22:44:51:414 FILE SYSTEM/(3495:3495): Se levanto el superbloque
+[INFO] 22:44:51:414 FILE SYSTEM/(3495:3495): Archivo encontrado: ./fcb/archivoTestFcb
+
+[INFO] 22:44:51:414 FILE SYSTEM/(3495:3495): Esperando kernel....
