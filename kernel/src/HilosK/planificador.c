@@ -44,13 +44,12 @@ void* comunicacion_fs(){
         break;
     case NO_EXISTE:
         pthread_mutex_unlock(&SOLICITUD_FS);
-        solicitar_creacion();
+        solicitar_fs(F_CREATES);
         break;
     case OP_TERMINADA: //esto es cuando termina el f truncate read y write, 
     //necesito el nombre del archivo que termino de hacer eso para desbloquear 
     //al proceso bloquedo por el archivo
 
-        pthread_mutex_unlock(&SOLICITUD_FS);
         int tamanio_string;
         memcpy(&tamanio_string, buffer + desplazamiento, sizeof(int));
         desplazamiento += sizeof(int);
@@ -59,6 +58,7 @@ void* comunicacion_fs(){
         desplazamiento += tamanio_string;
 
         desbloquear_de_fs(nombre_archivo);
+        pthread_mutex_unlock(&SOLICITUD_FS);
         break;
     default:
         break;

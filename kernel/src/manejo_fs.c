@@ -55,45 +55,22 @@ void eliminar_entrada_tabla(int posicion)
   sacar_de_tabla_global(posicion);
 }
 
-void existe_archivo(char *)
+void existe_archivo()
 { // Solicita la apertura de un archivo para verificar si existe
-  pthread_mutex_lock(&SOLICITUD_FS);
-  t_paquete *paquete = crear_paquete(F_OPEN);
-  serializar_motivos_desalojo(EJECUTANDO->contexto.motivos_desalojo, paquete);
-
-  enviar_paquete(paquete, SOCKET_FILESYSTEM);
-  free(paquete);
+  solicitar_fs(F_OPEN);
 }
 
-void solicitar_creacion(char *nombre)
-{ // Solicita la creacion de un archivo
+void solicitar_fs(int cod_op){
   pthread_mutex_lock(&SOLICITUD_FS);
-  t_paquete *paquete = crear_paquete(F_CREATES);
+  t_paquete *paquete = crear_paquete(cod_op);
   serializar_motivos_desalojo(EJECUTANDO->contexto.motivos_desalojo, paquete);
   enviar_paquete(paquete, SOCKET_FILESYSTEM);
   free(paquete);
 }
-void solicitar_truncamiento()
-{
+void solicitar_fs_r_w(int cod_op, int puntero){
+  
   pthread_mutex_lock(&SOLICITUD_FS);
-  t_paquete *paquete = crear_paquete(F_TRUNCATE);
-  serializar_motivos_desalojo(EJECUTANDO->contexto.motivos_desalojo, paquete);
-  enviar_paquete(paquete, SOCKET_FILESYSTEM);
-  free(paquete);
-}
-void solicitar_lectura(int puntero)
-{
-  pthread_mutex_lock(&SOLICITUD_FS);
-  t_paquete *paquete = crear_paquete(F_READ);
-  agregar_parametro_desalojo(&EJECUTANDO->contexto, string_itoa(puntero));
-  serializar_motivos_desalojo(EJECUTANDO->contexto.motivos_desalojo, paquete);
-  enviar_paquete(paquete, SOCKET_FILESYSTEM);
-  free(paquete);
-}
-void solicitar_escritura(int puntero)
-{
-  pthread_mutex_lock(&SOLICITUD_FS);
-  t_paquete *paquete = crear_paquete(F_WRITE);
+  t_paquete *paquete = crear_paquete(cod_op);
   agregar_parametro_desalojo(&EJECUTANDO->contexto, string_itoa(puntero));
   serializar_motivos_desalojo(EJECUTANDO->contexto.motivos_desalojo, paquete);
   enviar_paquete(paquete, SOCKET_FILESYSTEM);
@@ -193,7 +170,7 @@ void f_truncate(t_pcb *proceso, char *nombre_archivo, char *tamanio_nuevo)
   {
     int tamanio = atoi(tamanio_nuevo);
     // mandar a file system nombre_archivo y tamanio
-    solicitar_truncamiento(tamanio);
+    solicitar_fs(F_TRUNCATE);
     agregar_a_lista_blockfs(proceso);
     log_info(LOGGER_KERNEL, "PID: %d - Truncar Archivo: %s - Tamaño: %d", proceso->contexto.PID, nombre_archivo, tamanio);
 
@@ -233,7 +210,7 @@ void f_read(t_pcb *proceso, char *nombre_archivo)
   {
     int puntero = obtener_puntero(proceso, nombre_archivo);
 
-    solicitar_lectura(puntero);
+    solicitar_fs_r_w(F_READ,puntero);
     agregar_a_lista_blockfs(proceso);
 
     int dir_fisica = atoi(proceso->contexto.motivos_desalojo->parametros[1]);
@@ -259,7 +236,8 @@ void f_write(t_pcb *proceso, char *nombre_archivo)
     // mandar a file system archivo y cant_bytes
     int puntero = obtener_puntero(proceso, nombre_archivo);
 
-    solicitar_escritura(puntero);
+    
+    solicitar_fs_r_w(F_WRITE,puntero);
 
     agregar_a_lista_blockfs(proceso);
 

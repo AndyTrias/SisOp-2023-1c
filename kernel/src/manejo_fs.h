@@ -16,11 +16,9 @@
     int obtener_puntero(t_pcb *, char* );
     void agregar_entrada_tabla(char* , int );
     void eliminar_entrada_tabla(int );
-    void existe_archivo(char* );
-    void solicitar_creacion();
-    void solicitar_truncamiento();
-    void solicitar_lectura(int);
-    void solicitar_escritura(int);
+    void existe_archivo();
+    void solicitar_fs(int );
+    void solicitar_fs_r_w(int,int);
     int f_open(t_pcb *, char* );
     void f_close(t_pcb *, char* );
     void f_seek(t_pcb *, char* , char* );
