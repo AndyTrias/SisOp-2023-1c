@@ -251,3 +251,314 @@
 [INFO] 18:25:37:556 MEMORIA/(41568:41568): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55d100836870
 [INFO] 18:25:37:557 MEMORIA/(41568:41568): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55d1008368f0
 [INFO] 18:25:37:557 MEMORIA/(41568:41568): Esperando conexiones de modulos...
+[INFO] 18:31:09:276 MEMORIA/(42714:42714): Se creo el espacio contiguo de memoria
+[INFO] 18:31:09:276 MEMORIA/(42714:42714): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x562cf41ea870
+[INFO] 18:31:09:276 MEMORIA/(42714:42714): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x562cf41ea8f0
+[INFO] 18:31:09:276 MEMORIA/(42714:42714): Esperando conexiones de modulos...
+[INFO] 18:31:12:487 MEMORIA/(42714:42714): Se conecto el file system
+[INFO] 18:31:14:241 MEMORIA/(42714:42714): Se conecto el cpu
+[INFO] 18:33:02:156 MEMORIA/(43393:43393): Se creo el espacio contiguo de memoria
+[INFO] 18:33:02:156 MEMORIA/(43393:43393): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55f715af1870
+[INFO] 18:33:02:156 MEMORIA/(43393:43393): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55f715af18f0
+[INFO] 18:33:02:156 MEMORIA/(43393:43393): Esperando conexiones de modulos...
+[INFO] 18:33:05:744 MEMORIA/(43393:43393): Se conecto el file system
+[INFO] 18:33:08:124 MEMORIA/(43393:43393): Se conecto el cpu
+[INFO] 18:36:30:252 MEMORIA/(45267:45267): Se creo el espacio contiguo de memoria
+[INFO] 18:36:30:252 MEMORIA/(45267:45267): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55d2e7d7f870
+[INFO] 18:36:30:252 MEMORIA/(45267:45267): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55d2e7d7f8f0
+[INFO] 18:36:30:252 MEMORIA/(45267:45267): Esperando conexiones de modulos...
+[INFO] 18:36:33:259 MEMORIA/(45267:45267): Se conecto el file system
+[INFO] 18:36:35:461 MEMORIA/(45267:45267): Se conecto el cpu
+[INFO] 18:38:21:381 MEMORIA/(46749:46749): Se creo el espacio contiguo de memoria
+[INFO] 18:38:21:381 MEMORIA/(46749:46749): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55ed614fe870
+[INFO] 18:38:21:381 MEMORIA/(46749:46749): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55ed614fe8f0
+[INFO] 18:38:21:381 MEMORIA/(46749:46749): Esperando conexiones de modulos...
+[INFO] 18:38:24:098 MEMORIA/(46749:46749): Se conecto el file system
+[INFO] 18:38:26:184 MEMORIA/(46749:46749): Se conecto el cpu
+[INFO] 18:38:33:216 MEMORIA/(46749:46749): Se conecto el kernel
+[INFO] 18:38:36:310 MEMORIA/(46749:47261): Creación de Proceso PID: <0>
+[INFO] 18:38:59:294 MEMORIA/(47577:47577): Se creo el espacio contiguo de memoria
+[INFO] 18:38:59:294 MEMORIA/(47577:47577): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x5597ffe7c870
+[INFO] 18:38:59:294 MEMORIA/(47577:47577): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x5597ffe7c8f0
+[INFO] 18:38:59:294 MEMORIA/(47577:47577): Esperando conexiones de modulos...
+[INFO] 18:39:02:461 MEMORIA/(47577:47577): Se conecto el file system
+[INFO] 18:39:04:620 MEMORIA/(47577:47577): Se conecto el cpu
+[INFO] 18:39:08:900 MEMORIA/(47577:47577): Se conecto el kernel
+[INFO] 18:39:11:015 MEMORIA/(47577:48080): Creación de Proceso PID: <0>
+[INFO] 18:39:17:025 MEMORIA/(47577:48080): PID: <0> - Crear Segmento: <1> - Base: <0x5597ffe7c8f0> - TAMAÑO: <128>
+[INFO] 18:39:55:834 MEMORIA/(48519:48519): Se creo el espacio contiguo de memoria
+[INFO] 18:39:55:834 MEMORIA/(48519:48519): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55578302a870
+[INFO] 18:39:55:834 MEMORIA/(48519:48519): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55578302a8f0
+[INFO] 18:39:55:834 MEMORIA/(48519:48519): Esperando conexiones de modulos...
+[INFO] 18:39:58:865 MEMORIA/(48519:48519): Se conecto el file system
+[INFO] 18:40:01:701 MEMORIA/(48519:48519): Se conecto el cpu
+[INFO] 18:40:06:108 MEMORIA/(48519:48519): Se conecto el kernel
+[INFO] 18:40:10:166 MEMORIA/(48519:49023): Creación de Proceso PID: <0>
+[INFO] 18:40:16:206 MEMORIA/(48519:49023): PID: <0> - Crear Segmento: <1> - Base: <0x55578302a8f0> - TAMAÑO: <128>
+[INFO] 18:45:41:417 MEMORIA/(50520:50520): Se creo el espacio contiguo de memoria
+[INFO] 18:45:41:417 MEMORIA/(50520:50520): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x563732dc0870
+[INFO] 18:45:41:417 MEMORIA/(50520:50520): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x563732dc08f0
+[INFO] 18:45:41:417 MEMORIA/(50520:50520): Esperando conexiones de modulos...
+[INFO] 18:45:44:153 MEMORIA/(50520:50520): Se conecto el file system
+[INFO] 18:45:46:688 MEMORIA/(50520:50520): Se conecto el cpu
+[INFO] 18:46:55:794 MEMORIA/(51416:51416): Se creo el espacio contiguo de memoria
+[INFO] 18:46:55:794 MEMORIA/(51416:51416): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55c695ae7870
+[INFO] 18:46:55:794 MEMORIA/(51416:51416): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55c695ae78f0
+[INFO] 18:46:55:794 MEMORIA/(51416:51416): Esperando conexiones de modulos...
+[INFO] 18:46:58:444 MEMORIA/(51416:51416): Se conecto el file system
+[INFO] 18:47:00:726 MEMORIA/(51416:51416): Se conecto el cpu
+[INFO] 18:47:04:987 MEMORIA/(51416:51416): Se conecto el kernel
+[INFO] 18:47:06:755 MEMORIA/(51416:51841): Creación de Proceso PID: <0>
+[INFO] 18:47:12:765 MEMORIA/(51416:51841): PID: <0> - Crear Segmento: <1> - Base: <0x55c695ae78f0> - TAMAÑO: <128>
+[INFO] 18:49:06:626 MEMORIA/(52467:52467): Se creo el espacio contiguo de memoria
+[INFO] 18:49:06:626 MEMORIA/(52467:52467): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x5650cd830870
+[INFO] 18:49:06:626 MEMORIA/(52467:52467): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x5650cd8308f0
+[INFO] 18:49:06:626 MEMORIA/(52467:52467): Esperando conexiones de modulos...
+[INFO] 18:49:09:209 MEMORIA/(52467:52467): Se conecto el file system
+[INFO] 18:49:12:892 MEMORIA/(52467:52467): Se conecto el cpu
+[INFO] 18:49:43:534 MEMORIA/(52467:52467): Se conecto el kernel
+[INFO] 18:49:45:889 MEMORIA/(52467:53471): Creación de Proceso PID: <0>
+[INFO] 18:49:51:893 MEMORIA/(52467:53471): PID: <0> - Crear Segmento: <1> - Base: <0x5650cd8308f0> - TAMAÑO: <128>
+[INFO] 18:51:28:869 MEMORIA/(52467:53471): Creación de Proceso PID: <1>
+[INFO] 18:51:31:303 MEMORIA/(52467:53471): Creación de Proceso PID: <2>
+[INFO] 18:51:36:877 MEMORIA/(52467:53471): PID: <1> - Crear Segmento: <1> - Base: <0x5650cd830970> - TAMAÑO: <64>
+[INFO] 18:51:39:879 MEMORIA/(52467:53471): PID: <1> - Crear Segmento: <2> - Base: <0x5650cd8309b0> - TAMAÑO: <64>
+[INFO] 18:51:42:891 MEMORIA/(52467:53471): PID: <1> - Crear Segmento: <3> - Base: <0x5650cd8309f0> - TAMAÑO: <64>
+[INFO] 18:51:45:893 MEMORIA/(52467:53471): PID: <1> - Crear Segmento: <4> - Base: <0x5650cd830a30> - TAMAÑO: <64>
+[INFO] 18:51:48:897 MEMORIA/(52467:53471): PID: <1> - Crear Segmento: <5> - Base: <0x5650cd830a70> - TAMAÑO: <64>
+[INFO] 18:51:51:899 MEMORIA/(52467:53471): PID: <1> - Crear Segmento: <6> - Base: <0x5650cd830ab0> - TAMAÑO: <64>
+[INFO] 18:51:54:901 MEMORIA/(52467:53471): PID: <1> - Crear Segmento: <7> - Base: <0x5650cd830af0> - TAMAÑO: <64>
+[INFO] 18:51:57:902 MEMORIA/(52467:53471): PID: <1> - Crear Segmento: <8> - Base: <0x5650cd830b30> - TAMAÑO: <64>
+[INFO] 18:52:13:045 MEMORIA/(52467:53471): PID: <1> - Crear Segmento: <9> - Base: <0x5650cd830b70> - TAMAÑO: <64>
+[INFO] 18:52:37:914 MEMORIA/(52467:53471): PID: <1> - Eliminar Segmento: <1> - Base: <0x5650cd830970> - TAMAÑO: <64>
+[INFO] 18:52:42:934 MEMORIA/(52467:53471): PID: <1> - Eliminar Segmento: <2> - Base: <0x5650cd8309b0> - TAMAÑO: <64>
+[INFO] 18:52:45:958 MEMORIA/(52467:53471): PID: <1> - Eliminar Segmento: <4> - Base: <0x5650cd830a30> - TAMAÑO: <64>
+[INFO] 18:52:48:964 MEMORIA/(52467:53471): PID: <1> - Eliminar Segmento: <5> - Base: <0x5650cd830a70> - TAMAÑO: <64>
+[INFO] 18:53:00:356 MEMORIA/(52467:53471): Eliminacion de Proceso PID: <1>
+[INFO] 18:56:31:652 MEMORIA/(52467:53471): Se desconecto un modulo
+[INFO] 18:57:51:556 MEMORIA/(55905:55905): Se creo el espacio contiguo de memoria
+[INFO] 18:57:51:556 MEMORIA/(55905:55905): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x558bddf10870
+[INFO] 18:57:51:556 MEMORIA/(55905:55905): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x558bddf108f0
+[INFO] 18:57:51:556 MEMORIA/(55905:55905): Esperando conexiones de modulos...
+[INFO] 18:57:54:447 MEMORIA/(55905:55905): Se conecto el file system
+[INFO] 18:57:56:447 MEMORIA/(55905:55905): Se conecto el cpu
+[INFO] 18:58:13:680 MEMORIA/(55905:55905): Se conecto el kernel
+[INFO] 18:58:17:519 MEMORIA/(55905:56613): Creación de Proceso PID: <0>
+[INFO] 18:58:23:530 MEMORIA/(55905:56613): PID: <0> - Crear Segmento: <1> - Base: <0x558bddf108f0> - TAMAÑO: <128>
+[INFO] 18:58:56:697 MEMORIA/(57051:57051): Se creo el espacio contiguo de memoria
+[INFO] 18:58:56:697 MEMORIA/(57051:57051): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55c523fc3870
+[INFO] 18:58:56:697 MEMORIA/(57051:57051): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55c523fc38f0
+[INFO] 18:58:56:697 MEMORIA/(57051:57051): Esperando conexiones de modulos...
+[INFO] 18:58:59:979 MEMORIA/(57051:57051): Se conecto el file system
+[INFO] 18:59:02:446 MEMORIA/(57051:57051): Se conecto el cpu
+[INFO] 18:59:14:373 MEMORIA/(57637:57637): Se creo el espacio contiguo de memoria
+[INFO] 18:59:14:373 MEMORIA/(57637:57637): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x562c42c5b870
+[INFO] 18:59:14:373 MEMORIA/(57637:57637): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x562c42c5b8f0
+[INFO] 18:59:14:373 MEMORIA/(57637:57637): Esperando conexiones de modulos...
+[INFO] 18:59:17:708 MEMORIA/(57637:57637): Se conecto el file system
+[INFO] 18:59:19:940 MEMORIA/(57637:57637): Se conecto el cpu
+[INFO] 18:59:25:426 MEMORIA/(57637:57637): Se conecto el kernel
+[INFO] 18:59:27:148 MEMORIA/(57637:58168): Creación de Proceso PID: <0>
+[INFO] 18:59:33:155 MEMORIA/(57637:58168): PID: <0> - Crear Segmento: <1> - Base: <0x562c42c5b8f0> - TAMAÑO: <128>
+[INFO] 18:59:40:943 MEMORIA/(57637:58168): Creación de Proceso PID: <1>
+[INFO] 18:59:45:234 MEMORIA/(57637:58168): Creación de Proceso PID: <2>
+[INFO] 19:00:17:854 MEMORIA/(58851:58851): Se creo el espacio contiguo de memoria
+[INFO] 19:00:17:854 MEMORIA/(58851:58851): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x5630386eb870
+[INFO] 19:00:17:854 MEMORIA/(58851:58851): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x5630386eb8f0
+[INFO] 19:00:17:854 MEMORIA/(58851:58851): Esperando conexiones de modulos...
+[INFO] 19:00:20:408 MEMORIA/(58851:58851): Se conecto el file system
+[INFO] 19:00:23:041 MEMORIA/(58851:58851): Se conecto el cpu
+[INFO] 19:00:31:923 MEMORIA/(58851:58851): Se conecto el kernel
+[INFO] 19:00:48:231 MEMORIA/(58851:59426): Se desconecto un modulo
+[INFO] 19:00:54:683 MEMORIA/(59866:59866): Se creo el espacio contiguo de memoria
+[INFO] 19:00:54:683 MEMORIA/(59866:59866): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x562e35e96870
+[INFO] 19:00:54:683 MEMORIA/(59866:59866): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x562e35e968f0
+[INFO] 19:00:54:683 MEMORIA/(59866:59866): Esperando conexiones de modulos...
+[INFO] 19:00:56:881 MEMORIA/(59866:59866): Se conecto el file system
+[INFO] 19:00:59:059 MEMORIA/(59866:59866): Se conecto el cpu
+[INFO] 19:01:02:924 MEMORIA/(59866:59866): Se conecto el kernel
+[INFO] 19:01:03:983 MEMORIA/(59866:60415): Creación de Proceso PID: <0>
+[INFO] 19:01:08:005 MEMORIA/(59866:60415): PID: <0> - Crear Segmento: <1> - Base: <0x562e35e968f0> - TAMAÑO: <128>
+[INFO] 19:01:14:492 MEMORIA/(59866:60415): Creación de Proceso PID: <1>
+[INFO] 19:01:18:562 MEMORIA/(59866:60415): PID: <1> - Crear Segmento: <1> - Base: <0x562e35e96970> - TAMAÑO: <64>
+[INFO] 19:01:19:567 MEMORIA/(59866:60415): PID: <1> - Crear Segmento: <2> - Base: <0x562e35e969b0> - TAMAÑO: <64>
+[INFO] 19:01:20:570 MEMORIA/(59866:60415): PID: <1> - Crear Segmento: <3> - Base: <0x562e35e969f0> - TAMAÑO: <64>
+[INFO] 19:01:21:578 MEMORIA/(59866:60415): PID: <1> - Crear Segmento: <4> - Base: <0x562e35e96a30> - TAMAÑO: <64>
+[INFO] 19:01:22:582 MEMORIA/(59866:60415): PID: <1> - Crear Segmento: <5> - Base: <0x562e35e96a70> - TAMAÑO: <64>
+[INFO] 19:01:23:589 MEMORIA/(59866:60415): PID: <1> - Crear Segmento: <6> - Base: <0x562e35e96ab0> - TAMAÑO: <64>
+[INFO] 19:01:24:594 MEMORIA/(59866:60415): PID: <1> - Crear Segmento: <7> - Base: <0x562e35e96af0> - TAMAÑO: <64>
+[INFO] 19:01:25:598 MEMORIA/(59866:60415): PID: <1> - Crear Segmento: <8> - Base: <0x562e35e96b30> - TAMAÑO: <64>
+[INFO] 19:01:31:611 MEMORIA/(59866:60415): PID: <0> - Eliminar Segmento: <1> - Base: <0x562e35e968f0> - TAMAÑO: <128>
+[INFO] 19:01:36:620 MEMORIA/(59866:60415): PID: <1> - Crear Segmento: <9> - Base: <0x562e35e968f0> - TAMAÑO: <64>
+[INFO] 19:01:54:615 MEMORIA/(59866:60415): Creación de Proceso PID: <2>
+[INFO] 19:01:56:652 MEMORIA/(59866:60415): PID: <2> - Crear Segmento: <1> - Base: <0x562e35e96b70> - TAMAÑO: <256>
+[INFO] 19:02:03:724 MEMORIA/(59866:60415): PID: <1> - Eliminar Segmento: <1> - Base: <0x562e35e96970> - TAMAÑO: <64>
+[INFO] 19:02:06:741 MEMORIA/(59866:60415): PID: <1> - Eliminar Segmento: <2> - Base: <0x562e35e969b0> - TAMAÑO: <64>
+[INFO] 19:02:07:744 MEMORIA/(59866:60415): PID: <1> - Eliminar Segmento: <4> - Base: <0x562e35e96a30> - TAMAÑO: <64>
+[INFO] 19:02:08:748 MEMORIA/(59866:60415): PID: <1> - Eliminar Segmento: <5> - Base: <0x562e35e96a70> - TAMAÑO: <64>
+[INFO] 19:02:11:755 MEMORIA/(59866:60415): PID: <2> - Crear Segmento: <2> - Base: <0x562e35e96930> - TAMAÑO: <128>
+[INFO] 19:02:14:769 MEMORIA/(59866:60415): Eliminacion de Proceso PID: <2>
+[INFO] 19:02:14:901 MEMORIA/(59866:60415): Se desconecto un modulo
+[INFO] 19:05:11:885 MEMORIA/(61588:61588): Se creo el espacio contiguo de memoria
+[INFO] 19:05:11:885 MEMORIA/(61588:61588): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x558f9f3f9870
+[INFO] 19:05:11:885 MEMORIA/(61588:61588): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x558f9f3f98f0
+[INFO] 19:05:11:885 MEMORIA/(61588:61588): Esperando conexiones de modulos...
+[INFO] 19:05:14:650 MEMORIA/(61588:61588): Se conecto el file system
+[INFO] 19:05:16:874 MEMORIA/(61588:61588): Se conecto el cpu
+[INFO] 19:05:20:649 MEMORIA/(61588:61588): Se conecto el kernel
+[INFO] 19:05:21:894 MEMORIA/(61588:62095): Creación de Proceso PID: <0>
+[INFO] 19:05:24:282 MEMORIA/(61588:62095): Creación de Proceso PID: <1>
+[INFO] 19:05:25:899 MEMORIA/(61588:62095): PID: <0> - Crear Segmento: <1> - Base: <0x558f9f3f98f0> - TAMAÑO: <128>
+[INFO] 19:05:31:354 MEMORIA/(61588:62095): Creación de Proceso PID: <2>
+[INFO] 19:05:31:912 MEMORIA/(61588:62095): PID: <1> - Crear Segmento: <1> - Base: <0x558f9f3f9970> - TAMAÑO: <64>
+[INFO] 19:05:32:915 MEMORIA/(61588:62095): PID: <1> - Crear Segmento: <2> - Base: <0x558f9f3f99b0> - TAMAÑO: <64>
+[INFO] 19:05:33:916 MEMORIA/(61588:62095): PID: <1> - Crear Segmento: <3> - Base: <0x558f9f3f99f0> - TAMAÑO: <64>
+[INFO] 19:05:34:919 MEMORIA/(61588:62095): PID: <1> - Crear Segmento: <4> - Base: <0x558f9f3f9a30> - TAMAÑO: <64>
+[INFO] 19:05:35:922 MEMORIA/(61588:62095): PID: <1> - Crear Segmento: <5> - Base: <0x558f9f3f9a70> - TAMAÑO: <64>
+[INFO] 19:05:36:923 MEMORIA/(61588:62095): PID: <1> - Crear Segmento: <6> - Base: <0x558f9f3f9ab0> - TAMAÑO: <64>
+[INFO] 19:05:37:926 MEMORIA/(61588:62095): PID: <1> - Crear Segmento: <7> - Base: <0x558f9f3f9af0> - TAMAÑO: <64>
+[INFO] 19:05:38:931 MEMORIA/(61588:62095): PID: <1> - Crear Segmento: <8> - Base: <0x558f9f3f9b30> - TAMAÑO: <64>
+[INFO] 19:05:45:946 MEMORIA/(61588:62095): PID: <0> - Eliminar Segmento: <1> - Base: <0x558f9f3f98f0> - TAMAÑO: <128>
+[INFO] 19:05:50:975 MEMORIA/(61588:62095): PID: <1> - Crear Segmento: <9> - Base: <0x558f9f3f98f0> - TAMAÑO: <64>
+[INFO] 19:06:00:016 MEMORIA/(61588:62095): PID: <2> - Crear Segmento: <1> - Base: <0x558f9f3f9b70> - TAMAÑO: <256>
+[INFO] 19:06:07:035 MEMORIA/(61588:62095): PID: <1> - Eliminar Segmento: <1> - Base: <0x558f9f3f9970> - TAMAÑO: <64>
+[INFO] 19:06:10:063 MEMORIA/(61588:62095): PID: <1> - Eliminar Segmento: <2> - Base: <0x558f9f3f99b0> - TAMAÑO: <64>
+[INFO] 19:06:11:067 MEMORIA/(61588:62095): PID: <1> - Eliminar Segmento: <4> - Base: <0x558f9f3f9a30> - TAMAÑO: <64>
+[INFO] 19:06:12:094 MEMORIA/(61588:62095): PID: <1> - Eliminar Segmento: <5> - Base: <0x558f9f3f9a70> - TAMAÑO: <64>
+[INFO] 19:06:15:107 MEMORIA/(61588:62095): PID: <2> - Crear Segmento: <2> - Base: <0x558f9f3f9930> - TAMAÑO: <128>
+[INFO] 19:06:18:142 MEMORIA/(61588:62095): Eliminacion de Proceso PID: <2>
+[INFO] 19:06:18:311 MEMORIA/(61588:62095): Se desconecto un modulo
+[INFO] 19:07:52:274 MEMORIA/(63246:63246): Se creo el espacio contiguo de memoria
+[INFO] 19:07:52:274 MEMORIA/(63246:63246): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55ad6002d870
+[INFO] 19:07:52:274 MEMORIA/(63246:63246): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55ad6002d8f0
+[INFO] 19:07:52:274 MEMORIA/(63246:63246): Esperando conexiones de modulos...
+[INFO] 19:07:54:791 MEMORIA/(63246:63246): Se conecto el file system
+[INFO] 19:07:57:220 MEMORIA/(63246:63246): Se conecto el cpu
+[INFO] 19:08:00:567 MEMORIA/(63246:63246): Se conecto el kernel
+[INFO] 19:08:02:163 MEMORIA/(63246:63752): Creación de Proceso PID: <0>
+[INFO] 19:08:04:333 MEMORIA/(63246:63752): Creación de Proceso PID: <1>
+[INFO] 19:08:05:170 MEMORIA/(63246:63752): PID: <0> - Crear Segmento: <1> - Base: <0x55ad6002d8f0> - TAMAÑO: <128>
+[INFO] 19:08:06:721 MEMORIA/(63246:63752): Creación de Proceso PID: <2>
+[INFO] 19:08:07:175 MEMORIA/(63246:63752): PID: <1> - Crear Segmento: <1> - Base: <0x55ad6002d970> - TAMAÑO: <64>
+[INFO] 19:08:07:178 MEMORIA/(63246:63752): PID: <1> - Crear Segmento: <2> - Base: <0x55ad6002d9b0> - TAMAÑO: <64>
+[INFO] 19:08:07:183 MEMORIA/(63246:63752): PID: <1> - Crear Segmento: <3> - Base: <0x55ad6002d9f0> - TAMAÑO: <64>
+[INFO] 19:08:07:186 MEMORIA/(63246:63752): PID: <1> - Crear Segmento: <4> - Base: <0x55ad6002da30> - TAMAÑO: <64>
+[INFO] 19:08:07:188 MEMORIA/(63246:63752): PID: <1> - Crear Segmento: <5> - Base: <0x55ad6002da70> - TAMAÑO: <64>
+[INFO] 19:08:07:190 MEMORIA/(63246:63752): PID: <1> - Crear Segmento: <6> - Base: <0x55ad6002dab0> - TAMAÑO: <64>
+[INFO] 19:08:07:193 MEMORIA/(63246:63752): PID: <1> - Crear Segmento: <7> - Base: <0x55ad6002daf0> - TAMAÑO: <64>
+[INFO] 19:08:07:196 MEMORIA/(63246:63752): PID: <1> - Crear Segmento: <8> - Base: <0x55ad6002db30> - TAMAÑO: <64>
+[INFO] 19:08:10:226 MEMORIA/(63246:63752): PID: <0> - Eliminar Segmento: <1> - Base: <0x55ad6002d8f0> - TAMAÑO: <128>
+[INFO] 19:08:12:239 MEMORIA/(63246:63752): PID: <1> - Crear Segmento: <9> - Base: <0x55ad6002d8f0> - TAMAÑO: <64>
+[INFO] 19:08:18:296 MEMORIA/(63246:63752): PID: <2> - Crear Segmento: <1> - Base: <0x55ad6002db70> - TAMAÑO: <256>
+[INFO] 19:08:21:107 MEMORIA/(63246:63404): Se desconecto un modulo
+[INFO] 19:08:21:107 MEMORIA/(63246:63752): Se desconecto un modulo
+[INFO] 19:08:28:678 MEMORIA/(64369:64369): Se creo el espacio contiguo de memoria
+[INFO] 19:08:28:678 MEMORIA/(64369:64369): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x5566f433f870
+[INFO] 19:08:28:678 MEMORIA/(64369:64369): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x5566f433f8f0
+[INFO] 19:08:28:678 MEMORIA/(64369:64369): Esperando conexiones de modulos...
+[INFO] 19:08:31:068 MEMORIA/(64369:64369): Se conecto el file system
+[INFO] 19:08:33:330 MEMORIA/(64369:64369): Se conecto el cpu
+[INFO] 19:08:37:528 MEMORIA/(64369:64369): Se conecto el kernel
+[INFO] 19:08:39:665 MEMORIA/(64369:64832): Creación de Proceso PID: <0>
+[INFO] 19:08:41:623 MEMORIA/(64369:64832): Creación de Proceso PID: <1>
+[INFO] 19:08:42:672 MEMORIA/(64369:64832): PID: <0> - Crear Segmento: <1> - Base: <0x5566f433f8f0> - TAMAÑO: <128>
+[INFO] 19:08:43:760 MEMORIA/(64369:64832): Creación de Proceso PID: <2>
+[INFO] 19:08:44:693 MEMORIA/(64369:64832): PID: <1> - Crear Segmento: <1> - Base: <0x5566f433f970> - TAMAÑO: <64>
+[INFO] 19:08:44:696 MEMORIA/(64369:64832): PID: <1> - Crear Segmento: <2> - Base: <0x5566f433f9b0> - TAMAÑO: <64>
+[INFO] 19:08:44:698 MEMORIA/(64369:64832): PID: <1> - Crear Segmento: <3> - Base: <0x5566f433f9f0> - TAMAÑO: <64>
+[INFO] 19:08:44:701 MEMORIA/(64369:64832): PID: <1> - Crear Segmento: <4> - Base: <0x5566f433fa30> - TAMAÑO: <64>
+[INFO] 19:08:44:704 MEMORIA/(64369:64832): PID: <1> - Crear Segmento: <5> - Base: <0x5566f433fa70> - TAMAÑO: <64>
+[INFO] 19:08:44:707 MEMORIA/(64369:64832): PID: <1> - Crear Segmento: <6> - Base: <0x5566f433fab0> - TAMAÑO: <64>
+[INFO] 19:08:44:710 MEMORIA/(64369:64832): PID: <1> - Crear Segmento: <7> - Base: <0x5566f433faf0> - TAMAÑO: <64>
+[INFO] 19:08:44:714 MEMORIA/(64369:64832): PID: <1> - Crear Segmento: <8> - Base: <0x5566f433fb30> - TAMAÑO: <64>
+[INFO] 19:08:47:722 MEMORIA/(64369:64832): PID: <0> - Eliminar Segmento: <1> - Base: <0x5566f433f8f0> - TAMAÑO: <128>
+[INFO] 19:08:49:726 MEMORIA/(64369:64832): PID: <1> - Crear Segmento: <9> - Base: <0x5566f433f8f0> - TAMAÑO: <64>
+[INFO] 19:08:55:745 MEMORIA/(64369:64832): PID: <2> - Crear Segmento: <1> - Base: <0x5566f433fb70> - TAMAÑO: <256>
+[INFO] 19:08:59:759 MEMORIA/(64369:64832): PID: <1> - Eliminar Segmento: <1> - Base: <0x5566f433f970> - TAMAÑO: <64>
+[INFO] 19:09:01:790 MEMORIA/(64369:64832): PID: <1> - Eliminar Segmento: <2> - Base: <0x5566f433f9b0> - TAMAÑO: <64>
+[INFO] 19:09:01:792 MEMORIA/(64369:64832): PID: <1> - Eliminar Segmento: <4> - Base: <0x5566f433fa30> - TAMAÑO: <64>
+[INFO] 19:09:01:794 MEMORIA/(64369:64832): PID: <1> - Eliminar Segmento: <5> - Base: <0x5566f433fa70> - TAMAÑO: <64>
+[INFO] 19:09:01:800 MEMORIA/(64369:64832): PID: <2> - Crear Segmento: <2> - Base: <0x5566f433f930> - TAMAÑO: <128>
+[INFO] 19:13:04:583 MEMORIA/(65765:65765): Se creo el espacio contiguo de memoria
+[INFO] 19:13:04:583 MEMORIA/(65765:65765): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x5587ec528870
+[INFO] 19:13:04:583 MEMORIA/(65765:65765): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x5587ec5288f0
+[INFO] 19:13:04:583 MEMORIA/(65765:65765): Esperando conexiones de modulos...
+[INFO] 19:13:07:854 MEMORIA/(65765:65765): Se conecto el file system
+[INFO] 19:13:10:431 MEMORIA/(65765:65765): Se conecto el cpu
+[INFO] 19:13:18:615 MEMORIA/(65765:65765): Se conecto el kernel
+[INFO] 19:13:20:129 MEMORIA/(65765:66376): Creación de Proceso PID: <0>
+[INFO] 19:13:22:796 MEMORIA/(65765:66376): Creación de Proceso PID: <1>
+[INFO] 19:13:23:138 MEMORIA/(65765:66376): PID: <0> - Crear Segmento: <1> - Base: <0x5587ec5288f0> - TAMAÑO: <128>
+[INFO] 19:13:28:853 MEMORIA/(65765:66376): Creación de Proceso PID: <2>
+[INFO] 19:13:30:031 MEMORIA/(65765:66376): PID: <1> - Crear Segmento: <1> - Base: <0x5587ec528970> - TAMAÑO: <64>
+[INFO] 19:13:30:033 MEMORIA/(65765:66376): PID: <1> - Crear Segmento: <2> - Base: <0x5587ec5289b0> - TAMAÑO: <64>
+[INFO] 19:13:30:034 MEMORIA/(65765:66376): PID: <1> - Crear Segmento: <3> - Base: <0x5587ec5289f0> - TAMAÑO: <64>
+[INFO] 19:13:30:035 MEMORIA/(65765:66376): PID: <1> - Crear Segmento: <4> - Base: <0x5587ec528a30> - TAMAÑO: <64>
+[INFO] 19:13:30:036 MEMORIA/(65765:66376): PID: <1> - Crear Segmento: <5> - Base: <0x5587ec528a70> - TAMAÑO: <64>
+[INFO] 19:13:30:037 MEMORIA/(65765:66376): PID: <1> - Crear Segmento: <6> - Base: <0x5587ec528ab0> - TAMAÑO: <64>
+[INFO] 19:13:30:039 MEMORIA/(65765:66376): PID: <1> - Crear Segmento: <7> - Base: <0x5587ec528af0> - TAMAÑO: <64>
+[INFO] 19:13:30:040 MEMORIA/(65765:66376): PID: <1> - Crear Segmento: <8> - Base: <0x5587ec528b30> - TAMAÑO: <64>
+[INFO] 19:13:33:046 MEMORIA/(65765:66376): PID: <0> - Eliminar Segmento: <1> - Base: <0x5587ec5288f0> - TAMAÑO: <128>
+[INFO] 19:13:35:053 MEMORIA/(65765:66376): PID: <1> - Crear Segmento: <9> - Base: <0x5587ec5288f0> - TAMAÑO: <64>
+[INFO] 19:13:41:075 MEMORIA/(65765:66376): PID: <2> - Crear Segmento: <1> - Base: <0x5587ec528b70> - TAMAÑO: <256>
+[INFO] 19:13:45:088 MEMORIA/(65765:66376): PID: <1> - Eliminar Segmento: <1> - Base: <0x5587ec528970> - TAMAÑO: <64>
+[INFO] 19:13:47:091 MEMORIA/(65765:66376): PID: <1> - Eliminar Segmento: <2> - Base: <0x5587ec5289b0> - TAMAÑO: <64>
+[INFO] 19:13:47:094 MEMORIA/(65765:66376): PID: <1> - Eliminar Segmento: <4> - Base: <0x5587ec528a30> - TAMAÑO: <64>
+[INFO] 19:13:47:098 MEMORIA/(65765:66376): PID: <1> - Eliminar Segmento: <5> - Base: <0x5587ec528a70> - TAMAÑO: <64>
+[INFO] 19:13:47:104 MEMORIA/(65765:66376): PID: <2> - Crear Segmento: <2> - Base: <0x5587ec528930> - TAMAÑO: <128>
+[INFO] 19:15:04:698 MEMORIA/(67325:67325): Se creo el espacio contiguo de memoria
+[INFO] 19:15:04:699 MEMORIA/(67325:67325): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55fcb9971870
+[INFO] 19:15:04:699 MEMORIA/(67325:67325): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55fcb99718f0
+[INFO] 19:15:04:699 MEMORIA/(67325:67325): Esperando conexiones de modulos...
+[INFO] 19:15:07:565 MEMORIA/(67325:67325): Se conecto el file system
+[INFO] 19:15:09:927 MEMORIA/(67325:67325): Se conecto el cpu
+[INFO] 19:15:18:878 MEMORIA/(67325:67325): Se conecto el kernel
+[INFO] 19:15:20:575 MEMORIA/(67325:67838): Creación de Proceso PID: <0>
+[INFO] 19:15:22:799 MEMORIA/(67325:67838): Creación de Proceso PID: <1>
+[INFO] 19:15:23:582 MEMORIA/(67325:67838): PID: <0> - Crear Segmento: <1> - Base: <0x55fcb99718f0> - TAMAÑO: <128>
+[INFO] 19:15:27:643 MEMORIA/(67325:67838): Creación de Proceso PID: <2>
+[INFO] 19:15:29:648 MEMORIA/(67325:67838): PID: <1> - Crear Segmento: <1> - Base: <0x55fcb9971970> - TAMAÑO: <64>
+[INFO] 19:15:29:652 MEMORIA/(67325:67838): PID: <1> - Crear Segmento: <2> - Base: <0x55fcb99719b0> - TAMAÑO: <64>
+[INFO] 19:15:29:655 MEMORIA/(67325:67838): PID: <1> - Crear Segmento: <3> - Base: <0x55fcb99719f0> - TAMAÑO: <64>
+[INFO] 19:15:29:659 MEMORIA/(67325:67838): PID: <1> - Crear Segmento: <4> - Base: <0x55fcb9971a30> - TAMAÑO: <64>
+[INFO] 19:15:29:663 MEMORIA/(67325:67838): PID: <1> - Crear Segmento: <5> - Base: <0x55fcb9971a70> - TAMAÑO: <64>
+[INFO] 19:15:29:666 MEMORIA/(67325:67838): PID: <1> - Crear Segmento: <6> - Base: <0x55fcb9971ab0> - TAMAÑO: <64>
+[INFO] 19:15:29:669 MEMORIA/(67325:67838): PID: <1> - Crear Segmento: <7> - Base: <0x55fcb9971af0> - TAMAÑO: <64>
+[INFO] 19:15:29:672 MEMORIA/(67325:67838): PID: <1> - Crear Segmento: <8> - Base: <0x55fcb9971b30> - TAMAÑO: <64>
+[INFO] 19:15:32:708 MEMORIA/(67325:67838): PID: <0> - Eliminar Segmento: <1> - Base: <0x55fcb99718f0> - TAMAÑO: <128>
+[INFO] 19:15:34:731 MEMORIA/(67325:67838): PID: <1> - Crear Segmento: <9> - Base: <0x55fcb99718f0> - TAMAÑO: <64>
+[INFO] 19:15:40:817 MEMORIA/(67325:67838): PID: <2> - Crear Segmento: <1> - Base: <0x55fcb9971b70> - TAMAÑO: <256>
+[INFO] 19:15:44:829 MEMORIA/(67325:67838): PID: <1> - Eliminar Segmento: <1> - Base: <0x55fcb9971970> - TAMAÑO: <64>
+[INFO] 19:15:46:835 MEMORIA/(67325:67838): PID: <1> - Eliminar Segmento: <2> - Base: <0x55fcb99719b0> - TAMAÑO: <64>
+[INFO] 19:15:46:837 MEMORIA/(67325:67838): PID: <1> - Eliminar Segmento: <4> - Base: <0x55fcb9971a30> - TAMAÑO: <64>
+[INFO] 19:15:46:840 MEMORIA/(67325:67838): PID: <1> - Eliminar Segmento: <5> - Base: <0x55fcb9971a70> - TAMAÑO: <64>
+[INFO] 19:15:46:846 MEMORIA/(67325:67838): PID: <2> - Crear Segmento: <2> - Base: <0x55fcb9971930> - TAMAÑO: <128>
+[INFO] 19:17:08:769 MEMORIA/(68683:68683): Se creo el espacio contiguo de memoria
+[INFO] 19:17:08:769 MEMORIA/(68683:68683): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55dd5dcc5870
+[INFO] 19:17:08:769 MEMORIA/(68683:68683): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55dd5dcc58f0
+[INFO] 19:17:08:769 MEMORIA/(68683:68683): Esperando conexiones de modulos...
+[INFO] 19:17:13:026 MEMORIA/(68683:68683): Se conecto el file system
+[INFO] 19:17:15:670 MEMORIA/(68683:68683): Se conecto el cpu
+[INFO] 19:17:21:329 MEMORIA/(68683:68683): Se conecto el kernel
+[INFO] 19:17:23:080 MEMORIA/(68683:69246): Creación de Proceso PID: <0>
+[INFO] 19:17:25:576 MEMORIA/(68683:69246): Creación de Proceso PID: <1>
+[INFO] 19:17:26:087 MEMORIA/(68683:69246): PID: <0> - Crear Segmento: <1> - Base: <0x55dd5dcc58f0> - TAMAÑO: <128>
+[INFO] 19:17:27:833 MEMORIA/(68683:69246): Creación de Proceso PID: <2>
+[INFO] 19:17:28:099 MEMORIA/(68683:69246): PID: <1> - Crear Segmento: <1> - Base: <0x55dd5dcc5970> - TAMAÑO: <64>
+[INFO] 19:17:28:100 MEMORIA/(68683:69246): PID: <1> - Crear Segmento: <2> - Base: <0x55dd5dcc59b0> - TAMAÑO: <64>
+[INFO] 19:17:28:102 MEMORIA/(68683:69246): PID: <1> - Crear Segmento: <3> - Base: <0x55dd5dcc59f0> - TAMAÑO: <64>
+[INFO] 19:17:28:103 MEMORIA/(68683:69246): PID: <1> - Crear Segmento: <4> - Base: <0x55dd5dcc5a30> - TAMAÑO: <64>
+[INFO] 19:17:28:104 MEMORIA/(68683:69246): PID: <1> - Crear Segmento: <5> - Base: <0x55dd5dcc5a70> - TAMAÑO: <64>
+[INFO] 19:17:28:105 MEMORIA/(68683:69246): PID: <1> - Crear Segmento: <6> - Base: <0x55dd5dcc5ab0> - TAMAÑO: <64>
+[INFO] 19:17:28:106 MEMORIA/(68683:69246): PID: <1> - Crear Segmento: <7> - Base: <0x55dd5dcc5af0> - TAMAÑO: <64>
+[INFO] 19:17:28:107 MEMORIA/(68683:69246): PID: <1> - Crear Segmento: <8> - Base: <0x55dd5dcc5b30> - TAMAÑO: <64>
+[INFO] 19:17:31:119 MEMORIA/(68683:69246): PID: <0> - Eliminar Segmento: <1> - Base: <0x55dd5dcc58f0> - TAMAÑO: <128>
+[INFO] 19:17:33:132 MEMORIA/(68683:69246): PID: <1> - Crear Segmento: <9> - Base: <0x55dd5dcc58f0> - TAMAÑO: <64>
+[INFO] 19:17:39:188 MEMORIA/(68683:69246): PID: <2> - Crear Segmento: <1> - Base: <0x55dd5dcc5b70> - TAMAÑO: <256>
+[INFO] 19:17:43:201 MEMORIA/(68683:69246): PID: <1> - Eliminar Segmento: <1> - Base: <0x55dd5dcc5970> - TAMAÑO: <64>
+[INFO] 19:17:45:208 MEMORIA/(68683:69246): PID: <1> - Eliminar Segmento: <2> - Base: <0x55dd5dcc59b0> - TAMAÑO: <64>
+[INFO] 19:17:45:212 MEMORIA/(68683:69246): PID: <1> - Eliminar Segmento: <4> - Base: <0x55dd5dcc5a30> - TAMAÑO: <64>
+[INFO] 19:17:45:214 MEMORIA/(68683:69246): PID: <1> - Eliminar Segmento: <5> - Base: <0x55dd5dcc5a70> - TAMAÑO: <64>
+[INFO] 19:17:45:221 MEMORIA/(68683:69246): PID: <2> - Crear Segmento: <2> - Base: <0x55dd5dcc5930> - TAMAÑO: <128>
+[INFO] 19:18:16:054 MEMORIA/(68683:69246): Se desconecto un modulo
+[INFO] 19:18:16:055 MEMORIA/(68683:68976): Se desconecto un modulo

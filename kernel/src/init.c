@@ -75,13 +75,23 @@ void inicializar_conexiones(t_config* config) {
     send(SOCKET_MEMORIA, identificador, sizeof(int), 0);
     free(identificador);
 }
-int* convertirAArrayInt(char** strArray) {
-    int size = string_array_size(strArray);
-    int* intArray = (int*)malloc(size * sizeof(int));
 
-    for (int i = 0; i < size; i++) {
-        intArray[i] = atoi(strArray[i]);
+int* convertirAArrayInt(char** strings) {
+    int size = 0;
+    while (strings[size] != NULL) {
+        size++;
     }
 
-    return intArray;
+    int* result = (int*)malloc(size * sizeof(int));
+    if (result == NULL) {
+        printf("Memory allocation failed.\n");
+        return NULL;
+    }
+
+    for (int i = 0; i < size; i++) {
+        result[i] = atoi(strings[i]);
+    }
+
+    return result;
 }
+

@@ -48,12 +48,11 @@ void signal(t_pcb *proceso, char *nombre_recurso)
         } else {
             // sem_signal(SEMAFOROS_RECURSOS[recurso_id]);
             list_remove_element(proceso->recursos_en_uso, nombre_recurso);
-            int recurso = list_get(INSTANCIAS_RECURSOS, recurso_id);
-            recurso++;
+            INSTANCIAS_RECURSOS[recurso_id]++;
         }
         
         
-        log_info(LOGGER_KERNEL, "PID: <%d> - Signal: <%s> - Instancias: <%d>", proceso->contexto.PID, RECURSOS[recurso_id], list_get(INSTANCIAS_RECURSOS, recurso_id));
+        log_info(LOGGER_KERNEL, "PID: <%d> - Signal: <%s> - Instancias: <%d>", proceso->contexto.PID, RECURSOS[recurso_id], INSTANCIAS_RECURSOS[recurso_id]);
     }
     else
     {
