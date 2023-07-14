@@ -141,7 +141,7 @@ void recibir_de_cpu(int conexion_cpu)
     definir_accion(cod_op, EJECUTANDO);
 
     liberar_parametros_desalojo(&EJECUTANDO->contexto);
-    
+    sleep(3);
     enviar_a_cpu();
 }
 void estimado_prox_rafaga()

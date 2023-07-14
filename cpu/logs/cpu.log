@@ -1,0 +1,967 @@
+[INFO] 17:09:33:398 CPU/(10374:10374): Se conecto al servidor 127.0.0.1:8002
+[INFO] 17:09:33:398 CPU/(10374:10374): Esperando kernel....
+[INFO] 17:10:01:459 CPU/(10374:10374): Se conecto el kernel
+[INFO] 17:13:36:571 CPU/(10374:10374): Se recibio un contexto del kernel
+[INFO] 17:13:36:571 CPU/(10374:10374): Comenzando ciclo con nuevo CTX...
+[INFO] 17:13:36:571 CPU/(10374:10374): Program Counter: 0
+[INFO] 17:13:36:571 CPU/(10374:10374): Instruccion nº1: 8
+[INFO] 17:13:37:584 CPU/(10374:10374): PID: 0  -Ejecutando: 8 - AX AAAA
+[INFO] 17:13:37:584 CPU/(10374:10374): Program Counter: 1
+[INFO] 17:13:37:584 CPU/(10374:10374): Instruccion nº2: 8
+[INFO] 17:13:38:592 CPU/(10374:10374): PID: 0  -Ejecutando: 8 - BX BBBB
+[INFO] 17:13:38:592 CPU/(10374:10374): Program Counter: 2
+[INFO] 17:13:38:592 CPU/(10374:10374): Instruccion nº3: 8
+[INFO] 17:13:39:640 CPU/(10374:10374): PID: 0  -Ejecutando: 8 - CX CCCC
+[INFO] 17:13:39:640 CPU/(10374:10374): Program Counter: 3
+[INFO] 17:13:39:640 CPU/(10374:10374): Instruccion nº4: 8
+[INFO] 17:13:40:678 CPU/(10374:10374): PID: 0  -Ejecutando: 8 - DX DDDD
+[INFO] 17:13:40:678 CPU/(10374:10374): Program Counter: 4
+[INFO] 17:13:40:679 CPU/(10374:10374): Instruccion nº5: 8
+[INFO] 17:13:41:680 CPU/(10374:10374): PID: 0  -Ejecutando: 8 - EAX AAAAAAAA
+[INFO] 17:13:41:680 CPU/(10374:10374): Program Counter: 5
+[INFO] 17:13:41:680 CPU/(10374:10374): Instruccion nº6: 8
+[INFO] 17:13:42:680 CPU/(10374:10374): PID: 0  -Ejecutando: 8 - EBX BBBBBBBB
+[INFO] 17:13:42:680 CPU/(10374:10374): Program Counter: 6
+[INFO] 17:13:42:680 CPU/(10374:10374): Instruccion nº7: 8
+[INFO] 17:13:43:710 CPU/(10374:10374): PID: 0  -Ejecutando: 8 - ECX CCCCCCCC
+[INFO] 17:13:43:710 CPU/(10374:10374): Program Counter: 7
+[INFO] 17:13:43:710 CPU/(10374:10374): Instruccion nº8: 8
+[INFO] 17:13:44:711 CPU/(10374:10374): PID: 0  -Ejecutando: 8 - EDX DDDDDDDD
+[INFO] 17:13:44:711 CPU/(10374:10374): Program Counter: 8
+[INFO] 17:13:44:711 CPU/(10374:10374): Instruccion nº9: 8
+[INFO] 17:13:45:712 CPU/(10374:10374): PID: 0  -Ejecutando: 8 - RAX AAAAAAAAAAAAAAAA
+[INFO] 17:13:45:712 CPU/(10374:10374): Program Counter: 9
+[INFO] 17:13:45:712 CPU/(10374:10374): Instruccion nº10: 8
+[INFO] 17:13:46:719 CPU/(10374:10374): PID: 0  -Ejecutando: 8 - RBX BBBBBBBBBBBBBBBB
+[INFO] 17:13:46:719 CPU/(10374:10374): Program Counter: 10
+[INFO] 17:13:46:719 CPU/(10374:10374): Instruccion nº11: 8
+[INFO] 17:13:47:736 CPU/(10374:10374): PID: 0  -Ejecutando: 8 - RCX CCCCCCCCCCCCCCCC
+[INFO] 17:13:47:736 CPU/(10374:10374): Program Counter: 11
+[INFO] 17:13:47:736 CPU/(10374:10374): Instruccion nº12: 8
+[INFO] 17:13:48:772 CPU/(10374:10374): PID: 0  -Ejecutando: 8 - RDX DDDDDDDDDDDDDDDD
+[INFO] 17:13:48:772 CPU/(10374:10374): Program Counter: 12
+[INFO] 17:13:48:772 CPU/(10374:10374): Instruccion nº13: 15
+[INFO] 17:13:48:772 CPU/(10374:10374): PID: 0  -Ejecutando: 15
+[INFO] 17:13:48:773 CPU/(10374:10374): Se recibio un contexto del kernel
+[INFO] 17:13:48:773 CPU/(10374:10374): Comenzando ciclo con nuevo CTX...
+[INFO] 17:13:48:773 CPU/(10374:10374): Program Counter: 13
+[INFO] 17:13:48:773 CPU/(10374:10374): Instruccion nº14: 8
+[INFO] 17:13:49:784 CPU/(10374:10374): PID: 0  -Ejecutando: 8 - RAX TCHOUAMENIAFUERA
+[INFO] 17:13:49:784 CPU/(10374:10374): Program Counter: 14
+[INFO] 17:13:49:784 CPU/(10374:10374): Instruccion nº15: 8
+[INFO] 17:13:50:785 CPU/(10374:10374): PID: 0  -Ejecutando: 8 - RBX SEGUNDO_FRANCIA_
+[INFO] 17:13:50:785 CPU/(10374:10374): Program Counter: 15
+[INFO] 17:13:50:785 CPU/(10374:10374): Instruccion nº15: 14
+[INFO] 17:13:50:785 CPU/(10374:10374): PID: 0  -Ejecutando: 14
+[INFO] 17:16:17:217 CPU/(10374:10374): Se desconecto el kernel
+[INFO] 17:23:33:542 CPU/(12819:12819): Se conecto al servidor 127.0.0.1:8002
+[INFO] 17:23:33:542 CPU/(12819:12819): Esperando kernel....
+[INFO] 17:23:37:962 CPU/(12819:12819): Se conecto el kernel
+[INFO] 17:24:17:946 CPU/(12819:12819): Se recibio un contexto del kernel
+[INFO] 17:24:17:946 CPU/(12819:12819): Comenzando ciclo con nuevo CTX...
+[INFO] 17:24:17:946 CPU/(12819:12819): Program Counter: 0
+[INFO] 17:24:17:946 CPU/(12819:12819): Instruccion nº1: 8
+[INFO] 17:24:18:946 CPU/(12819:12819): PID: 0  -Ejecutando: 8 - AX ARG0
+[INFO] 17:24:18:946 CPU/(12819:12819): Program Counter: 1
+[INFO] 17:24:18:946 CPU/(12819:12819): Instruccion nº2: 8
+[INFO] 17:24:19:947 CPU/(12819:12819): PID: 0  -Ejecutando: 8 - BX FRA0
+[INFO] 17:24:19:947 CPU/(12819:12819): Program Counter: 2
+[INFO] 17:24:19:947 CPU/(12819:12819): Instruccion nº3: 15
+[INFO] 17:24:19:947 CPU/(12819:12819): PID: 0  -Ejecutando: 15
+[INFO] 17:24:19:947 CPU/(12819:12819): Se recibio un contexto del kernel
+[INFO] 17:24:19:947 CPU/(12819:12819): Comenzando ciclo con nuevo CTX...
+[INFO] 17:24:19:947 CPU/(12819:12819): Program Counter: 3
+[INFO] 17:24:19:947 CPU/(12819:12819): Instruccion nº4: 8
+[INFO] 17:24:20:948 CPU/(12819:12819): PID: 0  -Ejecutando: 8 - AX ARG1
+[INFO] 17:24:20:948 CPU/(12819:12819): Program Counter: 4
+[INFO] 17:24:20:948 CPU/(12819:12819): Instruccion nº5: 8
+[INFO] 17:24:21:957 CPU/(12819:12819): PID: 0  -Ejecutando: 8 - BX FRA0
+[INFO] 17:24:21:957 CPU/(12819:12819): Program Counter: 5
+[INFO] 17:24:21:957 CPU/(12819:12819): Instruccion nº6: 15
+[INFO] 17:24:21:957 CPU/(12819:12819): PID: 0  -Ejecutando: 15
+[INFO] 17:24:21:958 CPU/(12819:12819): Se recibio un contexto del kernel
+[INFO] 17:24:21:958 CPU/(12819:12819): Comenzando ciclo con nuevo CTX...
+[INFO] 17:24:21:958 CPU/(12819:12819): Program Counter: 6
+[INFO] 17:24:21:958 CPU/(12819:12819): Instruccion nº7: 8
+[INFO] 17:24:22:958 CPU/(12819:12819): PID: 0  -Ejecutando: 8 - AX ARG2
+[INFO] 17:24:22:958 CPU/(12819:12819): Program Counter: 7
+[INFO] 17:24:22:958 CPU/(12819:12819): Instruccion nº8: 8
+[INFO] 17:24:23:958 CPU/(12819:12819): PID: 0  -Ejecutando: 8 - BX FRA0
+[INFO] 17:24:23:959 CPU/(12819:12819): Program Counter: 8
+[INFO] 17:24:23:959 CPU/(12819:12819): Instruccion nº9: 15
+[INFO] 17:24:23:959 CPU/(12819:12819): PID: 0  -Ejecutando: 15
+[INFO] 17:24:23:960 CPU/(12819:12819): Se recibio un contexto del kernel
+[INFO] 17:24:23:960 CPU/(12819:12819): Comenzando ciclo con nuevo CTX...
+[INFO] 17:24:23:960 CPU/(12819:12819): Program Counter: 9
+[INFO] 17:24:23:961 CPU/(12819:12819): Instruccion nº10: 8
+[INFO] 17:24:24:961 CPU/(12819:12819): PID: 0  -Ejecutando: 8 - AX ARG2
+[INFO] 17:24:24:961 CPU/(12819:12819): Program Counter: 10
+[INFO] 17:24:24:961 CPU/(12819:12819): Instruccion nº11: 8
+[INFO] 17:24:25:962 CPU/(12819:12819): PID: 0  -Ejecutando: 8 - BX FRA1
+[INFO] 17:24:25:962 CPU/(12819:12819): Program Counter: 11
+[INFO] 17:24:25:962 CPU/(12819:12819): Instruccion nº12: 15
+[INFO] 17:24:25:962 CPU/(12819:12819): PID: 0  -Ejecutando: 15
+[INFO] 17:24:25:962 CPU/(12819:12819): Se recibio un contexto del kernel
+[INFO] 17:24:25:962 CPU/(12819:12819): Comenzando ciclo con nuevo CTX...
+[INFO] 17:24:25:962 CPU/(12819:12819): Program Counter: 12
+[INFO] 17:24:25:962 CPU/(12819:12819): Instruccion nº13: 8
+[INFO] 17:24:26:963 CPU/(12819:12819): PID: 0  -Ejecutando: 8 - AX ARG2
+[INFO] 17:24:26:963 CPU/(12819:12819): Program Counter: 13
+[INFO] 17:24:26:963 CPU/(12819:12819): Instruccion nº14: 8
+[INFO] 17:24:27:964 CPU/(12819:12819): PID: 0  -Ejecutando: 8 - BX FRA2
+[INFO] 17:24:27:964 CPU/(12819:12819): Program Counter: 14
+[INFO] 17:24:27:964 CPU/(12819:12819): Instruccion nº15: 15
+[INFO] 17:24:27:964 CPU/(12819:12819): PID: 0  -Ejecutando: 15
+[INFO] 17:24:27:964 CPU/(12819:12819): Se recibio un contexto del kernel
+[INFO] 17:24:27:964 CPU/(12819:12819): Comenzando ciclo con nuevo CTX...
+[INFO] 17:24:27:964 CPU/(12819:12819): Program Counter: 15
+[INFO] 17:24:27:964 CPU/(12819:12819): Instruccion nº16: 8
+[INFO] 17:24:28:965 CPU/(12819:12819): PID: 0  -Ejecutando: 8 - AX ARG3
+[INFO] 17:24:28:965 CPU/(12819:12819): Program Counter: 16
+[INFO] 17:24:28:965 CPU/(12819:12819): Instruccion nº17: 8
+[INFO] 17:24:29:967 CPU/(12819:12819): PID: 0  -Ejecutando: 8 - BX FRA2
+[INFO] 17:24:29:967 CPU/(12819:12819): Program Counter: 17
+[INFO] 17:24:29:967 CPU/(12819:12819): Instruccion nº18: 15
+[INFO] 17:24:29:967 CPU/(12819:12819): PID: 0  -Ejecutando: 15
+[INFO] 17:24:29:968 CPU/(12819:12819): Se recibio un contexto del kernel
+[INFO] 17:24:29:968 CPU/(12819:12819): Comenzando ciclo con nuevo CTX...
+[INFO] 17:24:29:968 CPU/(12819:12819): Program Counter: 18
+[INFO] 17:24:29:968 CPU/(12819:12819): Instruccion nº19: 8
+[INFO] 17:24:30:970 CPU/(12819:12819): PID: 0  -Ejecutando: 8 - AX ARG3
+[INFO] 17:24:30:970 CPU/(12819:12819): Program Counter: 19
+[INFO] 17:24:30:970 CPU/(12819:12819): Instruccion nº20: 8
+[INFO] 17:24:31:976 CPU/(12819:12819): PID: 0  -Ejecutando: 8 - BX FRA3
+[INFO] 17:24:31:978 CPU/(12819:12819): Program Counter: 20
+[INFO] 17:24:31:978 CPU/(12819:12819): Instruccion nº21: 15
+[INFO] 17:24:31:978 CPU/(12819:12819): PID: 0  -Ejecutando: 15
+[INFO] 17:24:31:979 CPU/(12819:12819): Se recibio un contexto del kernel
+[INFO] 17:24:31:979 CPU/(12819:12819): Comenzando ciclo con nuevo CTX...
+[INFO] 17:24:31:979 CPU/(12819:12819): Program Counter: 21
+[INFO] 17:24:31:979 CPU/(12819:12819): Instruccion nº22: 8
+[INFO] 17:24:32:980 CPU/(12819:12819): PID: 0  -Ejecutando: 8 - RDX VAMOSALOSPENALES
+[INFO] 17:24:32:980 CPU/(12819:12819): Program Counter: 22
+[INFO] 17:24:32:980 CPU/(12819:12819): Instruccion nº23: 15
+[INFO] 17:24:32:980 CPU/(12819:12819): PID: 0  -Ejecutando: 15
+[INFO] 17:24:32:982 CPU/(12819:12819): Se recibio un contexto del kernel
+[INFO] 17:24:32:982 CPU/(12819:12819): Comenzando ciclo con nuevo CTX...
+[INFO] 17:24:32:982 CPU/(12819:12819): Program Counter: 23
+[INFO] 17:24:32:982 CPU/(12819:12819): Instruccion nº24: 8
+[INFO] 17:24:33:983 CPU/(12819:12819): PID: 0  -Ejecutando: 8 - RAX ARGENTINACAMPEON
+[INFO] 17:24:33:983 CPU/(12819:12819): Program Counter: 24
+[INFO] 17:24:33:983 CPU/(12819:12819): Instruccion nº24: 14
+[INFO] 17:24:33:983 CPU/(12819:12819): PID: 0  -Ejecutando: 14
+[INFO] 17:24:47:240 CPU/(12819:12819): Se desconecto el kernel
+[INFO] 17:25:24:011 CPU/(14156:14156): Se conecto al servidor 127.0.0.1:8002
+[INFO] 17:25:24:011 CPU/(14156:14156): Esperando kernel....
+[INFO] 17:26:16:887 CPU/(14156:14156): Se conecto el kernel
+[INFO] 17:26:21:900 CPU/(14156:14156): Se recibio un contexto del kernel
+[INFO] 17:26:21:900 CPU/(14156:14156): Comenzando ciclo con nuevo CTX...
+[INFO] 17:26:21:900 CPU/(14156:14156): Program Counter: 0
+[INFO] 17:26:21:900 CPU/(14156:14156): Instruccion nº1: 8
+[INFO] 17:26:22:902 CPU/(14156:14156): PID: 0  -Ejecutando: 8 - AX AAAA
+[INFO] 17:26:22:902 CPU/(14156:14156): Program Counter: 1
+[INFO] 17:26:22:902 CPU/(14156:14156): Instruccion nº2: 8
+[INFO] 17:26:23:902 CPU/(14156:14156): PID: 0  -Ejecutando: 8 - BX BBBB
+[INFO] 17:26:23:902 CPU/(14156:14156): Program Counter: 2
+[INFO] 17:26:23:902 CPU/(14156:14156): Instruccion nº3: 8
+[INFO] 17:26:24:902 CPU/(14156:14156): PID: 0  -Ejecutando: 8 - CX CCCC
+[INFO] 17:26:24:902 CPU/(14156:14156): Program Counter: 3
+[INFO] 17:26:24:902 CPU/(14156:14156): Instruccion nº4: 8
+[INFO] 17:26:25:903 CPU/(14156:14156): PID: 0  -Ejecutando: 8 - DX DDDD
+[INFO] 17:26:25:903 CPU/(14156:14156): Program Counter: 4
+[INFO] 17:26:25:903 CPU/(14156:14156): Instruccion nº5: 8
+[INFO] 17:26:26:903 CPU/(14156:14156): PID: 0  -Ejecutando: 8 - EAX AAAAAAAA
+[INFO] 17:26:26:904 CPU/(14156:14156): Program Counter: 5
+[INFO] 17:26:26:904 CPU/(14156:14156): Instruccion nº6: 8
+[INFO] 17:26:27:904 CPU/(14156:14156): PID: 0  -Ejecutando: 8 - EBX BBBBBBBB
+[INFO] 17:26:27:904 CPU/(14156:14156): Program Counter: 6
+[INFO] 17:26:27:904 CPU/(14156:14156): Instruccion nº7: 8
+[INFO] 17:26:28:906 CPU/(14156:14156): PID: 0  -Ejecutando: 8 - ECX CCCCCCCC
+[INFO] 17:26:28:906 CPU/(14156:14156): Program Counter: 7
+[INFO] 17:26:28:906 CPU/(14156:14156): Instruccion nº8: 8
+[INFO] 17:26:29:906 CPU/(14156:14156): PID: 0  -Ejecutando: 8 - EDX DDDDDDDD
+[INFO] 17:26:29:906 CPU/(14156:14156): Program Counter: 8
+[INFO] 17:26:29:906 CPU/(14156:14156): Instruccion nº9: 8
+[INFO] 17:26:30:906 CPU/(14156:14156): PID: 0  -Ejecutando: 8 - RAX AAAAAAAAAAAAAAAA
+[INFO] 17:26:30:907 CPU/(14156:14156): Program Counter: 9
+[INFO] 17:26:30:907 CPU/(14156:14156): Instruccion nº10: 8
+[INFO] 17:26:31:914 CPU/(14156:14156): PID: 0  -Ejecutando: 8 - RBX BBBBBBBBBBBBBBBB
+[INFO] 17:26:31:914 CPU/(14156:14156): Program Counter: 10
+[INFO] 17:26:31:914 CPU/(14156:14156): Instruccion nº11: 8
+[INFO] 17:26:32:914 CPU/(14156:14156): PID: 0  -Ejecutando: 8 - RCX CCCCCCCCCCCCCCCC
+[INFO] 17:26:32:914 CPU/(14156:14156): Program Counter: 11
+[INFO] 17:26:32:914 CPU/(14156:14156): Instruccion nº12: 8
+[INFO] 17:26:33:916 CPU/(14156:14156): PID: 0  -Ejecutando: 8 - RDX DDDDDDDDDDDDDDDD
+[INFO] 17:26:33:916 CPU/(14156:14156): Program Counter: 12
+[INFO] 17:26:33:916 CPU/(14156:14156): Instruccion nº13: 15
+[INFO] 17:26:33:916 CPU/(14156:14156): PID: 0  -Ejecutando: 15
+[INFO] 17:26:33:916 CPU/(14156:14156): Se recibio un contexto del kernel
+[INFO] 17:26:33:916 CPU/(14156:14156): Comenzando ciclo con nuevo CTX...
+[INFO] 17:26:33:916 CPU/(14156:14156): Program Counter: 13
+[INFO] 17:26:33:916 CPU/(14156:14156): Instruccion nº14: 8
+[INFO] 17:26:34:917 CPU/(14156:14156): PID: 0  -Ejecutando: 8 - RAX TCHOUAMENIAFUERA
+[INFO] 17:26:34:917 CPU/(14156:14156): Program Counter: 14
+[INFO] 17:26:34:917 CPU/(14156:14156): Instruccion nº15: 8
+[INFO] 17:26:35:918 CPU/(14156:14156): PID: 0  -Ejecutando: 8 - RBX SEGUNDO_FRANCIA_
+[INFO] 17:26:35:918 CPU/(14156:14156): Program Counter: 15
+[INFO] 17:26:35:918 CPU/(14156:14156): Instruccion nº15: 14
+[INFO] 17:26:35:918 CPU/(14156:14156): PID: 0  -Ejecutando: 14
+[INFO] 17:26:49:548 CPU/(14156:14156): Se recibio un contexto del kernel
+[INFO] 17:26:49:548 CPU/(14156:14156): Comenzando ciclo con nuevo CTX...
+[INFO] 17:26:49:548 CPU/(14156:14156): Program Counter: 0
+[INFO] 17:26:49:548 CPU/(14156:14156): Instruccion nº1: 8
+[INFO] 17:26:50:548 CPU/(14156:14156): PID: 1  -Ejecutando: 8 - AX ARG0
+[INFO] 17:26:50:548 CPU/(14156:14156): Program Counter: 1
+[INFO] 17:26:50:548 CPU/(14156:14156): Instruccion nº2: 8
+[INFO] 17:26:51:549 CPU/(14156:14156): PID: 1  -Ejecutando: 8 - BX FRA0
+[INFO] 17:26:51:550 CPU/(14156:14156): Program Counter: 2
+[INFO] 17:26:51:550 CPU/(14156:14156): Instruccion nº3: 15
+[INFO] 17:26:51:550 CPU/(14156:14156): PID: 1  -Ejecutando: 15
+[INFO] 17:26:51:551 CPU/(14156:14156): Se recibio un contexto del kernel
+[INFO] 17:26:51:551 CPU/(14156:14156): Comenzando ciclo con nuevo CTX...
+[INFO] 17:26:51:552 CPU/(14156:14156): Program Counter: 3
+[INFO] 17:26:51:552 CPU/(14156:14156): Instruccion nº4: 8
+[INFO] 17:26:52:552 CPU/(14156:14156): PID: 1  -Ejecutando: 8 - AX ARG1
+[INFO] 17:26:52:552 CPU/(14156:14156): Program Counter: 4
+[INFO] 17:26:52:552 CPU/(14156:14156): Instruccion nº5: 8
+[INFO] 17:26:53:552 CPU/(14156:14156): PID: 1  -Ejecutando: 8 - BX FRA0
+[INFO] 17:26:53:552 CPU/(14156:14156): Program Counter: 5
+[INFO] 17:26:53:552 CPU/(14156:14156): Instruccion nº6: 15
+[INFO] 17:26:53:552 CPU/(14156:14156): PID: 1  -Ejecutando: 15
+[INFO] 17:26:53:553 CPU/(14156:14156): Se recibio un contexto del kernel
+[INFO] 17:26:53:553 CPU/(14156:14156): Comenzando ciclo con nuevo CTX...
+[INFO] 17:26:53:553 CPU/(14156:14156): Program Counter: 0
+[INFO] 17:26:53:553 CPU/(14156:14156): Instruccion nº1: 8
+[INFO] 17:26:54:553 CPU/(14156:14156): PID: 2  -Ejecutando: 8 - AX ARG0
+[INFO] 17:26:54:554 CPU/(14156:14156): Program Counter: 1
+[INFO] 17:26:54:554 CPU/(14156:14156): Instruccion nº2: 8
+[INFO] 17:26:55:560 CPU/(14156:14156): PID: 2  -Ejecutando: 8 - BX FRA0
+[INFO] 17:26:55:561 CPU/(14156:14156): Program Counter: 2
+[INFO] 17:26:55:561 CPU/(14156:14156): Instruccion nº3: 15
+[INFO] 17:26:55:561 CPU/(14156:14156): PID: 2  -Ejecutando: 15
+[INFO] 17:26:55:563 CPU/(14156:14156): Se recibio un contexto del kernel
+[INFO] 17:26:55:563 CPU/(14156:14156): Comenzando ciclo con nuevo CTX...
+[INFO] 17:26:55:563 CPU/(14156:14156): Program Counter: 6
+[INFO] 17:26:55:563 CPU/(14156:14156): Instruccion nº7: 8
+[INFO] 17:26:56:567 CPU/(14156:14156): PID: 1  -Ejecutando: 8 - AX ARG2
+[INFO] 17:26:56:567 CPU/(14156:14156): Program Counter: 7
+[INFO] 17:26:56:567 CPU/(14156:14156): Instruccion nº8: 8
+[INFO] 17:26:57:575 CPU/(14156:14156): PID: 1  -Ejecutando: 8 - BX FRA0
+[INFO] 17:26:57:575 CPU/(14156:14156): Program Counter: 8
+[INFO] 17:26:57:575 CPU/(14156:14156): Instruccion nº9: 15
+[INFO] 17:26:57:575 CPU/(14156:14156): PID: 1  -Ejecutando: 15
+[INFO] 17:26:57:578 CPU/(14156:14156): Se recibio un contexto del kernel
+[INFO] 17:26:57:578 CPU/(14156:14156): Comenzando ciclo con nuevo CTX...
+[INFO] 17:26:57:578 CPU/(14156:14156): Program Counter: 3
+[INFO] 17:26:57:578 CPU/(14156:14156): Instruccion nº4: 8
+[INFO] 17:26:58:595 CPU/(14156:14156): PID: 2  -Ejecutando: 8 - AX ARG1
+[INFO] 17:26:58:595 CPU/(14156:14156): Program Counter: 4
+[INFO] 17:26:58:595 CPU/(14156:14156): Instruccion nº5: 8
+[INFO] 17:26:59:611 CPU/(14156:14156): PID: 2  -Ejecutando: 8 - BX FRA0
+[INFO] 17:26:59:611 CPU/(14156:14156): Program Counter: 5
+[INFO] 17:26:59:611 CPU/(14156:14156): Instruccion nº6: 15
+[INFO] 17:26:59:611 CPU/(14156:14156): PID: 2  -Ejecutando: 15
+[INFO] 17:26:59:613 CPU/(14156:14156): Se recibio un contexto del kernel
+[INFO] 17:26:59:613 CPU/(14156:14156): Comenzando ciclo con nuevo CTX...
+[INFO] 17:26:59:613 CPU/(14156:14156): Program Counter: 9
+[INFO] 17:26:59:613 CPU/(14156:14156): Instruccion nº10: 8
+[INFO] 17:27:00:614 CPU/(14156:14156): PID: 1  -Ejecutando: 8 - AX ARG2
+[INFO] 17:27:00:614 CPU/(14156:14156): Program Counter: 10
+[INFO] 17:27:00:614 CPU/(14156:14156): Instruccion nº11: 8
+[INFO] 17:27:01:615 CPU/(14156:14156): PID: 1  -Ejecutando: 8 - BX FRA1
+[INFO] 17:27:01:615 CPU/(14156:14156): Program Counter: 11
+[INFO] 17:27:01:615 CPU/(14156:14156): Instruccion nº12: 15
+[INFO] 17:27:01:615 CPU/(14156:14156): PID: 1  -Ejecutando: 15
+[INFO] 17:27:01:616 CPU/(14156:14156): Se recibio un contexto del kernel
+[INFO] 17:27:01:616 CPU/(14156:14156): Comenzando ciclo con nuevo CTX...
+[INFO] 17:27:01:616 CPU/(14156:14156): Program Counter: 6
+[INFO] 17:27:01:616 CPU/(14156:14156): Instruccion nº7: 8
+[INFO] 17:27:02:647 CPU/(14156:14156): PID: 2  -Ejecutando: 8 - AX ARG2
+[INFO] 17:27:02:647 CPU/(14156:14156): Program Counter: 7
+[INFO] 17:27:02:647 CPU/(14156:14156): Instruccion nº8: 8
+[INFO] 17:27:03:648 CPU/(14156:14156): PID: 2  -Ejecutando: 8 - BX FRA0
+[INFO] 17:27:03:648 CPU/(14156:14156): Program Counter: 8
+[INFO] 17:27:03:648 CPU/(14156:14156): Instruccion nº9: 15
+[INFO] 17:27:03:648 CPU/(14156:14156): PID: 2  -Ejecutando: 15
+[INFO] 17:27:03:650 CPU/(14156:14156): Se recibio un contexto del kernel
+[INFO] 17:27:03:650 CPU/(14156:14156): Comenzando ciclo con nuevo CTX...
+[INFO] 17:27:03:650 CPU/(14156:14156): Program Counter: 12
+[INFO] 17:27:03:650 CPU/(14156:14156): Instruccion nº13: 8
+[INFO] 17:27:04:652 CPU/(14156:14156): PID: 1  -Ejecutando: 8 - AX ARG2
+[INFO] 17:27:04:652 CPU/(14156:14156): Program Counter: 13
+[INFO] 17:27:04:652 CPU/(14156:14156): Instruccion nº14: 8
+[INFO] 17:27:05:653 CPU/(14156:14156): PID: 1  -Ejecutando: 8 - BX FRA2
+[INFO] 17:27:05:653 CPU/(14156:14156): Program Counter: 14
+[INFO] 17:27:05:653 CPU/(14156:14156): Instruccion nº15: 15
+[INFO] 17:27:05:653 CPU/(14156:14156): PID: 1  -Ejecutando: 15
+[INFO] 17:27:05:655 CPU/(14156:14156): Se recibio un contexto del kernel
+[INFO] 17:27:05:656 CPU/(14156:14156): Comenzando ciclo con nuevo CTX...
+[INFO] 17:27:05:656 CPU/(14156:14156): Program Counter: 9
+[INFO] 17:27:05:656 CPU/(14156:14156): Instruccion nº10: 8
+[INFO] 17:27:06:656 CPU/(14156:14156): PID: 2  -Ejecutando: 8 - AX ARG2
+[INFO] 17:27:06:656 CPU/(14156:14156): Program Counter: 10
+[INFO] 17:27:06:656 CPU/(14156:14156): Instruccion nº11: 8
+[INFO] 17:27:07:689 CPU/(14156:14156): PID: 2  -Ejecutando: 8 - BX FRA1
+[INFO] 17:27:07:689 CPU/(14156:14156): Program Counter: 11
+[INFO] 17:27:07:689 CPU/(14156:14156): Instruccion nº12: 15
+[INFO] 17:27:07:689 CPU/(14156:14156): PID: 2  -Ejecutando: 15
+[INFO] 17:27:07:691 CPU/(14156:14156): Se recibio un contexto del kernel
+[INFO] 17:27:07:691 CPU/(14156:14156): Comenzando ciclo con nuevo CTX...
+[INFO] 17:27:07:691 CPU/(14156:14156): Program Counter: 15
+[INFO] 17:27:07:691 CPU/(14156:14156): Instruccion nº16: 8
+[INFO] 17:27:08:694 CPU/(14156:14156): PID: 1  -Ejecutando: 8 - AX ARG3
+[INFO] 17:27:08:694 CPU/(14156:14156): Program Counter: 16
+[INFO] 17:27:08:694 CPU/(14156:14156): Instruccion nº17: 8
+[INFO] 17:27:09:740 CPU/(14156:14156): PID: 1  -Ejecutando: 8 - BX FRA2
+[INFO] 17:27:09:740 CPU/(14156:14156): Program Counter: 17
+[INFO] 17:27:09:741 CPU/(14156:14156): Instruccion nº18: 15
+[INFO] 17:27:09:741 CPU/(14156:14156): PID: 1  -Ejecutando: 15
+[INFO] 17:27:09:743 CPU/(14156:14156): Se recibio un contexto del kernel
+[INFO] 17:27:09:743 CPU/(14156:14156): Comenzando ciclo con nuevo CTX...
+[INFO] 17:27:09:743 CPU/(14156:14156): Program Counter: 12
+[INFO] 17:27:09:743 CPU/(14156:14156): Instruccion nº13: 8
+[INFO] 17:27:10:750 CPU/(14156:14156): PID: 2  -Ejecutando: 8 - AX ARG2
+[INFO] 17:27:10:750 CPU/(14156:14156): Program Counter: 13
+[INFO] 17:27:10:751 CPU/(14156:14156): Instruccion nº14: 8
+[INFO] 17:27:11:953 CPU/(14156:14156): PID: 2  -Ejecutando: 8 - BX FRA2
+[INFO] 17:27:11:953 CPU/(14156:14156): Program Counter: 14
+[INFO] 17:27:11:953 CPU/(14156:14156): Instruccion nº15: 15
+[INFO] 17:27:11:953 CPU/(14156:14156): PID: 2  -Ejecutando: 15
+[INFO] 17:27:11:954 CPU/(14156:14156): Se recibio un contexto del kernel
+[INFO] 17:27:11:954 CPU/(14156:14156): Comenzando ciclo con nuevo CTX...
+[INFO] 17:27:11:954 CPU/(14156:14156): Program Counter: 18
+[INFO] 17:27:11:954 CPU/(14156:14156): Instruccion nº19: 8
+[INFO] 17:27:12:958 CPU/(14156:14156): PID: 1  -Ejecutando: 8 - AX ARG3
+[INFO] 17:27:12:958 CPU/(14156:14156): Program Counter: 19
+[INFO] 17:27:12:958 CPU/(14156:14156): Instruccion nº20: 8
+[INFO] 17:27:13:959 CPU/(14156:14156): PID: 1  -Ejecutando: 8 - BX FRA3
+[INFO] 17:27:13:959 CPU/(14156:14156): Program Counter: 20
+[INFO] 17:27:13:959 CPU/(14156:14156): Instruccion nº21: 15
+[INFO] 17:27:13:959 CPU/(14156:14156): PID: 1  -Ejecutando: 15
+[INFO] 17:27:13:961 CPU/(14156:14156): Se recibio un contexto del kernel
+[INFO] 17:27:13:961 CPU/(14156:14156): Comenzando ciclo con nuevo CTX...
+[INFO] 17:27:13:961 CPU/(14156:14156): Program Counter: 15
+[INFO] 17:27:13:961 CPU/(14156:14156): Instruccion nº16: 8
+[INFO] 17:27:14:981 CPU/(14156:14156): PID: 2  -Ejecutando: 8 - AX ARG3
+[INFO] 17:27:14:981 CPU/(14156:14156): Program Counter: 16
+[INFO] 17:27:14:981 CPU/(14156:14156): Instruccion nº17: 8
+[INFO] 17:27:15:992 CPU/(14156:14156): PID: 2  -Ejecutando: 8 - BX FRA2
+[INFO] 17:27:15:992 CPU/(14156:14156): Program Counter: 17
+[INFO] 17:27:15:992 CPU/(14156:14156): Instruccion nº18: 15
+[INFO] 17:27:15:992 CPU/(14156:14156): PID: 2  -Ejecutando: 15
+[INFO] 17:27:15:993 CPU/(14156:14156): Se recibio un contexto del kernel
+[INFO] 17:27:15:993 CPU/(14156:14156): Comenzando ciclo con nuevo CTX...
+[INFO] 17:27:15:994 CPU/(14156:14156): Program Counter: 21
+[INFO] 17:27:15:994 CPU/(14156:14156): Instruccion nº22: 8
+[INFO] 17:27:17:012 CPU/(14156:14156): PID: 1  -Ejecutando: 8 - RDX VAMOSALOSPENALES
+[INFO] 17:27:17:013 CPU/(14156:14156): Program Counter: 22
+[INFO] 17:27:17:013 CPU/(14156:14156): Instruccion nº23: 15
+[INFO] 17:27:17:014 CPU/(14156:14156): PID: 1  -Ejecutando: 15
+[INFO] 17:27:17:015 CPU/(14156:14156): Se recibio un contexto del kernel
+[INFO] 17:27:17:015 CPU/(14156:14156): Comenzando ciclo con nuevo CTX...
+[INFO] 17:27:17:015 CPU/(14156:14156): Program Counter: 18
+[INFO] 17:27:17:015 CPU/(14156:14156): Instruccion nº19: 8
+[INFO] 17:27:18:017 CPU/(14156:14156): PID: 2  -Ejecutando: 8 - AX ARG3
+[INFO] 17:27:18:017 CPU/(14156:14156): Program Counter: 19
+[INFO] 17:27:18:017 CPU/(14156:14156): Instruccion nº20: 8
+[INFO] 17:27:19:022 CPU/(14156:14156): PID: 2  -Ejecutando: 8 - BX FRA3
+[INFO] 17:27:19:022 CPU/(14156:14156): Program Counter: 20
+[INFO] 17:27:19:022 CPU/(14156:14156): Instruccion nº21: 15
+[INFO] 17:27:19:022 CPU/(14156:14156): PID: 2  -Ejecutando: 15
+[INFO] 17:27:19:024 CPU/(14156:14156): Se recibio un contexto del kernel
+[INFO] 17:27:19:024 CPU/(14156:14156): Comenzando ciclo con nuevo CTX...
+[INFO] 17:27:19:024 CPU/(14156:14156): Program Counter: 23
+[INFO] 17:27:19:024 CPU/(14156:14156): Instruccion nº24: 8
+[INFO] 17:27:20:025 CPU/(14156:14156): PID: 1  -Ejecutando: 8 - RAX ARGENTINACAMPEON
+[INFO] 17:27:20:025 CPU/(14156:14156): Program Counter: 24
+[INFO] 17:27:20:025 CPU/(14156:14156): Instruccion nº24: 14
+[INFO] 17:27:20:025 CPU/(14156:14156): PID: 1  -Ejecutando: 14
+[INFO] 17:27:20:026 CPU/(14156:14156): Se recibio un contexto del kernel
+[INFO] 17:27:20:026 CPU/(14156:14156): Comenzando ciclo con nuevo CTX...
+[INFO] 17:27:20:026 CPU/(14156:14156): Program Counter: 21
+[INFO] 17:27:20:026 CPU/(14156:14156): Instruccion nº22: 8
+[INFO] 17:27:21:070 CPU/(14156:14156): PID: 2  -Ejecutando: 8 - RDX VAMOSALOSPENALES
+[INFO] 17:27:21:070 CPU/(14156:14156): Program Counter: 22
+[INFO] 17:27:21:070 CPU/(14156:14156): Instruccion nº23: 15
+[INFO] 17:27:21:071 CPU/(14156:14156): PID: 2  -Ejecutando: 15
+[INFO] 17:27:21:074 CPU/(14156:14156): Se recibio un contexto del kernel
+[INFO] 17:27:21:075 CPU/(14156:14156): Comenzando ciclo con nuevo CTX...
+[INFO] 17:27:21:075 CPU/(14156:14156): Program Counter: 23
+[INFO] 17:27:21:075 CPU/(14156:14156): Instruccion nº24: 8
+[INFO] 17:27:22:090 CPU/(14156:14156): PID: 2  -Ejecutando: 8 - RAX ARGENTINACAMPEON
+[INFO] 17:27:22:090 CPU/(14156:14156): Program Counter: 24
+[INFO] 17:27:22:090 CPU/(14156:14156): Instruccion nº24: 14
+[INFO] 17:27:22:091 CPU/(14156:14156): PID: 2  -Ejecutando: 14
+[INFO] 17:30:23:435 CPU/(14156:14156): Se desconecto el kernel
+[INFO] 17:31:17:830 CPU/(16165:16165): Se conecto al servidor 127.0.0.1:8002
+[INFO] 17:31:17:830 CPU/(16165:16165): Esperando kernel....
+[INFO] 17:31:30:128 CPU/(16165:16165): Se conecto el kernel
+[INFO] 17:32:41:528 CPU/(16165:16165): Se recibio un contexto del kernel
+[INFO] 17:32:41:528 CPU/(16165:16165): Comenzando ciclo con nuevo CTX...
+[INFO] 17:32:41:528 CPU/(16165:16165): Program Counter: 0
+[INFO] 17:32:41:528 CPU/(16165:16165): Instruccion nº1: 8
+[INFO] 17:32:42:528 CPU/(16165:16165): PID: 0  -Ejecutando: 8 - AX HOLA
+[INFO] 17:32:42:528 CPU/(16165:16165): Program Counter: 1
+[INFO] 17:32:42:528 CPU/(16165:16165): Instruccion nº2: 9
+[INFO] 17:32:42:528 CPU/(16165:16165): PID: 0  -Ejecutando: 9 - LA_TERCERA_DE_FRANCIA
+[INFO] 17:32:43:573 CPU/(16165:16165): Se recibio un contexto del kernel
+[INFO] 17:32:43:573 CPU/(16165:16165): Comenzando ciclo con nuevo CTX...
+[INFO] 17:32:43:573 CPU/(16165:16165): Program Counter: 0
+[INFO] 17:32:43:573 CPU/(16165:16165): Instruccion nº1: 8
+[INFO] 17:32:44:573 CPU/(16165:16165): PID: 1  -Ejecutando: 8 - AX HOLA
+[INFO] 17:32:44:573 CPU/(16165:16165): Program Counter: 1
+[INFO] 17:32:44:573 CPU/(16165:16165): Instruccion nº2: 10
+[INFO] 17:32:44:574 CPU/(16165:16165): PID: 1  -Ejecutando: 10 - EL_CUARTO_DE_FRANCIA
+[INFO] 17:32:48:643 CPU/(16165:16165): Se recibio un contexto del kernel
+[INFO] 17:32:48:643 CPU/(16165:16165): Comenzando ciclo con nuevo CTX...
+[INFO] 17:32:48:643 CPU/(16165:16165): Program Counter: 0
+[INFO] 17:32:48:643 CPU/(16165:16165): Instruccion nº1: 8
+[INFO] 17:32:49:646 CPU/(16165:16165): PID: 2  -Ejecutando: 8 - AX HOLA
+[INFO] 17:32:49:646 CPU/(16165:16165): Program Counter: 1
+[INFO] 17:32:49:646 CPU/(16165:16165): Instruccion nº2: 8
+[INFO] 17:32:50:646 CPU/(16165:16165): PID: 2  -Ejecutando: 8 - RAX MappaLlegaEl2c23
+[INFO] 17:32:50:646 CPU/(16165:16165): Program Counter: 2
+[INFO] 17:32:50:646 CPU/(16165:16165): Instruccion nº3: 2
+[INFO] 17:32:50:646 CPU/(16165:16165): PID: 2  -Ejecutando: 2 - 124 AX
+[INFO] 17:32:50:646 CPU/(16165:16165): OFFSET: 124, BYTEs: %D
+[INFO] 17:32:52:649 CPU/(16165:16165): PID: 2  -Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 0x55cdfd3f98ec - Valor: HOLA
+[INFO] 17:32:52:649 CPU/(16165:16165): Program Counter: 3
+[INFO] 17:32:52:649 CPU/(16165:16165): Instruccion nº4: 5
+[INFO] 17:32:52:649 CPU/(16165:16165): PID: 2  -Ejecutando: 5 - BX 124
+[INFO] 17:32:52:649 CPU/(16165:16165): OFFSET: 124, BYTEs: %D
+[INFO] 17:32:54:655 CPU/(16165:16165): PID: 2  -Acción: LEER - Segmento: 0 - Dirección Física: 0x55cdfd3f98ec - Valor: HOLA
+[INFO] 17:32:54:656 CPU/(16165:16165): Program Counter: 4
+[INFO] 17:32:54:656 CPU/(16165:16165): Instruccion nº5: 2
+[INFO] 17:32:54:656 CPU/(16165:16165): PID: 2  -Ejecutando: 2 - 120 RAX
+[INFO] 17:32:54:656 CPU/(16165:16165): OFFSET: 120, BYTEs: %D
+[INFO] 17:32:56:666 CPU/(16165:16165): PID: 2  -Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 0x55cdfd3f98e8 - Valor: MappaLlegaEl2c23
+[INFO] 17:32:56:667 CPU/(16165:16165): Program Counter: 5
+[INFO] 17:32:56:667 CPU/(16165:16165): Instruccion nº6: 5
+[INFO] 17:32:56:667 CPU/(16165:16165): PID: 2  -Ejecutando: 5 - RBX 120
+[INFO] 17:32:56:667 CPU/(16165:16165): OFFSET: 120, BYTEs: %D
+[INFO] 17:32:58:667 CPU/(16165:16165): PID: 2  -Acción: LEER - Segmento: 0 - Dirección Física: 0x55cdfd3f98e8 - Valor: MappaLleg
+[INFO] 17:32:58:667 CPU/(16165:16165): Program Counter: 6
+[INFO] 17:32:58:667 CPU/(16165:16165): Instruccion nº6: 14
+[INFO] 17:32:58:667 CPU/(16165:16165): PID: 2  -Ejecutando: 14
+[INFO] 17:32:58:669 CPU/(16165:16165): Se recibio un contexto del kernel
+[INFO] 17:32:58:669 CPU/(16165:16165): Comenzando ciclo con nuevo CTX...
+[INFO] 17:32:58:669 CPU/(16165:16165): Program Counter: 0
+[INFO] 17:32:58:669 CPU/(16165:16165): Instruccion nº1: 6
+[INFO] 17:32:58:669 CPU/(16165:16165): PID: 3  -Ejecutando: 6 - 1 256
+[INFO] 17:32:58:670 CPU/(16165:16165): Se recibio un contexto del kernel
+[INFO] 17:32:58:670 CPU/(16165:16165): Comenzando ciclo con nuevo CTX...
+[INFO] 17:32:58:670 CPU/(16165:16165): Program Counter: 1
+[INFO] 17:32:58:670 CPU/(16165:16165): Instruccion nº2: 6
+[INFO] 17:32:58:670 CPU/(16165:16165): PID: 3  -Ejecutando: 6 - 2 256
+[INFO] 17:32:58:671 CPU/(16165:16165): Se recibio un contexto del kernel
+[INFO] 17:32:58:672 CPU/(16165:16165): Comenzando ciclo con nuevo CTX...
+[INFO] 17:32:58:672 CPU/(16165:16165): Program Counter: 2
+[INFO] 17:32:58:672 CPU/(16165:16165): Instruccion nº3: 6
+[INFO] 17:32:58:672 CPU/(16165:16165): PID: 3  -Ejecutando: 6 - 3 256
+[INFO] 17:32:58:674 CPU/(16165:16165): Se recibio un contexto del kernel
+[INFO] 17:32:58:674 CPU/(16165:16165): Comenzando ciclo con nuevo CTX...
+[INFO] 17:32:58:674 CPU/(16165:16165): Program Counter: 3
+[INFO] 17:32:58:674 CPU/(16165:16165): Instruccion nº4: 6
+[INFO] 17:32:58:674 CPU/(16165:16165): PID: 3  -Ejecutando: 6 - 4 256
+[INFO] 17:36:19:618 CPU/(18367:18367): Se conecto al servidor 127.0.0.1:8002
+[INFO] 17:36:19:618 CPU/(18367:18367): Esperando kernel....
+[INFO] 17:36:26:664 CPU/(18367:18367): Se conecto el kernel
+[INFO] 17:36:34:165 CPU/(18367:18367): Se recibio un contexto del kernel
+[INFO] 17:36:34:165 CPU/(18367:18367): Comenzando ciclo con nuevo CTX...
+[INFO] 17:36:34:165 CPU/(18367:18367): Program Counter: 0
+[INFO] 17:36:34:165 CPU/(18367:18367): Instruccion nº1: 8
+[INFO] 17:36:35:165 CPU/(18367:18367): PID: 0  -Ejecutando: 8 - AX HOLA
+[INFO] 17:36:35:166 CPU/(18367:18367): Program Counter: 1
+[INFO] 17:36:35:166 CPU/(18367:18367): Instruccion nº2: 8
+[INFO] 17:36:36:167 CPU/(18367:18367): PID: 0  -Ejecutando: 8 - RAX MappaLlegaEl2c23
+[INFO] 17:36:36:167 CPU/(18367:18367): Program Counter: 2
+[INFO] 17:36:36:167 CPU/(18367:18367): Instruccion nº3: 2
+[INFO] 17:36:36:167 CPU/(18367:18367): PID: 0  -Ejecutando: 2 - 124 AX
+[INFO] 17:39:02:436 CPU/(19650:19650): Se conecto al servidor 127.0.0.1:8002
+[INFO] 17:39:02:436 CPU/(19650:19650): Esperando kernel....
+[INFO] 17:39:08:418 CPU/(19650:19650): Se conecto el kernel
+[INFO] 17:39:11:674 CPU/(19650:19650): Se recibio un contexto del kernel
+[INFO] 17:39:11:674 CPU/(19650:19650): Comenzando ciclo con nuevo CTX...
+[INFO] 17:39:11:674 CPU/(19650:19650): Program Counter: 0
+[INFO] 17:39:11:674 CPU/(19650:19650): Instruccion nº1: 8
+[INFO] 17:39:12:688 CPU/(19650:19650): PID: 0  -Ejecutando: 8 - AX HOLA
+[INFO] 17:39:12:688 CPU/(19650:19650): Program Counter: 1
+[INFO] 17:39:12:688 CPU/(19650:19650): Instruccion nº2: 8
+[INFO] 17:39:13:690 CPU/(19650:19650): PID: 0  -Ejecutando: 8 - RAX MappaLlegaEl2c23
+[INFO] 17:39:13:690 CPU/(19650:19650): Program Counter: 2
+[INFO] 17:39:13:690 CPU/(19650:19650): Instruccion nº3: 2
+[INFO] 17:39:13:690 CPU/(19650:19650): PID: 0  -Ejecutando: 2 - 124 AX
+[INFO] 17:39:22:600 CPU/(19650:19650): OFFSET: 124, BYTEs: 8
+[ERROR] 17:39:22:600 CPU/(19650:19650): PID: 0 - Error SEG_FAULT- Segmento: 0 - Offset: 124 - Tamaño: 8
+[ERROR] 17:39:24:740 CPU/(19650:19650): PID: 0  -Error al escribir en memoria
+[INFO] 17:40:42:823 CPU/(20894:20894): Se conecto al servidor 127.0.0.1:8002
+[INFO] 17:40:42:823 CPU/(20894:20894): Esperando kernel....
+[INFO] 17:40:50:465 CPU/(20894:20894): Se conecto el kernel
+[INFO] 17:41:12:652 CPU/(20894:20894): Se recibio un contexto del kernel
+[INFO] 17:41:12:652 CPU/(20894:20894): Comenzando ciclo con nuevo CTX...
+[INFO] 17:41:12:652 CPU/(20894:20894): Program Counter: 0
+[INFO] 17:41:12:652 CPU/(20894:20894): Instruccion nº1: 9
+[INFO] 17:41:12:652 CPU/(20894:20894): PID: 0  -Ejecutando: 9 - RA
+[INFO] 17:41:12:654 CPU/(20894:20894): Se recibio un contexto del kernel
+[INFO] 17:41:12:654 CPU/(20894:20894): Comenzando ciclo con nuevo CTX...
+[INFO] 17:41:12:654 CPU/(20894:20894): Program Counter: 1
+[INFO] 17:41:12:654 CPU/(20894:20894): Instruccion nº2: 8
+[INFO] 17:41:13:655 CPU/(20894:20894): PID: 0  -Ejecutando: 8 - AX h014
+[INFO] 17:41:13:655 CPU/(20894:20894): Program Counter: 2
+[INFO] 17:41:13:655 CPU/(20894:20894): Instruccion nº3: 2
+[INFO] 17:41:13:655 CPU/(20894:20894): PID: 0  -Ejecutando: 2 - 12 AX
+[INFO] 17:41:13:655 CPU/(20894:20894): OFFSET: 12, BYTEs: 8
+[INFO] 17:41:15:658 CPU/(20894:20894): PID: 0  -Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 0x5596ddc2687c - Valor: h014
+[INFO] 17:41:15:658 CPU/(20894:20894): Program Counter: 3
+[INFO] 17:41:15:658 CPU/(20894:20894): Instruccion nº4: 6
+[INFO] 17:41:15:658 CPU/(20894:20894): PID: 0  -Ejecutando: 6 - 1 128
+[INFO] 17:41:15:659 CPU/(20894:20894): Se recibio un contexto del kernel
+[INFO] 17:41:15:659 CPU/(20894:20894): Comenzando ciclo con nuevo CTX...
+[INFO] 17:41:15:659 CPU/(20894:20894): Program Counter: 4
+[INFO] 17:41:15:659 CPU/(20894:20894): Instruccion nº5: 10
+[INFO] 17:41:15:659 CPU/(20894:20894): PID: 0  -Ejecutando: 10 - RB
+[INFO] 17:41:15:659 CPU/(20894:20894): Se recibio un contexto del kernel
+[INFO] 17:41:15:659 CPU/(20894:20894): Comenzando ciclo con nuevo CTX...
+[INFO] 17:41:15:659 CPU/(20894:20894): Program Counter: 5
+[INFO] 17:41:15:659 CPU/(20894:20894): Instruccion nº6: 9
+[INFO] 17:41:15:659 CPU/(20894:20894): PID: 0  -Ejecutando: 9 - RA
+[INFO] 17:41:15:660 CPU/(20894:20894): Se recibio un contexto del kernel
+[INFO] 17:41:15:660 CPU/(20894:20894): Comenzando ciclo con nuevo CTX...
+[INFO] 17:41:15:660 CPU/(20894:20894): Program Counter: 0
+[INFO] 17:41:15:660 CPU/(20894:20894): Instruccion nº1: 9
+[INFO] 17:41:15:660 CPU/(20894:20894): PID: 1  -Ejecutando: 9 - RB
+[INFO] 17:41:16:732 CPU/(20894:20894): Se desconecto el kernel
+[INFO] 17:43:49:007 CPU/(22031:22031): Se conecto al servidor 127.0.0.1:8002
+[INFO] 17:43:49:007 CPU/(22031:22031): Esperando kernel....
+[INFO] 17:44:12:034 CPU/(22031:22031): Se conecto el kernel
+[INFO] 17:44:16:990 CPU/(22031:22031): Se recibio un contexto del kernel
+[INFO] 17:44:16:991 CPU/(22031:22031): Comenzando ciclo con nuevo CTX...
+[INFO] 17:44:16:991 CPU/(22031:22031): Program Counter: 0
+[INFO] 17:44:16:991 CPU/(22031:22031): Instruccion nº1: 9
+[INFO] 17:44:16:991 CPU/(22031:22031): PID: 0  -Ejecutando: 9 - RA
+[INFO] 17:44:16:992 CPU/(22031:22031): Se recibio un contexto del kernel
+[INFO] 17:44:16:992 CPU/(22031:22031): Comenzando ciclo con nuevo CTX...
+[INFO] 17:44:16:992 CPU/(22031:22031): Program Counter: 1
+[INFO] 17:44:16:992 CPU/(22031:22031): Instruccion nº2: 8
+[INFO] 17:44:17:993 CPU/(22031:22031): PID: 0  -Ejecutando: 8 - AX h014
+[INFO] 17:44:17:993 CPU/(22031:22031): Program Counter: 2
+[INFO] 17:44:17:994 CPU/(22031:22031): Instruccion nº3: 2
+[INFO] 17:44:17:994 CPU/(22031:22031): PID: 0  -Ejecutando: 2 - 12 AX
+[INFO] 17:44:17:994 CPU/(22031:22031): OFFSET: 12, BYTEs: 8
+[INFO] 17:44:19:996 CPU/(22031:22031): PID: 0  -Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 0x560b59d9b87c - Valor: h014
+[INFO] 17:44:19:996 CPU/(22031:22031): Program Counter: 3
+[INFO] 17:44:19:996 CPU/(22031:22031): Instruccion nº4: 6
+[INFO] 17:44:19:996 CPU/(22031:22031): PID: 0  -Ejecutando: 6 - 1 128
+[INFO] 17:45:16:309 CPU/(22031:22031): Se recibio un contexto del kernel
+[INFO] 17:45:16:309 CPU/(22031:22031): Comenzando ciclo con nuevo CTX...
+[INFO] 17:45:16:309 CPU/(22031:22031): Program Counter: 4
+[INFO] 17:45:16:309 CPU/(22031:22031): Instruccion nº5: 10
+[INFO] 17:45:16:309 CPU/(22031:22031): PID: 0  -Ejecutando: 10 - RB
+[INFO] 17:45:16:310 CPU/(22031:22031): Se recibio un contexto del kernel
+[INFO] 17:45:16:310 CPU/(22031:22031): Comenzando ciclo con nuevo CTX...
+[INFO] 17:45:16:310 CPU/(22031:22031): Program Counter: 5
+[INFO] 17:45:16:310 CPU/(22031:22031): Instruccion nº6: 9
+[INFO] 17:45:16:310 CPU/(22031:22031): PID: 0  -Ejecutando: 9 - RA
+[INFO] 17:45:16:310 CPU/(22031:22031): Se recibio un contexto del kernel
+[INFO] 17:45:16:310 CPU/(22031:22031): Comenzando ciclo con nuevo CTX...
+[INFO] 17:45:16:310 CPU/(22031:22031): Program Counter: 0
+[INFO] 17:45:16:310 CPU/(22031:22031): Instruccion nº1: 9
+[INFO] 17:45:16:310 CPU/(22031:22031): PID: 1  -Ejecutando: 9 - RB
+[INFO] 17:45:16:311 CPU/(22031:22031): Se recibio un contexto del kernel
+[INFO] 17:45:16:311 CPU/(22031:22031): Comenzando ciclo con nuevo CTX...
+[INFO] 17:45:16:311 CPU/(22031:22031): Program Counter: 0
+[INFO] 17:45:16:311 CPU/(22031:22031): Instruccion nº1: 9
+[INFO] 17:45:16:311 CPU/(22031:22031): PID: 2  -Ejecutando: 9 - RC
+[INFO] 17:45:53:290 CPU/(23270:23270): Se conecto al servidor 127.0.0.1:8002
+[INFO] 17:45:53:290 CPU/(23270:23270): Esperando kernel....
+[INFO] 17:45:57:265 CPU/(23270:23270): Se conecto el kernel
+[INFO] 17:46:02:367 CPU/(23270:23270): Se recibio un contexto del kernel
+[INFO] 17:46:02:367 CPU/(23270:23270): Comenzando ciclo con nuevo CTX...
+[INFO] 17:46:02:367 CPU/(23270:23270): Program Counter: 0
+[INFO] 17:46:02:367 CPU/(23270:23270): Instruccion nº1: 9
+[INFO] 17:46:02:367 CPU/(23270:23270): PID: 0  -Ejecutando: 9 - RA
+[INFO] 17:46:13:505 CPU/(23270:23270): Se recibio un contexto del kernel
+[INFO] 17:46:13:505 CPU/(23270:23270): Comenzando ciclo con nuevo CTX...
+[INFO] 17:46:13:505 CPU/(23270:23270): Program Counter: 1
+[INFO] 17:46:13:505 CPU/(23270:23270): Instruccion nº2: 8
+[INFO] 17:46:14:506 CPU/(23270:23270): PID: 0  -Ejecutando: 8 - AX h014
+[INFO] 17:46:14:506 CPU/(23270:23270): Program Counter: 2
+[INFO] 17:46:14:506 CPU/(23270:23270): Instruccion nº3: 2
+[INFO] 17:46:14:506 CPU/(23270:23270): PID: 0  -Ejecutando: 2 - 12 AX
+[INFO] 17:46:14:506 CPU/(23270:23270): OFFSET: 12, BYTEs: 8
+[INFO] 17:46:16:507 CPU/(23270:23270): PID: 0  -Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 0x55f20bc5987c - Valor: h014
+[INFO] 17:46:16:507 CPU/(23270:23270): Program Counter: 3
+[INFO] 17:46:16:507 CPU/(23270:23270): Instruccion nº4: 6
+[INFO] 17:46:16:507 CPU/(23270:23270): PID: 0  -Ejecutando: 6 - 1 128
+[INFO] 17:46:43:231 CPU/(24293:24293): Se conecto al servidor 127.0.0.1:8002
+[INFO] 17:46:43:231 CPU/(24293:24293): Esperando kernel....
+[INFO] 17:46:52:271 CPU/(24293:24293): Se conecto el kernel
+[INFO] 17:46:54:784 CPU/(24293:24293): Se recibio un contexto del kernel
+[INFO] 17:46:54:784 CPU/(24293:24293): Comenzando ciclo con nuevo CTX...
+[INFO] 17:46:54:784 CPU/(24293:24293): Program Counter: 0
+[INFO] 17:46:54:784 CPU/(24293:24293): Instruccion nº1: 9
+[INFO] 17:46:54:784 CPU/(24293:24293): PID: 0  -Ejecutando: 9 - RA
+[INFO] 17:46:54:786 CPU/(24293:24293): Se recibio un contexto del kernel
+[INFO] 17:46:54:787 CPU/(24293:24293): Comenzando ciclo con nuevo CTX...
+[INFO] 17:46:54:787 CPU/(24293:24293): Program Counter: 1
+[INFO] 17:46:54:787 CPU/(24293:24293): Instruccion nº2: 8
+[INFO] 17:46:55:789 CPU/(24293:24293): PID: 0  -Ejecutando: 8 - AX h014
+[INFO] 17:46:55:789 CPU/(24293:24293): Program Counter: 2
+[INFO] 17:46:55:789 CPU/(24293:24293): Instruccion nº3: 2
+[INFO] 17:46:55:789 CPU/(24293:24293): PID: 0  -Ejecutando: 2 - 12 AX
+[INFO] 17:46:55:789 CPU/(24293:24293): OFFSET: 12, BYTEs: 8
+[INFO] 17:46:57:790 CPU/(24293:24293): PID: 0  -Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 0x561a9942887c - Valor: h014
+[INFO] 17:46:57:790 CPU/(24293:24293): Program Counter: 3
+[INFO] 17:46:57:790 CPU/(24293:24293): Instruccion nº4: 6
+[INFO] 17:46:57:790 CPU/(24293:24293): PID: 0  -Ejecutando: 6 - 1 128
+[INFO] 17:46:57:792 CPU/(24293:24293): Se recibio un contexto del kernel
+[INFO] 17:46:57:792 CPU/(24293:24293): Comenzando ciclo con nuevo CTX...
+[INFO] 17:46:57:792 CPU/(24293:24293): Program Counter: 4
+[INFO] 17:46:57:792 CPU/(24293:24293): Instruccion nº5: 10
+[INFO] 17:46:57:792 CPU/(24293:24293): PID: 0  -Ejecutando: 10 - RB
+[INFO] 17:46:57:794 CPU/(24293:24293): Se recibio un contexto del kernel
+[INFO] 17:46:57:794 CPU/(24293:24293): Comenzando ciclo con nuevo CTX...
+[INFO] 17:46:57:794 CPU/(24293:24293): Program Counter: 5
+[INFO] 17:46:57:794 CPU/(24293:24293): Instruccion nº6: 9
+[INFO] 17:46:57:795 CPU/(24293:24293): PID: 0  -Ejecutando: 9 - RA
+[INFO] 17:50:46:272 CPU/(25479:25479): Se conecto al servidor 127.0.0.1:8002
+[INFO] 17:50:46:272 CPU/(25479:25479): Esperando kernel....
+[INFO] 17:50:50:657 CPU/(25479:25479): Se conecto el kernel
+[INFO] 17:50:56:094 CPU/(25479:25479): Se recibio un contexto del kernel
+[INFO] 17:50:56:094 CPU/(25479:25479): Comenzando ciclo con nuevo CTX...
+[INFO] 17:50:56:094 CPU/(25479:25479): Program Counter: 0
+[INFO] 17:50:56:095 CPU/(25479:25479): Instruccion nº1: 9
+[INFO] 17:50:56:095 CPU/(25479:25479): PID: 0  -Ejecutando: 9 - RA
+[INFO] 17:50:59:097 CPU/(25479:25479): Se recibio un contexto del kernel
+[INFO] 17:50:59:097 CPU/(25479:25479): Comenzando ciclo con nuevo CTX...
+[INFO] 17:50:59:097 CPU/(25479:25479): Program Counter: 1
+[INFO] 17:50:59:097 CPU/(25479:25479): Instruccion nº2: 8
+[INFO] 17:51:00:098 CPU/(25479:25479): PID: 0  -Ejecutando: 8 - AX h014
+[INFO] 17:51:00:098 CPU/(25479:25479): Program Counter: 2
+[INFO] 17:51:00:098 CPU/(25479:25479): Instruccion nº3: 2
+[INFO] 17:51:00:098 CPU/(25479:25479): PID: 0  -Ejecutando: 2 - 12 AX
+[INFO] 17:51:00:098 CPU/(25479:25479): OFFSET: 12, BYTEs: 8
+[INFO] 17:51:02:101 CPU/(25479:25479): PID: 0  -Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 0x563e1b14e87c - Valor: h014
+[INFO] 17:51:02:101 CPU/(25479:25479): Program Counter: 3
+[INFO] 17:51:02:101 CPU/(25479:25479): Instruccion nº4: 6
+[INFO] 17:51:02:101 CPU/(25479:25479): PID: 0  -Ejecutando: 6 - 1 128
+[INFO] 17:51:05:103 CPU/(25479:25479): Se recibio un contexto del kernel
+[INFO] 17:51:05:103 CPU/(25479:25479): Comenzando ciclo con nuevo CTX...
+[INFO] 17:51:05:103 CPU/(25479:25479): Program Counter: 4
+[INFO] 17:51:05:103 CPU/(25479:25479): Instruccion nº5: 10
+[INFO] 17:51:05:103 CPU/(25479:25479): PID: 0  -Ejecutando: 10 - RB
+[INFO] 17:51:08:107 CPU/(25479:25479): Se recibio un contexto del kernel
+[INFO] 17:51:08:107 CPU/(25479:25479): Comenzando ciclo con nuevo CTX...
+[INFO] 17:51:08:107 CPU/(25479:25479): Program Counter: 5
+[INFO] 17:51:08:107 CPU/(25479:25479): Instruccion nº6: 9
+[INFO] 17:51:08:108 CPU/(25479:25479): PID: 0  -Ejecutando: 9 - RA
+[INFO] 17:52:20:413 CPU/(26503:26503): Se conecto al servidor 127.0.0.1:8002
+[INFO] 17:52:20:414 CPU/(26503:26503): Esperando kernel....
+[INFO] 17:52:24:180 CPU/(26503:26503): Se conecto el kernel
+[INFO] 17:52:27:801 CPU/(26503:26503): Se recibio un contexto del kernel
+[INFO] 17:52:27:801 CPU/(26503:26503): Comenzando ciclo con nuevo CTX...
+[INFO] 17:52:27:801 CPU/(26503:26503): Program Counter: 0
+[INFO] 17:52:27:801 CPU/(26503:26503): Instruccion nº1: 9
+[INFO] 17:52:27:801 CPU/(26503:26503): PID: 0  -Ejecutando: 9 - RA
+[INFO] 17:53:43:552 CPU/(26503:26503): Se recibio un contexto del kernel
+[INFO] 17:53:43:552 CPU/(26503:26503): Comenzando ciclo con nuevo CTX...
+[INFO] 17:53:43:552 CPU/(26503:26503): Program Counter: 1
+[INFO] 17:53:43:552 CPU/(26503:26503): Instruccion nº2: 8
+[INFO] 17:53:44:553 CPU/(26503:26503): PID: 0  -Ejecutando: 8 - AX h014
+[INFO] 17:53:44:553 CPU/(26503:26503): Program Counter: 2
+[INFO] 17:53:44:553 CPU/(26503:26503): Instruccion nº3: 2
+[INFO] 17:53:44:553 CPU/(26503:26503): PID: 0  -Ejecutando: 2 - 12 AX
+[INFO] 17:53:44:553 CPU/(26503:26503): OFFSET: 12, BYTEs: 8
+[INFO] 17:53:46:554 CPU/(26503:26503): PID: 0  -Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 0x55a429a6c87c - Valor: h014
+[INFO] 17:53:46:554 CPU/(26503:26503): Program Counter: 3
+[INFO] 17:53:46:554 CPU/(26503:26503): Instruccion nº4: 6
+[INFO] 17:53:46:554 CPU/(26503:26503): PID: 0  -Ejecutando: 6 - 1 128
+[INFO] 17:53:49:558 CPU/(26503:26503): Se recibio un contexto del kernel
+[INFO] 17:53:49:558 CPU/(26503:26503): Comenzando ciclo con nuevo CTX...
+[INFO] 17:53:49:558 CPU/(26503:26503): Program Counter: 4
+[INFO] 17:53:49:558 CPU/(26503:26503): Instruccion nº5: 10
+[INFO] 17:53:49:558 CPU/(26503:26503): PID: 0  -Ejecutando: 10 - RB
+[INFO] 17:53:52:560 CPU/(26503:26503): Se recibio un contexto del kernel
+[INFO] 17:53:52:560 CPU/(26503:26503): Comenzando ciclo con nuevo CTX...
+[INFO] 17:53:52:560 CPU/(26503:26503): Program Counter: 5
+[INFO] 17:53:52:560 CPU/(26503:26503): Instruccion nº6: 9
+[INFO] 17:53:52:560 CPU/(26503:26503): PID: 0  -Ejecutando: 9 - RA
+[INFO] 17:55:29:918 CPU/(27588:27588): Se conecto al servidor 127.0.0.1:8002
+[INFO] 17:55:29:918 CPU/(27588:27588): Esperando kernel....
+[INFO] 17:55:37:755 CPU/(27588:27588): Se conecto el kernel
+[INFO] 17:55:39:466 CPU/(27588:27588): Se recibio un contexto del kernel
+[INFO] 17:55:39:467 CPU/(27588:27588): Comenzando ciclo con nuevo CTX...
+[INFO] 17:55:39:467 CPU/(27588:27588): Program Counter: 0
+[INFO] 17:55:39:467 CPU/(27588:27588): Instruccion nº1: 9
+[INFO] 17:55:39:467 CPU/(27588:27588): PID: 0  -Ejecutando: 9 - RA
+[INFO] 17:55:42:468 CPU/(27588:27588): Se recibio un contexto del kernel
+[INFO] 17:55:42:468 CPU/(27588:27588): Comenzando ciclo con nuevo CTX...
+[INFO] 17:55:42:468 CPU/(27588:27588): Program Counter: 1
+[INFO] 17:55:42:468 CPU/(27588:27588): Instruccion nº2: 8
+[INFO] 17:55:43:479 CPU/(27588:27588): PID: 0  -Ejecutando: 8 - AX h014
+[INFO] 17:55:43:479 CPU/(27588:27588): Program Counter: 2
+[INFO] 17:55:43:479 CPU/(27588:27588): Instruccion nº3: 2
+[INFO] 17:55:43:479 CPU/(27588:27588): PID: 0  -Ejecutando: 2 - 12 AX
+[INFO] 17:55:43:479 CPU/(27588:27588): OFFSET: 12, BYTEs: 8
+[INFO] 17:55:45:481 CPU/(27588:27588): PID: 0  -Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 0x56210350887c - Valor: h014
+[INFO] 17:55:45:481 CPU/(27588:27588): Program Counter: 3
+[INFO] 17:55:45:481 CPU/(27588:27588): Instruccion nº4: 6
+[INFO] 17:55:45:481 CPU/(27588:27588): PID: 0  -Ejecutando: 6 - 1 128
+[INFO] 17:55:48:486 CPU/(27588:27588): Se recibio un contexto del kernel
+[INFO] 17:55:48:486 CPU/(27588:27588): Comenzando ciclo con nuevo CTX...
+[INFO] 17:55:48:486 CPU/(27588:27588): Program Counter: 4
+[INFO] 17:55:48:486 CPU/(27588:27588): Instruccion nº5: 10
+[INFO] 17:55:48:486 CPU/(27588:27588): PID: 0  -Ejecutando: 10 - RB
+[INFO] 17:55:51:488 CPU/(27588:27588): Se recibio un contexto del kernel
+[INFO] 17:55:51:488 CPU/(27588:27588): Comenzando ciclo con nuevo CTX...
+[INFO] 17:55:51:489 CPU/(27588:27588): Program Counter: 5
+[INFO] 17:55:51:489 CPU/(27588:27588): Instruccion nº6: 9
+[INFO] 17:55:51:489 CPU/(27588:27588): PID: 0  -Ejecutando: 9 - RA
+[INFO] 17:56:28:085 CPU/(28545:28545): Se conecto al servidor 127.0.0.1:8002
+[INFO] 17:56:28:085 CPU/(28545:28545): Esperando kernel....
+[INFO] 17:56:32:275 CPU/(28545:28545): Se conecto el kernel
+[INFO] 17:57:09:435 CPU/(29368:29368): Se conecto al servidor 127.0.0.1:8002
+[INFO] 17:57:09:435 CPU/(29368:29368): Esperando kernel....
+[INFO] 17:57:18:138 CPU/(29368:29368): Se conecto el kernel
+[INFO] 17:57:29:743 CPU/(29368:29368): Se recibio un contexto del kernel
+[INFO] 17:57:29:743 CPU/(29368:29368): Comenzando ciclo con nuevo CTX...
+[INFO] 17:57:29:743 CPU/(29368:29368): Program Counter: 0
+[INFO] 17:57:29:743 CPU/(29368:29368): Instruccion nº1: 9
+[INFO] 17:57:29:743 CPU/(29368:29368): PID: 0  -Ejecutando: 9 - RA
+[INFO] 17:57:32:745 CPU/(29368:29368): Se recibio un contexto del kernel
+[INFO] 17:57:32:745 CPU/(29368:29368): Comenzando ciclo con nuevo CTX...
+[INFO] 17:57:32:746 CPU/(29368:29368): Program Counter: 1
+[INFO] 17:57:32:746 CPU/(29368:29368): Instruccion nº2: 8
+[INFO] 17:57:33:748 CPU/(29368:29368): PID: 0  -Ejecutando: 8 - AX h014
+[INFO] 17:57:33:748 CPU/(29368:29368): Program Counter: 2
+[INFO] 17:57:33:748 CPU/(29368:29368): Instruccion nº3: 2
+[INFO] 17:57:33:748 CPU/(29368:29368): PID: 0  -Ejecutando: 2 - 12 AX
+[INFO] 17:57:33:748 CPU/(29368:29368): OFFSET: 12, BYTEs: 8
+[INFO] 17:57:35:749 CPU/(29368:29368): PID: 0  -Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 0x558c37bf687c - Valor: h014
+[INFO] 17:57:35:749 CPU/(29368:29368): Program Counter: 3
+[INFO] 17:57:35:750 CPU/(29368:29368): Instruccion nº4: 6
+[INFO] 17:57:35:750 CPU/(29368:29368): PID: 0  -Ejecutando: 6 - 1 128
+[INFO] 17:57:38:756 CPU/(29368:29368): Se recibio un contexto del kernel
+[INFO] 17:57:38:756 CPU/(29368:29368): Comenzando ciclo con nuevo CTX...
+[INFO] 17:57:38:756 CPU/(29368:29368): Program Counter: 4
+[INFO] 17:57:38:756 CPU/(29368:29368): Instruccion nº5: 10
+[INFO] 17:57:38:756 CPU/(29368:29368): PID: 0  -Ejecutando: 10 - RB
+[INFO] 17:57:41:774 CPU/(29368:29368): Se recibio un contexto del kernel
+[INFO] 17:57:41:775 CPU/(29368:29368): Comenzando ciclo con nuevo CTX...
+[INFO] 17:57:41:775 CPU/(29368:29368): Program Counter: 5
+[INFO] 17:57:41:775 CPU/(29368:29368): Instruccion nº6: 9
+[INFO] 17:57:41:775 CPU/(29368:29368): PID: 0  -Ejecutando: 9 - RA
+[INFO] 17:58:20:093 CPU/(29368:29368): Se recibio un contexto del kernel
+[INFO] 17:58:20:093 CPU/(29368:29368): Comenzando ciclo con nuevo CTX...
+[INFO] 17:58:20:093 CPU/(29368:29368): Program Counter: 0
+[INFO] 17:58:20:093 CPU/(29368:29368): Instruccion nº1: 9
+[INFO] 17:58:20:093 CPU/(29368:29368): PID: 1  -Ejecutando: 9 - RB
+[INFO] 18:00:00:420 CPU/(29368:29368): Se recibio un contexto del kernel
+[INFO] 18:00:00:421 CPU/(29368:29368): Comenzando ciclo con nuevo CTX...
+[INFO] 18:00:00:421 CPU/(29368:29368): Program Counter: 0
+[INFO] 18:00:00:421 CPU/(29368:29368): Instruccion nº1: 9
+[INFO] 18:00:00:421 CPU/(29368:29368): PID: 2  -Ejecutando: 9 - RC
+[INFO] 18:04:19:253 CPU/(30985:30985): Se conecto al servidor 127.0.0.1:8002
+[INFO] 18:04:19:253 CPU/(30985:30985): Esperando kernel....
+[INFO] 18:04:23:489 CPU/(30985:30985): Se conecto el kernel
+[INFO] 18:04:25:038 CPU/(30985:30985): Se recibio un contexto del kernel
+[INFO] 18:04:25:038 CPU/(30985:30985): Comenzando ciclo con nuevo CTX...
+[INFO] 18:04:25:038 CPU/(30985:30985): Program Counter: 0
+[INFO] 18:04:25:038 CPU/(30985:30985): Instruccion nº1: 9
+[INFO] 18:04:25:038 CPU/(30985:30985): PID: 0  -Ejecutando: 9 - RA
+[INFO] 18:04:31:707 CPU/(30985:30985): Se recibio un contexto del kernel
+[INFO] 18:04:31:707 CPU/(30985:30985): Comenzando ciclo con nuevo CTX...
+[INFO] 18:04:31:707 CPU/(30985:30985): Program Counter: 1
+[INFO] 18:04:31:707 CPU/(30985:30985): Instruccion nº2: 8
+[INFO] 18:04:32:715 CPU/(30985:30985): PID: 0  -Ejecutando: 8 - AX h014
+[INFO] 18:04:32:716 CPU/(30985:30985): Program Counter: 2
+[INFO] 18:04:32:716 CPU/(30985:30985): Instruccion nº3: 2
+[INFO] 18:04:32:716 CPU/(30985:30985): PID: 0  -Ejecutando: 2 - 12 AX
+[INFO] 18:04:32:716 CPU/(30985:30985): OFFSET: 12, BYTEs: 8
+[INFO] 18:04:34:716 CPU/(30985:30985): PID: 0  -Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 0x55d568ab087c - Valor: h014
+[INFO] 18:04:34:716 CPU/(30985:30985): Program Counter: 3
+[INFO] 18:04:34:716 CPU/(30985:30985): Instruccion nº4: 6
+[INFO] 18:04:34:716 CPU/(30985:30985): PID: 0  -Ejecutando: 6 - 1 128
+[INFO] 18:04:37:718 CPU/(30985:30985): Se recibio un contexto del kernel
+[INFO] 18:04:37:718 CPU/(30985:30985): Comenzando ciclo con nuevo CTX...
+[INFO] 18:04:37:719 CPU/(30985:30985): Program Counter: 4
+[INFO] 18:04:37:719 CPU/(30985:30985): Instruccion nº5: 10
+[INFO] 18:04:37:719 CPU/(30985:30985): PID: 0  -Ejecutando: 10 - RB
+[INFO] 18:04:40:746 CPU/(30985:30985): Se recibio un contexto del kernel
+[INFO] 18:04:40:746 CPU/(30985:30985): Comenzando ciclo con nuevo CTX...
+[INFO] 18:04:40:746 CPU/(30985:30985): Program Counter: 5
+[INFO] 18:04:40:746 CPU/(30985:30985): Instruccion nº6: 9
+[INFO] 18:04:40:747 CPU/(30985:30985): PID: 0  -Ejecutando: 9 - RA
+[INFO] 18:04:43:756 CPU/(30985:30985): Se recibio un contexto del kernel
+[INFO] 18:04:43:756 CPU/(30985:30985): Comenzando ciclo con nuevo CTX...
+[INFO] 18:04:43:756 CPU/(30985:30985): Program Counter: 0
+[INFO] 18:04:43:756 CPU/(30985:30985): Instruccion nº1: 9
+[INFO] 18:04:43:756 CPU/(30985:30985): PID: 1  -Ejecutando: 9 - RB
+[INFO] 18:04:46:767 CPU/(30985:30985): Se recibio un contexto del kernel
+[INFO] 18:04:46:767 CPU/(30985:30985): Comenzando ciclo con nuevo CTX...
+[INFO] 18:04:46:768 CPU/(30985:30985): Program Counter: 0
+[INFO] 18:04:46:768 CPU/(30985:30985): Instruccion nº1: 9
+[INFO] 18:04:46:768 CPU/(30985:30985): PID: 2  -Ejecutando: 9 - RC
+[INFO] 18:05:30:088 CPU/(32098:32098): Se conecto al servidor 127.0.0.1:8002
+[INFO] 18:05:30:088 CPU/(32098:32098): Esperando kernel....
+[INFO] 18:05:33:820 CPU/(32098:32098): Se conecto el kernel
+[INFO] 18:05:35:681 CPU/(32098:32098): Se recibio un contexto del kernel
+[INFO] 18:05:35:681 CPU/(32098:32098): Comenzando ciclo con nuevo CTX...
+[INFO] 18:05:35:681 CPU/(32098:32098): Program Counter: 0
+[INFO] 18:05:35:681 CPU/(32098:32098): Instruccion nº1: 9
+[INFO] 18:05:35:681 CPU/(32098:32098): PID: 0  -Ejecutando: 9 - RA
+[INFO] 18:05:38:686 CPU/(32098:32098): Se recibio un contexto del kernel
+[INFO] 18:05:38:686 CPU/(32098:32098): Comenzando ciclo con nuevo CTX...
+[INFO] 18:05:38:686 CPU/(32098:32098): Program Counter: 1
+[INFO] 18:05:38:686 CPU/(32098:32098): Instruccion nº2: 8
+[INFO] 18:05:39:686 CPU/(32098:32098): PID: 0  -Ejecutando: 8 - AX h014
+[INFO] 18:05:39:686 CPU/(32098:32098): Program Counter: 2
+[INFO] 18:05:39:687 CPU/(32098:32098): Instruccion nº3: 2
+[INFO] 18:05:39:687 CPU/(32098:32098): PID: 0  -Ejecutando: 2 - 12 AX
+[INFO] 18:05:39:687 CPU/(32098:32098): OFFSET: 12, BYTEs: 8
+[INFO] 18:05:41:687 CPU/(32098:32098): PID: 0  -Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 0x555db5f4587c - Valor: h014
+[INFO] 18:05:41:687 CPU/(32098:32098): Program Counter: 3
+[INFO] 18:05:41:688 CPU/(32098:32098): Instruccion nº4: 6
+[INFO] 18:05:41:688 CPU/(32098:32098): PID: 0  -Ejecutando: 6 - 1 128
+[INFO] 18:05:44:689 CPU/(32098:32098): Se recibio un contexto del kernel
+[INFO] 18:05:44:690 CPU/(32098:32098): Comenzando ciclo con nuevo CTX...
+[INFO] 18:05:44:690 CPU/(32098:32098): Program Counter: 4
+[INFO] 18:05:44:690 CPU/(32098:32098): Instruccion nº5: 10
+[INFO] 18:05:44:690 CPU/(32098:32098): PID: 0  -Ejecutando: 10 - RB
+[INFO] 18:07:14:170 CPU/(32098:32098): Se recibio un contexto del kernel
+[INFO] 18:07:14:170 CPU/(32098:32098): Comenzando ciclo con nuevo CTX...
+[INFO] 18:07:14:170 CPU/(32098:32098): Program Counter: 5
+[INFO] 18:07:14:170 CPU/(32098:32098): Instruccion nº6: 9
+[INFO] 18:07:14:170 CPU/(32098:32098): PID: 0  -Ejecutando: 9 - RA
+[INFO] 18:07:17:186 CPU/(32098:32098): Se recibio un contexto del kernel
+[INFO] 18:07:17:186 CPU/(32098:32098): Comenzando ciclo con nuevo CTX...
+[INFO] 18:07:17:187 CPU/(32098:32098): Program Counter: 0
+[INFO] 18:07:17:187 CPU/(32098:32098): Instruccion nº1: 9
+[INFO] 18:07:17:187 CPU/(32098:32098): PID: 1  -Ejecutando: 9 - RB
+[INFO] 18:07:20:190 CPU/(32098:32098): Se recibio un contexto del kernel
+[INFO] 18:07:20:190 CPU/(32098:32098): Comenzando ciclo con nuevo CTX...
+[INFO] 18:07:20:190 CPU/(32098:32098): Program Counter: 0
+[INFO] 18:07:20:190 CPU/(32098:32098): Instruccion nº1: 9
+[INFO] 18:07:20:190 CPU/(32098:32098): PID: 2  -Ejecutando: 9 - RC
+[INFO] 18:08:01:424 CPU/(33390:33390): Se conecto al servidor 127.0.0.1:8002
+[INFO] 18:08:01:424 CPU/(33390:33390): Esperando kernel....
+[INFO] 18:08:05:064 CPU/(33390:33390): Se conecto el kernel
+[INFO] 18:08:06:621 CPU/(33390:33390): Se recibio un contexto del kernel
+[INFO] 18:08:06:621 CPU/(33390:33390): Comenzando ciclo con nuevo CTX...
+[INFO] 18:08:06:621 CPU/(33390:33390): Program Counter: 0
+[INFO] 18:08:06:621 CPU/(33390:33390): Instruccion nº1: 9
+[INFO] 18:08:06:621 CPU/(33390:33390): PID: 0  -Ejecutando: 9 - RA
+[INFO] 18:08:09:624 CPU/(33390:33390): Se recibio un contexto del kernel
+[INFO] 18:08:09:624 CPU/(33390:33390): Comenzando ciclo con nuevo CTX...
+[INFO] 18:08:09:624 CPU/(33390:33390): Program Counter: 1
+[INFO] 18:08:09:624 CPU/(33390:33390): Instruccion nº2: 8
+[INFO] 18:08:10:625 CPU/(33390:33390): PID: 0  -Ejecutando: 8 - AX h014
+[INFO] 18:08:10:625 CPU/(33390:33390): Program Counter: 2
+[INFO] 18:08:10:625 CPU/(33390:33390): Instruccion nº3: 2
+[INFO] 18:08:10:625 CPU/(33390:33390): PID: 0  -Ejecutando: 2 - 12 AX
+[INFO] 18:08:10:625 CPU/(33390:33390): OFFSET: 12, BYTEs: 8
+[INFO] 18:08:12:626 CPU/(33390:33390): PID: 0  -Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 0x559b6fd7d87c - Valor: h014
+[INFO] 18:08:12:626 CPU/(33390:33390): Program Counter: 3
+[INFO] 18:08:12:626 CPU/(33390:33390): Instruccion nº4: 6
+[INFO] 18:08:12:626 CPU/(33390:33390): PID: 0  -Ejecutando: 6 - 1 128
+[INFO] 18:08:15:637 CPU/(33390:33390): Se recibio un contexto del kernel
+[INFO] 18:08:15:638 CPU/(33390:33390): Comenzando ciclo con nuevo CTX...
+[INFO] 18:08:15:638 CPU/(33390:33390): Program Counter: 4
+[INFO] 18:08:15:638 CPU/(33390:33390): Instruccion nº5: 10
+[INFO] 18:08:15:638 CPU/(33390:33390): PID: 0  -Ejecutando: 10 - RB
+[INFO] 18:08:35:219 CPU/(33390:33390): Se recibio un contexto del kernel
+[INFO] 18:08:35:219 CPU/(33390:33390): Comenzando ciclo con nuevo CTX...
+[INFO] 18:08:35:219 CPU/(33390:33390): Program Counter: 5
+[INFO] 18:08:35:219 CPU/(33390:33390): Instruccion nº6: 9
+[INFO] 18:08:35:219 CPU/(33390:33390): PID: 0  -Ejecutando: 9 - RA
+[INFO] 18:09:27:025 CPU/(33390:33390): Se recibio un contexto del kernel
+[INFO] 18:09:27:025 CPU/(33390:33390): Comenzando ciclo con nuevo CTX...
+[INFO] 18:09:27:026 CPU/(33390:33390): Program Counter: 0
+[INFO] 18:09:27:026 CPU/(33390:33390): Instruccion nº1: 9
+[INFO] 18:09:27:026 CPU/(33390:33390): PID: 1  -Ejecutando: 9 - RB
+[INFO] 18:12:00:221 CPU/(34813:34813): Se conecto al servidor 127.0.0.1:8002
+[INFO] 18:12:00:221 CPU/(34813:34813): Esperando kernel....
+[INFO] 18:12:05:144 CPU/(34813:34813): Se conecto el kernel
+[INFO] 18:12:06:616 CPU/(34813:34813): Se recibio un contexto del kernel
+[INFO] 18:12:06:616 CPU/(34813:34813): Comenzando ciclo con nuevo CTX...
+[INFO] 18:12:06:616 CPU/(34813:34813): Program Counter: 0
+[INFO] 18:12:06:616 CPU/(34813:34813): Instruccion nº1: 9
+[INFO] 18:12:06:616 CPU/(34813:34813): PID: 0  -Ejecutando: 9 - RA
+[INFO] 18:12:09:619 CPU/(34813:34813): Se recibio un contexto del kernel
+[INFO] 18:12:09:620 CPU/(34813:34813): Comenzando ciclo con nuevo CTX...
+[INFO] 18:12:09:620 CPU/(34813:34813): Program Counter: 1
+[INFO] 18:12:09:620 CPU/(34813:34813): Instruccion nº2: 8
+[INFO] 18:12:10:626 CPU/(34813:34813): PID: 0  -Ejecutando: 8 - AX h014
+[INFO] 18:12:10:626 CPU/(34813:34813): Program Counter: 2
+[INFO] 18:12:10:626 CPU/(34813:34813): Instruccion nº3: 2
+[INFO] 18:12:10:626 CPU/(34813:34813): PID: 0  -Ejecutando: 2 - 12 AX
+[INFO] 18:12:10:626 CPU/(34813:34813): OFFSET: 12, BYTEs: 8
+[INFO] 18:12:12:627 CPU/(34813:34813): PID: 0  -Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 0x55eeabe7687c - Valor: h014
+[INFO] 18:12:12:627 CPU/(34813:34813): Program Counter: 3
+[INFO] 18:12:12:627 CPU/(34813:34813): Instruccion nº4: 6
+[INFO] 18:12:12:628 CPU/(34813:34813): PID: 0  -Ejecutando: 6 - 1 128
+[INFO] 18:12:15:639 CPU/(34813:34813): Se recibio un contexto del kernel
+[INFO] 18:12:15:640 CPU/(34813:34813): Comenzando ciclo con nuevo CTX...
+[INFO] 18:12:15:640 CPU/(34813:34813): Program Counter: 4
+[INFO] 18:12:15:640 CPU/(34813:34813): Instruccion nº5: 10
+[INFO] 18:12:15:640 CPU/(34813:34813): PID: 0  -Ejecutando: 10 - RB
+[INFO] 18:12:21:926 CPU/(34813:34813): Se recibio un contexto del kernel
+[INFO] 18:12:21:926 CPU/(34813:34813): Comenzando ciclo con nuevo CTX...
+[INFO] 18:12:21:926 CPU/(34813:34813): Program Counter: 5
+[INFO] 18:12:21:926 CPU/(34813:34813): Instruccion nº6: 9
+[INFO] 18:12:21:926 CPU/(34813:34813): PID: 0  -Ejecutando: 9 - RA
+[INFO] 18:12:49:686 CPU/(35759:35759): Se conecto al servidor 127.0.0.1:8002
+[INFO] 18:12:49:686 CPU/(35759:35759): Esperando kernel....
+[INFO] 18:12:54:165 CPU/(35759:35759): Se conecto el kernel
+[INFO] 18:12:57:366 CPU/(35759:35759): Se recibio un contexto del kernel
+[INFO] 18:12:57:367 CPU/(35759:35759): Comenzando ciclo con nuevo CTX...
+[INFO] 18:12:57:367 CPU/(35759:35759): Program Counter: 0
+[INFO] 18:12:57:367 CPU/(35759:35759): Instruccion nº1: 9
+[INFO] 18:12:57:367 CPU/(35759:35759): PID: 0  -Ejecutando: 9 - RA
+[INFO] 18:13:00:369 CPU/(35759:35759): Se recibio un contexto del kernel
+[INFO] 18:13:00:369 CPU/(35759:35759): Comenzando ciclo con nuevo CTX...
+[INFO] 18:13:00:369 CPU/(35759:35759): Program Counter: 1
+[INFO] 18:13:00:369 CPU/(35759:35759): Instruccion nº2: 8
+[INFO] 18:13:01:421 CPU/(35759:35759): PID: 0  -Ejecutando: 8 - AX h014
+[INFO] 18:13:01:422 CPU/(35759:35759): Program Counter: 2
+[INFO] 18:13:01:422 CPU/(35759:35759): Instruccion nº3: 2
+[INFO] 18:13:01:422 CPU/(35759:35759): PID: 0  -Ejecutando: 2 - 12 AX
+[INFO] 18:13:01:422 CPU/(35759:35759): OFFSET: 12, BYTEs: 8
+[INFO] 18:13:03:436 CPU/(35759:35759): PID: 0  -Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 0x55933ff1787c - Valor: h014
+[INFO] 18:13:03:436 CPU/(35759:35759): Program Counter: 3
+[INFO] 18:13:03:437 CPU/(35759:35759): Instruccion nº4: 6
+[INFO] 18:13:03:437 CPU/(35759:35759): PID: 0  -Ejecutando: 6 - 1 128
+[INFO] 18:13:06:500 CPU/(35759:35759): Se recibio un contexto del kernel
+[INFO] 18:13:06:500 CPU/(35759:35759): Comenzando ciclo con nuevo CTX...
+[INFO] 18:13:06:500 CPU/(35759:35759): Program Counter: 4
+[INFO] 18:13:06:500 CPU/(35759:35759): Instruccion nº5: 10
+[INFO] 18:13:06:500 CPU/(35759:35759): PID: 0  -Ejecutando: 10 - RB
+[INFO] 18:14:18:329 CPU/(36798:36798): Se conecto al servidor 127.0.0.1:8002
+[INFO] 18:14:18:329 CPU/(36798:36798): Esperando kernel....
+[INFO] 18:14:49:699 CPU/(37411:37411): Se conecto al servidor 127.0.0.1:8002
+[INFO] 18:14:49:699 CPU/(37411:37411): Esperando kernel....
+[INFO] 18:14:53:930 CPU/(37411:37411): Se conecto el kernel
+[INFO] 18:14:55:977 CPU/(37411:37411): Se recibio un contexto del kernel
+[INFO] 18:14:55:977 CPU/(37411:37411): Comenzando ciclo con nuevo CTX...
+[INFO] 18:14:55:977 CPU/(37411:37411): Program Counter: 0
+[INFO] 18:14:55:977 CPU/(37411:37411): Instruccion nº1: 9
+[INFO] 18:14:55:978 CPU/(37411:37411): PID: 0  -Ejecutando: 9 - RA
+[INFO] 18:14:58:991 CPU/(37411:37411): Se recibio un contexto del kernel
+[INFO] 18:14:58:991 CPU/(37411:37411): Comenzando ciclo con nuevo CTX...
+[INFO] 18:14:58:992 CPU/(37411:37411): Program Counter: 1
+[INFO] 18:14:58:992 CPU/(37411:37411): Instruccion nº2: 8
+[INFO] 18:15:00:029 CPU/(37411:37411): PID: 0  -Ejecutando: 8 - AX h014
+[INFO] 18:15:00:029 CPU/(37411:37411): Program Counter: 2
+[INFO] 18:15:00:029 CPU/(37411:37411): Instruccion nº3: 2
+[INFO] 18:15:00:029 CPU/(37411:37411): PID: 0  -Ejecutando: 2 - 12 AX
+[INFO] 18:15:00:029 CPU/(37411:37411): OFFSET: 12, BYTEs: 8
+[INFO] 18:15:02:031 CPU/(37411:37411): PID: 0  -Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 0x555714d3f87c - Valor: h014
+[INFO] 18:15:02:031 CPU/(37411:37411): Program Counter: 3
+[INFO] 18:15:02:031 CPU/(37411:37411): Instruccion nº4: 6
+[INFO] 18:15:02:031 CPU/(37411:37411): PID: 0  -Ejecutando: 6 - 1 128
+[INFO] 18:15:05:035 CPU/(37411:37411): Se recibio un contexto del kernel
+[INFO] 18:15:05:035 CPU/(37411:37411): Comenzando ciclo con nuevo CTX...
+[INFO] 18:15:05:035 CPU/(37411:37411): Program Counter: 4
+[INFO] 18:15:05:035 CPU/(37411:37411): Instruccion nº5: 10
+[INFO] 18:15:05:035 CPU/(37411:37411): PID: 0  -Ejecutando: 10 - RB
+[INFO] 18:15:34:929 CPU/(37411:37411): Se desconecto el kernel

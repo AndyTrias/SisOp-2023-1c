@@ -12,7 +12,7 @@
       "program": "${workspaceFolder}/bin/${workspaceFolderBasename}.out",
       "args": [
         // TODO: Agregar los argumentos que se necesiten
-        "./config/kernelError.config"
+        "./config/kernelMemoria.config"
       ],
       "stopAtEntry": false,
       "cwd": "${workspaceFolder}",

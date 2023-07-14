@@ -82,7 +82,7 @@ op_code execute(t_instruccion *instruccion_actual, t_ctx *ctx)
 
 	case MOV_IN:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
-		long dir_fisica = MMU(atoi(instruccion_actual->parametros[1]), atoi(instruccion_actual->parametros[0]), ctx);
+		long dir_fisica = MMU(atoi(instruccion_actual->parametros[1]), sizeof(instruccion_actual->parametros[0]), ctx);
 		if (!dir_fisica)
 		{
 			return SEG_FAULT;
@@ -110,7 +110,7 @@ op_code execute(t_instruccion *instruccion_actual, t_ctx *ctx)
 	case MOV_OUT:
 		log_info(LOGGER_CPU, "PID: %d  -Ejecutando: %d - %s %s", ctx->PID, instruccion_actual->operacion, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
 		registro = obtenerRegistro(&ctx->registros, instruccion_actual->parametros[1]);
-		dir_fisica = MMU(atoi(instruccion_actual->parametros[0]), atoi(instruccion_actual->parametros[1]), ctx);
+		dir_fisica = MMU(atoi(instruccion_actual->parametros[0]), sizeof(instruccion_actual->parametros[1]), ctx);
 		if (!dir_fisica)
 		{
 			return SEG_FAULT;
@@ -234,6 +234,8 @@ long MMU(int direccion_logica, int bytes, t_ctx *ctx)
 	int num_segmento = floor_div(direccion_logica, TAM_MAX_SEGMENTO);
 	int offset = direccion_logica % TAM_MAX_SEGMENTO /*TAMANIO_MAX_SEG*/;
 
+	log_info(LOGGER_CPU, "OFFSET: %d, BYTEs: %d", offset, bytes);
+
 	if (offset + bytes > TAM_MAX_SEGMENTO /*TAMANIO_MAX_SEG*/)
 	{
 		// “PID: <PID> - Error SEG_FAULT- Segmento: <NUMERO SEGMENTO> - Offset: <OFFSET> - Tamaño: <TAMAÑO>”
@@ -241,7 +243,7 @@ long MMU(int direccion_logica, int bytes, t_ctx *ctx)
 		return -1;
 	}
 
-	t_segmento *segmento = list_get(ctx->tabla_segmentos, num_segmento);
+	t_segmento* segmento = list_get(ctx->tabla_segmentos, num_segmento);
 	long direccion_fisica = (long)(segmento->base + offset);
 	return direccion_fisica;
 }
