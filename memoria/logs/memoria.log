@@ -930,3 +930,7 @@
 [INFO] 22:39:17:908 MEMORIA/(131633:131633): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x557910b0cbb0
 [INFO] 22:39:17:908 MEMORIA/(131633:131633): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x557910b0cc30
 [INFO] 22:39:17:908 MEMORIA/(131633:131633): Esperando conexiones de modulos...
+[INFO] 23:10:14:074 MEMORIA/(135414:135414): Se creo el espacio contiguo de memoria
+[INFO] 23:10:14:074 MEMORIA/(135414:135414): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55812cb9b870
+[INFO] 23:10:14:074 MEMORIA/(135414:135414): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55812cb9b8f0
+[INFO] 23:10:14:074 MEMORIA/(135414:135414): Esperando conexiones de modulos...
