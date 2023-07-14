@@ -129,8 +129,8 @@ void f_close(t_pcb *proceso, char *nombre_archivo)
       t_pcb *proceso_a_desbloquear = list_remove(entrada_tabla->lista_de_procesos_bloqueados, 0); // Saca el proceso de la lista de bloqueados
       // cambiar pid, cede el control sobre el archivo a otro proceso y lo desbloquea
       entrada_tabla->PID = proceso_a_desbloquear->contexto.PID;
-      agregar_a_lista_ready(proceso_a_desbloquear);
       cambio_de_estado(proceso_a_desbloquear->contexto.PID, "Block", "Ready");
+      agregar_a_lista_ready(proceso_a_desbloquear);
 
       log_info(LOGGER_KERNEL, "PID: %d - Cerrar Archivo: %s", proceso->contexto.PID, nombre_archivo);
     }
@@ -255,8 +255,10 @@ void desbloquear_de_fs(char *nombre_archivo)
 
   t_pcb *proceso = buscar_bloqueados_fs(entrada_tabla->PID);
 
-  if (proceso != NULL)
+  if (proceso != NULL) {
+    cambio_de_estado(proceso->contexto.PID,"Block","Ready");
     agregar_a_lista_ready(proceso);
+  }
 }
 
 t_pcb *buscar_bloqueados_fs(int pid)

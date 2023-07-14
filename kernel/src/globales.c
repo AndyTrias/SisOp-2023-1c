@@ -149,7 +149,7 @@ t_tabla_global *get_de_tabla_global(int posicion)
 {
     sem_wait(&ENTRADA_EN_TABLA_GLOBAL);
     pthread_mutex_lock(&MUTEX_TABLA_ARCHIVOS);
-    t_tabla_global *elemento = list_get(BLOQUEADOS_FS, posicion);
+    t_tabla_global *elemento = list_get(TABLA_GLOBAL_DE_ARCHIVOS_ABIERTOS, posicion);
     pthread_mutex_unlock(&MUTEX_TABLA_ARCHIVOS);
     sem_post(&ENTRADA_EN_TABLA_GLOBAL);
 

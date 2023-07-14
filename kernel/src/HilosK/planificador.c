@@ -31,9 +31,6 @@ void* comunicacion_fs(){
    while(1){
     int cod_op = recibir_operacion(SOCKET_FILESYSTEM);
     
-    int size;
-    void* buffer = recibir_buffer(&size, SOCKET_FILESYSTEM);
-    int desplazamiento = 0;
 
     char* nombre_archivo = string_new();
 
@@ -49,8 +46,12 @@ void* comunicacion_fs(){
     case OP_TERMINADA: //esto es cuando termina el f truncate read y write, 
     //necesito el nombre del archivo que termino de hacer eso para desbloquear 
     //al proceso bloquedo por el archivo
+        int size;
+        void* buffer = recibir_buffer(&size, SOCKET_FILESYSTEM);
+        int desplazamiento = 0;
 
         int tamanio_string;
+        
         memcpy(&tamanio_string, buffer + desplazamiento, sizeof(int));
         desplazamiento += sizeof(int);
 

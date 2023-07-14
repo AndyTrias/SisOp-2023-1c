@@ -4,6 +4,7 @@
     #include <stdio.h>
     #include <stdlib.h>
     #include <commons/collections/list.h>
+    #include <manejo_fs.h>
     #include "exec.h"
     #include "ready.h"
     #include "blocked.h"

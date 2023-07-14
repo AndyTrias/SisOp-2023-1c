@@ -25,6 +25,7 @@ void crear_segmento(t_pcb *proceso){// enviar a memoria CREATE_SEGMENT con sus 2
         case COMPACTAR:
             log_info(LOGGER_KERNEL,"Compactación: <Se solicitó compactación / Esperando Fin de Operaciones de FS>");
             pthread_mutex_lock(&SOLICITUD_FS);
+            log_info(LOGGER_KERNEL,"Inicia la compactacion");
             
             t_paquete *paquete = crear_paquete(COMPACTAR);
             enviar_paquete(paquete, SOCKET_MEMORIA);

@@ -21,7 +21,6 @@ void enviar_a_cpu()
     free(paquete);
 
     log_info(LOGGER_KERNEL, "Se envia el proceso PID: <%d> al CPU", EJECUTANDO->contexto.PID);
-    
 
     if (strcmp(ALGORITMO_PLANIFICACION, "HRRN") == 0)
     {
@@ -67,25 +66,28 @@ void definir_accion(int cod_op, t_pcb *proceso)
         io(proceso);
         break;
     case F_OPEN:
-    //si esta en mi tabla lo bloqueo
-    //se le pregunta a fs si existe
-    //si existe se crea la entrada
-    //si no se le pide que lo cree y dsp se crea la entrada
-        if (f_open(proceso, proceso->contexto.motivos_desalojo->parametros[0])){ //1 bloqueado, 0 desbloqueado
-            
+        // si esta en mi tabla lo bloqueo
+        // se le pregunta a fs si existe
+        // si existe se crea la entrada
+        // si no se le pide que lo cree y dsp se crea la entrada
+        if (f_open(proceso, proceso->contexto.motivos_desalojo->parametros[0]))
+        { // 1 bloqueado, 0 desbloqueado
+
             reemplazar_exec_por_nuevo();
         }
+        break;
     case F_SEEK:
         f_seek(proceso, proceso->contexto.motivos_desalojo->parametros[0], proceso->contexto.motivos_desalojo->parametros[1]);
         break;
 
     case F_CLOSE:
         f_close(proceso, proceso->contexto.motivos_desalojo->parametros[0]);
+        break;
 
     case F_READ:
 
         f_read(proceso, proceso->contexto.motivos_desalojo->parametros[0]);
-    
+
         reemplazar_exec_por_nuevo();
         break;
 
@@ -95,7 +97,7 @@ void definir_accion(int cod_op, t_pcb *proceso)
         break;
 
     case F_TRUNCATE:
-        f_truncate(proceso,proceso->contexto.motivos_desalojo->parametros[0],proceso->contexto.motivos_desalojo->parametros[1]);
+        f_truncate(proceso, proceso->contexto.motivos_desalojo->parametros[0], proceso->contexto.motivos_desalojo->parametros[1]);
         reemplazar_exec_por_nuevo();
         break;
     case CREATE_SEGMENT:
@@ -120,7 +122,7 @@ void reemplazar_exec_por_nuevo()
     }
     t_pcb *proceso_entrante = ceder_proceso_a_exec(); // pide un proceso a ready segun el algoritmo
     reemplazar_proceso(proceso_entrante);
-    cambio_de_estado(proceso_entrante->contexto.PID,"Ready","Exec");
+    cambio_de_estado(proceso_entrante->contexto.PID, "Ready", "Exec");
 }
 
 void recibir_de_cpu(int conexion_cpu)
@@ -139,7 +141,7 @@ void recibir_de_cpu(int conexion_cpu)
 
     log_info(LOGGER_KERNEL, "Se recibe de CPU el proceso PID: <%d>", ctx->PID);
 
-    t_pcb* aux = EJECUTANDO;
+    t_pcb *aux = EJECUTANDO;
     definir_accion(cod_op, EJECUTANDO);
 
     liberar_parametros_desalojo(&aux->contexto);
