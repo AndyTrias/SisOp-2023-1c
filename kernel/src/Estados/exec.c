@@ -21,7 +21,7 @@ void enviar_a_cpu()
     free(paquete);
 
     log_info(LOGGER_KERNEL, "Se envia el proceso PID: <%d> al CPU", EJECUTANDO->contexto.PID);
-    cambio_de_estado(EJECUTANDO->contexto.PID,"Ready","Exec");
+    
 
     if (strcmp(ALGORITMO_PLANIFICACION, "HRRN") == 0)
     {
@@ -120,6 +120,7 @@ void reemplazar_exec_por_nuevo()
     }
     t_pcb *proceso_entrante = ceder_proceso_a_exec(); // pide un proceso a ready segun el algoritmo
     reemplazar_proceso(proceso_entrante);
+    cambio_de_estado(proceso_entrante->contexto.PID,"Ready","Exec");
 }
 
 void recibir_de_cpu(int conexion_cpu)
@@ -138,6 +139,7 @@ void recibir_de_cpu(int conexion_cpu)
 
     log_info(LOGGER_KERNEL, "Se recibe de CPU el proceso PID: <%d>", ctx->PID);
 
+    t_pcb* aux = EJECUTANDO;
     definir_accion(cod_op, EJECUTANDO);
 
     liberar_parametros_desalojo(&EJECUTANDO->contexto);

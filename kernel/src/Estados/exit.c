@@ -33,5 +33,5 @@ void terminar_proceso(t_pcb *proceso){
 
     pthread_mutex_unlock(&SOLICITUD_MEMORIA);
     sem_post(&GRADO_MULTIPROGRAMACION);
-    EJECUTANDO= ceder_proceso_a_exec();
+    reemplazar_exec_por_nuevo();
 }

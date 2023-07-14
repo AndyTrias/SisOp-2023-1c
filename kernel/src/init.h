@@ -10,4 +10,5 @@
     void inicializar_variables_globales(t_config*);
     void inicializar_semaforos();
     void inicializar_estados();
+    int* convertirAArrayInt(char**);
 #endif

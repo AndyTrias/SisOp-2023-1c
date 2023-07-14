@@ -885,3 +885,45 @@
 [INFO] 18:15:05:036 KERNEL/(37604:37611): Se recibe de CPU el proceso PID: <0>
 [INFO] 18:15:11:551 KERNEL/(37604:37611): PID: <0> - Signal: <RB> - Instancias: <0>
 [INFO] 18:15:12:603 KERNEL/(37604:37611): COSAS 
+[INFO] 18:18:35:456 KERNEL/(39282:39282): Se conecto al servidor 127.0.0.1:8001
+[INFO] 18:18:35:456 KERNEL/(39282:39282): Se conecto al servidor 127.0.0.1:8002
+[INFO] 18:18:35:456 KERNEL/(39282:39282): Se conecto al servidor 127.0.0.1:8003
+[INFO] 18:18:35:457 KERNEL/(39282:39286): Inicia el planificador de largo plazo
+[INFO] 18:18:35:457 KERNEL/(39282:39288): Inicia el planificador de corto plazo
+[INFO] 18:18:35:457 KERNEL/(39282:39282): Esperando conexiones de consolas...
+[INFO] 18:18:38:861 KERNEL/(39282:39282): Se conecto una consola
+[INFO] 18:18:38:862 KERNEL/(39282:39362): Se recibieron instrucciones de una consola
+[INFO] 18:18:38:862 KERNEL/(39282:39362): Se Crea el proceso <0> en NEW
+[INFO] 18:18:38:863 KERNEL/(39282:39286): PID: <0> - Estado Anterior: <New> - Estado Actual: <Ready>
+[INFO] 18:18:38:863 KERNEL/(39282:39286): Cola Ready <FIFO>: [0]
+[INFO] 18:18:38:863 KERNEL/(39282:39286): Se mando la señal al planificador de corto plazo
+[INFO] 18:18:38:864 KERNEL/(39282:39288): Empieza ciclo de instruccion
+[INFO] 18:18:38:864 KERNEL/(39282:39288): Se envia el proceso PID: <0> al CPU
+[INFO] 18:18:38:866 KERNEL/(39282:39288): Se recibe de CPU el proceso PID: <0>
+[INFO] 18:18:38:866 KERNEL/(39282:39288): PID: <0> - Wait: <RA> - Instancias: <0>
+[INFO] 18:18:41:866 KERNEL/(39282:39288): Se envia el proceso PID: <0> al CPU
+[INFO] 18:18:44:876 KERNEL/(39282:39288): Se recibe de CPU el proceso PID: <0>
+[INFO] 18:18:44:876 KERNEL/(39282:39288): PID: <0> - Crear Segmento - Id: <1> - Tamaño: <128>
+[INFO] 18:18:47:891 KERNEL/(39282:39288): Se envia el proceso PID: <0> al CPU
+[INFO] 18:18:47:892 KERNEL/(39282:39288): Se recibe de CPU el proceso PID: <0>
+[INFO] 18:21:26:196 KERNEL/(40540:40540): Se conecto al servidor 127.0.0.1:8001
+[INFO] 18:21:26:197 KERNEL/(40540:40540): Se conecto al servidor 127.0.0.1:8002
+[INFO] 18:21:26:197 KERNEL/(40540:40540): Se conecto al servidor 127.0.0.1:8003
+[INFO] 18:21:26:198 KERNEL/(40540:40544): Inicia el planificador de largo plazo
+[INFO] 18:21:26:198 KERNEL/(40540:40546): Inicia el planificador de corto plazo
+[INFO] 18:21:26:199 KERNEL/(40540:40540): Esperando conexiones de consolas...
+[INFO] 18:21:28:530 KERNEL/(40540:40540): Se conecto una consola
+[INFO] 18:21:28:531 KERNEL/(40540:40621): Se recibieron instrucciones de una consola
+[INFO] 18:21:28:532 KERNEL/(40540:40621): Se Crea el proceso <0> en NEW
+[INFO] 18:21:28:532 KERNEL/(40540:40544): PID: <0> - Estado Anterior: <New> - Estado Actual: <Ready>
+[INFO] 18:21:28:532 KERNEL/(40540:40544): Cola Ready <FIFO>: [0]
+[INFO] 18:21:28:534 KERNEL/(40540:40544): Se mando la señal al planificador de corto plazo
+[INFO] 18:21:28:534 KERNEL/(40540:40546): Empieza ciclo de instruccion
+[INFO] 18:21:28:534 KERNEL/(40540:40546): Se envia el proceso PID: <0> al CPU
+[INFO] 18:21:28:535 KERNEL/(40540:40546): Se recibe de CPU el proceso PID: <0>
+[INFO] 18:21:28:536 KERNEL/(40540:40546): PID: <0> - Wait: <RA> - Instancias: <-3>
+[INFO] 18:21:31:537 KERNEL/(40540:40546): Se envia el proceso PID: <0> al CPU
+[INFO] 18:21:34:540 KERNEL/(40540:40546): Se recibe de CPU el proceso PID: <0>
+[INFO] 18:21:34:541 KERNEL/(40540:40546): PID: <0> - Crear Segmento - Id: <1> - Tamaño: <128>
+[INFO] 18:21:37:545 KERNEL/(40540:40546): Se envia el proceso PID: <0> al CPU
+[INFO] 18:21:37:546 KERNEL/(40540:40546): Se recibe de CPU el proceso PID: <0>

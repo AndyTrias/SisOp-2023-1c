@@ -42,7 +42,7 @@ extern int ESTIMACION_INICIAL;
 extern float HRRN_ALFA;
 extern int GRADO_MAX_MULTIPROGRAMACION;
 extern char** RECURSOS;
-extern char** INSTANCIAS_RECURSOS;
+extern t_list* INSTANCIAS_RECURSOS;
 
 //Semaforos
 extern sem_t PROCESO_EN_NEW;

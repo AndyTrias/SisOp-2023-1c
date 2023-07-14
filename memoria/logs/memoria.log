@@ -229,3 +229,25 @@
 [INFO] 18:14:55:975 MEMORIA/(37117:37610): Creación de Proceso PID: <0>
 [INFO] 18:15:02:033 MEMORIA/(37117:37610): PID: <0> - Crear Segmento: <1> - Base: <0x555714d3f8f0> - TAMAÑO: <128>
 [INFO] 18:15:34:929 MEMORIA/(37117:37610): Se desconecto un modulo
+[INFO] 18:17:59:490 MEMORIA/(38606:38606): Se creo el espacio contiguo de memoria
+[INFO] 18:17:59:490 MEMORIA/(38606:38606): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x556b97af1870
+[INFO] 18:17:59:490 MEMORIA/(38606:38606): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x556b97af18f0
+[INFO] 18:17:59:490 MEMORIA/(38606:38606): Esperando conexiones de modulos...
+[INFO] 18:18:02:661 MEMORIA/(38606:38606): Se conecto el file system
+[INFO] 18:18:05:047 MEMORIA/(38606:38606): Se conecto el cpu
+[INFO] 18:18:35:456 MEMORIA/(38606:38606): Se conecto el kernel
+[INFO] 18:18:38:863 MEMORIA/(38606:39287): Creación de Proceso PID: <0>
+[INFO] 18:18:44:876 MEMORIA/(38606:39287): PID: <0> - Crear Segmento: <1> - Base: <0x556b97af18f0> - TAMAÑO: <128>
+[INFO] 18:20:57:424 MEMORIA/(39767:39767): Se creo el espacio contiguo de memoria
+[INFO] 18:20:57:424 MEMORIA/(39767:39767): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x562b9a1d4870
+[INFO] 18:20:57:424 MEMORIA/(39767:39767): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x562b9a1d48f0
+[INFO] 18:20:57:424 MEMORIA/(39767:39767): Esperando conexiones de modulos...
+[INFO] 18:21:00:482 MEMORIA/(39767:39767): Se conecto el file system
+[INFO] 18:21:02:964 MEMORIA/(39767:39767): Se conecto el cpu
+[INFO] 18:21:26:197 MEMORIA/(39767:39767): Se conecto el kernel
+[INFO] 18:21:28:533 MEMORIA/(39767:40545): Creación de Proceso PID: <0>
+[INFO] 18:21:34:541 MEMORIA/(39767:40545): PID: <0> - Crear Segmento: <1> - Base: <0x562b9a1d48f0> - TAMAÑO: <128>
+[INFO] 18:25:37:556 MEMORIA/(41568:41568): Se creo el espacio contiguo de memoria
+[INFO] 18:25:37:556 MEMORIA/(41568:41568): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55d100836870
+[INFO] 18:25:37:557 MEMORIA/(41568:41568): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55d1008368f0
+[INFO] 18:25:37:557 MEMORIA/(41568:41568): Esperando conexiones de modulos...

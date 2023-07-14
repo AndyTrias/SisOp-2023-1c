@@ -122,3 +122,9 @@
 [INFO] 18:14:55:973 CONSOLA/(37667:37667): Se conecto al servidor 127.0.0.1:8000
 [INFO] 18:14:55:974 CONSOLA/(37667:37667): Paquete enviado
 [ERROR] 18:15:34:930 CONSOLA/(37667:37667): Operacion desconocida
+[INFO] 18:18:38:861 CONSOLA/(39361:39361): Se conecto al servidor 127.0.0.1:8000
+[INFO] 18:18:38:861 CONSOLA/(39361:39361): Paquete enviado
+[ERROR] 18:21:04:480 CONSOLA/(39361:39361): Operacion desconocida
+[INFO] 18:21:28:530 CONSOLA/(40620:40620): Se conecto al servidor 127.0.0.1:8000
+[INFO] 18:21:28:530 CONSOLA/(40620:40620): Paquete enviado
+[ERROR] 18:27:27:451 CONSOLA/(40620:40620): Operacion desconocida
