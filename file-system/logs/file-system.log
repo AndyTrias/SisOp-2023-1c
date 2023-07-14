@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 [INFO] 16:51:09:506 FILE SYSTEM/(7968:7968): Se conecto al servidor 127.0.0.1:8002
 [INFO] 16:51:09:506 FILE SYSTEM/(7968:7968): Se levanto el superbloque
 [INFO] 16:51:09:507 FILE SYSTEM/(7968:7968): Archivo encontrado: ./fcb/archivoTestFcb
@@ -351,5 +352,7 @@
 [INFO] 22:44:51:414 FILE SYSTEM/(3495:3495): Archivo encontrado: ./fcb/archivoTestFcb
 
 [INFO] 22:44:51:414 FILE SYSTEM/(3495:3495): Esperando kernel....
+=======
+>>>>>>> 5923f20588aa0141aef630fe5893f2072d9f0826
 =======
 >>>>>>> 5923f20588aa0141aef630fe5893f2072d9f0826
