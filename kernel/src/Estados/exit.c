@@ -14,7 +14,6 @@ void terminar_proceso(t_pcb *proceso){
         {
             aux = list_get(proceso->recursos_en_uso, i);
             signal(proceso, aux);
-            free(aux);
         }
     }
     // destruir proceso

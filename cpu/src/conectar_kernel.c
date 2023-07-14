@@ -17,7 +17,6 @@ void enviado_de_kernel(int *socket_kernel)
         switch (cod_op)
         {
         case CONTEXTO:
-            log_info(LOGGER_CPU, "Se recibio un contexto del kernel");
             t_ctx* ctx = recibir_paquete_kernel(*socket_kernel);
             ciclo_de_instruccion(ctx); // Esto lo uso para ir probando ahora.
             break;

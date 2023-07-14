@@ -11,8 +11,8 @@ void wait(t_pcb *proceso, char *nombre_recurso)
         if (INSTANCIAS_RECURSOS[recurso_id] == 0)
         { // no hay recursos disponibles para darle
             log_info(LOGGER_KERNEL, "PID: <%d> - Bloqueado por: < %s >", proceso->contexto.PID, RECURSOS[recurso_id]);
-            reemplazar_exec_por_nuevo();
             cambio_de_estado(proceso->contexto.PID, "Exec", "Block");
+            reemplazar_exec_por_nuevo();
             list_add(list_get(LISTAS_BLOCK, recurso_id), proceso);
         }
         else
@@ -20,14 +20,14 @@ void wait(t_pcb *proceso, char *nombre_recurso)
             // sem_wait(SEMAFOROS_RECURSOS[recurso_id]);
             list_add(proceso->recursos_en_uso, RECURSOS[recurso_id]);
             INSTANCIAS_RECURSOS[recurso_id]--;
-            log_info(LOGGER_KERNEL, "PID: <%d> - Wait: <%s> - Instancias: <%d>", proceso->contexto.PID, RECURSOS[recurso_id],INSTANCIAS_RECURSOS[recurso_id]);
+            log_info(LOGGER_KERNEL, "PID: <%d> - Wait: <%s> - Instancias: <%d>", proceso->contexto.PID, RECURSOS[recurso_id], INSTANCIAS_RECURSOS[recurso_id]);
         }
     }
     else
     {
         log_info(LOGGER_KERNEL, "Se realiza Wait de recurso inexistente: < %s > ", proceso->contexto.motivos_desalojo->parametros[0]);
-        cambio_de_estado(proceso->contexto.PID, "Exec", "Exit");
         log_info(LOGGER_KERNEL, "Finaliza el proceso PID: <%d> - Motivo: < INVALID_RESOURCE >", proceso->contexto.PID);
+        cambio_de_estado(proceso->contexto.PID, "Exec", "Exit");
         terminar_proceso(proceso);
     }
 }
@@ -38,21 +38,22 @@ void signal(t_pcb *proceso, char *nombre_recurso)
     if (recurso_id != -1)
     {
         t_list *lista_del_recurso = list_get(LISTAS_BLOCK, recurso_id);
+        INSTANCIAS_RECURSOS[recurso_id]++;
+        log_info(LOGGER_KERNEL, "PID: <%d> - Signal: <%s> - Instancias: <%d>", proceso->contexto.PID, RECURSOS[recurso_id], INSTANCIAS_RECURSOS[recurso_id]);
+
         if (list_size(lista_del_recurso) > 0)
         {
-            //desbloquear proceso
+            // desbloquear proceso
+            list_remove_element(proceso->recursos_en_uso, RECURSOS[recurso_id]);
             t_pcb *proceso_a_desbloquear = list_remove(list_get(LISTAS_BLOCK, recurso_id), 0);
-            list_add(proceso_a_desbloquear->recursos_en_uso, nombre_recurso);
+            list_add(proceso_a_desbloquear->recursos_en_uso, RECURSOS[recurso_id]);
             cambio_de_estado(proceso_a_desbloquear->contexto.PID, "Block", "Ready");
             agregar_a_lista_ready(proceso_a_desbloquear);
-        } else {
-            // sem_signal(SEMAFOROS_RECURSOS[recurso_id]);
-            list_remove_element(proceso->recursos_en_uso, nombre_recurso);
-            INSTANCIAS_RECURSOS[recurso_id]++;
         }
-        
-        
-        log_info(LOGGER_KERNEL, "PID: <%d> - Signal: <%s> - Instancias: <%d>", proceso->contexto.PID, RECURSOS[recurso_id], INSTANCIAS_RECURSOS[recurso_id]);
+        else
+        {
+            list_remove_element(proceso->recursos_en_uso, RECURSOS[recurso_id]);
+        }
     }
     else
     {
@@ -68,10 +69,10 @@ void *instruccion_IO(t_pcb *proceso)
     t_instruccion *instruccion_utilizable = list_get(proceso->contexto.instrucciones, proceso->contexto.program_counter - 1);
     int tiempo = atoi(instruccion_utilizable->parametros[0]);
     log_info(LOGGER_KERNEL, "PID: <%d> - Ejecuta IO: %d", proceso->contexto.PID, tiempo);
-    cambio_de_estado(proceso->contexto.PID,"Exec","Block");
+    cambio_de_estado(proceso->contexto.PID, "Exec", "Block");
     usleep(tiempo * 1000000);
-    log_info(LOGGER_KERNEL,"PID: <%d> -Finaliza IO", proceso->contexto.PID);
-    cambio_de_estado(proceso->contexto.PID,"Block","Ready");
+    log_info(LOGGER_KERNEL, "PID: <%d> -Finaliza IO", proceso->contexto.PID);
+    cambio_de_estado(proceso->contexto.PID, "Block", "Ready");
     agregar_a_lista_ready(proceso);
     return NULL;
 }

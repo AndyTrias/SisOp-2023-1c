@@ -12,7 +12,6 @@ bool primera_instruccion = 0;
 t_instruccion *fetch(t_ctx *ctx)
 {
 	t_instruccion *instruccion_nueva = list_get(ctx->instrucciones, ctx->program_counter); // Busca la instrucción y la guarda.
-	log_info(LOGGER_CPU, "Program Counter: %d", ctx->program_counter);
 	switch (instruccion_nueva->operacion)
 	{
 	case EXIT:
@@ -255,13 +254,11 @@ int floor_div(int a, int b)
 
 void ciclo_de_instruccion(t_ctx *ctx)
 {
-	log_info(LOGGER_CPU, "Comenzando ciclo con nuevo CTX...");
 	t_instruccion *instruccion_actual;
 
 	while (ctx != NULL && ctx->program_counter <= ctx->cant_instrucciones)
 	{
 		instruccion_actual = fetch(ctx);
-		log_info(LOGGER_CPU, "Instruccion nº%d: %d", ctx->program_counter, instruccion_actual->operacion);
 		decode(instruccion_actual);
 		int cod_op = execute(instruccion_actual, ctx);
 
