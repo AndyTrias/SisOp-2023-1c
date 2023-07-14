@@ -12,7 +12,7 @@ void reemplazar_ctx(t_ctx *nuevo_ctx)
 
 void enviar_a_cpu()
 {
-
+    cambio_de_estado(&EJECUTANDO->contexto.PID,"Ready","Exec");
     t_paquete *paquete = crear_paquete(CONTEXTO);
 
     serializar_contexto(&EJECUTANDO->contexto, paquete);

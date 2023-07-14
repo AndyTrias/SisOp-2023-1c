@@ -3,6 +3,7 @@
 void admitir_proceso()
 {
     t_pcb * proceso_en_new = sacar_de_lista_new(0);
+    cambio_de_estado(proceso_en_new->contexto.PID,"New","Ready");
     agregar_a_lista_ready(proceso_en_new);
     
     pthread_mutex_lock(&SOLICITUD_MEMORIA);

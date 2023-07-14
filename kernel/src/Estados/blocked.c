@@ -68,7 +68,9 @@ void *instruccion_IO(t_pcb *proceso)
     t_instruccion *instruccion_utilizable = list_get(proceso->contexto.instrucciones, proceso->contexto.program_counter - 1);
     int tiempo = atoi(instruccion_utilizable->parametros[0]);
     log_info(LOGGER_KERNEL, "PID: <%d> - Ejecuta IO: %d", proceso->contexto.PID, tiempo);
+    cambio_de_estado(proceso->contexto.PID,"Exec","Block");
     usleep(tiempo * 1000000);
+    cambio_de_estado(proceso->contexto.PID,"Block","Ready");
     agregar_a_lista_ready(proceso);
     return NULL;
 }
