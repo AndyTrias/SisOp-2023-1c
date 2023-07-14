@@ -10,9 +10,9 @@ void wait(t_pcb *proceso, char *nombre_recurso)
     {
         if (atoi(INSTANCIAS_RECURSOS[recurso_id]) == 0)
         { // no hay recursos disponibles para darle
-            reemplazar_exec_por_nuevo();
-            cambio_de_estado(proceso->contexto.PID, "Exec", "Block");
             log_info(LOGGER_KERNEL, "PID: <%d> - Bloqueado por: < %s >", proceso->contexto.PID, RECURSOS[recurso_id]);
+            cambio_de_estado(proceso->contexto.PID, "Exec", "Block");
+            reemplazar_exec_por_nuevo();
             list_add(list_get(LISTAS_BLOCK, recurso_id), proceso);
         }
         else
@@ -70,6 +70,7 @@ void *instruccion_IO(t_pcb *proceso)
     log_info(LOGGER_KERNEL, "PID: <%d> - Ejecuta IO: %d", proceso->contexto.PID, tiempo);
     cambio_de_estado(proceso->contexto.PID,"Exec","Block");
     usleep(tiempo * 1000000);
+    log_info(LOGGER_KERNEL,"PID: <%d> -Finaliza IO", proceso->contexto.PID);
     cambio_de_estado(proceso->contexto.PID,"Block","Ready");
     agregar_a_lista_ready(proceso);
     return NULL;
