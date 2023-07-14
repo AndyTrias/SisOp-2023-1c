@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
     }
 
     t_config *config = iniciar_config(argv[1]);
-    t_config* configIp = iniciar_config("/home/utnso/Desktop/tp-2023-1c-Los-pibardos-de-operativos/utils/src/utils/config/ips.config");
+    t_config* configIp = iniciar_config("/so-deploy/tp-2023-1c-Los-pibardos-de-operativos/utils/src/utils/config/ips.config");
 
     inicializar_conexiones(&SOCKET_MEMORIA, config);
     
