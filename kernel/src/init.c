@@ -44,6 +44,8 @@ void inicializar_estados(){
     EJECUTANDO = NULL;
     LISTAS_BLOCK = list_create();
     TIEMPO_CORRIENDO = temporal_create();
+    TABLA_GLOBAL_DE_ARCHIVOS_ABIERTOS= list_create();
+    BLOQUEADOS_FS= list_create();
     
     // Creo las listas de blocked
     int i;

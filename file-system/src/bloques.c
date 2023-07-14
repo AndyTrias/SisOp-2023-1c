@@ -149,5 +149,5 @@ void retrasar_bloque(char *nombre_archivo, int bloque_archivo, int bloque_fs)
     {
         log_info(LOGGER_FILE_SYSTEM, "Retardo - Archivo: %s - Bloque Archivo: %d - Bloque File System %d", nombre_archivo, bloque_archivo, bloque_fs);
     }
-    // sleep(RETARDO / 1000);
+    sleep(RETARDO / 1000);
 }
