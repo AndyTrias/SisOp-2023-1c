@@ -12,7 +12,6 @@ void reemplazar_ctx(t_ctx *nuevo_ctx)
 
 void enviar_a_cpu()
 {
-    cambio_de_estado(&EJECUTANDO->contexto.PID,"Ready","Exec");
     t_paquete *paquete = crear_paquete(CONTEXTO);
 
     serializar_contexto(&EJECUTANDO->contexto, paquete);
@@ -22,6 +21,7 @@ void enviar_a_cpu()
     free(paquete);
 
     log_info(LOGGER_KERNEL, "Se envia el proceso PID: <%d> al CPU", EJECUTANDO->contexto.PID);
+    cambio_de_estado(EJECUTANDO->contexto.PID,"Ready","Exec");
 
     if (strcmp(ALGORITMO_PLANIFICACION, "HRRN") == 0)
     {
@@ -142,8 +142,6 @@ void recibir_de_cpu(int conexion_cpu)
 
     liberar_parametros_desalojo(&EJECUTANDO->contexto);
     
-    // AAAAAAAAAAAAAA
-    sleep(1);
     enviar_a_cpu();
 }
 void estimado_prox_rafaga()

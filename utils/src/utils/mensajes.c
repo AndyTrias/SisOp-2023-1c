@@ -143,7 +143,7 @@ void serializar_contexto(t_ctx *ctx, t_paquete *paquete)
 	
 	// serializo moivos de desalojo
 	serializar_motivos_desalojo(ctx->motivos_desalojo, paquete);
-
+	sleep(0.001);
 	serializar_tabla_segmentos(ctx->tabla_segmentos, paquete);
 	
 }
