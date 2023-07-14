@@ -8,7 +8,7 @@ void wait(t_pcb *proceso, char *nombre_recurso)
     int recurso_id = get_id_recurso(nombre_recurso);
     if (recurso_id != -1)
     {
-        if (atoi(INSTANCIAS_RECURSOS[recurso_id]) == 0)
+        if (INSTANCIAS_RECURSOS[recurso_id] == 0)
         { // no hay recursos disponibles para darle
             log_info(LOGGER_KERNEL, "PID: <%d> - Bloqueado por: < %s >", proceso->contexto.PID, RECURSOS[recurso_id]);
             cambio_de_estado(proceso->contexto.PID, "Exec", "Block");
@@ -20,7 +20,7 @@ void wait(t_pcb *proceso, char *nombre_recurso)
             // sem_wait(SEMAFOROS_RECURSOS[recurso_id]);
             list_add(proceso->recursos_en_uso, nombre_recurso);
             INSTANCIAS_RECURSOS[recurso_id]--;
-            log_info(LOGGER_KERNEL, "PID: <%d> - Wait: <%s> - Instancias: <%d>", proceso->contexto.PID, RECURSOS[recurso_id], atoi(INSTANCIAS_RECURSOS[recurso_id]));
+            log_info(LOGGER_KERNEL, "PID: <%d> - Wait: <%s> - Instancias: <%d>", proceso->contexto.PID, RECURSOS[recurso_id],INSTANCIAS_RECURSOS[recurso_id]);
         }
     }
     else
@@ -52,7 +52,7 @@ void signal(t_pcb *proceso, char *nombre_recurso)
             list_remove_element(proceso->recursos_en_uso, nombre_recurso);
             INSTANCIAS_RECURSOS[recurso_id]++;
         }
-        log_info(LOGGER_KERNEL, "PID: <%d> - Signal: <%s> - Instancias: <%d>", proceso->contexto.PID, RECURSOS[recurso_id], atoi(INSTANCIAS_RECURSOS[recurso_id]));
+        log_info(LOGGER_KERNEL, "PID: <%d> - Signal: <%s> - Instancias: <%d>", proceso->contexto.PID, RECURSOS[recurso_id], INSTANCIAS_RECURSOS[recurso_id]);
     }
     else
     {

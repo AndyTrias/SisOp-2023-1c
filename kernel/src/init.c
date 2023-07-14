@@ -11,7 +11,7 @@ void inicializar_variables_globales(t_config* config) {
     HRRN_ALFA = config_get_double_value(config, "HRRN_ALFA");
     GRADO_MAX_MULTIPROGRAMACION = config_get_int_value(config, "GRADO_MAX_MULTIPROGRAMACION");
     RECURSOS = config_get_array_value(config, "RECURSOS");
-    INSTANCIAS_RECURSOS = config_get_array_value(config, "INSTANCIAS_RECURSOS");
+    INSTANCIAS_RECURSOS = convertirAArrayInt(config_get_array_value(config, "INSTANCIAS_RECURSOS"));
     
     inicializar_estados();
 
@@ -74,4 +74,14 @@ void inicializar_conexiones(t_config* config) {
     *identificador = 1;
     send(SOCKET_MEMORIA, identificador, sizeof(int), 0);
     free(identificador);
+}
+int* convertirAArrayInt(char** strArray) {
+    int size = string_array_size(strArray);
+    int* intArray = (int*)malloc(size * sizeof(int));
+
+    for (int i = 0; i < size; i++) {
+        intArray[i] = atoi(strArray[i]);
+    }
+
+    return intArray;
 }

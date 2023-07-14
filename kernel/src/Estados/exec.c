@@ -139,9 +139,10 @@ void recibir_de_cpu(int conexion_cpu)
 
     log_info(LOGGER_KERNEL, "Se recibe de CPU el proceso PID: <%d>", ctx->PID);
 
+    t_pcb* aux = EJECUTANDO;
     definir_accion(cod_op, EJECUTANDO);
 
-    liberar_parametros_desalojo(&EJECUTANDO->contexto);
+    liberar_parametros_desalojo(&aux->contexto);
     
     enviar_a_cpu();
 }
