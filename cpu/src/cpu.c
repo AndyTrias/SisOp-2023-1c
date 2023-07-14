@@ -9,15 +9,14 @@ int main(int argc, char *argv[]) {
 
 
     t_config* config = iniciar_config(argv[1]);
-    t_config* configIp = iniciar_config("/so-deploy/tp-2023-1c-Los-pibardos-de-operativos/utils/src/utils/config/ips.config");
+    char* IP = "127.0.0.1";
     inicializar_variables_globales(config);
     
     int conexion_memoria;
     inicializar_conexiones(&conexion_memoria, config, LOGGER_CPU);
 
     char *puerto_escucha = config_get_string_value(config, "PUERTO_ESCUCHA");
-    char* ip = config_get_string_value(configIp, "IP_CPU");
-    int socket_servidor = crear_servidor(ip, puerto_escucha);
+    int socket_servidor = crear_servidor(IP, puerto_escucha);
 
     
     conectar_kernel(socket_servidor);
