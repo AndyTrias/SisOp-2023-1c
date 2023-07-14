@@ -1,16 +1,20 @@
 #include "exit.h"
 
-void mostrar_recurso(char* a){
-    printf("%s", a);
+void mostrar_recurso(void* a){
+    printf("%s", (char*)  a);
 }
 
 void terminar_proceso(t_pcb *proceso){
     // Revisar si tiene un recurso asignado y eliminarlo
+    // list_iterate(proceso->recursos_en_uso, mostrar_recurso);
     if (!list_is_empty(proceso->recursos_en_uso)){
         int i;
+        char *aux;
         for (i = 0; i < list_size(proceso->recursos_en_uso); i++)
         {
-            signal(proceso, list_get(proceso->recursos_en_uso, i ));
+            aux = list_get(proceso->recursos_en_uso, i);
+            signal(proceso, aux);
+            free(aux);
         }
     }
     // destruir proceso

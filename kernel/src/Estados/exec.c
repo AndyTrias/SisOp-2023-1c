@@ -142,7 +142,7 @@ void recibir_de_cpu(int conexion_cpu)
     t_pcb* aux = EJECUTANDO;
     definir_accion(cod_op, EJECUTANDO);
 
-    liberar_parametros_desalojo(&EJECUTANDO->contexto);
+    liberar_parametros_desalojo(&aux->contexto);
     sleep(0.001);
     enviar_a_cpu();
 }

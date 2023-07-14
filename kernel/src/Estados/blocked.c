@@ -18,7 +18,7 @@ void wait(t_pcb *proceso, char *nombre_recurso)
         else
         {
             // sem_wait(SEMAFOROS_RECURSOS[recurso_id]);
-            list_add(proceso->recursos_en_uso, nombre_recurso);
+            list_add(proceso->recursos_en_uso, RECURSOS[recurso_id]);
             INSTANCIAS_RECURSOS[recurso_id]--;
             log_info(LOGGER_KERNEL, "PID: <%d> - Wait: <%s> - Instancias: <%d>", proceso->contexto.PID, RECURSOS[recurso_id],INSTANCIAS_RECURSOS[recurso_id]);
         }
