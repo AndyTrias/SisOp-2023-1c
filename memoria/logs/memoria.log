@@ -639,3 +639,14 @@
 [INFO] 20:21:32:930 MEMORIA/(61764:61764): Se conecto el cpu
 [INFO] 20:21:36:679 MEMORIA/(61764:61764): Se conecto el kernel
 [INFO] 20:22:12:915 MEMORIA/(61764:61877): Se desconecto un modulo
+[INFO] 20:24:07:467 MEMORIA/(62636:62636): Se creo el espacio contiguo de memoria
+[INFO] 20:24:07:467 MEMORIA/(62636:62636): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55b6f2187870
+[INFO] 20:24:07:467 MEMORIA/(62636:62636): Se creo el hueco libre inicial de tamanio 3968 en la direccion 0x55b6f21878f0
+[INFO] 20:24:07:468 MEMORIA/(62636:62636): Esperando conexiones de modulos...
+[INFO] 20:24:16:739 MEMORIA/(62636:62636): Se conecto el cpu
+[INFO] 20:24:29:790 MEMORIA/(62636:62636): Se conecto el kernel
+[INFO] 20:24:55:310 MEMORIA/(62636:63062): Creación de Proceso PID: <0>
+[INFO] 20:25:00:818 MEMORIA/(62636:63062): Creación de Proceso PID: <1>
+[INFO] 20:25:05:675 MEMORIA/(62636:63062): Creación de Proceso PID: <2>
+[INFO] 20:27:38:382 MEMORIA/(62636:63062): Se desconecto un modulo
+[INFO] 20:27:38:474 MEMORIA/(62636:62809): Se desconecto un modulo

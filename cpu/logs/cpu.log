@@ -124,3 +124,52 @@
 [INFO] 20:21:32:929 CPU/(61876:61876): Se conecto al servidor 127.0.0.1:8002
 [INFO] 20:21:32:930 CPU/(61876:61876): Esperando kernel....
 [INFO] 20:21:36:677 CPU/(61876:61876): Se conecto el kernel
+[INFO] 20:24:16:738 CPU/(62808:62808): Se conecto al servidor 127.0.0.1:8002
+[INFO] 20:24:16:739 CPU/(62808:62808): Esperando kernel....
+[INFO] 20:24:29:785 CPU/(62808:62808): Se conecto el kernel
+[INFO] 20:24:55:312 CPU/(62808:62808): Se recibio un contexto del kernel
+[INFO] 20:24:55:312 CPU/(62808:62808): Comenzando ciclo con nuevo CTX...
+[INFO] 20:24:55:312 CPU/(62808:62808): Program Counter: 0
+[INFO] 20:24:55:312 CPU/(62808:62808): Instruccion nº1: 9
+[INFO] 20:24:55:312 CPU/(62808:62808): PID : 0 - <WAIT> - <DISCO> 
+[INFO] 20:24:55:315 CPU/(62808:62808): Se recibio un contexto del kernel
+[INFO] 20:24:55:315 CPU/(62808:62808): Comenzando ciclo con nuevo CTX...
+[INFO] 20:24:55:315 CPU/(62808:62808): Program Counter: 1
+[INFO] 20:24:55:315 CPU/(62808:62808): Instruccion nº2: 7
+[INFO] 20:24:55:315 CPU/(62808:62808): PID : 0 - <IO> - <10>
+[INFO] 20:25:00:831 CPU/(62808:62808): Se recibio un contexto del kernel
+[INFO] 20:25:00:832 CPU/(62808:62808): Comenzando ciclo con nuevo CTX...
+[INFO] 20:25:00:832 CPU/(62808:62808): Program Counter: 0
+[INFO] 20:25:00:832 CPU/(62808:62808): Instruccion nº1: 9
+[INFO] 20:25:00:832 CPU/(62808:62808): PID : 1 - <WAIT> - <IMPRESORA> 
+[INFO] 20:25:00:842 CPU/(62808:62808): Se recibio un contexto del kernel
+[INFO] 20:25:00:842 CPU/(62808:62808): Comenzando ciclo con nuevo CTX...
+[INFO] 20:25:00:842 CPU/(62808:62808): Program Counter: 1
+[INFO] 20:25:00:842 CPU/(62808:62808): Instruccion nº2: 7
+[INFO] 20:25:00:842 CPU/(62808:62808): PID : 1 - <IO> - <10>
+[INFO] 20:25:05:320 CPU/(62808:62808): Se recibio un contexto del kernel
+[INFO] 20:25:05:320 CPU/(62808:62808): Comenzando ciclo con nuevo CTX...
+[INFO] 20:25:05:320 CPU/(62808:62808): Program Counter: 2
+[INFO] 20:25:05:320 CPU/(62808:62808): Instruccion nº3: 9
+[INFO] 20:25:05:320 CPU/(62808:62808): PID : 0 - <WAIT> - <IMPRESORA> 
+[INFO] 20:25:05:679 CPU/(62808:62808): Se recibio un contexto del kernel
+[INFO] 20:25:05:679 CPU/(62808:62808): Comenzando ciclo con nuevo CTX...
+[INFO] 20:25:05:679 CPU/(62808:62808): Program Counter: 0
+[INFO] 20:25:05:679 CPU/(62808:62808): Instruccion nº1: 9
+[INFO] 20:25:05:679 CPU/(62808:62808): PID : 2 - <WAIT> - <SCANNER> 
+[INFO] 20:25:05:682 CPU/(62808:62808): Se recibio un contexto del kernel
+[INFO] 20:25:05:682 CPU/(62808:62808): Comenzando ciclo con nuevo CTX...
+[INFO] 20:25:05:682 CPU/(62808:62808): Program Counter: 1
+[INFO] 20:25:05:682 CPU/(62808:62808): Instruccion nº2: 7
+[INFO] 20:25:05:682 CPU/(62808:62808): PID : 2 - <IO> - <10>
+[INFO] 20:25:10:850 CPU/(62808:62808): Se recibio un contexto del kernel
+[INFO] 20:25:10:850 CPU/(62808:62808): Comenzando ciclo con nuevo CTX...
+[INFO] 20:25:10:851 CPU/(62808:62808): Program Counter: 2
+[INFO] 20:25:10:851 CPU/(62808:62808): Instruccion nº3: 9
+[INFO] 20:25:10:851 CPU/(62808:62808): PID : 1 - <WAIT> - <SCANNER> 
+[INFO] 20:25:15:686 CPU/(62808:62808): Se recibio un contexto del kernel
+[INFO] 20:25:15:687 CPU/(62808:62808): Comenzando ciclo con nuevo CTX...
+[INFO] 20:25:15:687 CPU/(62808:62808): Program Counter: 2
+[INFO] 20:25:15:687 CPU/(62808:62808): Instruccion nº3: 9
+[INFO] 20:25:15:687 CPU/(62808:62808): PID : 2 - <WAIT> - <DISCO> 
+[INFO] 20:27:38:383 CPU/(62808:62808): Se desconecto el kernel
