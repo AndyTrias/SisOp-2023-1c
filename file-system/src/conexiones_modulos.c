@@ -76,6 +76,7 @@ void escribir_valor_en_memoria(char *direccion_fisica, char *contenido)
 
 
 void enviar_paquete_op_terminada(char* nombre_archivo){
+    log_info(LOGGER_FILE_SYSTEM, "Operacion Terminada");
     t_paquete* paquete = crear_paquete(OP_TERMINADA);
     int len = strlen(nombre_archivo) + 1;
     agregar_a_paquete_dato_serializado(paquete, &len, sizeof(int));

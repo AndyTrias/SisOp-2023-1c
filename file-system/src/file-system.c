@@ -20,31 +20,7 @@ int main(int argc, char *argv[])
     // Caragamos todos los fcb en la memoria
     levantar_diccionario_fcb(config);
 
-
-    // Test de solicitudes sin conexion
-    // t_parametros_variables *parametros_instruccion = malloc(sizeof(t_parametros_variables));
-    // parametros_instruccion->cantidad_parametros = 0;
-
-    // agregar_parametro_variable(parametros_instruccion, "archivoTestFcb");
-    // atender_solicitudes(F_CREATES, parametros_instruccion);
-
-
-    // agregar_parametro_variable(parametros_instruccion, "152");
-    // atender_solicitudes(F_TRUNCATE, parametros_instruccion);
-    // liberar_parametros_variables(parametros_instruccion);
-    
-    // agregar_parametro_variable(parametros_instruccion, "archivoTestFcb");
-    // agregar_parametro_variable(parametros_instruccion, "0");
-    // agregar_parametro_variable(parametros_instruccion, "88"); // Tamanio
-    // agregar_parametro_variable(parametros_instruccion, "50"); // Puntero
-    // atender_solicitudes(F_READ, parametros_instruccion);
-
-
-    // liberar_parametros_variables(parametros_instruccion);    
-
-
-    
-
+  
     char *puerto_escucha = config_get_string_value(config, "PUERTO_ESCUCHA");
     int socket_servidor = crear_servidor(IP, puerto_escucha);
 

@@ -42,5 +42,7 @@ t_ctx* recibir_paquete_kernel(int socket_kernel)
 
     t_ctx *ctx = deserializar_contexto(buffer, desplazamiento);
 
+    log_info(LOGGER_CPU, "Se recibio el PID: %d", ctx->PID);
+
     return ctx;
 }

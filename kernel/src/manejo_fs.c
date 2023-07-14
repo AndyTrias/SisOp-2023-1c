@@ -85,9 +85,10 @@ int f_open(t_pcb *proceso, char *nombre_archivo)
   {
     existe_archivo(nombre_archivo); // pregunta a fs si existe dicho archivo
     sem_wait(&RESPUESTA_FS);
-
+  
     agregar_entrada_tabla(nombre_archivo, proceso->contexto.PID);
     agregar_archivo_abierto(proceso->archivos_abiertos, nombre_archivo);
+    
     log_info(LOGGER_KERNEL, "PID: %d - Abrir Archivo: %s", proceso->contexto.PID, nombre_archivo);
 
     return 0; // puede seguir
