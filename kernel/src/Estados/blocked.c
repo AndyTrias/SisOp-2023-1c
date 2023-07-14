@@ -38,7 +38,7 @@ void signal(t_pcb *proceso, char *nombre_recurso)
     if (recurso_id != -1)
     {
         t_list *lista_del_recurso = list_get(LISTAS_BLOCK, recurso_id);
-        INSTANCIAS_RECURSOS[recurso_id]++;
+        
         log_info(LOGGER_KERNEL, "PID: <%d> - Signal: <%s> - Instancias: <%d>", proceso->contexto.PID, RECURSOS[recurso_id], INSTANCIAS_RECURSOS[recurso_id]);
 
         if (list_size(lista_del_recurso) > 0)
@@ -51,7 +51,8 @@ void signal(t_pcb *proceso, char *nombre_recurso)
             agregar_a_lista_ready(proceso_a_desbloquear);
         }
         else
-        {
+        {   
+            INSTANCIAS_RECURSOS[recurso_id]++;
             list_remove_element(proceso->recursos_en_uso, RECURSOS[recurso_id]);
         }
     }

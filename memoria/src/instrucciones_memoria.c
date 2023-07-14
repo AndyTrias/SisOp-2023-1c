@@ -1,6 +1,7 @@
 #include "instrucciones_memoria.h"
 
 t_paquete* crear_segmento(int id_segmento, int tamanio, t_ctx* ctx) {
+
     t_hueco* hueco = NULL;
     if (strcmp(CONFIG->algoritmo_asignacion, "FIRST") == 0) {
         hueco = get_hueco_con_first_fit(tamanio);
