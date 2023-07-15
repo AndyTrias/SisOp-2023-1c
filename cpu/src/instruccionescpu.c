@@ -110,7 +110,7 @@ op_code execute(t_instruccion *instruccion_actual, t_ctx *ctx)
 		t_paquete *paquete = crear_paquete(MOV_IN);
 		serializar_motivos_desalojo(ctx->motivos_desalojo, paquete);
 		enviar_paquete(paquete, SOCKET_MEMORIA);
-		free(paquete);
+		eliminar_paquete(paquete);
 		free(dir_fisica_string);
 
 		recibir_operacion(SOCKET_MEMORIA);
@@ -138,7 +138,7 @@ op_code execute(t_instruccion *instruccion_actual, t_ctx *ctx)
 		paquete = crear_paquete(MOV_OUT);
 		serializar_motivos_desalojo(ctx->motivos_desalojo, paquete);
 		enviar_paquete(paquete, SOCKET_MEMORIA);
-		free(paquete);
+		eliminar_paquete(paquete);
 		free(dir_fisica_string);
 
 		// recibir ok memoria
@@ -287,7 +287,7 @@ void ciclo_de_instruccion(t_ctx *ctx)
 			t_paquete *paquete = crear_paquete(cod_op);
 			serializar_contexto(ctx, paquete);
 			enviar_paquete(paquete, SOCKET_KERNEL);
-			free(paquete);
+			eliminar_paquete(paquete);
 			ctx = NULL;
 		} else {
 			liberar_parametros_desalojo(ctx);

@@ -52,7 +52,7 @@ char* leer_direccion_de_memoria(char *direccion_fisica, char* tamanio)
     enviar_paquete(paquete, SOCKET_MEMORIA);
 
     liberar_parametros_variables(parametros);
-    free(paquete);
+    eliminar_paquete(paquete);
 
     return recibir_mensaje(SOCKET_MEMORIA);
 
@@ -69,7 +69,7 @@ void escribir_valor_en_memoria(char *direccion_fisica, char *contenido)
     enviar_paquete(paquete, SOCKET_MEMORIA);
 
     liberar_parametros_variables(parametros);
-    free(paquete);
+    eliminar_paquete(paquete);
     char *mensaje = recibir_mensaje(SOCKET_MEMORIA);
 
     if (strcmp(mensaje, "OK"))
@@ -84,13 +84,13 @@ void enviar_paquete_op_terminada(char* nombre_archivo){
     agregar_a_paquete_dato_serializado(paquete, &len, sizeof(int));
     agregar_a_paquete_dato_serializado(paquete, nombre_archivo, len);
     enviar_paquete(paquete, SOCKET_KERNEL);
-    free(paquete);
+    eliminar_paquete(paquete);
 }
 
 void crear_y_enviar_paquete(int cod_op){
     t_paquete* paquete = crear_paquete(cod_op);
     enviar_paquete(paquete, SOCKET_KERNEL);
-    free(paquete);
+    eliminar_paquete(paquete);
 }
 
 

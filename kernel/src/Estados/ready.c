@@ -11,7 +11,7 @@ void admitir_proceso()
     t_paquete* paquete = crear_paquete(CREAR_TABLA_SEGMENTOS);
     agregar_a_paquete_dato_serializado(paquete, &proceso_en_new->contexto.PID, sizeof(int));
     enviar_paquete(paquete, SOCKET_MEMORIA);
-    free(paquete);
+    eliminar_paquete(paquete);
 
     recibir_operacion(SOCKET_MEMORIA);
     t_list* tabla_segmentos = recibir_tabla_segmentos(SOCKET_MEMORIA);

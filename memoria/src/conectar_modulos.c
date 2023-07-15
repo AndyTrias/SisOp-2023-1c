@@ -48,6 +48,7 @@ void recibir_kernel(int *socket_modulo)
     while (1)
     {
         int cod_op = recibir_operacion(*socket_modulo);
+        t_paquete *paquete;
         switch (cod_op)
         {
         case CREAR_TABLA_SEGMENTOS:
@@ -62,10 +63,10 @@ void recibir_kernel(int *socket_modulo)
             log_info(LOGGER_MEMORIA, "Creación de Proceso PID: <%d>", PID);
 
             // envia
-            t_paquete *paquete = crear_paquete(CREAR_TABLA_SEGMENTOS);
+            paquete = crear_paquete(CREAR_TABLA_SEGMENTOS);
             serializar_tabla_segmentos(tabla_segmentos->segmentos, paquete);
             enviar_paquete(paquete, *socket_modulo);
-            free(paquete);
+            eliminar_paquete(paquete);
 
             break;
 
@@ -96,8 +97,7 @@ void recibir_kernel(int *socket_modulo)
             paquete = crear_segmento(atoi(ctx->motivos_desalojo->parametros[0]), atoi(ctx->motivos_desalojo->parametros[1]), ctx);
             // envia
             enviar_paquete(paquete, *socket_modulo);
-            free(paquete);
-            free(ctx);
+            eliminar_paquete(paquete);
 
             break;
         case DELETE_SEGMENT:
@@ -111,7 +111,7 @@ void recibir_kernel(int *socket_modulo)
             paquete = crear_paquete(DELETE_SEGMENT);
             serializar_tabla_segmentos(ctx->tabla_segmentos, paquete);
             enviar_paquete(paquete, *socket_modulo);
-            free(paquete);
+            eliminar_paquete(paquete);
 
             break;
         
@@ -121,7 +121,7 @@ void recibir_kernel(int *socket_modulo)
             paquete = crear_paquete(COMPACTAR);
             serializar_todas_las_tablas_segmentos(TABLA_SEGMENTOS_GLOBAL, paquete);
             enviar_paquete(paquete, *socket_modulo);
-            free(paquete);
+            eliminar_paquete(paquete);
             break;
 
         case -1:
@@ -225,3 +225,4 @@ t_parametros_variables* recibir_parametros_variables(int socket)
     free(desplazamiento);
     return parametros;
 }
+

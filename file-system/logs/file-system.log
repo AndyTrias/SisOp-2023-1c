@@ -188,3 +188,53 @@
 [INFO] 06:44:14:738 FILE SYSTEM/(90119:90119): Se levanto el superbloque
 [INFO] 06:44:14:738 FILE SYSTEM/(90119:90119): Esperando kernel....
 [INFO] 06:44:22:831 FILE SYSTEM/(90119:90119): Se conecto el kernel
+[INFO] 07:17:45:551 FILE SYSTEM/(64379:64379): Se conecto al servidor 127.0.0.1:8002
+[INFO] 07:17:45:551 FILE SYSTEM/(64379:64379): Se levanto el superbloque
+[INFO] 07:17:45:552 FILE SYSTEM/(64379:64379): Se creo un archvo de bitmaps de 1024 bits
+[ERROR] 07:17:45:555 FILE SYSTEM/(64379:64379): Error al abrir el directorio de FCB.
+
+[INFO] 07:29:13:470 FILE SYSTEM/(65616:65616): Se conecto al servidor 127.0.0.1:8002
+[INFO] 07:29:13:470 FILE SYSTEM/(65616:65616): Se levanto el superbloque
+[ERROR] 07:29:13:471 FILE SYSTEM/(65616:65616): Error al abrir el directorio de FCB.
+
+[INFO] 07:29:39:800 FILE SYSTEM/(65818:65818): Se conecto al servidor 127.0.0.1:8002
+[INFO] 07:29:39:801 FILE SYSTEM/(65818:65818): Se levanto el superbloque
+[INFO] 07:29:39:802 FILE SYSTEM/(65818:65818): Esperando kernel....
+[INFO] 07:30:09:905 FILE SYSTEM/(65818:65818): Se conecto el kernel
+[INFO] 07:31:10:724 FILE SYSTEM/(65818:65818): Se desconecto el kernel
+[INFO] 07:32:58:469 FILE SYSTEM/(67290:67290): Se conecto al servidor 127.0.0.1:8002
+[INFO] 07:32:58:469 FILE SYSTEM/(67290:67290): Se levanto el superbloque
+[INFO] 07:32:58:469 FILE SYSTEM/(67290:67290): Esperando kernel....
+[INFO] 07:33:15:282 FILE SYSTEM/(67290:67290): Se conecto el kernel
+[INFO] 07:48:00:679 FILE SYSTEM/(69003:69003): Se conecto al servidor 127.0.0.1:8002
+[INFO] 07:48:00:679 FILE SYSTEM/(69003:69003): Se levanto el superbloque
+[INFO] 07:48:00:680 FILE SYSTEM/(69003:69003): Esperando kernel....
+[INFO] 07:49:21:042 FILE SYSTEM/(69003:69003): Se conecto el kernel
+[INFO] 07:56:52:189 FILE SYSTEM/(70896:70896): Se conecto al servidor 127.0.0.1:8002
+[INFO] 07:56:52:189 FILE SYSTEM/(70896:70896): Se levanto el superbloque
+[INFO] 07:56:52:189 FILE SYSTEM/(70896:70896): Esperando kernel....
+[INFO] 07:57:15:953 FILE SYSTEM/(70896:70896): Se conecto el kernel
+[INFO] 08:10:19:998 FILE SYSTEM/(70896:70896): Se desconecto el kernel
+[ERROR] 08:19:23:457 FILE SYSTEM/(76209:76209): Debe ingresar el archivo de configuracion
+
+[INFO] 08:19:48:096 FILE SYSTEM/(76407:76407): Se conecto al servidor 127.0.0.1:8002
+[INFO] 08:19:48:096 FILE SYSTEM/(76407:76407): Se levanto el superbloque
+[INFO] 08:19:48:096 FILE SYSTEM/(76407:76407): Esperando kernel....
+[INFO] 08:20:18:343 FILE SYSTEM/(76407:76407): Se conecto el kernel
+[INFO] 08:22:36:739 FILE SYSTEM/(77783:77783): Se conecto al servidor 127.0.0.1:8002
+[INFO] 08:22:36:740 FILE SYSTEM/(77783:77783): Se levanto el superbloque
+[INFO] 08:22:36:740 FILE SYSTEM/(77783:77783): Esperando kernel....
+[INFO] 08:22:50:687 FILE SYSTEM/(77783:77783): Se conecto el kernel
+[INFO] 08:35:45:938 FILE SYSTEM/(79859:79859): Se conecto al servidor 127.0.0.1:8002
+[INFO] 08:35:45:939 FILE SYSTEM/(79859:79859): Se levanto el superbloque
+[INFO] 08:35:45:940 FILE SYSTEM/(79859:79859): Esperando kernel....
+[INFO] 08:36:09:071 FILE SYSTEM/(79859:79859): Se conecto el kernel
+[INFO] 08:38:51:137 FILE SYSTEM/(81663:81663): Se conecto al servidor 127.0.0.1:8002
+[INFO] 08:38:51:137 FILE SYSTEM/(81663:81663): Se levanto el superbloque
+[INFO] 08:38:51:138 FILE SYSTEM/(81663:81663): Esperando kernel....
+[INFO] 08:39:09:706 FILE SYSTEM/(81663:81663): Se conecto el kernel
+[INFO] 08:43:59:324 FILE SYSTEM/(84637:84637): Se conecto al servidor 127.0.0.1:8002
+[INFO] 08:43:59:324 FILE SYSTEM/(84637:84637): Se levanto el superbloque
+[INFO] 08:43:59:324 FILE SYSTEM/(84637:84637): Esperando kernel....
+[INFO] 08:44:14:240 FILE SYSTEM/(84637:84637): Se conecto el kernel
+[INFO] 08:46:22:736 FILE SYSTEM/(84637:84637): Se desconecto el kernel

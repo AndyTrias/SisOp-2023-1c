@@ -3716,3 +3716,752 @@
 [INFO] 06:46:52:797 KERNEL/(90491:90507): PID: <1> - Estado Anterior: <Exec> - Estado Actual: <Exit>
 [INFO] 06:46:52:797 KERNEL/(90491:90507): PID: <1> - Signal: <RB> - Instancias: <0>
 [INFO] 06:46:52:797 KERNEL/(90491:90507): PID: <1> - Signal: <RB> - Instancias: <1>
+[INFO] 07:18:00:830 KERNEL/(64797:64797): Se conecto al servidor 127.0.0.1:8001
+[INFO] 07:18:00:832 KERNEL/(64797:64797): Se conecto al servidor 127.0.0.1:8002
+[ERROR] 07:18:00:832 KERNEL/(64797:64797): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 07:18:00:834 KERNEL/(64797:64813): Inicia el planificador de largo plazo
+[INFO] 07:18:00:838 KERNEL/(64797:64815): Inicia el planificador de corto plazo
+[INFO] 07:18:00:840 KERNEL/(64797:64797): Esperando conexiones de consolas...
+[INFO] 07:18:05:743 KERNEL/(64797:64797): Se conecto una consola
+[INFO] 07:18:05:748 KERNEL/(64797:64982): Se recibieron instrucciones de una consola
+[INFO] 07:18:05:748 KERNEL/(64797:64982): Se Crea el proceso <0> en NEW
+[INFO] 07:18:05:748 KERNEL/(64797:64813): PID: <0> - Estado Anterior: <New> - Estado Actual: <Ready>
+[INFO] 07:18:05:748 KERNEL/(64797:64813): Cola Ready <FIFO>: [0]
+[INFO] 07:30:09:902 KERNEL/(66240:66240): Se conecto al servidor 127.0.0.1:8001
+[INFO] 07:30:09:903 KERNEL/(66240:66240): Se conecto al servidor 127.0.0.1:8002
+[INFO] 07:30:09:905 KERNEL/(66240:66240): Se conecto al servidor 127.0.0.1:8003
+[INFO] 07:30:09:906 KERNEL/(66240:66240): Esperando conexiones de consolas...
+[INFO] 07:30:09:908 KERNEL/(66240:66242): Inicia el planificador de corto plazo
+[INFO] 07:30:09:909 KERNEL/(66240:66241): Inicia el planificador de largo plazo
+[INFO] 07:30:14:453 KERNEL/(66240:66240): Se conecto una consola
+[INFO] 07:30:14:455 KERNEL/(66240:66405): Se recibieron instrucciones de una consola
+[INFO] 07:30:14:455 KERNEL/(66240:66405): Se Crea el proceso <0> en NEW
+[INFO] 07:30:14:455 KERNEL/(66240:66241): PID: <0> - Estado Anterior: <New> - Estado Actual: <Ready>
+[INFO] 07:30:14:455 KERNEL/(66240:66241): Cola Ready <FIFO>: [0]
+[INFO] 07:30:18:101 KERNEL/(66240:66240): Se conecto una consola
+[INFO] 07:30:18:103 KERNEL/(66240:66550): Se recibieron instrucciones de una consola
+[INFO] 07:30:18:103 KERNEL/(66240:66550): Se Crea el proceso <1> en NEW
+[INFO] 07:30:22:506 KERNEL/(66240:66240): Se conecto una consola
+[INFO] 07:30:22:507 KERNEL/(66240:66691): Se recibieron instrucciones de una consola
+[INFO] 07:30:22:508 KERNEL/(66240:66691): Se Crea el proceso <2> en NEW
+[INFO] 07:31:09:377 KERNEL/(66240:66241): Se mando la señal al planificador de corto plazo
+[INFO] 07:31:09:377 KERNEL/(66240:66241): PID: <1> - Estado Anterior: <New> - Estado Actual: <Ready>
+[INFO] 07:31:09:377 KERNEL/(66240:66241): Cola Ready <FIFO>: [0, 1]
+[INFO] 07:31:09:377 KERNEL/(66240:66242): Empieza ciclo de instruccion
+[INFO] 07:31:09:377 KERNEL/(66240:66241): Se mando la señal al planificador de corto plazo
+[INFO] 07:31:09:377 KERNEL/(66240:66241): PID: <2> - Estado Anterior: <New> - Estado Actual: <Ready>
+[INFO] 07:31:09:377 KERNEL/(66240:66241): Cola Ready <FIFO>: [0, 1, 2]
+[INFO] 07:31:09:377 KERNEL/(66240:66241): Se mando la señal al planificador de corto plazo
+[INFO] 07:31:09:378 KERNEL/(66240:66242): Se envia el proceso PID: <0> al CPU
+[INFO] 07:31:09:379 KERNEL/(66240:66242): Se recibe de CPU el proceso PID: <0>
+[INFO] 07:31:09:380 KERNEL/(66240:66242): PID: <0> - Wait: <RA> - Instancias: <0>
+[INFO] 07:31:09:381 KERNEL/(66240:66242): Se envia el proceso PID: <0> al CPU
+[INFO] 07:33:15:279 KERNEL/(67612:67612): Se conecto al servidor 127.0.0.1:8001
+[INFO] 07:33:15:281 KERNEL/(67612:67612): Se conecto al servidor 127.0.0.1:8002
+[INFO] 07:33:15:282 KERNEL/(67612:67612): Se conecto al servidor 127.0.0.1:8003
+[INFO] 07:33:15:284 KERNEL/(67612:67628): Inicia el planificador de largo plazo
+[INFO] 07:33:15:288 KERNEL/(67612:67630): Inicia el planificador de corto plazo
+[INFO] 07:33:15:292 KERNEL/(67612:67612): Esperando conexiones de consolas...
+[INFO] 07:33:20:924 KERNEL/(67612:67612): Se conecto una consola
+[INFO] 07:33:20:925 KERNEL/(67612:67820): Se recibieron instrucciones de una consola
+[INFO] 07:33:20:927 KERNEL/(67612:67820): Se Crea el proceso <0> en NEW
+[INFO] 07:33:20:927 KERNEL/(67612:67628): PID: <0> - Estado Anterior: <New> - Estado Actual: <Ready>
+[INFO] 07:33:20:927 KERNEL/(67612:67628): Cola Ready <FIFO>: [0]
+[INFO] 07:33:20:930 KERNEL/(67612:67628): Se mando la señal al planificador de corto plazo
+[INFO] 07:33:20:930 KERNEL/(67612:67630): Empieza ciclo de instruccion
+[INFO] 07:33:20:932 KERNEL/(67612:67630): Se envia el proceso PID: <0> al CPU
+[INFO] 07:33:20:936 KERNEL/(67612:67630): Se recibe de CPU el proceso PID: <0>
+[INFO] 07:33:20:936 KERNEL/(67612:67630): PID: <0> - Wait: <RA> - Instancias: <0>
+[INFO] 07:33:20:937 KERNEL/(67612:67630): Se envia el proceso PID: <0> al CPU
+[INFO] 07:33:23:940 KERNEL/(67612:67630): Se recibe de CPU el proceso PID: <0>
+[INFO] 07:33:23:942 KERNEL/(67612:67630): PID: <0> - Crear Segmento - Id: <1> - Tamaño: <128>
+[INFO] 07:33:23:943 KERNEL/(67612:67630): Se envia el proceso PID: <0> al CPU
+[INFO] 07:33:23:944 KERNEL/(67612:67630): Se recibe de CPU el proceso PID: <0>
+[INFO] 07:33:23:944 KERNEL/(67612:67630): PID: <0> - Signal: <RB> - Instancias: <0>
+[INFO] 07:33:23:945 KERNEL/(67612:67630): Se envia el proceso PID: <0> al CPU
+[INFO] 07:33:23:947 KERNEL/(67612:67630): Se recibe de CPU el proceso PID: <0>
+[INFO] 07:33:23:947 KERNEL/(67612:67630): PID: <0> - Bloqueado por: < RA >
+[INFO] 07:33:23:947 KERNEL/(67612:67630): PID: <0> - Estado Anterior: <Exec> - Estado Actual: <Block>
+[INFO] 07:33:25:424 KERNEL/(67612:67612): Se conecto una consola
+[INFO] 07:33:25:436 KERNEL/(67612:67998): Se recibieron instrucciones de una consola
+[INFO] 07:33:25:437 KERNEL/(67612:67998): Se Crea el proceso <1> en NEW
+[INFO] 07:33:25:437 KERNEL/(67612:67628): PID: <1> - Estado Anterior: <New> - Estado Actual: <Ready>
+[INFO] 07:33:25:437 KERNEL/(67612:67628): Cola Ready <FIFO>: [1]
+[INFO] 07:33:25:438 KERNEL/(67612:67628): Se mando la señal al planificador de corto plazo
+[INFO] 07:33:25:439 KERNEL/(67612:67630): PID: <1> - Estado Anterior: <Ready> - Estado Actual: <Exec>
+[INFO] 07:33:25:440 KERNEL/(67612:67630): Se envia el proceso PID: <1> al CPU
+[INFO] 07:33:25:441 KERNEL/(67612:67630): Se recibe de CPU el proceso PID: <1>
+[INFO] 07:33:25:441 KERNEL/(67612:67630): PID: <1> - Wait: <RB> - Instancias: <0>
+[INFO] 07:33:25:443 KERNEL/(67612:67630): Se envia el proceso PID: <1> al CPU
+[INFO] 07:33:27:444 KERNEL/(67612:67630): Se recibe de CPU el proceso PID: <1>
+[INFO] 07:33:27:445 KERNEL/(67612:67630): PID: <1> - Crear Segmento - Id: <1> - Tamaño: <64>
+[INFO] 07:33:27:446 KERNEL/(67612:67630): Se envia el proceso PID: <1> al CPU
+[INFO] 07:33:27:447 KERNEL/(67612:67630): Se recibe de CPU el proceso PID: <1>
+[INFO] 07:33:27:448 KERNEL/(67612:67630): PID: <1> - Crear Segmento - Id: <2> - Tamaño: <64>
+[INFO] 07:33:27:449 KERNEL/(67612:67630): Se envia el proceso PID: <1> al CPU
+[INFO] 07:33:27:451 KERNEL/(67612:67630): Se recibe de CPU el proceso PID: <1>
+[INFO] 07:33:27:453 KERNEL/(67612:67630): PID: <1> - Crear Segmento - Id: <3> - Tamaño: <64>
+[INFO] 07:33:27:454 KERNEL/(67612:67630): Se envia el proceso PID: <1> al CPU
+[INFO] 07:33:27:455 KERNEL/(67612:67630): Se recibe de CPU el proceso PID: <1>
+[INFO] 07:33:27:460 KERNEL/(67612:67630): PID: <1> - Crear Segmento - Id: <4> - Tamaño: <64>
+[INFO] 07:33:27:462 KERNEL/(67612:67630): Se envia el proceso PID: <1> al CPU
+[INFO] 07:33:27:463 KERNEL/(67612:67630): Se recibe de CPU el proceso PID: <1>
+[INFO] 07:33:27:465 KERNEL/(67612:67630): PID: <1> - Crear Segmento - Id: <5> - Tamaño: <64>
+[INFO] 07:33:27:465 KERNEL/(67612:67630): Se envia el proceso PID: <1> al CPU
+[INFO] 07:33:27:466 KERNEL/(67612:67630): Se recibe de CPU el proceso PID: <1>
+[INFO] 07:33:27:468 KERNEL/(67612:67630): PID: <1> - Crear Segmento - Id: <6> - Tamaño: <64>
+[INFO] 07:33:27:469 KERNEL/(67612:67630): Se envia el proceso PID: <1> al CPU
+[INFO] 07:33:27:470 KERNEL/(67612:67630): Se recibe de CPU el proceso PID: <1>
+[INFO] 07:33:27:473 KERNEL/(67612:67630): PID: <1> - Crear Segmento - Id: <7> - Tamaño: <64>
+[INFO] 07:33:27:476 KERNEL/(67612:67630): Se envia el proceso PID: <1> al CPU
+[INFO] 07:33:27:480 KERNEL/(67612:67630): Se recibe de CPU el proceso PID: <1>
+[INFO] 07:33:27:482 KERNEL/(67612:67630): PID: <1> - Crear Segmento - Id: <8> - Tamaño: <64>
+[INFO] 07:33:27:483 KERNEL/(67612:67630): Se envia el proceso PID: <1> al CPU
+[INFO] 07:33:30:488 KERNEL/(67612:67630): Se recibe de CPU el proceso PID: <1>
+[INFO] 07:33:30:489 KERNEL/(67612:67630): PID: <1> - Signal: <RA> - Instancias: <0>
+[INFO] 07:33:30:489 KERNEL/(67612:67630): PID: <0> - Estado Anterior: <Block> - Estado Actual: <Ready>
+[INFO] 07:33:30:489 KERNEL/(67612:67630): Cola Ready <FIFO>: [0]
+[INFO] 07:33:30:490 KERNEL/(67612:67630): Se envia el proceso PID: <1> al CPU
+[INFO] 07:33:30:491 KERNEL/(67612:67630): Se recibe de CPU el proceso PID: <1>
+[INFO] 07:33:30:491 KERNEL/(67612:67630): PID: <1> - Bloqueado por: < RB >
+[INFO] 07:33:30:491 KERNEL/(67612:67630): PID: <1> - Estado Anterior: <Exec> - Estado Actual: <Block>
+[INFO] 07:33:30:491 KERNEL/(67612:67630): PID: <0> - Estado Anterior: <Ready> - Estado Actual: <Exec>
+[INFO] 07:33:30:492 KERNEL/(67612:67630): Se envia el proceso PID: <0> al CPU
+[INFO] 07:33:30:495 KERNEL/(67612:67630): Se recibe de CPU el proceso PID: <0>
+[INFO] 07:33:30:499 KERNEL/(67612:67630): PID: <0> - Eliminar Segmento - Id Segmento: <1>
+[INFO] 07:33:30:500 KERNEL/(67612:67630): Se envia el proceso PID: <0> al CPU
+[INFO] 07:33:31:191 KERNEL/(67612:67612): Se conecto una consola
+[INFO] 07:33:31:192 KERNEL/(67612:68207): Se recibieron instrucciones de una consola
+[INFO] 07:33:31:192 KERNEL/(67612:68207): Se Crea el proceso <2> en NEW
+[INFO] 07:33:31:192 KERNEL/(67612:67628): PID: <2> - Estado Anterior: <New> - Estado Actual: <Ready>
+[INFO] 07:33:31:192 KERNEL/(67612:67628): Cola Ready <FIFO>: [2]
+[INFO] 07:33:31:193 KERNEL/(67612:67628): Se mando la señal al planificador de corto plazo
+[INFO] 07:33:32:504 KERNEL/(67612:67630): Se recibe de CPU el proceso PID: <0>
+[INFO] 07:33:32:505 KERNEL/(67612:67630): PID: <0> - Signal: <RB> - Instancias: <0>
+[INFO] 07:33:32:505 KERNEL/(67612:67630): PID: <1> - Estado Anterior: <Block> - Estado Actual: <Ready>
+[INFO] 07:33:32:505 KERNEL/(67612:67630): Cola Ready <FIFO>: [2, 1]
+[INFO] 07:33:32:507 KERNEL/(67612:67630): Se envia el proceso PID: <0> al CPU
+[INFO] 07:33:32:509 KERNEL/(67612:67630): Se recibe de CPU el proceso PID: <0>
+[INFO] 07:33:32:509 KERNEL/(67612:67630): PID: <0> - Bloqueado por: < RA >
+[INFO] 07:33:32:509 KERNEL/(67612:67630): PID: <0> - Estado Anterior: <Exec> - Estado Actual: <Block>
+[INFO] 07:33:32:509 KERNEL/(67612:67630): PID: <2> - Estado Anterior: <Ready> - Estado Actual: <Exec>
+[INFO] 07:33:32:510 KERNEL/(67612:67630): Se envia el proceso PID: <2> al CPU
+[INFO] 07:33:32:513 KERNEL/(67612:67630): Se recibe de CPU el proceso PID: <2>
+[INFO] 07:33:32:513 KERNEL/(67612:67630): PID: <2> - Bloqueado por: < RC >
+[INFO] 07:33:32:513 KERNEL/(67612:67630): PID: <2> - Estado Anterior: <Exec> - Estado Actual: <Block>
+[INFO] 07:33:32:513 KERNEL/(67612:67630): PID: <1> - Estado Anterior: <Ready> - Estado Actual: <Exec>
+[INFO] 07:33:32:514 KERNEL/(67612:67630): Se envia el proceso PID: <1> al CPU
+[INFO] 07:33:32:515 KERNEL/(67612:67630): Se recibe de CPU el proceso PID: <1>
+[INFO] 07:33:32:516 KERNEL/(67612:67630): PID: <1> - Crear Segmento - Id: <9> - Tamaño: <64>
+[INFO] 07:33:32:517 KERNEL/(67612:67630): Se envia el proceso PID: <1> al CPU
+[INFO] 07:33:38:522 KERNEL/(67612:67630): Se recibe de CPU el proceso PID: <1>
+[INFO] 07:33:38:522 KERNEL/(67612:67630): PID: <1> - Signal: <RC> - Instancias: <0>
+[INFO] 07:33:38:522 KERNEL/(67612:67630): PID: <2> - Estado Anterior: <Block> - Estado Actual: <Ready>
+[INFO] 07:33:38:522 KERNEL/(67612:67630): Cola Ready <FIFO>: [2]
+[INFO] 07:33:38:524 KERNEL/(67612:67630): Se envia el proceso PID: <1> al CPU
+[INFO] 07:33:38:524 KERNEL/(67612:67630): Se recibe de CPU el proceso PID: <1>
+[INFO] 07:33:38:524 KERNEL/(67612:67630): PID: <1> - Bloqueado por: < RB >
+[INFO] 07:33:38:524 KERNEL/(67612:67630): PID: <1> - Estado Anterior: <Exec> - Estado Actual: <Block>
+[INFO] 07:33:38:525 KERNEL/(67612:67630): PID: <2> - Estado Anterior: <Ready> - Estado Actual: <Exec>
+[INFO] 07:33:38:525 KERNEL/(67612:67630): Se envia el proceso PID: <2> al CPU
+[INFO] 07:33:38:526 KERNEL/(67612:67630): Se recibe de CPU el proceso PID: <2>
+[INFO] 07:34:55:355 KERNEL/(67612:67630): Compactación: <Se solicitó compactación / Esperando Fin de Operaciones de FS>
+[INFO] 07:34:58:037 KERNEL/(67612:67630): Inicia la compactacion
+[INFO] 07:49:21:041 KERNEL/(69535:69535): Se conecto al servidor 127.0.0.1:8001
+[INFO] 07:49:21:041 KERNEL/(69535:69535): Se conecto al servidor 127.0.0.1:8002
+[INFO] 07:49:21:042 KERNEL/(69535:69535): Se conecto al servidor 127.0.0.1:8003
+[INFO] 07:49:21:046 KERNEL/(69535:69552): Inicia el planificador de largo plazo
+[INFO] 07:49:21:047 KERNEL/(69535:69554): Inicia el planificador de corto plazo
+[INFO] 07:49:21:051 KERNEL/(69535:69535): Esperando conexiones de consolas...
+[INFO] 07:49:26:505 KERNEL/(69535:69535): Se conecto una consola
+[INFO] 07:49:26:512 KERNEL/(69535:69778): Se recibieron instrucciones de una consola
+[INFO] 07:49:26:512 KERNEL/(69535:69778): Se Crea el proceso <0> en NEW
+[INFO] 07:49:26:513 KERNEL/(69535:69552): PID: <0> - Estado Anterior: <New> - Estado Actual: <Ready>
+[INFO] 07:49:26:514 KERNEL/(69535:69552): Cola Ready <FIFO>: [0]
+[INFO] 07:49:26:518 KERNEL/(69535:69552): Se mando la señal al planificador de corto plazo
+[INFO] 07:49:26:519 KERNEL/(69535:69554): Empieza ciclo de instruccion
+[INFO] 07:49:26:524 KERNEL/(69535:69554): Se envia el proceso PID: <0> al CPU
+[INFO] 07:49:26:526 KERNEL/(69535:69554): Se recibe de CPU el proceso PID: <0>
+[INFO] 07:49:26:526 KERNEL/(69535:69554): PID: <0> - Wait: <RA> - Instancias: <0>
+[INFO] 07:49:26:528 KERNEL/(69535:69554): Se envia el proceso PID: <0> al CPU
+[INFO] 07:49:29:532 KERNEL/(69535:69554): Se recibe de CPU el proceso PID: <0>
+[INFO] 07:49:29:532 KERNEL/(69535:69554): PID: <0> - Crear Segmento - Id: <1> - Tamaño: <128>
+[INFO] 07:49:29:533 KERNEL/(69535:69554): Se envia el proceso PID: <0> al CPU
+[INFO] 07:49:29:534 KERNEL/(69535:69554): Se recibe de CPU el proceso PID: <0>
+[INFO] 07:49:29:534 KERNEL/(69535:69554): PID: <0> - Signal: <RB> - Instancias: <0>
+[INFO] 07:49:29:535 KERNEL/(69535:69554): Se envia el proceso PID: <0> al CPU
+[INFO] 07:49:29:536 KERNEL/(69535:69554): Se recibe de CPU el proceso PID: <0>
+[INFO] 07:49:29:536 KERNEL/(69535:69554): PID: <0> - Bloqueado por: < RA >
+[INFO] 07:49:29:536 KERNEL/(69535:69554): PID: <0> - Estado Anterior: <Exec> - Estado Actual: <Block>
+[INFO] 07:49:30:695 KERNEL/(69535:69535): Se conecto una consola
+[INFO] 07:49:30:696 KERNEL/(69535:69979): Se recibieron instrucciones de una consola
+[INFO] 07:49:30:696 KERNEL/(69535:69979): Se Crea el proceso <1> en NEW
+[INFO] 07:49:30:697 KERNEL/(69535:69552): PID: <1> - Estado Anterior: <New> - Estado Actual: <Ready>
+[INFO] 07:49:30:697 KERNEL/(69535:69552): Cola Ready <FIFO>: [1]
+[INFO] 07:49:30:697 KERNEL/(69535:69554): PID: <1> - Estado Anterior: <Ready> - Estado Actual: <Exec>
+[INFO] 07:49:30:698 KERNEL/(69535:69552): Se mando la señal al planificador de corto plazo
+[INFO] 07:49:30:701 KERNEL/(69535:69554): Se envia el proceso PID: <1> al CPU
+[INFO] 07:49:30:707 KERNEL/(69535:69554): Se recibe de CPU el proceso PID: <1>
+[INFO] 07:49:30:707 KERNEL/(69535:69554): PID: <1> - Wait: <RB> - Instancias: <0>
+[INFO] 07:49:30:707 KERNEL/(69535:69554): Se envia el proceso PID: <1> al CPU
+[INFO] 07:49:32:713 KERNEL/(69535:69554): Se recibe de CPU el proceso PID: <1>
+[INFO] 07:49:32:714 KERNEL/(69535:69554): PID: <1> - Crear Segmento - Id: <1> - Tamaño: <64>
+[INFO] 07:49:32:716 KERNEL/(69535:69554): Se envia el proceso PID: <1> al CPU
+[INFO] 07:49:32:717 KERNEL/(69535:69554): Se recibe de CPU el proceso PID: <1>
+[INFO] 07:49:32:718 KERNEL/(69535:69554): PID: <1> - Crear Segmento - Id: <2> - Tamaño: <64>
+[INFO] 07:49:32:718 KERNEL/(69535:69554): Se envia el proceso PID: <1> al CPU
+[INFO] 07:49:32:720 KERNEL/(69535:69554): Se recibe de CPU el proceso PID: <1>
+[INFO] 07:49:32:721 KERNEL/(69535:69554): PID: <1> - Crear Segmento - Id: <3> - Tamaño: <64>
+[INFO] 07:49:32:723 KERNEL/(69535:69554): Se envia el proceso PID: <1> al CPU
+[INFO] 07:49:32:724 KERNEL/(69535:69554): Se recibe de CPU el proceso PID: <1>
+[INFO] 07:49:32:726 KERNEL/(69535:69554): PID: <1> - Crear Segmento - Id: <4> - Tamaño: <64>
+[INFO] 07:49:32:730 KERNEL/(69535:69554): Se envia el proceso PID: <1> al CPU
+[INFO] 07:49:32:731 KERNEL/(69535:69554): Se recibe de CPU el proceso PID: <1>
+[INFO] 07:49:32:732 KERNEL/(69535:69554): PID: <1> - Crear Segmento - Id: <5> - Tamaño: <64>
+[INFO] 07:49:32:733 KERNEL/(69535:69554): Se envia el proceso PID: <1> al CPU
+[INFO] 07:49:32:734 KERNEL/(69535:69554): Se recibe de CPU el proceso PID: <1>
+[INFO] 07:49:32:735 KERNEL/(69535:69554): PID: <1> - Crear Segmento - Id: <6> - Tamaño: <64>
+[INFO] 07:49:32:736 KERNEL/(69535:69554): Se envia el proceso PID: <1> al CPU
+[INFO] 07:49:32:736 KERNEL/(69535:69554): Se recibe de CPU el proceso PID: <1>
+[INFO] 07:49:32:737 KERNEL/(69535:69554): PID: <1> - Crear Segmento - Id: <7> - Tamaño: <64>
+[INFO] 07:49:32:741 KERNEL/(69535:69554): Se envia el proceso PID: <1> al CPU
+[INFO] 07:49:32:742 KERNEL/(69535:69554): Se recibe de CPU el proceso PID: <1>
+[INFO] 07:49:32:745 KERNEL/(69535:69554): PID: <1> - Crear Segmento - Id: <8> - Tamaño: <64>
+[INFO] 07:49:32:746 KERNEL/(69535:69554): Se envia el proceso PID: <1> al CPU
+[INFO] 07:49:34:543 KERNEL/(69535:69535): Se conecto una consola
+[INFO] 07:49:34:544 KERNEL/(69535:70165): Se recibieron instrucciones de una consola
+[INFO] 07:49:34:544 KERNEL/(69535:70165): Se Crea el proceso <2> en NEW
+[INFO] 07:49:34:544 KERNEL/(69535:69552): PID: <2> - Estado Anterior: <New> - Estado Actual: <Ready>
+[INFO] 07:49:34:545 KERNEL/(69535:69552): Cola Ready <FIFO>: [2]
+[INFO] 07:49:34:545 KERNEL/(69535:69552): Se mando la señal al planificador de corto plazo
+[INFO] 07:49:35:749 KERNEL/(69535:69554): Se recibe de CPU el proceso PID: <1>
+[INFO] 07:49:35:749 KERNEL/(69535:69554): PID: <1> - Signal: <RA> - Instancias: <0>
+[INFO] 07:49:35:749 KERNEL/(69535:69554): PID: <0> - Estado Anterior: <Block> - Estado Actual: <Ready>
+[INFO] 07:49:35:749 KERNEL/(69535:69554): Cola Ready <FIFO>: [2, 0]
+[INFO] 07:49:35:750 KERNEL/(69535:69554): Se envia el proceso PID: <1> al CPU
+[INFO] 07:49:35:751 KERNEL/(69535:69554): Se recibe de CPU el proceso PID: <1>
+[INFO] 07:49:35:751 KERNEL/(69535:69554): PID: <1> - Bloqueado por: < RB >
+[INFO] 07:49:35:751 KERNEL/(69535:69554): PID: <1> - Estado Anterior: <Exec> - Estado Actual: <Block>
+[INFO] 07:49:35:751 KERNEL/(69535:69554): PID: <2> - Estado Anterior: <Ready> - Estado Actual: <Exec>
+[INFO] 07:49:35:753 KERNEL/(69535:69554): Se envia el proceso PID: <2> al CPU
+[INFO] 07:49:35:754 KERNEL/(69535:69554): Se recibe de CPU el proceso PID: <2>
+[INFO] 07:49:35:754 KERNEL/(69535:69554): PID: <2> - Bloqueado por: < RC >
+[INFO] 07:49:35:754 KERNEL/(69535:69554): PID: <2> - Estado Anterior: <Exec> - Estado Actual: <Block>
+[INFO] 07:49:35:754 KERNEL/(69535:69554): PID: <0> - Estado Anterior: <Ready> - Estado Actual: <Exec>
+[INFO] 07:49:35:755 KERNEL/(69535:69554): Se envia el proceso PID: <0> al CPU
+[INFO] 07:49:35:756 KERNEL/(69535:69554): Se recibe de CPU el proceso PID: <0>
+[INFO] 07:49:35:758 KERNEL/(69535:69554): PID: <0> - Eliminar Segmento - Id Segmento: <1>
+[INFO] 07:49:35:759 KERNEL/(69535:69554): Se envia el proceso PID: <0> al CPU
+[INFO] 07:49:37:762 KERNEL/(69535:69554): Se recibe de CPU el proceso PID: <0>
+[INFO] 07:49:37:762 KERNEL/(69535:69554): PID: <0> - Signal: <RB> - Instancias: <0>
+[INFO] 07:49:37:762 KERNEL/(69535:69554): PID: <1> - Estado Anterior: <Block> - Estado Actual: <Ready>
+[INFO] 07:49:37:762 KERNEL/(69535:69554): Cola Ready <FIFO>: [1]
+[INFO] 07:49:37:764 KERNEL/(69535:69554): Se envia el proceso PID: <0> al CPU
+[INFO] 07:49:37:774 KERNEL/(69535:69554): Se recibe de CPU el proceso PID: <0>
+[INFO] 07:49:37:774 KERNEL/(69535:69554): PID: <0> - Bloqueado por: < RA >
+[INFO] 07:49:37:774 KERNEL/(69535:69554): PID: <0> - Estado Anterior: <Exec> - Estado Actual: <Block>
+[INFO] 07:49:37:774 KERNEL/(69535:69554): PID: <1> - Estado Anterior: <Ready> - Estado Actual: <Exec>
+[INFO] 07:49:37:775 KERNEL/(69535:69554): Se envia el proceso PID: <1> al CPU
+[INFO] 07:49:37:776 KERNEL/(69535:69554): Se recibe de CPU el proceso PID: <1>
+[INFO] 07:49:37:777 KERNEL/(69535:69554): PID: <1> - Crear Segmento - Id: <9> - Tamaño: <64>
+[INFO] 07:49:37:778 KERNEL/(69535:69554): Se envia el proceso PID: <1> al CPU
+[INFO] 07:49:43:783 KERNEL/(69535:69554): Se recibe de CPU el proceso PID: <1>
+[INFO] 07:49:43:783 KERNEL/(69535:69554): PID: <1> - Signal: <RC> - Instancias: <0>
+[INFO] 07:49:43:783 KERNEL/(69535:69554): PID: <2> - Estado Anterior: <Block> - Estado Actual: <Ready>
+[INFO] 07:49:43:783 KERNEL/(69535:69554): Cola Ready <FIFO>: [2]
+[INFO] 07:49:43:784 KERNEL/(69535:69554): Se envia el proceso PID: <1> al CPU
+[INFO] 07:49:43:786 KERNEL/(69535:69554): Se recibe de CPU el proceso PID: <1>
+[INFO] 07:49:43:786 KERNEL/(69535:69554): PID: <1> - Bloqueado por: < RB >
+[INFO] 07:49:43:786 KERNEL/(69535:69554): PID: <1> - Estado Anterior: <Exec> - Estado Actual: <Block>
+[INFO] 07:49:43:786 KERNEL/(69535:69554): PID: <2> - Estado Anterior: <Ready> - Estado Actual: <Exec>
+[INFO] 07:49:43:787 KERNEL/(69535:69554): Se envia el proceso PID: <2> al CPU
+[INFO] 07:49:43:788 KERNEL/(69535:69554): Se recibe de CPU el proceso PID: <2>
+[INFO] 07:49:55:604 KERNEL/(69535:69554): Compactación: <Se solicitó compactación / Esperando Fin de Operaciones de FS>
+[INFO] 07:49:57:368 KERNEL/(69535:69554): Inicia la compactacion
+[INFO] 07:57:15:952 KERNEL/(71413:71413): Se conecto al servidor 127.0.0.1:8001
+[INFO] 07:57:15:953 KERNEL/(71413:71413): Se conecto al servidor 127.0.0.1:8002
+[INFO] 07:57:15:953 KERNEL/(71413:71413): Se conecto al servidor 127.0.0.1:8003
+[INFO] 07:57:15:954 KERNEL/(71413:71431): Inicia el planificador de largo plazo
+[INFO] 07:57:15:954 KERNEL/(71413:71432): Inicia el planificador de corto plazo
+[INFO] 07:57:15:955 KERNEL/(71413:71413): Esperando conexiones de consolas...
+[INFO] 07:57:21:527 KERNEL/(71413:71413): Se conecto una consola
+[INFO] 07:57:21:531 KERNEL/(71413:71664): Se recibieron instrucciones de una consola
+[INFO] 07:57:21:532 KERNEL/(71413:71664): Se Crea el proceso <0> en NEW
+[INFO] 07:57:21:532 KERNEL/(71413:71431): PID: <0> - Estado Anterior: <New> - Estado Actual: <Ready>
+[INFO] 07:57:21:533 KERNEL/(71413:71431): Cola Ready <FIFO>: [0]
+[INFO] 07:57:21:533 KERNEL/(71413:71431): Se mando la señal al planificador de corto plazo
+[INFO] 07:57:21:533 KERNEL/(71413:71432): Empieza ciclo de instruccion
+[INFO] 07:57:21:534 KERNEL/(71413:71432): Se envia el proceso PID: <0> al CPU
+[INFO] 07:57:21:536 KERNEL/(71413:71432): Se recibe de CPU el proceso PID: <0>
+[INFO] 07:57:21:536 KERNEL/(71413:71432): PID: <0> - Wait: <RA> - Instancias: <0>
+[INFO] 07:57:21:537 KERNEL/(71413:71432): Se envia el proceso PID: <0> al CPU
+[INFO] 07:57:24:541 KERNEL/(71413:71432): Se recibe de CPU el proceso PID: <0>
+[INFO] 07:57:38:108 KERNEL/(71413:71413): Se conecto una consola
+[INFO] 07:57:38:111 KERNEL/(71413:71413): Se conecto una consola
+[INFO] 07:57:38:111 KERNEL/(71413:72103): Se recibieron instrucciones de una consola
+[INFO] 07:57:38:112 KERNEL/(71413:72103): Se Crea el proceso <1> en NEW
+[INFO] 07:57:38:112 KERNEL/(71413:71431): PID: <1> - Estado Anterior: <New> - Estado Actual: <Ready>
+[INFO] 07:57:38:112 KERNEL/(71413:71431): Cola Ready <FIFO>: [1]
+[INFO] 08:20:18:341 KERNEL/(76800:76800): Se conecto al servidor 127.0.0.1:8001
+[INFO] 08:20:18:342 KERNEL/(76800:76800): Se conecto al servidor 127.0.0.1:8002
+[INFO] 08:20:18:343 KERNEL/(76800:76800): Se conecto al servidor 127.0.0.1:8003
+[INFO] 08:20:18:348 KERNEL/(76800:76819): Inicia el planificador de largo plazo
+[INFO] 08:20:18:353 KERNEL/(76800:76822): Inicia el planificador de corto plazo
+[INFO] 08:20:18:356 KERNEL/(76800:76800): Esperando conexiones de consolas...
+[INFO] 08:21:17:579 KERNEL/(76800:76800): Se conecto una consola
+[INFO] 08:21:17:583 KERNEL/(76800:77162): Se recibieron instrucciones de una consola
+[INFO] 08:21:17:583 KERNEL/(76800:77162): Se Crea el proceso <0> en NEW
+[INFO] 08:21:17:583 KERNEL/(76800:76819): PID: <0> - Estado Anterior: <New> - Estado Actual: <Ready>
+[INFO] 08:21:17:583 KERNEL/(76800:76819): Cola Ready <FIFO>: [0]
+[INFO] 08:22:50:686 KERNEL/(78226:78226): Se conecto al servidor 127.0.0.1:8001
+[INFO] 08:22:50:686 KERNEL/(78226:78226): Se conecto al servidor 127.0.0.1:8002
+[INFO] 08:22:50:687 KERNEL/(78226:78226): Se conecto al servidor 127.0.0.1:8003
+[INFO] 08:22:50:693 KERNEL/(78226:78230): Inicia el planificador de largo plazo
+[INFO] 08:22:50:697 KERNEL/(78226:78233): Inicia el planificador de corto plazo
+[INFO] 08:22:50:700 KERNEL/(78226:78226): Esperando conexiones de consolas...
+[INFO] 08:22:55:848 KERNEL/(78226:78226): Se conecto una consola
+[INFO] 08:22:55:850 KERNEL/(78226:78423): Se recibieron instrucciones de una consola
+[INFO] 08:22:55:851 KERNEL/(78226:78423): Se Crea el proceso <0> en NEW
+[INFO] 08:22:55:851 KERNEL/(78226:78230): PID: <0> - Estado Anterior: <New> - Estado Actual: <Ready>
+[INFO] 08:22:55:851 KERNEL/(78226:78230): Cola Ready <FIFO>: [0]
+[INFO] 08:22:55:853 KERNEL/(78226:78230): Se mando la señal al planificador de corto plazo
+[INFO] 08:22:55:854 KERNEL/(78226:78233): Empieza ciclo de instruccion
+[INFO] 08:22:55:857 KERNEL/(78226:78233): Se envia el proceso PID: <0> al CPU
+[INFO] 08:22:55:864 KERNEL/(78226:78233): Se recibe de CPU el proceso PID: <0>
+[INFO] 08:22:55:865 KERNEL/(78226:78233): PID: <0> - Wait: <RA> - Instancias: <0>
+[INFO] 08:22:55:866 KERNEL/(78226:78233): Se envia el proceso PID: <0> al CPU
+[INFO] 08:22:58:885 KERNEL/(78226:78233): Se recibe de CPU el proceso PID: <0>
+[INFO] 08:22:58:890 KERNEL/(78226:78233): PID: <0> - Crear Segmento - Id: <1> - Tamaño: <128>
+[INFO] 08:22:58:892 KERNEL/(78226:78233): Se envia el proceso PID: <0> al CPU
+[INFO] 08:22:58:893 KERNEL/(78226:78233): Se recibe de CPU el proceso PID: <0>
+[INFO] 08:22:58:894 KERNEL/(78226:78233): PID: <0> - Signal: <RB> - Instancias: <0>
+[INFO] 08:22:58:894 KERNEL/(78226:78233): Se envia el proceso PID: <0> al CPU
+[INFO] 08:22:58:895 KERNEL/(78226:78233): Se recibe de CPU el proceso PID: <0>
+[INFO] 08:22:58:895 KERNEL/(78226:78233): PID: <0> - Bloqueado por: < RA >
+[INFO] 08:22:58:895 KERNEL/(78226:78233): PID: <0> - Estado Anterior: <Exec> - Estado Actual: <Block>
+[INFO] 08:22:58:901 KERNEL/(78226:78226): Se conecto una consola
+[INFO] 08:22:58:905 KERNEL/(78226:78600): Se recibieron instrucciones de una consola
+[INFO] 08:22:58:905 KERNEL/(78226:78600): Se Crea el proceso <1> en NEW
+[INFO] 08:22:58:907 KERNEL/(78226:78230): PID: <1> - Estado Anterior: <New> - Estado Actual: <Ready>
+[INFO] 08:22:58:908 KERNEL/(78226:78230): Cola Ready <FIFO>: [1]
+[INFO] 08:22:58:909 KERNEL/(78226:78233): PID: <1> - Estado Anterior: <Ready> - Estado Actual: <Exec>
+[INFO] 08:22:58:909 KERNEL/(78226:78230): Se mando la señal al planificador de corto plazo
+[INFO] 08:22:58:910 KERNEL/(78226:78233): Se envia el proceso PID: <1> al CPU
+[INFO] 08:22:58:911 KERNEL/(78226:78233): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:22:58:911 KERNEL/(78226:78233): PID: <1> - Wait: <RB> - Instancias: <0>
+[INFO] 08:22:58:913 KERNEL/(78226:78233): Se envia el proceso PID: <1> al CPU
+[INFO] 08:23:00:915 KERNEL/(78226:78233): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:23:00:916 KERNEL/(78226:78233): PID: <1> - Crear Segmento - Id: <1> - Tamaño: <64>
+[INFO] 08:23:00:917 KERNEL/(78226:78233): Se envia el proceso PID: <1> al CPU
+[INFO] 08:23:00:918 KERNEL/(78226:78233): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:23:00:921 KERNEL/(78226:78233): PID: <1> - Crear Segmento - Id: <2> - Tamaño: <64>
+[INFO] 08:23:00:923 KERNEL/(78226:78233): Se envia el proceso PID: <1> al CPU
+[INFO] 08:23:00:924 KERNEL/(78226:78233): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:23:00:926 KERNEL/(78226:78233): PID: <1> - Crear Segmento - Id: <3> - Tamaño: <64>
+[INFO] 08:23:00:927 KERNEL/(78226:78233): Se envia el proceso PID: <1> al CPU
+[INFO] 08:23:00:929 KERNEL/(78226:78233): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:23:00:931 KERNEL/(78226:78233): PID: <1> - Crear Segmento - Id: <4> - Tamaño: <64>
+[INFO] 08:23:00:932 KERNEL/(78226:78233): Se envia el proceso PID: <1> al CPU
+[INFO] 08:23:00:936 KERNEL/(78226:78233): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:23:00:938 KERNEL/(78226:78233): PID: <1> - Crear Segmento - Id: <5> - Tamaño: <64>
+[INFO] 08:23:00:940 KERNEL/(78226:78233): Se envia el proceso PID: <1> al CPU
+[INFO] 08:23:00:945 KERNEL/(78226:78233): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:23:00:950 KERNEL/(78226:78233): PID: <1> - Crear Segmento - Id: <6> - Tamaño: <64>
+[INFO] 08:23:00:950 KERNEL/(78226:78233): Se envia el proceso PID: <1> al CPU
+[INFO] 08:23:00:954 KERNEL/(78226:78233): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:23:00:957 KERNEL/(78226:78233): PID: <1> - Crear Segmento - Id: <7> - Tamaño: <64>
+[INFO] 08:23:00:960 KERNEL/(78226:78233): Se envia el proceso PID: <1> al CPU
+[INFO] 08:23:00:961 KERNEL/(78226:78233): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:23:00:964 KERNEL/(78226:78233): PID: <1> - Crear Segmento - Id: <8> - Tamaño: <64>
+[INFO] 08:23:00:966 KERNEL/(78226:78233): Se envia el proceso PID: <1> al CPU
+[INFO] 08:23:01:478 KERNEL/(78226:78226): Se conecto una consola
+[INFO] 08:23:01:479 KERNEL/(78226:78738): Se recibieron instrucciones de una consola
+[INFO] 08:23:01:479 KERNEL/(78226:78738): Se Crea el proceso <2> en NEW
+[INFO] 08:23:01:480 KERNEL/(78226:78230): PID: <2> - Estado Anterior: <New> - Estado Actual: <Ready>
+[INFO] 08:23:01:481 KERNEL/(78226:78230): Cola Ready <FIFO>: [2]
+[INFO] 08:23:01:484 KERNEL/(78226:78230): Se mando la señal al planificador de corto plazo
+[INFO] 08:23:03:969 KERNEL/(78226:78233): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:23:03:969 KERNEL/(78226:78233): PID: <1> - Signal: <RA> - Instancias: <0>
+[INFO] 08:23:03:969 KERNEL/(78226:78233): PID: <0> - Estado Anterior: <Block> - Estado Actual: <Ready>
+[INFO] 08:23:03:969 KERNEL/(78226:78233): Cola Ready <FIFO>: [2, 0]
+[INFO] 08:23:03:971 KERNEL/(78226:78233): Se envia el proceso PID: <1> al CPU
+[INFO] 08:23:03:972 KERNEL/(78226:78233): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:23:03:973 KERNEL/(78226:78233): PID: <1> - Bloqueado por: < RB >
+[INFO] 08:23:03:973 KERNEL/(78226:78233): PID: <1> - Estado Anterior: <Exec> - Estado Actual: <Block>
+[INFO] 08:23:03:973 KERNEL/(78226:78233): PID: <2> - Estado Anterior: <Ready> - Estado Actual: <Exec>
+[INFO] 08:23:03:974 KERNEL/(78226:78233): Se envia el proceso PID: <2> al CPU
+[INFO] 08:23:03:976 KERNEL/(78226:78233): Se recibe de CPU el proceso PID: <2>
+[INFO] 08:23:03:976 KERNEL/(78226:78233): PID: <2> - Bloqueado por: < RC >
+[INFO] 08:23:03:976 KERNEL/(78226:78233): PID: <2> - Estado Anterior: <Exec> - Estado Actual: <Block>
+[INFO] 08:23:03:976 KERNEL/(78226:78233): PID: <0> - Estado Anterior: <Ready> - Estado Actual: <Exec>
+[INFO] 08:23:03:977 KERNEL/(78226:78233): Se envia el proceso PID: <0> al CPU
+[INFO] 08:23:03:977 KERNEL/(78226:78233): Se recibe de CPU el proceso PID: <0>
+[INFO] 08:23:03:979 KERNEL/(78226:78233): PID: <0> - Eliminar Segmento - Id Segmento: <1>
+[INFO] 08:23:03:980 KERNEL/(78226:78233): Se envia el proceso PID: <0> al CPU
+[INFO] 08:23:05:982 KERNEL/(78226:78233): Se recibe de CPU el proceso PID: <0>
+[INFO] 08:23:05:982 KERNEL/(78226:78233): PID: <0> - Signal: <RB> - Instancias: <0>
+[INFO] 08:23:05:982 KERNEL/(78226:78233): PID: <1> - Estado Anterior: <Block> - Estado Actual: <Ready>
+[INFO] 08:23:05:982 KERNEL/(78226:78233): Cola Ready <FIFO>: [1]
+[INFO] 08:23:05:983 KERNEL/(78226:78233): Se envia el proceso PID: <0> al CPU
+[INFO] 08:23:05:984 KERNEL/(78226:78233): Se recibe de CPU el proceso PID: <0>
+[INFO] 08:23:05:984 KERNEL/(78226:78233): PID: <0> - Bloqueado por: < RA >
+[INFO] 08:23:05:984 KERNEL/(78226:78233): PID: <0> - Estado Anterior: <Exec> - Estado Actual: <Block>
+[INFO] 08:23:05:984 KERNEL/(78226:78233): PID: <1> - Estado Anterior: <Ready> - Estado Actual: <Exec>
+[INFO] 08:23:05:984 KERNEL/(78226:78233): Se envia el proceso PID: <1> al CPU
+[INFO] 08:23:05:986 KERNEL/(78226:78233): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:23:05:987 KERNEL/(78226:78233): PID: <1> - Crear Segmento - Id: <9> - Tamaño: <64>
+[INFO] 08:23:05:988 KERNEL/(78226:78233): Se envia el proceso PID: <1> al CPU
+[INFO] 08:23:11:993 KERNEL/(78226:78233): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:23:11:993 KERNEL/(78226:78233): PID: <1> - Signal: <RC> - Instancias: <0>
+[INFO] 08:23:11:993 KERNEL/(78226:78233): PID: <2> - Estado Anterior: <Block> - Estado Actual: <Ready>
+[INFO] 08:23:11:993 KERNEL/(78226:78233): Cola Ready <FIFO>: [2]
+[INFO] 08:23:11:994 KERNEL/(78226:78233): Se envia el proceso PID: <1> al CPU
+[INFO] 08:23:11:995 KERNEL/(78226:78233): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:23:11:995 KERNEL/(78226:78233): PID: <1> - Bloqueado por: < RB >
+[INFO] 08:23:11:995 KERNEL/(78226:78233): PID: <1> - Estado Anterior: <Exec> - Estado Actual: <Block>
+[INFO] 08:23:11:995 KERNEL/(78226:78233): PID: <2> - Estado Anterior: <Ready> - Estado Actual: <Exec>
+[INFO] 08:23:11:996 KERNEL/(78226:78233): Se envia el proceso PID: <2> al CPU
+[INFO] 08:23:11:997 KERNEL/(78226:78233): Se recibe de CPU el proceso PID: <2>
+[INFO] 08:23:30:021 KERNEL/(78226:78233): Compactación: <Se solicitó compactación / Esperando Fin de Operaciones de FS>
+[INFO] 08:23:30:021 KERNEL/(78226:78233): Inicia la compactacion
+[INFO] 08:24:49:937 KERNEL/(78226:78233): Se finalizó el proceso de compactación
+[INFO] 08:36:09:069 KERNEL/(80335:80335): Se conecto al servidor 127.0.0.1:8001
+[INFO] 08:36:09:071 KERNEL/(80335:80335): Se conecto al servidor 127.0.0.1:8002
+[INFO] 08:36:09:071 KERNEL/(80335:80335): Se conecto al servidor 127.0.0.1:8003
+[INFO] 08:36:09:072 KERNEL/(80335:80340): Inicia el planificador de largo plazo
+[INFO] 08:36:09:076 KERNEL/(80335:80341): Inicia el planificador de corto plazo
+[INFO] 08:36:09:082 KERNEL/(80335:80335): Esperando conexiones de consolas...
+[INFO] 08:36:16:299 KERNEL/(80335:80335): Se conecto una consola
+[INFO] 08:36:16:301 KERNEL/(80335:80583): Se recibieron instrucciones de una consola
+[INFO] 08:36:16:304 KERNEL/(80335:80583): Se Crea el proceso <0> en NEW
+[INFO] 08:36:16:305 KERNEL/(80335:80340): PID: <0> - Estado Anterior: <New> - Estado Actual: <Ready>
+[INFO] 08:36:16:305 KERNEL/(80335:80340): Cola Ready <FIFO>: [0]
+[INFO] 08:36:16:306 KERNEL/(80335:80340): Se mando la señal al planificador de corto plazo
+[INFO] 08:36:16:307 KERNEL/(80335:80341): Empieza ciclo de instruccion
+[INFO] 08:36:16:310 KERNEL/(80335:80341): Se envia el proceso PID: <0> al CPU
+[INFO] 08:36:16:313 KERNEL/(80335:80341): Se recibe de CPU el proceso PID: <0>
+[INFO] 08:36:16:313 KERNEL/(80335:80341): PID: <0> - Wait: <RA> - Instancias: <0>
+[INFO] 08:36:16:315 KERNEL/(80335:80341): Se envia el proceso PID: <0> al CPU
+[INFO] 08:36:19:318 KERNEL/(80335:80341): Se recibe de CPU el proceso PID: <0>
+[INFO] 08:36:19:319 KERNEL/(80335:80341): PID: <0> - Crear Segmento - Id: <1> - Tamaño: <128>
+[INFO] 08:36:19:320 KERNEL/(80335:80341): Se envia el proceso PID: <0> al CPU
+[INFO] 08:36:19:323 KERNEL/(80335:80341): Se recibe de CPU el proceso PID: <0>
+[INFO] 08:36:19:324 KERNEL/(80335:80341): PID: <0> - Signal: <RB> - Instancias: <0>
+[INFO] 08:36:19:325 KERNEL/(80335:80341): Se envia el proceso PID: <0> al CPU
+[INFO] 08:36:19:325 KERNEL/(80335:80341): Se recibe de CPU el proceso PID: <0>
+[INFO] 08:36:19:325 KERNEL/(80335:80341): PID: <0> - Bloqueado por: < RA >
+[INFO] 08:36:19:326 KERNEL/(80335:80341): PID: <0> - Estado Anterior: <Exec> - Estado Actual: <Block>
+[INFO] 08:36:20:535 KERNEL/(80335:80335): Se conecto una consola
+[INFO] 08:36:20:536 KERNEL/(80335:80761): Se recibieron instrucciones de una consola
+[INFO] 08:36:20:536 KERNEL/(80335:80761): Se Crea el proceso <1> en NEW
+[INFO] 08:36:20:537 KERNEL/(80335:80340): PID: <1> - Estado Anterior: <New> - Estado Actual: <Ready>
+[INFO] 08:36:20:538 KERNEL/(80335:80340): Cola Ready <FIFO>: [1]
+[INFO] 08:36:20:539 KERNEL/(80335:80341): PID: <1> - Estado Anterior: <Ready> - Estado Actual: <Exec>
+[INFO] 08:36:20:539 KERNEL/(80335:80340): Se mando la señal al planificador de corto plazo
+[INFO] 08:36:20:541 KERNEL/(80335:80341): Se envia el proceso PID: <1> al CPU
+[INFO] 08:36:20:544 KERNEL/(80335:80341): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:36:20:544 KERNEL/(80335:80341): PID: <1> - Wait: <RB> - Instancias: <0>
+[INFO] 08:36:20:545 KERNEL/(80335:80341): Se envia el proceso PID: <1> al CPU
+[INFO] 08:36:22:547 KERNEL/(80335:80341): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:36:22:548 KERNEL/(80335:80341): PID: <1> - Crear Segmento - Id: <1> - Tamaño: <64>
+[INFO] 08:36:22:549 KERNEL/(80335:80341): Se envia el proceso PID: <1> al CPU
+[INFO] 08:36:22:550 KERNEL/(80335:80341): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:36:22:552 KERNEL/(80335:80341): PID: <1> - Crear Segmento - Id: <2> - Tamaño: <64>
+[INFO] 08:36:22:556 KERNEL/(80335:80341): Se envia el proceso PID: <1> al CPU
+[INFO] 08:36:22:558 KERNEL/(80335:80341): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:36:22:559 KERNEL/(80335:80341): PID: <1> - Crear Segmento - Id: <3> - Tamaño: <64>
+[INFO] 08:36:22:562 KERNEL/(80335:80341): Se envia el proceso PID: <1> al CPU
+[INFO] 08:36:22:563 KERNEL/(80335:80341): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:36:22:565 KERNEL/(80335:80341): PID: <1> - Crear Segmento - Id: <4> - Tamaño: <64>
+[INFO] 08:36:22:567 KERNEL/(80335:80341): Se envia el proceso PID: <1> al CPU
+[INFO] 08:36:22:568 KERNEL/(80335:80341): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:36:22:569 KERNEL/(80335:80341): PID: <1> - Crear Segmento - Id: <5> - Tamaño: <64>
+[INFO] 08:36:22:570 KERNEL/(80335:80341): Se envia el proceso PID: <1> al CPU
+[INFO] 08:36:22:570 KERNEL/(80335:80341): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:36:22:573 KERNEL/(80335:80341): PID: <1> - Crear Segmento - Id: <6> - Tamaño: <64>
+[INFO] 08:36:22:575 KERNEL/(80335:80341): Se envia el proceso PID: <1> al CPU
+[INFO] 08:36:22:575 KERNEL/(80335:80341): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:36:22:577 KERNEL/(80335:80341): PID: <1> - Crear Segmento - Id: <7> - Tamaño: <64>
+[INFO] 08:36:22:578 KERNEL/(80335:80341): Se envia el proceso PID: <1> al CPU
+[INFO] 08:36:22:579 KERNEL/(80335:80341): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:36:22:580 KERNEL/(80335:80341): PID: <1> - Crear Segmento - Id: <8> - Tamaño: <64>
+[INFO] 08:36:22:585 KERNEL/(80335:80341): Se envia el proceso PID: <1> al CPU
+[INFO] 08:36:24:369 KERNEL/(80335:80335): Se conecto una consola
+[INFO] 08:36:24:373 KERNEL/(80335:80929): Se recibieron instrucciones de una consola
+[INFO] 08:36:24:374 KERNEL/(80335:80929): Se Crea el proceso <2> en NEW
+[INFO] 08:36:24:377 KERNEL/(80335:80340): PID: <2> - Estado Anterior: <New> - Estado Actual: <Ready>
+[INFO] 08:36:24:378 KERNEL/(80335:80340): Cola Ready <FIFO>: [2]
+[INFO] 08:36:24:379 KERNEL/(80335:80340): Se mando la señal al planificador de corto plazo
+[INFO] 08:36:25:590 KERNEL/(80335:80341): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:36:25:590 KERNEL/(80335:80341): PID: <1> - Signal: <RA> - Instancias: <0>
+[INFO] 08:36:25:590 KERNEL/(80335:80341): PID: <0> - Estado Anterior: <Block> - Estado Actual: <Ready>
+[INFO] 08:36:25:590 KERNEL/(80335:80341): Cola Ready <FIFO>: [2, 0]
+[INFO] 08:36:25:591 KERNEL/(80335:80341): Se envia el proceso PID: <1> al CPU
+[INFO] 08:36:25:593 KERNEL/(80335:80341): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:36:25:593 KERNEL/(80335:80341): PID: <1> - Bloqueado por: < RB >
+[INFO] 08:36:25:593 KERNEL/(80335:80341): PID: <1> - Estado Anterior: <Exec> - Estado Actual: <Block>
+[INFO] 08:36:25:593 KERNEL/(80335:80341): PID: <2> - Estado Anterior: <Ready> - Estado Actual: <Exec>
+[INFO] 08:36:25:594 KERNEL/(80335:80341): Se envia el proceso PID: <2> al CPU
+[INFO] 08:36:25:595 KERNEL/(80335:80341): Se recibe de CPU el proceso PID: <2>
+[INFO] 08:36:25:595 KERNEL/(80335:80341): PID: <2> - Bloqueado por: < RC >
+[INFO] 08:36:25:595 KERNEL/(80335:80341): PID: <2> - Estado Anterior: <Exec> - Estado Actual: <Block>
+[INFO] 08:36:25:595 KERNEL/(80335:80341): PID: <0> - Estado Anterior: <Ready> - Estado Actual: <Exec>
+[INFO] 08:36:25:596 KERNEL/(80335:80341): Se envia el proceso PID: <0> al CPU
+[INFO] 08:36:25:597 KERNEL/(80335:80341): Se recibe de CPU el proceso PID: <0>
+[INFO] 08:36:25:599 KERNEL/(80335:80341): PID: <0> - Eliminar Segmento - Id Segmento: <1>
+[INFO] 08:36:25:600 KERNEL/(80335:80341): Se envia el proceso PID: <0> al CPU
+[INFO] 08:36:27:605 KERNEL/(80335:80341): Se recibe de CPU el proceso PID: <0>
+[INFO] 08:36:27:605 KERNEL/(80335:80341): PID: <0> - Signal: <RB> - Instancias: <0>
+[INFO] 08:36:27:605 KERNEL/(80335:80341): PID: <1> - Estado Anterior: <Block> - Estado Actual: <Ready>
+[INFO] 08:36:27:605 KERNEL/(80335:80341): Cola Ready <FIFO>: [1]
+[INFO] 08:36:27:610 KERNEL/(80335:80341): Se envia el proceso PID: <0> al CPU
+[INFO] 08:36:27:615 KERNEL/(80335:80341): Se recibe de CPU el proceso PID: <0>
+[INFO] 08:36:27:615 KERNEL/(80335:80341): PID: <0> - Bloqueado por: < RA >
+[INFO] 08:36:27:615 KERNEL/(80335:80341): PID: <0> - Estado Anterior: <Exec> - Estado Actual: <Block>
+[INFO] 08:36:27:615 KERNEL/(80335:80341): PID: <1> - Estado Anterior: <Ready> - Estado Actual: <Exec>
+[INFO] 08:36:27:617 KERNEL/(80335:80341): Se envia el proceso PID: <1> al CPU
+[INFO] 08:36:27:619 KERNEL/(80335:80341): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:36:27:620 KERNEL/(80335:80341): PID: <1> - Crear Segmento - Id: <9> - Tamaño: <64>
+[INFO] 08:36:27:621 KERNEL/(80335:80341): Se envia el proceso PID: <1> al CPU
+[INFO] 08:36:33:631 KERNEL/(80335:80341): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:36:33:631 KERNEL/(80335:80341): PID: <1> - Signal: <RC> - Instancias: <0>
+[INFO] 08:36:33:631 KERNEL/(80335:80341): PID: <2> - Estado Anterior: <Block> - Estado Actual: <Ready>
+[INFO] 08:36:33:631 KERNEL/(80335:80341): Cola Ready <FIFO>: [2]
+[INFO] 08:36:33:635 KERNEL/(80335:80341): Se envia el proceso PID: <1> al CPU
+[INFO] 08:36:33:636 KERNEL/(80335:80341): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:36:33:636 KERNEL/(80335:80341): PID: <1> - Bloqueado por: < RB >
+[INFO] 08:36:33:636 KERNEL/(80335:80341): PID: <1> - Estado Anterior: <Exec> - Estado Actual: <Block>
+[INFO] 08:36:33:636 KERNEL/(80335:80341): PID: <2> - Estado Anterior: <Ready> - Estado Actual: <Exec>
+[INFO] 08:36:33:638 KERNEL/(80335:80341): Se envia el proceso PID: <2> al CPU
+[INFO] 08:36:33:638 KERNEL/(80335:80341): Se recibe de CPU el proceso PID: <2>
+[INFO] 08:36:43:345 KERNEL/(80335:80341): Compactación: <Se solicitó compactación / Esperando Fin de Operaciones de FS>
+[INFO] 08:36:43:346 KERNEL/(80335:80341): Inicia la compactacion
+[INFO] 08:39:09:705 KERNEL/(82125:82125): Se conecto al servidor 127.0.0.1:8001
+[INFO] 08:39:09:705 KERNEL/(82125:82125): Se conecto al servidor 127.0.0.1:8002
+[INFO] 08:39:09:705 KERNEL/(82125:82125): Se conecto al servidor 127.0.0.1:8003
+[INFO] 08:39:09:706 KERNEL/(82125:82141): Inicia el planificador de largo plazo
+[INFO] 08:39:09:707 KERNEL/(82125:82143): Inicia el planificador de corto plazo
+[INFO] 08:39:09:708 KERNEL/(82125:82125): Esperando conexiones de consolas...
+[INFO] 08:39:16:421 KERNEL/(82125:82125): Se conecto una consola
+[INFO] 08:39:16:423 KERNEL/(82125:82367): Se recibieron instrucciones de una consola
+[INFO] 08:39:16:423 KERNEL/(82125:82367): Se Crea el proceso <0> en NEW
+[INFO] 08:39:16:424 KERNEL/(82125:82141): PID: <0> - Estado Anterior: <New> - Estado Actual: <Ready>
+[INFO] 08:39:16:424 KERNEL/(82125:82141): Cola Ready <FIFO>: [0]
+[INFO] 08:39:16:424 KERNEL/(82125:82141): Se mando la señal al planificador de corto plazo
+[INFO] 08:39:16:425 KERNEL/(82125:82143): Empieza ciclo de instruccion
+[INFO] 08:39:16:426 KERNEL/(82125:82143): Se envia el proceso PID: <0> al CPU
+[INFO] 08:39:16:427 KERNEL/(82125:82143): Se recibe de CPU el proceso PID: <0>
+[INFO] 08:39:16:427 KERNEL/(82125:82143): PID: <0> - Wait: <RA> - Instancias: <0>
+[INFO] 08:39:16:428 KERNEL/(82125:82143): Se envia el proceso PID: <0> al CPU
+[INFO] 08:39:19:433 KERNEL/(82125:82143): Se recibe de CPU el proceso PID: <0>
+[INFO] 08:39:19:435 KERNEL/(82125:82143): PID: <0> - Crear Segmento - Id: <1> - Tamaño: <128>
+[INFO] 08:39:19:438 KERNEL/(82125:82143): Se envia el proceso PID: <0> al CPU
+[INFO] 08:39:19:439 KERNEL/(82125:82143): Se recibe de CPU el proceso PID: <0>
+[INFO] 08:39:19:439 KERNEL/(82125:82143): PID: <0> - Signal: <RB> - Instancias: <0>
+[INFO] 08:39:19:447 KERNEL/(82125:82143): Se envia el proceso PID: <0> al CPU
+[INFO] 08:39:19:450 KERNEL/(82125:82143): Se recibe de CPU el proceso PID: <0>
+[INFO] 08:39:19:450 KERNEL/(82125:82143): PID: <0> - Bloqueado por: < RA >
+[INFO] 08:39:19:450 KERNEL/(82125:82143): PID: <0> - Estado Anterior: <Exec> - Estado Actual: <Block>
+[INFO] 08:39:20:061 KERNEL/(82125:82125): Se conecto una consola
+[INFO] 08:39:20:062 KERNEL/(82125:82544): Se recibieron instrucciones de una consola
+[INFO] 08:39:20:062 KERNEL/(82125:82544): Se Crea el proceso <1> en NEW
+[INFO] 08:39:20:063 KERNEL/(82125:82141): PID: <1> - Estado Anterior: <New> - Estado Actual: <Ready>
+[INFO] 08:39:20:063 KERNEL/(82125:82141): Cola Ready <FIFO>: [1]
+[INFO] 08:39:20:063 KERNEL/(82125:82143): PID: <1> - Estado Anterior: <Ready> - Estado Actual: <Exec>
+[INFO] 08:39:20:064 KERNEL/(82125:82141): Se mando la señal al planificador de corto plazo
+[INFO] 08:39:20:064 KERNEL/(82125:82143): Se envia el proceso PID: <1> al CPU
+[INFO] 08:39:20:066 KERNEL/(82125:82143): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:39:20:066 KERNEL/(82125:82143): PID: <1> - Wait: <RB> - Instancias: <0>
+[INFO] 08:39:20:068 KERNEL/(82125:82143): Se envia el proceso PID: <1> al CPU
+[INFO] 08:39:22:070 KERNEL/(82125:82143): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:39:22:071 KERNEL/(82125:82143): PID: <1> - Crear Segmento - Id: <1> - Tamaño: <64>
+[INFO] 08:39:22:072 KERNEL/(82125:82143): Se envia el proceso PID: <1> al CPU
+[INFO] 08:39:22:073 KERNEL/(82125:82143): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:39:22:074 KERNEL/(82125:82143): PID: <1> - Crear Segmento - Id: <2> - Tamaño: <64>
+[INFO] 08:39:22:075 KERNEL/(82125:82143): Se envia el proceso PID: <1> al CPU
+[INFO] 08:39:22:080 KERNEL/(82125:82143): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:39:22:080 KERNEL/(82125:82143): PID: <1> - Crear Segmento - Id: <3> - Tamaño: <64>
+[INFO] 08:39:22:081 KERNEL/(82125:82143): Se envia el proceso PID: <1> al CPU
+[INFO] 08:39:22:083 KERNEL/(82125:82143): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:39:22:083 KERNEL/(82125:82143): PID: <1> - Crear Segmento - Id: <4> - Tamaño: <64>
+[INFO] 08:39:22:084 KERNEL/(82125:82143): Se envia el proceso PID: <1> al CPU
+[INFO] 08:39:22:085 KERNEL/(82125:82143): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:39:22:086 KERNEL/(82125:82143): PID: <1> - Crear Segmento - Id: <5> - Tamaño: <64>
+[INFO] 08:39:22:087 KERNEL/(82125:82143): Se envia el proceso PID: <1> al CPU
+[INFO] 08:39:22:088 KERNEL/(82125:82143): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:39:22:089 KERNEL/(82125:82143): PID: <1> - Crear Segmento - Id: <6> - Tamaño: <64>
+[INFO] 08:39:22:089 KERNEL/(82125:82143): Se envia el proceso PID: <1> al CPU
+[INFO] 08:39:22:090 KERNEL/(82125:82143): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:39:22:090 KERNEL/(82125:82143): PID: <1> - Crear Segmento - Id: <7> - Tamaño: <64>
+[INFO] 08:39:22:091 KERNEL/(82125:82143): Se envia el proceso PID: <1> al CPU
+[INFO] 08:39:22:092 KERNEL/(82125:82143): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:39:22:092 KERNEL/(82125:82143): PID: <1> - Crear Segmento - Id: <8> - Tamaño: <64>
+[INFO] 08:39:22:093 KERNEL/(82125:82143): Se envia el proceso PID: <1> al CPU
+[INFO] 08:39:23:437 KERNEL/(82125:82125): Se conecto una consola
+[INFO] 08:39:23:440 KERNEL/(82125:82709): Se recibieron instrucciones de una consola
+[INFO] 08:39:23:440 KERNEL/(82125:82709): Se Crea el proceso <2> en NEW
+[INFO] 08:39:23:440 KERNEL/(82125:82141): PID: <2> - Estado Anterior: <New> - Estado Actual: <Ready>
+[INFO] 08:39:23:440 KERNEL/(82125:82141): Cola Ready <FIFO>: [2]
+[INFO] 08:39:23:441 KERNEL/(82125:82141): Se mando la señal al planificador de corto plazo
+[INFO] 08:39:25:099 KERNEL/(82125:82143): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:39:25:099 KERNEL/(82125:82143): PID: <1> - Signal: <RA> - Instancias: <0>
+[INFO] 08:39:25:099 KERNEL/(82125:82143): PID: <0> - Estado Anterior: <Block> - Estado Actual: <Ready>
+[INFO] 08:39:25:100 KERNEL/(82125:82143): Cola Ready <FIFO>: [2, 0]
+[INFO] 08:39:25:102 KERNEL/(82125:82143): Se envia el proceso PID: <1> al CPU
+[INFO] 08:39:25:103 KERNEL/(82125:82143): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:39:25:103 KERNEL/(82125:82143): PID: <1> - Bloqueado por: < RB >
+[INFO] 08:39:25:103 KERNEL/(82125:82143): PID: <1> - Estado Anterior: <Exec> - Estado Actual: <Block>
+[INFO] 08:39:25:103 KERNEL/(82125:82143): PID: <2> - Estado Anterior: <Ready> - Estado Actual: <Exec>
+[INFO] 08:39:25:105 KERNEL/(82125:82143): Se envia el proceso PID: <2> al CPU
+[INFO] 08:39:25:106 KERNEL/(82125:82143): Se recibe de CPU el proceso PID: <2>
+[INFO] 08:39:25:106 KERNEL/(82125:82143): PID: <2> - Bloqueado por: < RC >
+[INFO] 08:39:25:106 KERNEL/(82125:82143): PID: <2> - Estado Anterior: <Exec> - Estado Actual: <Block>
+[INFO] 08:39:25:106 KERNEL/(82125:82143): PID: <0> - Estado Anterior: <Ready> - Estado Actual: <Exec>
+[INFO] 08:39:25:107 KERNEL/(82125:82143): Se envia el proceso PID: <0> al CPU
+[INFO] 08:39:25:109 KERNEL/(82125:82143): Se recibe de CPU el proceso PID: <0>
+[INFO] 08:39:25:110 KERNEL/(82125:82143): PID: <0> - Eliminar Segmento - Id Segmento: <1>
+[INFO] 08:39:25:111 KERNEL/(82125:82143): Se envia el proceso PID: <0> al CPU
+[INFO] 08:39:27:113 KERNEL/(82125:82143): Se recibe de CPU el proceso PID: <0>
+[INFO] 08:39:27:114 KERNEL/(82125:82143): PID: <0> - Signal: <RB> - Instancias: <0>
+[INFO] 08:39:27:114 KERNEL/(82125:82143): PID: <1> - Estado Anterior: <Block> - Estado Actual: <Ready>
+[INFO] 08:39:27:114 KERNEL/(82125:82143): Cola Ready <FIFO>: [1]
+[INFO] 08:39:27:115 KERNEL/(82125:82143): Se envia el proceso PID: <0> al CPU
+[INFO] 08:39:27:116 KERNEL/(82125:82143): Se recibe de CPU el proceso PID: <0>
+[INFO] 08:39:27:116 KERNEL/(82125:82143): PID: <0> - Bloqueado por: < RA >
+[INFO] 08:39:27:116 KERNEL/(82125:82143): PID: <0> - Estado Anterior: <Exec> - Estado Actual: <Block>
+[INFO] 08:39:27:116 KERNEL/(82125:82143): PID: <1> - Estado Anterior: <Ready> - Estado Actual: <Exec>
+[INFO] 08:39:27:117 KERNEL/(82125:82143): Se envia el proceso PID: <1> al CPU
+[INFO] 08:39:27:119 KERNEL/(82125:82143): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:39:27:120 KERNEL/(82125:82143): PID: <1> - Crear Segmento - Id: <9> - Tamaño: <64>
+[INFO] 08:39:27:124 KERNEL/(82125:82143): Se envia el proceso PID: <1> al CPU
+[INFO] 08:39:33:139 KERNEL/(82125:82143): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:39:33:140 KERNEL/(82125:82143): PID: <1> - Signal: <RC> - Instancias: <0>
+[INFO] 08:39:33:140 KERNEL/(82125:82143): PID: <2> - Estado Anterior: <Block> - Estado Actual: <Ready>
+[INFO] 08:39:33:140 KERNEL/(82125:82143): Cola Ready <FIFO>: [2]
+[INFO] 08:39:33:141 KERNEL/(82125:82143): Se envia el proceso PID: <1> al CPU
+[INFO] 08:39:33:142 KERNEL/(82125:82143): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:39:33:142 KERNEL/(82125:82143): PID: <1> - Bloqueado por: < RB >
+[INFO] 08:39:33:142 KERNEL/(82125:82143): PID: <1> - Estado Anterior: <Exec> - Estado Actual: <Block>
+[INFO] 08:39:33:142 KERNEL/(82125:82143): PID: <2> - Estado Anterior: <Ready> - Estado Actual: <Exec>
+[INFO] 08:39:33:146 KERNEL/(82125:82143): Se envia el proceso PID: <2> al CPU
+[INFO] 08:39:33:148 KERNEL/(82125:82143): Se recibe de CPU el proceso PID: <2>
+[INFO] 08:39:37:647 KERNEL/(82125:82143): Compactación: <Se solicitó compactación / Esperando Fin de Operaciones de FS>
+[INFO] 08:39:37:648 KERNEL/(82125:82143): Inicia la compactacion
+[INFO] 08:42:57:151 KERNEL/(83789:83789): Se conecto al servidor 127.0.0.1:8001
+[INFO] 08:42:57:152 KERNEL/(83789:83789): Se conecto al servidor 127.0.0.1:8002
+[ERROR] 08:42:57:152 KERNEL/(83789:83789): No se pudo conectar al servidor 127.0.0.1:8003
+[INFO] 08:42:57:154 KERNEL/(83789:83805): Inicia el planificador de largo plazo
+[INFO] 08:42:57:156 KERNEL/(83789:83808): Inicia el planificador de corto plazo
+[INFO] 08:42:57:157 KERNEL/(83789:83789): Esperando conexiones de consolas...
+[INFO] 08:44:14:240 KERNEL/(84987:84987): Se conecto al servidor 127.0.0.1:8001
+[INFO] 08:44:14:240 KERNEL/(84987:84987): Se conecto al servidor 127.0.0.1:8002
+[INFO] 08:44:14:240 KERNEL/(84987:84987): Se conecto al servidor 127.0.0.1:8003
+[INFO] 08:44:14:245 KERNEL/(84987:85003): Inicia el planificador de largo plazo
+[INFO] 08:44:14:246 KERNEL/(84987:85005): Inicia el planificador de corto plazo
+[INFO] 08:44:14:247 KERNEL/(84987:84987): Esperando conexiones de consolas...
+[INFO] 08:44:20:354 KERNEL/(84987:84987): Se conecto una consola
+[INFO] 08:44:20:359 KERNEL/(84987:85203): Se recibieron instrucciones de una consola
+[INFO] 08:44:20:359 KERNEL/(84987:85203): Se Crea el proceso <0> en NEW
+[INFO] 08:44:20:359 KERNEL/(84987:85003): PID: <0> - Estado Anterior: <New> - Estado Actual: <Ready>
+[INFO] 08:44:20:359 KERNEL/(84987:85003): Cola Ready <FIFO>: [0]
+[INFO] 08:44:20:359 KERNEL/(84987:85003): Se mando la señal al planificador de corto plazo
+[INFO] 08:44:20:359 KERNEL/(84987:85005): Empieza ciclo de instruccion
+[INFO] 08:44:20:360 KERNEL/(84987:85005): Se envia el proceso PID: <0> al CPU
+[INFO] 08:44:20:365 KERNEL/(84987:85005): Se recibe de CPU el proceso PID: <0>
+[INFO] 08:44:20:365 KERNEL/(84987:85005): PID: <0> - Wait: <RA> - Instancias: <0>
+[INFO] 08:44:20:366 KERNEL/(84987:85005): Se envia el proceso PID: <0> al CPU
+[INFO] 08:44:23:368 KERNEL/(84987:85005): Se recibe de CPU el proceso PID: <0>
+[INFO] 08:44:23:371 KERNEL/(84987:85005): PID: <0> - Crear Segmento - Id: <1> - Tamaño: <128>
+[INFO] 08:44:23:373 KERNEL/(84987:85005): Se envia el proceso PID: <0> al CPU
+[INFO] 08:44:23:375 KERNEL/(84987:85005): Se recibe de CPU el proceso PID: <0>
+[INFO] 08:44:23:375 KERNEL/(84987:85005): PID: <0> - Signal: <RB> - Instancias: <0>
+[INFO] 08:44:23:376 KERNEL/(84987:85005): Se envia el proceso PID: <0> al CPU
+[INFO] 08:44:23:377 KERNEL/(84987:85005): Se recibe de CPU el proceso PID: <0>
+[INFO] 08:44:23:377 KERNEL/(84987:85005): PID: <0> - Bloqueado por: < RA >
+[INFO] 08:44:23:377 KERNEL/(84987:85005): PID: <0> - Estado Anterior: <Exec> - Estado Actual: <Block>
+[INFO] 08:44:23:994 KERNEL/(84987:84987): Se conecto una consola
+[INFO] 08:44:23:996 KERNEL/(84987:85350): Se recibieron instrucciones de una consola
+[INFO] 08:44:23:996 KERNEL/(84987:85350): Se Crea el proceso <1> en NEW
+[INFO] 08:44:23:997 KERNEL/(84987:85003): PID: <1> - Estado Anterior: <New> - Estado Actual: <Ready>
+[INFO] 08:44:23:997 KERNEL/(84987:85003): Cola Ready <FIFO>: [1]
+[INFO] 08:44:23:997 KERNEL/(84987:85005): PID: <1> - Estado Anterior: <Ready> - Estado Actual: <Exec>
+[INFO] 08:44:23:998 KERNEL/(84987:85003): Se mando la señal al planificador de corto plazo
+[INFO] 08:44:23:998 KERNEL/(84987:85005): Se envia el proceso PID: <1> al CPU
+[INFO] 08:44:24:004 KERNEL/(84987:85005): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:44:24:004 KERNEL/(84987:85005): PID: <1> - Wait: <RB> - Instancias: <0>
+[INFO] 08:44:24:007 KERNEL/(84987:85005): Se envia el proceso PID: <1> al CPU
+[INFO] 08:44:26:009 KERNEL/(84987:85005): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:44:26:010 KERNEL/(84987:85005): PID: <1> - Crear Segmento - Id: <1> - Tamaño: <64>
+[INFO] 08:44:26:011 KERNEL/(84987:85005): Se envia el proceso PID: <1> al CPU
+[INFO] 08:44:26:012 KERNEL/(84987:85005): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:44:26:013 KERNEL/(84987:85005): PID: <1> - Crear Segmento - Id: <2> - Tamaño: <64>
+[INFO] 08:44:26:014 KERNEL/(84987:85005): Se envia el proceso PID: <1> al CPU
+[INFO] 08:44:26:015 KERNEL/(84987:85005): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:44:26:016 KERNEL/(84987:85005): PID: <1> - Crear Segmento - Id: <3> - Tamaño: <64>
+[INFO] 08:44:26:017 KERNEL/(84987:85005): Se envia el proceso PID: <1> al CPU
+[INFO] 08:44:26:020 KERNEL/(84987:85005): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:44:26:025 KERNEL/(84987:85005): PID: <1> - Crear Segmento - Id: <4> - Tamaño: <64>
+[INFO] 08:44:26:027 KERNEL/(84987:85005): Se envia el proceso PID: <1> al CPU
+[INFO] 08:44:26:028 KERNEL/(84987:85005): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:44:26:029 KERNEL/(84987:85005): PID: <1> - Crear Segmento - Id: <5> - Tamaño: <64>
+[INFO] 08:44:26:031 KERNEL/(84987:85005): Se envia el proceso PID: <1> al CPU
+[INFO] 08:44:26:031 KERNEL/(84987:85005): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:44:26:033 KERNEL/(84987:85005): PID: <1> - Crear Segmento - Id: <6> - Tamaño: <64>
+[INFO] 08:44:26:034 KERNEL/(84987:85005): Se envia el proceso PID: <1> al CPU
+[INFO] 08:44:26:035 KERNEL/(84987:85005): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:44:26:035 KERNEL/(84987:85005): PID: <1> - Crear Segmento - Id: <7> - Tamaño: <64>
+[INFO] 08:44:26:037 KERNEL/(84987:85005): Se envia el proceso PID: <1> al CPU
+[INFO] 08:44:26:039 KERNEL/(84987:85005): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:44:26:040 KERNEL/(84987:85005): PID: <1> - Crear Segmento - Id: <8> - Tamaño: <64>
+[INFO] 08:44:26:042 KERNEL/(84987:85005): Se envia el proceso PID: <1> al CPU
+[INFO] 08:44:27:117 KERNEL/(84987:84987): Se conecto una consola
+[INFO] 08:44:27:119 KERNEL/(84987:85532): Se recibieron instrucciones de una consola
+[INFO] 08:44:27:121 KERNEL/(84987:85532): Se Crea el proceso <2> en NEW
+[INFO] 08:44:27:124 KERNEL/(84987:85003): PID: <2> - Estado Anterior: <New> - Estado Actual: <Ready>
+[INFO] 08:44:27:124 KERNEL/(84987:85003): Cola Ready <FIFO>: [2]
+[INFO] 08:44:27:125 KERNEL/(84987:85003): Se mando la señal al planificador de corto plazo
+[INFO] 08:44:29:048 KERNEL/(84987:85005): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:44:29:048 KERNEL/(84987:85005): PID: <1> - Signal: <RA> - Instancias: <0>
+[INFO] 08:44:29:048 KERNEL/(84987:85005): PID: <0> - Estado Anterior: <Block> - Estado Actual: <Ready>
+[INFO] 08:44:29:048 KERNEL/(84987:85005): Cola Ready <FIFO>: [2, 0]
+[INFO] 08:44:29:049 KERNEL/(84987:85005): Se envia el proceso PID: <1> al CPU
+[INFO] 08:44:29:053 KERNEL/(84987:85005): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:44:29:053 KERNEL/(84987:85005): PID: <1> - Bloqueado por: < RB >
+[INFO] 08:44:29:053 KERNEL/(84987:85005): PID: <1> - Estado Anterior: <Exec> - Estado Actual: <Block>
+[INFO] 08:44:29:053 KERNEL/(84987:85005): PID: <2> - Estado Anterior: <Ready> - Estado Actual: <Exec>
+[INFO] 08:44:29:054 KERNEL/(84987:85005): Se envia el proceso PID: <2> al CPU
+[INFO] 08:44:29:055 KERNEL/(84987:85005): Se recibe de CPU el proceso PID: <2>
+[INFO] 08:44:29:055 KERNEL/(84987:85005): PID: <2> - Bloqueado por: < RC >
+[INFO] 08:44:29:055 KERNEL/(84987:85005): PID: <2> - Estado Anterior: <Exec> - Estado Actual: <Block>
+[INFO] 08:44:29:055 KERNEL/(84987:85005): PID: <0> - Estado Anterior: <Ready> - Estado Actual: <Exec>
+[INFO] 08:44:29:056 KERNEL/(84987:85005): Se envia el proceso PID: <0> al CPU
+[INFO] 08:44:29:057 KERNEL/(84987:85005): Se recibe de CPU el proceso PID: <0>
+[INFO] 08:44:29:058 KERNEL/(84987:85005): PID: <0> - Eliminar Segmento - Id Segmento: <1>
+[INFO] 08:44:29:059 KERNEL/(84987:85005): Se envia el proceso PID: <0> al CPU
+[INFO] 08:44:31:061 KERNEL/(84987:85005): Se recibe de CPU el proceso PID: <0>
+[INFO] 08:44:31:062 KERNEL/(84987:85005): PID: <0> - Signal: <RB> - Instancias: <0>
+[INFO] 08:44:31:062 KERNEL/(84987:85005): PID: <1> - Estado Anterior: <Block> - Estado Actual: <Ready>
+[INFO] 08:44:31:062 KERNEL/(84987:85005): Cola Ready <FIFO>: [1]
+[INFO] 08:44:31:063 KERNEL/(84987:85005): Se envia el proceso PID: <0> al CPU
+[INFO] 08:44:31:063 KERNEL/(84987:85005): Se recibe de CPU el proceso PID: <0>
+[INFO] 08:44:31:064 KERNEL/(84987:85005): PID: <0> - Bloqueado por: < RA >
+[INFO] 08:44:31:064 KERNEL/(84987:85005): PID: <0> - Estado Anterior: <Exec> - Estado Actual: <Block>
+[INFO] 08:44:31:066 KERNEL/(84987:85005): PID: <1> - Estado Anterior: <Ready> - Estado Actual: <Exec>
+[INFO] 08:44:31:070 KERNEL/(84987:85005): Se envia el proceso PID: <1> al CPU
+[INFO] 08:44:31:072 KERNEL/(84987:85005): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:44:31:073 KERNEL/(84987:85005): PID: <1> - Crear Segmento - Id: <9> - Tamaño: <64>
+[INFO] 08:44:31:075 KERNEL/(84987:85005): Se envia el proceso PID: <1> al CPU
+[INFO] 08:44:37:080 KERNEL/(84987:85005): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:44:37:081 KERNEL/(84987:85005): PID: <1> - Signal: <RC> - Instancias: <0>
+[INFO] 08:44:37:081 KERNEL/(84987:85005): PID: <2> - Estado Anterior: <Block> - Estado Actual: <Ready>
+[INFO] 08:44:37:081 KERNEL/(84987:85005): Cola Ready <FIFO>: [2]
+[INFO] 08:44:37:083 KERNEL/(84987:85005): Se envia el proceso PID: <1> al CPU
+[INFO] 08:44:37:085 KERNEL/(84987:85005): Se recibe de CPU el proceso PID: <1>
+[INFO] 08:44:37:085 KERNEL/(84987:85005): PID: <1> - Bloqueado por: < RB >
+[INFO] 08:44:37:085 KERNEL/(84987:85005): PID: <1> - Estado Anterior: <Exec> - Estado Actual: <Block>
+[INFO] 08:44:37:085 KERNEL/(84987:85005): PID: <2> - Estado Anterior: <Ready> - Estado Actual: <Exec>
+[INFO] 08:44:37:086 KERNEL/(84987:85005): Se envia el proceso PID: <2> al CPU
+[INFO] 08:44:37:087 KERNEL/(84987:85005): Se recibe de CPU el proceso PID: <2>
+[INFO] 08:44:41:680 KERNEL/(84987:85005): Compactación: <Se solicitó compactación / Esperando Fin de Operaciones de FS>
+[INFO] 08:44:41:681 KERNEL/(84987:85005): Inicia la compactacion
+[INFO] 08:45:49:952 KERNEL/(84987:85005): Se finalizó el proceso de compactación

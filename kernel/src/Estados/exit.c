@@ -38,14 +38,14 @@ void terminar_proceso(t_pcb *proceso){
     agregar_a_paquete_dato_serializado(paquete, &proceso->contexto.PID, sizeof(int));
     serializar_tabla_segmentos(proceso->contexto.tabla_segmentos, paquete);
     enviar_paquete(paquete, SOCKET_MEMORIA);
-    free(paquete);
+    eliminar_paquete(paquete);
 
     recibir_operacion(SOCKET_MEMORIA);
     recibir_mensaje(SOCKET_MEMORIA);
 
     paquete = crear_paquete(TERMINAR);
     enviar_paquete(paquete, proceso->socket_consola);
-    free(paquete);
+    eliminar_paquete(paquete);
     
 
 

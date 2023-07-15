@@ -18,7 +18,7 @@ void enviar_a_cpu()
 
     enviar_paquete(paquete, SOCKET_CPU);
 
-    free(paquete);
+    eliminar_paquete(paquete);
 
     log_info(LOGGER_KERNEL, "Se envia el proceso PID: <%d> al CPU", EJECUTANDO->contexto.PID);
 

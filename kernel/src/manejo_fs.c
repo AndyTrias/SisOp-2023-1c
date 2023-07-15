@@ -65,7 +65,7 @@ void solicitar_fs(int cod_op){
   t_paquete *paquete = crear_paquete(cod_op);
   serializar_motivos_desalojo(EJECUTANDO->contexto.motivos_desalojo, paquete);
   enviar_paquete(paquete, SOCKET_FILESYSTEM);
-  free(paquete);
+  eliminar_paquete(paquete);
 }
 void solicitar_fs_r_w(int cod_op, int puntero){
   
@@ -74,7 +74,7 @@ void solicitar_fs_r_w(int cod_op, int puntero){
   agregar_parametro_desalojo(&EJECUTANDO->contexto, string_itoa(puntero));
   serializar_motivos_desalojo(EJECUTANDO->contexto.motivos_desalojo, paquete);
   enviar_paquete(paquete, SOCKET_FILESYSTEM);
-  free(paquete);
+  eliminar_paquete(paquete);
 }
 
 int f_open(t_pcb *proceso, char *nombre_archivo)

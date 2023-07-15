@@ -91,6 +91,8 @@ char* recibir_mensaje(int);
 void agregar_a_paquete_dato_serializado(t_paquete *, void *, int);
 void enviar_paquete(t_paquete *, int);
 void* recibir_buffer(int* , int);
+void eliminar_paquete(t_paquete *paquete);
+
 
 
 // Serializaciones + Deserealizaciones que usan las funciones de arriba
