@@ -1,0 +1,3 @@
+[INFO] 00:10:33:802 FILE SYSTEM/(109839:109839): Escribir Archivo: Consoles - Puntero: 128 - Memoria: 93824992278656 - Tamaño: 80
+[INFO] 00:10:33:804 FILE SYSTEM/(109839:109839): Cargando puntero indirecto para el archivo: Consoles
+[INFO] 00:10:33:805 FILE SYSTEM/(109839:109839): Retardo - Archivo: Consoles - Bloque Archivo: Bloque de Punteros - Bloque File System 1

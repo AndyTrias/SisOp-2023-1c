@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
     }
 
     t_config *config = iniciar_config(argv[1]);
-    t_config* configIp = iniciar_config("/home/utnso/Desktop/tp-2023-1c-Los-pibardos-de-operativos/utils/src/utils/config/ips.config");
+    // t_config* configIp = iniciar_config("/home/utnso/Desktop/tp-2023-1c-Los-pibardos-de-operativos/utils/src/utils/config/ips.config");
 
     inicializar_conexiones(&SOCKET_MEMORIA, config);
     
@@ -20,33 +20,9 @@ int main(int argc, char *argv[])
     // Caragamos todos los fcb en la memoria
     levantar_diccionario_fcb(config);
 
-
-    // Test de solicitudes sin conexion
-    // t_parametros_variables *parametros_instruccion = malloc(sizeof(t_parametros_variables));
-    // parametros_instruccion->cantidad_parametros = 0;
-
-    // agregar_parametro_variable(parametros_instruccion, "archivoTestFcb");
-    // atender_solicitudes(F_CREATES, parametros_instruccion);
-
-
-    // agregar_parametro_variable(parametros_instruccion, "152");
-    // atender_solicitudes(F_TRUNCATE, parametros_instruccion);
-    // liberar_parametros_variables(parametros_instruccion);
-    
-    // agregar_parametro_variable(parametros_instruccion, "archivoTestFcb");
-    // agregar_parametro_variable(parametros_instruccion, "0");
-    // agregar_parametro_variable(parametros_instruccion, "88"); // Tamanio
-    // agregar_parametro_variable(parametros_instruccion, "50"); // Puntero
-    // atender_solicitudes(F_READ, parametros_instruccion);
-
-
-    // liberar_parametros_variables(parametros_instruccion);    
-
-
-    
-
+  
     char *puerto_escucha = config_get_string_value(config, "PUERTO_ESCUCHA");
-    char* ip = config_get_string_value(configIp, "IP_FILE-SYSTEM");
+    char* ip = config_get_string_value(config, "IP_FILE-SYSTEM");
     int socket_servidor = crear_servidor(ip, puerto_escucha);
 
     conectar_kernel(socket_servidor);
