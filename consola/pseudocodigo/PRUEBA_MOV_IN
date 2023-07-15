@@ -1,0 +1,3 @@
+SET RAX SonicTheHedgehog
+MOV_OUT 0 RAX
+MOV_IN RBX 0

@@ -200,6 +200,7 @@ void serializar_motivos_desalojo(t_parametros_variables *motivos_desalojo, t_paq
 
 	for (int i = 0; i < motivos_desalojo->cantidad_parametros; i++)
 	{
+		char* param = motivos_desalojo->parametros[i];
 		tamanio_parametro = strlen(motivos_desalojo->parametros[i]) + 1;
 		agregar_a_paquete_dato_serializado(paquete, &tamanio_parametro, sizeof(int));
 		agregar_a_paquete_dato_serializado(paquete, motivos_desalojo->parametros[i], tamanio_parametro);		

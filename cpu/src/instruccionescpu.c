@@ -88,7 +88,7 @@ op_code execute(t_instruccion *instruccion_actual, t_ctx *ctx)
 		}
 		char* dir_fisica_string = malloc(10);
 		sprintf(dir_fisica_string, "%ld", dir_fisica);
-		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[0]);
+		agregar_parametro_desalojo(ctx, string_itoa(sizeof(instruccion_actual->parametros[0])));
 		agregar_parametro_desalojo(ctx, dir_fisica_string);
 
 		t_paquete *paquete = crear_paquete(MOV_IN);

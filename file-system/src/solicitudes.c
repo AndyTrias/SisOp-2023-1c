@@ -138,7 +138,8 @@ void achicar_archivo(void *archivo_de_bloques, int cantidad_bloques_a_liberar, i
 
 void f_write(char *direccion, int posicion_archivo, int tamanio_a_escribir)
 {
-    char* valor_leido = leer_direccion_de_memoria(direccion);
+    char* valor_leido = leer_direccion_de_memoria(direccion, string_itoa(tamanio_a_escribir));
+    log_info(LOGGER_FILE_SYSTEM, "Valor leido: %s", valor_leido);
 
     log_info(LOGGER_FILE_SYSTEM, "Escribir Archivo: %s - Puntero: %d - Memoria: %s - Tamaño: %d", nombre_archivo, posicion_archivo, direccion, tamanio_a_escribir);
 
