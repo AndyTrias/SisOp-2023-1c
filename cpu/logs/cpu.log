@@ -268,3 +268,37 @@
 [INFO] 02:32:00:944 CPU/(152447:152447): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 0x562774cae870 - Valor: SonicTheHedgehog
 [INFO] 02:32:08:089 CPU/(152447:152447): PID : 0 - <MOV_IN> - <RBX 0> 
 [INFO] 02:32:15:338 CPU/(152447:152447): OFFSET: 0, BYTEs: 8
+[INFO] 03:08:28:419 CPU/(16408:16408): Se conecto al servidor 127.0.0.1:8002
+[INFO] 03:08:28:420 CPU/(16408:16408): Esperando kernel....
+[INFO] 03:08:45:495 CPU/(16408:16408): Se conecto el kernel
+[INFO] 03:10:37:895 CPU/(16408:16408): Se recibio el PID: 0
+[INFO] 03:10:52:167 CPU/(16408:16408): PID : 0 - <SET> - <RAX SonicTheHedgehog>
+[INFO] 03:11:00:149 CPU/(16408:16408): PID : 0 - <MOV OUT> - <0 RAX> 
+[INFO] 03:11:26:807 CPU/(16408:16408): OFFSET: 0, BYTEs: 8
+[INFO] 03:11:28:814 CPU/(16408:16408): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 0x5628a8563870 - Valor: SonicTheHedgehog
+[INFO] 03:11:32:981 CPU/(16408:16408): PID : 0 - <MOV_IN> - <RBX 0> 
+[INFO] 03:11:36:777 CPU/(16408:16408): OFFSET: 0, BYTEs: 8
+[INFO] 03:16:55:068 CPU/(19033:19033): Se conecto al servidor 127.0.0.1:8002
+[INFO] 03:16:55:070 CPU/(19033:19033): Esperando kernel....
+[INFO] 03:17:03:532 CPU/(19033:19033): Se conecto el kernel
+[INFO] 03:17:10:231 CPU/(19033:19033): Se recibio el PID: 0
+[INFO] 03:17:23:344 CPU/(19033:19033): PID : 0 - <SET> - <RAX SonicTheHedgehog>
+[INFO] 03:17:42:597 CPU/(19033:19033): PID : 0 - <MOV OUT> - <0 RAX> 
+[INFO] 03:17:48:507 CPU/(19033:19033): OFFSET: 0, BYTEs: 8
+[INFO] 03:18:56:469 CPU/(19033:19033): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 0x564781107870 - Valor: SonicTheHedgehog
+[INFO] 03:19:06:640 CPU/(19033:19033): PID : 0 - <MOV_IN> - <RBX 0> 
+[INFO] 03:19:06:640 CPU/(19033:19033): OFFSET: 0, BYTEs: 8
+[INFO] 03:20:17:215 CPU/(20354:20354): Se conecto al servidor 127.0.0.1:8002
+[INFO] 03:20:17:216 CPU/(20354:20354): Esperando kernel....
+[INFO] 03:21:54:534 CPU/(20911:20911): Se conecto al servidor 127.0.0.1:8002
+[INFO] 03:21:54:537 CPU/(20911:20911): Esperando kernel....
+[INFO] 03:23:14:896 CPU/(22625:22625): Se conecto al servidor 127.0.0.1:8002
+[INFO] 03:23:14:898 CPU/(22625:22625): Esperando kernel....
+[INFO] 03:23:29:924 CPU/(22625:22625): Se conecto el kernel
+[INFO] 03:23:39:693 CPU/(22625:22625): Se recibio el PID: 0
+[INFO] 03:23:40:763 CPU/(22625:22625): PID : 0 - <SET> - <RAX SonicTheHedgehog>
+[INFO] 03:23:40:763 CPU/(22625:22625): PID : 0 - <MOV OUT> - <0 RAX> 
+[INFO] 03:23:40:763 CPU/(22625:22625): OFFSET: 0, BYTEs: 8
+[INFO] 03:23:43:067 CPU/(22625:22625): PID: 0 - Acción: ESCRIBIR - Segmento: 0 - Dirección Física: 0x5646ea353870 - Valor: SonicTheHedgehog
+[INFO] 03:23:43:067 CPU/(22625:22625): PID : 0 - <MOV_IN> - <RBX 0> 
+[INFO] 03:24:29:178 CPU/(22625:22625): OFFSET: 0, BYTEs: 16
