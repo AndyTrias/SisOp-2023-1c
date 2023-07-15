@@ -1,0 +1,139 @@
+[INFO] 01:54:24:587 FILE SYSTEM/(140848:140848): Se conecto al servidor 127.0.0.1:8002
+[INFO] 01:54:24:588 FILE SYSTEM/(140848:140848): Se levanto el superbloque
+[INFO] 01:54:24:589 FILE SYSTEM/(140848:140848): Se creo un archvo de bitmaps de 1024 bits
+[INFO] 01:54:24:589 FILE SYSTEM/(140848:140848): Se creo un archivo de bloques de 65536 bytes
+[INFO] 01:54:24:589 FILE SYSTEM/(140848:140848): Esperando kernel....
+[INFO] 01:54:35:518 FILE SYSTEM/(140848:140848): Se conecto el kernel
+[INFO] 01:54:56:890 FILE SYSTEM/(140848:140848): Abrir Archivo: Consoles
+[INFO] 01:54:56:891 FILE SYSTEM/(140848:140848): Crear Archivo: Consoles
+[INFO] 01:54:56:897 FILE SYSTEM/(140848:140848): Truncar Archivo: Consoles - Tamaño: 256
+[INFO] 01:54:56:903 FILE SYSTEM/(140848:140848): Asignacion de puntero directo - Archivo: Consoles
+[INFO] 01:54:56:903 FILE SYSTEM/(140848:140848): Acceso a Bitmap - Bloque: 0 - Estado: 0
+[INFO] 01:54:56:904 FILE SYSTEM/(140848:140848): Asignacion de puntero indirecto - Archivo: Consoles
+[INFO] 01:54:56:904 FILE SYSTEM/(140848:140848): Acceso a Bitmap - Bloque: 0 - Estado: 1
+[INFO] 01:54:56:904 FILE SYSTEM/(140848:140848): Acceso a Bitmap - Bloque: 1 - Estado: 0
+[INFO] 01:54:56:904 FILE SYSTEM/(140848:140848): Cargando puntero indirecto para el archivo: Consoles
+[INFO] 01:54:56:904 FILE SYSTEM/(140848:140848): Retardo - Archivo: Consoles - Bloque Archivo: Bloque de Punteros - Bloque File System 1
+[INFO] 01:55:11:905 FILE SYSTEM/(140848:140848): Acceso a Bitmap - Bloque: 0 - Estado: 1
+[INFO] 01:55:11:905 FILE SYSTEM/(140848:140848): Acceso a Bitmap - Bloque: 1 - Estado: 1
+[INFO] 01:55:11:905 FILE SYSTEM/(140848:140848): Acceso a Bitmap - Bloque: 2 - Estado: 0
+[INFO] 01:55:11:905 FILE SYSTEM/(140848:140848): Acceso a Bitmap - Bloque: 0 - Estado: 1
+[INFO] 01:55:11:905 FILE SYSTEM/(140848:140848): Acceso a Bitmap - Bloque: 1 - Estado: 1
+[INFO] 01:55:11:905 FILE SYSTEM/(140848:140848): Acceso a Bitmap - Bloque: 2 - Estado: 1
+[INFO] 01:55:11:905 FILE SYSTEM/(140848:140848): Acceso a Bitmap - Bloque: 3 - Estado: 0
+[INFO] 01:55:11:905 FILE SYSTEM/(140848:140848): Acceso a Bitmap - Bloque: 0 - Estado: 1
+[INFO] 01:55:11:905 FILE SYSTEM/(140848:140848): Acceso a Bitmap - Bloque: 1 - Estado: 1
+[INFO] 01:55:11:905 FILE SYSTEM/(140848:140848): Acceso a Bitmap - Bloque: 2 - Estado: 1
+[INFO] 01:55:11:905 FILE SYSTEM/(140848:140848): Acceso a Bitmap - Bloque: 3 - Estado: 1
+[INFO] 01:55:11:905 FILE SYSTEM/(140848:140848): Acceso a Bitmap - Bloque: 4 - Estado: 0
+[INFO] 01:55:11:914 FILE SYSTEM/(140848:140848): Operacion Terminada
+[INFO] 01:59:43:871 FILE SYSTEM/(142358:142358): Se conecto al servidor 127.0.0.1:8002
+[INFO] 01:59:43:872 FILE SYSTEM/(142358:142358): Se levanto el superbloque
+[INFO] 01:59:43:872 FILE SYSTEM/(142358:142358): Archivo encontrado: ./fcb/Consoles
+
+[INFO] 01:59:43:872 FILE SYSTEM/(142358:142358): Esperando kernel....
+[INFO] 02:00:08:957 FILE SYSTEM/(142694:142694): Se conecto al servidor 127.0.0.1:8002
+[INFO] 02:00:08:957 FILE SYSTEM/(142694:142694): Se levanto el superbloque
+[INFO] 02:00:08:957 FILE SYSTEM/(142694:142694): Archivo encontrado: ./fcb/Consoles
+
+[INFO] 02:00:08:957 FILE SYSTEM/(142694:142694): Esperando kernel....
+[INFO] 02:00:38:618 FILE SYSTEM/(142694:142694): Se conecto el kernel
+[INFO] 02:00:59:793 FILE SYSTEM/(142694:142694): Abrir Archivo: Consoles
+[INFO] 02:00:59:796 FILE SYSTEM/(142694:142694): Truncar Archivo: Consoles - Tamaño: 256
+[INFO] 02:00:59:796 FILE SYSTEM/(142694:142694): No se modifican bloques
+[INFO] 02:01:33:232 FILE SYSTEM/(144131:144131): Se conecto al servidor 127.0.0.1:8002
+[INFO] 02:01:33:232 FILE SYSTEM/(144131:144131): Se levanto el superbloque
+[INFO] 02:01:33:232 FILE SYSTEM/(144131:144131): Se creo un archvo de bitmaps de 1024 bits
+[INFO] 02:01:33:233 FILE SYSTEM/(144131:144131): Se creo un archivo de bloques de 65536 bytes
+[INFO] 02:01:33:233 FILE SYSTEM/(144131:144131): Esperando kernel....
+[INFO] 02:01:42:293 FILE SYSTEM/(144131:144131): Se conecto el kernel
+[INFO] 02:02:02:190 FILE SYSTEM/(144131:144131): Abrir Archivo: Consoles
+[INFO] 02:02:02:190 FILE SYSTEM/(144131:144131): Crear Archivo: Consoles
+[INFO] 02:02:02:193 FILE SYSTEM/(144131:144131): Truncar Archivo: Consoles - Tamaño: 256
+[INFO] 02:02:02:193 FILE SYSTEM/(144131:144131): Asignacion de puntero directo - Archivo: Consoles
+[INFO] 02:02:02:193 FILE SYSTEM/(144131:144131): Acceso a Bitmap - Bloque: 0 - Estado: 0
+[INFO] 02:02:02:194 FILE SYSTEM/(144131:144131): Asignacion de puntero indirecto - Archivo: Consoles
+[INFO] 02:02:02:195 FILE SYSTEM/(144131:144131): Acceso a Bitmap - Bloque: 0 - Estado: 1
+[INFO] 02:02:02:195 FILE SYSTEM/(144131:144131): Acceso a Bitmap - Bloque: 1 - Estado: 0
+[INFO] 02:02:02:195 FILE SYSTEM/(144131:144131): Cargando puntero indirecto para el archivo: Consoles
+[INFO] 02:02:02:195 FILE SYSTEM/(144131:144131): Retardo - Archivo: Consoles - Bloque Archivo: Bloque de Punteros - Bloque File System 1
+[INFO] 02:02:17:200 FILE SYSTEM/(144131:144131): Acceso a Bitmap - Bloque: 0 - Estado: 1
+[INFO] 02:02:17:200 FILE SYSTEM/(144131:144131): Acceso a Bitmap - Bloque: 1 - Estado: 1
+[INFO] 02:02:17:200 FILE SYSTEM/(144131:144131): Acceso a Bitmap - Bloque: 2 - Estado: 0
+[INFO] 02:02:17:201 FILE SYSTEM/(144131:144131): Acceso a Bitmap - Bloque: 0 - Estado: 1
+[INFO] 02:02:17:201 FILE SYSTEM/(144131:144131): Acceso a Bitmap - Bloque: 1 - Estado: 1
+[INFO] 02:02:17:201 FILE SYSTEM/(144131:144131): Acceso a Bitmap - Bloque: 2 - Estado: 1
+[INFO] 02:02:17:201 FILE SYSTEM/(144131:144131): Acceso a Bitmap - Bloque: 3 - Estado: 0
+[INFO] 02:02:17:201 FILE SYSTEM/(144131:144131): Acceso a Bitmap - Bloque: 0 - Estado: 1
+[INFO] 02:02:17:201 FILE SYSTEM/(144131:144131): Acceso a Bitmap - Bloque: 1 - Estado: 1
+[INFO] 02:02:17:201 FILE SYSTEM/(144131:144131): Acceso a Bitmap - Bloque: 2 - Estado: 1
+[INFO] 02:02:17:201 FILE SYSTEM/(144131:144131): Acceso a Bitmap - Bloque: 3 - Estado: 1
+[INFO] 02:02:17:201 FILE SYSTEM/(144131:144131): Acceso a Bitmap - Bloque: 4 - Estado: 0
+[INFO] 02:02:17:212 FILE SYSTEM/(144131:144131): Operacion Terminada
+[INFO] 02:03:15:857 FILE SYSTEM/(145615:145615): Se conecto al servidor 127.0.0.1:8002
+[INFO] 02:03:15:858 FILE SYSTEM/(145615:145615): Se levanto el superbloque
+[INFO] 02:03:15:858 FILE SYSTEM/(145615:145615): Se creo un archvo de bitmaps de 1024 bits
+[INFO] 02:03:15:858 FILE SYSTEM/(145615:145615): Se creo un archivo de bloques de 65536 bytes
+[INFO] 02:03:15:858 FILE SYSTEM/(145615:145615): Esperando kernel....
+[INFO] 02:06:08:182 FILE SYSTEM/(147275:147275): Se conecto al servidor 127.0.0.1:8002
+[INFO] 02:06:08:183 FILE SYSTEM/(147275:147275): Se levanto el superbloque
+[INFO] 02:06:08:188 FILE SYSTEM/(147275:147275): Se creo un archvo de bitmaps de 1024 bits
+[INFO] 02:06:08:188 FILE SYSTEM/(147275:147275): Se creo un archivo de bloques de 65536 bytes
+[INFO] 02:06:08:188 FILE SYSTEM/(147275:147275): Esperando kernel....
+[INFO] 02:06:23:755 FILE SYSTEM/(147275:147275): Se conecto el kernel
+[INFO] 02:06:44:420 FILE SYSTEM/(147275:147275): Abrir Archivo: Consoles
+[INFO] 02:06:44:421 FILE SYSTEM/(147275:147275): Crear Archivo: Consoles
+[INFO] 02:06:44:432 FILE SYSTEM/(147275:147275): Truncar Archivo: Consoles - Tamaño: 256
+[INFO] 02:06:44:432 FILE SYSTEM/(147275:147275): Asignacion de puntero directo - Archivo: Consoles
+[INFO] 02:06:44:432 FILE SYSTEM/(147275:147275): Acceso a Bitmap - Bloque: 0 - Estado: 0
+[INFO] 02:06:44:433 FILE SYSTEM/(147275:147275): Asignacion de puntero indirecto - Archivo: Consoles
+[INFO] 02:06:44:433 FILE SYSTEM/(147275:147275): Acceso a Bitmap - Bloque: 0 - Estado: 1
+[INFO] 02:06:44:433 FILE SYSTEM/(147275:147275): Acceso a Bitmap - Bloque: 1 - Estado: 0
+[INFO] 02:06:44:434 FILE SYSTEM/(147275:147275): Cargando puntero indirecto para el archivo: Consoles
+[INFO] 02:06:44:434 FILE SYSTEM/(147275:147275): Retardo - Archivo: Consoles - Bloque Archivo: Bloque de Punteros - Bloque File System 1
+[INFO] 02:06:59:440 FILE SYSTEM/(147275:147275): Acceso a Bitmap - Bloque: 0 - Estado: 1
+[INFO] 02:06:59:441 FILE SYSTEM/(147275:147275): Acceso a Bitmap - Bloque: 1 - Estado: 1
+[INFO] 02:06:59:441 FILE SYSTEM/(147275:147275): Acceso a Bitmap - Bloque: 2 - Estado: 0
+[INFO] 02:06:59:441 FILE SYSTEM/(147275:147275): Acceso a Bitmap - Bloque: 0 - Estado: 1
+[INFO] 02:06:59:441 FILE SYSTEM/(147275:147275): Acceso a Bitmap - Bloque: 1 - Estado: 1
+[INFO] 02:06:59:441 FILE SYSTEM/(147275:147275): Acceso a Bitmap - Bloque: 2 - Estado: 1
+[INFO] 02:06:59:441 FILE SYSTEM/(147275:147275): Acceso a Bitmap - Bloque: 3 - Estado: 0
+[INFO] 02:06:59:441 FILE SYSTEM/(147275:147275): Acceso a Bitmap - Bloque: 0 - Estado: 1
+[INFO] 02:06:59:441 FILE SYSTEM/(147275:147275): Acceso a Bitmap - Bloque: 1 - Estado: 1
+[INFO] 02:06:59:441 FILE SYSTEM/(147275:147275): Acceso a Bitmap - Bloque: 2 - Estado: 1
+[INFO] 02:06:59:441 FILE SYSTEM/(147275:147275): Acceso a Bitmap - Bloque: 3 - Estado: 1
+[INFO] 02:06:59:441 FILE SYSTEM/(147275:147275): Acceso a Bitmap - Bloque: 4 - Estado: 0
+[INFO] 02:06:59:450 FILE SYSTEM/(147275:147275): Operacion Terminada
+[INFO] 02:09:51:392 FILE SYSTEM/(149098:149098): Se conecto al servidor 127.0.0.1:8002
+[INFO] 02:09:51:394 FILE SYSTEM/(149098:149098): Se levanto el superbloque
+[INFO] 02:09:51:395 FILE SYSTEM/(149098:149098): Se creo un archvo de bitmaps de 1024 bits
+[INFO] 02:09:51:403 FILE SYSTEM/(149098:149098): Se creo un archivo de bloques de 65536 bytes
+[INFO] 02:09:51:404 FILE SYSTEM/(149098:149098): Esperando kernel....
+[INFO] 02:10:03:517 FILE SYSTEM/(149098:149098): Se conecto el kernel
+[INFO] 02:10:24:424 FILE SYSTEM/(149098:149098): Abrir Archivo: Consoles
+[INFO] 02:10:24:455 FILE SYSTEM/(149098:149098): Crear Archivo: Consoles
+[INFO] 02:10:24:477 FILE SYSTEM/(149098:149098): Truncar Archivo: Consoles - Tamaño: 256
+[INFO] 02:10:24:478 FILE SYSTEM/(149098:149098): Asignacion de puntero directo - Archivo: Consoles
+[INFO] 02:10:24:478 FILE SYSTEM/(149098:149098): Acceso a Bitmap - Bloque: 0 - Estado: 0
+[INFO] 02:10:24:478 FILE SYSTEM/(149098:149098): Asignacion de puntero indirecto - Archivo: Consoles
+[INFO] 02:10:24:480 FILE SYSTEM/(149098:149098): Acceso a Bitmap - Bloque: 0 - Estado: 1
+[INFO] 02:10:24:481 FILE SYSTEM/(149098:149098): Acceso a Bitmap - Bloque: 1 - Estado: 0
+[INFO] 02:10:24:481 FILE SYSTEM/(149098:149098): Cargando puntero indirecto para el archivo: Consoles
+[INFO] 02:10:24:481 FILE SYSTEM/(149098:149098): Retardo - Archivo: Consoles - Bloque Archivo: Bloque de Punteros - Bloque File System 1
+[INFO] 02:10:39:482 FILE SYSTEM/(149098:149098): Acceso a Bitmap - Bloque: 0 - Estado: 1
+[INFO] 02:10:39:482 FILE SYSTEM/(149098:149098): Acceso a Bitmap - Bloque: 1 - Estado: 1
+[INFO] 02:10:39:482 FILE SYSTEM/(149098:149098): Acceso a Bitmap - Bloque: 2 - Estado: 0
+[INFO] 02:10:39:482 FILE SYSTEM/(149098:149098): Acceso a Bitmap - Bloque: 0 - Estado: 1
+[INFO] 02:10:39:482 FILE SYSTEM/(149098:149098): Acceso a Bitmap - Bloque: 1 - Estado: 1
+[INFO] 02:10:39:482 FILE SYSTEM/(149098:149098): Acceso a Bitmap - Bloque: 2 - Estado: 1
+[INFO] 02:10:39:482 FILE SYSTEM/(149098:149098): Acceso a Bitmap - Bloque: 3 - Estado: 0
+[INFO] 02:10:39:482 FILE SYSTEM/(149098:149098): Acceso a Bitmap - Bloque: 0 - Estado: 1
+[INFO] 02:10:39:482 FILE SYSTEM/(149098:149098): Acceso a Bitmap - Bloque: 1 - Estado: 1
+[INFO] 02:10:39:482 FILE SYSTEM/(149098:149098): Acceso a Bitmap - Bloque: 2 - Estado: 1
+[INFO] 02:10:39:482 FILE SYSTEM/(149098:149098): Acceso a Bitmap - Bloque: 3 - Estado: 1
+[INFO] 02:10:39:482 FILE SYSTEM/(149098:149098): Acceso a Bitmap - Bloque: 4 - Estado: 0
+[INFO] 02:10:39:491 FILE SYSTEM/(149098:149098): Operacion Terminada
+[INFO] 02:18:40:569 FILE SYSTEM/(149098:149098): Escribir Archivo: Consoles - Puntero: 128 - Memoria: 93824992278656 - Tamaño: 80
+[INFO] 02:18:40:570 FILE SYSTEM/(149098:149098): Cargando puntero indirecto para el archivo: Consoles
+[INFO] 02:18:40:570 FILE SYSTEM/(149098:149098): Retardo - Archivo: Consoles - Bloque Archivo: Bloque de Punteros - Bloque File System 1
+[INFO] 02:18:55:570 FILE SYSTEM/(149098:149098): Retardo - Archivo: Consoles - Bloque Archivo: 2 - Bloque File System 3

@@ -138,8 +138,8 @@ void achicar_archivo(void *archivo_de_bloques, int cantidad_bloques_a_liberar, i
 
 void f_write(char *direccion, int posicion_archivo, int tamanio_a_escribir)
 {
-    char *valor_leido = "Loremipsumdolorsitamet,consecteturadipiscingelit.Sedsuscipitturpisvelullamcorper13fghgff";
-    // char* valor_leido = leer_direccion_de_memoria(direccion);
+    char* valor_leido = leer_direccion_de_memoria(direccion, string_itoa(tamanio_a_escribir));
+    log_info(LOGGER_FILE_SYSTEM, "Valor leido: %s", valor_leido);
 
     log_info(LOGGER_FILE_SYSTEM, "Escribir Archivo: %s - Puntero: %d - Memoria: %s - Tamaño: %d", nombre_archivo, posicion_archivo, direccion, tamanio_a_escribir);
 
@@ -190,7 +190,7 @@ void f_read(char *direccion, int posicion_archivo, int tamanio_a_leer)
         tamanio_a_leer -= tamanio_a_leer_del_bloque;
     }
 
-    // escribir_valor_en_memoria(buffer, direccion);
+    escribir_valor_en_memoria(buffer, direccion);
 
     log_info(LOGGER_FILE_SYSTEM, "Valor Leido: %s", buffer);
     munmap(archivo_de_bloques, CANTIDAD_BLOQUES * TAMANIO_BLOQUES);

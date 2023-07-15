@@ -9,7 +9,8 @@
     #include "ready.h"
     #include "blocked.h"
 
-    void terminar_proceso(t_pcb *proceso);
+    void terminar_proceso(t_pcb *);
+    void liberar_recursos(t_pcb * );
 
 
 

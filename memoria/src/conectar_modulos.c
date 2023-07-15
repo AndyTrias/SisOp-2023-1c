@@ -141,7 +141,7 @@ void recibir_cpu(int* socket_modulo) {
             
             case MOV_IN:
                 t_parametros_variables* parametros = recibir_parametros_variables(*socket_modulo);
-                char* valor_leido = leer_valor_direccion_fisica(strtol(parametros->parametros[1], NULL, 10));
+                char* valor_leido = leer_valor_direccion_fisica(strtol(parametros->parametros[1], NULL, 10), atoi(parametros->parametros[0]));
                 enviar_mensaje(valor_leido, *socket_modulo);
                 free(valor_leido);
                 liberar_parametros_variables(parametros);
@@ -180,7 +180,7 @@ void recibir_fs(int* socket_modulo) {
 
             case F_WRITE:
                 parametros = recibir_parametros_variables(*socket_modulo);
-                char* valor_leido = leer_valor_direccion_fisica(strtol(parametros->parametros[0], NULL, 10));
+                char* valor_leido = leer_valor_direccion_fisica(strtol(parametros->parametros[0], NULL, 10), atoi(parametros->parametros[1]));
                 enviar_mensaje(valor_leido, *socket_modulo);
                 free(valor_leido);
                 liberar_parametros_variables(parametros);
