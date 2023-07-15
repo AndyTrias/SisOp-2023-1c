@@ -9,7 +9,7 @@ int main(int argc, char *argv[]) {
   }
 
   t_config* config = iniciar_config(argv[1]);
-  // t_config* configIp = iniciar_config("/home/utnso/Desktop/tp-2023-1c-Los-pibardos-de-operativos/utils/src/utils/config/ips.config");
+  char* IP = "127.0.0.1";
   inicializar_variables_globales(config);
 
   //Hilos que maneja el kernel
@@ -18,8 +18,7 @@ int main(int argc, char *argv[]) {
   inicializar_conexiones(config);
 
   char *puerto_escucha = config_get_string_value(config, "PUERTO_ESCUCHA");
-  char *ip = config_get_string_value(config, "IP_KERNEL");
-  int socket_servidor = crear_servidor(ip, puerto_escucha);
+  int socket_servidor = crear_servidor(IP, puerto_escucha);
   
   pthread_create(&hilo_planificacion_largo, NULL, (void *)planificador_largo,NULL);
 

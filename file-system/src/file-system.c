@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
     }
 
     t_config *config = iniciar_config(argv[1]);
-    // t_config* configIp = iniciar_config("/home/utnso/Desktop/tp-2023-1c-Los-pibardos-de-operativos/utils/src/utils/config/ips.config");
+    char* IP = "127.0.0.1";
 
     inicializar_conexiones(&SOCKET_MEMORIA, config);
     
@@ -22,8 +22,7 @@ int main(int argc, char *argv[])
 
   
     char *puerto_escucha = config_get_string_value(config, "PUERTO_ESCUCHA");
-    char* ip = config_get_string_value(config, "IP_FILE-SYSTEM");
-    int socket_servidor = crear_servidor(ip, puerto_escucha);
+    int socket_servidor = crear_servidor(IP, puerto_escucha);
 
     conectar_kernel(socket_servidor);
 

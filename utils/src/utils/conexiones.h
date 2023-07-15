@@ -13,7 +13,7 @@
     #include <pthread.h>
     #include <commons/config.h>
     
-    #define IP "127.0.0.1"
+    //#define IP "127.0.0.1"
 
     int inicializar_cliente(char* , char* , t_log* );
     int crear_conexion(char *, char *);
