@@ -101,11 +101,9 @@ void definir_accion(int cod_op, t_pcb *proceso)
         reemplazar_exec_por_nuevo();
         break;
     case CREATE_SEGMENT:
-        pthread_mutex_lock(&SOLICITUD_MEMORIA);
         crear_segmento(proceso);
         break;
     case DELETE_SEGMENT:
-        pthread_mutex_lock(&SOLICITUD_MEMORIA);
         eliminar_segmento(proceso);
         break;
     default:

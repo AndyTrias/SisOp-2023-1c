@@ -2,6 +2,7 @@
 
 void crear_segmento(t_pcb *proceso){// enviar a memoria CREATE_SEGMENT con sus 2 parametros (id del segmento y tamanio)
     //se solicita la creacion del segmento
+    pthread_mutex_lock(&SOLICITUD_MEMORIA);
     t_paquete *paquete = crear_paquete(CREATE_SEGMENT);
     serializar_contexto(&proceso->contexto, paquete);
     enviar_paquete(paquete, SOCKET_MEMORIA);
@@ -50,7 +51,7 @@ void crear_segmento(t_pcb *proceso){// enviar a memoria CREATE_SEGMENT con sus 2
 
 void eliminar_segmento(t_pcb *proceso){
     // enviar a memoria DELETE_SEGMENT con su parametro (id del segmento)
-
+    pthread_mutex_lock(&SOLICITUD_MEMORIA);
     t_paquete *paquete = crear_paquete(DELETE_SEGMENT);
     serializar_contexto(&proceso->contexto, paquete);
     enviar_paquete(paquete, SOCKET_MEMORIA);
