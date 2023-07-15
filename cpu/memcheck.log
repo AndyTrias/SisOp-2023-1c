@@ -1,0 +1,311 @@
+==11280== Memcheck, a memory error detector
+==11280== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==11280== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==11280== Command: ./bin/cpu.out ./config/cpuMemoria.config
+==11280== Parent PID: 11279
+==11280== 
+==11280== Invalid read of size 1
+==11280==    at 0x49814F8: getaddrinfo (getaddrinfo.c:2153)
+==11280==    by 0x10AC08: crear_servidor (conexiones.c:59)
+==11280==    by 0x109A66: main (cpu.c:21)
+==11280==  Address 0x4aa4340 is 0 bytes inside a block of size 10 free'd
+==11280==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11280==    by 0x486C0B0: dictionary_destroy_element (dictionary.c:324)
+==11280==    by 0x486BDB9: internal_dictionary_clean_and_destroy_elements (dictionary.c:240)
+==11280==    by 0x486BB1C: dictionary_clean_and_destroy_elements (dictionary.c:159)
+==11280==    by 0x486BBDE: dictionary_destroy_and_destroy_elements (dictionary.c:181)
+==11280==    by 0x486B36E: config_destroy (config.c:103)
+==11280==    by 0x109A53: main (cpu.c:20)
+==11280==  Block was alloc'd at
+==11280==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11280==    by 0x491D60E: strdup (strdup.c:42)
+==11280==    by 0x486E5DD: string_duplicate (string.c:43)
+==11280==    by 0x486F532: _string_split (string.c:328)
+==11280==    by 0x486ED79: string_n_split (string.c:166)
+==11280==    by 0x486AF90: add_cofiguration.0 (config.c:55)
+==11280==    by 0x486EF33: string_iterate_lines (string.c:200)
+==11280==    by 0x486B190: config_create (config.c:61)
+==11280==    by 0x10C5D0: iniciar_config (configs.c:7)
+==11280==    by 0x1099E9: main (cpu.c:12)
+==11280== 
+==11280== Invalid read of size 1
+==11280==    at 0x49BCE3D: inet_aton_end (inet_addr.c:129)
+==11280==    by 0x49BCF6A: __inet_aton_exact (inet_addr.c:187)
+==11280==    by 0x497EF8F: gaih_inet.constprop.0 (getaddrinfo.c:476)
+==11280==    by 0x49815D8: getaddrinfo (getaddrinfo.c:2240)
+==11280==    by 0x10AC08: crear_servidor (conexiones.c:59)
+==11280==    by 0x109A66: main (cpu.c:21)
+==11280==  Address 0x4aa4340 is 0 bytes inside a block of size 10 free'd
+==11280==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11280==    by 0x486C0B0: dictionary_destroy_element (dictionary.c:324)
+==11280==    by 0x486BDB9: internal_dictionary_clean_and_destroy_elements (dictionary.c:240)
+==11280==    by 0x486BB1C: dictionary_clean_and_destroy_elements (dictionary.c:159)
+==11280==    by 0x486BBDE: dictionary_destroy_and_destroy_elements (dictionary.c:181)
+==11280==    by 0x486B36E: config_destroy (config.c:103)
+==11280==    by 0x109A53: main (cpu.c:20)
+==11280==  Block was alloc'd at
+==11280==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11280==    by 0x491D60E: strdup (strdup.c:42)
+==11280==    by 0x486E5DD: string_duplicate (string.c:43)
+==11280==    by 0x486F532: _string_split (string.c:328)
+==11280==    by 0x486ED79: string_n_split (string.c:166)
+==11280==    by 0x486AF90: add_cofiguration.0 (config.c:55)
+==11280==    by 0x486EF33: string_iterate_lines (string.c:200)
+==11280==    by 0x486B190: config_create (config.c:61)
+==11280==    by 0x10C5D0: iniciar_config (configs.c:7)
+==11280==    by 0x1099E9: main (cpu.c:12)
+==11280== 
+==11280== Invalid read of size 1
+==11280==    at 0x48BCAB0: ____strtoul_l_internal (strtol_l.c:291)
+==11280==    by 0x49BCE76: inet_aton_end (inet_addr.c:133)
+==11280==    by 0x49BCF6A: __inet_aton_exact (inet_addr.c:187)
+==11280==    by 0x497EF8F: gaih_inet.constprop.0 (getaddrinfo.c:476)
+==11280==    by 0x49815D8: getaddrinfo (getaddrinfo.c:2240)
+==11280==    by 0x10AC08: crear_servidor (conexiones.c:59)
+==11280==    by 0x109A66: main (cpu.c:21)
+==11280==  Address 0x4aa4340 is 0 bytes inside a block of size 10 free'd
+==11280==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11280==    by 0x486C0B0: dictionary_destroy_element (dictionary.c:324)
+==11280==    by 0x486BDB9: internal_dictionary_clean_and_destroy_elements (dictionary.c:240)
+==11280==    by 0x486BB1C: dictionary_clean_and_destroy_elements (dictionary.c:159)
+==11280==    by 0x486BBDE: dictionary_destroy_and_destroy_elements (dictionary.c:181)
+==11280==    by 0x486B36E: config_destroy (config.c:103)
+==11280==    by 0x109A53: main (cpu.c:20)
+==11280==  Block was alloc'd at
+==11280==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11280==    by 0x491D60E: strdup (strdup.c:42)
+==11280==    by 0x486E5DD: string_duplicate (string.c:43)
+==11280==    by 0x486F532: _string_split (string.c:328)
+==11280==    by 0x486ED79: string_n_split (string.c:166)
+==11280==    by 0x486AF90: add_cofiguration.0 (config.c:55)
+==11280==    by 0x486EF33: string_iterate_lines (string.c:200)
+==11280==    by 0x486B190: config_create (config.c:61)
+==11280==    by 0x10C5D0: iniciar_config (configs.c:7)
+==11280==    by 0x1099E9: main (cpu.c:12)
+==11280== 
+==11280== Invalid read of size 1
+==11280==    at 0x48BCBA1: ____strtoul_l_internal (strtol_l.c:431)
+==11280==    by 0x49BCE76: inet_aton_end (inet_addr.c:133)
+==11280==    by 0x49BCF6A: __inet_aton_exact (inet_addr.c:187)
+==11280==    by 0x497EF8F: gaih_inet.constprop.0 (getaddrinfo.c:476)
+==11280==    by 0x49815D8: getaddrinfo (getaddrinfo.c:2240)
+==11280==    by 0x10AC08: crear_servidor (conexiones.c:59)
+==11280==    by 0x109A66: main (cpu.c:21)
+==11280==  Address 0x4aa4341 is 1 bytes inside a block of size 10 free'd
+==11280==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11280==    by 0x486C0B0: dictionary_destroy_element (dictionary.c:324)
+==11280==    by 0x486BDB9: internal_dictionary_clean_and_destroy_elements (dictionary.c:240)
+==11280==    by 0x486BB1C: dictionary_clean_and_destroy_elements (dictionary.c:159)
+==11280==    by 0x486BBDE: dictionary_destroy_and_destroy_elements (dictionary.c:181)
+==11280==    by 0x486B36E: config_destroy (config.c:103)
+==11280==    by 0x109A53: main (cpu.c:20)
+==11280==  Block was alloc'd at
+==11280==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11280==    by 0x491D60E: strdup (strdup.c:42)
+==11280==    by 0x486E5DD: string_duplicate (string.c:43)
+==11280==    by 0x486F532: _string_split (string.c:328)
+==11280==    by 0x486ED79: string_n_split (string.c:166)
+==11280==    by 0x486AF90: add_cofiguration.0 (config.c:55)
+==11280==    by 0x486EF33: string_iterate_lines (string.c:200)
+==11280==    by 0x486B190: config_create (config.c:61)
+==11280==    by 0x10C5D0: iniciar_config (configs.c:7)
+==11280==    by 0x1099E9: main (cpu.c:12)
+==11280== 
+==11280== Invalid read of size 1
+==11280==    at 0x49BCE81: inet_aton_end (inet_addr.c:142)
+==11280==    by 0x49BCF6A: __inet_aton_exact (inet_addr.c:187)
+==11280==    by 0x497EF8F: gaih_inet.constprop.0 (getaddrinfo.c:476)
+==11280==    by 0x49815D8: getaddrinfo (getaddrinfo.c:2240)
+==11280==    by 0x10AC08: crear_servidor (conexiones.c:59)
+==11280==    by 0x109A66: main (cpu.c:21)
+==11280==  Address 0x4aa4343 is 3 bytes inside a block of size 10 free'd
+==11280==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11280==    by 0x486C0B0: dictionary_destroy_element (dictionary.c:324)
+==11280==    by 0x486BDB9: internal_dictionary_clean_and_destroy_elements (dictionary.c:240)
+==11280==    by 0x486BB1C: dictionary_clean_and_destroy_elements (dictionary.c:159)
+==11280==    by 0x486BBDE: dictionary_destroy_and_destroy_elements (dictionary.c:181)
+==11280==    by 0x486B36E: config_destroy (config.c:103)
+==11280==    by 0x109A53: main (cpu.c:20)
+==11280==  Block was alloc'd at
+==11280==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11280==    by 0x491D60E: strdup (strdup.c:42)
+==11280==    by 0x486E5DD: string_duplicate (string.c:43)
+==11280==    by 0x486F532: _string_split (string.c:328)
+==11280==    by 0x486ED79: string_n_split (string.c:166)
+==11280==    by 0x486AF90: add_cofiguration.0 (config.c:55)
+==11280==    by 0x486EF33: string_iterate_lines (string.c:200)
+==11280==    by 0x486B190: config_create (config.c:61)
+==11280==    by 0x10C5D0: iniciar_config (configs.c:7)
+==11280==    by 0x1099E9: main (cpu.c:12)
+==11280== 
+==11280== Invalid read of size 1
+==11280==    at 0x49BCEA0: inet_aton_end (inet_addr.c:129)
+==11280==    by 0x49BCF6A: __inet_aton_exact (inet_addr.c:187)
+==11280==    by 0x497EF8F: gaih_inet.constprop.0 (getaddrinfo.c:476)
+==11280==    by 0x49815D8: getaddrinfo (getaddrinfo.c:2240)
+==11280==    by 0x10AC08: crear_servidor (conexiones.c:59)
+==11280==    by 0x109A66: main (cpu.c:21)
+==11280==  Address 0x4aa4344 is 4 bytes inside a block of size 10 free'd
+==11280==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11280==    by 0x486C0B0: dictionary_destroy_element (dictionary.c:324)
+==11280==    by 0x486BDB9: internal_dictionary_clean_and_destroy_elements (dictionary.c:240)
+==11280==    by 0x486BB1C: dictionary_clean_and_destroy_elements (dictionary.c:159)
+==11280==    by 0x486BBDE: dictionary_destroy_and_destroy_elements (dictionary.c:181)
+==11280==    by 0x486B36E: config_destroy (config.c:103)
+==11280==    by 0x109A53: main (cpu.c:20)
+==11280==  Block was alloc'd at
+==11280==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11280==    by 0x491D60E: strdup (strdup.c:42)
+==11280==    by 0x486E5DD: string_duplicate (string.c:43)
+==11280==    by 0x486F532: _string_split (string.c:328)
+==11280==    by 0x486ED79: string_n_split (string.c:166)
+==11280==    by 0x486AF90: add_cofiguration.0 (config.c:55)
+==11280==    by 0x486EF33: string_iterate_lines (string.c:200)
+==11280==    by 0x486B190: config_create (config.c:61)
+==11280==    by 0x10C5D0: iniciar_config (configs.c:7)
+==11280==    by 0x1099E9: main (cpu.c:12)
+==11280== 
+==11280== Invalid read of size 1
+==11280==    at 0x48BCDA7: ____strtoul_l_internal (strtol_l.c:309)
+==11280==    by 0x49BCE76: inet_aton_end (inet_addr.c:133)
+==11280==    by 0x49BCF6A: __inet_aton_exact (inet_addr.c:187)
+==11280==    by 0x497EF8F: gaih_inet.constprop.0 (getaddrinfo.c:476)
+==11280==    by 0x49815D8: getaddrinfo (getaddrinfo.c:2240)
+==11280==    by 0x10AC08: crear_servidor (conexiones.c:59)
+==11280==    by 0x109A66: main (cpu.c:21)
+==11280==  Address 0x4aa4345 is 5 bytes inside a block of size 10 free'd
+==11280==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11280==    by 0x486C0B0: dictionary_destroy_element (dictionary.c:324)
+==11280==    by 0x486BDB9: internal_dictionary_clean_and_destroy_elements (dictionary.c:240)
+==11280==    by 0x486BB1C: dictionary_clean_and_destroy_elements (dictionary.c:159)
+==11280==    by 0x486BBDE: dictionary_destroy_and_destroy_elements (dictionary.c:181)
+==11280==    by 0x486B36E: config_destroy (config.c:103)
+==11280==    by 0x109A53: main (cpu.c:20)
+==11280==  Block was alloc'd at
+==11280==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11280==    by 0x491D60E: strdup (strdup.c:42)
+==11280==    by 0x486E5DD: string_duplicate (string.c:43)
+==11280==    by 0x486F532: _string_split (string.c:328)
+==11280==    by 0x486ED79: string_n_split (string.c:166)
+==11280==    by 0x486AF90: add_cofiguration.0 (config.c:55)
+==11280==    by 0x486EF33: string_iterate_lines (string.c:200)
+==11280==    by 0x486B190: config_create (config.c:61)
+==11280==    by 0x10C5D0: iniciar_config (configs.c:7)
+==11280==    by 0x1099E9: main (cpu.c:12)
+==11280== 
+==11280== Invalid read of size 1
+==11280==    at 0x49BCF76: __inet_aton_exact (inet_addr.c:187)
+==11280==    by 0x497EF8F: gaih_inet.constprop.0 (getaddrinfo.c:476)
+==11280==    by 0x49815D8: getaddrinfo (getaddrinfo.c:2240)
+==11280==    by 0x10AC08: crear_servidor (conexiones.c:59)
+==11280==    by 0x109A66: main (cpu.c:21)
+==11280==  Address 0x4aa4349 is 9 bytes inside a block of size 10 free'd
+==11280==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11280==    by 0x486C0B0: dictionary_destroy_element (dictionary.c:324)
+==11280==    by 0x486BDB9: internal_dictionary_clean_and_destroy_elements (dictionary.c:240)
+==11280==    by 0x486BB1C: dictionary_clean_and_destroy_elements (dictionary.c:159)
+==11280==    by 0x486BBDE: dictionary_destroy_and_destroy_elements (dictionary.c:181)
+==11280==    by 0x486B36E: config_destroy (config.c:103)
+==11280==    by 0x109A53: main (cpu.c:20)
+==11280==  Block was alloc'd at
+==11280==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11280==    by 0x491D60E: strdup (strdup.c:42)
+==11280==    by 0x486E5DD: string_duplicate (string.c:43)
+==11280==    by 0x486F532: _string_split (string.c:328)
+==11280==    by 0x486ED79: string_n_split (string.c:166)
+==11280==    by 0x486AF90: add_cofiguration.0 (config.c:55)
+==11280==    by 0x486EF33: string_iterate_lines (string.c:200)
+==11280==    by 0x486B190: config_create (config.c:61)
+==11280==    by 0x10C5D0: iniciar_config (configs.c:7)
+==11280==    by 0x1099E9: main (cpu.c:12)
+==11280== 
+==11280== 
+==11280== Process terminating with default action of signal 2 (SIGINT)
+==11280==    at 0x499C820: recv (recv.c:28)
+==11280==    by 0x10B2C4: recibir_operacion (mensajes.c:95)
+==11280==    by 0x1096F2: enviado_de_kernel (conectar_kernel.c:16)
+==11280==    by 0x1096D2: conectar_kernel (conectar_kernel.c:8)
+==11280==    by 0x109A73: main (cpu.c:24)
+==11280== 
+==11280== HEAP SUMMARY:
+==11280==     in use at exit: 46,852 bytes in 3,469 blocks
+==11280==   total heap usage: 12,813 allocs, 9,344 frees, 2,717,470 bytes allocated
+==11280== 
+==11280== 0 bytes in 3 blocks are definitely lost in loss record 1 of 29
+==11280==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11280==    by 0x10C1BC: deserealizar_motivos_desalojo (mensajes.c:355)
+==11280==    by 0x10BC0E: deserializar_contexto (mensajes.c:271)
+==11280==    by 0x109832: recibir_paquete_kernel (conectar_kernel.c:49)
+==11280==    by 0x109716: enviado_de_kernel (conectar_kernel.c:20)
+==11280==    by 0x1096D2: conectar_kernel (conectar_kernel.c:8)
+==11280==    by 0x109A73: main (cpu.c:24)
+==11280== 
+==11280== 50 (40 direct, 10 indirect) bytes in 5 blocks are definitely lost in loss record 16 of 29
+==11280==    at 0x484DCD3: realloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11280==    by 0x10C698: agregar_parametro_variable (pcb.c:12)
+==11280==    by 0x10C654: agregar_parametro_desalojo (pcb.c:5)
+==11280==    by 0x10A82D: execute (instruccionescpu.c:227)
+==11280==    by 0x10A982: ciclo_de_instruccion (instruccionescpu.c:267)
+==11280==    by 0x109726: enviado_de_kernel (conectar_kernel.c:21)
+==11280==    by 0x1096D2: conectar_kernel (conectar_kernel.c:8)
+==11280==    by 0x109A73: main (cpu.c:24)
+==11280== 
+==11280== 88 (64 direct, 24 indirect) bytes in 8 blocks are definitely lost in loss record 18 of 29
+==11280==    at 0x484DCD3: realloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11280==    by 0x10C698: agregar_parametro_variable (pcb.c:12)
+==11280==    by 0x10C654: agregar_parametro_desalojo (pcb.c:5)
+==11280==    by 0x10A2D4: execute (instruccionescpu.c:152)
+==11280==    by 0x10A982: ciclo_de_instruccion (instruccionescpu.c:267)
+==11280==    by 0x109726: enviado_de_kernel (conectar_kernel.c:21)
+==11280==    by 0x1096D2: conectar_kernel (conectar_kernel.c:8)
+==11280==    by 0x109A73: main (cpu.c:24)
+==11280== 
+==11280== 99 (72 direct, 27 indirect) bytes in 9 blocks are definitely lost in loss record 19 of 29
+==11280==    at 0x484DCD3: realloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11280==    by 0x10C698: agregar_parametro_variable (pcb.c:12)
+==11280==    by 0x10C654: agregar_parametro_desalojo (pcb.c:5)
+==11280==    by 0x10A284: execute (instruccionescpu.c:147)
+==11280==    by 0x10A982: ciclo_de_instruccion (instruccionescpu.c:267)
+==11280==    by 0x109726: enviado_de_kernel (conectar_kernel.c:21)
+==11280==    by 0x1096D2: conectar_kernel (conectar_kernel.c:8)
+==11280==    by 0x109A73: main (cpu.c:24)
+==11280== 
+==11280== 255 (192 direct, 63 indirect) bytes in 12 blocks are definitely lost in loss record 22 of 29
+==11280==    at 0x484DCD3: realloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11280==    by 0x10C698: agregar_parametro_variable (pcb.c:12)
+==11280==    by 0x10C654: agregar_parametro_desalojo (pcb.c:5)
+==11280==    by 0x10A7E0: execute (instruccionescpu.c:222)
+==11280==    by 0x10A982: ciclo_de_instruccion (instruccionescpu.c:267)
+==11280==    by 0x109726: enviado_de_kernel (conectar_kernel.c:21)
+==11280==    by 0x1096D2: conectar_kernel (conectar_kernel.c:8)
+==11280==    by 0x109A73: main (cpu.c:24)
+==11280== 
+==11280== 14,208 bytes in 592 blocks are definitely lost in loss record 28 of 29
+==11280==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11280==    by 0x10B984: deserializar_tabla_segmentos (mensajes.c:231)
+==11280==    by 0x10BC2C: deserializar_contexto (mensajes.c:274)
+==11280==    by 0x109832: recibir_paquete_kernel (conectar_kernel.c:49)
+==11280==    by 0x109716: enviado_de_kernel (conectar_kernel.c:20)
+==11280==    by 0x1096D2: conectar_kernel (conectar_kernel.c:8)
+==11280==    by 0x109A73: main (cpu.c:24)
+==11280== 
+==11280== 25,978 (12,640 direct, 13,338 indirect) bytes in 790 blocks are definitely lost in loss record 29 of 29
+==11280==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==11280==    by 0x10BC9B: deserealizar_instruccion (mensajes.c:284)
+==11280==    by 0x10BB35: deserializar_contexto (mensajes.c:262)
+==11280==    by 0x109832: recibir_paquete_kernel (conectar_kernel.c:49)
+==11280==    by 0x109716: enviado_de_kernel (conectar_kernel.c:20)
+==11280==    by 0x1096D2: conectar_kernel (conectar_kernel.c:8)
+==11280==    by 0x109A73: main (cpu.c:24)
+==11280== 
+==11280== LEAK SUMMARY:
+==11280==    definitely lost: 27,216 bytes in 1,419 blocks
+==11280==    indirectly lost: 13,462 bytes in 2,023 blocks
+==11280==      possibly lost: 0 bytes in 0 blocks
+==11280==    still reachable: 6,174 bytes in 27 blocks
+==11280==         suppressed: 0 bytes in 0 blocks
+==11280== Reachable blocks (those to which a pointer was found) are not shown.
+==11280== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==11280== 
+==11280== For lists of detected and suppressed errors, rerun with: -s
+==11280== ERROR SUMMARY: 29 errors from 15 contexts (suppressed: 0 from 0)

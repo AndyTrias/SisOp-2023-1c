@@ -17,6 +17,7 @@ int main(int argc, char *argv[]) {
 
     char *puerto_escucha = config_get_string_value(config, "PUERTO_ESCUCHA");
     char* ip = config_get_string_value(configIp, "IP_CPU");
+    config_destroy(configIp);
     int socket_servidor = crear_servidor(ip, puerto_escucha);
 
     
@@ -25,7 +26,8 @@ int main(int argc, char *argv[]) {
 
     terminar_programa(LOGGER_CPU, config);
     terminar_conexiones(1, conexion_memoria);
-
+     
+    
     return 0;
 }
 
