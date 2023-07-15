@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [INFO] 01:18:47:346 KERNEL/(134965:134967): Se envia el proceso PID: <1> al CPU
 [INFO] 01:18:47:347 KERNEL/(134965:134967): Se recibe de CPU el proceso PID: <1>
 [INFO] 01:18:47:349 KERNEL/(134965:134967): PID: <1> - Eliminar Segmento - Id Segmento: <4>
@@ -16142,3 +16143,5 @@
 [INFO] 02:34:21:174 KERNEL/(152702:152704): No implementamos esta función
 [INFO] 02:34:21:178 KERNEL/(152702:152704): Se envia el proceso PID: <0> al CPU
 [INFO] 02:34:21:178 KERNEL/(152702:152704): Se recibe de CPU el proceso PID: <0>
+=======
+>>>>>>> c426e0e (no se que pasa)
