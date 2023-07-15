@@ -81,9 +81,8 @@ void finalizar_proceso(t_list* tabla_segmentos){
     list_destroy(tabla_segmentos);
 }
 
-char* leer_valor_direccion_fisica(long direccion_fisica){
+char* leer_valor_direccion_fisica(long direccion_fisica, int tamanio){
     sleep(CONFIG->retardo_memoria / 500);
-    int tamanio = strlen((char*)direccion_fisica) + 1;
     char* valor = malloc(tamanio);
     memcpy(valor, (void*)direccion_fisica, tamanio);
     return valor;
@@ -92,7 +91,7 @@ char* leer_valor_direccion_fisica(long direccion_fisica){
 void escribir_valor_direccion_fisica(char* valor, long direccion_fisica){
     sleep(CONFIG->retardo_memoria / 500);
     void* direccion = (void*)direccion_fisica;
-    memcpy(direccion, valor, sizeof(strlen(valor)) + 1);
+    memcpy(direccion, valor, sizeof((strlen(valor)) + 1)*(sizeof(char)));
 }
 
 void mostrar_hueco(t_hueco* hueco){

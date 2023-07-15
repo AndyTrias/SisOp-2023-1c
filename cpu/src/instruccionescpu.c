@@ -69,6 +69,21 @@ char *obtenerRegistro(t_registros *registros, const char *nombreRegistro)
 		return NULL; // Si el nombre del registro no coincide, devuelve NULL o puedes manejarlo de otra manera según tus necesidades.
 }
 
+// if the register is AX, BX, CX, DX, it returns 4. If it is EAX, EBX, ECX, EDX it returns 8. If RAX, RBX, RCX, RDX it returns 16.
+int tamanio_registro(const char *nombre)
+{
+	if (strcmp(nombre, "AX") == 0 || strcmp(nombre, "BX") == 0 || strcmp(nombre, "CX") == 0 || strcmp(nombre, "DX") == 0)
+		return 4;
+	else if (strcmp(nombre, "EAX") == 0 || strcmp(nombre, "EBX") == 0 || strcmp(nombre, "ECX") == 0 || strcmp(nombre, "EDX") == 0)
+		return 8;
+	else if (strcmp(nombre, "RAX") == 0 || strcmp(nombre, "RBX") == 0 || strcmp(nombre, "RCX") == 0 || strcmp(nombre, "RDX") == 0)
+		return 16;
+	else
+		return 0;
+}
+
+
+
 op_code execute(t_instruccion *instruccion_actual, t_ctx *ctx)
 {
 	switch (instruccion_actual->operacion)
@@ -81,14 +96,14 @@ op_code execute(t_instruccion *instruccion_actual, t_ctx *ctx)
 
 	case MOV_IN:
 		log_info(LOGGER_CPU, "PID : %d - <MOV_IN> - <%s %s> ", ctx->PID, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
-		long dir_fisica = MMU(atoi(instruccion_actual->parametros[1]), sizeof(instruccion_actual->parametros[0]), ctx);
+		long dir_fisica = MMU(atoi(instruccion_actual->parametros[1]), tamanio_registro(instruccion_actual->parametros[0]),  ctx);
 		if (!dir_fisica)
 		{
 			return SEG_FAULT;
 		}
 		char* dir_fisica_string = malloc(10);
 		sprintf(dir_fisica_string, "%ld", dir_fisica);
-		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[0]);
+		agregar_parametro_desalojo(ctx, string_itoa(tamanio_registro(instruccion_actual->parametros[0])));
 		agregar_parametro_desalojo(ctx, dir_fisica_string);
 
 		t_paquete *paquete = crear_paquete(MOV_IN);
@@ -109,7 +124,7 @@ op_code execute(t_instruccion *instruccion_actual, t_ctx *ctx)
 	case MOV_OUT:
 		log_info(LOGGER_CPU, "PID : %d - <MOV OUT> - <%s %s> ", ctx->PID, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
 		registro = obtenerRegistro(&ctx->registros, instruccion_actual->parametros[1]);
-		dir_fisica = MMU(atoi(instruccion_actual->parametros[0]), sizeof(instruccion_actual->parametros[1]), ctx);
+		dir_fisica = MMU(atoi(instruccion_actual->parametros[0]), sizeof(registro), ctx);
 		if (!dir_fisica)
 		{
 			return SEG_FAULT;
@@ -117,7 +132,7 @@ op_code execute(t_instruccion *instruccion_actual, t_ctx *ctx)
 		dir_fisica_string = malloc(10);
 		sprintf(dir_fisica_string, "%ld", dir_fisica);
 		
-		agregar_parametro_desalojo(ctx, registro);
+		agregar_parametro_desalojo(ctx, string_itoa(sizeof(registro)));
 		agregar_parametro_desalojo(ctx, dir_fisica_string);
 		paquete = crear_paquete(MOV_OUT);
 		serializar_motivos_desalojo(ctx->motivos_desalojo, paquete);

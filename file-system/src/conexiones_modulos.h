@@ -12,7 +12,7 @@ extern t_log* LOGGER_FILE_SYSTEM;
 void conectar_kernel(int);
 void enviado_de_kernel(int *);
 t_parametros_variables* recibir_paquete_kernel(int);
-char* leer_direccion_de_memoria(char *);
+char* leer_direccion_de_memoria(char *, char*);
 void escribir_valor_en_memoria(char *, char *);
 void enviar_paquete_op_terminada(char*);
 void crear_y_enviar_paquete(int cod_op);

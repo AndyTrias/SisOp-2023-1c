@@ -40,10 +40,12 @@ t_parametros_variables *recibir_paquete_kernel(int socket_kernel)
     return parametros;
 }
 
-char* leer_direccion_de_memoria(char *direccion_fisica)
+char* leer_direccion_de_memoria(char *direccion_fisica, char* tamanio)
 {
     t_parametros_variables *parametros = malloc(sizeof(t_parametros_variables));
+    parametros->cantidad_parametros = 0;
     agregar_parametro_variable(parametros, direccion_fisica);
+    agregar_parametro_variable(parametros, tamanio);
 
     t_paquete *paquete = crear_paquete(F_WRITE);
     serializar_motivos_desalojo(parametros, paquete);
