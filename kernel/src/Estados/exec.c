@@ -46,8 +46,8 @@ void definir_accion(int cod_op, t_pcb *proceso)
         break;
     case EXIT:
         cambio_de_estado(proceso->contexto.PID, "Exec", "Exit");
-        terminar_proceso(proceso);
         log_info(LOGGER_KERNEL, "Finaliza el proceso <%d> - Motivo: <SUCCESS>", proceso->contexto.PID);
+        terminar_proceso(proceso);
         break;
 
     case SEG_FAULT:
@@ -101,11 +101,9 @@ void definir_accion(int cod_op, t_pcb *proceso)
         reemplazar_exec_por_nuevo();
         break;
     case CREATE_SEGMENT:
-        pthread_mutex_lock(&SOLICITUD_MEMORIA);
         crear_segmento(proceso);
         break;
     case DELETE_SEGMENT:
-        pthread_mutex_lock(&SOLICITUD_MEMORIA);
         eliminar_segmento(proceso);
         break;
     default:
