@@ -37,6 +37,7 @@ void crear_segmento(t_pcb *proceso){// enviar a memoria CREATE_SEGMENT con sus 2
 
             pthread_mutex_unlock(&SOLICITUD_FS);
             log_info(LOGGER_KERNEL, "Se finalizó el proceso de compactación");
+            crear_segmento(proceso);
             break;
         case OUT_OF_MEMORY:
             pthread_mutex_unlock(&SOLICITUD_MEMORIA);
