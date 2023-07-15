@@ -117,7 +117,7 @@ void recibir_kernel(int *socket_modulo)
         
         case COMPACTAR:
             compactar();
-
+            usleep(CONFIG->retardo_compactacion * 250);
             paquete = crear_paquete(COMPACTAR);
             serializar_todas_las_tablas_segmentos(TABLA_SEGMENTOS_GLOBAL, paquete);
             enviar_paquete(paquete, *socket_modulo);

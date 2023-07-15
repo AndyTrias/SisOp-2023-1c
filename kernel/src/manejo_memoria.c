@@ -8,11 +8,10 @@ void crear_segmento(t_pcb *proceso){// enviar a memoria CREATE_SEGMENT con sus 2
     free(paquete);
 
     int cod_op = recibir_operacion(SOCKET_MEMORIA);
-    int size;
-    void* buffer;
     switch(cod_op){
         case CREATE_SEGMENT:
-            buffer = recibir_buffer(&size, SOCKET_MEMORIA);
+            int size;
+            void* buffer = recibir_buffer(&size, SOCKET_MEMORIA);
 
             t_segmento* segmento = list_get(proceso->contexto.tabla_segmentos, atoi(proceso->contexto.motivos_desalojo->parametros[0]));
 
@@ -21,22 +20,25 @@ void crear_segmento(t_pcb *proceso){// enviar a memoria CREATE_SEGMENT con sus 2
 
             pthread_mutex_unlock(&SOLICITUD_MEMORIA);  
             log_info(LOGGER_KERNEL, "PID: <%d> - Crear Segmento - Id: <%d> - Tamaño: <%d>", proceso->contexto.PID, segmento->id_segmento, segmento->tamanio);
+            free(buffer);
             break;
         case COMPACTAR:
             log_info(LOGGER_KERNEL,"Compactación: <Se solicitó compactación / Esperando Fin de Operaciones de FS>");
             pthread_mutex_lock(&SOLICITUD_FS);
             log_info(LOGGER_KERNEL,"Inicia la compactacion");
             
-            t_paquete *paquete = crear_paquete(COMPACTAR);
+            paquete = crear_paquete(COMPACTAR);
             enviar_paquete(paquete, SOCKET_MEMORIA);
             free(paquete);
 
+            recibir_operacion(SOCKET_MEMORIA);
             recibir_operacion(SOCKET_MEMORIA);
             t_list* tablas_de_segmentos_actualizadas = recibir_todas_las_tablas_segmentos(SOCKET_MEMORIA);
             actualizar_tablas_de_segmentos(tablas_de_segmentos_actualizadas);
 
             pthread_mutex_unlock(&SOLICITUD_FS);
             log_info(LOGGER_KERNEL, "Se finalizó el proceso de compactación");
+            crear_segmento(proceso);
             break;
         case OUT_OF_MEMORY:
             pthread_mutex_unlock(&SOLICITUD_MEMORIA);

@@ -1,5 +1,18 @@
 #include "instrucciones_memoria.h"
 
+// void mostrar_hueco(t_hueco* hueco){
+//     log_info(LOGGER_MEMORIA, "Hueco: <%p> - TAMAÑO: <%d> - LIBRE: <%d>", hueco->base, hueco->tamanio, hueco->libre);
+// }
+
+// void mostrar_segmento(t_segmento* segmento){
+//     log_info(LOGGER_MEMORIA, "Segmento: <%p> - TAMAÑO: <%d>", segmento->base, segmento->tamanio);
+// }
+
+// void mostrar_tablas(t_tabla_segmentos* ts){
+//     log_info(LOGGER_MEMORIA, "PID: <%d>", ts->PID);
+//     list_iterate(ts->segmentos, (void*)mostrar_segmento);
+// }
+
 t_paquete* crear_segmento(int id_segmento, int tamanio, t_ctx* ctx) {
 
     t_hueco* hueco = NULL;
@@ -16,7 +29,6 @@ t_paquete* crear_segmento(int id_segmento, int tamanio, t_ctx* ctx) {
 
     if (!hueco && comprobar_compactacion(tamanio)){
         t_paquete* paquete = crear_paquete(COMPACTAR);
-        agregar_a_paquete_dato_serializado(paquete, &tamanio, sizeof(int));
         return paquete;
     } else if (!hueco) {
         log_error(LOGGER_MEMORIA, "No hay hueco disponible para crear el segmento");
@@ -30,11 +42,10 @@ t_paquete* crear_segmento(int id_segmento, int tamanio, t_ctx* ctx) {
     memcpy(&(segmento->base), &hueco->base, sizeof(void*));
     memcpy(&(segmento->tamanio), &tamanio, sizeof(int));
 
-    list_add(ctx->tabla_segmentos, segmento);
-
     t_tabla_segmentos* ts = malloc(sizeof(t_tabla_segmentos));
     ts->PID = ctx->PID;
     ts->segmentos = ctx->tabla_segmentos;
+
     list_replace(TABLA_SEGMENTOS_GLOBAL, ctx->PID, ts);
 
     t_paquete* paquete = crear_paquete(CREATE_SEGMENT);
@@ -94,13 +105,7 @@ void escribir_valor_direccion_fisica(char* valor, long direccion_fisica){
     memcpy(direccion, valor, sizeof((strlen(valor)) + 1)*(sizeof(char)));
 }
 
-void mostrar_hueco(t_hueco* hueco){
-    log_info(LOGGER_MEMORIA, "Hueco: <%p> - TAMAÑO: <%d> - LIBRE: <%d>", hueco->base, hueco->tamanio, hueco->libre);
-}
 
-void mostrar_segmento(t_segmento* segmento){
-    log_info(LOGGER_MEMORIA, "Segmento: <%p> - TAMAÑO: <%d>", segmento->base, segmento->tamanio);
-}
 
 void compactar(){
     log_info(LOGGER_MEMORIA, "Se solicita compactacion");
@@ -161,4 +166,5 @@ void compactar(){
         }
 
     }
+
 }

@@ -1,0 +1,2139 @@
+[INFO] 03:41:36:436 MEMORIA/(9867:9867): Se conecto el cpu
+[INFO] 03:41:52:596 MEMORIA/(9867:9867): Se conecto el kernel
+[INFO] 03:43:12:389 MEMORIA/(9867:11447): Se desconecto un modulo
+[INFO] 03:43:12:394 MEMORIA/(9867:11208): Se desconecto un modulo
+[INFO] 03:43:51:600 MEMORIA/(12120:12120): Se creo el espacio contiguo de memoria
+[INFO] 03:43:51:600 MEMORIA/(12120:12120): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f860
+[INFO] 03:43:51:600 MEMORIA/(12120:12120): Se creo el hueco libre inicial de tamanio 384 en la direccion 0x55555555f8e0
+[INFO] 03:43:51:600 MEMORIA/(12120:12120): Esperando conexiones de modulos...
+[INFO] 03:43:56:134 MEMORIA/(12120:12120): Se conecto el cpu
+[INFO] 03:43:59:797 MEMORIA/(12120:12120): Se conecto el kernel
+[INFO] 03:44:02:312 MEMORIA/(12120:12465): Creación de Proceso PID: <0>
+[INFO] 03:45:20:629 MEMORIA/(13020:13020): Se creo el espacio contiguo de memoria
+[INFO] 03:45:20:630 MEMORIA/(13020:13020): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f860
+[INFO] 03:45:20:630 MEMORIA/(13020:13020): Se creo el hueco libre inicial de tamanio 384 en la direccion 0x55555555f8e0
+[INFO] 03:45:20:630 MEMORIA/(13020:13020): Esperando conexiones de modulos...
+[INFO] 03:45:26:622 MEMORIA/(13020:13020): Se conecto el cpu
+[INFO] 03:45:33:993 MEMORIA/(13020:13020): Se conecto el kernel
+[INFO] 03:45:38:875 MEMORIA/(13020:13447): Creación de Proceso PID: <0>
+[INFO] 04:11:07:442 MEMORIA/(13020:13447): Se desconecto un modulo
+[INFO] 04:13:50:352 MEMORIA/(13020:13203): Se desconecto un modulo
+[INFO] 04:21:54:631 MEMORIA/(16560:16560): Se creo el espacio contiguo de memoria
+[INFO] 04:21:54:631 MEMORIA/(16560:16560): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f870
+[INFO] 04:21:54:631 MEMORIA/(16560:16560): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555f8f0
+[INFO] 04:21:54:631 MEMORIA/(16560:16560): Esperando conexiones de modulos...
+[INFO] 04:22:11:566 MEMORIA/(16560:16560): Se conecto el cpu
+[INFO] 04:22:18:743 MEMORIA/(16560:16560): Se conecto el kernel
+[INFO] 04:23:01:132 MEMORIA/(16560:17160): Se desconecto un modulo
+[INFO] 04:23:01:139 MEMORIA/(16560:16926): Se desconecto un modulo
+[INFO] 04:25:07:823 MEMORIA/(18539:18539): Se creo el espacio contiguo de memoria
+[INFO] 04:25:07:823 MEMORIA/(18539:18539): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f870
+[INFO] 04:25:07:823 MEMORIA/(18539:18539): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555f8f0
+[INFO] 04:25:07:823 MEMORIA/(18539:18539): Esperando conexiones de modulos...
+[INFO] 04:25:12:486 MEMORIA/(18539:18539): Se conecto el cpu
+[INFO] 04:25:17:504 MEMORIA/(18539:18539): Se conecto el kernel
+[INFO] 04:25:20:651 MEMORIA/(18539:18949): Creación de Proceso PID: <0>
+[INFO] 04:25:22:213 MEMORIA/(18539:18949): Creación de Proceso PID: <1>
+[INFO] 04:25:23:655 MEMORIA/(18539:18949): PID: <0> - Crear Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 04:25:28:200 MEMORIA/(18539:18949): Creación de Proceso PID: <2>
+[INFO] 04:25:30:203 MEMORIA/(18539:18949): PID: <1> - Crear Segmento: <1> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 04:25:30:203 MEMORIA/(18539:18949): PID: <1> - Crear Segmento: <2> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 04:25:30:204 MEMORIA/(18539:18949): PID: <1> - Crear Segmento: <3> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 04:25:30:206 MEMORIA/(18539:18949): PID: <1> - Crear Segmento: <4> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 04:25:30:207 MEMORIA/(18539:18949): PID: <1> - Crear Segmento: <5> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 04:25:30:208 MEMORIA/(18539:18949): PID: <1> - Crear Segmento: <6> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 04:25:30:209 MEMORIA/(18539:18949): PID: <1> - Crear Segmento: <7> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 04:25:30:210 MEMORIA/(18539:18949): PID: <1> - Crear Segmento: <8> - Base: <0x55555555fb30> - TAMAÑO: <64>
+[INFO] 04:25:33:223 MEMORIA/(18539:18949): PID: <0> - Eliminar Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 04:25:35:232 MEMORIA/(18539:18949): PID: <1> - Crear Segmento: <9> - Base: <0x55555555fb70> - TAMAÑO: <64>
+[INFO] 04:25:41:244 MEMORIA/(18539:18949): Se solicita compactacion
+[INFO] 04:25:41:244 MEMORIA/(18539:18949): PID: <1> - Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <64>
+[INFO] 04:25:41:244 MEMORIA/(18539:18949): PID: <1> - Segmento: <2> - Base: <0x55555555f930> - TAMAÑO: <64>
+[INFO] 04:25:41:244 MEMORIA/(18539:18949): PID: <1> - Segmento: <3> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 04:25:41:244 MEMORIA/(18539:18949): PID: <1> - Segmento: <4> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 04:25:41:244 MEMORIA/(18539:18949): PID: <1> - Segmento: <5> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 04:25:41:244 MEMORIA/(18539:18949): PID: <1> - Segmento: <6> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 04:25:41:244 MEMORIA/(18539:18949): PID: <1> - Segmento: <7> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 04:25:41:244 MEMORIA/(18539:18949): PID: <1> - Segmento: <8> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 04:25:41:244 MEMORIA/(18539:18949): PID: <1> - Segmento: <9> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 04:27:59:229 MEMORIA/(18539:18711): Se desconecto un modulo
+[ERROR] 04:28:10:390 MEMORIA/(18539:18949): Operacion desconocida
+[INFO] 04:28:10:391 MEMORIA/(18539:18949): Se desconecto un modulo
+[INFO] 04:28:47:905 MEMORIA/(20523:20523): Se creo el espacio contiguo de memoria
+[INFO] 04:28:47:906 MEMORIA/(20523:20523): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f870
+[INFO] 04:28:47:906 MEMORIA/(20523:20523): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555f8f0
+[INFO] 04:28:47:906 MEMORIA/(20523:20523): Esperando conexiones de modulos...
+[INFO] 04:28:51:519 MEMORIA/(20523:20523): Se conecto el cpu
+[INFO] 04:28:54:461 MEMORIA/(20523:20523): Se conecto el kernel
+[INFO] 04:28:56:656 MEMORIA/(20523:20887): Creación de Proceso PID: <0>
+[INFO] 04:28:59:061 MEMORIA/(20523:20887): Creación de Proceso PID: <1>
+[INFO] 04:28:59:659 MEMORIA/(20523:20887): PID: <0> - Crear Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 04:29:01:664 MEMORIA/(20523:20887): PID: <1> - Crear Segmento: <1> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 04:29:01:665 MEMORIA/(20523:20887): PID: <1> - Crear Segmento: <2> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 04:29:01:666 MEMORIA/(20523:20887): PID: <1> - Crear Segmento: <3> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 04:29:01:667 MEMORIA/(20523:20887): PID: <1> - Crear Segmento: <4> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 04:29:01:668 MEMORIA/(20523:20887): PID: <1> - Crear Segmento: <5> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 04:29:01:669 MEMORIA/(20523:20887): PID: <1> - Crear Segmento: <6> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 04:29:01:670 MEMORIA/(20523:20887): PID: <1> - Crear Segmento: <7> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 04:29:01:672 MEMORIA/(20523:20887): PID: <1> - Crear Segmento: <8> - Base: <0x55555555fb30> - TAMAÑO: <64>
+[INFO] 04:29:01:746 MEMORIA/(20523:20887): Creación de Proceso PID: <2>
+[INFO] 04:29:04:678 MEMORIA/(20523:20887): PID: <0> - Eliminar Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 04:29:06:683 MEMORIA/(20523:20887): PID: <1> - Crear Segmento: <9> - Base: <0x55555555fb70> - TAMAÑO: <64>
+[INFO] 04:29:12:826 MEMORIA/(20523:20887): Se solicita compactacion
+[INFO] 04:29:12:826 MEMORIA/(20523:20887): PID: <1> - Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <64>
+[INFO] 04:29:12:827 MEMORIA/(20523:20887): PID: <1> - Segmento: <2> - Base: <0x55555555f930> - TAMAÑO: <64>
+[INFO] 04:29:12:827 MEMORIA/(20523:20887): PID: <1> - Segmento: <3> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 04:29:12:827 MEMORIA/(20523:20887): PID: <1> - Segmento: <4> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 04:29:12:827 MEMORIA/(20523:20887): PID: <1> - Segmento: <5> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 04:29:12:827 MEMORIA/(20523:20887): PID: <1> - Segmento: <6> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 04:29:12:827 MEMORIA/(20523:20887): PID: <1> - Segmento: <7> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 04:29:12:827 MEMORIA/(20523:20887): PID: <1> - Segmento: <8> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 04:29:12:827 MEMORIA/(20523:20887): PID: <1> - Segmento: <9> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 04:30:15:731 MEMORIA/(20523:20684): Se desconecto un modulo
+[INFO] 04:33:20:943 MEMORIA/(22502:22502): Se creo el espacio contiguo de memoria
+[INFO] 04:33:20:943 MEMORIA/(22502:22502): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f870
+[INFO] 04:33:20:943 MEMORIA/(22502:22502): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555f8f0
+[INFO] 04:33:20:943 MEMORIA/(22502:22502): Esperando conexiones de modulos...
+[INFO] 04:33:27:721 MEMORIA/(22502:22502): Se conecto el file system
+[INFO] 04:33:27:979 MEMORIA/(22502:22691): Se desconecto un modulo
+[INFO] 04:37:20:244 MEMORIA/(23224:23224): Se creo el espacio contiguo de memoria
+[INFO] 04:37:20:244 MEMORIA/(23224:23224): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f870
+[INFO] 04:37:20:244 MEMORIA/(23224:23224): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555f8f0
+[INFO] 04:37:20:244 MEMORIA/(23224:23224): Esperando conexiones de modulos...
+[INFO] 04:37:22:879 MEMORIA/(23224:23224): Se conecto el file system
+[INFO] 04:37:23:052 MEMORIA/(23224:23379): Se desconecto un modulo
+[INFO] 04:37:52:439 MEMORIA/(23224:23224): Se conecto el file system
+[INFO] 04:37:52:569 MEMORIA/(23224:23622): Se desconecto un modulo
+[INFO] 04:38:23:116 MEMORIA/(23858:23858): Se creo el espacio contiguo de memoria
+[INFO] 04:38:23:117 MEMORIA/(23858:23858): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f870
+[INFO] 04:38:23:117 MEMORIA/(23858:23858): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555f8f0
+[INFO] 04:38:23:117 MEMORIA/(23858:23858): Esperando conexiones de modulos...
+[INFO] 04:38:26:387 MEMORIA/(23858:23858): Se conecto el file system
+[INFO] 04:38:30:521 MEMORIA/(23858:23858): Se conecto el cpu
+[INFO] 04:38:34:195 MEMORIA/(23858:23858): Se conecto el kernel
+[INFO] 04:38:38:176 MEMORIA/(23858:24395): Creación de Proceso PID: <0>
+[INFO] 04:38:41:187 MEMORIA/(23858:24395): PID: <0> - Crear Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 04:38:41:902 MEMORIA/(23858:24395): Creación de Proceso PID: <1>
+[INFO] 04:38:43:906 MEMORIA/(23858:24395): PID: <1> - Crear Segmento: <1> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 04:38:43:907 MEMORIA/(23858:24395): PID: <1> - Crear Segmento: <2> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 04:38:43:909 MEMORIA/(23858:24395): PID: <1> - Crear Segmento: <3> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 04:38:43:910 MEMORIA/(23858:24395): PID: <1> - Crear Segmento: <4> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 04:38:43:911 MEMORIA/(23858:24395): PID: <1> - Crear Segmento: <5> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 04:38:43:912 MEMORIA/(23858:24395): PID: <1> - Crear Segmento: <6> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 04:38:43:913 MEMORIA/(23858:24395): PID: <1> - Crear Segmento: <7> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 04:38:43:914 MEMORIA/(23858:24395): PID: <1> - Crear Segmento: <8> - Base: <0x55555555fb30> - TAMAÑO: <64>
+[INFO] 04:38:45:513 MEMORIA/(23858:24395): Creación de Proceso PID: <2>
+[INFO] 04:38:46:919 MEMORIA/(23858:24395): PID: <0> - Eliminar Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 04:38:48:923 MEMORIA/(23858:24395): PID: <1> - Crear Segmento: <9> - Base: <0x55555555fb70> - TAMAÑO: <64>
+[INFO] 04:38:54:955 MEMORIA/(23858:24395): Se solicita compactacion
+[INFO] 04:38:54:955 MEMORIA/(23858:24395): PID: <1> - Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <64>
+[INFO] 04:38:54:956 MEMORIA/(23858:24395): PID: <1> - Segmento: <2> - Base: <0x55555555f930> - TAMAÑO: <64>
+[INFO] 04:38:54:956 MEMORIA/(23858:24395): PID: <1> - Segmento: <3> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 04:38:54:956 MEMORIA/(23858:24395): PID: <1> - Segmento: <4> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 04:38:54:956 MEMORIA/(23858:24395): PID: <1> - Segmento: <5> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 04:38:54:956 MEMORIA/(23858:24395): PID: <1> - Segmento: <6> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 04:38:54:956 MEMORIA/(23858:24395): PID: <1> - Segmento: <7> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 04:38:54:956 MEMORIA/(23858:24395): PID: <1> - Segmento: <8> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 04:38:54:956 MEMORIA/(23858:24395): PID: <1> - Segmento: <9> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 04:39:22:115 MEMORIA/(25400:25400): Se creo el espacio contiguo de memoria
+[INFO] 04:39:22:115 MEMORIA/(25400:25400): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f870
+[INFO] 04:39:22:115 MEMORIA/(25400:25400): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555f8f0
+[INFO] 04:39:22:115 MEMORIA/(25400:25400): Esperando conexiones de modulos...
+[INFO] 04:39:55:789 MEMORIA/(25750:25750): Se creo el espacio contiguo de memoria
+[INFO] 04:39:55:789 MEMORIA/(25750:25750): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f870
+[INFO] 04:39:55:789 MEMORIA/(25750:25750): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555f8f0
+[INFO] 04:39:55:789 MEMORIA/(25750:25750): Esperando conexiones de modulos...
+[INFO] 04:40:00:018 MEMORIA/(25750:25750): Se conecto el file system
+[INFO] 04:40:03:503 MEMORIA/(25750:25750): Se conecto el cpu
+[INFO] 04:40:07:536 MEMORIA/(25750:25750): Se conecto el kernel
+[INFO] 04:40:10:684 MEMORIA/(25750:26324): Creación de Proceso PID: <0>
+[INFO] 04:40:13:254 MEMORIA/(25750:26324): Creación de Proceso PID: <1>
+[INFO] 04:40:13:687 MEMORIA/(25750:26324): PID: <0> - Crear Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 04:40:15:692 MEMORIA/(25750:26324): PID: <1> - Crear Segmento: <1> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 04:40:15:694 MEMORIA/(25750:26324): PID: <1> - Crear Segmento: <2> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 04:40:15:696 MEMORIA/(25750:26324): PID: <1> - Crear Segmento: <3> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 04:40:15:697 MEMORIA/(25750:26324): PID: <1> - Crear Segmento: <4> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 04:40:15:699 MEMORIA/(25750:26324): PID: <1> - Crear Segmento: <5> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 04:40:15:701 MEMORIA/(25750:26324): PID: <1> - Crear Segmento: <6> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 04:40:15:702 MEMORIA/(25750:26324): PID: <1> - Crear Segmento: <7> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 04:40:15:703 MEMORIA/(25750:26324): PID: <1> - Crear Segmento: <8> - Base: <0x55555555fb30> - TAMAÑO: <64>
+[INFO] 04:40:15:993 MEMORIA/(25750:26324): Creación de Proceso PID: <2>
+[INFO] 04:40:18:708 MEMORIA/(25750:26324): PID: <0> - Eliminar Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 04:40:20:713 MEMORIA/(25750:26324): PID: <1> - Crear Segmento: <9> - Base: <0x55555555fb70> - TAMAÑO: <64>
+[INFO] 04:40:26:798 MEMORIA/(25750:26324): Se solicita compactacion
+[INFO] 04:40:26:798 MEMORIA/(25750:26324): PID: <1> - Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <64>
+[INFO] 04:40:26:798 MEMORIA/(25750:26324): PID: <1> - Segmento: <2> - Base: <0x55555555f930> - TAMAÑO: <64>
+[INFO] 04:40:26:798 MEMORIA/(25750:26324): PID: <1> - Segmento: <3> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 04:40:26:798 MEMORIA/(25750:26324): PID: <1> - Segmento: <4> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 04:40:26:798 MEMORIA/(25750:26324): PID: <1> - Segmento: <5> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 04:40:26:798 MEMORIA/(25750:26324): PID: <1> - Segmento: <6> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 04:40:26:798 MEMORIA/(25750:26324): PID: <1> - Segmento: <7> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 04:40:26:798 MEMORIA/(25750:26324): PID: <1> - Segmento: <8> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 04:40:26:798 MEMORIA/(25750:26324): PID: <1> - Segmento: <9> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 04:40:58:904 MEMORIA/(25750:26324): Segmento: <0x55555555f8f0> - TAMAÑO: <64>
+[INFO] 04:40:58:904 MEMORIA/(25750:26324): Segmento: <0x55555555f930> - TAMAÑO: <64>
+[INFO] 04:40:58:904 MEMORIA/(25750:26324): Segmento: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 04:40:58:904 MEMORIA/(25750:26324): Segmento: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 04:40:58:904 MEMORIA/(25750:26324): Segmento: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 04:40:58:905 MEMORIA/(25750:26324): Segmento: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 04:40:58:905 MEMORIA/(25750:26324): Segmento: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 04:40:58:905 MEMORIA/(25750:26324): Segmento: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 04:40:58:905 MEMORIA/(25750:26324): Segmento: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 04:40:58:905 MEMORIA/(25750:26324): Segmento: <0x55555555faf0> - TAMAÑO: <64>
+[ERROR] 04:41:08:915 MEMORIA/(25750:26324): Operacion desconocida
+[INFO] 04:43:27:379 MEMORIA/(28003:28003): Se creo el espacio contiguo de memoria
+[INFO] 04:43:27:379 MEMORIA/(28003:28003): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f870
+[INFO] 04:43:27:379 MEMORIA/(28003:28003): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555f8f0
+[INFO] 04:43:27:379 MEMORIA/(28003:28003): Esperando conexiones de modulos...
+[INFO] 04:43:32:291 MEMORIA/(28003:28003): Se conecto el file system
+[INFO] 04:43:35:778 MEMORIA/(28003:28003): Se conecto el cpu
+[INFO] 04:43:59:825 MEMORIA/(28003:28003): Se conecto el kernel
+[INFO] 04:44:33:658 MEMORIA/(29099:29099): Se creo el espacio contiguo de memoria
+[INFO] 04:44:33:658 MEMORIA/(29099:29099): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f870
+[INFO] 04:44:33:658 MEMORIA/(29099:29099): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555f8f0
+[INFO] 04:44:33:658 MEMORIA/(29099:29099): Esperando conexiones de modulos...
+[INFO] 04:44:55:334 MEMORIA/(29099:29099): Se conecto el file system
+[INFO] 04:45:00:334 MEMORIA/(29099:29099): Se conecto el cpu
+[INFO] 04:45:23:028 MEMORIA/(29099:29099): Se conecto el kernel
+[INFO] 04:45:27:185 MEMORIA/(29099:30220): Creación de Proceso PID: <0>
+[INFO] 04:45:30:192 MEMORIA/(29099:30220): PID: <0> - Crear Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 04:45:30:215 MEMORIA/(29099:30220): Creación de Proceso PID: <1>
+[INFO] 04:45:32:225 MEMORIA/(29099:30220): PID: <1> - Crear Segmento: <1> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 04:45:32:227 MEMORIA/(29099:30220): PID: <1> - Crear Segmento: <2> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 04:45:32:227 MEMORIA/(29099:30220): PID: <1> - Crear Segmento: <3> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 04:45:32:229 MEMORIA/(29099:30220): PID: <1> - Crear Segmento: <4> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 04:45:32:230 MEMORIA/(29099:30220): PID: <1> - Crear Segmento: <5> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 04:45:32:231 MEMORIA/(29099:30220): PID: <1> - Crear Segmento: <6> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 04:45:32:232 MEMORIA/(29099:30220): PID: <1> - Crear Segmento: <7> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 04:45:32:234 MEMORIA/(29099:30220): PID: <1> - Crear Segmento: <8> - Base: <0x55555555fb30> - TAMAÑO: <64>
+[INFO] 04:45:33:212 MEMORIA/(29099:30220): Creación de Proceso PID: <2>
+[INFO] 04:45:35:242 MEMORIA/(29099:30220): PID: <0> - Eliminar Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 04:45:37:248 MEMORIA/(29099:30220): PID: <1> - Crear Segmento: <9> - Base: <0x55555555fb70> - TAMAÑO: <64>
+[INFO] 04:45:43:258 MEMORIA/(29099:30220): Se solicita compactacion
+[INFO] 04:45:43:258 MEMORIA/(29099:30220): PID: <1> - Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <64>
+[INFO] 04:45:43:258 MEMORIA/(29099:30220): PID: <1> - Segmento: <2> - Base: <0x55555555f930> - TAMAÑO: <64>
+[INFO] 04:45:43:258 MEMORIA/(29099:30220): PID: <1> - Segmento: <3> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 04:45:43:258 MEMORIA/(29099:30220): PID: <1> - Segmento: <4> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 04:45:43:259 MEMORIA/(29099:30220): PID: <1> - Segmento: <5> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 04:45:43:259 MEMORIA/(29099:30220): PID: <1> - Segmento: <6> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 04:45:43:259 MEMORIA/(29099:30220): PID: <1> - Segmento: <7> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 04:45:43:259 MEMORIA/(29099:30220): PID: <1> - Segmento: <8> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 04:45:43:259 MEMORIA/(29099:30220): PID: <1> - Segmento: <9> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[ERROR] 04:45:57:789 MEMORIA/(29099:30220): Operacion desconocida
+[INFO] 04:47:09:895 MEMORIA/(31513:31513): Se creo el espacio contiguo de memoria
+[INFO] 04:47:09:895 MEMORIA/(31513:31513): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f870
+[INFO] 04:47:09:895 MEMORIA/(31513:31513): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555f8f0
+[INFO] 04:47:09:895 MEMORIA/(31513:31513): Esperando conexiones de modulos...
+[INFO] 04:47:13:785 MEMORIA/(31513:31513): Se conecto el file system
+[INFO] 04:47:17:462 MEMORIA/(31513:31513): Se conecto el cpu
+[INFO] 04:47:24:185 MEMORIA/(31513:31513): Se conecto el kernel
+[INFO] 04:47:26:636 MEMORIA/(31513:32098): Creación de Proceso PID: <0>
+[INFO] 04:47:29:520 MEMORIA/(31513:32098): Creación de Proceso PID: <1>
+[INFO] 04:47:29:641 MEMORIA/(31513:32098): PID: <0> - Crear Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 04:47:31:655 MEMORIA/(31513:32098): PID: <1> - Crear Segmento: <1> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 04:47:31:656 MEMORIA/(31513:32098): PID: <1> - Crear Segmento: <2> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 04:47:31:657 MEMORIA/(31513:32098): PID: <1> - Crear Segmento: <3> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 04:47:31:658 MEMORIA/(31513:32098): PID: <1> - Crear Segmento: <4> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 04:47:31:660 MEMORIA/(31513:32098): PID: <1> - Crear Segmento: <5> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 04:47:31:661 MEMORIA/(31513:32098): PID: <1> - Crear Segmento: <6> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 04:47:31:662 MEMORIA/(31513:32098): PID: <1> - Crear Segmento: <7> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 04:47:31:664 MEMORIA/(31513:32098): PID: <1> - Crear Segmento: <8> - Base: <0x55555555fb30> - TAMAÑO: <64>
+[INFO] 04:47:32:323 MEMORIA/(31513:32098): Creación de Proceso PID: <2>
+[INFO] 04:47:34:669 MEMORIA/(31513:32098): PID: <0> - Eliminar Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 04:47:36:673 MEMORIA/(31513:32098): PID: <1> - Crear Segmento: <9> - Base: <0x55555555fb70> - TAMAÑO: <64>
+[INFO] 04:47:42:682 MEMORIA/(31513:32098): Se solicita compactacion
+[INFO] 04:47:42:682 MEMORIA/(31513:32098): PID: <1> - Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <64>
+[INFO] 04:47:42:682 MEMORIA/(31513:32098): PID: <1> - Segmento: <2> - Base: <0x55555555f930> - TAMAÑO: <64>
+[INFO] 04:47:42:682 MEMORIA/(31513:32098): PID: <1> - Segmento: <3> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 04:47:42:682 MEMORIA/(31513:32098): PID: <1> - Segmento: <4> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 04:47:42:682 MEMORIA/(31513:32098): PID: <1> - Segmento: <5> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 04:47:42:682 MEMORIA/(31513:32098): PID: <1> - Segmento: <6> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 04:47:42:682 MEMORIA/(31513:32098): PID: <1> - Segmento: <7> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 04:47:42:682 MEMORIA/(31513:32098): PID: <1> - Segmento: <8> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 04:47:42:682 MEMORIA/(31513:32098): PID: <1> - Segmento: <9> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[ERROR] 04:47:42:683 MEMORIA/(31513:32098): Operacion desconocida
+[INFO] 04:49:46:101 MEMORIA/(33178:33178): Se creo el espacio contiguo de memoria
+[INFO] 04:49:46:101 MEMORIA/(33178:33178): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f870
+[INFO] 04:49:46:101 MEMORIA/(33178:33178): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555f8f0
+[INFO] 04:49:46:101 MEMORIA/(33178:33178): Esperando conexiones de modulos...
+[INFO] 04:49:53:996 MEMORIA/(33178:33178): Se conecto el file system
+[INFO] 04:49:56:895 MEMORIA/(33178:33178): Se conecto el cpu
+[INFO] 04:50:02:852 MEMORIA/(33178:33178): Se conecto el kernel
+[INFO] 04:50:05:375 MEMORIA/(33178:33739): Creación de Proceso PID: <0>
+[INFO] 04:50:08:212 MEMORIA/(33178:33739): Creación de Proceso PID: <1>
+[INFO] 04:50:08:383 MEMORIA/(33178:33739): PID: <0> - Crear Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 04:50:10:386 MEMORIA/(33178:33739): PID: <1> - Crear Segmento: <1> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 04:50:10:387 MEMORIA/(33178:33739): PID: <1> - Crear Segmento: <2> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 04:50:10:387 MEMORIA/(33178:33739): PID: <1> - Crear Segmento: <3> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 04:50:10:388 MEMORIA/(33178:33739): PID: <1> - Crear Segmento: <4> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 04:50:10:389 MEMORIA/(33178:33739): PID: <1> - Crear Segmento: <5> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 04:50:10:390 MEMORIA/(33178:33739): PID: <1> - Crear Segmento: <6> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 04:50:10:391 MEMORIA/(33178:33739): PID: <1> - Crear Segmento: <7> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 04:50:10:392 MEMORIA/(33178:33739): PID: <1> - Crear Segmento: <8> - Base: <0x55555555fb30> - TAMAÑO: <64>
+[INFO] 04:50:11:092 MEMORIA/(33178:33739): Creación de Proceso PID: <2>
+[INFO] 04:50:13:398 MEMORIA/(33178:33739): PID: <0> - Eliminar Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 04:50:15:402 MEMORIA/(33178:33739): PID: <1> - Crear Segmento: <9> - Base: <0x55555555fb70> - TAMAÑO: <64>
+[INFO] 04:50:21:407 MEMORIA/(33178:33739): Se solicita compactacion
+[INFO] 04:50:21:407 MEMORIA/(33178:33739): PID: <1> - Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <64>
+[INFO] 04:50:21:407 MEMORIA/(33178:33739): PID: <1> - Segmento: <2> - Base: <0x55555555f930> - TAMAÑO: <64>
+[INFO] 04:50:21:408 MEMORIA/(33178:33739): PID: <1> - Segmento: <3> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 04:50:21:408 MEMORIA/(33178:33739): PID: <1> - Segmento: <4> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 04:50:21:408 MEMORIA/(33178:33739): PID: <1> - Segmento: <5> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 04:50:21:408 MEMORIA/(33178:33739): PID: <1> - Segmento: <6> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 04:50:21:408 MEMORIA/(33178:33739): PID: <1> - Segmento: <7> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 04:50:21:408 MEMORIA/(33178:33739): PID: <1> - Segmento: <8> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 04:50:21:408 MEMORIA/(33178:33739): PID: <1> - Segmento: <9> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 04:59:46:150 MEMORIA/(35559:35559): Se creo el espacio contiguo de memoria
+[INFO] 04:59:46:150 MEMORIA/(35559:35559): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f870
+[INFO] 04:59:46:150 MEMORIA/(35559:35559): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555f8f0
+[INFO] 04:59:46:150 MEMORIA/(35559:35559): Esperando conexiones de modulos...
+[INFO] 04:59:52:393 MEMORIA/(35559:35559): Se conecto el file system
+[INFO] 04:59:54:359 MEMORIA/(35559:35559): Se conecto el cpu
+[INFO] 04:59:59:640 MEMORIA/(35559:35559): Se conecto el kernel
+[INFO] 05:00:01:777 MEMORIA/(35559:36038): Creación de Proceso PID: <0>
+[INFO] 05:00:03:558 MEMORIA/(35559:36038): Creación de Proceso PID: <1>
+[INFO] 05:00:04:781 MEMORIA/(35559:36038): PID: <0> - Crear Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 05:00:05:310 MEMORIA/(35559:36038): Creación de Proceso PID: <2>
+[INFO] 05:00:06:785 MEMORIA/(35559:36038): PID: <1> - Crear Segmento: <1> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 05:00:06:787 MEMORIA/(35559:36038): PID: <1> - Crear Segmento: <2> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 05:00:06:788 MEMORIA/(35559:36038): PID: <1> - Crear Segmento: <3> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 05:00:06:790 MEMORIA/(35559:36038): PID: <1> - Crear Segmento: <4> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 05:00:06:791 MEMORIA/(35559:36038): PID: <1> - Crear Segmento: <5> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 05:00:06:793 MEMORIA/(35559:36038): PID: <1> - Crear Segmento: <6> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 05:00:06:795 MEMORIA/(35559:36038): PID: <1> - Crear Segmento: <7> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 05:00:06:796 MEMORIA/(35559:36038): PID: <1> - Crear Segmento: <8> - Base: <0x55555555fb30> - TAMAÑO: <64>
+[INFO] 05:00:09:802 MEMORIA/(35559:36038): PID: <0> - Eliminar Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 05:00:11:820 MEMORIA/(35559:36038): PID: <1> - Crear Segmento: <9> - Base: <0x55555555fb70> - TAMAÑO: <64>
+[INFO] 05:00:17:834 MEMORIA/(35559:36038): Se solicita compactacion
+[INFO] 05:02:09:193 MEMORIA/(37164:37164): Se creo el espacio contiguo de memoria
+[INFO] 05:02:09:193 MEMORIA/(37164:37164): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f870
+[INFO] 05:02:09:193 MEMORIA/(37164:37164): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555f8f0
+[INFO] 05:02:09:193 MEMORIA/(37164:37164): Esperando conexiones de modulos...
+[INFO] 05:02:16:361 MEMORIA/(37164:37164): Se conecto el file system
+[INFO] 05:02:19:730 MEMORIA/(37164:37164): Se conecto el cpu
+[INFO] 05:02:26:951 MEMORIA/(37164:37164): Se conecto el kernel
+[INFO] 05:02:32:623 MEMORIA/(37164:37739): Creación de Proceso PID: <0>
+[INFO] 05:04:19:125 MEMORIA/(38684:38684): Se creo el espacio contiguo de memoria
+[INFO] 05:04:19:125 MEMORIA/(38684:38684): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f870
+[INFO] 05:04:19:125 MEMORIA/(38684:38684): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555f8f0
+[INFO] 05:04:19:126 MEMORIA/(38684:38684): Esperando conexiones de modulos...
+[INFO] 05:04:23:761 MEMORIA/(38684:38684): Se conecto el file system
+[INFO] 05:04:27:523 MEMORIA/(38684:38684): Se conecto el cpu
+[INFO] 05:05:18:840 MEMORIA/(39657:39657): Se creo el espacio contiguo de memoria
+[INFO] 05:05:18:840 MEMORIA/(39657:39657): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f870
+[INFO] 05:05:18:840 MEMORIA/(39657:39657): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555f8f0
+[INFO] 05:05:18:840 MEMORIA/(39657:39657): Esperando conexiones de modulos...
+[INFO] 05:05:23:407 MEMORIA/(39657:39657): Se conecto el file system
+[INFO] 05:05:29:750 MEMORIA/(39657:39657): Se conecto el cpu
+[INFO] 05:05:39:292 MEMORIA/(39657:39657): Se conecto el kernel
+[INFO] 05:05:42:539 MEMORIA/(39657:40234): Creación de Proceso PID: <0>
+[INFO] 05:05:44:897 MEMORIA/(39657:40234): Creación de Proceso PID: <1>
+[INFO] 05:05:45:544 MEMORIA/(39657:40234): PID: <0> - Crear Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 05:05:46:912 MEMORIA/(39657:40234): Creación de Proceso PID: <2>
+[INFO] 05:05:47:548 MEMORIA/(39657:40234): PID: <1> - Crear Segmento: <1> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 05:05:47:550 MEMORIA/(39657:40234): PID: <1> - Crear Segmento: <2> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 05:05:47:551 MEMORIA/(39657:40234): PID: <1> - Crear Segmento: <3> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 05:05:47:551 MEMORIA/(39657:40234): PID: <1> - Crear Segmento: <4> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 05:05:47:552 MEMORIA/(39657:40234): PID: <1> - Crear Segmento: <5> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 05:05:47:554 MEMORIA/(39657:40234): PID: <1> - Crear Segmento: <6> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 05:05:47:555 MEMORIA/(39657:40234): PID: <1> - Crear Segmento: <7> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 05:05:47:555 MEMORIA/(39657:40234): PID: <1> - Crear Segmento: <8> - Base: <0x55555555fb30> - TAMAÑO: <64>
+[INFO] 05:05:50:570 MEMORIA/(39657:40234): PID: <0> - Eliminar Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 05:05:52:574 MEMORIA/(39657:40234): PID: <1> - Crear Segmento: <9> - Base: <0x55555555fb70> - TAMAÑO: <64>
+[INFO] 05:05:58:621 MEMORIA/(39657:40234): Se solicita compactacion
+[INFO] 05:06:12:055 MEMORIA/(39657:40234): PID: <0>
+[INFO] 05:06:12:055 MEMORIA/(39657:40234): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 05:06:12:055 MEMORIA/(39657:40234): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:06:12:055 MEMORIA/(39657:40234): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:06:12:055 MEMORIA/(39657:40234): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:06:12:055 MEMORIA/(39657:40234): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:06:12:055 MEMORIA/(39657:40234): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:06:12:055 MEMORIA/(39657:40234): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:06:12:055 MEMORIA/(39657:40234): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:06:12:055 MEMORIA/(39657:40234): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:06:12:055 MEMORIA/(39657:40234): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:06:12:055 MEMORIA/(39657:40234): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:06:12:055 MEMORIA/(39657:40234): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:06:12:055 MEMORIA/(39657:40234): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:06:12:055 MEMORIA/(39657:40234): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:06:12:056 MEMORIA/(39657:40234): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:06:12:056 MEMORIA/(39657:40234): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:08:32:068 MEMORIA/(41558:41558): Se creo el espacio contiguo de memoria
+[INFO] 05:08:32:068 MEMORIA/(41558:41558): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f870
+[INFO] 05:08:32:068 MEMORIA/(41558:41558): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555f8f0
+[INFO] 05:08:32:068 MEMORIA/(41558:41558): Esperando conexiones de modulos...
+[INFO] 05:08:36:431 MEMORIA/(41558:41558): Se conecto el file system
+[INFO] 05:08:39:380 MEMORIA/(41558:41558): Se conecto el cpu
+[INFO] 05:08:45:458 MEMORIA/(41558:41558): Se conecto el kernel
+[INFO] 05:08:48:847 MEMORIA/(41558:42110): Creación de Proceso PID: <0>
+[INFO] 05:08:50:810 MEMORIA/(41558:42110): Creación de Proceso PID: <1>
+[INFO] 05:09:57:639 MEMORIA/(41558:42110): PID: <0> - Crear Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 05:09:57:651 MEMORIA/(41558:42110): Creación de Proceso PID: <2>
+[INFO] 05:10:54:957 MEMORIA/(43288:43288): Se creo el espacio contiguo de memoria
+[INFO] 05:10:54:957 MEMORIA/(43288:43288): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f870
+[INFO] 05:10:54:957 MEMORIA/(43288:43288): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555f8f0
+[INFO] 05:10:54:957 MEMORIA/(43288:43288): Esperando conexiones de modulos...
+[INFO] 05:10:59:026 MEMORIA/(43288:43288): Se conecto el file system
+[INFO] 05:11:02:285 MEMORIA/(43288:43288): Se conecto el cpu
+[INFO] 05:11:13:585 MEMORIA/(43288:43288): Se conecto el kernel
+[INFO] 05:11:16:513 MEMORIA/(43288:43924): Creación de Proceso PID: <0>
+[INFO] 05:11:18:344 MEMORIA/(43288:43924): Creación de Proceso PID: <1>
+[INFO] 05:11:22:400 MEMORIA/(43288:43924): PID: <0> - Crear Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 05:11:22:400 MEMORIA/(43288:43924): Creación de Proceso PID: <2>
+[INFO] 05:12:22:499 MEMORIA/(44822:44822): Se creo el espacio contiguo de memoria
+[INFO] 05:12:22:500 MEMORIA/(44822:44822): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f870
+[INFO] 05:12:22:500 MEMORIA/(44822:44822): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555f8f0
+[INFO] 05:12:22:500 MEMORIA/(44822:44822): Esperando conexiones de modulos...
+[INFO] 05:12:26:403 MEMORIA/(44822:44822): Se conecto el file system
+[INFO] 05:12:34:336 MEMORIA/(44822:44822): Se conecto el cpu
+[INFO] 05:12:43:338 MEMORIA/(44822:44822): Se conecto el kernel
+[INFO] 05:12:45:934 MEMORIA/(44822:45441): Creación de Proceso PID: <0>
+[INFO] 05:12:48:082 MEMORIA/(44822:45441): Creación de Proceso PID: <1>
+[INFO] 05:12:49:205 MEMORIA/(44822:45441): PID: <0> - Crear Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 05:12:50:075 MEMORIA/(44822:45441): Creación de Proceso PID: <2>
+[INFO] 05:12:51:208 MEMORIA/(44822:45441): PID: <1> - Crear Segmento: <1> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 05:12:51:210 MEMORIA/(44822:45441): PID: <1> - Crear Segmento: <2> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 05:12:51:211 MEMORIA/(44822:45441): PID: <1> - Crear Segmento: <3> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 05:12:51:212 MEMORIA/(44822:45441): PID: <1> - Crear Segmento: <4> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 05:12:51:213 MEMORIA/(44822:45441): PID: <1> - Crear Segmento: <5> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 05:12:51:214 MEMORIA/(44822:45441): PID: <1> - Crear Segmento: <6> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 05:12:51:216 MEMORIA/(44822:45441): PID: <1> - Crear Segmento: <7> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 05:12:51:217 MEMORIA/(44822:45441): PID: <1> - Crear Segmento: <8> - Base: <0x55555555fb30> - TAMAÑO: <64>
+[INFO] 05:12:54:227 MEMORIA/(44822:45441): PID: <0> - Eliminar Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 05:12:56:230 MEMORIA/(44822:45441): PID: <1> - Crear Segmento: <9> - Base: <0x55555555fb70> - TAMAÑO: <64>
+[INFO] 05:13:06:937 MEMORIA/(44822:45441): Se solicita compactacion
+[INFO] 05:13:20:474 MEMORIA/(44822:45441): PID: <0>
+[INFO] 05:13:20:474 MEMORIA/(44822:45441): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 05:13:20:474 MEMORIA/(44822:45441): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:13:20:474 MEMORIA/(44822:45441): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:13:20:474 MEMORIA/(44822:45441): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:13:20:474 MEMORIA/(44822:45441): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:13:20:474 MEMORIA/(44822:45441): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:13:20:474 MEMORIA/(44822:45441): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:13:20:474 MEMORIA/(44822:45441): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:13:20:474 MEMORIA/(44822:45441): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:13:20:474 MEMORIA/(44822:45441): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:13:20:474 MEMORIA/(44822:45441): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:13:20:474 MEMORIA/(44822:45441): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:13:20:474 MEMORIA/(44822:45441): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:13:20:474 MEMORIA/(44822:45441): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:13:20:474 MEMORIA/(44822:45441): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:13:20:474 MEMORIA/(44822:45441): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:13:22:195 MEMORIA/(44822:45441): PID: <1>
+[INFO] 05:13:22:195 MEMORIA/(44822:45441): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 05:13:22:195 MEMORIA/(44822:45441): Segmento: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 05:13:22:195 MEMORIA/(44822:45441): Segmento: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 05:13:22:195 MEMORIA/(44822:45441): Segmento: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 05:13:22:195 MEMORIA/(44822:45441): Segmento: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 05:13:22:195 MEMORIA/(44822:45441): Segmento: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 05:13:22:195 MEMORIA/(44822:45441): Segmento: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 05:13:22:195 MEMORIA/(44822:45441): Segmento: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 05:13:22:195 MEMORIA/(44822:45441): Segmento: <0x55555555fb30> - TAMAÑO: <64>
+[INFO] 05:13:22:195 MEMORIA/(44822:45441): Segmento: <0x55555555fb70> - TAMAÑO: <64>
+[INFO] 05:13:22:195 MEMORIA/(44822:45441): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:13:22:195 MEMORIA/(44822:45441): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:13:22:195 MEMORIA/(44822:45441): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:13:22:195 MEMORIA/(44822:45441): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:13:22:195 MEMORIA/(44822:45441): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:13:22:195 MEMORIA/(44822:45441): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:13:25:859 MEMORIA/(44822:45441): PID: <2>
+[INFO] 05:13:25:859 MEMORIA/(44822:45441): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 05:13:25:859 MEMORIA/(44822:45441): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:13:25:859 MEMORIA/(44822:45441): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:13:25:859 MEMORIA/(44822:45441): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:13:25:859 MEMORIA/(44822:45441): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:13:25:859 MEMORIA/(44822:45441): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:13:25:859 MEMORIA/(44822:45441): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:13:25:859 MEMORIA/(44822:45441): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:13:25:859 MEMORIA/(44822:45441): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:13:25:859 MEMORIA/(44822:45441): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:13:25:859 MEMORIA/(44822:45441): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:13:25:859 MEMORIA/(44822:45441): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:13:25:859 MEMORIA/(44822:45441): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:13:25:859 MEMORIA/(44822:45441): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:13:25:859 MEMORIA/(44822:45441): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:13:25:859 MEMORIA/(44822:45441): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:13:35:924 MEMORIA/(44822:45441): PID: <1> - Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <64>
+[INFO] 05:13:35:924 MEMORIA/(44822:45441): PID: <1> - Segmento: <2> - Base: <0x55555555f930> - TAMAÑO: <64>
+[INFO] 05:13:35:924 MEMORIA/(44822:45441): PID: <1> - Segmento: <3> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 05:13:35:924 MEMORIA/(44822:45441): PID: <1> - Segmento: <4> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 05:13:35:924 MEMORIA/(44822:45441): PID: <1> - Segmento: <5> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 05:13:35:924 MEMORIA/(44822:45441): PID: <1> - Segmento: <6> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 05:13:35:924 MEMORIA/(44822:45441): PID: <1> - Segmento: <7> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 05:13:35:924 MEMORIA/(44822:45441): PID: <1> - Segmento: <8> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 05:13:35:924 MEMORIA/(44822:45441): PID: <1> - Segmento: <9> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[ERROR] 05:13:42:741 MEMORIA/(44822:45441): Operacion desconocida
+[INFO] 05:14:17:529 MEMORIA/(46631:46631): Se creo el espacio contiguo de memoria
+[INFO] 05:14:17:530 MEMORIA/(46631:46631): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f870
+[INFO] 05:14:17:530 MEMORIA/(46631:46631): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555f8f0
+[INFO] 05:14:17:530 MEMORIA/(46631:46631): Esperando conexiones de modulos...
+[INFO] 05:14:20:452 MEMORIA/(46631:46631): Se conecto el file system
+[INFO] 05:14:22:725 MEMORIA/(46631:46631): Se conecto el cpu
+[INFO] 05:14:38:207 MEMORIA/(47269:47269): Se creo el espacio contiguo de memoria
+[INFO] 05:14:38:207 MEMORIA/(47269:47269): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f870
+[INFO] 05:14:38:207 MEMORIA/(47269:47269): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555f8f0
+[INFO] 05:14:38:207 MEMORIA/(47269:47269): Esperando conexiones de modulos...
+[INFO] 05:14:41:008 MEMORIA/(47269:47269): Se conecto el file system
+[INFO] 05:14:43:344 MEMORIA/(47269:47269): Se conecto el cpu
+[INFO] 05:14:49:091 MEMORIA/(47269:47269): Se conecto el kernel
+[INFO] 05:14:51:366 MEMORIA/(47269:47783): Creación de Proceso PID: <0>
+[INFO] 05:14:54:023 MEMORIA/(47269:47783): Creación de Proceso PID: <1>
+[INFO] 05:14:54:369 MEMORIA/(47269:47783): PID: <0> - Crear Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 05:14:56:382 MEMORIA/(47269:47783): PID: <1> - Crear Segmento: <1> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 05:14:56:385 MEMORIA/(47269:47783): PID: <1> - Crear Segmento: <2> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 05:14:56:411 MEMORIA/(47269:47783): PID: <1> - Crear Segmento: <3> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 05:14:56:412 MEMORIA/(47269:47783): PID: <1> - Crear Segmento: <4> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 05:14:56:413 MEMORIA/(47269:47783): PID: <1> - Crear Segmento: <5> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 05:14:56:415 MEMORIA/(47269:47783): PID: <1> - Crear Segmento: <6> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 05:14:56:415 MEMORIA/(47269:47783): PID: <1> - Crear Segmento: <7> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 05:14:56:417 MEMORIA/(47269:47783): PID: <1> - Crear Segmento: <8> - Base: <0x55555555fb30> - TAMAÑO: <64>
+[INFO] 05:14:56:602 MEMORIA/(47269:47783): Creación de Proceso PID: <2>
+[INFO] 05:14:59:421 MEMORIA/(47269:47783): PID: <0> - Eliminar Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 05:15:01:425 MEMORIA/(47269:47783): PID: <1> - Crear Segmento: <9> - Base: <0x55555555fb70> - TAMAÑO: <64>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): Se solicita compactacion
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): PID: <0>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): PID: <1>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): Segmento: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): Segmento: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): Segmento: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): Segmento: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): Segmento: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): Segmento: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): Segmento: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): Segmento: <0x55555555fb30> - TAMAÑO: <64>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): Segmento: <0x55555555fb70> - TAMAÑO: <64>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): PID: <2>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): PID: <1> - Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <64>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): PID: <1> - Segmento: <2> - Base: <0x55555555f930> - TAMAÑO: <64>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): PID: <1> - Segmento: <3> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 05:15:07:510 MEMORIA/(47269:47783): PID: <1> - Segmento: <4> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 05:15:07:511 MEMORIA/(47269:47783): PID: <1> - Segmento: <5> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 05:15:07:511 MEMORIA/(47269:47783): PID: <1> - Segmento: <6> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 05:15:07:511 MEMORIA/(47269:47783): PID: <1> - Segmento: <7> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 05:15:07:511 MEMORIA/(47269:47783): PID: <1> - Segmento: <8> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 05:15:07:511 MEMORIA/(47269:47783): PID: <1> - Segmento: <9> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 05:15:24:921 MEMORIA/(47269:47783): PID: <0>
+[INFO] 05:15:24:921 MEMORIA/(47269:47783): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 05:15:24:921 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:24:921 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:24:921 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:24:921 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:24:921 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:24:921 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:24:921 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:24:921 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:24:921 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:24:921 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:24:921 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:24:921 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:24:921 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:24:921 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:24:921 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:27:680 MEMORIA/(47269:47783): PID: <1>
+[INFO] 05:15:27:680 MEMORIA/(47269:47783): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 05:15:27:680 MEMORIA/(47269:47783): Segmento: <0x55555555f8f0> - TAMAÑO: <64>
+[INFO] 05:15:27:680 MEMORIA/(47269:47783): Segmento: <0x55555555f930> - TAMAÑO: <64>
+[INFO] 05:15:27:680 MEMORIA/(47269:47783): Segmento: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 05:15:27:680 MEMORIA/(47269:47783): Segmento: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 05:15:27:680 MEMORIA/(47269:47783): Segmento: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 05:15:27:680 MEMORIA/(47269:47783): Segmento: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 05:15:27:680 MEMORIA/(47269:47783): Segmento: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 05:15:27:680 MEMORIA/(47269:47783): Segmento: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 05:15:27:680 MEMORIA/(47269:47783): Segmento: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 05:15:27:680 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:27:680 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:27:680 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:27:680 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:27:680 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:27:680 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:30:017 MEMORIA/(47269:47783): PID: <2>
+[INFO] 05:15:30:017 MEMORIA/(47269:47783): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 05:15:30:017 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:30:017 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:30:017 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:30:017 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:30:018 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:30:018 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:30:018 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:30:018 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:30:018 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:30:018 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:30:018 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:30:018 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:30:018 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:30:018 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:15:30:018 MEMORIA/(47269:47783): Segmento: <(nil)> - TAMAÑO: <0>
+[ERROR] 05:15:30:018 MEMORIA/(47269:47783): Operacion desconocida
+[INFO] 05:16:40:193 MEMORIA/(49240:49240): Se creo el espacio contiguo de memoria
+[INFO] 05:16:40:193 MEMORIA/(49240:49240): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f870
+[INFO] 05:16:40:193 MEMORIA/(49240:49240): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555f8f0
+[INFO] 05:16:40:193 MEMORIA/(49240:49240): Esperando conexiones de modulos...
+[INFO] 05:16:48:081 MEMORIA/(49240:49240): Se conecto el file system
+[INFO] 05:16:51:780 MEMORIA/(49240:49240): Se conecto el cpu
+[INFO] 05:16:57:340 MEMORIA/(49240:49240): Se conecto el kernel
+[INFO] 05:16:59:712 MEMORIA/(49240:49965): Creación de Proceso PID: <0>
+[INFO] 05:17:01:688 MEMORIA/(49240:49965): Creación de Proceso PID: <1>
+[INFO] 05:17:02:715 MEMORIA/(49240:49965): PID: <0> - Crear Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 05:17:03:337 MEMORIA/(49240:49965): Creación de Proceso PID: <2>
+[INFO] 05:17:04:722 MEMORIA/(49240:49965): PID: <1> - Crear Segmento: <1> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 05:17:04:723 MEMORIA/(49240:49965): PID: <1> - Crear Segmento: <2> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 05:17:04:724 MEMORIA/(49240:49965): PID: <1> - Crear Segmento: <3> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 05:17:04:725 MEMORIA/(49240:49965): PID: <1> - Crear Segmento: <4> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 05:17:04:726 MEMORIA/(49240:49965): PID: <1> - Crear Segmento: <5> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 05:17:04:727 MEMORIA/(49240:49965): PID: <1> - Crear Segmento: <6> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 05:17:04:728 MEMORIA/(49240:49965): PID: <1> - Crear Segmento: <7> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 05:17:04:728 MEMORIA/(49240:49965): PID: <1> - Crear Segmento: <8> - Base: <0x55555555fb30> - TAMAÑO: <64>
+[INFO] 05:17:07:737 MEMORIA/(49240:49965): PID: <0> - Eliminar Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 05:17:09:764 MEMORIA/(49240:49965): PID: <1> - Crear Segmento: <9> - Base: <0x55555555fb70> - TAMAÑO: <64>
+[INFO] 05:17:15:777 MEMORIA/(49240:49965): Se solicita compactacion
+[INFO] 05:17:18:854 MEMORIA/(49240:49965): PID: <0>
+[INFO] 05:17:18:854 MEMORIA/(49240:49965): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 05:17:18:854 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:18:854 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:18:854 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:18:854 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:18:854 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:18:854 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:18:854 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:18:854 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:18:854 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:18:854 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:18:854 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:18:854 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:18:854 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:18:854 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:18:854 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:18:854 MEMORIA/(49240:49965): PID: <1>
+[INFO] 05:17:18:854 MEMORIA/(49240:49965): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 05:17:18:854 MEMORIA/(49240:49965): Segmento: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 05:17:18:855 MEMORIA/(49240:49965): Segmento: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 05:17:18:855 MEMORIA/(49240:49965): Segmento: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 05:17:18:855 MEMORIA/(49240:49965): Segmento: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 05:17:18:855 MEMORIA/(49240:49965): Segmento: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 05:17:18:855 MEMORIA/(49240:49965): Segmento: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 05:17:18:855 MEMORIA/(49240:49965): Segmento: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 05:17:18:855 MEMORIA/(49240:49965): Segmento: <0x55555555fb30> - TAMAÑO: <64>
+[INFO] 05:17:18:855 MEMORIA/(49240:49965): Segmento: <0x55555555fb70> - TAMAÑO: <64>
+[INFO] 05:17:18:855 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:18:855 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:18:855 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:18:855 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:18:855 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:18:855 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:18:855 MEMORIA/(49240:49965): PID: <2>
+[INFO] 05:17:18:855 MEMORIA/(49240:49965): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 05:17:18:855 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:18:855 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:18:855 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:18:855 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:18:855 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:18:855 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:18:855 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:18:855 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:18:855 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:18:855 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:18:855 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:18:855 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:18:855 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:18:855 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:18:855 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:18:855 MEMORIA/(49240:49965): PID: <1> - Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <64>
+[INFO] 05:17:18:855 MEMORIA/(49240:49965): PID: <1> - Segmento: <2> - Base: <0x55555555f930> - TAMAÑO: <64>
+[INFO] 05:17:18:855 MEMORIA/(49240:49965): PID: <1> - Segmento: <3> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 05:17:18:855 MEMORIA/(49240:49965): PID: <1> - Segmento: <4> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 05:17:18:855 MEMORIA/(49240:49965): PID: <1> - Segmento: <5> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 05:17:18:855 MEMORIA/(49240:49965): PID: <1> - Segmento: <6> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 05:17:18:855 MEMORIA/(49240:49965): PID: <1> - Segmento: <7> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 05:17:18:855 MEMORIA/(49240:49965): PID: <1> - Segmento: <8> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 05:17:18:855 MEMORIA/(49240:49965): PID: <1> - Segmento: <9> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): PID: <0>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): PID: <1>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): Segmento: <0x55555555f8f0> - TAMAÑO: <64>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): Segmento: <0x55555555f930> - TAMAÑO: <64>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): Segmento: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): Segmento: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): Segmento: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): Segmento: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): Segmento: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): Segmento: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): Segmento: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): PID: <2>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:17:22:340 MEMORIA/(49240:49965): Segmento: <(nil)> - TAMAÑO: <0>
+[ERROR] 05:17:22:341 MEMORIA/(49240:49965): Operacion desconocida
+[INFO] 05:20:16:837 MEMORIA/(51816:51816): Se creo el espacio contiguo de memoria
+[INFO] 05:20:16:838 MEMORIA/(51816:51816): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f870
+[INFO] 05:20:16:838 MEMORIA/(51816:51816): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555f8f0
+[INFO] 05:20:16:838 MEMORIA/(51816:51816): Esperando conexiones de modulos...
+[INFO] 05:20:23:234 MEMORIA/(51816:51816): Se conecto el file system
+[INFO] 05:20:27:310 MEMORIA/(51816:51816): Se conecto el cpu
+[INFO] 05:20:31:281 MEMORIA/(51816:52255): Se desconecto un modulo
+[INFO] 05:20:36:466 MEMORIA/(51816:52033): Se desconecto un modulo
+[INFO] 05:20:43:171 MEMORIA/(52643:52643): Se creo el espacio contiguo de memoria
+[INFO] 05:20:43:171 MEMORIA/(52643:52643): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f870
+[INFO] 05:20:43:171 MEMORIA/(52643:52643): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555f8f0
+[INFO] 05:20:43:171 MEMORIA/(52643:52643): Esperando conexiones de modulos...
+[INFO] 05:20:46:020 MEMORIA/(52643:52643): Se conecto el file system
+[INFO] 05:20:48:260 MEMORIA/(52643:52643): Se conecto el cpu
+[INFO] 05:20:54:919 MEMORIA/(52643:52643): Se conecto el kernel
+[INFO] 05:20:57:046 MEMORIA/(52643:53239): Creación de Proceso PID: <0>
+[INFO] 05:20:58:819 MEMORIA/(52643:53239): Creación de Proceso PID: <1>
+[INFO] 05:21:00:055 MEMORIA/(52643:53239): PID: <0> - Crear Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 05:21:00:597 MEMORIA/(52643:53239): Creación de Proceso PID: <2>
+[INFO] 05:21:02:058 MEMORIA/(52643:53239): PID: <1> - Crear Segmento: <1> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 05:21:02:060 MEMORIA/(52643:53239): PID: <1> - Crear Segmento: <2> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 05:21:02:061 MEMORIA/(52643:53239): PID: <1> - Crear Segmento: <3> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 05:21:02:062 MEMORIA/(52643:53239): PID: <1> - Crear Segmento: <4> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 05:21:02:064 MEMORIA/(52643:53239): PID: <1> - Crear Segmento: <5> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 05:21:02:066 MEMORIA/(52643:53239): PID: <1> - Crear Segmento: <6> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 05:21:02:067 MEMORIA/(52643:53239): PID: <1> - Crear Segmento: <7> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 05:21:02:068 MEMORIA/(52643:53239): PID: <1> - Crear Segmento: <8> - Base: <0x55555555fb30> - TAMAÑO: <64>
+[INFO] 05:21:05:075 MEMORIA/(52643:53239): PID: <0> - Eliminar Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 05:21:07:078 MEMORIA/(52643:53239): PID: <1> - Crear Segmento: <9> - Base: <0x55555555fb70> - TAMAÑO: <64>
+[INFO] 05:21:13:085 MEMORIA/(52643:53239): Se solicita compactacion
+[INFO] 05:21:13:085 MEMORIA/(52643:53239): PID: <0>
+[INFO] 05:21:13:085 MEMORIA/(52643:53239): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 05:21:13:085 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:085 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:085 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:085 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:085 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:085 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:085 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:085 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:085 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:085 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:085 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:085 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:085 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:085 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:085 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:085 MEMORIA/(52643:53239): PID: <1>
+[INFO] 05:21:13:085 MEMORIA/(52643:53239): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 05:21:13:085 MEMORIA/(52643:53239): Segmento: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 05:21:13:085 MEMORIA/(52643:53239): Segmento: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 05:21:13:085 MEMORIA/(52643:53239): Segmento: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 05:21:13:085 MEMORIA/(52643:53239): Segmento: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 05:21:13:085 MEMORIA/(52643:53239): Segmento: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 05:21:13:085 MEMORIA/(52643:53239): Segmento: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 05:21:13:085 MEMORIA/(52643:53239): Segmento: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 05:21:13:085 MEMORIA/(52643:53239): Segmento: <0x55555555fb30> - TAMAÑO: <64>
+[INFO] 05:21:13:085 MEMORIA/(52643:53239): Segmento: <0x55555555fb70> - TAMAÑO: <64>
+[INFO] 05:21:13:085 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:085 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:085 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): PID: <2>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): PID: <1> - Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <64>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): PID: <1> - Segmento: <2> - Base: <0x55555555f930> - TAMAÑO: <64>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): PID: <1> - Segmento: <3> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): PID: <1> - Segmento: <4> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): PID: <1> - Segmento: <5> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): PID: <1> - Segmento: <6> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): PID: <1> - Segmento: <7> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): PID: <1> - Segmento: <8> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): PID: <1> - Segmento: <9> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): PID: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): PID: <1>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <0x55555555f8f0> - TAMAÑO: <64>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <0x55555555f930> - TAMAÑO: <64>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): PID: <2>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:21:13:086 MEMORIA/(52643:53239): Segmento: <(nil)> - TAMAÑO: <0>
+[ERROR] 05:21:42:197 MEMORIA/(52643:53239): Operacion desconocida
+[INFO] 05:26:23:066 MEMORIA/(54493:54493): Se creo el espacio contiguo de memoria
+[INFO] 05:26:23:067 MEMORIA/(54493:54493): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f870
+[INFO] 05:26:23:067 MEMORIA/(54493:54493): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555f8f0
+[INFO] 05:26:23:067 MEMORIA/(54493:54493): Esperando conexiones de modulos...
+[INFO] 05:26:27:919 MEMORIA/(54493:54493): Se conecto el file system
+[INFO] 05:26:31:056 MEMORIA/(54493:54493): Se conecto el cpu
+[INFO] 05:26:49:135 MEMORIA/(55417:55417): Se creo el espacio contiguo de memoria
+[INFO] 05:26:49:135 MEMORIA/(55417:55417): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f870
+[INFO] 05:26:49:135 MEMORIA/(55417:55417): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555f8f0
+[INFO] 05:26:49:135 MEMORIA/(55417:55417): Esperando conexiones de modulos...
+[INFO] 05:26:51:497 MEMORIA/(55417:55417): Se conecto el file system
+[INFO] 05:26:53:914 MEMORIA/(55417:55417): Se conecto el cpu
+[INFO] 05:26:58:800 MEMORIA/(55417:55417): Se conecto el kernel
+[INFO] 05:27:01:076 MEMORIA/(55417:55933): Creación de Proceso PID: <0>
+[INFO] 05:27:03:757 MEMORIA/(55417:55933): Creación de Proceso PID: <1>
+[INFO] 05:27:04:081 MEMORIA/(55417:55933): PID: <0> - Crear Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 05:27:06:051 MEMORIA/(55417:55933): Creación de Proceso PID: <2>
+[INFO] 05:27:06:085 MEMORIA/(55417:55933): PID: <1> - Crear Segmento: <1> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 05:27:06:086 MEMORIA/(55417:55933): PID: <1> - Crear Segmento: <2> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 05:27:06:086 MEMORIA/(55417:55933): PID: <1> - Crear Segmento: <3> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 05:27:06:087 MEMORIA/(55417:55933): PID: <1> - Crear Segmento: <4> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 05:27:06:089 MEMORIA/(55417:55933): PID: <1> - Crear Segmento: <5> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 05:27:06:090 MEMORIA/(55417:55933): PID: <1> - Crear Segmento: <6> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 05:27:06:093 MEMORIA/(55417:55933): PID: <1> - Crear Segmento: <7> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 05:27:06:095 MEMORIA/(55417:55933): PID: <1> - Crear Segmento: <8> - Base: <0x55555555fb30> - TAMAÑO: <64>
+[INFO] 05:27:09:099 MEMORIA/(55417:55933): PID: <0> - Eliminar Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 05:27:11:106 MEMORIA/(55417:55933): PID: <1> - Crear Segmento: <9> - Base: <0x55555555fb70> - TAMAÑO: <64>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Se solicita compactacion
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): PID: <0>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): PID: <1>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <0x55555555fb30> - TAMAÑO: <64>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <0x55555555fb70> - TAMAÑO: <64>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): PID: <2>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): PID: <1> - Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <64>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): PID: <1> - Segmento: <2> - Base: <0x55555555f930> - TAMAÑO: <64>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): PID: <1> - Segmento: <3> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): PID: <1> - Segmento: <4> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): PID: <1> - Segmento: <5> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): PID: <1> - Segmento: <6> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): PID: <1> - Segmento: <7> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): PID: <1> - Segmento: <8> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): PID: <1> - Segmento: <9> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): PID: <0>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:136 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:137 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:137 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:137 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:137 MEMORIA/(55417:55933): PID: <1>
+[INFO] 05:27:17:137 MEMORIA/(55417:55933): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 05:27:17:137 MEMORIA/(55417:55933): Segmento: <0x55555555f8f0> - TAMAÑO: <64>
+[INFO] 05:27:17:137 MEMORIA/(55417:55933): Segmento: <0x55555555f930> - TAMAÑO: <64>
+[INFO] 05:27:17:137 MEMORIA/(55417:55933): Segmento: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 05:27:17:137 MEMORIA/(55417:55933): Segmento: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 05:27:17:137 MEMORIA/(55417:55933): Segmento: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 05:27:17:137 MEMORIA/(55417:55933): Segmento: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 05:27:17:137 MEMORIA/(55417:55933): Segmento: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 05:27:17:137 MEMORIA/(55417:55933): Segmento: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 05:27:17:137 MEMORIA/(55417:55933): Segmento: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 05:27:17:137 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:137 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:137 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:137 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:137 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:137 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:137 MEMORIA/(55417:55933): PID: <2>
+[INFO] 05:27:17:137 MEMORIA/(55417:55933): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 05:27:17:137 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:137 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:137 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:137 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:137 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:137 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:137 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:137 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:137 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:137 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:137 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:137 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:137 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:137 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:27:17:137 MEMORIA/(55417:55933): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:30:18:808 MEMORIA/(56878:56878): Se creo el espacio contiguo de memoria
+[INFO] 05:30:18:808 MEMORIA/(56878:56878): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f870
+[INFO] 05:30:18:808 MEMORIA/(56878:56878): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555f8f0
+[INFO] 05:30:18:808 MEMORIA/(56878:56878): Esperando conexiones de modulos...
+[INFO] 05:46:15:120 MEMORIA/(57471:57471): Se creo el espacio contiguo de memoria
+[INFO] 05:46:15:120 MEMORIA/(57471:57471): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f870
+[INFO] 05:46:15:120 MEMORIA/(57471:57471): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555f8f0
+[INFO] 05:46:15:120 MEMORIA/(57471:57471): Esperando conexiones de modulos...
+[INFO] 05:46:21:983 MEMORIA/(57471:57471): Se conecto el file system
+[INFO] 05:46:25:832 MEMORIA/(57471:57471): Se conecto el cpu
+[INFO] 05:46:32:165 MEMORIA/(57471:57471): Se conecto el kernel
+[INFO] 05:46:41:232 MEMORIA/(57471:58082): Creación de Proceso PID: <0>
+[INFO] 05:46:43:223 MEMORIA/(57471:58082): Creación de Proceso PID: <1>
+[INFO] 05:46:44:235 MEMORIA/(57471:58082): PID: <0> - Crear Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 05:46:44:696 MEMORIA/(57471:58082): Creación de Proceso PID: <2>
+[INFO] 05:46:46:238 MEMORIA/(57471:58082): PID: <1> - Crear Segmento: <1> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 05:46:46:239 MEMORIA/(57471:58082): PID: <1> - Crear Segmento: <2> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 05:46:46:240 MEMORIA/(57471:58082): PID: <1> - Crear Segmento: <3> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 05:46:46:241 MEMORIA/(57471:58082): PID: <1> - Crear Segmento: <4> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 05:46:46:242 MEMORIA/(57471:58082): PID: <1> - Crear Segmento: <5> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 05:46:46:243 MEMORIA/(57471:58082): PID: <1> - Crear Segmento: <6> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 05:46:46:243 MEMORIA/(57471:58082): PID: <1> - Crear Segmento: <7> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 05:46:46:244 MEMORIA/(57471:58082): PID: <1> - Crear Segmento: <8> - Base: <0x55555555fb30> - TAMAÑO: <64>
+[INFO] 05:46:49:248 MEMORIA/(57471:58082): PID: <0> - Eliminar Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 05:46:51:251 MEMORIA/(57471:58082): PID: <1> - Crear Segmento: <9> - Base: <0x55555555fb70> - TAMAÑO: <64>
+[INFO] 05:46:57:278 MEMORIA/(57471:58082): Se solicita compactacion
+[INFO] 05:46:57:278 MEMORIA/(57471:58082): PID: <0>
+[INFO] 05:46:57:278 MEMORIA/(57471:58082): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 05:46:57:278 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:278 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:278 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:278 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:278 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:278 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:278 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:278 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:278 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:278 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:278 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:278 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:278 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:278 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:278 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:278 MEMORIA/(57471:58082): PID: <1>
+[INFO] 05:46:57:278 MEMORIA/(57471:58082): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 05:46:57:278 MEMORIA/(57471:58082): Segmento: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <0x55555555fb30> - TAMAÑO: <64>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <0x55555555fb70> - TAMAÑO: <64>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): PID: <2>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): PID: <1> - Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <64>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): PID: <1> - Segmento: <2> - Base: <0x55555555f930> - TAMAÑO: <64>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): PID: <1> - Segmento: <3> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): PID: <1> - Segmento: <4> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): PID: <1> - Segmento: <5> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): PID: <1> - Segmento: <6> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): PID: <1> - Segmento: <7> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): PID: <1> - Segmento: <8> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): PID: <1> - Segmento: <9> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): PID: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): PID: <1>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <0x55555555f8f0> - TAMAÑO: <64>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <0x55555555f930> - TAMAÑO: <64>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): PID: <2>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:46:57:279 MEMORIA/(57471:58082): Segmento: <(nil)> - TAMAÑO: <0>
+[ERROR] 05:47:11:543 MEMORIA/(57471:58082): Operacion desconocida
+[INFO] 05:50:38:403 MEMORIA/(59328:59328): Se creo el espacio contiguo de memoria
+[INFO] 05:50:38:403 MEMORIA/(59328:59328): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f870
+[INFO] 05:50:38:403 MEMORIA/(59328:59328): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555f8f0
+[INFO] 05:50:38:403 MEMORIA/(59328:59328): Esperando conexiones de modulos...
+[INFO] 05:50:45:013 MEMORIA/(59328:59328): Se conecto el file system
+[INFO] 05:50:49:350 MEMORIA/(59328:59328): Se conecto el cpu
+[INFO] 05:50:54:762 MEMORIA/(59328:59328): Se conecto el kernel
+[INFO] 05:50:57:200 MEMORIA/(59328:59937): Creación de Proceso PID: <0>
+[INFO] 05:50:59:491 MEMORIA/(59328:59937): Creación de Proceso PID: <1>
+[INFO] 05:51:00:202 MEMORIA/(59328:59937): PID: <0> - Crear Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 05:51:01:470 MEMORIA/(59328:59937): Creación de Proceso PID: <2>
+[INFO] 05:51:02:207 MEMORIA/(59328:59937): PID: <1> - Crear Segmento: <1> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 05:51:02:208 MEMORIA/(59328:59937): PID: <1> - Crear Segmento: <2> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 05:51:02:209 MEMORIA/(59328:59937): PID: <1> - Crear Segmento: <3> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 05:51:02:210 MEMORIA/(59328:59937): PID: <1> - Crear Segmento: <4> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 05:51:02:211 MEMORIA/(59328:59937): PID: <1> - Crear Segmento: <5> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 05:51:02:213 MEMORIA/(59328:59937): PID: <1> - Crear Segmento: <6> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 05:51:02:214 MEMORIA/(59328:59937): PID: <1> - Crear Segmento: <7> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 05:51:02:216 MEMORIA/(59328:59937): PID: <1> - Crear Segmento: <8> - Base: <0x55555555fb30> - TAMAÑO: <64>
+[INFO] 05:51:05:276 MEMORIA/(59328:59937): PID: <0> - Eliminar Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 05:51:07:286 MEMORIA/(59328:59937): PID: <1> - Crear Segmento: <9> - Base: <0x55555555fb70> - TAMAÑO: <64>
+[INFO] 05:51:13:411 MEMORIA/(59328:59937): Se solicita compactacion
+[INFO] 05:51:13:411 MEMORIA/(59328:59937): PID: <0>
+[INFO] 05:51:13:411 MEMORIA/(59328:59937): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 05:51:13:411 MEMORIA/(59328:59937): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:51:13:411 MEMORIA/(59328:59937): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:51:13:411 MEMORIA/(59328:59937): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:51:13:411 MEMORIA/(59328:59937): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:51:13:411 MEMORIA/(59328:59937): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): PID: <1>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): Segmento: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): Segmento: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): Segmento: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): Segmento: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): Segmento: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): Segmento: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): Segmento: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): Segmento: <0x55555555fb30> - TAMAÑO: <64>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): Segmento: <0x55555555fb70> - TAMAÑO: <64>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): PID: <2>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): PID: <1> - Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <64>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): PID: <1> - Segmento: <2> - Base: <0x55555555f930> - TAMAÑO: <64>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): PID: <1> - Segmento: <3> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): PID: <1> - Segmento: <4> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): PID: <1> - Segmento: <5> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): PID: <1> - Segmento: <6> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): PID: <1> - Segmento: <7> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): PID: <1> - Segmento: <8> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 05:51:13:412 MEMORIA/(59328:59937): PID: <1> - Segmento: <9> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[ERROR] 05:51:15:989 MEMORIA/(59328:59937): Operacion desconocida
+[INFO] 05:52:00:244 MEMORIA/(60979:60979): Se creo el espacio contiguo de memoria
+[INFO] 05:52:00:244 MEMORIA/(60979:60979): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f870
+[INFO] 05:52:00:244 MEMORIA/(60979:60979): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555f8f0
+[INFO] 05:52:00:245 MEMORIA/(60979:60979): Esperando conexiones de modulos...
+[INFO] 05:52:04:074 MEMORIA/(60979:60979): Se conecto el file system
+[INFO] 05:52:07:025 MEMORIA/(60979:60979): Se conecto el cpu
+[INFO] 05:52:13:948 MEMORIA/(60979:60979): Se conecto el kernel
+[INFO] 05:52:16:312 MEMORIA/(60979:61595): Creación de Proceso PID: <0>
+[INFO] 05:52:19:205 MEMORIA/(60979:61595): Creación de Proceso PID: <1>
+[INFO] 05:52:19:314 MEMORIA/(60979:61595): PID: <0> - Crear Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 05:52:21:319 MEMORIA/(60979:61595): PID: <1> - Crear Segmento: <1> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 05:52:21:320 MEMORIA/(60979:61595): PID: <1> - Crear Segmento: <2> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 05:52:21:321 MEMORIA/(60979:61595): PID: <1> - Crear Segmento: <3> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 05:52:21:322 MEMORIA/(60979:61595): PID: <1> - Crear Segmento: <4> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 05:52:21:323 MEMORIA/(60979:61595): PID: <1> - Crear Segmento: <5> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 05:52:21:324 MEMORIA/(60979:61595): PID: <1> - Crear Segmento: <6> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 05:52:21:325 MEMORIA/(60979:61595): PID: <1> - Crear Segmento: <7> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 05:52:21:326 MEMORIA/(60979:61595): PID: <1> - Crear Segmento: <8> - Base: <0x55555555fb30> - TAMAÑO: <64>
+[INFO] 05:52:22:254 MEMORIA/(60979:61595): Creación de Proceso PID: <2>
+[INFO] 05:52:24:330 MEMORIA/(60979:61595): PID: <0> - Eliminar Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 05:52:26:345 MEMORIA/(60979:61595): PID: <1> - Crear Segmento: <9> - Base: <0x55555555fb70> - TAMAÑO: <64>
+[INFO] 05:52:32:436 MEMORIA/(60979:61595): Se solicita compactacion
+[INFO] 05:52:32:436 MEMORIA/(60979:61595): PID: <0>
+[INFO] 05:52:32:436 MEMORIA/(60979:61595): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 05:52:32:436 MEMORIA/(60979:61595): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:52:32:436 MEMORIA/(60979:61595): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:52:32:436 MEMORIA/(60979:61595): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:52:32:436 MEMORIA/(60979:61595): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:52:32:436 MEMORIA/(60979:61595): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:52:32:436 MEMORIA/(60979:61595): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:52:32:436 MEMORIA/(60979:61595): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:52:32:436 MEMORIA/(60979:61595): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:52:32:436 MEMORIA/(60979:61595): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:52:32:437 MEMORIA/(60979:61595): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:52:32:437 MEMORIA/(60979:61595): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:52:32:437 MEMORIA/(60979:61595): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:52:32:437 MEMORIA/(60979:61595): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:52:32:437 MEMORIA/(60979:61595): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:52:32:437 MEMORIA/(60979:61595): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:52:32:437 MEMORIA/(60979:61595): PID: <1>
+[INFO] 05:52:32:437 MEMORIA/(60979:61595): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 05:52:32:437 MEMORIA/(60979:61595): Segmento: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 05:52:32:437 MEMORIA/(60979:61595): Segmento: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 05:52:32:437 MEMORIA/(60979:61595): Segmento: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 05:52:32:437 MEMORIA/(60979:61595): Segmento: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 05:52:32:437 MEMORIA/(60979:61595): Segmento: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 05:52:32:437 MEMORIA/(60979:61595): Segmento: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 05:52:32:437 MEMORIA/(60979:61595): Segmento: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 05:52:32:437 MEMORIA/(60979:61595): Segmento: <0x55555555fb30> - TAMAÑO: <64>
+[INFO] 05:52:32:437 MEMORIA/(60979:61595): Segmento: <0x55555555fb70> - TAMAÑO: <64>
+[INFO] 05:52:32:437 MEMORIA/(60979:61595): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:52:32:437 MEMORIA/(60979:61595): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:52:32:437 MEMORIA/(60979:61595): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:52:32:437 MEMORIA/(60979:61595): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:52:32:437 MEMORIA/(60979:61595): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:52:32:437 MEMORIA/(60979:61595): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:52:32:437 MEMORIA/(60979:61595): PID: <2>
+[INFO] 05:52:32:437 MEMORIA/(60979:61595): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 05:52:32:437 MEMORIA/(60979:61595): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:52:32:437 MEMORIA/(60979:61595): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:52:32:437 MEMORIA/(60979:61595): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:52:32:437 MEMORIA/(60979:61595): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:52:32:437 MEMORIA/(60979:61595): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:52:32:437 MEMORIA/(60979:61595): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:52:32:437 MEMORIA/(60979:61595): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:52:32:437 MEMORIA/(60979:61595): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:52:32:437 MEMORIA/(60979:61595): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:52:32:437 MEMORIA/(60979:61595): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:52:32:437 MEMORIA/(60979:61595): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:52:32:437 MEMORIA/(60979:61595): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:52:32:437 MEMORIA/(60979:61595): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:52:32:437 MEMORIA/(60979:61595): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:52:32:437 MEMORIA/(60979:61595): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:52:32:437 MEMORIA/(60979:61595): PID: <1> - Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <64>
+[INFO] 05:52:32:437 MEMORIA/(60979:61595): PID: <1> - Segmento: <2> - Base: <0x55555555f930> - TAMAÑO: <64>
+[INFO] 05:52:32:437 MEMORIA/(60979:61595): PID: <1> - Segmento: <3> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 05:52:32:437 MEMORIA/(60979:61595): PID: <1> - Segmento: <4> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 05:52:32:437 MEMORIA/(60979:61595): PID: <1> - Segmento: <5> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 05:52:32:437 MEMORIA/(60979:61595): PID: <1> - Segmento: <6> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 05:52:32:437 MEMORIA/(60979:61595): PID: <1> - Segmento: <7> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 05:52:32:437 MEMORIA/(60979:61595): PID: <1> - Segmento: <8> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 05:52:32:437 MEMORIA/(60979:61595): PID: <1> - Segmento: <9> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[ERROR] 05:52:32:437 MEMORIA/(60979:61595): Operacion desconocida
+[INFO] 05:56:29:818 MEMORIA/(62648:62648): Se creo el espacio contiguo de memoria
+[INFO] 05:56:29:819 MEMORIA/(62648:62648): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f870
+[INFO] 05:56:29:819 MEMORIA/(62648:62648): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555f8f0
+[INFO] 05:56:29:819 MEMORIA/(62648:62648): Esperando conexiones de modulos...
+[INFO] 05:56:34:613 MEMORIA/(62648:62648): Se conecto el file system
+[INFO] 05:56:38:961 MEMORIA/(62648:62648): Se conecto el cpu
+[INFO] 05:56:50:190 MEMORIA/(62648:62648): Se conecto el kernel
+[INFO] 05:56:54:615 MEMORIA/(62648:63221): Creación de Proceso PID: <0>
+[INFO] 05:56:56:851 MEMORIA/(62648:63221): Creación de Proceso PID: <1>
+[INFO] 05:56:57:621 MEMORIA/(62648:63221): PID: <0> - Crear Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 05:56:59:027 MEMORIA/(62648:63221): Creación de Proceso PID: <2>
+[INFO] 05:56:59:624 MEMORIA/(62648:63221): PID: <1> - Crear Segmento: <1> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 05:56:59:626 MEMORIA/(62648:63221): PID: <1> - Crear Segmento: <2> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 05:56:59:626 MEMORIA/(62648:63221): PID: <1> - Crear Segmento: <3> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 05:56:59:627 MEMORIA/(62648:63221): PID: <1> - Crear Segmento: <4> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 05:56:59:628 MEMORIA/(62648:63221): PID: <1> - Crear Segmento: <5> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 05:56:59:629 MEMORIA/(62648:63221): PID: <1> - Crear Segmento: <6> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 05:56:59:630 MEMORIA/(62648:63221): PID: <1> - Crear Segmento: <7> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 05:56:59:631 MEMORIA/(62648:63221): PID: <1> - Crear Segmento: <8> - Base: <0x55555555fb30> - TAMAÑO: <64>
+[INFO] 05:57:02:690 MEMORIA/(62648:63221): PID: <0> - Eliminar Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 05:57:04:837 MEMORIA/(62648:63221): PID: <1> - Crear Segmento: <9> - Base: <0x55555555fb70> - TAMAÑO: <64>
+[INFO] 05:57:10:842 MEMORIA/(62648:63221): Se solicita compactacion
+[INFO] 05:57:10:842 MEMORIA/(62648:63221): PID: <0>
+[INFO] 05:57:10:842 MEMORIA/(62648:63221): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 05:57:10:842 MEMORIA/(62648:63221): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:57:10:842 MEMORIA/(62648:63221): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:57:10:842 MEMORIA/(62648:63221): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:57:10:842 MEMORIA/(62648:63221): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:57:10:842 MEMORIA/(62648:63221): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:57:10:842 MEMORIA/(62648:63221): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:57:10:842 MEMORIA/(62648:63221): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:57:10:842 MEMORIA/(62648:63221): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:57:10:843 MEMORIA/(62648:63221): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:57:10:843 MEMORIA/(62648:63221): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:57:10:843 MEMORIA/(62648:63221): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:57:10:843 MEMORIA/(62648:63221): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:57:10:843 MEMORIA/(62648:63221): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:57:10:843 MEMORIA/(62648:63221): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:57:10:843 MEMORIA/(62648:63221): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:57:10:843 MEMORIA/(62648:63221): PID: <1>
+[INFO] 05:57:10:843 MEMORIA/(62648:63221): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 05:57:10:843 MEMORIA/(62648:63221): Segmento: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 05:57:10:843 MEMORIA/(62648:63221): Segmento: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 05:57:10:843 MEMORIA/(62648:63221): Segmento: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 05:57:10:843 MEMORIA/(62648:63221): Segmento: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 05:57:10:843 MEMORIA/(62648:63221): Segmento: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 05:57:10:843 MEMORIA/(62648:63221): Segmento: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 05:57:10:843 MEMORIA/(62648:63221): Segmento: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 05:57:10:843 MEMORIA/(62648:63221): Segmento: <0x55555555fb30> - TAMAÑO: <64>
+[INFO] 05:57:10:843 MEMORIA/(62648:63221): Segmento: <0x55555555fb70> - TAMAÑO: <64>
+[INFO] 05:57:10:843 MEMORIA/(62648:63221): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:57:10:843 MEMORIA/(62648:63221): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:57:10:843 MEMORIA/(62648:63221): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:57:10:843 MEMORIA/(62648:63221): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:57:10:843 MEMORIA/(62648:63221): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:57:10:843 MEMORIA/(62648:63221): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:57:10:843 MEMORIA/(62648:63221): PID: <2>
+[INFO] 05:57:10:843 MEMORIA/(62648:63221): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 05:57:10:843 MEMORIA/(62648:63221): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:57:10:843 MEMORIA/(62648:63221): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:57:10:843 MEMORIA/(62648:63221): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:57:10:843 MEMORIA/(62648:63221): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:57:10:843 MEMORIA/(62648:63221): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:57:10:843 MEMORIA/(62648:63221): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:57:10:843 MEMORIA/(62648:63221): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:57:10:843 MEMORIA/(62648:63221): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:57:10:843 MEMORIA/(62648:63221): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:57:10:843 MEMORIA/(62648:63221): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:57:10:843 MEMORIA/(62648:63221): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:57:10:843 MEMORIA/(62648:63221): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:57:10:843 MEMORIA/(62648:63221): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:57:10:843 MEMORIA/(62648:63221): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:57:10:843 MEMORIA/(62648:63221): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 05:57:10:843 MEMORIA/(62648:63221): PID: <1> - Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <64>
+[INFO] 05:57:10:845 MEMORIA/(62648:63221): PID: <1> - Segmento: <2> - Base: <0x55555555f930> - TAMAÑO: <64>
+[INFO] 05:57:10:845 MEMORIA/(62648:63221): PID: <1> - Segmento: <3> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 05:57:10:845 MEMORIA/(62648:63221): PID: <1> - Segmento: <4> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 05:57:10:845 MEMORIA/(62648:63221): PID: <1> - Segmento: <5> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 05:57:10:845 MEMORIA/(62648:63221): PID: <1> - Segmento: <6> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 05:57:10:845 MEMORIA/(62648:63221): PID: <1> - Segmento: <7> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 05:57:10:845 MEMORIA/(62648:63221): PID: <1> - Segmento: <8> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 05:57:10:845 MEMORIA/(62648:63221): PID: <1> - Segmento: <9> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[ERROR] 05:57:10:845 MEMORIA/(62648:63221): Operacion desconocida
+[INFO] 06:01:08:301 MEMORIA/(64181:64181): Se creo el espacio contiguo de memoria
+[INFO] 06:01:08:302 MEMORIA/(64181:64181): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f870
+[INFO] 06:01:08:302 MEMORIA/(64181:64181): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555f8f0
+[INFO] 06:01:08:302 MEMORIA/(64181:64181): Esperando conexiones de modulos...
+[INFO] 06:03:16:950 MEMORIA/(64391:64391): Se creo el espacio contiguo de memoria
+[INFO] 06:03:16:950 MEMORIA/(64391:64391): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f870
+[INFO] 06:03:16:950 MEMORIA/(64391:64391): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555f8f0
+[INFO] 06:03:16:950 MEMORIA/(64391:64391): Esperando conexiones de modulos...
+[INFO] 06:03:23:848 MEMORIA/(64391:64391): Se conecto el file system
+[INFO] 06:03:26:643 MEMORIA/(64391:64391): Se conecto el cpu
+[INFO] 06:03:34:154 MEMORIA/(64391:64391): Se conecto el kernel
+[INFO] 06:04:38:482 MEMORIA/(65903:65903): Se creo el espacio contiguo de memoria
+[INFO] 06:04:38:483 MEMORIA/(65903:65903): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f870
+[INFO] 06:04:38:483 MEMORIA/(65903:65903): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555f8f0
+[INFO] 06:04:38:483 MEMORIA/(65903:65903): Esperando conexiones de modulos...
+[INFO] 06:04:45:159 MEMORIA/(65903:65903): Se conecto el file system
+[INFO] 06:04:48:564 MEMORIA/(65903:65903): Se conecto el cpu
+[INFO] 06:07:52:756 MEMORIA/(65903:65903): Se conecto el kernel
+[INFO] 06:07:59:189 MEMORIA/(65903:66510): Creación de Proceso PID: <0>
+[INFO] 06:08:01:729 MEMORIA/(65903:66510): Creación de Proceso PID: <1>
+[INFO] 06:08:02:192 MEMORIA/(65903:66510): PID: <0> - Crear Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 06:08:03:579 MEMORIA/(65903:66510): Creación de Proceso PID: <2>
+[INFO] 06:08:04:200 MEMORIA/(65903:66510): PID: <1> - Crear Segmento: <1> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 06:08:04:202 MEMORIA/(65903:66510): PID: <1> - Crear Segmento: <2> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 06:08:04:202 MEMORIA/(65903:66510): PID: <1> - Crear Segmento: <3> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 06:08:04:203 MEMORIA/(65903:66510): PID: <1> - Crear Segmento: <4> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 06:08:04:204 MEMORIA/(65903:66510): PID: <1> - Crear Segmento: <5> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 06:08:04:205 MEMORIA/(65903:66510): PID: <1> - Crear Segmento: <6> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 06:08:04:207 MEMORIA/(65903:66510): PID: <1> - Crear Segmento: <7> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 06:08:04:207 MEMORIA/(65903:66510): PID: <1> - Crear Segmento: <8> - Base: <0x55555555fb30> - TAMAÑO: <64>
+[INFO] 06:08:07:212 MEMORIA/(65903:66510): PID: <0> - Eliminar Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 06:08:09:223 MEMORIA/(65903:66510): PID: <1> - Crear Segmento: <9> - Base: <0x55555555fb70> - TAMAÑO: <64>
+[INFO] 06:08:15:385 MEMORIA/(65903:66510): Se solicita compactacion
+[INFO] 06:08:15:385 MEMORIA/(65903:66510): PID: <0>
+[INFO] 06:08:15:385 MEMORIA/(65903:66510): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 06:08:15:385 MEMORIA/(65903:66510): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:08:15:385 MEMORIA/(65903:66510): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:08:15:385 MEMORIA/(65903:66510): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:08:15:385 MEMORIA/(65903:66510): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:08:15:385 MEMORIA/(65903:66510): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:08:15:385 MEMORIA/(65903:66510): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:08:15:385 MEMORIA/(65903:66510): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:08:15:385 MEMORIA/(65903:66510): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:08:15:385 MEMORIA/(65903:66510): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:08:15:385 MEMORIA/(65903:66510): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:08:15:385 MEMORIA/(65903:66510): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:08:15:385 MEMORIA/(65903:66510): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:08:15:385 MEMORIA/(65903:66510): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:08:15:385 MEMORIA/(65903:66510): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:08:15:385 MEMORIA/(65903:66510): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:08:15:385 MEMORIA/(65903:66510): PID: <1>
+[INFO] 06:08:15:385 MEMORIA/(65903:66510): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 06:08:15:385 MEMORIA/(65903:66510): Segmento: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 06:08:15:385 MEMORIA/(65903:66510): Segmento: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 06:08:15:385 MEMORIA/(65903:66510): Segmento: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 06:08:15:385 MEMORIA/(65903:66510): Segmento: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 06:08:15:385 MEMORIA/(65903:66510): Segmento: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 06:08:15:385 MEMORIA/(65903:66510): Segmento: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 06:08:15:385 MEMORIA/(65903:66510): Segmento: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 06:08:15:385 MEMORIA/(65903:66510): Segmento: <0x55555555fb30> - TAMAÑO: <64>
+[INFO] 06:08:15:385 MEMORIA/(65903:66510): Segmento: <0x55555555fb70> - TAMAÑO: <64>
+[INFO] 06:08:15:385 MEMORIA/(65903:66510): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:08:15:385 MEMORIA/(65903:66510): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:08:15:385 MEMORIA/(65903:66510): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:08:15:385 MEMORIA/(65903:66510): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:08:15:385 MEMORIA/(65903:66510): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:08:15:385 MEMORIA/(65903:66510): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:08:15:385 MEMORIA/(65903:66510): PID: <2>
+[INFO] 06:08:15:385 MEMORIA/(65903:66510): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 06:08:15:385 MEMORIA/(65903:66510): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:08:15:385 MEMORIA/(65903:66510): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:08:15:385 MEMORIA/(65903:66510): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:08:15:385 MEMORIA/(65903:66510): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:08:15:385 MEMORIA/(65903:66510): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:08:15:385 MEMORIA/(65903:66510): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:08:15:385 MEMORIA/(65903:66510): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:08:15:385 MEMORIA/(65903:66510): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:08:15:386 MEMORIA/(65903:66510): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:08:15:386 MEMORIA/(65903:66510): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:08:15:386 MEMORIA/(65903:66510): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:08:15:386 MEMORIA/(65903:66510): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:08:15:386 MEMORIA/(65903:66510): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:08:15:386 MEMORIA/(65903:66510): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:08:15:386 MEMORIA/(65903:66510): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:08:15:386 MEMORIA/(65903:66510): PID: <1> - Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <64>
+[INFO] 06:08:15:386 MEMORIA/(65903:66510): PID: <1> - Segmento: <2> - Base: <0x55555555f930> - TAMAÑO: <64>
+[INFO] 06:08:15:386 MEMORIA/(65903:66510): PID: <1> - Segmento: <3> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 06:08:15:386 MEMORIA/(65903:66510): PID: <1> - Segmento: <4> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 06:08:15:386 MEMORIA/(65903:66510): PID: <1> - Segmento: <5> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 06:08:15:386 MEMORIA/(65903:66510): PID: <1> - Segmento: <6> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 06:08:15:386 MEMORIA/(65903:66510): PID: <1> - Segmento: <7> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 06:08:15:386 MEMORIA/(65903:66510): PID: <1> - Segmento: <8> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 06:08:15:386 MEMORIA/(65903:66510): PID: <1> - Segmento: <9> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[ERROR] 06:08:15:386 MEMORIA/(65903:66510): Operacion desconocida
+[INFO] 06:13:58:595 MEMORIA/(67535:67535): Se creo el espacio contiguo de memoria
+[INFO] 06:13:58:595 MEMORIA/(67535:67535): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f870
+[INFO] 06:13:58:595 MEMORIA/(67535:67535): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555f8f0
+[INFO] 06:13:58:595 MEMORIA/(67535:67535): Esperando conexiones de modulos...
+[INFO] 06:14:02:815 MEMORIA/(67535:67535): Se conecto el file system
+[INFO] 06:14:06:244 MEMORIA/(67535:67535): Se conecto el cpu
+[INFO] 06:14:11:176 MEMORIA/(67535:67535): Se conecto el kernel
+[INFO] 06:14:25:931 MEMORIA/(67535:68059): Se desconecto un modulo
+[INFO] 06:14:25:931 MEMORIA/(67535:67837): Se desconecto un modulo
+[INFO] 06:15:01:543 MEMORIA/(68802:68802): Se creo el espacio contiguo de memoria
+[INFO] 06:15:01:545 MEMORIA/(68802:68802): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f870
+[INFO] 06:15:01:546 MEMORIA/(68802:68802): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555f8f0
+[INFO] 06:15:01:546 MEMORIA/(68802:68802): Esperando conexiones de modulos...
+[INFO] 06:15:25:466 MEMORIA/(68988:68988): Se creo el espacio contiguo de memoria
+[INFO] 06:15:25:466 MEMORIA/(68988:68988): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f870
+[INFO] 06:15:25:466 MEMORIA/(68988:68988): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555f8f0
+[INFO] 06:15:25:466 MEMORIA/(68988:68988): Esperando conexiones de modulos...
+[INFO] 06:15:31:162 MEMORIA/(68988:68988): Se conecto el file system
+[INFO] 06:15:35:686 MEMORIA/(68988:68988): Se conecto el cpu
+[INFO] 06:15:42:575 MEMORIA/(68988:68988): Se conecto el kernel
+[INFO] 06:15:48:803 MEMORIA/(68988:69516): Creación de Proceso PID: <0>
+[INFO] 06:15:51:432 MEMORIA/(68988:69516): Creación de Proceso PID: <1>
+[INFO] 06:15:51:806 MEMORIA/(68988:69516): PID: <0> - Crear Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 06:15:53:815 MEMORIA/(68988:69516): PID: <1> - Crear Segmento: <1> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 06:15:53:816 MEMORIA/(68988:69516): PID: <1> - Crear Segmento: <2> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 06:15:53:817 MEMORIA/(68988:69516): PID: <1> - Crear Segmento: <3> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 06:15:53:818 MEMORIA/(68988:69516): PID: <1> - Crear Segmento: <4> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 06:15:53:819 MEMORIA/(68988:69516): PID: <1> - Crear Segmento: <5> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 06:15:53:820 MEMORIA/(68988:69516): PID: <1> - Crear Segmento: <6> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 06:15:53:822 MEMORIA/(68988:69516): PID: <1> - Crear Segmento: <7> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 06:15:53:823 MEMORIA/(68988:69516): PID: <1> - Crear Segmento: <8> - Base: <0x55555555fb30> - TAMAÑO: <64>
+[INFO] 06:15:55:408 MEMORIA/(68988:69516): Creación de Proceso PID: <2>
+[INFO] 06:15:56:827 MEMORIA/(68988:69516): PID: <0> - Eliminar Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 06:15:58:830 MEMORIA/(68988:69516): PID: <1> - Crear Segmento: <9> - Base: <0x55555555fb70> - TAMAÑO: <64>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): Se solicita compactacion
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): PID: <0>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): PID: <1>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): Segmento: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): Segmento: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): Segmento: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): Segmento: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): Segmento: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): Segmento: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): Segmento: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): Segmento: <0x55555555fb30> - TAMAÑO: <64>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): Segmento: <0x55555555fb70> - TAMAÑO: <64>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): PID: <2>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): PID: <1> - Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <64>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): PID: <1> - Segmento: <2> - Base: <0x55555555f930> - TAMAÑO: <64>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): PID: <1> - Segmento: <3> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): PID: <1> - Segmento: <4> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 06:16:04:835 MEMORIA/(68988:69516): PID: <1> - Segmento: <5> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 06:16:04:836 MEMORIA/(68988:69516): PID: <1> - Segmento: <6> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 06:16:04:836 MEMORIA/(68988:69516): PID: <1> - Segmento: <7> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 06:16:04:836 MEMORIA/(68988:69516): PID: <1> - Segmento: <8> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 06:16:04:836 MEMORIA/(68988:69516): PID: <1> - Segmento: <9> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[ERROR] 06:16:04:836 MEMORIA/(68988:69516): Operacion desconocida
+[INFO] 06:16:27:437 MEMORIA/(70447:70447): Se creo el espacio contiguo de memoria
+[INFO] 06:16:27:437 MEMORIA/(70447:70447): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f870
+[INFO] 06:16:27:437 MEMORIA/(70447:70447): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555f8f0
+[INFO] 06:16:27:437 MEMORIA/(70447:70447): Esperando conexiones de modulos...
+[INFO] 06:16:30:446 MEMORIA/(70447:70447): Se conecto el file system
+[INFO] 06:16:32:826 MEMORIA/(70447:70447): Se conecto el cpu
+[INFO] 06:16:39:153 MEMORIA/(70447:70447): Se conecto el kernel
+[INFO] 06:16:41:498 MEMORIA/(70447:71027): Creación de Proceso PID: <0>
+[INFO] 06:16:44:204 MEMORIA/(70447:71027): Creación de Proceso PID: <1>
+[INFO] 06:16:44:505 MEMORIA/(70447:71027): PID: <0> - Crear Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 06:16:46:509 MEMORIA/(70447:71027): PID: <1> - Crear Segmento: <1> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 06:16:46:511 MEMORIA/(70447:71027): PID: <1> - Crear Segmento: <2> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 06:16:46:511 MEMORIA/(70447:71027): PID: <1> - Crear Segmento: <3> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 06:16:46:512 MEMORIA/(70447:71027): PID: <1> - Crear Segmento: <4> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 06:16:46:513 MEMORIA/(70447:71027): PID: <1> - Crear Segmento: <5> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 06:16:46:514 MEMORIA/(70447:71027): PID: <1> - Crear Segmento: <6> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 06:16:46:514 MEMORIA/(70447:71027): PID: <1> - Crear Segmento: <7> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 06:16:46:515 MEMORIA/(70447:71027): PID: <1> - Crear Segmento: <8> - Base: <0x55555555fb30> - TAMAÑO: <64>
+[INFO] 06:16:46:856 MEMORIA/(70447:71027): Creación de Proceso PID: <2>
+[INFO] 06:16:49:520 MEMORIA/(70447:71027): PID: <0> - Eliminar Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 06:16:51:526 MEMORIA/(70447:71027): PID: <1> - Crear Segmento: <9> - Base: <0x55555555fb70> - TAMAÑO: <64>
+[INFO] 06:16:57:536 MEMORIA/(70447:71027): Se solicita compactacion
+[INFO] 06:16:57:537 MEMORIA/(70447:71027): PID: <0>
+[INFO] 06:16:57:537 MEMORIA/(70447:71027): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 06:16:57:537 MEMORIA/(70447:71027): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:57:537 MEMORIA/(70447:71027): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:57:537 MEMORIA/(70447:71027): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:57:537 MEMORIA/(70447:71027): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:57:537 MEMORIA/(70447:71027): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:57:537 MEMORIA/(70447:71027): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:57:537 MEMORIA/(70447:71027): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:57:537 MEMORIA/(70447:71027): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:57:537 MEMORIA/(70447:71027): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:57:537 MEMORIA/(70447:71027): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:57:537 MEMORIA/(70447:71027): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:57:537 MEMORIA/(70447:71027): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:57:537 MEMORIA/(70447:71027): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:57:537 MEMORIA/(70447:71027): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:57:537 MEMORIA/(70447:71027): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:57:537 MEMORIA/(70447:71027): PID: <1>
+[INFO] 06:16:57:537 MEMORIA/(70447:71027): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 06:16:57:537 MEMORIA/(70447:71027): Segmento: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 06:16:57:537 MEMORIA/(70447:71027): Segmento: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 06:16:57:537 MEMORIA/(70447:71027): Segmento: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 06:16:57:537 MEMORIA/(70447:71027): Segmento: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 06:16:57:537 MEMORIA/(70447:71027): Segmento: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 06:16:57:538 MEMORIA/(70447:71027): Segmento: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 06:16:57:538 MEMORIA/(70447:71027): Segmento: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 06:16:57:538 MEMORIA/(70447:71027): Segmento: <0x55555555fb30> - TAMAÑO: <64>
+[INFO] 06:16:57:538 MEMORIA/(70447:71027): Segmento: <0x55555555fb70> - TAMAÑO: <64>
+[INFO] 06:16:57:538 MEMORIA/(70447:71027): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:57:538 MEMORIA/(70447:71027): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:57:538 MEMORIA/(70447:71027): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:57:538 MEMORIA/(70447:71027): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:57:538 MEMORIA/(70447:71027): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:57:538 MEMORIA/(70447:71027): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:57:538 MEMORIA/(70447:71027): PID: <2>
+[INFO] 06:16:57:538 MEMORIA/(70447:71027): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 06:16:57:538 MEMORIA/(70447:71027): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:57:538 MEMORIA/(70447:71027): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:57:538 MEMORIA/(70447:71027): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:57:538 MEMORIA/(70447:71027): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:57:538 MEMORIA/(70447:71027): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:57:538 MEMORIA/(70447:71027): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:57:538 MEMORIA/(70447:71027): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:57:538 MEMORIA/(70447:71027): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:57:538 MEMORIA/(70447:71027): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:57:538 MEMORIA/(70447:71027): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:57:538 MEMORIA/(70447:71027): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:57:538 MEMORIA/(70447:71027): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:57:538 MEMORIA/(70447:71027): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:57:538 MEMORIA/(70447:71027): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:57:538 MEMORIA/(70447:71027): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:16:57:538 MEMORIA/(70447:71027): PID: <1> - Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <64>
+[INFO] 06:16:57:538 MEMORIA/(70447:71027): PID: <1> - Segmento: <2> - Base: <0x55555555f930> - TAMAÑO: <64>
+[INFO] 06:16:57:538 MEMORIA/(70447:71027): PID: <1> - Segmento: <3> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 06:16:57:538 MEMORIA/(70447:71027): PID: <1> - Segmento: <4> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 06:16:57:538 MEMORIA/(70447:71027): PID: <1> - Segmento: <5> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 06:16:57:538 MEMORIA/(70447:71027): PID: <1> - Segmento: <6> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 06:16:57:538 MEMORIA/(70447:71027): PID: <1> - Segmento: <7> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 06:16:57:538 MEMORIA/(70447:71027): PID: <1> - Segmento: <8> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 06:16:57:538 MEMORIA/(70447:71027): PID: <1> - Segmento: <9> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[ERROR] 06:16:57:538 MEMORIA/(70447:71027): Operacion desconocida
+[INFO] 06:18:19:000 MEMORIA/(71942:71942): Se creo el espacio contiguo de memoria
+[INFO] 06:18:19:000 MEMORIA/(71942:71942): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f870
+[INFO] 06:18:19:000 MEMORIA/(71942:71942): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555f8f0
+[INFO] 06:18:19:000 MEMORIA/(71942:71942): Esperando conexiones de modulos...
+[INFO] 06:18:22:941 MEMORIA/(71942:71942): Se conecto el file system
+[INFO] 06:18:26:735 MEMORIA/(71942:71942): Se conecto el cpu
+[INFO] 06:18:33:954 MEMORIA/(71942:71942): Se conecto el kernel
+[INFO] 06:18:36:567 MEMORIA/(71942:72539): Creación de Proceso PID: <0>
+[INFO] 06:18:38:743 MEMORIA/(71942:72539): Creación de Proceso PID: <1>
+[INFO] 06:18:39:572 MEMORIA/(71942:72539): PID: <0> - Crear Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 06:18:40:728 MEMORIA/(71942:72539): Creación de Proceso PID: <2>
+[INFO] 06:18:41:575 MEMORIA/(71942:72539): PID: <1> - Crear Segmento: <1> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 06:18:41:576 MEMORIA/(71942:72539): PID: <1> - Crear Segmento: <2> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 06:18:41:577 MEMORIA/(71942:72539): PID: <1> - Crear Segmento: <3> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 06:18:41:578 MEMORIA/(71942:72539): PID: <1> - Crear Segmento: <4> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 06:18:41:580 MEMORIA/(71942:72539): PID: <1> - Crear Segmento: <5> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 06:18:41:580 MEMORIA/(71942:72539): PID: <1> - Crear Segmento: <6> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 06:18:41:581 MEMORIA/(71942:72539): PID: <1> - Crear Segmento: <7> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 06:18:41:582 MEMORIA/(71942:72539): PID: <1> - Crear Segmento: <8> - Base: <0x55555555fb30> - TAMAÑO: <64>
+[INFO] 06:18:44:685 MEMORIA/(71942:72539): PID: <0> - Eliminar Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 06:18:46:695 MEMORIA/(71942:72539): PID: <1> - Crear Segmento: <9> - Base: <0x55555555fb70> - TAMAÑO: <64>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): Se solicita compactacion
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): PID: <0>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): PID: <1>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): Segmento: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): Segmento: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): Segmento: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): Segmento: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): Segmento: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): Segmento: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): Segmento: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): Segmento: <0x55555555fb30> - TAMAÑO: <64>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): Segmento: <0x55555555fb70> - TAMAÑO: <64>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): PID: <2>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): PID: <1> - Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <64>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): PID: <1> - Segmento: <2> - Base: <0x55555555f930> - TAMAÑO: <64>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): PID: <1> - Segmento: <3> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): PID: <1> - Segmento: <4> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): PID: <1> - Segmento: <5> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): PID: <1> - Segmento: <6> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): PID: <1> - Segmento: <7> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): PID: <1> - Segmento: <8> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 06:18:52:710 MEMORIA/(71942:72539): PID: <1> - Segmento: <9> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[ERROR] 06:18:52:711 MEMORIA/(71942:72539): Operacion desconocida
+[INFO] 06:20:05:746 MEMORIA/(73466:73466): Se creo el espacio contiguo de memoria
+[INFO] 06:20:05:746 MEMORIA/(73466:73466): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f870
+[INFO] 06:20:05:746 MEMORIA/(73466:73466): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555f8f0
+[INFO] 06:20:05:746 MEMORIA/(73466:73466): Esperando conexiones de modulos...
+[INFO] 06:20:09:983 MEMORIA/(73466:73466): Se conecto el file system
+[INFO] 06:20:13:218 MEMORIA/(73466:73466): Se conecto el cpu
+[INFO] 06:20:20:789 MEMORIA/(73466:73466): Se conecto el kernel
+[INFO] 06:20:23:086 MEMORIA/(73466:74069): Creación de Proceso PID: <0>
+[INFO] 06:20:25:096 MEMORIA/(73466:74069): Creación de Proceso PID: <1>
+[INFO] 06:20:26:090 MEMORIA/(73466:74069): PID: <0> - Crear Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 06:20:26:585 MEMORIA/(73466:74069): Creación de Proceso PID: <2>
+[INFO] 06:20:28:093 MEMORIA/(73466:74069): PID: <1> - Crear Segmento: <1> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 06:20:28:094 MEMORIA/(73466:74069): PID: <1> - Crear Segmento: <2> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 06:20:28:095 MEMORIA/(73466:74069): PID: <1> - Crear Segmento: <3> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 06:20:28:096 MEMORIA/(73466:74069): PID: <1> - Crear Segmento: <4> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 06:20:28:097 MEMORIA/(73466:74069): PID: <1> - Crear Segmento: <5> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 06:20:28:097 MEMORIA/(73466:74069): PID: <1> - Crear Segmento: <6> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 06:20:28:099 MEMORIA/(73466:74069): PID: <1> - Crear Segmento: <7> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 06:20:28:100 MEMORIA/(73466:74069): PID: <1> - Crear Segmento: <8> - Base: <0x55555555fb30> - TAMAÑO: <64>
+[INFO] 06:20:31:213 MEMORIA/(73466:74069): PID: <0> - Eliminar Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 06:20:33:237 MEMORIA/(73466:74069): PID: <1> - Crear Segmento: <9> - Base: <0x55555555fb70> - TAMAÑO: <64>
+[INFO] 06:20:39:243 MEMORIA/(73466:74069): Se solicita compactacion
+[INFO] 06:20:39:243 MEMORIA/(73466:74069): PID: <0>
+[INFO] 06:20:39:243 MEMORIA/(73466:74069): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 06:20:39:243 MEMORIA/(73466:74069): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:20:39:243 MEMORIA/(73466:74069): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:20:39:243 MEMORIA/(73466:74069): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:20:39:243 MEMORIA/(73466:74069): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:20:39:243 MEMORIA/(73466:74069): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:20:39:243 MEMORIA/(73466:74069): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:20:39:243 MEMORIA/(73466:74069): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:20:39:243 MEMORIA/(73466:74069): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:20:39:243 MEMORIA/(73466:74069): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:20:39:243 MEMORIA/(73466:74069): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:20:39:243 MEMORIA/(73466:74069): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:20:39:243 MEMORIA/(73466:74069): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:20:39:243 MEMORIA/(73466:74069): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:20:39:243 MEMORIA/(73466:74069): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:20:39:243 MEMORIA/(73466:74069): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:20:39:243 MEMORIA/(73466:74069): PID: <1>
+[INFO] 06:20:39:243 MEMORIA/(73466:74069): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 06:20:39:243 MEMORIA/(73466:74069): Segmento: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 06:20:39:243 MEMORIA/(73466:74069): Segmento: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 06:20:39:243 MEMORIA/(73466:74069): Segmento: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 06:20:39:243 MEMORIA/(73466:74069): Segmento: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 06:20:39:243 MEMORIA/(73466:74069): Segmento: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 06:20:39:243 MEMORIA/(73466:74069): Segmento: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 06:20:39:243 MEMORIA/(73466:74069): Segmento: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 06:20:39:243 MEMORIA/(73466:74069): Segmento: <0x55555555fb30> - TAMAÑO: <64>
+[INFO] 06:20:39:243 MEMORIA/(73466:74069): Segmento: <0x55555555fb70> - TAMAÑO: <64>
+[INFO] 06:20:39:243 MEMORIA/(73466:74069): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:20:39:243 MEMORIA/(73466:74069): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:20:39:243 MEMORIA/(73466:74069): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:20:39:243 MEMORIA/(73466:74069): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:20:39:244 MEMORIA/(73466:74069): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:20:39:244 MEMORIA/(73466:74069): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:20:39:244 MEMORIA/(73466:74069): PID: <2>
+[INFO] 06:20:39:244 MEMORIA/(73466:74069): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 06:20:39:244 MEMORIA/(73466:74069): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:20:39:244 MEMORIA/(73466:74069): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:20:39:244 MEMORIA/(73466:74069): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:20:39:244 MEMORIA/(73466:74069): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:20:39:244 MEMORIA/(73466:74069): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:20:39:244 MEMORIA/(73466:74069): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:20:39:244 MEMORIA/(73466:74069): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:20:39:244 MEMORIA/(73466:74069): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:20:39:244 MEMORIA/(73466:74069): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:20:39:244 MEMORIA/(73466:74069): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:20:39:244 MEMORIA/(73466:74069): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:20:39:244 MEMORIA/(73466:74069): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:20:39:244 MEMORIA/(73466:74069): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:20:39:244 MEMORIA/(73466:74069): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:20:39:244 MEMORIA/(73466:74069): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:20:39:244 MEMORIA/(73466:74069): PID: <1> - Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <64>
+[INFO] 06:20:39:244 MEMORIA/(73466:74069): PID: <1> - Segmento: <2> - Base: <0x55555555f930> - TAMAÑO: <64>
+[INFO] 06:20:39:244 MEMORIA/(73466:74069): PID: <1> - Segmento: <3> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 06:20:39:244 MEMORIA/(73466:74069): PID: <1> - Segmento: <4> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 06:20:39:244 MEMORIA/(73466:74069): PID: <1> - Segmento: <5> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 06:20:39:244 MEMORIA/(73466:74069): PID: <1> - Segmento: <6> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 06:20:39:244 MEMORIA/(73466:74069): PID: <1> - Segmento: <7> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 06:20:39:244 MEMORIA/(73466:74069): PID: <1> - Segmento: <8> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 06:20:39:244 MEMORIA/(73466:74069): PID: <1> - Segmento: <9> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[ERROR] 06:20:39:244 MEMORIA/(73466:74069): Operacion desconocida
+[INFO] 06:21:21:811 MEMORIA/(74997:74997): Se creo el espacio contiguo de memoria
+[INFO] 06:21:21:811 MEMORIA/(74997:74997): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f870
+[INFO] 06:21:21:811 MEMORIA/(74997:74997): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555f8f0
+[INFO] 06:21:21:811 MEMORIA/(74997:74997): Esperando conexiones de modulos...
+[INFO] 06:21:26:346 MEMORIA/(74997:74997): Se conecto el file system
+[INFO] 06:21:34:412 MEMORIA/(74997:74997): Se conecto el cpu
+[INFO] 06:21:40:148 MEMORIA/(74997:74997): Se conecto el kernel
+[INFO] 06:21:43:319 MEMORIA/(74997:75607): Creación de Proceso PID: <0>
+[INFO] 06:21:45:859 MEMORIA/(74997:75607): Creación de Proceso PID: <1>
+[INFO] 06:21:46:322 MEMORIA/(74997:75607): PID: <0> - Crear Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 06:21:47:431 MEMORIA/(74997:75607): Creación de Proceso PID: <2>
+[INFO] 06:21:48:325 MEMORIA/(74997:75607): PID: <1> - Crear Segmento: <1> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 06:21:48:326 MEMORIA/(74997:75607): PID: <1> - Crear Segmento: <2> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 06:21:48:327 MEMORIA/(74997:75607): PID: <1> - Crear Segmento: <3> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 06:21:48:328 MEMORIA/(74997:75607): PID: <1> - Crear Segmento: <4> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 06:21:48:329 MEMORIA/(74997:75607): PID: <1> - Crear Segmento: <5> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 06:21:48:329 MEMORIA/(74997:75607): PID: <1> - Crear Segmento: <6> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 06:21:48:330 MEMORIA/(74997:75607): PID: <1> - Crear Segmento: <7> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 06:21:48:331 MEMORIA/(74997:75607): PID: <1> - Crear Segmento: <8> - Base: <0x55555555fb30> - TAMAÑO: <64>
+[INFO] 06:21:51:335 MEMORIA/(74997:75607): PID: <0> - Eliminar Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 06:21:53:338 MEMORIA/(74997:75607): PID: <1> - Crear Segmento: <9> - Base: <0x55555555fb70> - TAMAÑO: <64>
+[INFO] 06:21:59:367 MEMORIA/(74997:75607): Se solicita compactacion
+[INFO] 06:21:59:367 MEMORIA/(74997:75607): PID: <0>
+[INFO] 06:21:59:367 MEMORIA/(74997:75607): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 06:21:59:367 MEMORIA/(74997:75607): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:21:59:367 MEMORIA/(74997:75607): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:21:59:367 MEMORIA/(74997:75607): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:21:59:367 MEMORIA/(74997:75607): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:21:59:367 MEMORIA/(74997:75607): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:21:59:367 MEMORIA/(74997:75607): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:21:59:367 MEMORIA/(74997:75607): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:21:59:367 MEMORIA/(74997:75607): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:21:59:367 MEMORIA/(74997:75607): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:21:59:367 MEMORIA/(74997:75607): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:21:59:367 MEMORIA/(74997:75607): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:21:59:367 MEMORIA/(74997:75607): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:21:59:367 MEMORIA/(74997:75607): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:21:59:367 MEMORIA/(74997:75607): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:21:59:367 MEMORIA/(74997:75607): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:21:59:367 MEMORIA/(74997:75607): PID: <1>
+[INFO] 06:21:59:367 MEMORIA/(74997:75607): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 06:21:59:367 MEMORIA/(74997:75607): Segmento: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 06:21:59:367 MEMORIA/(74997:75607): Segmento: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 06:21:59:367 MEMORIA/(74997:75607): Segmento: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 06:21:59:367 MEMORIA/(74997:75607): Segmento: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 06:21:59:367 MEMORIA/(74997:75607): Segmento: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 06:21:59:367 MEMORIA/(74997:75607): Segmento: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 06:21:59:367 MEMORIA/(74997:75607): Segmento: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 06:21:59:367 MEMORIA/(74997:75607): Segmento: <0x55555555fb30> - TAMAÑO: <64>
+[INFO] 06:21:59:367 MEMORIA/(74997:75607): Segmento: <0x55555555fb70> - TAMAÑO: <64>
+[INFO] 06:21:59:367 MEMORIA/(74997:75607): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:21:59:367 MEMORIA/(74997:75607): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:21:59:367 MEMORIA/(74997:75607): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:21:59:367 MEMORIA/(74997:75607): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:21:59:367 MEMORIA/(74997:75607): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:21:59:367 MEMORIA/(74997:75607): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:21:59:367 MEMORIA/(74997:75607): PID: <2>
+[INFO] 06:21:59:367 MEMORIA/(74997:75607): Segmento: <0x55555555f870> - TAMAÑO: <128>
+[INFO] 06:21:59:367 MEMORIA/(74997:75607): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:21:59:367 MEMORIA/(74997:75607): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:21:59:368 MEMORIA/(74997:75607): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:21:59:368 MEMORIA/(74997:75607): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:21:59:368 MEMORIA/(74997:75607): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:21:59:368 MEMORIA/(74997:75607): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:21:59:368 MEMORIA/(74997:75607): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:21:59:368 MEMORIA/(74997:75607): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:21:59:368 MEMORIA/(74997:75607): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:21:59:368 MEMORIA/(74997:75607): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:21:59:368 MEMORIA/(74997:75607): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:21:59:368 MEMORIA/(74997:75607): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:21:59:368 MEMORIA/(74997:75607): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:21:59:368 MEMORIA/(74997:75607): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:21:59:368 MEMORIA/(74997:75607): Segmento: <(nil)> - TAMAÑO: <0>
+[INFO] 06:21:59:368 MEMORIA/(74997:75607): PID: <1> - Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <64>
+[INFO] 06:21:59:368 MEMORIA/(74997:75607): PID: <1> - Segmento: <2> - Base: <0x55555555f930> - TAMAÑO: <64>
+[INFO] 06:21:59:368 MEMORIA/(74997:75607): PID: <1> - Segmento: <3> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 06:21:59:368 MEMORIA/(74997:75607): PID: <1> - Segmento: <4> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 06:21:59:368 MEMORIA/(74997:75607): PID: <1> - Segmento: <5> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 06:21:59:368 MEMORIA/(74997:75607): PID: <1> - Segmento: <6> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 06:21:59:368 MEMORIA/(74997:75607): PID: <1> - Segmento: <7> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 06:21:59:368 MEMORIA/(74997:75607): PID: <1> - Segmento: <8> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 06:21:59:368 MEMORIA/(74997:75607): PID: <1> - Segmento: <9> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[ERROR] 06:21:59:368 MEMORIA/(74997:75607): Operacion desconocida
+[INFO] 06:24:14:420 MEMORIA/(76733:76733): Se creo el espacio contiguo de memoria
+[INFO] 06:24:14:420 MEMORIA/(76733:76733): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f870
+[INFO] 06:24:14:420 MEMORIA/(76733:76733): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555f8f0
+[INFO] 06:24:14:420 MEMORIA/(76733:76733): Esperando conexiones de modulos...
+[INFO] 06:24:21:336 MEMORIA/(76733:76733): Se conecto el file system
+[INFO] 06:24:24:591 MEMORIA/(76733:76733): Se conecto el cpu
+[INFO] 06:24:29:270 MEMORIA/(76733:76733): Se conecto el kernel
+[INFO] 06:25:36:828 MEMORIA/(78312:78312): Se creo el espacio contiguo de memoria
+[INFO] 06:25:36:828 MEMORIA/(78312:78312): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555e870
+[INFO] 06:25:36:828 MEMORIA/(78312:78312): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555e8f0
+[INFO] 06:25:36:828 MEMORIA/(78312:78312): Esperando conexiones de modulos...
+[INFO] 06:25:42:381 MEMORIA/(78312:78312): Se conecto el file system
+[INFO] 06:25:45:377 MEMORIA/(78312:78312): Se conecto el cpu
+[INFO] 06:25:50:252 MEMORIA/(78312:78312): Se conecto el kernel
+[INFO] 06:25:53:409 MEMORIA/(78312:78887): Creación de Proceso PID: <0>
+[INFO] 06:25:55:524 MEMORIA/(78312:78887): Creación de Proceso PID: <1>
+[INFO] 06:25:56:412 MEMORIA/(78312:78887): PID: <0> - Crear Segmento: <1> - Base: <0x55555555e8f0> - TAMAÑO: <128>
+[INFO] 06:25:57:721 MEMORIA/(78312:78887): Creación de Proceso PID: <2>
+[INFO] 06:25:58:416 MEMORIA/(78312:78887): PID: <1> - Crear Segmento: <1> - Base: <0x55555555e970> - TAMAÑO: <64>
+[INFO] 06:25:58:417 MEMORIA/(78312:78887): PID: <1> - Crear Segmento: <2> - Base: <0x55555555e9b0> - TAMAÑO: <64>
+[INFO] 06:25:58:418 MEMORIA/(78312:78887): PID: <1> - Crear Segmento: <3> - Base: <0x55555555e9f0> - TAMAÑO: <64>
+[INFO] 06:25:58:419 MEMORIA/(78312:78887): PID: <1> - Crear Segmento: <4> - Base: <0x55555555ea30> - TAMAÑO: <64>
+[INFO] 06:25:58:421 MEMORIA/(78312:78887): PID: <1> - Crear Segmento: <5> - Base: <0x55555555ea70> - TAMAÑO: <64>
+[INFO] 06:25:58:421 MEMORIA/(78312:78887): PID: <1> - Crear Segmento: <6> - Base: <0x55555555eab0> - TAMAÑO: <64>
+[INFO] 06:25:58:423 MEMORIA/(78312:78887): PID: <1> - Crear Segmento: <7> - Base: <0x55555555eaf0> - TAMAÑO: <64>
+[INFO] 06:25:58:424 MEMORIA/(78312:78887): PID: <1> - Crear Segmento: <8> - Base: <0x55555555eb30> - TAMAÑO: <64>
+[INFO] 06:26:01:430 MEMORIA/(78312:78887): PID: <0> - Eliminar Segmento: <1> - Base: <0x55555555e8f0> - TAMAÑO: <128>
+[INFO] 06:26:03:434 MEMORIA/(78312:78887): PID: <1> - Crear Segmento: <9> - Base: <0x55555555eb70> - TAMAÑO: <64>
+[INFO] 06:26:09:443 MEMORIA/(78312:78887): Se solicita compactacion
+[INFO] 06:26:09:443 MEMORIA/(78312:78887): PID: <1> - Segmento: <1> - Base: <0x55555555e8f0> - TAMAÑO: <64>
+[INFO] 06:26:09:443 MEMORIA/(78312:78887): PID: <1> - Segmento: <2> - Base: <0x55555555e930> - TAMAÑO: <64>
+[INFO] 06:26:09:443 MEMORIA/(78312:78887): PID: <1> - Segmento: <3> - Base: <0x55555555e970> - TAMAÑO: <64>
+[INFO] 06:26:09:443 MEMORIA/(78312:78887): PID: <1> - Segmento: <4> - Base: <0x55555555e9b0> - TAMAÑO: <64>
+[INFO] 06:26:09:443 MEMORIA/(78312:78887): PID: <1> - Segmento: <5> - Base: <0x55555555e9f0> - TAMAÑO: <64>
+[INFO] 06:26:09:443 MEMORIA/(78312:78887): PID: <1> - Segmento: <6> - Base: <0x55555555ea30> - TAMAÑO: <64>
+[INFO] 06:26:09:443 MEMORIA/(78312:78887): PID: <1> - Segmento: <7> - Base: <0x55555555ea70> - TAMAÑO: <64>
+[INFO] 06:26:09:443 MEMORIA/(78312:78887): PID: <1> - Segmento: <8> - Base: <0x55555555eab0> - TAMAÑO: <64>
+[INFO] 06:26:09:443 MEMORIA/(78312:78887): PID: <1> - Segmento: <9> - Base: <0x55555555eaf0> - TAMAÑO: <64>
+[ERROR] 06:26:09:443 MEMORIA/(78312:78887): Operacion desconocida
+[INFO] 06:29:52:511 MEMORIA/(80007:80007): Se creo el espacio contiguo de memoria
+[INFO] 06:29:52:511 MEMORIA/(80007:80007): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555e870
+[INFO] 06:29:52:511 MEMORIA/(80007:80007): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555e8f0
+[INFO] 06:29:52:511 MEMORIA/(80007:80007): Esperando conexiones de modulos...
+[INFO] 06:29:58:386 MEMORIA/(80007:80007): Se conecto el file system
+[INFO] 06:30:01:612 MEMORIA/(80007:80007): Se conecto el cpu
+[INFO] 06:30:27:163 MEMORIA/(80007:80007): Se conecto el kernel
+[INFO] 06:30:32:615 MEMORIA/(80007:80710): Creación de Proceso PID: <0>
+[INFO] 06:30:34:846 MEMORIA/(80007:80710): Creación de Proceso PID: <1>
+[INFO] 06:30:35:630 MEMORIA/(80007:80710): PID: <0> - Crear Segmento: <1> - Base: <0x55555555e8f0> - TAMAÑO: <128>
+[INFO] 06:30:36:508 MEMORIA/(80007:80710): Creación de Proceso PID: <2>
+[INFO] 06:30:37:633 MEMORIA/(80007:80710): PID: <1> - Crear Segmento: <1> - Base: <0x55555555e970> - TAMAÑO: <64>
+[INFO] 06:30:37:635 MEMORIA/(80007:80710): PID: <1> - Crear Segmento: <2> - Base: <0x55555555e9b0> - TAMAÑO: <64>
+[INFO] 06:30:37:636 MEMORIA/(80007:80710): PID: <1> - Crear Segmento: <3> - Base: <0x55555555e9f0> - TAMAÑO: <64>
+[INFO] 06:30:37:637 MEMORIA/(80007:80710): PID: <1> - Crear Segmento: <4> - Base: <0x55555555ea30> - TAMAÑO: <64>
+[INFO] 06:30:37:638 MEMORIA/(80007:80710): PID: <1> - Crear Segmento: <5> - Base: <0x55555555ea70> - TAMAÑO: <64>
+[INFO] 06:30:37:639 MEMORIA/(80007:80710): PID: <1> - Crear Segmento: <6> - Base: <0x55555555eab0> - TAMAÑO: <64>
+[INFO] 06:30:37:640 MEMORIA/(80007:80710): PID: <1> - Crear Segmento: <7> - Base: <0x55555555eaf0> - TAMAÑO: <64>
+[INFO] 06:30:37:641 MEMORIA/(80007:80710): PID: <1> - Crear Segmento: <8> - Base: <0x55555555eb30> - TAMAÑO: <64>
+[INFO] 06:30:40:646 MEMORIA/(80007:80710): PID: <0> - Eliminar Segmento: <1> - Base: <0x55555555e8f0> - TAMAÑO: <128>
+[INFO] 06:30:42:653 MEMORIA/(80007:80710): PID: <1> - Crear Segmento: <9> - Base: <0x55555555eb70> - TAMAÑO: <64>
+[INFO] 06:30:48:662 MEMORIA/(80007:80710): Se solicita compactacion
+[INFO] 06:30:48:662 MEMORIA/(80007:80710): PID: <1> - Segmento: <1> - Base: <0x55555555e8f0> - TAMAÑO: <64>
+[INFO] 06:30:48:662 MEMORIA/(80007:80710): PID: <1> - Segmento: <2> - Base: <0x55555555e930> - TAMAÑO: <64>
+[INFO] 06:30:48:662 MEMORIA/(80007:80710): PID: <1> - Segmento: <3> - Base: <0x55555555e970> - TAMAÑO: <64>
+[INFO] 06:30:48:662 MEMORIA/(80007:80710): PID: <1> - Segmento: <4> - Base: <0x55555555e9b0> - TAMAÑO: <64>
+[INFO] 06:30:48:662 MEMORIA/(80007:80710): PID: <1> - Segmento: <5> - Base: <0x55555555e9f0> - TAMAÑO: <64>
+[INFO] 06:30:48:662 MEMORIA/(80007:80710): PID: <1> - Segmento: <6> - Base: <0x55555555ea30> - TAMAÑO: <64>
+[INFO] 06:30:48:662 MEMORIA/(80007:80710): PID: <1> - Segmento: <7> - Base: <0x55555555ea70> - TAMAÑO: <64>
+[INFO] 06:30:48:662 MEMORIA/(80007:80710): PID: <1> - Segmento: <8> - Base: <0x55555555eab0> - TAMAÑO: <64>
+[INFO] 06:30:48:662 MEMORIA/(80007:80710): PID: <1> - Segmento: <9> - Base: <0x55555555eaf0> - TAMAÑO: <64>
+[ERROR] 06:30:48:662 MEMORIA/(80007:80710): Operacion desconocida
+[INFO] 06:33:52:760 MEMORIA/(81827:81827): Se creo el espacio contiguo de memoria
+[INFO] 06:33:52:760 MEMORIA/(81827:81827): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f870
+[INFO] 06:33:52:760 MEMORIA/(81827:81827): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555f8f0
+[INFO] 06:33:52:760 MEMORIA/(81827:81827): Esperando conexiones de modulos...
+[INFO] 06:33:57:057 MEMORIA/(81827:81827): Se conecto el file system
+[INFO] 06:34:00:119 MEMORIA/(81827:81827): Se conecto el cpu
+[INFO] 06:34:06:000 MEMORIA/(81827:81827): Se conecto el kernel
+[INFO] 06:34:09:598 MEMORIA/(81827:82384): Se desconecto un modulo
+[INFO] 06:34:42:595 MEMORIA/(82732:82732): Se creo el espacio contiguo de memoria
+[INFO] 06:34:42:595 MEMORIA/(82732:82732): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f870
+[INFO] 06:34:42:595 MEMORIA/(82732:82732): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555f8f0
+[INFO] 06:34:42:595 MEMORIA/(82732:82732): Esperando conexiones de modulos...
+[INFO] 06:34:47:803 MEMORIA/(82732:82732): Se conecto el file system
+[INFO] 06:34:51:629 MEMORIA/(82732:82732): Se conecto el cpu
+[INFO] 06:35:02:167 MEMORIA/(82732:82732): Se conecto el kernel
+[INFO] 06:35:04:888 MEMORIA/(82732:83276): Creación de Proceso PID: <0>
+[INFO] 06:35:07:288 MEMORIA/(82732:83276): Creación de Proceso PID: <1>
+[INFO] 06:35:07:892 MEMORIA/(82732:83276): PID: <0> - Crear Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 06:35:09:862 MEMORIA/(82732:83276): Creación de Proceso PID: <2>
+[INFO] 06:35:09:897 MEMORIA/(82732:83276): PID: <1> - Crear Segmento: <1> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 06:35:09:899 MEMORIA/(82732:83276): PID: <1> - Crear Segmento: <2> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 06:35:09:899 MEMORIA/(82732:83276): PID: <1> - Crear Segmento: <3> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 06:35:09:901 MEMORIA/(82732:83276): PID: <1> - Crear Segmento: <4> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 06:35:09:902 MEMORIA/(82732:83276): PID: <1> - Crear Segmento: <5> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 06:35:09:903 MEMORIA/(82732:83276): PID: <1> - Crear Segmento: <6> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 06:35:09:904 MEMORIA/(82732:83276): PID: <1> - Crear Segmento: <7> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 06:35:09:904 MEMORIA/(82732:83276): PID: <1> - Crear Segmento: <8> - Base: <0x55555555fb30> - TAMAÑO: <64>
+[INFO] 06:35:12:910 MEMORIA/(82732:83276): PID: <0> - Eliminar Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 06:35:14:913 MEMORIA/(82732:83276): PID: <1> - Crear Segmento: <9> - Base: <0x55555555fb70> - TAMAÑO: <64>
+[INFO] 06:35:20:918 MEMORIA/(82732:83276): Se solicita compactacion
+[INFO] 06:35:20:918 MEMORIA/(82732:83276): PID: <1> - Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <64>
+[INFO] 06:35:20:918 MEMORIA/(82732:83276): PID: <1> - Segmento: <2> - Base: <0x55555555f930> - TAMAÑO: <64>
+[INFO] 06:35:20:918 MEMORIA/(82732:83276): PID: <1> - Segmento: <3> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 06:35:20:918 MEMORIA/(82732:83276): PID: <1> - Segmento: <4> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 06:35:20:918 MEMORIA/(82732:83276): PID: <1> - Segmento: <5> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 06:35:20:918 MEMORIA/(82732:83276): PID: <1> - Segmento: <6> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 06:35:20:918 MEMORIA/(82732:83276): PID: <1> - Segmento: <7> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 06:35:20:918 MEMORIA/(82732:83276): PID: <1> - Segmento: <8> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 06:35:20:918 MEMORIA/(82732:83276): PID: <1> - Segmento: <9> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[ERROR] 06:35:35:918 MEMORIA/(82732:83276): Operacion desconocida
+[INFO] 06:37:12:500 MEMORIA/(84305:84305): Se creo el espacio contiguo de memoria
+[INFO] 06:37:12:500 MEMORIA/(84305:84305): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f870
+[INFO] 06:37:12:500 MEMORIA/(84305:84305): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555f8f0
+[INFO] 06:37:12:500 MEMORIA/(84305:84305): Esperando conexiones de modulos...
+[INFO] 06:37:15:951 MEMORIA/(84305:84305): Se conecto el file system
+[INFO] 06:37:18:780 MEMORIA/(84305:84305): Se conecto el cpu
+[INFO] 06:37:27:681 MEMORIA/(84305:84305): Se conecto el kernel
+[INFO] 06:37:30:368 MEMORIA/(84305:84843): Creación de Proceso PID: <0>
+[INFO] 06:37:32:383 MEMORIA/(84305:84843): Creación de Proceso PID: <1>
+[INFO] 06:37:33:371 MEMORIA/(84305:84843): PID: <0> - Crear Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 06:37:34:493 MEMORIA/(84305:84843): Creación de Proceso PID: <2>
+[INFO] 06:37:35:375 MEMORIA/(84305:84843): PID: <1> - Crear Segmento: <1> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 06:37:35:376 MEMORIA/(84305:84843): PID: <1> - Crear Segmento: <2> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 06:37:35:377 MEMORIA/(84305:84843): PID: <1> - Crear Segmento: <3> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 06:37:35:378 MEMORIA/(84305:84843): PID: <1> - Crear Segmento: <4> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 06:37:35:379 MEMORIA/(84305:84843): PID: <1> - Crear Segmento: <5> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 06:37:35:381 MEMORIA/(84305:84843): PID: <1> - Crear Segmento: <6> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 06:37:35:382 MEMORIA/(84305:84843): PID: <1> - Crear Segmento: <7> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 06:37:35:382 MEMORIA/(84305:84843): PID: <1> - Crear Segmento: <8> - Base: <0x55555555fb30> - TAMAÑO: <64>
+[INFO] 06:37:38:396 MEMORIA/(84305:84843): PID: <0> - Eliminar Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 06:37:40:404 MEMORIA/(84305:84843): PID: <1> - Crear Segmento: <9> - Base: <0x55555555fb70> - TAMAÑO: <64>
+[INFO] 06:37:46:443 MEMORIA/(84305:84843): Se solicita compactacion
+[INFO] 06:37:46:443 MEMORIA/(84305:84843): PID: <1> - Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <64>
+[INFO] 06:37:46:443 MEMORIA/(84305:84843): PID: <1> - Segmento: <2> - Base: <0x55555555f930> - TAMAÑO: <64>
+[INFO] 06:37:46:443 MEMORIA/(84305:84843): PID: <1> - Segmento: <3> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 06:37:46:443 MEMORIA/(84305:84843): PID: <1> - Segmento: <4> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 06:37:46:443 MEMORIA/(84305:84843): PID: <1> - Segmento: <5> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 06:37:46:443 MEMORIA/(84305:84843): PID: <1> - Segmento: <6> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 06:37:46:443 MEMORIA/(84305:84843): PID: <1> - Segmento: <7> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 06:37:46:443 MEMORIA/(84305:84843): PID: <1> - Segmento: <8> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 06:37:46:443 MEMORIA/(84305:84843): PID: <1> - Segmento: <9> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 06:41:03:074 MEMORIA/(86025:86025): Se creo el espacio contiguo de memoria
+[INFO] 06:41:03:074 MEMORIA/(86025:86025): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f870
+[INFO] 06:41:03:074 MEMORIA/(86025:86025): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555f8f0
+[INFO] 06:41:03:074 MEMORIA/(86025:86025): Esperando conexiones de modulos...
+[INFO] 06:41:09:578 MEMORIA/(86025:86025): Se conecto el file system
+[INFO] 06:41:16:550 MEMORIA/(86025:86025): Se conecto el cpu
+[INFO] 06:41:26:577 MEMORIA/(86025:86025): Se conecto el kernel
+[INFO] 06:41:34:100 MEMORIA/(86025:86429): Se desconecto un modulo
+[INFO] 06:41:35:953 MEMORIA/(86025:86237): Se desconecto un modulo
+[INFO] 06:41:36:931 MEMORIA/(86025:86793): Se desconecto un modulo
+[INFO] 06:41:51:858 MEMORIA/(87118:87118): Se creo el espacio contiguo de memoria
+[INFO] 06:41:51:858 MEMORIA/(87118:87118): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f870
+[INFO] 06:41:51:858 MEMORIA/(87118:87118): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555f8f0
+[INFO] 06:41:51:858 MEMORIA/(87118:87118): Esperando conexiones de modulos...
+[INFO] 06:41:57:438 MEMORIA/(87118:87118): Se conecto el file system
+[INFO] 06:42:02:759 MEMORIA/(87118:87118): Se conecto el cpu
+[INFO] 06:42:08:736 MEMORIA/(87118:87118): Se conecto el kernel
+[INFO] 06:42:17:803 MEMORIA/(87118:87673): Creación de Proceso PID: <0>
+[INFO] 06:42:36:760 MEMORIA/(87118:87673): PID: <0> - Crear Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 06:43:00:796 MEMORIA/(87118:87673): Se desconecto un modulo
+[INFO] 06:43:09:307 MEMORIA/(88779:88779): Se creo el espacio contiguo de memoria
+[INFO] 06:43:09:307 MEMORIA/(88779:88779): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f870
+[INFO] 06:43:09:307 MEMORIA/(88779:88779): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555f8f0
+[INFO] 06:43:09:307 MEMORIA/(88779:88779): Esperando conexiones de modulos...
+[INFO] 06:43:13:273 MEMORIA/(88779:88779): Se conecto el file system
+[INFO] 06:43:17:864 MEMORIA/(88779:88779): Se conecto el cpu
+[INFO] 06:43:22:726 MEMORIA/(88779:88779): Se conecto el kernel
+[INFO] 06:44:09:138 MEMORIA/(89955:89955): Se creo el espacio contiguo de memoria
+[INFO] 06:44:09:138 MEMORIA/(89955:89955): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x55555555f870
+[INFO] 06:44:09:138 MEMORIA/(89955:89955): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x55555555f8f0
+[INFO] 06:44:09:138 MEMORIA/(89955:89955): Esperando conexiones de modulos...
+[INFO] 06:44:14:739 MEMORIA/(89955:89955): Se conecto el file system
+[INFO] 06:44:18:293 MEMORIA/(89955:89955): Se conecto el cpu
+[INFO] 06:44:22:830 MEMORIA/(89955:89955): Se conecto el kernel
+[INFO] 06:44:26:024 MEMORIA/(89955:90506): Creación de Proceso PID: <0>
+[INFO] 06:44:27:705 MEMORIA/(89955:90506): Creación de Proceso PID: <1>
+[INFO] 06:44:29:028 MEMORIA/(89955:90506): PID: <0> - Crear Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 06:44:31:138 MEMORIA/(89955:90506): Creación de Proceso PID: <2>
+[INFO] 06:44:34:885 MEMORIA/(89955:90506): PID: <1> - Crear Segmento: <1> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 06:44:34:886 MEMORIA/(89955:90506): PID: <1> - Crear Segmento: <2> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 06:44:34:887 MEMORIA/(89955:90506): PID: <1> - Crear Segmento: <3> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 06:44:34:888 MEMORIA/(89955:90506): PID: <1> - Crear Segmento: <4> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 06:44:34:889 MEMORIA/(89955:90506): PID: <1> - Crear Segmento: <5> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 06:44:34:890 MEMORIA/(89955:90506): PID: <1> - Crear Segmento: <6> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 06:44:34:892 MEMORIA/(89955:90506): PID: <1> - Crear Segmento: <7> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[INFO] 06:44:34:893 MEMORIA/(89955:90506): PID: <1> - Crear Segmento: <8> - Base: <0x55555555fb30> - TAMAÑO: <64>
+[INFO] 06:44:37:898 MEMORIA/(89955:90506): PID: <0> - Eliminar Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 06:44:39:900 MEMORIA/(89955:90506): PID: <1> - Crear Segmento: <9> - Base: <0x55555555fb70> - TAMAÑO: <64>
+[INFO] 06:44:45:907 MEMORIA/(89955:90506): Se solicita compactacion
+[INFO] 06:44:45:907 MEMORIA/(89955:90506): PID: <1> - Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <64>
+[INFO] 06:44:45:907 MEMORIA/(89955:90506): PID: <1> - Segmento: <2> - Base: <0x55555555f930> - TAMAÑO: <64>
+[INFO] 06:44:45:907 MEMORIA/(89955:90506): PID: <1> - Segmento: <3> - Base: <0x55555555f970> - TAMAÑO: <64>
+[INFO] 06:44:45:907 MEMORIA/(89955:90506): PID: <1> - Segmento: <4> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 06:44:45:907 MEMORIA/(89955:90506): PID: <1> - Segmento: <5> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 06:44:45:907 MEMORIA/(89955:90506): PID: <1> - Segmento: <6> - Base: <0x55555555fa30> - TAMAÑO: <64>
+[INFO] 06:44:45:907 MEMORIA/(89955:90506): PID: <1> - Segmento: <7> - Base: <0x55555555fa70> - TAMAÑO: <64>
+[INFO] 06:44:45:907 MEMORIA/(89955:90506): PID: <1> - Segmento: <8> - Base: <0x55555555fab0> - TAMAÑO: <64>
+[INFO] 06:44:45:907 MEMORIA/(89955:90506): PID: <1> - Segmento: <9> - Base: <0x55555555faf0> - TAMAÑO: <64>
+[ERROR] 06:45:14:401 MEMORIA/(89955:90506): Operacion desconocida
+[INFO] 06:45:28:089 MEMORIA/(89955:90506): PID: <2> - Crear Segmento: <1> - Base: <0x55555555fb30> - TAMAÑO: <256>
+[INFO] 06:45:39:596 MEMORIA/(89955:90506): PID: <1> - Eliminar Segmento: <1> - Base: <0x55555555f8f0> - TAMAÑO: <64>
+[INFO] 06:45:45:913 MEMORIA/(89955:90506): PID: <1> - Eliminar Segmento: <2> - Base: <0x55555555f930> - TAMAÑO: <64>
+[INFO] 06:45:52:539 MEMORIA/(89955:90506): PID: <1> - Eliminar Segmento: <4> - Base: <0x55555555f9b0> - TAMAÑO: <64>
+[INFO] 06:46:02:693 MEMORIA/(89955:90506): PID: <1> - Eliminar Segmento: <5> - Base: <0x55555555f9f0> - TAMAÑO: <64>
+[INFO] 06:46:13:587 MEMORIA/(89955:90506): PID: <2> - Crear Segmento: <2> - Base: <0x55555555f8f0> - TAMAÑO: <128>
+[INFO] 06:46:43:869 MEMORIA/(89955:90506): Eliminacion de Proceso PID: <2>
+[INFO] 06:46:51:806 MEMORIA/(89955:90506): Eliminacion de Proceso PID: <0>
+[INFO] 06:47:00:412 MEMORIA/(89955:90506): Eliminacion de Proceso PID: <1>

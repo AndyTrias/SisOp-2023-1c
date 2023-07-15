@@ -403,16 +403,20 @@ int recibir_int(int socket)
 
 // cada elemento de la lista es t_tabla_segmentos que tiene un int PID y un t_list* segmentos
 void serializar_todas_las_tablas_segmentos(t_list* tablas_segmentos, t_paquete* paquete){
+	agregar_a_paquete_dato_serializado(paquete, &tablas_segmentos->elements_count, sizeof(int));
 	for(int i = 0; i < list_size(tablas_segmentos); i++){
 		t_tabla_segmentos* tabla_segmentos = list_get(tablas_segmentos, i);
-		agregar_a_paquete_dato_serializado(paquete, &tabla_segmentos->PID, sizeof(int));
+		agregar_a_paquete_dato_serializado(paquete, &(tabla_segmentos->PID), sizeof(int));
 		serializar_tabla_segmentos(tabla_segmentos->segmentos, paquete);
 	}
 }
 
 t_list* deserealizar_todas_las_tablas_segmentos(void* buffer, int* desplazamiento){
 	t_list* tablas_segmentos = list_create();
-	while(*desplazamiento < sizeof(buffer)){
+	int cantidad_tablas_segmentos;
+	memcpy(&cantidad_tablas_segmentos, buffer + *desplazamiento, sizeof(int));
+	*desplazamiento += sizeof(int);
+	for(int i = 0; i < cantidad_tablas_segmentos; i++){
 		t_tabla_segmentos* tabla_segmentos = malloc(sizeof(t_tabla_segmentos));
 		memcpy(&tabla_segmentos->PID, buffer + *desplazamiento, sizeof(int));
 		*desplazamiento += sizeof(int);

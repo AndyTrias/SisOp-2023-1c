@@ -72,6 +72,7 @@ char *obtenerRegistro(t_registros *registros, const char *nombreRegistro)
 // if the register is AX, BX, CX, DX, it returns 4. If it is EAX, EBX, ECX, EDX it returns 8. If RAX, RBX, RCX, RDX it returns 16.
 int tamanio_registro(const char *nombre)
 {
+
 	if (strcmp(nombre, "AX") == 0 || strcmp(nombre, "BX") == 0 || strcmp(nombre, "CX") == 0 || strcmp(nombre, "DX") == 0)
 		return 4;
 	else if (strcmp(nombre, "EAX") == 0 || strcmp(nombre, "EBX") == 0 || strcmp(nombre, "ECX") == 0 || strcmp(nombre, "EDX") == 0)
