@@ -83,7 +83,7 @@ int f_open(t_pcb *proceso, char *nombre_archivo)
 
   if (busqueda == -1)
   {
-    existe_archivo(nombre_archivo); // pregunta a fs si existe dicho archivo
+    existe_archivo(); // pregunta a fs si existe dicho archivo
     sem_wait(&RESPUESTA_FS);
 
     agregar_entrada_tabla(nombre_archivo, proceso->contexto.PID);
