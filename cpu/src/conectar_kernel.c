@@ -19,6 +19,12 @@ void enviado_de_kernel(int *socket_kernel)
         case CONTEXTO:
             t_ctx* ctx = recibir_paquete_kernel(*socket_kernel);
             ciclo_de_instruccion(ctx); // Esto lo uso para ir probando ahora.
+            list_clean(ctx->instrucciones);
+            list_destroy(ctx->instrucciones);
+            list_clean(ctx->tabla_segmentos);
+            list_destroy(ctx->tabla_segmentos);
+            free(ctx->motivos_desalojo);
+            free(ctx);
             break;
 
         case -1:

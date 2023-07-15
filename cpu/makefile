@@ -91,7 +91,7 @@ daemon:
 
 .PHONY: memcheck
 memcheck: $(BIN)
-	valgrind --leak-check=full $(MEMCHECK_FLAGS) ./$(BIN) $(ARGS)
+	valgrind --leak-check=full $(MEMCHECK_FLAGS) ./$(BIN) $(ARGS) 
 
 .PHONY: helgrind
 helgrind: $(BIN)

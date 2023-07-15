@@ -238,3 +238,14 @@
 [INFO] 08:43:59:324 FILE SYSTEM/(84637:84637): Esperando kernel....
 [INFO] 08:44:14:240 FILE SYSTEM/(84637:84637): Se conecto el kernel
 [INFO] 08:46:22:736 FILE SYSTEM/(84637:84637): Se desconecto el kernel
+[INFO] 16:08:08:745 FILE SYSTEM/(10910:10910): Se conecto al servidor 127.0.0.1:8002
+[INFO] 16:08:08:798 FILE SYSTEM/(10910:10910): Se levanto el superbloque
+[INFO] 16:08:08:809 FILE SYSTEM/(10910:10910): Se creo un archvo de bitmaps de 1024 bits
+[ERROR] 16:08:08:821 FILE SYSTEM/(10910:10910): Error al abrir el directorio de FCB.
+
+[INFO] 16:09:40:827 FILE SYSTEM/(11314:11314): Se conecto al servidor 127.0.0.1:8002
+[INFO] 16:09:40:883 FILE SYSTEM/(11314:11314): Se levanto el superbloque
+[INFO] 16:09:40:901 FILE SYSTEM/(11314:11314): Se creo un archvo de bitmaps de 1024 bits
+[INFO] 16:09:40:909 FILE SYSTEM/(11314:11314): Se creo un archivo de bloques de 65536 bytes
+[ERROR] 16:09:40:912 FILE SYSTEM/(11314:11314): Error al abrir el directorio de FCB.
+
