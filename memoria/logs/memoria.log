@@ -2400,3 +2400,15 @@
 [INFO] 16:09:37:078 MEMORIA/(11205:11205): Esperando conexiones de modulos...
 [INFO] 16:09:40:874 MEMORIA/(11205:11205): Se conecto el file system
 [INFO] 16:09:42:081 MEMORIA/(11205:11328): Se desconecto un modulo
+[INFO] 00:06:22:780 MEMORIA/(7909:7909): Se creo el espacio contiguo de memoria
+[INFO] 00:06:22:826 MEMORIA/(7909:7909): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x4aa2e90
+[INFO] 00:06:22:836 MEMORIA/(7909:7909): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x4aa2f10
+[INFO] 00:06:22:854 MEMORIA/(7909:7909): Esperando conexiones de modulos...
+[INFO] 00:06:38:758 MEMORIA/(7909:7909): Se conecto el cpu
+[INFO] 00:08:48:027 MEMORIA/(2688:2688): Se creo el espacio contiguo de memoria
+[INFO] 00:08:48:069 MEMORIA/(2688:2688): Se creo el hueco del segmento 0 de tamanio 128 en la direccion 0x4aa2e90
+[INFO] 00:08:48:072 MEMORIA/(2688:2688): Se creo el hueco libre inicial de tamanio 896 en la direccion 0x4aa2f10
+[INFO] 00:08:48:107 MEMORIA/(2688:2688): Esperando conexiones de modulos...
+[INFO] 00:08:53:980 MEMORIA/(2688:2688): Se conecto el cpu
+[INFO] 00:08:58:527 MEMORIA/(2688:2688): Se conecto el kernel
+[INFO] 00:09:17:119 MEMORIA/(2688:2812): Se desconecto un modulo

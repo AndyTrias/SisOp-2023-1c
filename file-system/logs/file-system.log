@@ -249,3 +249,94 @@
 [INFO] 16:09:40:909 FILE SYSTEM/(11314:11314): Se creo un archivo de bloques de 65536 bytes
 [ERROR] 16:09:40:912 FILE SYSTEM/(11314:11314): Error al abrir el directorio de FCB.
 
+[ERROR] 23:18:24:692 FILE SYSTEM/(2477:2477): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 23:18:24:693 FILE SYSTEM/(2477:2477): Se levanto el superbloque
+[INFO] 23:18:24:694 FILE SYSTEM/(2477:2477): Se creo un archvo de bitmaps de 1024 bits
+[INFO] 23:18:24:694 FILE SYSTEM/(2477:2477): Se creo un archivo de bloques de 65536 bytes
+[ERROR] 23:18:24:694 FILE SYSTEM/(2477:2477): Error al abrir el directorio de FCB.
+
+[ERROR] 23:45:31:021 FILE SYSTEM/(3938:3938): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 23:45:31:022 FILE SYSTEM/(3938:3938): Se levanto el superbloque
+[ERROR] 23:45:31:022 FILE SYSTEM/(3938:3938): Error al abrir el directorio de FCB.
+
+[ERROR] 23:54:00:491 FILE SYSTEM/(5139:5139): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 23:54:00:492 FILE SYSTEM/(5139:5139): Se levanto el superbloque
+[ERROR] 23:56:45:065 FILE SYSTEM/(5399:5399): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 23:56:45:066 FILE SYSTEM/(5399:5399): Se levanto el superbloque
+[ERROR] 23:56:49:738 FILE SYSTEM/(5399:5399): Error al abrir el directorio de FCB.
+
+[ERROR] 23:58:08:147 FILE SYSTEM/(5665:5665): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 23:58:08:148 FILE SYSTEM/(5665:5665): Se levanto el superbloque
+[ERROR] 23:59:17:823 FILE SYSTEM/(5961:5961): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 23:59:17:823 FILE SYSTEM/(5961:5961): Se levanto el superbloque
+[ERROR] 23:59:40:218 FILE SYSTEM/(5961:5961): Error al abrir el directorio de FCB.
+
+[ERROR] 00:10:33:996 FILE SYSTEM/(3279:3279): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 00:10:33:997 FILE SYSTEM/(3279:3279): Se levanto el superbloque
+[INFO] 00:10:33:997 FILE SYSTEM/(3279:3279): Se creo un archivo de bloques de 65536 bytes
+[ERROR] 00:10:33:997 FILE SYSTEM/(3279:3279): Error al abrir el directorio de FCB.
+
+[ERROR] 00:12:41:416 FILE SYSTEM/(3551:3551): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 00:12:41:416 FILE SYSTEM/(3551:3551): Se levanto el superbloque
+[ERROR] 00:15:37:310 FILE SYSTEM/(3862:3862): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 00:15:37:311 FILE SYSTEM/(3862:3862): Se levanto el superbloque
+[INFO] 00:15:37:311 FILE SYSTEM/(3862:3862): Se creo un archvo de bitmaps de 1024 bits
+[INFO] 00:15:37:311 FILE SYSTEM/(3862:3862): Se creo un archivo de bloques de 65536 bytes
+[ERROR] 00:15:37:312 FILE SYSTEM/(3862:3862): Error al abrir el directorio de FCB.
+
+[ERROR] 00:20:04:849 FILE SYSTEM/(4289:4289): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 00:20:04:850 FILE SYSTEM/(4289:4289): Se levanto el superbloque
+[ERROR] 00:20:04:850 FILE SYSTEM/(4289:4289): Error al abrir el directorio de FCB.
+
+[ERROR] 00:20:54:536 FILE SYSTEM/(4491:4491): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 00:20:54:537 FILE SYSTEM/(4491:4491): Se levanto el superbloque
+[ERROR] 00:20:54:537 FILE SYSTEM/(4491:4491): Error al abrir el directorio de FCB.
+
+[ERROR] 00:23:28:586 FILE SYSTEM/(4804:4804): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 00:23:28:587 FILE SYSTEM/(4804:4804): Se levanto el superbloque
+[ERROR] 00:23:28:587 FILE SYSTEM/(4804:4804): Error al abrir el directorio de FCB.
+
+[ERROR] 00:24:07:855 FILE SYSTEM/(5106:5106): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 00:24:07:856 FILE SYSTEM/(5106:5106): Se levanto el superbloque
+[ERROR] 00:24:07:856 FILE SYSTEM/(5106:5106): Error al abrir el directorio de FCB.
+
+[ERROR] 00:24:15:718 FILE SYSTEM/(5242:5242): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 00:24:15:719 FILE SYSTEM/(5242:5242): Se levanto el superbloque
+[ERROR] 00:24:15:719 FILE SYSTEM/(5242:5242): Error al abrir el directorio de FCB.
+
+[ERROR] 00:27:39:989 FILE SYSTEM/(5549:5549): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 00:27:39:990 FILE SYSTEM/(5549:5549): Se levanto el superbloque
+[ERROR] 00:27:39:990 FILE SYSTEM/(5549:5549): Error al abrir el directorio de FCB.
+
+[ERROR] 00:28:03:573 FILE SYSTEM/(5860:5860): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 00:28:03:574 FILE SYSTEM/(5860:5860): Se levanto el superbloque
+[ERROR] 00:28:03:574 FILE SYSTEM/(5860:5860): Error al abrir el directorio de FCB.
+
+[ERROR] 00:28:23:872 FILE SYSTEM/(6090:6090): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 00:28:23:873 FILE SYSTEM/(6090:6090): Se levanto el superbloque
+[ERROR] 00:34:58:356 FILE SYSTEM/(6384:6384): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 00:34:58:356 FILE SYSTEM/(6384:6384): Se levanto el superbloque
+[ERROR] 00:34:58:356 FILE SYSTEM/(6384:6384): Error al abrir el directorio de FCB.
+
+[ERROR] 00:37:02:060 FILE SYSTEM/(6669:6669): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 00:37:02:061 FILE SYSTEM/(6669:6669): Se levanto el superbloque
+[ERROR] 00:37:02:061 FILE SYSTEM/(6669:6669): Error al abrir el directorio de FCB.
+
+[ERROR] 00:37:15:361 FILE SYSTEM/(6866:6866): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 00:37:15:362 FILE SYSTEM/(6866:6866): Se levanto el superbloque
+[ERROR] 00:37:15:362 FILE SYSTEM/(6866:6866): Error al abrir el directorio de FCB.
+
+[ERROR] 00:39:43:395 FILE SYSTEM/(7079:7079): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 00:39:43:396 FILE SYSTEM/(7079:7079): Se levanto el superbloque
+[ERROR] 00:39:43:396 FILE SYSTEM/(7079:7079): Error al abrir el directorio de FCB.
+
+[ERROR] 00:40:08:225 FILE SYSTEM/(7283:7283): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 00:40:08:226 FILE SYSTEM/(7283:7283): Se levanto el superbloque
+[ERROR] 00:40:08:226 FILE SYSTEM/(7283:7283): Error al abrir el directorio de FCB.
+
+[ERROR] 00:40:25:829 FILE SYSTEM/(7557:7557): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 00:40:25:830 FILE SYSTEM/(7557:7557): Se levanto el superbloque
+[ERROR] 00:40:25:830 FILE SYSTEM/(7557:7557): Error al abrir el directorio de FCB.
+
+[ERROR] 00:40:37:084 FILE SYSTEM/(7759:7759): No se pudo conectar al servidor 127.0.0.1:8002
+[INFO] 00:40:37:085 FILE SYSTEM/(7759:7759): Se levanto el superbloque

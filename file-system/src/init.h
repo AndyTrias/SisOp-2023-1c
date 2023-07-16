@@ -10,7 +10,7 @@
 
 
 
-    void inicializar_conexiones(int *, t_config* );
+    void inicializar_conexiones(int *, t_config * );
     
     void inicializar_archivos(t_config* );
     t_config* levantar_superbloque(t_config* config);

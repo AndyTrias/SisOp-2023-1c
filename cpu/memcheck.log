@@ -1,28 +1,29 @@
-==48574== Memcheck, a memory error detector
-==48574== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==48574== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==48574== Command: ./bin/cpu.out ./config/cpuMemoria.config
-==48574== Parent PID: 48573
-==48574== 
-==48574== 
-==48574== Process terminating with default action of signal 2 (SIGINT)
-==48574==    at 0x499D5D7: accept (accept.c:26)
-==48574==    by 0x10AD97: esperar_cliente (conexiones.c:80)
-==48574==    by 0x10967F: conectar_kernel (conectar_kernel.c:6)
-==48574==    by 0x1099E8: main (cpu.c:23)
-==48574== 
-==48574== HEAP SUMMARY:
-==48574==     in use at exit: 7,734 bytes in 28 blocks
-==48574==   total heap usage: 97 allocs, 69 frees, 23,206 bytes allocated
-==48574== 
-==48574== LEAK SUMMARY:
-==48574==    definitely lost: 0 bytes in 0 blocks
-==48574==    indirectly lost: 0 bytes in 0 blocks
-==48574==      possibly lost: 0 bytes in 0 blocks
-==48574==    still reachable: 7,734 bytes in 28 blocks
-==48574==         suppressed: 0 bytes in 0 blocks
-==48574== Reachable blocks (those to which a pointer was found) are not shown.
-==48574== To see them, rerun with: --leak-check=full --show-leak-kinds=all
-==48574== 
-==48574== For lists of detected and suppressed errors, rerun with: -s
-==48574== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==2799== Memcheck, a memory error detector
+==2799== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==2799== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==2799== Command: ./bin/cpu.out ./config/cpuMemoria.config
+==2799== Parent PID: 2798
+==2799== 
+==2799== 
+==2799== Process terminating with default action of signal 1 (SIGHUP)
+==2799==    at 0x499C820: recv (recv.c:28)
+==2799==    by 0x10C3F2: recibir_operacion (mensajes.c:94)
+==2799==    by 0x10A712: enviado_de_kernel (conectar_kernel.c:16)
+==2799==    by 0x10A6F2: conectar_kernel (conectar_kernel.c:8)
+==2799==    by 0x10AA89: main (cpu.c:22)
+==2799== 
+==2799== HEAP SUMMARY:
+==2799==     in use at exit: 6,174 bytes in 27 blocks
+==2799==   total heap usage: 105 allocs, 78 frees, 17,177 bytes allocated
+==2799== 
+==2799== LEAK SUMMARY:
+==2799==    definitely lost: 0 bytes in 0 blocks
+==2799==    indirectly lost: 0 bytes in 0 blocks
+==2799==      possibly lost: 0 bytes in 0 blocks
+==2799==    still reachable: 6,174 bytes in 27 blocks
+==2799==         suppressed: 0 bytes in 0 blocks
+==2799== Reachable blocks (those to which a pointer was found) are not shown.
+==2799== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==2799== 
+==2799== For lists of detected and suppressed errors, rerun with: -s
+==2799== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
