@@ -1,7 +1,7 @@
 # Generated files
 bin/
 obj/
-bloques/bitmap.dat
+*.log
 
 
 # Eclipse files

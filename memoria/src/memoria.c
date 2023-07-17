@@ -7,7 +7,7 @@ int main(int argc, char *argv[]) {
         exit(1);
     }
 
-    LOGGER_MEMORIA = iniciar_logger("./logs/memoria.log", "MEMORIA");
+    LOGGER_MEMORIA = iniciar_logger("./memoria.log", "MEMORIA");
     t_config* config = iniciar_config(argv[1]);
     char* IP = "127.0.0.1";
     iniciar_estructuras(config);

@@ -1,6 +1,0 @@
-==7597== Memcheck, a memory error detector
-==7597== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==7597== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==7597== Command: ./bin/file-system.out ./config/file-systemMemoria.config
-==7597== Parent PID: 7596
-==7597== 

@@ -3,7 +3,7 @@
 int main(int argc, char *argv[])
 {
 
-  logger_consola = iniciar_logger("./logs/consola.log", "CONSOLA");
+  logger_consola = iniciar_logger("./consola.log", "CONSOLA");
 
   FILE *f = verificar_argumentos(argc, argv);
   if (f == NULL)
@@ -30,6 +30,8 @@ int main(int argc, char *argv[])
     
   }
   enviar_paquete(paquete, conexion_kernel);
+  eliminar_paquete(paquete);
+  free(f);
 
   log_info(logger_consola, "Paquete enviado");
 

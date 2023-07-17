@@ -10,10 +10,10 @@ CDEBUG=-g -Wall -DDEBUG
 CRELEASE=-O3 -Wall -DNDEBUG
 
 # Arguments when executing with start, memcheck or helgrind
-ARGS=./config/kernelMemoria.config
+ARGS=config/kernelBaseHRRN.config
 
 # Valgrind flags
-MEMCHECK_FLAGS=--track-origins=yes 
+MEMCHECK_FLAGS=--track-origins=yes --leak-check=full --show-leak-kinds=all --log-file="memcheck.log" 
 HELGRIND_FLAGS=--log-file="helgrind.log"
 
 # Source files (*.c) to be excluded from tests compilation
