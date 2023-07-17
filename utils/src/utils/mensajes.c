@@ -235,7 +235,10 @@ t_list* deserializar_tabla_segmentos(void* buffer, int* desplazamiento){
         memcpy(&segmento->tamanio, buffer + *desplazamiento, sizeof(int));
         *desplazamiento += sizeof(int);
         list_add(tabla_segmentos, segmento);
+		free(segmento);
     }
+	free(buffer);
+    free(desplazamiento);
     return tabla_segmentos;
 }
 
@@ -273,7 +276,7 @@ t_ctx *deserializar_contexto(void *buffer, int *desplazamiento)
 	ctx->tabla_segmentos = deserializar_tabla_segmentos(buffer, desplazamiento);
 
 	free(buffer);
-	
+	free(desplazamiento);
 	return ctx;
 
 }
@@ -362,7 +365,8 @@ t_parametros_variables* deserealizar_motivos_desalojo(void *buffer, int*desplaza
 		memcpy(motivos_desalojo->parametros[i], buffer + *desplazamiento, tamanio_parametro);
 		*desplazamiento += tamanio_parametro;
 	}
-
+	free(buffer);
+    free(desplazamiento);
 	return motivos_desalojo;
 }
 
@@ -395,7 +399,7 @@ int recibir_int(int socket)
     *desplazamiento = 0; 
     
     int valor = deserializar_int(buffer, desplazamiento);
-    
+    free(buffer);
     free(desplazamiento);
     return valor;
 }

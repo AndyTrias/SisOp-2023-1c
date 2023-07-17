@@ -10,9 +10,9 @@
     #include <stdlib.h>
     #include <unistd.h>
     
-    #include <init.h>
-    #include <globales.h>
-    #include <conexiones_modulos.h>
-    #include <fcb.h>
+    #include "init.h"
+    #include "globales.h"
+    #include "conexiones_modulos.h"
+    #include "fcb.h"
 
 #endif

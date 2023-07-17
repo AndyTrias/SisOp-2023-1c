@@ -21,7 +21,7 @@ void inicializar_archivos(t_config *config)
 
     CANTIDAD_BLOQUES = config_get_int_value(superbloque, "BLOCK_COUNT");
     TAMANIO_BLOQUES = config_get_int_value(superbloque, "BLOCK_SIZE");
-
+    config_destroy(superbloque);
     BITMAP_BLOQUES = levantar_bitmap(config_get_string_value(config, "PATH_BITMAP"));
     ARCHIVO_BLOQUES = levantar_bloques(config_get_string_value(config, "PATH_BLOQUES"));
 

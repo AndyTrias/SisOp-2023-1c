@@ -67,7 +67,9 @@ void recibir_kernel(int *socket_modulo)
             serializar_tabla_segmentos(tabla_segmentos->segmentos, paquete);
             enviar_paquete(paquete, *socket_modulo);
             eliminar_paquete(paquete);
-
+            
+            list_destroy(tabla_segmentos->segmentos);
+            free(tabla_segmentos);
             break;
 
         case TERMINAR:
@@ -80,9 +82,7 @@ void recibir_kernel(int *socket_modulo)
             
             PID = deserializar_int(buffer, desplazamiento);
             tabla_segmentos->segmentos = deserializar_tabla_segmentos(buffer, desplazamiento);
-
-            free(desplazamiento);
-
+            
             // eliminar
             finalizar_proceso(tabla_segmentos->segmentos);
             log_info(LOGGER_MEMORIA, "Eliminacion de Proceso PID: <%d>", PID);
@@ -95,24 +95,27 @@ void recibir_kernel(int *socket_modulo)
 
             // crea
             paquete = crear_segmento(atoi(ctx->motivos_desalojo->parametros[0]), atoi(ctx->motivos_desalojo->parametros[1]), ctx);
+            
             // envia
             enviar_paquete(paquete, *socket_modulo);
             eliminar_paquete(paquete);
-
+            list_destroy(ctx->instrucciones);
+            list_destroy(ctx->tabla_segmentos);
+            free(ctx);
             break;
         case DELETE_SEGMENT:
             // recibe 
-            ctx = recibir_contexto(*socket_modulo);
+            ctx = recibir_contexto(*socket_modulo); //Porque no está inicializada??
 
             // elimina              
             eliminar_segmento(ctx->tabla_segmentos, atoi(ctx->motivos_desalojo->parametros[0]), ctx->PID);
-
+            
             // envia
             paquete = crear_paquete(DELETE_SEGMENT);
             serializar_tabla_segmentos(ctx->tabla_segmentos, paquete);
             enviar_paquete(paquete, *socket_modulo);
             eliminar_paquete(paquete);
-
+            free(ctx);
             break;
         
         case COMPACTAR:
@@ -148,7 +151,7 @@ void recibir_cpu(int* socket_modulo) {
                 break;
         
             case MOV_OUT:
-                parametros = recibir_parametros_variables(*socket_modulo);
+                parametros = recibir_parametros_variables(*socket_modulo); // porque este parametros no esta inicializado
                 escribir_valor_direccion_fisica(parametros->parametros[0], strtol(parametros->parametros[1], NULL, 10));
                 enviar_mensaje("OK", *socket_modulo);
                 liberar_parametros_variables(parametros);
@@ -207,8 +210,6 @@ t_ctx* recibir_contexto(int socket)
     *desplazamiento = 0; 
     
     t_ctx* ctx = deserializar_contexto(buffer, desplazamiento);
-    
-    free(desplazamiento);
     return ctx;
 }
 
@@ -221,8 +222,6 @@ t_parametros_variables* recibir_parametros_variables(int socket)
     *desplazamiento = 0; 
     
     t_parametros_variables* parametros = deserealizar_motivos_desalojo(buffer, desplazamiento);
-    
-    free(desplazamiento);
     return parametros;
 }
 
