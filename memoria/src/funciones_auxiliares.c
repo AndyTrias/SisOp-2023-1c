@@ -88,7 +88,7 @@ void modificar_lista_huecos(t_hueco* hueco, int tamanio) {
     // agregar el hueco restante a la lista de huecos despues del hueco actual
     int index_hueco = obtener_indice_de_lista_huecos(hueco);
     list_add_in_index(LISTA_HUECOS, index_hueco + 1, hueco_restante);
-
+    free(hueco_restante);
 }
 
 

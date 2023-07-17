@@ -40,13 +40,17 @@ void iniciar_estructuras(t_config* config){
 
 t_list* crear_tabla_segmentos(){
     t_list* tabla_segmentos = list_create();
+    //se me orccure algo, hacer el malloc afuera 
+    
     for (int i = 0; i < CONFIG->cant_segmentos; i++) {
         t_segmento* segmento = malloc(sizeof(t_segmento));
         segmento->id_segmento = i;
         segmento->base = NULL;
         segmento->tamanio = 0;
         list_add(tabla_segmentos, segmento);
+        free(segmento);
     }
+    
     agregar_segmento_0(tabla_segmentos);
     return tabla_segmentos;
 }

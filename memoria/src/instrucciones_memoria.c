@@ -57,7 +57,7 @@ t_paquete *crear_segmento(int id_segmento, int tamanio, t_ctx *ctx)
     ts->segmentos = ctx->tabla_segmentos;
 
     list_replace(TABLA_SEGMENTOS_GLOBAL, ctx->PID, ts);
-
+    free(ts);
     t_paquete *paquete = crear_paquete(CREATE_SEGMENT);
     agregar_a_paquete_dato_serializado(paquete, &(segmento->base), sizeof(segmento->base));
     log_info(LOGGER_MEMORIA, "PID: <%d> - Crear Segmento: <%d> - Base: <%p> - TAMAÑO: <%d>", ctx->PID, id_segmento, hueco->base, tamanio);
@@ -92,6 +92,7 @@ void eliminar_segmento(t_list *tabla_segmentos, int id_segmento, int PID)
     ts->PID = PID;
     ts->segmentos = tabla_segmentos;
     list_replace(TABLA_SEGMENTOS_GLOBAL, PID, ts);
+    free(ts);
 }
 
 void finalizar_proceso(t_list *tabla_segmentos)
