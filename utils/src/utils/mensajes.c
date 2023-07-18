@@ -223,18 +223,24 @@ void serializar_tabla_segmentos(t_list *tabla_segmentos, t_paquete *paquete)
 
 t_list* deserializar_tabla_segmentos(void* buffer, int* desplazamiento){
 	t_list* tabla_segmentos = list_create();
-    int cant_segmentos;
+    
+	int cant_segmentos;
     memcpy(&cant_segmentos, buffer + *desplazamiento, sizeof(int));
     *desplazamiento += sizeof(int);
-    for (int i = 0; i < cant_segmentos; i++) {
+    
+	for (int i = 0; i < cant_segmentos; i++) {
         t_segmento* segmento = malloc(sizeof(t_segmento));
-        memcpy(&segmento->id_segmento, buffer + *desplazamiento, sizeof(int));
+    
+	    memcpy(&segmento->id_segmento, buffer + *desplazamiento, sizeof(int));
         *desplazamiento += sizeof(int);
-        memcpy(&segmento->base, buffer + *desplazamiento, sizeof(void*));
+    
+	    memcpy(&segmento->base, buffer + *desplazamiento, sizeof(void*));
         *desplazamiento += sizeof(void*);
-        memcpy(&segmento->tamanio, buffer + *desplazamiento, sizeof(int));
+    
+	    memcpy(&segmento->tamanio, buffer + *desplazamiento, sizeof(int));
         *desplazamiento += sizeof(int);
-        list_add(tabla_segmentos, segmento);
+    
+	    list_add(tabla_segmentos, segmento);
     }
     return tabla_segmentos;
 }
@@ -272,8 +278,6 @@ t_ctx *deserializar_contexto(void *buffer, int *desplazamiento)
 	// Deserializo tabla de segmentos
 	ctx->tabla_segmentos = deserializar_tabla_segmentos(buffer, desplazamiento);
 
-	free(buffer);
-	free(desplazamiento);
 	return ctx;
 
 }

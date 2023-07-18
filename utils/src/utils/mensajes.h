@@ -25,37 +25,8 @@ typedef enum
     EXISTE,    //Se utiliza para la comunicacion entre kernel y fs
     OP_TERMINADA, //Se utiliza para la comunicacion entre kernel y fs
     F_CREATES, //Se utiliza cuando el Kernel intenta abrir un archivo que no existe entonces le dice a fs que lo cree
-    OUT_OF_MEMORY
+    OUT_OF_MEMORY,
 } op_code;
-
-typedef enum
-{
-    F_READ,
-    F_WRITE, 
-    MOV_OUT,
-    F_TRUNCATE,
-    F_SEEK,
-    MOV_IN,
-    CREATE_SEGMENT, 
-    IO,
-    SET,
-    WAIT,
-    SIGNAL,
-    F_OPEN,
-    F_CLOSE,
-    DELETE_SEGMENT, 
-    EXIT, // Ver como la definimos
-    YIELD,
-    SEG_FAULT,
-} t_operacion;
-
-typedef struct
-{
-    t_operacion operacion;
-    int cantidad_parametros;
-    char **parametros;
-} t_instruccion;
-
 
 
 typedef struct
@@ -69,12 +40,6 @@ typedef struct
     op_code codigo_operacion;
     t_buffer *buffer;
 } t_paquete;
-
-typedef struct {
-    int id_segmento;
-    void* base;
-    int tamanio;
-} t_segmento;
 
 typedef struct {
     int PID;

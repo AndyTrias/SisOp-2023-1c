@@ -31,6 +31,42 @@ typedef struct
     char **parametros;
 } t_parametros_variables;
 
+typedef enum
+{
+    F_READ,
+    F_WRITE, 
+    MOV_OUT,
+    F_TRUNCATE,
+    F_SEEK,
+    MOV_IN,
+    CREATE_SEGMENT, 
+    IO,
+    SET,
+    WAIT,
+    SIGNAL,
+    F_OPEN,
+    F_CLOSE,
+    DELETE_SEGMENT, 
+    EXIT, 
+    YIELD,
+    SEG_FAULT
+} t_operacion;
+
+
+typedef struct
+{
+    t_operacion operacion;
+    int cantidad_parametros;
+    char **parametros;
+} t_instruccion;
+
+typedef struct {
+    int id_segmento;
+    void* base;
+    int tamanio;
+} t_segmento;
+
+
 typedef struct
 {
     int PID;
@@ -59,8 +95,12 @@ char get_pid(t_pcb*);
 char* mostrar_pids(t_list* lista);
 void concatenarCharACadena(char c, char *cadena);
 
+void liberar_contexto(t_ctx *ctx);
+void liberar_instruccion(t_instruccion *instruccion);
+void liberar_segmento(t_segmento* segmento);
 void liberar_parametros_variables(t_parametros_variables* );
 void liberar_parametros_desalojo(t_ctx* ctx);
+
 
 
 

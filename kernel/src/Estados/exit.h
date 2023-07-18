@@ -12,10 +12,6 @@
 
     void terminar_proceso(t_pcb *);
     void liberar_recursos(t_pcb * );
-    void liberar_lista_tabla_segmentos(t_list*);
-    void liberar_tabla_segmentos(void*);
-    void liberar_lista_instrucciones(t_list *lista_instrucciones);
-    void liberar_instruccion(void *elemento);
 
 
 

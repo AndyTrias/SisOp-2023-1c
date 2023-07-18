@@ -83,8 +83,6 @@ int tamanio_registro(const char *nombre)
 		return 0;
 }
 
-
-
 op_code execute(t_instruccion *instruccion_actual, t_ctx *ctx)
 {
 	switch (instruccion_actual->operacion)
@@ -97,12 +95,12 @@ op_code execute(t_instruccion *instruccion_actual, t_ctx *ctx)
 
 	case MOV_IN:
 		log_info(LOGGER_CPU, "PID : %d - <MOV_IN> - <%s %s> ", ctx->PID, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
-		long dir_fisica = MMU(atoi(instruccion_actual->parametros[1]), tamanio_registro(instruccion_actual->parametros[0]),  ctx);
+		long dir_fisica = MMU(atoi(instruccion_actual->parametros[1]), tamanio_registro(instruccion_actual->parametros[0]), ctx);
 		if (!dir_fisica)
 		{
 			return SEG_FAULT;
 		}
-		char* dir_fisica_string = malloc(10);
+		char *dir_fisica_string = malloc(10);
 		sprintf(dir_fisica_string, "%ld", dir_fisica);
 		agregar_parametro_desalojo(ctx, string_itoa(tamanio_registro(instruccion_actual->parametros[0])));
 		agregar_parametro_desalojo(ctx, dir_fisica_string);
@@ -115,7 +113,7 @@ op_code execute(t_instruccion *instruccion_actual, t_ctx *ctx)
 
 		recibir_operacion(SOCKET_MEMORIA);
 		char *valor_leido = recibir_mensaje(SOCKET_MEMORIA);
-		log_info(LOGGER_CPU, "PID: %d  -Acción: LEER - Segmento: %d - Dirección Física: %p - Valor: %s", ctx->PID, floor_div(atoi(instruccion_actual->parametros[1]), TAM_MAX_SEGMENTO), (void*)dir_fisica, valor_leido);
+		log_info(LOGGER_CPU, "PID: %d  -Acción: LEER - Segmento: %d - Dirección Física: %p - Valor: %s", ctx->PID, floor_div(atoi(instruccion_actual->parametros[1]), TAM_MAX_SEGMENTO), (void *)dir_fisica, valor_leido);
 		// acceder a registro en instruccion_actual->parametros[1] y guardar valor_leido
 		registro = obtenerRegistro(&ctx->registros, instruccion_actual->parametros[0]);
 		strcpy(registro, valor_leido);
@@ -132,7 +130,7 @@ op_code execute(t_instruccion *instruccion_actual, t_ctx *ctx)
 		}
 		dir_fisica_string = malloc(10);
 		sprintf(dir_fisica_string, "%ld", dir_fisica);
-		
+
 		agregar_parametro_desalojo(ctx, string_itoa(sizeof(registro)));
 		agregar_parametro_desalojo(ctx, dir_fisica_string);
 		paquete = crear_paquete(MOV_OUT);
@@ -150,7 +148,7 @@ op_code execute(t_instruccion *instruccion_actual, t_ctx *ctx)
 			return SEG_FAULT;
 		}
 
-		log_info(LOGGER_CPU, "PID: %d - Acción: ESCRIBIR - Segmento: %d - Dirección Física: %p - Valor: %s", ctx->PID, floor_div(atoi(instruccion_actual->parametros[1]), TAM_MAX_SEGMENTO), (void*)dir_fisica, registro);
+		log_info(LOGGER_CPU, "PID: %d - Acción: ESCRIBIR - Segmento: %d - Dirección Física: %p - Valor: %s", ctx->PID, floor_div(atoi(instruccion_actual->parametros[1]), TAM_MAX_SEGMENTO), (void *)dir_fisica, registro);
 		free(mensaje);
 		return 0;
 
@@ -173,7 +171,7 @@ op_code execute(t_instruccion *instruccion_actual, t_ctx *ctx)
 		return EXIT;
 
 	case IO:
-		log_info(LOGGER_CPU, "PID : %d - <IO> - <%s>", ctx->PID,instruccion_actual->parametros[0]);
+		log_info(LOGGER_CPU, "PID : %d - <IO> - <%s>", ctx->PID, instruccion_actual->parametros[0]);
 		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[0]);
 		return IO;
 
@@ -235,7 +233,7 @@ op_code execute(t_instruccion *instruccion_actual, t_ctx *ctx)
 		return CREATE_SEGMENT;
 
 	case DELETE_SEGMENT:
-		log_info(LOGGER_CPU, "PID : %d - <DELETE_SEGMENT> - <%s> ", ctx->PID,instruccion_actual->parametros[0]);
+		log_info(LOGGER_CPU, "PID : %d - <DELETE_SEGMENT> - <%s> ", ctx->PID, instruccion_actual->parametros[0]);
 		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[0]);
 		return DELETE_SEGMENT;
 
@@ -258,7 +256,7 @@ long MMU(int direccion_logica, int bytes, t_ctx *ctx)
 		return -1;
 	}
 
-	t_segmento* segmento = list_get(ctx->tabla_segmentos, num_segmento);
+	t_segmento *segmento = list_get(ctx->tabla_segmentos, num_segmento);
 	long direccion_fisica = (long)(segmento->base + offset);
 	return direccion_fisica;
 }
@@ -288,8 +286,11 @@ void ciclo_de_instruccion(t_ctx *ctx)
 			serializar_contexto(ctx, paquete);
 			enviar_paquete(paquete, SOCKET_KERNEL);
 			eliminar_paquete(paquete);
+			liberar_contexto(ctx);
 			ctx = NULL;
-		} else {
+		}
+		else
+		{
 			liberar_parametros_desalojo(ctx);
 		}
 	}

@@ -18,11 +18,7 @@ void enviado_de_kernel(int *socket_kernel)
         {
         case CONTEXTO:
             t_ctx* ctx = recibir_paquete_kernel(*socket_kernel);
-            ciclo_de_instruccion(ctx); // Esto lo uso para ir probando ahora.
-            list_destroy(ctx->instrucciones);
-            list_destroy(ctx->tabla_segmentos);
-            free(ctx->motivos_desalojo);
-            free(ctx);
+            ciclo_de_instruccion(ctx);
             break;
 
         case -1:
@@ -45,6 +41,8 @@ t_ctx* recibir_paquete_kernel(int socket_kernel)
     *desplazamiento = 0;
 
     t_ctx *ctx = deserializar_contexto(buffer, desplazamiento);
+    free(buffer);
+    free(desplazamiento);
 
     log_info(LOGGER_CPU, "Se recibio el PID: %d", ctx->PID);
 
