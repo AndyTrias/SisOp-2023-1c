@@ -235,16 +235,13 @@ t_list* deserializar_tabla_segmentos(void* buffer, int* desplazamiento){
         memcpy(&segmento->tamanio, buffer + *desplazamiento, sizeof(int));
         *desplazamiento += sizeof(int);
         list_add(tabla_segmentos, segmento);
-		free(segmento);
     }
-	free(buffer);
-    free(desplazamiento);
     return tabla_segmentos;
 }
 
 t_ctx *deserializar_contexto(void *buffer, int *desplazamiento)
 {
-	t_ctx *ctx = calloc(1, sizeof(t_ctx));
+	t_ctx *ctx = malloc(sizeof(t_ctx));
 
 	// Deserializo PID, PC y cant_instrucciones
 
@@ -365,8 +362,6 @@ t_parametros_variables* deserealizar_motivos_desalojo(void *buffer, int*desplaza
 		memcpy(motivos_desalojo->parametros[i], buffer + *desplazamiento, tamanio_parametro);
 		*desplazamiento += tamanio_parametro;
 	}
-	free(buffer);
-    free(desplazamiento);
 	return motivos_desalojo;
 }
 

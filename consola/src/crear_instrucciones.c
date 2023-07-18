@@ -54,22 +54,43 @@ t_operacion obtener_codigo_instruccion(char *identificador)
     return op;
 }
 
-t_instruccion* crear_estructura_instruccion(char* buffer) {
-    char** linea_de_instruccion = string_split(buffer, " ");
-    
-    t_instruccion *instruccion = malloc(sizeof(t_instruccion));
-    instruccion->parametros = malloc(sizeof(char **));
-    instruccion->cantidad_parametros = 0;
+t_instruccion *crear_estructura_instruccion(char *buffer)
+{
+    char **linea_de_instruccion = string_split(buffer, " ");
+    // free(buffer);
 
-    instruccion->operacion = obtener_codigo_instruccion(linea_de_instruccion[0]);
+    int cantidad_parametros = 0;
     for (int i = 1; linea_de_instruccion[i] != NULL; i++)
     {
-      instruccion->cantidad_parametros++;
-      instruccion->parametros[i - 1] = string_duplicate(linea_de_instruccion[i]);
-      
+        cantidad_parametros++;
     }
+
+    t_instruccion *instruccion = malloc(sizeof(t_instruccion));
+    instruccion->parametros = malloc(cantidad_parametros * sizeof(char *));
+    instruccion->cantidad_parametros = cantidad_parametros;
+
+    instruccion->operacion = obtener_codigo_instruccion(linea_de_instruccion[0]);
+    for (int i = 1; i <= cantidad_parametros; i++)
+    {
+        instruccion->parametros[i - 1] = string_duplicate(linea_de_instruccion[i]);
+    }
+
+    // Liberando memoria
+    for (int i = 0; linea_de_instruccion[i] != NULL; i++)
+    {
+        free(linea_de_instruccion[i]);
+    }
+    free(linea_de_instruccion);
 
     return instruccion;
 }
 
-
+void eliminar_instruccion(t_instruccion *instruccion)
+{
+    for (int i = 0; i < instruccion->cantidad_parametros; i++)
+    {
+        free(instruccion->parametros[i]);
+    }
+    free(instruccion->parametros);
+    free(instruccion);
+}

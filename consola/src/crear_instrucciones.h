@@ -8,5 +8,6 @@
 
     t_operacion obtener_codigo_instruccion(char *);
     t_instruccion* crear_estructura_instruccion(char*);
+    void eliminar_instruccion(t_instruccion*);
 
 #endif

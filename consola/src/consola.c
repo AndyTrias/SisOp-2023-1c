@@ -20,18 +20,21 @@ int main(int argc, char *argv[])
 
   t_paquete *paquete = crear_paquete(INSTRUCCIONES);
 
+  t_instruccion *instruccion;
   while ((fgets(buffer, 100, f)) != NULL)
   {
     buffer[strcspn(buffer, "\n")] = 0;
     
-    t_instruccion *instruccion = crear_estructura_instruccion(buffer);
+    instruccion = crear_estructura_instruccion(buffer);
     
     serializar_instruccion(instruccion, paquete);
     
+    eliminar_instruccion(instruccion);
   }
+  
   enviar_paquete(paquete, conexion_kernel);
   eliminar_paquete(paquete);
-  free(f);
+
 
   log_info(logger_consola, "Paquete enviado");
 

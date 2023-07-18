@@ -32,7 +32,11 @@ int main(int argc, char *argv[]) {
 
   pthread_join(hilo_planificacion_largo,NULL);
 
-  pthread_join(hilo_comunicacion_fs,NULL);
+  if (SOCKET_FILESYSTEM != -1)
+  {
+    pthread_join(hilo_comunicacion_fs,NULL);
+
+  }
 
   
   terminar_conexiones(3, SOCKET_CPU, SOCKET_MEMORIA, SOCKET_FILESYSTEM);

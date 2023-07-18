@@ -1,43 +1,27 @@
-==3466== Memcheck, a memory error detector
-==3466== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==3466== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==3466== Command: ./bin/consola.out
-==3466== Parent PID: 3465
-==3466== 
-==3466== 
-==3466== HEAP SUMMARY:
-==3466==     in use at exit: 512 bytes in 3 blocks
-==3466==   total heap usage: 23 allocs, 20 frees, 10,725 bytes allocated
-==3466== 
-==3466== 8 bytes in 1 blocks are still reachable in loss record 1 of 3
-==3466==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3466==    by 0x491D60E: strdup (strdup.c:42)
-==3466==    by 0x486E5DD: string_duplicate (string.c:43)
-==3466==    by 0x486DEB7: log_create (log.c:77)
-==3466==    by 0x10B8A3: iniciar_logger (logs.c:6)
-==3466==    by 0x10999F: main (consola.c:6)
-==3466== 
-==3466== 32 bytes in 1 blocks are still reachable in loss record 2 of 3
-==3466==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3466==    by 0x486DE0C: log_create (log.c:54)
-==3466==    by 0x10B8A3: iniciar_logger (logs.c:6)
-==3466==    by 0x10999F: main (consola.c:6)
-==3466== 
-==3466== 472 bytes in 1 blocks are still reachable in loss record 3 of 3
-==3466==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3466==    by 0x48F46CD: __fopen_internal (iofopen.c:65)
-==3466==    by 0x48F46CD: fopen@@GLIBC_2.2.5 (iofopen.c:86)
-==3466==    by 0x486D799: txt_open_for_append (txt.c:23)
-==3466==    by 0x486DE4B: log_create (log.c:64)
-==3466==    by 0x10B8A3: iniciar_logger (logs.c:6)
-==3466==    by 0x10999F: main (consola.c:6)
-==3466== 
-==3466== LEAK SUMMARY:
-==3466==    definitely lost: 0 bytes in 0 blocks
-==3466==    indirectly lost: 0 bytes in 0 blocks
-==3466==      possibly lost: 0 bytes in 0 blocks
-==3466==    still reachable: 512 bytes in 3 blocks
-==3466==         suppressed: 0 bytes in 0 blocks
-==3466== 
-==3466== For lists of detected and suppressed errors, rerun with: -s
-==3466== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==19262== Memcheck, a memory error detector
+==19262== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==19262== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==19262== Command: ./bin/consola.out config/consola.config pseudocodigo/BASE_1
+==19262== Parent PID: 19261
+==19262== 
+==19262== 
+==19262== HEAP SUMMARY:
+==19262==     in use at exit: 472 bytes in 1 blocks
+==19262==   total heap usage: 333 allocs, 332 frees, 42,111 bytes allocated
+==19262== 
+==19262== 472 bytes in 1 blocks are still reachable in loss record 1 of 1
+==19262==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19262==    by 0x48F56CD: __fopen_internal (iofopen.c:65)
+==19262==    by 0x48F56CD: fopen@@GLIBC_2.2.5 (iofopen.c:86)
+==19262==    by 0x109CCC: verificar_argumentos (init.c:17)
+==19262==    by 0x109A8D: main (consola.c:8)
+==19262== 
+==19262== LEAK SUMMARY:
+==19262==    definitely lost: 0 bytes in 0 blocks
+==19262==    indirectly lost: 0 bytes in 0 blocks
+==19262==      possibly lost: 0 bytes in 0 blocks
+==19262==    still reachable: 472 bytes in 1 blocks
+==19262==         suppressed: 0 bytes in 0 blocks
+==19262== 
+==19262== For lists of detected and suppressed errors, rerun with: -s
+==19262== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
