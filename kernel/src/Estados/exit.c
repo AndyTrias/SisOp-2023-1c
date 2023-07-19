@@ -25,7 +25,7 @@ void terminar_proceso(t_pcb *proceso)
     list_destroy(proceso->contexto.instrucciones);
     list_destroy(proceso->archivos_abiertos);
     list_destroy(proceso->recursos_en_uso);
-    liberar_parametros_desalojo(&proceso->contexto);
+    // liberar_parametros_desalojo(&proceso->contexto);
     free(proceso->contexto.motivos_desalojo->parametros);
 
     pthread_mutex_lock(&SOLICITUD_MEMORIA);

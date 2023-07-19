@@ -291,7 +291,7 @@ void ciclo_de_instruccion(t_ctx *ctx)
 		}
 		else
 		{
-			liberar_parametros_desalojo(ctx);
+			vaciar_parametros_desalojo(ctx->motivos_desalojo);
 		}
 	}
 }

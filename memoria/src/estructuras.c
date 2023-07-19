@@ -48,7 +48,6 @@ t_list* crear_tabla_segmentos(){
         segmento->base = NULL;
         segmento->tamanio = 0;
         list_add(tabla_segmentos, segmento);
-        free(segmento);
     }
     
     agregar_segmento_0(tabla_segmentos);

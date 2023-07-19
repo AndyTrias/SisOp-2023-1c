@@ -2,10 +2,7 @@
 
 void liberar_contexto(t_ctx *ctx)
 {
-    liberar_parametros_desalojo(ctx);
-    free(ctx->motivos_desalojo->parametros);
-    free(ctx->motivos_desalojo);
-
+    liberar_parametros_desalojo(ctx->motivos_desalojo);
     list_destroy_and_destroy_elements(ctx->instrucciones, (void*) liberar_instruccion);
     list_destroy_and_destroy_elements(ctx->tabla_segmentos, (void*) liberar_segmento);
     free(ctx);
@@ -13,7 +10,7 @@ void liberar_contexto(t_ctx *ctx)
 
 void liberar_segmento(t_segmento *segmento)
 {
-    free(segmento->base);
+    // free(segmento->base);
     free(segmento);
 }
 
@@ -27,12 +24,14 @@ void liberar_instruccion(t_instruccion *instruccion)
     free(instruccion);
 }
 
-void liberar_parametros_desalojo(t_ctx *ctx)
+void liberar_parametros_desalojo(t_parametros_variables *parametros_variables)
 {
-    liberar_parametros_variables(ctx->motivos_desalojo);
+    vaciar_parametros_desalojo(parametros_variables);
+    free(parametros_variables->parametros);
+    free(parametros_variables);
 }
 
-void liberar_parametros_variables(t_parametros_variables *parametros)
+void vaciar_parametros_desalojo(t_parametros_variables *parametros)
 {
     for (int i = 0; i < parametros->cantidad_parametros; i++)
     {

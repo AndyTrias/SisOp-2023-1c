@@ -22,8 +22,7 @@ void enviado_de_kernel(int *socket_kernel)
 
         t_parametros_variables *parametros_instruccion = recibir_paquete_kernel(*socket_kernel);
         atender_solicitudes(cod_op, parametros_instruccion);
-        liberar_parametros_variables(parametros_instruccion);
-        free(parametros_instruccion);
+        liberar_parametros_desalojo(parametros_instruccion);
     }
 }
 
@@ -51,7 +50,7 @@ char* leer_direccion_de_memoria(char *direccion_fisica, char* tamanio)
     serializar_motivos_desalojo(parametros, paquete);
     enviar_paquete(paquete, SOCKET_MEMORIA);
 
-    liberar_parametros_variables(parametros);
+    liberar_parametros_desalojo(parametros);
     eliminar_paquete(paquete);
 
     return recibir_mensaje(SOCKET_MEMORIA);
@@ -68,7 +67,7 @@ void escribir_valor_en_memoria(char *direccion_fisica, char *contenido)
     serializar_motivos_desalojo(parametros, paquete);
     enviar_paquete(paquete, SOCKET_MEMORIA);
 
-    liberar_parametros_variables(parametros);
+    liberar_parametros_desalojo(parametros);
     eliminar_paquete(paquete);
     char *mensaje = recibir_mensaje(SOCKET_MEMORIA);
 

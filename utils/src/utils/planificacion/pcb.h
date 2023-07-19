@@ -98,8 +98,9 @@ void concatenarCharACadena(char c, char *cadena);
 void liberar_contexto(t_ctx *ctx);
 void liberar_instruccion(t_instruccion *instruccion);
 void liberar_segmento(t_segmento* segmento);
-void liberar_parametros_variables(t_parametros_variables* );
-void liberar_parametros_desalojo(t_ctx* ctx);
+void liberar_parametros_desalojo(t_parametros_variables *parametros_variables);
+void vaciar_parametros_desalojo(t_parametros_variables *);
+
 
 
 
