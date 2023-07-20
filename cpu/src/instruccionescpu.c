@@ -123,7 +123,7 @@ op_code execute(t_instruccion *instruccion_actual, t_ctx *ctx)
 	case MOV_OUT:
 		log_info(LOGGER_CPU, "PID : %d - <MOV OUT> - <%s %s> ", ctx->PID, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
 		registro = obtenerRegistro(&ctx->registros, instruccion_actual->parametros[1]);
-		dir_fisica = MMU(atoi(instruccion_actual->parametros[0]), sizeof(registro), ctx);
+		dir_fisica = MMU(atoi(instruccion_actual->parametros[0]), tamanio_registro(instruccion_actual->parametros[1]), ctx);
 		if (!dir_fisica)
 		{
 			return SEG_FAULT;
@@ -131,7 +131,7 @@ op_code execute(t_instruccion *instruccion_actual, t_ctx *ctx)
 		dir_fisica_string = malloc(10);
 		sprintf(dir_fisica_string, "%ld", dir_fisica);
 
-		agregar_parametro_desalojo(ctx, string_itoa(sizeof(registro)));
+		agregar_parametro_desalojo(ctx, registro);
 		agregar_parametro_desalojo(ctx, dir_fisica_string);
 		paquete = crear_paquete(MOV_OUT);
 		serializar_motivos_desalojo(ctx->motivos_desalojo, paquete);

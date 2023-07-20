@@ -15,6 +15,7 @@ void atender_solicitudes(int cod_op, t_parametros_variables *parametros_instrucc
     case F_CREATES:
         log_info(LOGGER_FILE_SYSTEM, "Crear Archivo: %s", nombre_archivo);
         crear_fcb(nombre_archivo);
+        free(nombre_archivo);
 
         // Devolver un existe, lo hicimos asi
         crear_y_enviar_paquete(EXISTE);
@@ -48,6 +49,7 @@ void atender_solicitudes(int cod_op, t_parametros_variables *parametros_instrucc
         {
             // No se hace nada
             log_info(LOGGER_FILE_SYSTEM, "No se modifican bloques");
+            enviar_paquete_op_terminada(nombre_archivo);
             break;
         }
 
@@ -138,7 +140,9 @@ void achicar_archivo(void *archivo_de_bloques, int cantidad_bloques_a_liberar, i
 
 void f_write(char *direccion, int posicion_archivo, int tamanio_a_escribir)
 {
-    char* valor_leido = leer_direccion_de_memoria(direccion, string_itoa(tamanio_a_escribir));
+    char* tamanio_a_escribir_string = string_itoa(tamanio_a_escribir);
+    char* valor_leido = leer_direccion_de_memoria(direccion, tamanio_a_escribir_string);
+    free(tamanio_a_escribir_string);
     log_info(LOGGER_FILE_SYSTEM, "Valor leido: %s", valor_leido);
 
     log_info(LOGGER_FILE_SYSTEM, "Escribir Archivo: %s - Puntero: %d - Memoria: %s - Tamaño: %d", nombre_archivo, posicion_archivo, direccion, tamanio_a_escribir);
@@ -149,21 +153,30 @@ void f_write(char *direccion, int posicion_archivo, int tamanio_a_escribir)
         cargar_puntero_indirecto(nombre_archivo);
     }
 
+    void* contenido = malloc(tamanio_a_escribir);
+    memcpy(contenido, valor_leido, tamanio_a_escribir);
+    free(valor_leido);
+
+    void* contenido_original = contenido; // Mantener una copia del puntero original
+
     while (tamanio_a_escribir > 0)
     {
         int tamanio_a_escribir_del_bloque = MIN(tamanio_a_escribir, TAMANIO_BLOQUES - posicion_archivo % TAMANIO_BLOQUES);
         int bloque_archivo = posicion_archivo / TAMANIO_BLOQUES;
         int offset = posicion_archivo % TAMANIO_BLOQUES;
 
-        escribir_bloque(nombre_archivo, bloque_archivo, offset, tamanio_a_escribir_del_bloque, valor_leido);
-        valor_leido = string_substring_from(valor_leido, tamanio_a_escribir_del_bloque);
+        escribir_bloque(nombre_archivo, bloque_archivo, offset, tamanio_a_escribir_del_bloque, contenido);
+        contenido = contenido + tamanio_a_escribir_del_bloque;
 
         posicion_archivo += tamanio_a_escribir_del_bloque;
         tamanio_a_escribir -= tamanio_a_escribir_del_bloque;
     }
 
+    contenido = contenido_original; // Restaurar el puntero original antes de liberar la memoria
+    free(contenido);
     munmap(archivo_de_bloques, CANTIDAD_BLOQUES * TAMANIO_BLOQUES);
 }
+
 
 void f_read(char *direccion, int posicion_archivo, int tamanio_a_leer)
 {

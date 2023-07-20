@@ -111,8 +111,8 @@ void finalizar_proceso(t_list *tabla_segmentos)
 char *leer_valor_direccion_fisica(long direccion_fisica, int tamanio)
 {
     sleep(CONFIG->retardo_memoria / 500);
-    char *valor = malloc(tamanio);
-    memcpy(valor, (void *)direccion_fisica, tamanio);
+    char *valor = malloc(tamanio * sizeof(char*));
+    memcpy(valor, (void *)direccion_fisica, tamanio * sizeof(char*));
     return valor;
 }
 
@@ -120,7 +120,7 @@ void escribir_valor_direccion_fisica(char *valor, long direccion_fisica)
 {
     sleep(CONFIG->retardo_memoria / 500);
     void *direccion = (void *)direccion_fisica;
-    memcpy(direccion, valor, sizeof((strlen(valor)) + 1) * (sizeof(char)));
+    memcpy(direccion, valor, sizeof((strlen(valor)) + 1) * (sizeof(char*)));
 }
 
 void compactar()

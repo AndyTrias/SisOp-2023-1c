@@ -134,7 +134,7 @@ void escribir_bloque(char *archivo, int bloque_archivo, int offset, int tamanio,
 
         memcpy(archivo_de_bloques + bloque_fs * TAMANIO_BLOQUES + offset, contenido, tamanio);
     }
-
+    
     msync(archivo_de_bloques, CANTIDAD_BLOQUES * TAMANIO_BLOQUES, MS_SYNC);
     munmap(archivo_de_bloques, TAMANIO_BLOQUES);
 }
