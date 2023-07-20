@@ -4,7 +4,7 @@ void liberar_contexto(t_ctx *ctx)
 {
     liberar_parametros_desalojo(ctx->motivos_desalojo);
     list_destroy_and_destroy_elements(ctx->instrucciones, (void*) liberar_instruccion);
-    list_destroy_and_destroy_elements(ctx->tabla_segmentos, (void*) liberar_segmento);
+    // list_destroy_and_destroy_elements(ctx->tabla_segmentos, (void*) liberar_segmento);
     free(ctx);
 }
 
@@ -49,13 +49,23 @@ void agregar_parametro_desalojo(t_ctx *ctx, char *parametro)
 
 void agregar_parametro_variable(t_parametros_variables *parametros_variables, char *parametro)
 {
-
     int cantidad_parametros = parametros_variables->cantidad_parametros;
 
-    parametros_variables->parametros = realloc(parametros_variables->parametros, sizeof(char *) * (cantidad_parametros + 1));
+    // Si el puntero aún no ha sido inicializado, asignamos memoria inicial.
+    if (parametros_variables->parametros == NULL)
+    {
+        parametros_variables->parametros = malloc(sizeof(char *));
+        parametros_variables->cantidad_parametros = 0; // Inicializar la cantidad de parámetros a 0
+    }
+    else
+    {
+        // Si ya ha sido inicializado, realocamos para el nuevo tamaño.
+        parametros_variables->parametros = realloc(parametros_variables->parametros, sizeof(char *) * (cantidad_parametros + 1));
+    }
 
     parametros_variables->parametros[cantidad_parametros] = malloc(strlen(parametro) + 1);
     strcpy(parametros_variables->parametros[cantidad_parametros], parametro);
 
     parametros_variables->cantidad_parametros++;
 }
+

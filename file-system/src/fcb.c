@@ -15,27 +15,25 @@ void levantar_diccionario_fcb(t_config *config)
     }
 
     struct dirent *archivo;
-    char *nombre_archivo = string_new();
-    char *ruta_archivo = string_new();
     while ((archivo = readdir(directorio)) != NULL)
     {
         if (archivo->d_type == DT_REG)
         {
             // Solo procesar archivos regulares (ignorar directorios y otros tipos)
-            ruta_archivo = string_from_format("%s/%s", path_fcb, archivo->d_name);
-            nombre_archivo = string_from_format("%s", archivo->d_name);
+            char* ruta_archivo = string_from_format("%s/%s", path_fcb, archivo->d_name);
+            char* nombre_archivo = string_from_format("%s", archivo->d_name);
 
             t_config *config_archivo = iniciar_config(ruta_archivo);
             dictionary_put(DICCIONARIO_FCB, nombre_archivo, config_archivo);
 
             // Realizar operaciones con el archivo
             log_info(LOGGER_FILE_SYSTEM, "Archivo encontrado: %s\n", ruta_archivo);
+
+            free(ruta_archivo);
+            free(nombre_archivo);
         }
     }
     closedir(directorio);
-    free(ruta_archivo);
-    free(nombre_archivo);
-    free(archivo);
 }
 
 void crear_fcb(char *nombre_archivo)
@@ -58,29 +56,32 @@ void crear_fcb(char *nombre_archivo)
         config_save(nuevo);
 
         dictionary_put(DICCIONARIO_FCB, nombre_archivo, nuevo);
+        free(path_archivo);
     }
 }
 
 void asignar_puntero_directo(char *nombre_archivo)
 {
     log_info(LOGGER_FILE_SYSTEM, "Asignacion de puntero directo - Archivo: %s", nombre_archivo);
+    char* puntero_directo = string_itoa(buscar_bloque_libre());
 
     t_config *fcb = dictionary_get(DICCIONARIO_FCB, nombre_archivo);
-    config_set_value(fcb, "PUNTERO_DIRECTO", string_itoa(buscar_bloque_libre()));
+    config_set_value(fcb, "PUNTERO_DIRECTO", puntero_directo);
     config_save(fcb);
 
-    // free(fcb);
+    free(puntero_directo);
 }
 
 void asignar_puntero_indirecto(char *nombre_archivo)
 {
     log_info(LOGGER_FILE_SYSTEM, "Asignacion de puntero indirecto - Archivo: %s", nombre_archivo);
-
+    char* puntero_indirecto = string_itoa(buscar_bloque_libre());
+    
     t_config *fcb = dictionary_get(DICCIONARIO_FCB, nombre_archivo);
-    config_set_value(fcb, "PUNTERO_INDIRECTO", string_itoa(buscar_bloque_libre()));
+    config_set_value(fcb, "PUNTERO_INDIRECTO", puntero_indirecto);
     config_save(fcb);
 
-    // free(fcb);
+    free(puntero_indirecto);
 }
 
 void liberar_puntero_directo(char *nombre_archivo)
