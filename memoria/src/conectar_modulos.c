@@ -130,7 +130,6 @@ void recibir_kernel(int *socket_modulo)
 
         case COMPACTAR:
             compactar();
-            usleep(CONFIG->retardo_compactacion * 250);
             paquete = crear_paquete(COMPACTAR);
             serializar_todas_las_tablas_segmentos(TABLA_SEGMENTOS_GLOBAL, paquete);
             enviar_paquete(paquete, *socket_modulo);
@@ -156,16 +155,18 @@ void recibir_cpu(int *socket_modulo)
         {
 
         case MOV_IN:
-            t_parametros_variables *parametros = recibir_parametros_variables(*socket_modulo);
-            char *valor_leido = leer_valor_direccion_fisica(strtol(parametros->parametros[1], NULL, 10), atoi(parametros->parametros[0]));
+            t_parametros_variables *parametros = NULL;
+            int PID = -1;
+            recibir_acceso(&parametros, &PID, *socket_modulo);
+            char *valor_leido = leer_valor_direccion_fisica(strtol(parametros->parametros[1], NULL, 10), atoi(parametros->parametros[0]), PID, "CPU");
             enviar_mensaje(valor_leido, *socket_modulo);
             free(valor_leido);
             liberar_parametros_desalojo(parametros);
             break;
 
         case MOV_OUT:
-            parametros = recibir_parametros_variables(*socket_modulo); // porque este parametros no esta inicializado
-            escribir_valor_direccion_fisica(parametros->parametros[0], strtol(parametros->parametros[1], NULL, 10));
+            recibir_acceso(&parametros, &PID, *socket_modulo);
+            escribir_valor_direccion_fisica(parametros->parametros[0], strtol(parametros->parametros[1], NULL, 10), PID, "CPU");
             enviar_mensaje("OK", *socket_modulo);
             liberar_parametros_desalojo(parametros);
             break;
@@ -190,16 +191,18 @@ void recibir_fs(int *socket_modulo)
         {
 
         case F_READ:
+            int PID = recibir_int(*socket_modulo);
             t_parametros_variables *parametros = recibir_parametros_variables(*socket_modulo);
-            escribir_valor_direccion_fisica(parametros->parametros[0], strtol(parametros->parametros[1], NULL, 10));
+            escribir_valor_direccion_fisica(parametros->parametros[0], strtol(parametros->parametros[1], NULL, 10), PID, "FS");
             enviar_mensaje("OK", *socket_modulo);
             liberar_parametros_desalojo(parametros);
 
             break;
 
         case F_WRITE:
+            PID = recibir_int(*socket_modulo);
             parametros = recibir_parametros_variables(*socket_modulo);
-            char *valor_leido = leer_valor_direccion_fisica(strtol(parametros->parametros[0], NULL, 10), atoi(parametros->parametros[1]));
+            char *valor_leido = leer_valor_direccion_fisica(strtol(parametros->parametros[0], NULL, 10), atoi(parametros->parametros[1]), PID, "FS");
             enviar_mensaje(valor_leido, *socket_modulo);
             free(valor_leido);
             liberar_parametros_desalojo(parametros);
@@ -238,11 +241,25 @@ t_parametros_variables *recibir_parametros_variables(int socket)
     void *buffer = recibir_buffer(&size, socket);
 
     int *desplazamiento = malloc(sizeof(int));
-    *desplazamiento = 0;
+    *desplazamiento = sizeof(int);
 
     t_parametros_variables *parametros = deserealizar_motivos_desalojo(buffer, desplazamiento);
 
     free(buffer);
     free(desplazamiento);
     return parametros;
+}
+
+void recibir_acceso(t_parametros_variables **parametros, int *PID, int socket){
+    int size;
+    void *buffer = recibir_buffer(&size, socket);
+
+    int *desplazamiento = malloc(sizeof(int));
+    *desplazamiento = 0;
+
+    *PID = deserializar_int(buffer, desplazamiento);
+    *parametros = deserealizar_motivos_desalojo(buffer, desplazamiento);
+
+    free(buffer);
+    free(desplazamiento);
 }

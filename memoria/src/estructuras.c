@@ -9,7 +9,7 @@ void iniciar_estructuras(t_config* config){
     char* algoritmo_asignacion = config_get_string_value(config, "ALGORITMO_ASIGNACION");
 
     MEMORIA_PRINCIPAL = malloc(tam_memoria);
-    log_info(LOGGER_MEMORIA, "Se creo el espacio contiguo de memoria");
+    //log_info(LOGGER_MEMORIA, "Se creo el espacio contiguo de memoria");
 
     CONFIG = malloc(sizeof(t_configuracion));
     CONFIG->tam_memoria = tam_memoria;

@@ -16,18 +16,6 @@ void liberar_recursos(t_pcb *proceso)
 
 void terminar_proceso(t_pcb *proceso)
 {
-    // Revisar si tiene un recurso asignado y eliminarlo
-
-    liberar_recursos(proceso);
-
-    // destruir proceso
-    // liberar_lista_instrucciones(proceso->contexto.instrucciones);
-    list_destroy(proceso->contexto.instrucciones);
-    list_destroy(proceso->archivos_abiertos);
-    list_destroy(proceso->recursos_en_uso);
-    // liberar_parametros_desalojo(&proceso->contexto);
-    free(proceso->contexto.motivos_desalojo->parametros);
-
     pthread_mutex_lock(&SOLICITUD_MEMORIA);
 
     t_paquete *paquete = crear_paquete(TERMINAR);
@@ -39,6 +27,14 @@ void terminar_proceso(t_pcb *proceso)
     recibir_mensaje(SOCKET_MEMORIA);
 
     pthread_mutex_unlock(&SOLICITUD_MEMORIA);
+
+    // Revisar si tiene un recurso asignado y eliminarlo
+    liberar_recursos(proceso);
+
+    // destruir proceso
+    list_destroy_and_destroy_elements(proceso->contexto->tabla_segmentos, (void*) liberar_segmento);
+    liberar_contexto(proceso->contexto);
+
     
     paquete = crear_paquete(TERMINAR);
     enviar_paquete(paquete, proceso->socket_consola);

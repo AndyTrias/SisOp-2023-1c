@@ -4,13 +4,12 @@ void liberar_contexto(t_ctx *ctx)
 {
     liberar_parametros_desalojo(ctx->motivos_desalojo);
     list_destroy_and_destroy_elements(ctx->instrucciones, (void*) liberar_instruccion);
-    // list_destroy_and_destroy_elements(ctx->tabla_segmentos, (void*) liberar_segmento);
+    //list_destroy_and_destroy_elements(ctx->tabla_segmentos, (void*) liberar_segmento);
     free(ctx);
 }
 
 void liberar_segmento(t_segmento *segmento)
 {
-    // free(segmento->base);
     free(segmento);
 }
 

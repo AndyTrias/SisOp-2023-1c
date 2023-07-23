@@ -4,14 +4,36 @@
 //     log_info(LOGGER_MEMORIA, "Hueco: <%p> - TAMAÑO: <%d> - LIBRE: <%d>", hueco->base, hueco->tamanio, hueco->libre);
 // }
 
-// void mostrar_segmento(t_segmento* segmento){
-//     log_info(LOGGER_MEMORIA, "Segmento: <%p> - TAMAÑO: <%d>", segmento->base, segmento->tamanio);
-// }
+void mostrar_segmento(t_segmento* segmento){
+    log_info(LOGGER_MEMORIA, "Segmento: <%p> - TAMAÑO: <%d>", segmento->base, segmento->tamanio);
+}
 
 // void mostrar_tablas(t_tabla_segmentos* ts){
 //     log_info(LOGGER_MEMORIA, "PID: <%d>", ts->PID);
 //     list_iterate(ts->segmentos, (void*)mostrar_segmento);
+
+/*
+
+TABLA_SEGMENTOS_GLOBAL -> t_list* t_tabla_segmentos
+t_tabla_segmentos -> int pid | t_list* t_segmento
+t_segmento -> void* base | int tamanio | int id
+
+*/
+
+
+
 // }
+
+void liberar_segmentoo(t_segmento *segmento)
+{
+    free(segmento);
+}
+
+void liberar_tabla_segmentos(t_tabla_segmentos *ts)
+{
+    list_destroy_and_destroy_elements(ts->segmentos, (void *)liberar_segmentoo);
+    free(ts);
+}
 
 t_paquete *crear_segmento(int id_segmento, int tamanio, t_ctx *ctx)
 {
@@ -56,7 +78,7 @@ t_paquete *crear_segmento(int id_segmento, int tamanio, t_ctx *ctx)
     ts->PID = ctx->PID;
     ts->segmentos = ctx->tabla_segmentos;
 
-    list_replace(TABLA_SEGMENTOS_GLOBAL, ctx->PID, ts);
+    list_replace_and_destroy_element(TABLA_SEGMENTOS_GLOBAL, ctx->PID, ts, (void *)liberar_tabla_segmentos);
     t_paquete *paquete = crear_paquete(CREATE_SEGMENT);
     agregar_a_paquete_dato_serializado(paquete, &(segmento->base), sizeof(segmento->base));
     log_info(LOGGER_MEMORIA, "PID: <%d> - Crear Segmento: <%d> - Base: <%p> - TAMAÑO: <%d>", ctx->PID, id_segmento, hueco->base, tamanio);
@@ -85,12 +107,11 @@ void eliminar_segmento(t_list *tabla_segmentos, int id_segmento, int PID)
 
     segmento->base = NULL;
     segmento->tamanio = 0;
-    list_replace(tabla_segmentos, id_segmento, segmento);
 
     t_tabla_segmentos *ts = malloc(sizeof(t_tabla_segmentos));
     ts->PID = PID;
     ts->segmentos = tabla_segmentos;
-    list_replace(TABLA_SEGMENTOS_GLOBAL, PID, ts);
+    list_replace_and_destroy_element(TABLA_SEGMENTOS_GLOBAL, PID, ts, (void *)liberar_tabla_segmentos);
 }
 
 void finalizar_proceso(t_list *tabla_segmentos)
@@ -108,24 +129,28 @@ void finalizar_proceso(t_list *tabla_segmentos)
     list_destroy(tabla_segmentos);
 }
 
-char *leer_valor_direccion_fisica(long direccion_fisica, int tamanio)
+char *leer_valor_direccion_fisica(long direccion_fisica, int tamanio, int pid, char* origen)
 {
     sleep(CONFIG->retardo_memoria / 500);
     char *valor = malloc(tamanio * sizeof(char*));
     memcpy(valor, (void *)direccion_fisica, tamanio * sizeof(char*));
+    log_info(LOGGER_MEMORIA, "PID: <%d> - Acción: <LEER> - Dirección física: <%p> - Tamaño: <%d> - Origen: <%s>", pid, (void *)direccion_fisica, tamanio, origen);
     return valor;
 }
 
-void escribir_valor_direccion_fisica(char *valor, long direccion_fisica)
+void escribir_valor_direccion_fisica(char *valor, long direccion_fisica, int pid, char* origen)
 {
     sleep(CONFIG->retardo_memoria / 500);
     void *direccion = (void *)direccion_fisica;
-    memcpy(direccion, valor, sizeof((strlen(valor)) + 1) * (sizeof(char*)));
+    int tamanio = strlen(valor) + 1;
+    memcpy(direccion, valor, sizeof((tamanio) * (sizeof(char*))));
+    log_info(LOGGER_MEMORIA, "PID: <%d> - Acción: <ESCRIBIR> - Dirección física: <%p> - Tamaño: <%d> - Origen: <%s>", pid, direccion, tamanio, origen);
 }
 
 void compactar()
 {
     log_info(LOGGER_MEMORIA, "Se solicita compactacion");
+    usleep(CONFIG->retardo_compactacion * 250);
     int nuevo_tamanio = 0;
     void *base_del_primer_hueco = NULL;
 
@@ -177,7 +202,6 @@ void compactar()
                     if (segmento->base == hueco->base)
                     {
                         segmento->base = base_actual + tamanio_actual;
-                        list_replace(tabla_segmentos->segmentos, k, segmento);
                         log_info(LOGGER_MEMORIA, "PID: <%d> - Segmento: <%d> - Base: <%p> - TAMAÑO: <%d>", tabla_segmentos->PID, k, segmento->base, segmento->tamanio);
                         break;
                     }

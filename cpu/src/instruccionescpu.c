@@ -106,6 +106,7 @@ op_code execute(t_instruccion *instruccion_actual, t_ctx *ctx)
 		agregar_parametro_desalojo(ctx, dir_fisica_string);
 
 		t_paquete *paquete = crear_paquete(MOV_IN);
+		agregar_a_paquete_dato_serializado(paquete, &ctx->PID, sizeof(int));
 		serializar_motivos_desalojo(ctx->motivos_desalojo, paquete);
 		enviar_paquete(paquete, SOCKET_MEMORIA);
 		eliminar_paquete(paquete);
@@ -128,12 +129,13 @@ op_code execute(t_instruccion *instruccion_actual, t_ctx *ctx)
 		{
 			return SEG_FAULT;
 		}
-		dir_fisica_string = malloc(10);
+		dir_fisica_string = malloc(13);
 		sprintf(dir_fisica_string, "%ld", dir_fisica);
 
 		agregar_parametro_desalojo(ctx, registro);
 		agregar_parametro_desalojo(ctx, dir_fisica_string);
 		paquete = crear_paquete(MOV_OUT);
+		agregar_a_paquete_dato_serializado(paquete, &ctx->PID, sizeof(int));
 		serializar_motivos_desalojo(ctx->motivos_desalojo, paquete);
 		enviar_paquete(paquete, SOCKET_MEMORIA);
 		eliminar_paquete(paquete);
