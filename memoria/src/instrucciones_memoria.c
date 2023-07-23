@@ -89,7 +89,7 @@ void eliminar_segmento(t_list *tabla_segmentos, int id_segmento, int PID)
 {
     t_segmento *segmento = list_get(tabla_segmentos, id_segmento);
     if (PID != -1)
-        log_info(LOGGER_MEMORIA, "PID: <%d> - Eliminar Segmento: <%d> - Base: <%p> - TAMAÑO: <%d>", PID, id_segmento, segmento->base, segmento->tamanio);
+    log_info(LOGGER_MEMORIA, "PID: <%d> - Eliminar Segmento: <%d> - Base: <%p> - TAMAÑO: <%d>", PID, id_segmento, segmento->base, segmento->tamanio);
 
     // buscar hueco que tenga la misma base que el segmento y marcarlo como libre
     int index_hueco = 0;
@@ -114,19 +114,24 @@ void eliminar_segmento(t_list *tabla_segmentos, int id_segmento, int PID)
     list_replace_and_destroy_element(TABLA_SEGMENTOS_GLOBAL, PID, ts, (void *)liberar_tabla_segmentos);
 }
 
-void finalizar_proceso(t_list *tabla_segmentos)
+// t_list -> [t_segmento, t_segmento, t_segmento, ..., t_segmento]
+// t_segmento -> void* base | int tamanio | int id
+// t_segmento 0 no hay que eliminarlo
+void finalizar_proceso(t_list *tabla_segmentos, int PID)
 {
-    for (int i = 1; i < list_size(tabla_segmentos); i++)
+    list_remove(tabla_segmentos, 0);
+    for (int i = 0; i < list_size(tabla_segmentos); i++)
     {
         t_segmento *segmento = list_get(tabla_segmentos, i);
         if (segmento->base != NULL)
         {
-            // quitar de la tabla de segmentos
             eliminar_segmento(tabla_segmentos, i, -1);
+        } else {
+            list_remove_and_destroy_element(tabla_segmentos, i, (void *)liberar_segmentoo);
         }
     }
 
-    list_destroy(tabla_segmentos);
+    list_remove(TABLA_SEGMENTOS_GLOBAL, PID);
 }
 
 char *leer_valor_direccion_fisica(long direccion_fisica, int tamanio, int pid, char* origen)

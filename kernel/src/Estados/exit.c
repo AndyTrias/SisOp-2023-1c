@@ -19,8 +19,8 @@ void terminar_proceso(t_pcb *proceso)
     pthread_mutex_lock(&SOLICITUD_MEMORIA);
 
     t_paquete *paquete = crear_paquete(TERMINAR);
-    agregar_a_paquete_dato_serializado(paquete, &proceso->contexto.PID, sizeof(int));
-    serializar_tabla_segmentos(proceso->contexto.tabla_segmentos, paquete);
+    agregar_a_paquete_dato_serializado(paquete, &proceso->contexto->PID, sizeof(int));
+    serializar_tabla_segmentos(proceso->contexto->tabla_segmentos, paquete);
     enviar_paquete(paquete, SOCKET_MEMORIA);
     eliminar_paquete(paquete);
     recibir_operacion(SOCKET_MEMORIA);
@@ -40,7 +40,7 @@ void terminar_proceso(t_pcb *proceso)
     enviar_paquete(paquete, proceso->socket_consola);
     eliminar_paquete(paquete);
 
-    // liberar_lista_tabla_segmentos(proceso->contexto.tabla_segmentos);
+    // liberar_lista_tabla_segmentos(proceso->contexto->tabla_segmentos);
 
     // free(proceso);
     

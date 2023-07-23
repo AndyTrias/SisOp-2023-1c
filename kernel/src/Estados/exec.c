@@ -7,20 +7,20 @@ void reemplazar_proceso(t_pcb *nuevo_pcb)
 
 void reemplazar_ctx(t_ctx *nuevo_ctx)
 {
-    EJECUTANDO->contexto = *nuevo_ctx;
+    EJECUTANDO->contexto = nuevo_ctx;
 }
 
 void enviar_a_cpu()
 {
     t_paquete *paquete = crear_paquete(CONTEXTO);
 
-    serializar_contexto(&EJECUTANDO->contexto, paquete);
+    serializar_contexto(EJECUTANDO->contexto, paquete);
 
     enviar_paquete(paquete, SOCKET_CPU);
 
     eliminar_paquete(paquete);
 
-    log_info(LOGGER_KERNEL, "Se envia el proceso PID: <%d> al CPU", EJECUTANDO->contexto.PID);
+    log_info(LOGGER_KERNEL, "Se envia el proceso PID: <%d> al CPU", EJECUTANDO->contexto->PID);
 
     if (strcmp(ALGORITMO_PLANIFICACION, "HRRN") == 0)
     {
@@ -40,27 +40,27 @@ void definir_accion(int cod_op, t_pcb *proceso)
     {
     case YIELD:
         agregar_a_lista_ready(proceso);
-        log_info(LOGGER_KERNEL, "Yield PID: <%d>", proceso->contexto.PID);
-        cambio_de_estado(proceso->contexto.PID, "Exec", "Ready");
+        log_info(LOGGER_KERNEL, "Yield PID: <%d>", proceso->contexto->PID);
+        cambio_de_estado(proceso->contexto->PID, "Exec", "Ready");
         reemplazar_exec_por_nuevo();
         break;
     case EXIT:
-        cambio_de_estado(proceso->contexto.PID, "Exec", "Exit");
-        log_info(LOGGER_KERNEL, "Finaliza el proceso <%d> - Motivo: <SUCCESS>", proceso->contexto.PID);
+        cambio_de_estado(proceso->contexto->PID, "Exec", "Exit");
+        log_info(LOGGER_KERNEL, "Finaliza el proceso <%d> - Motivo: <SUCCESS>", proceso->contexto->PID);
         terminar_proceso(proceso);
         break;
 
     case SEG_FAULT:
-        cambio_de_estado(proceso->contexto.PID, "Exec", "Exit");
-        log_info(LOGGER_KERNEL, "Finaliza el proceso <%d> - Motivo: <SEGMENTATION_FAULT>", proceso->contexto.PID);
+        cambio_de_estado(proceso->contexto->PID, "Exec", "Exit");
+        log_info(LOGGER_KERNEL, "Finaliza el proceso <%d> - Motivo: <SEGMENTATION_FAULT>", proceso->contexto->PID);
         terminar_proceso(proceso);
         break;
 
     case WAIT:
-        wait(proceso, proceso->contexto.motivos_desalojo->parametros[0]);
+        wait(proceso, proceso->contexto->motivos_desalojo->parametros[0]);
         break;
     case SIGNAL:
-        signal(proceso, proceso->contexto.motivos_desalojo->parametros[0]);
+        signal(proceso, proceso->contexto->motivos_desalojo->parametros[0]);
         break;
     case IO:
         io(proceso);
@@ -70,34 +70,34 @@ void definir_accion(int cod_op, t_pcb *proceso)
         // se le pregunta a fs si existe
         // si existe se crea la entrada
         // si no se le pide que lo cree y dsp se crea la entrada
-        if (f_open(proceso, proceso->contexto.motivos_desalojo->parametros[0]))
+        if (f_open(proceso, proceso->contexto->motivos_desalojo->parametros[0]))
         { // 1 bloqueado, 0 desbloqueado
 
             reemplazar_exec_por_nuevo();
         }
         break;
     case F_SEEK:
-        f_seek(proceso, proceso->contexto.motivos_desalojo->parametros[0], proceso->contexto.motivos_desalojo->parametros[1]);
+        f_seek(proceso, proceso->contexto->motivos_desalojo->parametros[0], proceso->contexto->motivos_desalojo->parametros[1]);
         break;
 
     case F_CLOSE:
-        f_close(proceso, proceso->contexto.motivos_desalojo->parametros[0]);
+        f_close(proceso, proceso->contexto->motivos_desalojo->parametros[0]);
         break;
 
     case F_READ:
 
-        f_read(proceso, proceso->contexto.motivos_desalojo->parametros[0]);
+        f_read(proceso, proceso->contexto->motivos_desalojo->parametros[0]);
 
         reemplazar_exec_por_nuevo();
         break;
 
     case F_WRITE:
-        f_write(proceso, proceso->contexto.motivos_desalojo->parametros[0]);
+        f_write(proceso, proceso->contexto->motivos_desalojo->parametros[0]);
         reemplazar_exec_por_nuevo();
         break;
 
     case F_TRUNCATE:
-        f_truncate(proceso, proceso->contexto.motivos_desalojo->parametros[0], proceso->contexto.motivos_desalojo->parametros[1]);
+        f_truncate(proceso, proceso->contexto->motivos_desalojo->parametros[0], proceso->contexto->motivos_desalojo->parametros[1]);
         reemplazar_exec_por_nuevo();
         break;
     case CREATE_SEGMENT:
@@ -120,7 +120,7 @@ void reemplazar_exec_por_nuevo()
     }
     t_pcb *proceso_entrante = ceder_proceso_a_exec(); // pide un proceso a ready segun el algoritmo
     reemplazar_proceso(proceso_entrante);
-    cambio_de_estado(proceso_entrante->contexto.PID, "Ready", "Exec");
+    cambio_de_estado(proceso_entrante->contexto->PID, "Ready", "Exec");
 }
 
 void recibir_de_cpu(int conexion_cpu)
@@ -134,16 +134,15 @@ void recibir_de_cpu(int conexion_cpu)
     *desplazamiento = 0;
 
     t_ctx *ctx = deserializar_contexto(buffer, desplazamiento);
-
+    free(desplazamiento);
     reemplazar_ctx(ctx);
 
     log_info(LOGGER_KERNEL, "Se recibe de CPU el proceso PID: <%d>", ctx->PID);
 
-    t_pcb *aux = EJECUTANDO;
     definir_accion(cod_op, EJECUTANDO);
 
-    vaciar_parametros_desalojo(aux->contexto.motivos_desalojo);
-    // sleep(0.001);
+    vaciar_parametros_desalojo(EJECUTANDO->contexto->motivos_desalojo);
+    
     enviar_a_cpu();
 }
 void estimado_prox_rafaga()
@@ -155,5 +154,5 @@ void estimado_prox_rafaga()
 
     EJECUTANDO->estimado_prox_rafaga = proxima_rafaga;
 
-    log_info(LOGGER_KERNEL, "Se realizo el estimado de proxima rafaga para el PID: <%d>, nuevo estimado: %f", EJECUTANDO->contexto.PID, EJECUTANDO->estimado_prox_rafaga);
+    log_info(LOGGER_KERNEL, "Se realizo el estimado de proxima rafaga para el PID: <%d>, nuevo estimado: %f", EJECUTANDO->contexto->PID, EJECUTANDO->estimado_prox_rafaga);
 }

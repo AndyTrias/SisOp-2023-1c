@@ -86,12 +86,12 @@ void recibir_kernel(int *socket_modulo)
             *desplazamiento = 0;
 
             PID = deserializar_int(buffer, desplazamiento);
-            tabla_segmentos->segmentos = deserializar_tabla_segmentos(buffer, desplazamiento);
+            t_list* tabla_de_segmentos = deserializar_tabla_segmentos(buffer, desplazamiento);
 
             // eliminar
             free(buffer);
-            finalizar_proceso(tabla_segmentos->segmentos);
-            
+            finalizar_proceso(tabla_de_segmentos, PID);
+
             log_info(LOGGER_MEMORIA, "Eliminacion de Proceso PID: <%d>", PID);
             enviar_mensaje("OK", *socket_modulo);
             break;

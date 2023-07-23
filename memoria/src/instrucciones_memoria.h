@@ -13,7 +13,7 @@
 
     t_paquete* crear_segmento(int, int, t_ctx*);
     void eliminar_segmento(t_list*, int, int);
-    void finalizar_proceso(t_list*);
+    void finalizar_proceso(t_list*, int);
     char* leer_valor_direccion_fisica(long, int, int, char*);
     void escribir_valor_direccion_fisica(char* , long, int, char*);
     void compactar();

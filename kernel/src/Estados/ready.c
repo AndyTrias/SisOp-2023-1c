@@ -7,7 +7,7 @@ void admitir_proceso()
     pthread_mutex_lock(&SOLICITUD_MEMORIA);
 
     t_paquete* paquete = crear_paquete(CREAR_TABLA_SEGMENTOS);
-    agregar_a_paquete_dato_serializado(paquete, &proceso_en_new->contexto.PID, sizeof(int));
+    agregar_a_paquete_dato_serializado(paquete, &proceso_en_new->contexto->PID, sizeof(int));
     enviar_paquete(paquete, SOCKET_MEMORIA);
     eliminar_paquete(paquete);
 
@@ -16,9 +16,9 @@ void admitir_proceso()
     
     pthread_mutex_unlock(&SOLICITUD_MEMORIA);
     
-    cambio_de_estado(proceso_en_new->contexto.PID,"New","Ready");
+    cambio_de_estado(proceso_en_new->contexto->PID,"New","Ready");
     
-    proceso_en_new->contexto.tabla_segmentos = tabla_segmentos;
+    proceso_en_new->contexto->tabla_segmentos = tabla_segmentos;
     agregar_a_lista_ready(proceso_en_new);
 
 }

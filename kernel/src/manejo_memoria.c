@@ -3,9 +3,9 @@
 void crear_segmento(t_pcb *proceso)
 { // enviar a memoria CREATE_SEGMENT con sus 2 parametros (id del segmento y tamanio)
     // se solicita la creacion del segmento
-    pthread_mutex_lock(&SOLICITUD_MEMORIA);
+    //pthread_mutex_lock(&SOLICITUD_MEMORIA);
     t_paquete *paquete = crear_paquete(CREATE_SEGMENT);
-    serializar_contexto(&proceso->contexto, paquete);
+    serializar_contexto(proceso->contexto, paquete);
     enviar_paquete(paquete, SOCKET_MEMORIA);
     eliminar_paquete(paquete);
 
@@ -17,14 +17,14 @@ void crear_segmento(t_pcb *proceso)
         int size;
         void *buffer = recibir_buffer(&size, SOCKET_MEMORIA);
 
-        t_segmento *segmento = list_get(proceso->contexto.tabla_segmentos, atoi(proceso->contexto.motivos_desalojo->parametros[0]));
+        t_segmento *segmento = list_get(proceso->contexto->tabla_segmentos, atoi(proceso->contexto->motivos_desalojo->parametros[0]));
 
         memcpy(&(segmento->base), buffer, sizeof(segmento->base));
-        segmento->tamanio = atoi(proceso->contexto.motivos_desalojo->parametros[1]);
+        segmento->tamanio = atoi(proceso->contexto->motivos_desalojo->parametros[1]);
         free(buffer);
 
         pthread_mutex_unlock(&SOLICITUD_MEMORIA);
-        log_info(LOGGER_KERNEL, "PID: <%d> - Crear Segmento - Id: <%d> - Tamaño: <%d>", proceso->contexto.PID, segmento->id_segmento, segmento->tamanio);
+        log_info(LOGGER_KERNEL, "PID: <%d> - Crear Segmento - Id: <%d> - Tamaño: <%d>", proceso->contexto->PID, segmento->id_segmento, segmento->tamanio);
         break;
     case COMPACTAR:
 
@@ -38,7 +38,7 @@ void crear_segmento(t_pcb *proceso)
 
 
         t_list *tablas_de_segmentos_actualizadas = recibir_todas_las_tablas_segmentos(SOCKET_MEMORIA);
-        actualizar_tablas_de_segmentos(tablas_de_segmentos_actualizadas);
+        actualizar_todas_las_tablas_de_segmentos(tablas_de_segmentos_actualizadas);
 
         log_info(LOGGER_KERNEL, "Se finalizó el proceso de compactación");
         crear_segmento(proceso);
@@ -46,9 +46,22 @@ void crear_segmento(t_pcb *proceso)
         break;
     case OUT_OF_MEMORY:
         pthread_mutex_unlock(&SOLICITUD_MEMORIA);
-        log_info(LOGGER_KERNEL, "Finaliza el proceso <%d> - Motivo: <OUT_OF_MEMORY>", proceso->contexto.PID);
+        log_info(LOGGER_KERNEL, "Finaliza el proceso <%d> - Motivo: <OUT_OF_MEMORY>", proceso->contexto->PID);
         terminar_proceso(proceso);
         break;
+    }
+}
+
+// t_list -> [t_tablas_segmentos, t_tablas_segmentos, t_tablas_segmentos]
+// t_tablas_segmentos -> int pid | t_list segmentos
+void actualizar_todas_las_tablas_de_segmentos(t_list* nuevas_tablas){
+    for (int i = 0; i < nuevas_tablas->elements_count; i++){
+        t_tabla_segmentos* tabla_actualizada = list_get(nuevas_tablas, i);
+        t_pcb* proceso = buscar_proceso(tabla_actualizada->PID);
+        if (proceso != NULL){
+            list_clean_and_destroy_elements(proceso->contexto->tabla_segmentos, free);
+            proceso->contexto->tabla_segmentos = tabla_actualizada->segmentos;
+        }
     }
 }
 
@@ -62,42 +75,28 @@ void enviar_compactacion()
 void eliminar_segmento(t_pcb *proceso)
 {
     // enviar a memoria DELETE_SEGMENT con su parametro (id del segmento)
-    pthread_mutex_lock(&SOLICITUD_MEMORIA);
+    //pthread_mutex_lock(&SOLICITUD_MEMORIA);
     t_paquete *paquete = crear_paquete(DELETE_SEGMENT);
-    serializar_contexto(&proceso->contexto, paquete);
+    serializar_contexto(proceso->contexto, paquete);
     enviar_paquete(paquete, SOCKET_MEMORIA);
     eliminar_paquete(paquete);
 
     recibir_operacion(SOCKET_MEMORIA);
     t_list *tabla_segmentos_actualizada = recibir_tabla_segmentos(SOCKET_MEMORIA);
 
-    proceso->contexto.tabla_segmentos = tabla_segmentos_actualizada;
+    //cambiar la tabla de segmentos del proceso por la nueva
+    list_clean_and_destroy_elements(proceso->contexto->tabla_segmentos, free);
+    proceso->contexto->tabla_segmentos = tabla_segmentos_actualizada;
 
     pthread_mutex_unlock(&SOLICITUD_MEMORIA);
 
-    log_info(LOGGER_KERNEL, "PID: <%d> - Eliminar Segmento - Id Segmento: <%d>", proceso->contexto.PID, atoi(proceso->contexto.motivos_desalojo->parametros[0]));
+    log_info(LOGGER_KERNEL, "PID: <%d> - Eliminar Segmento - Id Segmento: <%d>", proceso->contexto->PID, atoi(proceso->contexto->motivos_desalojo->parametros[0]));
 }
-void actualizar_tablas_de_segmentos(t_list *lista_segmentos)
-{
-    int i = 0;
-    t_tabla_segmentos *tabla_segmentos_por_proceso = list_get(lista_segmentos, i);
-    t_pcb *proceso_a_actualizar;
 
-    while (i < list_size(lista_segmentos))
-    {
-        tabla_segmentos_por_proceso = list_get(lista_segmentos, i);
-
-        proceso_a_actualizar = buscar_proceso(tabla_segmentos_por_proceso->PID);
-        if (proceso_a_actualizar != NULL)
-            proceso_a_actualizar->contexto.tabla_segmentos = tabla_segmentos_por_proceso->segmentos;
-
-        i++;
-    }
-}
 t_pcb *buscar_proceso(int pid_buscado)
 {
     int resulatdo_buesqueda; // en -1 entoces no lo encontro
-    if (EJECUTANDO->contexto.PID == pid_buscado)
+    if (EJECUTANDO->contexto->PID == pid_buscado)
         return EJECUTANDO;
 
     resulatdo_buesqueda = buscar_ready(pid_buscado);
@@ -125,7 +124,7 @@ int buscar_ready(int pid_buscado)
     while (i < tamnio_lista_ready())
     {
         proceso_aux = get_de_lista_ready(i);
-        if (proceso_aux->contexto.PID == pid_buscado)
+        if (proceso_aux->contexto->PID == pid_buscado)
             return i;
         i++;
     }
@@ -143,7 +142,7 @@ t_pcb *buscar_block(int pid_buscado)
         while (j < list_size(aux))
         {
             proceso_aux = list_get(aux, j);
-            if (proceso_aux->contexto.PID == pid_buscado)
+            if (proceso_aux->contexto->PID == pid_buscado)
                 return proceso_aux;
             j++;
         }
@@ -159,7 +158,7 @@ int buscar_block_fs(int pid_buscado)
     while (i < tamnio_lista_blockfs())
     {
         proceso_aux = get_de_lista_blockfs(i);
-        if (proceso_aux->contexto.PID == pid_buscado)
+        if (proceso_aux->contexto->PID == pid_buscado)
             return i;
         i++;
     }

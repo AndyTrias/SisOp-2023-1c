@@ -210,7 +210,7 @@ char *concatenarLista(t_list *lista)
     {
         char numStr[4]; // Para almacenar el número como string (3 dígitos + 1 para el terminador null)
         proceso = list_get(lista, i);
-        sprintf(numStr, "%d", proceso->contexto.PID); // Convierte el número a string
+        sprintf(numStr, "%d", proceso->contexto->PID); // Convierte el número a string
 
         strcat(result, numStr);
         if (i != list_size(lista) - 1)
