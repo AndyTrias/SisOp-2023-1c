@@ -33,22 +33,22 @@ typedef struct
 
 typedef enum
 {
-    F_READ,
-    F_WRITE, 
-    MOV_OUT,
-    F_TRUNCATE,
-    F_SEEK,
-    MOV_IN,
-    CREATE_SEGMENT, 
-    IO,
     SET,
+    F_READ,
+    MOV_IN,
+    MOV_OUT,
+    YIELD,
+    IO,
     WAIT,
     SIGNAL,
+    CREATE_SEGMENT, 
+    DELETE_SEGMENT, 
+    F_WRITE, 
+    F_TRUNCATE,
+    F_SEEK,
     F_OPEN,
     F_CLOSE,
-    DELETE_SEGMENT, 
     EXIT, 
-    YIELD,
     SEG_FAULT
 } t_operacion;
 

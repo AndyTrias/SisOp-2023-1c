@@ -16,7 +16,6 @@ void atender_solicitudes(int cod_op, t_parametros_variables *parametros_instrucc
     case F_CREATES:
         log_info(LOGGER_FILE_SYSTEM, "Crear Archivo: %s", nombre_archivo);
         crear_fcb(nombre_archivo);
-        free(nombre_archivo);
 
         // Devolver un existe, lo hicimos asi
         crear_y_enviar_paquete(EXISTE);
@@ -141,12 +140,13 @@ void achicar_archivo(void *archivo_de_bloques, int cantidad_bloques_a_liberar, i
 
 void f_write(char *direccion, int posicion_archivo, int tamanio_a_escribir, int pid)
 {
+    log_info(LOGGER_FILE_SYSTEM, "Escribir Archivo: %s - Puntero: %d - Memoria: %s - Tamaño: %d", nombre_archivo, posicion_archivo, direccion, tamanio_a_escribir);
+    
     char* tamanio_a_escribir_string = string_itoa(tamanio_a_escribir);
     char* valor_leido = leer_direccion_de_memoria(direccion, tamanio_a_escribir_string, pid);
     free(tamanio_a_escribir_string);
     log_info(LOGGER_FILE_SYSTEM, "Valor leido: %s", valor_leido);
 
-    log_info(LOGGER_FILE_SYSTEM, "Escribir Archivo: %s - Puntero: %d - Memoria: %s - Tamaño: %d", nombre_archivo, posicion_archivo, direccion, tamanio_a_escribir);
 
     if (tamanio_a_escribir + posicion_archivo > 64)
     {
@@ -204,8 +204,8 @@ void f_read(char *direccion, int posicion_archivo, int tamanio_a_leer, int pid)
         tamanio_a_leer -= tamanio_a_leer_del_bloque;
     }
 
+    log_info(LOGGER_FILE_SYSTEM, "Valor Leido: %s", buffer);
     escribir_valor_en_memoria(buffer, direccion, pid);
 
-    log_info(LOGGER_FILE_SYSTEM, "Valor Leido: %s", buffer);
     munmap(archivo_de_bloques, CANTIDAD_BLOQUES * TAMANIO_BLOQUES);
 }

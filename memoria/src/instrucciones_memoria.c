@@ -158,7 +158,7 @@ void escribir_valor_direccion_fisica(char *valor, long direccion_fisica, int pid
     sleep(CONFIG->retardo_memoria / 500);
     void *direccion = (void *)direccion_fisica;
     int tamanio = strlen(valor) + 1;
-    memcpy(direccion, valor, sizeof((tamanio) * (sizeof(char *))));
+    memcpy(direccion, valor, tamanio * sizeof(char *));
     log_info(LOGGER_MEMORIA, "PID: <%d> - Acción: <ESCRIBIR> - Dirección física: <%p> - Tamaño: <%d> - Origen: <%s>", pid, direccion, tamanio, origen);
 }
 

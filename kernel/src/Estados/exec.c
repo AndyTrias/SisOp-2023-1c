@@ -7,7 +7,7 @@ void reemplazar_proceso(t_pcb *nuevo_pcb)
 }
 
 void reemplazar_ctx(t_ctx *nuevo_ctx)
-{  
+{
     list_destroy_and_destroy_elements(EJECUTANDO->contexto->tabla_segmentos, (void *)liberar_segmento);
     liberar_contexto(EJECUTANDO->contexto);
     EJECUTANDO->contexto = nuevo_ctx;
@@ -24,7 +24,6 @@ void enviar_a_cpu()
     eliminar_paquete(paquete);
 
     log_info(LOGGER_KERNEL, "Se envia el proceso PID: <%d> al CPU", EJECUTANDO->contexto->PID);
-
 
     if (strcmp(ALGORITMO_PLANIFICACION, "HRRN") == 0)
     {
@@ -143,11 +142,10 @@ void recibir_de_cpu(int conexion_cpu)
     log_info(LOGGER_KERNEL, "Se recibe de CPU el proceso PID: <%d>", ctx->PID);
     reemplazar_ctx(ctx);
 
-
     definir_accion(cod_op, EJECUTANDO);
 
     vaciar_parametros_desalojo(EJECUTANDO->contexto->motivos_desalojo);
-    
+
     enviar_a_cpu();
 }
 void estimado_prox_rafaga()
