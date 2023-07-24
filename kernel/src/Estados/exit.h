@@ -12,6 +12,8 @@
 
     void terminar_proceso(t_pcb *);
     void liberar_recursos(t_pcb * );
+    void finalizar_consola(int socket);
+    void liberar_segmentos_de_memoria(t_pcb*);
 
 
 

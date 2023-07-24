@@ -125,7 +125,9 @@ void f_close(t_pcb *proceso, char *nombre_archivo)
     else
     {
       // hay alguien mas
-      list_remove(proceso->archivos_abiertos, busqueda_tabla_proceso(proceso, nombre_archivo)); // elimina el archivos de la lista del proceso
+      list_remove(proceso->archivos_abiertos, busqueda_tabla_proceso(proceso, nombre_archivo));
+      list_remove_and_destroy_element(proceso->archivos_abiertos, busqueda_tabla_proceso(proceso, nombre_archivo), (void*) liberar_archivo);
+      // elimina el archivos de la lista del proceso
 
       t_pcb *proceso_a_desbloquear = list_remove(entrada_tabla->lista_de_procesos_bloqueados, 0); // Saca el proceso de la lista de bloqueados
       // cambiar pid, cede el control sobre el archivo a otro proceso y lo desbloquea
@@ -136,6 +138,11 @@ void f_close(t_pcb *proceso, char *nombre_archivo)
       log_info(LOGGER_KERNEL, "PID: %d - Cerrar Archivo: %s", proceso->contexto->PID, nombre_archivo);
     }
   }
+}
+
+void liberar_archivo(t_file *archivo)
+{
+  free(archivo);
 }
 
 void f_seek(t_pcb *proceso, char *nombre_archivo, char *inicio)

@@ -1,7 +1,8 @@
 #include "manejo_memoria.h"
 
 void crear_segmento(t_pcb *proceso)
-{ // enviar a memoria CREATE_SEGMENT con sus 2 parametros (id del segmento y tamanio)
+{ 
+    // enviar a memoria CREATE_SEGMENT con sus 2 parametros (id del segmento y tamanio)
     // se solicita la creacion del segmento
     //pthread_mutex_lock(&SOLICITUD_MEMORIA);
     t_paquete *paquete = crear_paquete(CREATE_SEGMENT);

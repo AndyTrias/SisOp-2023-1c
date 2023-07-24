@@ -4,17 +4,13 @@ void reemplazar_proceso(t_pcb *nuevo_pcb)
 {
 
     EJECUTANDO = nuevo_pcb;
-    //list_destroy(nuevo_pcb->archivos_abiertos);
-    //list_destroy(nuevo_pcb->recursos_en_uso);
-    //liberar_contexto(nuevo_pcb->contexto);
-    //free(nuevo_pcb);
 }
 
 void reemplazar_ctx(t_ctx *nuevo_ctx)
 {  
-    liberar_elementos_contexto(EJECUTANDO->contexto);
+    list_destroy_and_destroy_elements(EJECUTANDO->contexto->tabla_segmentos, (void *)liberar_segmento);
+    liberar_contexto(EJECUTANDO->contexto);
     EJECUTANDO->contexto = nuevo_ctx;
-    free(nuevo_ctx);
 }
 
 void enviar_a_cpu()

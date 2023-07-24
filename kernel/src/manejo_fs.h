@@ -27,6 +27,8 @@
     void f_write(t_pcb *, char*);
     void desbloquear_de_fs(char* );
     t_pcb * buscar_bloqueados_fs(int );
+    void liberar_archivo(t_file *archivo);
+
 
 
     
