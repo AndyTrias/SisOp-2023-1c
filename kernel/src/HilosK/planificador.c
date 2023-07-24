@@ -22,8 +22,6 @@ void *planificador_largo()
         admitir_proceso();
 
         sem_post(&CORTO_PLAZO);
-
-        log_info(LOGGER_KERNEL, "Se mando la señal al planificador de corto plazo");
     }
 }
 
@@ -55,7 +53,7 @@ void *comunicacion_fs()
             memcpy(&tamanio_string, buffer + desplazamiento, sizeof(int));
             desplazamiento += sizeof(int);
 
-            char *nombre_archivo = string_new();
+            char *nombre_archivo = malloc(tamanio_string);
             memcpy(nombre_archivo, buffer + desplazamiento, tamanio_string);
             desplazamiento += tamanio_string;
 
