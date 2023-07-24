@@ -41,6 +41,7 @@ void definir_accion(int cod_op, t_pcb *proceso)
 {
     switch (cod_op)
     {
+
     case YIELD:
         agregar_a_lista_ready(proceso);
         log_info(LOGGER_KERNEL, "Yield PID: <%d>", proceso->contexto->PID);

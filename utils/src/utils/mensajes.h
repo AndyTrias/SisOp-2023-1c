@@ -13,20 +13,20 @@
 
 
 // make necessary includes
-typedef enum
-{
-    INSTRUCCIONES, // Se utiliza de consola a kernel
-    MENSAJE, // Se utiliza de kernel a consola
-    CONTEXTO, // Se utiliza de kernel a cpu
-    COMPACTAR,
-    CREAR_TABLA_SEGMENTOS,
-    TERMINAR,
-    NO_EXISTE, //Se utiliza para la comunicacion entre kernel y fs
-    EXISTE,    //Se utiliza para la comunicacion entre kernel y fs
-    OP_TERMINADA, //Se utiliza para la comunicacion entre kernel y fs
-    F_CREATES, //Se utiliza cuando el Kernel intenta abrir un archivo que no existe entonces le dice a fs que lo cree
-    OUT_OF_MEMORY,
-} op_code;
+// typedef enum
+// {
+//     INSTRUCCIONES, // Se utiliza de consola a kernel
+//     MENSAJE, // Se utiliza de kernel a consola
+//     CONTEXTO, // Se utiliza de kernel a cpu
+//     COMPACTAR,
+//     CREAR_TABLA_SEGMENTOS,
+//     TERMINAR,
+//     NO_EXISTE, //Se utiliza para la comunicacion entre kernel y fs
+//     EXISTE,    //Se utiliza para la comunicacion entre kernel y fs
+//     OP_TERMINADA, //Se utiliza para la comunicacion entre kernel y fs
+//     F_CREATES, //Se utiliza cuando el Kernel intenta abrir un archivo que no existe entonces le dice a fs que lo cree
+//     OUT_OF_MEMORY,
+// } op_code;
 
 
 typedef struct
@@ -37,7 +37,7 @@ typedef struct
 
 typedef struct
 {
-    op_code codigo_operacion;
+    t_operacion codigo_operacion;
     t_buffer *buffer;
 } t_paquete;
 

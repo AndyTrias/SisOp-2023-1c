@@ -83,7 +83,7 @@ int tamanio_registro(const char *nombre)
 		return 0;
 }
 
-op_code execute(t_instruccion *instruccion_actual, t_ctx *ctx)
+t_operacion execute(t_instruccion *instruccion_actual, t_ctx *ctx)
 {
 	switch (instruccion_actual->operacion)
 	{

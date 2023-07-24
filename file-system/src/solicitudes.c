@@ -205,7 +205,7 @@ void f_read(char *direccion, int posicion_archivo, int tamanio_a_leer, int pid)
     }
 
     log_info(LOGGER_FILE_SYSTEM, "Valor Leido: %s", buffer);
-    escribir_valor_en_memoria(buffer, direccion, pid);
+    escribir_valor_en_memoria(direccion, buffer, pid);
 
     munmap(archivo_de_bloques, CANTIDAD_BLOQUES * TAMANIO_BLOQUES);
 }
