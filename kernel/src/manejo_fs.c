@@ -63,19 +63,12 @@ void existe_archivo()
 void solicitar_fs(int cod_op){
   pthread_mutex_lock(&SOLICITUD_FS);
   t_paquete *paquete = crear_paquete(cod_op);
+  agregar_a_paquete_dato_serializado(paquete, &EJECUTANDO->contexto->PID, sizeof(int));
   serializar_motivos_desalojo(EJECUTANDO->contexto->motivos_desalojo, paquete);
   enviar_paquete(paquete, SOCKET_FILESYSTEM);
   eliminar_paquete(paquete);
 }
-void solicitar_fs_r_w(int cod_op, int puntero){
-  
-  pthread_mutex_lock(&SOLICITUD_FS);
-  t_paquete *paquete = crear_paquete(cod_op);
-  agregar_parametro_desalojo(EJECUTANDO->contexto, string_itoa(puntero));
-  serializar_motivos_desalojo(EJECUTANDO->contexto->motivos_desalojo, paquete);
-  enviar_paquete(paquete, SOCKET_FILESYSTEM);
-  eliminar_paquete(paquete);
-}
+
 
 int f_open(t_pcb *proceso, char *nombre_archivo)
 {
@@ -218,7 +211,9 @@ void f_read(t_pcb *proceso, char *nombre_archivo)
   {
     int puntero = obtener_puntero(proceso, nombre_archivo);
 
-    solicitar_fs_r_w(F_READ,puntero);
+    agregar_parametro_desalojo(proceso->contexto, string_itoa(puntero));
+    solicitar_fs(F_READ);
+
     agregar_a_lista_blockfs(proceso);
 
     int dir_fisica = atoi(proceso->contexto->motivos_desalojo->parametros[1]);
@@ -245,7 +240,8 @@ void f_write(t_pcb *proceso, char *nombre_archivo)
     int puntero = obtener_puntero(proceso, nombre_archivo);
 
     
-    solicitar_fs_r_w(F_WRITE,puntero);
+    agregar_parametro_desalojo(proceso->contexto, string_itoa(puntero));
+    solicitar_fs(F_WRITE);
 
     agregar_a_lista_blockfs(proceso);
 
