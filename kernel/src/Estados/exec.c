@@ -2,12 +2,19 @@
 
 void reemplazar_proceso(t_pcb *nuevo_pcb)
 {
+
     EJECUTANDO = nuevo_pcb;
+    //list_destroy(nuevo_pcb->archivos_abiertos);
+    //list_destroy(nuevo_pcb->recursos_en_uso);
+    //liberar_contexto(nuevo_pcb->contexto);
+    //free(nuevo_pcb);
 }
 
 void reemplazar_ctx(t_ctx *nuevo_ctx)
-{
+{  
+    liberar_elementos_contexto(EJECUTANDO->contexto);
     EJECUTANDO->contexto = nuevo_ctx;
+    free(nuevo_ctx);
 }
 
 void enviar_a_cpu()
@@ -21,6 +28,7 @@ void enviar_a_cpu()
     eliminar_paquete(paquete);
 
     log_info(LOGGER_KERNEL, "Se envia el proceso PID: <%d> al CPU", EJECUTANDO->contexto->PID);
+
 
     if (strcmp(ALGORITMO_PLANIFICACION, "HRRN") == 0)
     {
@@ -134,10 +142,11 @@ void recibir_de_cpu(int conexion_cpu)
     *desplazamiento = 0;
 
     t_ctx *ctx = deserializar_contexto(buffer, desplazamiento);
+    free(buffer);
     free(desplazamiento);
+    log_info(LOGGER_KERNEL, "Se recibe de CPU el proceso PID: <%d>", ctx->PID);
     reemplazar_ctx(ctx);
 
-    log_info(LOGGER_KERNEL, "Se recibe de CPU el proceso PID: <%d>", ctx->PID);
 
     definir_accion(cod_op, EJECUTANDO);
 

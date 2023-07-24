@@ -93,7 +93,7 @@ int* convertirAArrayInt(char** strings) {
     for (int i = 0; i < size; i++) {
         result[i] = atoi(strings[i]);
     }
-
+    //free(strings);
     return result;
 }
 

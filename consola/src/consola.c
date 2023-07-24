@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
   log_info(logger_consola, "Paquete enviado");
 
   finalizar_consola(conexion_kernel);
-
+  fclose(f);
   return 0;
 }
 

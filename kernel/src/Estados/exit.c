@@ -24,15 +24,15 @@ void terminar_proceso(t_pcb *proceso)
     enviar_paquete(paquete, SOCKET_MEMORIA);
     eliminar_paquete(paquete);
     recibir_operacion(SOCKET_MEMORIA);
-    recibir_mensaje(SOCKET_MEMORIA);
-
+    char *buffer = recibir_mensaje(SOCKET_MEMORIA);
+    free(buffer);
     pthread_mutex_unlock(&SOLICITUD_MEMORIA);
 
     // Revisar si tiene un recurso asignado y eliminarlo
     liberar_recursos(proceso);
 
     // destruir proceso
-    list_destroy_and_destroy_elements(proceso->contexto->tabla_segmentos, (void*) liberar_segmento);
+    // list_destroy_and_destroy_elements(proceso->contexto->tabla_segmentos, (void*) liberar_segmento);
     liberar_contexto(proceso->contexto);
 
     
@@ -42,10 +42,11 @@ void terminar_proceso(t_pcb *proceso)
 
     // liberar_lista_tabla_segmentos(proceso->contexto->tabla_segmentos);
 
-    // free(proceso);
+    
     
     sem_post(&GRADO_MULTIPROGRAMACION);
     reemplazar_exec_por_nuevo();
+    //free(proceso);
 }
 
 // void liberar_lista_tabla_segmentos(t_list *lista_tabla_segmentos)
