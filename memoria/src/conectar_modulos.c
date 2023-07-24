@@ -191,6 +191,8 @@ void recibir_fs(int *socket_modulo)
         {
 
         case F_READ:
+            int PID = -1;
+            t_parametros_variables *parametros = NULL;
             recibir_acceso(&parametros, &PID, *socket_modulo);
             escribir_valor_direccion_fisica(parametros->parametros[0], strtol(parametros->parametros[1], NULL, 10), PID, "FS");
             enviar_mensaje("OK", *socket_modulo);
@@ -199,8 +201,7 @@ void recibir_fs(int *socket_modulo)
             break;
 
         case F_WRITE:
-            PID = recibir_int(*socket_modulo);
-            parametros = recibir_parametros_variables(*socket_modulo);
+            recibir_acceso(&parametros, &PID, *socket_modulo);
             char *valor_leido = leer_valor_direccion_fisica(strtol(parametros->parametros[0], NULL, 10), atoi(parametros->parametros[1]), PID, "FS");
             enviar_mensaje(valor_leido, *socket_modulo);
             free(valor_leido);
