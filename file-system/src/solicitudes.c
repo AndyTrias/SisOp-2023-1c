@@ -5,8 +5,9 @@ void *archivo_de_bloques;
 int posicion_archivo;
 char *memoria;
 
-void atender_solicitudes(int cod_op, t_parametros_variables *parametros_instruccion)
+void atender_solicitudes(int cod_op, t_parametros_variables *parametros_instruccion, int pid)
 {
+
 
     nombre_archivo = parametros_instruccion->parametros[0];
 
@@ -83,10 +84,10 @@ void atender_solicitudes(int cod_op, t_parametros_variables *parametros_instrucc
         int tamaño = atoi(parametros_instruccion->parametros[2]);
 
         if (cod_op == F_WRITE)
-            f_write(memoria, posicion, tamaño);
+            f_write(memoria, posicion, tamaño, pid);
 
         else
-            f_read(memoria, posicion, tamaño);
+            f_read(memoria, posicion, tamaño, pid);
 
         enviar_paquete_op_terminada(nombre_archivo);
         break;
@@ -138,10 +139,10 @@ void achicar_archivo(void *archivo_de_bloques, int cantidad_bloques_a_liberar, i
     }
 }
 
-void f_write(char *direccion, int posicion_archivo, int tamanio_a_escribir)
+void f_write(char *direccion, int posicion_archivo, int tamanio_a_escribir, int pid)
 {
     char* tamanio_a_escribir_string = string_itoa(tamanio_a_escribir);
-    char* valor_leido = leer_direccion_de_memoria(direccion, tamanio_a_escribir_string);
+    char* valor_leido = leer_direccion_de_memoria(direccion, tamanio_a_escribir_string, pid);
     free(tamanio_a_escribir_string);
     log_info(LOGGER_FILE_SYSTEM, "Valor leido: %s", valor_leido);
 
@@ -178,7 +179,7 @@ void f_write(char *direccion, int posicion_archivo, int tamanio_a_escribir)
 }
 
 
-void f_read(char *direccion, int posicion_archivo, int tamanio_a_leer)
+void f_read(char *direccion, int posicion_archivo, int tamanio_a_leer, int pid)
 {
     char *buffer = string_new();
 
@@ -203,7 +204,7 @@ void f_read(char *direccion, int posicion_archivo, int tamanio_a_leer)
         tamanio_a_leer -= tamanio_a_leer_del_bloque;
     }
 
-    escribir_valor_en_memoria(buffer, direccion);
+    escribir_valor_en_memoria(buffer, direccion, pid);
 
     log_info(LOGGER_FILE_SYSTEM, "Valor Leido: %s", buffer);
     munmap(archivo_de_bloques, CANTIDAD_BLOQUES * TAMANIO_BLOQUES);

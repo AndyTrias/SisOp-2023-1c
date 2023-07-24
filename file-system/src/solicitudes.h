@@ -16,11 +16,11 @@
    #include <conexiones_modulos.h>
 
 
-   void atender_solicitudes(int, t_parametros_variables *);
+   void atender_solicitudes(int, t_parametros_variables *, int pid);
    void agrandar_archivo(void* archivo_de_bloques, int necesarios, int actuales, bool nuevo_archivo);
    void achicar_archivo(void* archivo_de_bloques, int necesarios, int actuales, bool borrar_todo);
-   void f_write(char*, int, int);
-   void f_read(char*, int, int);
+   void f_write(char*, int, int, int);
+   void f_read(char*, int, int, int);
 
      
 #endif

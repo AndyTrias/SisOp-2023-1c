@@ -20,19 +20,23 @@ void enviado_de_kernel(int *socket_kernel)
             return;
         }
 
-        t_parametros_variables *parametros_instruccion = recibir_paquete_kernel(*socket_kernel);
-        atender_solicitudes(cod_op, parametros_instruccion);
+        int pid;
+        t_parametros_variables *parametros_instruccion = recibir_paquete_kernel(*socket_kernel, &pid);
+        atender_solicitudes(cod_op, parametros_instruccion, pid);
         liberar_parametros_desalojo(parametros_instruccion);
     }
 }
 
-t_parametros_variables *recibir_paquete_kernel(int socket_kernel)
+t_parametros_variables *recibir_paquete_kernel(int socket_kernel, int* pid)
 {
     int size;
     void *buffer = recibir_buffer(&size, socket_kernel);
 
     int *desplazamiento = malloc(sizeof(int));
     *desplazamiento = 0;
+
+    memcpy(pid, buffer + *desplazamiento, sizeof(int));
+    *desplazamiento += sizeof(int);
 
     t_parametros_variables *parametros = deserealizar_motivos_desalojo(buffer, desplazamiento);
 
@@ -42,13 +46,14 @@ t_parametros_variables *recibir_paquete_kernel(int socket_kernel)
     return parametros;
 }
 
-char* leer_direccion_de_memoria(char *direccion_fisica, char* tamanio)
+char* leer_direccion_de_memoria(char *direccion_fisica, char* tamanio, int pid)
 {
     t_parametros_variables *parametros = malloc(sizeof(t_parametros_variables));
     agregar_parametro_variable(parametros, direccion_fisica);
     agregar_parametro_variable(parametros, tamanio);
 
     t_paquete *paquete = crear_paquete(F_WRITE);
+    agregar_a_paquete_dato_serializado(paquete, &pid, sizeof(int));
     serializar_motivos_desalojo(parametros, paquete);
     enviar_paquete(paquete, SOCKET_MEMORIA);
 
@@ -60,13 +65,14 @@ char* leer_direccion_de_memoria(char *direccion_fisica, char* tamanio)
     return recibir_mensaje(SOCKET_MEMORIA);
 }
 
-void escribir_valor_en_memoria(char *direccion_fisica, char *contenido)
+void escribir_valor_en_memoria(char *direccion_fisica, char *contenido, int pid)
 {
     t_parametros_variables *parametros = malloc(sizeof(t_parametros_variables));
     agregar_parametro_variable(parametros, contenido);
     agregar_parametro_variable(parametros, direccion_fisica);
 
     t_paquete *paquete = crear_paquete(F_READ);
+    agregar_a_paquete_dato_serializado(paquete, &pid, sizeof(int));
     serializar_motivos_desalojo(parametros, paquete);
     enviar_paquete(paquete, SOCKET_MEMORIA);
 
