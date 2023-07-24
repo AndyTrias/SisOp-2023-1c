@@ -4,7 +4,8 @@
 //     log_info(LOGGER_MEMORIA, "Hueco: <%p> - TAMAÑO: <%d> - LIBRE: <%d>", hueco->base, hueco->tamanio, hueco->libre);
 // }
 
-void mostrar_segmento(t_segmento* segmento){
+void mostrar_segmento(t_segmento *segmento)
+{
     log_info(LOGGER_MEMORIA, "Segmento: <%p> - TAMAÑO: <%d>", segmento->base, segmento->tamanio);
 }
 
@@ -19,8 +20,6 @@ t_tabla_segmentos -> int pid | t_list* t_segmento
 t_segmento -> void* base | int tamanio | int id
 
 */
-
-
 
 // }
 
@@ -89,7 +88,7 @@ void eliminar_segmento(t_list *tabla_segmentos, int id_segmento, int PID)
 {
     t_segmento *segmento = list_get(tabla_segmentos, id_segmento);
     if (PID != -1)
-    log_info(LOGGER_MEMORIA, "PID: <%d> - Eliminar Segmento: <%d> - Base: <%p> - TAMAÑO: <%d>", PID, id_segmento, segmento->base, segmento->tamanio);
+        log_info(LOGGER_MEMORIA, "PID: <%d> - Eliminar Segmento: <%d> - Base: <%p> - TAMAÑO: <%d>", PID, id_segmento, segmento->base, segmento->tamanio);
 
     // buscar hueco que tenga la misma base que el segmento y marcarlo como libre
     int index_hueco = 0;
@@ -125,37 +124,48 @@ void finalizar_proceso(t_list *tabla_segmentos, int PID)
         t_segmento *segmento = list_get(tabla_segmentos, i);
         if (segmento->base != NULL)
         {
-            eliminar_segmento(tabla_segmentos, i, -1);
-        } else {
-            list_remove_and_destroy_element(tabla_segmentos, i, (void *)liberar_segmentoo);
+            // buscar hueco que tenga la misma base que el segmento y marcarlo como libre
+            int index_hueco = 0;
+            for (int i = 0; i < list_size(LISTA_HUECOS); i++)
+            {
+                t_hueco *hueco = list_get(LISTA_HUECOS, i);
+                if (hueco->base == segmento->base)
+                {
+                    hueco->libre = true;
+                    index_hueco = i;
+                    break;
+                }
+            }
+            comprobar_consolidacion_huecos_aledanios(index_hueco);
         }
+        list_remove_and_destroy_element(tabla_segmentos, i, (void *)liberar_segmentoo);
     }
 
-    list_remove(TABLA_SEGMENTOS_GLOBAL, PID);
+    //list_remove(TABLA_SEGMENTOS_GLOBAL, PID);
 }
 
-char *leer_valor_direccion_fisica(long direccion_fisica, int tamanio, int pid, char* origen)
+char *leer_valor_direccion_fisica(long direccion_fisica, int tamanio, int pid, char *origen)
 {
     sleep(CONFIG->retardo_memoria / 500);
-    char *valor = malloc(tamanio * sizeof(char*));
-    memcpy(valor, (void *)direccion_fisica, tamanio * sizeof(char*));
+    char *valor = malloc(tamanio * sizeof(char *));
+    memcpy(valor, (void *)direccion_fisica, tamanio * sizeof(char *));
     log_info(LOGGER_MEMORIA, "PID: <%d> - Acción: <LEER> - Dirección física: <%p> - Tamaño: <%d> - Origen: <%s>", pid, (void *)direccion_fisica, tamanio, origen);
     return valor;
 }
 
-void escribir_valor_direccion_fisica(char *valor, long direccion_fisica, int pid, char* origen)
+void escribir_valor_direccion_fisica(char *valor, long direccion_fisica, int pid, char *origen)
 {
     sleep(CONFIG->retardo_memoria / 500);
     void *direccion = (void *)direccion_fisica;
     int tamanio = strlen(valor) + 1;
-    memcpy(direccion, valor, sizeof((tamanio) * (sizeof(char*))));
+    memcpy(direccion, valor, sizeof((tamanio) * (sizeof(char *))));
     log_info(LOGGER_MEMORIA, "PID: <%d> - Acción: <ESCRIBIR> - Dirección física: <%p> - Tamaño: <%d> - Origen: <%s>", pid, direccion, tamanio, origen);
 }
 
 void compactar()
 {
     log_info(LOGGER_MEMORIA, "Se solicita compactacion");
-    usleep(CONFIG->retardo_compactacion * 250);
+    // usleep(CONFIG->retardo_compactacion * 250);
     int nuevo_tamanio = 0;
     void *base_del_primer_hueco = NULL;
 

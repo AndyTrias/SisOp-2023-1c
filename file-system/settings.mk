@@ -10,7 +10,7 @@ CDEBUG=-g -Wall -DDEBUG
 CRELEASE=-O3 -Wall -DNDEBUG
 
 # Arguments when executing with start, memcheck or helgrind
-ARGS=./config/file-systemBase.config
+ARGS=./config/file-systemFs.config
 
 # Valgrind flags
 MEMCHECK_FLAGS=--track-origins=yes --leak-check=full --show-leak-kinds=all --log-file="memcheck.log"
