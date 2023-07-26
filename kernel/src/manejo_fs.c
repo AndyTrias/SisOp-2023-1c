@@ -93,7 +93,7 @@ int f_open(t_pcb *proceso, char *nombre_archivo)
 
     agregar_archivo_abierto(proceso->archivos_abiertos, nombre_archivo);
     list_add(entrada_tabla->lista_de_procesos_bloqueados, proceso);
-    log_info(LOGGER_KERNEL, "PID: %d - Bloqueado por: %s", proceso->contexto->PID, nombre_archivo);
+    log_info(LOGGER_KERNEL, "PID: <%d> - Bloqueado por: <%s>", proceso->contexto->PID, nombre_archivo);
     cambio_de_estado(proceso->contexto->PID, "Exec", "Block");
     return 1; // bloqueado
   }
@@ -106,7 +106,7 @@ void f_close(t_pcb *proceso, char *nombre_archivo)
 
   if (busqueda == -1 || entrada_tabla->PID != proceso->contexto->PID)
   {
-    log_error(LOGGER_KERNEL, "PID: %d - Error al cerrar Archivo: %s", proceso->contexto->PID, nombre_archivo);
+    log_error(LOGGER_KERNEL, "PID: <%d> - Error al cerrar Archivo: <%s>", proceso->contexto->PID, nombre_archivo);
   }
   else
   {
@@ -117,7 +117,7 @@ void f_close(t_pcb *proceso, char *nombre_archivo)
     }
     else
     {
-      log_info(LOGGER_KERNEL, "PID: %d - Cerrar Archivo: %s", proceso->contexto->PID, nombre_archivo);
+      log_info(LOGGER_KERNEL, "PID: <%d> - Cerrar Archivo: <%s>", proceso->contexto->PID, nombre_archivo);
       // hay alguien mas
       // elimina el archivos de la lista del proceso
       list_remove_and_destroy_element(proceso->archivos_abiertos, busqueda_tabla_proceso(proceso, nombre_archivo), (void*) liberar_archivo);
@@ -172,9 +172,9 @@ void f_truncate(t_pcb *proceso, char *nombre_archivo, char *tamanio_nuevo)
     // mandar a file system nombre_archivo y tamanio
     agregar_a_lista_blockfs(proceso);
     solicitar_fs(F_TRUNCATE);
-    log_info(LOGGER_KERNEL, "PID: %d - Truncar Archivo: %s - Tamaño: %d", proceso->contexto->PID, nombre_archivo, tamanio);
+    log_info(LOGGER_KERNEL, "PID: <%d> - Truncar Archivo: <%s> - Tamaño: <%d>", proceso->contexto->PID, nombre_archivo, tamanio);
 
-    log_info(LOGGER_KERNEL, "PID: %d - Bloqueado por: %s", proceso->contexto->PID, nombre_archivo);
+    log_info(LOGGER_KERNEL, "PID: <%d> - Bloqueado por: <%s>", proceso->contexto->PID, nombre_archivo);
     cambio_de_estado(proceso->contexto->PID, "Exec", "Block");
   }
 }
@@ -217,8 +217,8 @@ void f_read(t_pcb *proceso, char *nombre_archivo)
 
     int dir_fisica = atoi(proceso->contexto->motivos_desalojo->parametros[1]);
     int cant_bytes = atoi(proceso->contexto->motivos_desalojo->parametros[2]);
-    log_info(LOGGER_KERNEL, "PID: %d - Leer Archivo: %s - Puntero %d - Dirección Memoria %d - Tamaño %d", proceso->contexto->PID, nombre_archivo, puntero, dir_fisica, cant_bytes);
-    log_info(LOGGER_KERNEL, "PID: %d - Bloqueado por: %s", proceso->contexto->PID, nombre_archivo);
+    log_info(LOGGER_KERNEL, "PID: <%d> - Leer Archivo: <%s> - Puntero <%d> - Dirección Memoria <%d> - Tamaño <%d>", proceso->contexto->PID, nombre_archivo, puntero, dir_fisica, cant_bytes);
+    log_info(LOGGER_KERNEL, "PID: <%d> - Bloqueado por: <%s>", proceso->contexto->PID, nombre_archivo);
 
     cambio_de_estado(proceso->contexto->PID, "Exec", "Block");
   }
@@ -246,8 +246,8 @@ void f_write(t_pcb *proceso, char *nombre_archivo)
 
     int dir_fisica = atoi(proceso->contexto->motivos_desalojo->parametros[1]);
     int cant_bytes = atoi(proceso->contexto->motivos_desalojo->parametros[2]);
-    log_info(LOGGER_KERNEL, "PID: %d - Escribir Archivo: %s - Puntero %d - Dirección Memoria %d - Tamaño %d", proceso->contexto->PID, nombre_archivo, puntero, dir_fisica, cant_bytes);
-    log_info(LOGGER_KERNEL, "PID: %d - Bloqueado por: %s", proceso->contexto->PID, nombre_archivo);
+    log_info(LOGGER_KERNEL, "PID: <%d> - Escribir Archivo: <%s> - Puntero <%d> - Dirección Memoria <%d> - Tamaño <%d>", proceso->contexto->PID, nombre_archivo, puntero, dir_fisica, cant_bytes);
+    log_info(LOGGER_KERNEL, "PID: <%d> - Bloqueado por: <%s>", proceso->contexto->PID, nombre_archivo);
     cambio_de_estado(proceso->contexto->PID, "Exec", "Block");
   }
 }
