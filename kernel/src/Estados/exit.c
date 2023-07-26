@@ -32,6 +32,7 @@ void terminar_proceso(t_pcb *proceso)
     free(proceso);
 
     sem_post(&GRADO_MULTIPROGRAMACION);
+    EJECUTANDO = NULL;
     reemplazar_exec_por_nuevo();
 }
 
