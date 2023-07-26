@@ -170,8 +170,8 @@ void f_truncate(t_pcb *proceso, char *nombre_archivo, char *tamanio_nuevo)
   {
     int tamanio = atoi(tamanio_nuevo);
     // mandar a file system nombre_archivo y tamanio
-    solicitar_fs(F_TRUNCATE);
     agregar_a_lista_blockfs(proceso);
+    solicitar_fs(F_TRUNCATE);
     log_info(LOGGER_KERNEL, "PID: %d - Truncar Archivo: %s - Tamaño: %d", proceso->contexto->PID, nombre_archivo, tamanio);
 
     log_info(LOGGER_KERNEL, "PID: %d - Bloqueado por: %s", proceso->contexto->PID, nombre_archivo);
@@ -211,9 +211,9 @@ void f_read(t_pcb *proceso, char *nombre_archivo)
     int puntero = obtener_puntero(proceso, nombre_archivo);
 
     agregar_parametro_desalojo(proceso->contexto, string_itoa(puntero));
+    agregar_a_lista_blockfs(proceso);
     solicitar_fs(F_READ);
 
-    agregar_a_lista_blockfs(proceso);
 
     int dir_fisica = atoi(proceso->contexto->motivos_desalojo->parametros[1]);
     int cant_bytes = atoi(proceso->contexto->motivos_desalojo->parametros[2]);
@@ -240,9 +240,9 @@ void f_write(t_pcb *proceso, char *nombre_archivo)
 
     
     agregar_parametro_desalojo(proceso->contexto, string_itoa(puntero));
+    agregar_a_lista_blockfs(proceso);
     solicitar_fs(F_WRITE);
 
-    agregar_a_lista_blockfs(proceso);
 
     int dir_fisica = atoi(proceso->contexto->motivos_desalojo->parametros[1]);
     int cant_bytes = atoi(proceso->contexto->motivos_desalojo->parametros[2]);
