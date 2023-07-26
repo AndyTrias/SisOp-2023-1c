@@ -25,7 +25,7 @@ void wait(t_pcb *proceso, char *nombre_recurso)
     }
     else
     {
-        log_info(LOGGER_KERNEL, "Se realiza Wait de recurso inexistente: < %s > ", proceso->contexto->motivos_desalojo->parametros[0]);
+        log_info(LOGGER_KERNEL, "PID: <%d> realiza Wait de recurso inexistente: < %s > ", proceso->contexto->PID, proceso->contexto->motivos_desalojo->parametros[0]);
         log_info(LOGGER_KERNEL, "Finaliza el proceso PID: <%d> - Motivo: < INVALID_RESOURCE >", proceso->contexto->PID);
         cambio_de_estado(proceso->contexto->PID, "Exec", "Exit");
         terminar_proceso(proceso);
