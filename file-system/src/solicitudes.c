@@ -176,15 +176,17 @@ void f_write(char *direccion, int posicion_archivo, int tamanio_a_escribir, int 
 
 void f_read(char *direccion, int posicion_archivo, int tamanio_a_leer, int pid)
 {
-    char *buffer = string_new();
+    void *buffer = malloc(tamanio_a_leer);
 
-    log_info(LOGGER_FILE_SYSTEM, "Leer Archivo: %s - Puntero: %d - Memoria: %p - Tamaño: %d", nombre_archivo, posicion_archivo, (void*) direccion, tamanio_a_leer);
+    log_info(LOGGER_FILE_SYSTEM, "Leer Archivo: %s - Puntero: %d - Memoria: %p - Tamaño: %d", nombre_archivo, posicion_archivo, (void *)direccion, tamanio_a_leer);
 
     if (tamanio_a_leer + posicion_archivo > 64)
     {
         // Se carga el puntero indirecto en la memoria
         cargar_puntero_indirecto(nombre_archivo);
     }
+
+    int tamanio_total = tamanio_a_leer;
 
     while (tamanio_a_leer > 0)
     {
@@ -193,14 +195,22 @@ void f_read(char *direccion, int posicion_archivo, int tamanio_a_leer, int pid)
         int offset = posicion_archivo % TAMANIO_BLOQUES;
 
         void *leido = leer_bloque(nombre_archivo, bloque_archivo, offset, tamanio_a_leer_del_bloque);
-        string_append(&buffer, (char *)leido);
+        memcpy(buffer + (tamanio_total - tamanio_a_leer), leido, tamanio_a_leer_del_bloque);
+        free(leido);
 
+        
         posicion_archivo += tamanio_a_leer_del_bloque;
         tamanio_a_leer -= tamanio_a_leer_del_bloque;
     }
 
-    log_info(LOGGER_FILE_SYSTEM, "Valor Leido de File System: %s", buffer);
-    escribir_valor_en_memoria(direccion, buffer, pid);
+    char *buffer_como_char = malloc(tamanio_total + 1);
+    memcpy(buffer_como_char, buffer, tamanio_total);
+    buffer_como_char[tamanio_total] = '\0';
+
+    log_info(LOGGER_FILE_SYSTEM, "Valor Leido de File System: %s", buffer_como_char);
+    escribir_valor_en_memoria(direccion, buffer_como_char, pid);
+    free(buffer);
+    free(buffer_como_char);
 
     munmap(archivo_de_bloques, CANTIDAD_BLOQUES * TAMANIO_BLOQUES);
 }

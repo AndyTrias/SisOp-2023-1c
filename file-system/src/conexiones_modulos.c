@@ -49,6 +49,7 @@ t_parametros_variables *recibir_paquete_kernel(int socket_kernel, int* pid)
 char* leer_direccion_de_memoria(char *direccion_fisica, char* tamanio, int pid)
 {
     t_parametros_variables *parametros = malloc(sizeof(t_parametros_variables));
+    parametros->parametros = NULL;
     agregar_parametro_variable(parametros, direccion_fisica);
     agregar_parametro_variable(parametros, tamanio);
 
@@ -68,6 +69,7 @@ char* leer_direccion_de_memoria(char *direccion_fisica, char* tamanio, int pid)
 void escribir_valor_en_memoria(char *direccion_fisica, char *contenido, int pid)
 {
     t_parametros_variables *parametros = malloc(sizeof(t_parametros_variables));
+    parametros->parametros = NULL;
     agregar_parametro_variable(parametros, contenido);
     agregar_parametro_variable(parametros, direccion_fisica);
 
@@ -84,6 +86,8 @@ void escribir_valor_en_memoria(char *direccion_fisica, char *contenido, int pid)
 
     if (strcmp(mensaje, "OK"))
         log_error(LOGGER_FILE_SYSTEM, "No se pudo escribir la direccion de memoria");
+
+    free(mensaje);
 }
 
 
