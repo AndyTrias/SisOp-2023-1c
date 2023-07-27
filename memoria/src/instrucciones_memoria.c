@@ -77,7 +77,9 @@ t_paquete *crear_segmento(int id_segmento, int tamanio, t_ctx *ctx)
     ts->PID = ctx->PID;
     ts->segmentos = ctx->tabla_segmentos;
 
-    list_replace_and_destroy_element(TABLA_SEGMENTOS_GLOBAL, ctx->PID, ts, (void *)liberar_tabla_segmentos);
+    int index = obtener_index_tabla_segmentos(ctx->PID);
+
+    list_replace_and_destroy_element(TABLA_SEGMENTOS_GLOBAL, index, ts, (void *)liberar_tabla_segmentos);
     t_paquete *paquete = crear_paquete(CREATE_SEGMENT);
     agregar_a_paquete_dato_serializado(paquete, &(segmento->base), sizeof(segmento->base));
     log_info(LOGGER_MEMORIA, "PID: <%d> - Crear Segmento: <%d> - Base: <%p> - TAMAÑO: <%d>", ctx->PID, id_segmento, hueco->base, tamanio);
@@ -110,7 +112,10 @@ void eliminar_segmento(t_list *tabla_segmentos, int id_segmento, int PID)
     t_tabla_segmentos *ts = malloc(sizeof(t_tabla_segmentos));
     ts->PID = PID;
     ts->segmentos = tabla_segmentos;
-    list_replace_and_destroy_element(TABLA_SEGMENTOS_GLOBAL, PID, ts, (void *)liberar_tabla_segmentos);
+
+    int index = obtener_index_tabla_segmentos(PID);
+
+    list_replace_and_destroy_element(TABLA_SEGMENTOS_GLOBAL, index, ts, (void *)liberar_tabla_segmentos);
 }
 
 // t_list -> [t_segmento, t_segmento, t_segmento, ..., t_segmento]
@@ -139,9 +144,16 @@ void finalizar_proceso(t_list *tabla_segmentos, int PID)
             comprobar_consolidacion_huecos_aledanios(index_hueco);
         }
         list_remove_and_destroy_element(tabla_segmentos, i, (void *)liberar_segmentoo);
+        i--;
     }
 
-    //list_remove(TABLA_SEGMENTOS_GLOBAL, PID);
+    for (int i = 0; i < TABLA_SEGMENTOS_GLOBAL->elements_count; i++){
+        t_tabla_segmentos* ts = list_get(TABLA_SEGMENTOS_GLOBAL, i);
+        if (ts->PID == PID){
+            list_remove_and_destroy_element(TABLA_SEGMENTOS_GLOBAL, i, (void *)liberar_tabla_segmentos);
+            break;
+        }
+    }
 }
 
 char *leer_valor_direccion_fisica(long direccion_fisica, int tamanio, int pid, char *origen)
@@ -155,10 +167,11 @@ char *leer_valor_direccion_fisica(long direccion_fisica, int tamanio, int pid, c
 
 void escribir_valor_direccion_fisica(char *valor, long direccion_fisica, int pid, char *origen)
 {
+
     sleep(CONFIG->retardo_memoria / 500);
     void *direccion = (void *)direccion_fisica;
     int tamanio = strlen(valor) + 1;
-    memcpy(direccion, valor, tamanio * sizeof(char *));
+    memcpy(direccion, valor, tamanio);
     log_info(LOGGER_MEMORIA, "PID: <%d> - Acción: <ESCRIBIR> - Dirección física: <%p> - Tamaño: <%d> - Origen: <%s>", pid, direccion, tamanio, origen);
 }
 

@@ -282,7 +282,7 @@ void ciclo_de_instruccion(t_ctx *ctx)
 			serializar_contexto(ctx, paquete);
 			enviar_paquete(paquete, SOCKET_KERNEL);
 			eliminar_paquete(paquete);
-			// list_destroy_and_destroy_elements(ctx->tabla_segmentos, (void*) liberar_segmento);
+			list_destroy_and_destroy_elements(ctx->tabla_segmentos, free);
 			liberar_contexto(ctx);
 			ctx = NULL;
 		}

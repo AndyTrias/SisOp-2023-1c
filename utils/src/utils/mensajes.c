@@ -130,21 +130,21 @@ void obtener_identificador(char *identificador, int socket_cliente)
 void serializar_contexto(t_ctx *ctx, t_paquete *paquete)
 {
 	// Serialio PID y PC
-	agregar_a_paquete_dato_serializado(paquete, &ctx->PID, sizeof(ctx->PID));
-	agregar_a_paquete_dato_serializado(paquete, &ctx->program_counter, sizeof(ctx->program_counter));
-	agregar_a_paquete_dato_serializado(paquete, &ctx->cant_instrucciones, sizeof(ctx->cant_instrucciones));
+	agregar_a_paquete_dato_serializado(paquete, &ctx->PID, sizeof(ctx->PID));//4
+	agregar_a_paquete_dato_serializado(paquete, &ctx->program_counter, sizeof(ctx->program_counter));//4
+	agregar_a_paquete_dato_serializado(paquete, &ctx->cant_instrucciones, sizeof(ctx->cant_instrucciones));//4
 
 	
 	// Serializo Instrucciones
-	serializar_instrucciones(ctx->instrucciones, paquete);
+	serializar_instrucciones(ctx->instrucciones, paquete);//187
 
 	// Serializo Registros
-	serializar_registros(&ctx->registros, paquete);
+	serializar_registros(&ctx->registros, paquete);//112
 	
 	// serializo moivos de desalojo
-	serializar_motivos_desalojo(ctx->motivos_desalojo, paquete);
-	// sleep(0.001);
-	serializar_tabla_segmentos(ctx->tabla_segmentos, paquete);
+	serializar_motivos_desalojo(ctx->motivos_desalojo, paquete);//4
+	//sleep(0.001);
+	serializar_tabla_segmentos(ctx->tabla_segmentos, paquete);//260
 	
 }
 

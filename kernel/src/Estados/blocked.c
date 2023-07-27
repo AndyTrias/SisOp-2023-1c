@@ -31,7 +31,6 @@ void wait(t_pcb *proceso, char *nombre_recurso)
         terminar_proceso(proceso);
     }
 }
-
 void signal(t_pcb *proceso, char *nombre_recurso)
 {
     int recurso_id = get_id_recurso(nombre_recurso);
@@ -39,7 +38,6 @@ void signal(t_pcb *proceso, char *nombre_recurso)
     {
         t_list *lista_del_recurso = list_get(LISTAS_BLOCK, recurso_id);
 
-        log_info(LOGGER_KERNEL, "PID: <%d> - Signal: <%s> - Instancias: <%d>", proceso->contexto->PID, RECURSOS[recurso_id], INSTANCIAS_RECURSOS[recurso_id]);
 
         if (list_size(lista_del_recurso) > 0)
         {
@@ -54,6 +52,7 @@ void signal(t_pcb *proceso, char *nombre_recurso)
         {
             INSTANCIAS_RECURSOS[recurso_id]++;
             list_remove_element(proceso->recursos_en_uso, RECURSOS[recurso_id]);
+            log_info(LOGGER_KERNEL, "PID: <%d> - Signal: <%s> - Instancias: <%d>", proceso->contexto->PID, RECURSOS[recurso_id], INSTANCIAS_RECURSOS[recurso_id]);
         }
     }
     else

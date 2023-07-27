@@ -128,3 +128,25 @@ void comprobar_consolidacion_huecos_aledanios(int index_hueco) {
     }
 }
 
+void mostrar_tabla_global(){
+    for (int i = 0; i < TABLA_SEGMENTOS_GLOBAL->elements_count; i++){
+        t_tabla_segmentos* ts = list_get(TABLA_SEGMENTOS_GLOBAL, i);
+        log_info(LOGGER_MEMORIA, "PID: %d", ts->PID);
+        for (int j = 0; j < ts->segmentos->elements_count; j++){
+            t_segmento* s = list_get(ts->segmentos, j);
+            log_info(LOGGER_MEMORIA, "Base: %p, Tamanio: %d, ID: %d", s->base, s->tamanio, s->id_segmento);
+        }
+    }
+}
+
+int obtener_index_tabla_segmentos(int PID){
+    int index = -1;
+    for (int i = 0; i < TABLA_SEGMENTOS_GLOBAL->elements_count; i++){
+        t_tabla_segmentos* ts = list_get(TABLA_SEGMENTOS_GLOBAL, i);
+        if (ts->PID == PID){
+            index = i;
+            break;
+        }
+    }
+    return index;
+}

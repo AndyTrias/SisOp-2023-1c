@@ -13,4 +13,5 @@
     void modificar_lista_huecos(t_hueco*, int);
     bool comprobar_compactacion(int);
     void comprobar_consolidacion_huecos_aledanios(int);
+    int obtener_index_tabla_segmentos(int);
 #endif

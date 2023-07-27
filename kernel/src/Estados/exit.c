@@ -2,6 +2,7 @@
 
 void liberar_recursos(t_pcb *proceso)
 {
+
     if (!list_is_empty(proceso->recursos_en_uso))
     {
         int i;
@@ -17,19 +18,23 @@ void liberar_recursos(t_pcb *proceso)
 
 void terminar_proceso(t_pcb *proceso)
 {
-    // Enviar a memoria que se terminó el proceso
-    liberar_segmentos_de_memoria(proceso);
-    // Enviar a consola que se terminó el proceso
-    finalizar_consola(proceso->socket_consola);
-
+    int pid = proceso->contexto->PID;
+    
     // Revisar si tiene un recurso asignado y eliminarlo
     liberar_recursos(proceso);
+
+    // Enviar a memoria que se terminó el proceso
+    liberar_segmentos_de_memoria(proceso);
+
+    // Enviar a consola que se terminó el proceso
+    finalizar_consola(proceso->socket_consola);
 
     // destruir proceso
     list_destroy_and_destroy_elements(EJECUTANDO->contexto->tabla_segmentos, (void *)liberar_segmento);
     liberar_contexto(proceso->contexto);
     list_destroy(proceso->archivos_abiertos);
     free(proceso);
+    log_info(LOGGER_KERNEL, "Finaliza el proceso <%d> - Motivo: <SUCCESS>", pid);
 
     sem_post(&GRADO_MULTIPROGRAMACION);
     EJECUTANDO = NULL;

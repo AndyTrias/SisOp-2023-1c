@@ -34,20 +34,6 @@ void conectar_modulos(int socket_servidor)
     }
 }
 
-void mostrar_tabla_segmento(t_list *tablas_segmentos)
-{
-    for (int i = 0; i < list_size(tablas_segmentos); i++)
-    {
-        t_tabla_segmentos *tabla_segmentos = list_get(tablas_segmentos, i);
-        log_info(LOGGER_MEMORIA, "PID: <%d>", tabla_segmentos->PID);
-        for (int j = 1; j < list_size(tabla_segmentos->segmentos); j++)
-        {
-            t_segmento *segmento = list_get(tabla_segmentos->segmentos, j);
-            log_info(LOGGER_MEMORIA, "Segmento: <%d> - Base: <%p> - TAMAÑO: <%d>", j, segmento->base, segmento->tamanio);
-        }
-    }
-}
-
 void recibir_kernel(int *socket_modulo)
 {
     while (1)
