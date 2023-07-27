@@ -178,7 +178,7 @@ void escribir_valor_direccion_fisica(char *valor, long direccion_fisica, int pid
 void compactar()
 {
     log_info(LOGGER_MEMORIA, "Se solicita compactacion");
-    // usleep(CONFIG->retardo_compactacion * 250);
+    usleep(CONFIG->retardo_compactacion * 250);
     int nuevo_tamanio = 0;
     void *base_del_primer_hueco = NULL;
 

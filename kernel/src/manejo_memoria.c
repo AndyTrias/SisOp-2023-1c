@@ -48,8 +48,7 @@ void crear_segmento(t_pcb *proceso)
         break;
     case OUT_OF_MEMORY:
         pthread_mutex_unlock(&SOLICITUD_MEMORIA);
-        log_info(LOGGER_KERNEL, "Finaliza el proceso <%d> - Motivo: <OUT_OF_MEMORY>", proceso->contexto->PID);
-        terminar_proceso(proceso);
+        terminar_proceso(proceso, "OUT_OF_MEMORY");
         break;
     }
 }

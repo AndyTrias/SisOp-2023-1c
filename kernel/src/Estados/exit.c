@@ -16,7 +16,7 @@ void liberar_recursos(t_pcb *proceso)
     list_destroy(proceso->recursos_en_uso);
 }
 
-void terminar_proceso(t_pcb *proceso)
+void terminar_proceso(t_pcb *proceso, char* motivo)
 {
     int pid = proceso->contexto->PID;
     
@@ -34,7 +34,7 @@ void terminar_proceso(t_pcb *proceso)
     liberar_contexto(proceso->contexto);
     list_destroy(proceso->archivos_abiertos);
     free(proceso);
-    log_info(LOGGER_KERNEL, "Finaliza el proceso <%d> - Motivo: <SUCCESS>", pid);
+    log_info(LOGGER_KERNEL, "Finaliza el proceso <%d> - Motivo: <%s>", pid, motivo);
 
     sem_post(&GRADO_MULTIPROGRAMACION);
     EJECUTANDO = NULL;

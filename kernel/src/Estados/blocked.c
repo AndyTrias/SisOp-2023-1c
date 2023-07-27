@@ -20,15 +20,14 @@ void wait(t_pcb *proceso, char *nombre_recurso)
             // sem_wait(SEMAFOROS_RECURSOS[recurso_id]);
             list_add(proceso->recursos_en_uso, RECURSOS[recurso_id]);
             INSTANCIAS_RECURSOS[recurso_id]--;
-            log_info(LOGGER_KERNEL, "PID: <%d> - Wait: <%s> - Instancias: <%d>", proceso->contexto->PID, RECURSOS[recurso_id], INSTANCIAS_RECURSOS[recurso_id]);
         }
+        log_info(LOGGER_KERNEL, "PID: <%d> - Wait: <%s> - Instancias: <%d>", proceso->contexto->PID, RECURSOS[recurso_id], INSTANCIAS_RECURSOS[recurso_id]);
     }
     else
     {
         log_info(LOGGER_KERNEL, "PID: <%d> realiza Wait de recurso inexistente: < %s > ", proceso->contexto->PID, proceso->contexto->motivos_desalojo->parametros[0]);
-        log_info(LOGGER_KERNEL, "Finaliza el proceso PID: <%d> - Motivo: < INVALID_RESOURCE >", proceso->contexto->PID);
         cambio_de_estado(proceso->contexto->PID, "Exec", "Exit");
-        terminar_proceso(proceso);
+        terminar_proceso(proceso, "INVALID_RESOURCE");
     }
 }
 void signal(t_pcb *proceso, char *nombre_recurso)
@@ -37,7 +36,6 @@ void signal(t_pcb *proceso, char *nombre_recurso)
     if (recurso_id != -1)
     {
         t_list *lista_del_recurso = list_get(LISTAS_BLOCK, recurso_id);
-
 
         if (list_size(lista_del_recurso) > 0)
         {
@@ -59,8 +57,7 @@ void signal(t_pcb *proceso, char *nombre_recurso)
     {
         log_info(LOGGER_KERNEL, "Se realiza Signal de recurso inexistente: <%s>", proceso->contexto->motivos_desalojo->parametros[0]);
         cambio_de_estado(proceso->contexto->PID, "Exec", "Exit");
-        log_info(LOGGER_KERNEL, "Finaliza el proceso PID: <%d> - Motivo: < INVALID_RESOURCE >", proceso->contexto->PID);
-        terminar_proceso(proceso);
+        terminar_proceso(proceso, "INVALID_RESOURCE");
     }
 }
 

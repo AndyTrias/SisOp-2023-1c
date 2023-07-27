@@ -152,7 +152,7 @@ void f_seek(t_pcb *proceso, char *nombre_archivo, char *inicio)
     // cambiar puntero
     t_file *archivo = list_get(proceso->archivos_abiertos, busqueda_tabla_proceso(proceso, nombre_archivo));
     archivo->puntero = posicion;
-    log_info(LOGGER_KERNEL, "PID: %d - Actualizar puntero Archivo: %s - Puntero %d", proceso->contexto->PID, nombre_archivo, archivo->puntero);
+    log_info(LOGGER_KERNEL, "PID: <%d> - Actualizar puntero Archivo: %s - Puntero %d", proceso->contexto->PID, nombre_archivo, archivo->puntero);
   }
 }
 // Truncate, READ y WRITE
@@ -246,7 +246,7 @@ void f_write(t_pcb *proceso, char *nombre_archivo)
 
     int dir_fisica = atoi(proceso->contexto->motivos_desalojo->parametros[1]);
     int cant_bytes = atoi(proceso->contexto->motivos_desalojo->parametros[2]);
-    log_info(LOGGER_KERNEL, "PID: <%d> - Escribir Archivo: <%s> - Puntero <%d> - Dirección Memoria <%d> - Tamaño <%d>", proceso->contexto->PID, nombre_archivo, puntero, dir_fisica, cant_bytes);
+    log_info(LOGGER_KERNEL, "PID: <%d> - Escribir Archivo: <%s> - Puntero <%p> - Dirección Memoria <%d> - Tamaño <%d>", proceso->contexto->PID, nombre_archivo, puntero, dir_fisica, cant_bytes);
     log_info(LOGGER_KERNEL, "PID: <%d> - Bloqueado por: <%s>", proceso->contexto->PID, nombre_archivo);
     cambio_de_estado(proceso->contexto->PID, "Exec", "Block");
   }

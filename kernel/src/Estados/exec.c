@@ -43,20 +43,19 @@ void definir_accion(int cod_op, t_pcb *proceso)
     {
 
     case YIELD:
-        agregar_a_lista_ready(proceso);
         log_info(LOGGER_KERNEL, "Yield PID: <%d>", proceso->contexto->PID);
         cambio_de_estado(proceso->contexto->PID, "Exec", "Ready");
+        agregar_a_lista_ready(proceso);
         reemplazar_exec_por_nuevo();
         break;
     case EXIT:
         cambio_de_estado(proceso->contexto->PID, "Exec", "Exit");
-        terminar_proceso(proceso);
+        terminar_proceso(proceso, "SUCCESS");
         break;
 
     case SEG_FAULT:
         cambio_de_estado(proceso->contexto->PID, "Exec", "Exit");
-        log_info(LOGGER_KERNEL, "Finaliza el proceso <%d> - Motivo: <SEGMENTATION_FAULT>", proceso->contexto->PID);
-        terminar_proceso(proceso);
+        terminar_proceso(proceso, "SEG_FAULT");
         break;
 
     case WAIT:

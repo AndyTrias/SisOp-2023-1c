@@ -27,7 +27,7 @@ void levantar_diccionario_fcb(t_config *config)
             dictionary_put(DICCIONARIO_FCB, nombre_archivo, config_archivo);
 
             // Realizar operaciones con el archivo
-            log_info(LOGGER_FILE_SYSTEM, "Archivo encontrado: %s\n", ruta_archivo);
+            // log_info(LOGGER_FILE_SYSTEM, "Archivo encontrado: %s\n", ruta_archivo);
 
             free(ruta_archivo);
             free(nombre_archivo);

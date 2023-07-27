@@ -10,7 +10,7 @@
     #include "blocked.h"
     #include <utils/mensajes.h>
 
-    void terminar_proceso(t_pcb *);
+    void terminar_proceso(t_pcb *, char*);
     void liberar_recursos(t_pcb * );
     void finalizar_consola(int socket);
     void liberar_segmentos_de_memoria(t_pcb*);
