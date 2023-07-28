@@ -246,7 +246,7 @@ void f_write(t_pcb *proceso, char *nombre_archivo)
 
     long dir_fisica = strtol(proceso->contexto->motivos_desalojo->parametros[1], NULL, 10);
     int cant_bytes = atoi(proceso->contexto->motivos_desalojo->parametros[2]);
-    log_info(LOGGER_KERNEL, "PID: <%d> - Escribir Archivo: <%s> - Puntero <%d> - Dirección Memoria <%d> - Tamaño <%d>", proceso->contexto->PID, nombre_archivo, puntero, (void*) dir_fisica, cant_bytes);
+    log_info(LOGGER_KERNEL, "PID: <%d> - Escribir Archivo: <%s> - Puntero <%d> - Dirección Memoria <%p> - Tamaño <%d>", proceso->contexto->PID, nombre_archivo, puntero, (void*) dir_fisica, cant_bytes);
     log_info(LOGGER_KERNEL, "PID: <%d> - Bloqueado por: <%s>", proceso->contexto->PID, nombre_archivo);
     cambio_de_estado(proceso->contexto->PID, "Exec", "Block");
   }
