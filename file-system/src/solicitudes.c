@@ -137,7 +137,9 @@ void achicar_archivo(void *archivo_de_bloques, int cantidad_bloques_a_liberar, i
 
 void f_write(char *direccion, int posicion_archivo, int tamanio_a_escribir, int pid)
 {
-    log_info(LOGGER_FILE_SYSTEM, "Escribir Archivo: %s - Puntero: %d - Memoria: %p - Tamaño: %d", nombre_archivo, posicion_archivo, (void *)direccion, tamanio_a_escribir);
+    long dir_fisica = strtol(direccion, NULL, 10); 
+    
+    log_info(LOGGER_FILE_SYSTEM, "Escribir Archivo: %s - Puntero: %d - Memoria: %p - Tamaño: %d", nombre_archivo, posicion_archivo, (void *)dir_fisica, tamanio_a_escribir);
 
     char *tamanio_a_escribir_string = string_itoa(tamanio_a_escribir);
     char *valor_leido = leer_direccion_de_memoria(direccion, tamanio_a_escribir_string, pid);
@@ -178,7 +180,9 @@ void f_read(char *direccion, int posicion_archivo, int tamanio_a_leer, int pid)
 {
     void *buffer = malloc(tamanio_a_leer);
 
-    log_info(LOGGER_FILE_SYSTEM, "Leer Archivo: %s - Puntero: %d - Memoria: %p - Tamaño: %d", nombre_archivo, posicion_archivo, (void *)direccion, tamanio_a_leer);
+    long dir_fisica = strtol(direccion, NULL, 10); 
+    
+    log_info(LOGGER_FILE_SYSTEM, "Leer Archivo: %s - Puntero: %d - Memoria: %p - Tamaño: %d", nombre_archivo, posicion_archivo, (void *)dir_fisica, tamanio_a_escribir);
 
     if (tamanio_a_leer + posicion_archivo > 64)
     {
