@@ -118,7 +118,11 @@ void reemplazar_exec_por_nuevo()
 {
     if (strcmp(ALGORITMO_PLANIFICACION, "HRRN") == 0 && EJECUTANDO !=NULL)
     {
-        estimado_prox_rafaga();
+        if(EJECUTANDO !=NULL){estimado_prox_rafaga();
+        }
+        else{
+            temporal_destroy(TIEMPO_EN_CPU);
+        }
     }
     t_pcb *proceso_entrante = ceder_proceso_a_exec(); // pide un proceso a ready segun el algoritmo
     reemplazar_proceso(proceso_entrante);
