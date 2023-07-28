@@ -139,6 +139,13 @@ void mostrar_tabla_global(){
     }
 }
 
+void mostrar_lista_huecos(){
+    for (int i = 0; i < LISTA_HUECOS->elements_count; i++){
+        t_hueco* h = list_get(LISTA_HUECOS, i);
+        log_info(LOGGER_MEMORIA, "Base: %p, Tamanio: %d, Libre: %d", h->base, h->tamanio, h->libre);
+    }
+}
+
 int obtener_index_tabla_segmentos(int PID){
     int index = -1;
     for (int i = 0; i < TABLA_SEGMENTOS_GLOBAL->elements_count; i++){
@@ -149,4 +156,13 @@ int obtener_index_tabla_segmentos(int PID){
         }
     }
     return index;
+}
+
+void actualizar_bases_huecos(){
+    int desplazamiento = 0;
+    for (int i = 1; i < LISTA_HUECOS->elements_count; i++){
+        t_hueco* h = list_get(LISTA_HUECOS, i);
+        h->base = MEMORIA_PRINCIPAL + CONFIG->tam_segmento_0 + desplazamiento;
+        desplazamiento += h->tamanio;
+    }
 }

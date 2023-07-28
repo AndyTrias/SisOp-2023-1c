@@ -29,12 +29,12 @@ void crear_segmento(t_pcb *proceso)
         break;
     case COMPACTAR:
 
-        recibir_operacion(SOCKET_MEMORIA);
         log_info(LOGGER_KERNEL, "Compactación: <Se solicitó compactación / Esperando Fin de Operaciones de FS>");
         pthread_mutex_lock(&SOLICITUD_FS);
         log_info(LOGGER_KERNEL, "Inicia la compactacion");
 
         enviar_compactacion();
+        recibir_operacion(SOCKET_MEMORIA);
         recibir_operacion(SOCKET_MEMORIA);
 
 

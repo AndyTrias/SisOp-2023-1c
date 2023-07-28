@@ -243,7 +243,8 @@ void compactar()
         else
         {
             hueco->base = base_actual + tamanio_actual;
-            tamanio_actual += hueco->tamanio;
+            tamanio_actual = hueco->tamanio;
         }
     }
+
 }
