@@ -128,7 +128,7 @@ void recibir_kernel(int *socket_modulo)
             return;
 
         default:
-            log_error(LOGGER_MEMORIA, "Operacion desconocida");
+            //log_error(LOGGER_MEMORIA, "Operacion desconocida");
             break;
         }
     }
