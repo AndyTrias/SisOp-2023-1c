@@ -90,7 +90,7 @@ t_operacion execute(t_instruccion *instruccion_actual, t_ctx *ctx)
 	case MOV_IN:
 		log_info(LOGGER_CPU, "PID : %d - <MOV_IN> - <%s %s> ", ctx->PID, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
 		long dir_fisica = MMU(atoi(instruccion_actual->parametros[1]), tamanio_registro(instruccion_actual->parametros[0]), ctx);
-		if (!dir_fisica)
+		if (dir_fisica == -1)
 		{
 			return SEG_FAULT;
 		}
@@ -119,7 +119,7 @@ t_operacion execute(t_instruccion *instruccion_actual, t_ctx *ctx)
 		log_info(LOGGER_CPU, "PID : %d - <MOV OUT> - <%s %s> ", ctx->PID, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
 		registro = obtenerRegistro(&ctx->registros, instruccion_actual->parametros[1]);
 		dir_fisica = MMU(atoi(instruccion_actual->parametros[0]), tamanio_registro(instruccion_actual->parametros[1]), ctx);
-		if (!dir_fisica)
+		if (dir_fisica == -1)
 		{
 			return SEG_FAULT;
 		}
@@ -180,7 +180,7 @@ t_operacion execute(t_instruccion *instruccion_actual, t_ctx *ctx)
 		log_info(LOGGER_CPU, "PID : %d - <F WRITE> - <%s %s %s> ", ctx->PID, instruccion_actual->parametros[0], instruccion_actual->parametros[1], instruccion_actual->parametros[2]);
 		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[0]);
 		dir_fisica = MMU(atoi(instruccion_actual->parametros[1]), atoi(instruccion_actual->parametros[2]), ctx);
-		if (!dir_fisica)
+		if (dir_fisica == -1)
 		{
 			return SEG_FAULT;
 		}
@@ -194,7 +194,7 @@ t_operacion execute(t_instruccion *instruccion_actual, t_ctx *ctx)
 		log_info(LOGGER_CPU, "PID : %d - <F_READ> - <%s %s> ", ctx->PID, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
 		agregar_parametro_desalojo(ctx, instruccion_actual->parametros[0]);
 		dir_fisica = MMU(atoi(instruccion_actual->parametros[1]), atoi(instruccion_actual->parametros[2]), ctx);
-		if (!dir_fisica)
+		if (dir_fisica == -1)
 		{
 
 			return SEG_FAULT;
