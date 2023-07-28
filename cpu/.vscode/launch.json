@@ -11,7 +11,7 @@
       "program": "${workspaceFolder}/bin/${workspaceFolderBasename}.out",
       "args": [
         // TODO: Agregar los argumentos que se necesiten
-        "config/cpuMemoria.config"
+        "config/cpuError.config"
       ],
       "stopAtEntry": false,
       "cwd": "${workspaceFolder}",
