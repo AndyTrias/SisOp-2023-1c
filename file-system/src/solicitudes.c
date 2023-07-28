@@ -182,7 +182,7 @@ void f_read(char *direccion, int posicion_archivo, int tamanio_a_leer, int pid)
 
     long dir_fisica = strtol(direccion, NULL, 10); 
     
-    log_info(LOGGER_FILE_SYSTEM, "Leer Archivo: %s - Puntero: %d - Memoria: %p - Tamaño: %d", nombre_archivo, posicion_archivo, (void *)dir_fisica, tamanio_a_escribir);
+    log_info(LOGGER_FILE_SYSTEM, "Leer Archivo: %s - Puntero: %d - Memoria: %p - Tamaño: %d", nombre_archivo, posicion_archivo, (void *)dir_fisica, tamanio_a_leer);
 
     if (tamanio_a_leer + posicion_archivo > 64)
     {
