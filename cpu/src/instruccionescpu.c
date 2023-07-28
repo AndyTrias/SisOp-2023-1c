@@ -96,7 +96,8 @@ t_operacion execute(t_instruccion *instruccion_actual, t_ctx *ctx)
 		}
 		char *dir_fisica_string = malloc(10);
 		sprintf(dir_fisica_string, "%ld", dir_fisica);
-		agregar_parametro_desalojo(ctx, string_itoa(tamanio_registro(instruccion_actual->parametros[0])));
+		char *tamanio = string_itoa(tamanio_registro(instruccion_actual->parametros[0]));
+		agregar_parametro_desalojo(ctx, tamanio);
 		agregar_parametro_desalojo(ctx, dir_fisica_string);
 
 		t_paquete *paquete = crear_paquete(MOV_IN);
@@ -105,7 +106,7 @@ t_operacion execute(t_instruccion *instruccion_actual, t_ctx *ctx)
 		enviar_paquete(paquete, SOCKET_MEMORIA);
 		eliminar_paquete(paquete);
 		free(dir_fisica_string);
-
+		free(tamanio);
 		recibir_operacion(SOCKET_MEMORIA);
 		char *valor_leido = recibir_mensaje(SOCKET_MEMORIA);
 		log_info(LOGGER_CPU, "PID: %d  -Acción: LEER - Segmento: %d - Dirección Física: %p - Valor: %s", ctx->PID, floor_div(atoi(instruccion_actual->parametros[1]), TAM_MAX_SEGMENTO), (void *)dir_fisica, valor_leido);
@@ -119,7 +120,7 @@ t_operacion execute(t_instruccion *instruccion_actual, t_ctx *ctx)
 		log_info(LOGGER_CPU, "PID : %d - <MOV OUT> - <%s %s> ", ctx->PID, instruccion_actual->parametros[0], instruccion_actual->parametros[1]);
 		registro = obtenerRegistro(&ctx->registros, instruccion_actual->parametros[1]);
 		dir_fisica = MMU(atoi(instruccion_actual->parametros[0]), tamanio_registro(instruccion_actual->parametros[1]), ctx);
-		if (!dir_fisica)
+		if (dir_fisica==-1)
 		{
 			return SEG_FAULT;
 		}

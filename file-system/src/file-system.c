@@ -27,7 +27,9 @@ int main(int argc, char *argv[])
     conectar_kernel(socket_servidor);
 
     terminar_programa(LOGGER_FILE_SYSTEM, config);
+    finalizar();
     terminar_conexiones(1, SOCKET_MEMORIA);
+    
 
     return 0;
 }

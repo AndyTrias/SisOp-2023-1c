@@ -76,6 +76,7 @@ void recibir_kernel(int *socket_modulo)
 
             // eliminar
             free(buffer);
+            free(desplazamiento);
             finalizar_proceso(tabla_de_segmentos, PID);
 
             log_info(LOGGER_MEMORIA, "Eliminacion de Proceso PID: <%d>", PID);

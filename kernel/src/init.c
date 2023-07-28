@@ -11,8 +11,10 @@ void inicializar_variables_globales(t_config* config) {
     HRRN_ALFA = config_get_double_value(config, "HRRN_ALFA");
     GRADO_MAX_MULTIPROGRAMACION = config_get_int_value(config, "GRADO_MAX_MULTIPROGRAMACION");
     RECURSOS = config_get_array_value(config, "RECURSOS");
-    INSTANCIAS_RECURSOS = convertirAArrayInt(config_get_array_value(config, "INSTANCIAS_RECURSOS"));
+    char **recurso = config_get_array_value(config, "INSTANCIAS_RECURSOS");
+    INSTANCIAS_RECURSOS = convertirAArrayInt(recurso);
     
+    string_array_destroy(recurso);
     inicializar_estados();
 
     inicializar_semaforos();

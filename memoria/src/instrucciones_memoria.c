@@ -123,7 +123,7 @@ void eliminar_segmento(t_list *tabla_segmentos, int id_segmento, int PID)
 // t_segmento 0 no hay que eliminarlo
 void finalizar_proceso(t_list *tabla_segmentos, int PID)
 {
-    list_remove(tabla_segmentos, 0);
+    free(list_remove(tabla_segmentos, 0));
     for (int i = 0; i < list_size(tabla_segmentos); i++)
     {
         t_segmento *segmento = list_get(tabla_segmentos, i);
