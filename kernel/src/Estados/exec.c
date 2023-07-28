@@ -116,7 +116,7 @@ void definir_accion(int cod_op, t_pcb *proceso)
 
 void reemplazar_exec_por_nuevo()
 {
-    if (strcmp(ALGORITMO_PLANIFICACION, "HRRN") == 0 && EJECUTANDO !=NULL)
+    if (strcmp(ALGORITMO_PLANIFICACION, "HRRN") == 0)
     {
         if(EJECUTANDO !=NULL){estimado_prox_rafaga();
         }
